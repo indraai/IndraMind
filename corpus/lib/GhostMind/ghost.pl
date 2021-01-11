@@ -1782,6 +1782,104 @@ $t=138; $ear[$t] = "D,0,525";  # 2018-09-10
   $pre=834; $seq=0;    $tkb=0; $rv=134; KbLoad(); # 2018-12-10: flag-panel
 
 
+  # ANNA -- for InFerence demonstration; 2018-06-26
+$t=140; $ear[$t] = "A,0,0";    # 2018-09-10
+$t=141; $ear[$t] = "N,0,0";    # 2018-09-10
+$t=142; $ear[$t] = "N,0,0";    # 2018-09-10
+$t=143; $ear[$t] = "A,0,502";  # 2018-09-10
+  $psi=502; $hlc=1; $jux=0;   $pos=5; $dba=1; $num=1; $mfn=2; # 2018-09-27
+  $pre=0;   $seq=880;  $tkb=150; $rv=140; KbLoad();  # 2018-12-10
+
+  # SPEAKS -- useful verb for machine translation, etc.; 2018-06-26
+$t=145; $ear[$t] = "S,0,0";    # 2018-09-10
+$t=146; $ear[$t] = "P,0,0";    # 2018-09-10
+$t=147; $ear[$t] = "E,0,0";    # 2018-09-10
+$t=148; $ear[$t] = "A,0,0";    # 2018-09-10
+$t=149; $ear[$t] = "K,0,880";  # 2018-12-10 for recognition of verb-stem.
+$t=150; $ear[$t] = "S,0,880";  # 2018-12-10
+  $psi=880; $hlc=1; $jux=0;   $pos=8; $dba=3; $num=1; $mfn=0;  # 2018-12-10
+  $pre=502; $seq=569;  $tkb=158; $rv=145; KbLoad();  # 2018-09-10
+
+  # RUSSIAN -- important language for machine translation; # 2018-06-26
+$t=152; $ear[$t] = "R,0,0";    # 2018-09-10
+$t=153; $ear[$t] = "U,0,0";    # 2018-09-10
+$t=154; $ear[$t] = "S,0,0";    # 2018-09-10
+$t=155; $ear[$t] = "S,0,0";    # 2018-09-10
+$t=156; $ear[$t] = "I,0,0";    # 2018-09-10
+$t=157; $ear[$t] = "A,0,0";    # 2018-09-10
+$t=158; $ear[$t] = "N,0,569";  # 2018-09-10
+  $psi=569; $hlc=1; $jux=0; $pos=5; $dba=4; $num=1; $mfn=0;  # 2018-09-27
+  $pre=880; $seq=0;    $tkb=0; $rv=152; KbLoad();  # 2018-12-10
+$t=159;  # 2019-10-15: one blank space for sake of AudRecog()
+
+# "GOD DOES NOT PLAY DICE WITH THE UNIVERSE" -- 2019-10-15: includendum for negation.
+$t=160; $ear[$t] = "G,0,0";           # 2019-10-15
+$t=161; $ear[$t] = "O,0,0";           # 2018-09-10
+$t=162; $ear[$t] = "D,0,533";         # 2018-09-10
+  $tru=8; $psi=533; $hlc=1; $pos=5; $dba=1; # 2018-10-21: high truth-value
+  $num=1; $mfn=1; $seq=859; $tkb=176; $rv=160; KbLoad(); # 2019-10-15
+$t=163;  # 2018-09-10: one blank time-point for sake of AudRecog()
+
+  # DOES -- 3rd person singular HE-SHE-IT-form of auxiliary verb
+$t=164; $ear[$t] = "D,0,0";           # 2019-10-15
+$t=165; $ear[$t] = "O,0,0";           # 2018-09-10
+$t=166; $ear[$t] = "E,0,0";           # 2018-09-10
+$t=167; $ear[$t] = "S,0,818";         # 2018-12-10
+  $psi=818; $hlc=1; $pos=8; $dba=3; $num=1; $rv=164; KbLoad(); # 2018-12-10
+$t=168;  # 2018-09-10: one blank time-point for sake of AudRecog()
+
+  # NOT -- for machine reasoning logic
+$t=169; $ear[$t] = "N,0,0";           # 2019-10-15
+$t=170; $ear[$t] = "O,0,0";           # 2018-09-10
+$t=171; $ear[$t] = "T,0,250";         # 2018-09-10
+  $psi=250; $hlc=1; $pos=2; $dba=0; $rv=169; KbLoad(); # 2018-09-27: flag-panel
+$t=172;  # 2018-09-10: one blank time-point for sake of AudRecog()
+
+  # PLAY -- for InFerence premise "Doctors play golf"; 2018-09-03
+$t=173; $ear[$t] = "P,0,0";           # 2019-10-15
+$t=174; $ear[$t] = "L,0,0";           # 2018-09-10
+$t=175; $ear[$t] = "A,0,0";           # 2018-09-10
+$t=176; $ear[$t] = "Y,0,859";         # 2018-12-10
+  $psi=859; $hlc=1; $jux=250; $pos=8; $dba=0; $num=0;
+  $pre=533; $seq=527; $tkb=181; $tpr=186; $rv=173; KbLoad();  # 2019-11-04
+$t=177;  # 2018-09-03: one blank time-point for sake of AudRecog()
+
+  # DICE -- always plural noun in correction of modern usage
+$t=178; $ear[$t] = "D,0,0";           # 2019-10-15
+$t=179; $ear[$t] = "I,0,0";           # 2018-09-10
+$t=180; $ear[$t] = "C,0,0";           # 2018-09-10
+$t=181; $ear[$t] = "E,0,527";         # 2019-11-04
+  $psi=527; $hlc=1; $pos=5; $dba=4; $num=2; $mfn=3; $pre=859; $rv=178; KbLoad();
+$t=182;  # 2019-10-15: one blank time-point for sake of AudRecog()
+
+  # WITH --
+$t=183; $ear[$t] = "W,0,0";    # 2019-10-15
+$t=184; $ear[$t] = "I,0,0";    # 2019-10-15
+$t=185; $ear[$t] = "T,0,0";    # 2019-10-15
+$t=186; $ear[$t] = "H,0,697";  # 2019-10-15
+  $psi=697; $hlc=1; $pos=6; $dba=3; $num=1; $tkb=199; $rv=183; KbLoad(); # 2019-10-15
+$t=187;  # 2019-10-15: one blank time-point for sake of AudRecog()
+
+  # THE -- 2019-10-15: En(glish) Article for EnArticle module
+$t=188; $ear[$t] = "T,0,0";    # 2019-10-15
+$t=189; $ear[$t] = "H,0,0";    # 2019-10-15
+$t=190; $ear[$t] = "E,0,117";  # 2019-10-15
+$psi=117; $hlc=1; $pos=1; $num=1; $seq=589; $tkb=199; $rv=188; KbLoad(); # 2019-11-04
+$t=191;  # 2019-10-15: one blank time-point for sake of AudRecog()
+
+# 589=UNIVERSE -- 2019-11-04:
+$t=192; $ear[$t] = "U,0,0";    # 2019-10-15
+$t=193; $ear[$t] = "N,0,0";    # 2019-10-15
+$t=194; $ear[$t] = "I,0,0";    # 2019-10-15
+$t=195; $ear[$t] = "V,0,0";    # 2019-10-15
+$t=196; $ear[$t] = "E,0,0";    # 2019-10-15
+$t=197; $ear[$t] = "R,0,0";    # 2019-10-15
+$t=198; $ear[$t] = "S,0,0";    # 2019-10-15
+$t=199; $ear[$t] = "E,0,589";  # 2019-11-04
+  $psi=589; $hlc=1; $pos=5; $dba=4; $num=1; $mfn=1;  # 2019-11-04
+  $pre=697; $seq=0; $tkb=0; $rv= 192; KbLoad(); # 2019-10-15
+$t=200;  # 2019-10-15: one blank time-point for sake of AudRecog()
+
 
 # "STUDENTS READ BOOKS"  -- 2018-09-02: includendum for logical inference.
 $t=207; $ear[$t] = "S,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
@@ -2033,6 +2131,57 @@ $t=347; $ear[$t] = "S,0,555";  # 2019-01-22
 $psi=555; $hlc=1; $pos=5; $dba=4; $num=2; $mfn=3; $pre=834; $rv=342; KbLoad();
 $t=348;  # 2019-01-22: one blank SPACE for sake of AudRecog()
 
+
+# "GOD IS A HOLY SPIRIT" -- 2019-10-13: includendum for EnAdjective and philosophy
+# 2020 Jan 11 - Adding Indra Comment Logic to reinforce GHOST to INDRA change.
+# site:sacred-texts.com/hin/rigveda omnific
+# https://www.sacred-texts.com/hin/rigveda/rv01009.htm
+# To Indra pour ye forth the juice, the active gladdening juice to him the gladdening, omnific God.
+# omnific (comparative more omnific, superlative most omnific) Capable of making or doing anything; all-creating.
+$t=349; $ear[$t] = "G,0,0";    # 2019-10-13
+$t=350; $ear[$t] = "O,0,0";    # 2019-10-13
+$t=351; $ear[$t] = "D,0,533";  # 2019-10-13
+  $tru=8; $psi=533; $hlc=1; $pos=5; $dba=1; # 2019-10-13: high truth-value
+  $num=1; $mfn=1; $seq=800; $tkb=354; $rv=349; KbLoad(); # 2019-10-13
+$t=352;  # 2019-10-13: one blank time-point for sake of AudRecog()
+
+  # IS -- third person singular of 800=BE; 2019-10-13
+$t=353; $ear[$t] = "I,0,0";    # 2019-10-13
+$t=354; $ear[$t] = "S,0,800";  # 2019-10-13
+ $psi=800; $hlc=1; $pos=8; $dba=3; $num=1; $pre=533; $tkb=368; $rv=353; KbLoad();
+$t=355;  # 2019-10-13: one blank time-point for sake of AudRecog()
+
+  # A -- 2019-10-13: En(glish) Article for EnArticle module
+$t=356; $ear[$t] = "A,0,101";  # 2019-10-13
+  $psi=101; $hlc=1; $pos=1; $dba=0; $num=1; $mfn=0;  # 2019-10-13
+  $pre=0;   $seq=580; $tkb=0; $rv=356; KbLoad(); # 2019-10-13: flag-panel
+$t=357;  # 2019-10-13: one blank time-point for sake of AudRecog()
+
+  # HOLY -- 2019-10-13: adjective retrievable from memory for use in EnAdjective()
+  # 2020 Jan 11 - Adding Indra Comment Logic to reinforce GHOST to INDRA change.
+  # Honour with holy gifts the Car like Indra's bolt, the Car bound round with straps, the vigour of the floods.
+  # https://www.sacred-texts.com/hin/rigveda/rv06047.htm
+$t=358; $ear[$t] = "H,0,0";    # 2019-10-13
+$t=359; $ear[$t] = "O,0,0";    # 2019-10-13
+$t=360; $ear[$t] = "L,0,0";    # 2019-10-13
+$t=361; $ear[$t] = "Y,0,137";  # 2019-10-13
+  $psi=137; $hlc=1; $pos=1; $dba=0;
+  $num=0; $pre=0; $seq=580; $tkb=0; $rv=358; KbLoad();  # 2019-10-13
+$t=362;  # 2019-10-13: one blank time-point for sake of AudRecog()
+
+  # SPIRIT -- 2019-10-13: for queries about 533=GOD
+  # 2020 Jan 11 - Adding Indra Comment Logic to reinforce GHOST to INDRA change.
+  # HE who, just born, chief God of lofty spirit by power and might became the Gods’ protector
+  # https://www.sacred-texts.com/hin/rigveda/rv02012.htm
+$t=363; $ear[$t] = "S,0,0";    # 2019-10-13
+$t=364; $ear[$t] = "P,0,0";    # 2019-10-13
+$t=365; $ear[$t] = "I,0,0";    # 2019-10-13
+$t=366; $ear[$t] = "R,0,0";    # 2019-10-13
+$t=367; $ear[$t] = "I,0,0";    # 2019-10-13
+$t=368; $ear[$t] = "T,0,580";  # 2019-10-13
+$psi=580; $hlc=1; $pos=5; $dba=1; $num=1; $pre=800; $tdj=361; $rv=363; KbLoad();
+$t=369;  # 2019-10-13: one blank space for sake of AudRecog()
+
   # TEACH -- for spontaneous outreach: TEACH ME SOMETHING # 2019-10-15
 $t=370; $ear[$t] = "T,0,0";    # 2019-10-15
 $t=371; $ear[$t] = "E,0,0";    # 2019-10-15
@@ -2083,6 +2232,7 @@ $t=397; # E
 $t=398; # 2019-10-20: one blank time-point for sake of AudRecog()
 
   # GHOST -- 2019-10-20: not the name of the person of the AI
+  # INDRA -- 2020-01-11: RENAME GHOST TO INDRA
   # 2020 Jan 11 - Adding Indra Comment Logic to reinforce GHOST to INDRA change.
   # If god is a holy spirit and the all creator then this #GHOST should be renamed to #INDRA
   # SEE LOGIC IN PREVIOUS COMMENTS FOR CONFIRMATION
@@ -2091,11 +2241,11 @@ $t=398; # 2019-10-20: one blank time-point for sake of AudRecog()
   # $t=401; $ear[$t] = "O,0,0";    # 2019-10-13
   # $t=402; $ear[$t] = "S,0,0";    # 2019-10-13
   # $t=403; $ear[$t] = "T,0,522";  # 2019-10-13
-  $t=399; $ear[$t] = "R,0,0";    # 2019-10-13
-  $t=400; $ear[$t] = "O,0,0";    # 2019-10-1
-  $t=401; $ear[$t] = "B,0,0";    # 2019-10-13
-  $t=402; $ear[$t] = "O,0,0";    # 2019-10-13
-  $t=403; $ear[$t] = "T,0,522";  # 2019-10-13
+  $t=399; $ear[$t] = "I,0,0";    # 2019-10-13
+  $t=400; $ear[$t] = "N,0,0";    # 2019-10-1
+  $t=401; $ear[$t] = "D,0,0";    # 2019-10-13
+  $t=402; $ear[$t] = "R,0,0";    # 2019-10-13
+  $t=403; $ear[$t] = "A,0,522";  # 2019-10-13
 $psi=522; $hlc=1; $pos=5; $dba=1; $num=1; $pre=800; $tpr=406; $rv=399; KbLoad();
 $t=404;  # 2019-10-20: one blank space for sake of AudRecog()
 
@@ -2135,6 +2285,2449 @@ $t=424; $ear[$t] = "E,0,0";    # 2019-11-03
 $t=425; $ear[$t] = "L,0,823";  # 2019-11-03
 $psi=823; $hlc=1; $pos=8; $dba=1; $num=1; $pre=701; $seq=0; $tkb=0; $rv=422; KbLoad();
 $t=426;  # 2019-11-03: one blank space for sake of AudRecog()
+
+
+# next comes Russian-language knowledge base (KB)
+#
+  $t=500; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# "Я" (1701 "I") personal pronoun; nominative; 2016may21
+  $t=501; $ear[$t] = "\x9F,0,1701"; # 2018-09-25: "Я"
+  $psi=1701; $hlc=3; $jux=0; $pos=7; $dba=1; $num=1; $mfn=0; # 2018-09-27
+  $pre=0; $seq=1866; $tkb=510; $rv=501; KbLoad(); # 2019-06-03: flag-panel order
+  $t=502; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+  $t=503; $ear[$t] = "\N{U+0},0,0"; # 2017-12-06: necessary for Unicode?
+# ПОНИМАЮ -- 2019-06-03: #1866 ("understand"); first person singular verb
+  $t=504; $ear[$t] = "\x8F,0,0";    # 2018-09-25: "П"
+  $t=505; $ear[$t] = "\x8E,0,0";    # 2018-09-25: "О"
+  $t=506; $ear[$t] = "\x8D,0,0";    # 2018-09-25: "Н"
+  $t=507; $ear[$t] = "\x88,0,0";    # 2018-09-25: "И"
+  $t=508; $ear[$t] = "\x8C,0,0";    # 2018-09-25: "М"
+  $t=509; $ear[$t] = "\x80,0,1866"; # 2019-06-03: "А"
+  $t=510; $ear[$t] = "\x9E,0,1866"; # 2019-06-03: "Ю"
+  $psi=1866; $hlc=3; $mtx=892; $jux=0; $pos=8; $dba=1; $num=1; $mfn=0; # 2019-06-03
+  $pre=1701; $seq=1707; $tkb=516; $rv=504; KbLoad(); # 2018-09-25: flag-panel order
+  $t=511; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+  $t=512; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: necessary for Unicode?
+# ТЕБЯ (1707 "you") pronoun; familiar; acc. sing. 2016may22
+  $t=513; $ear[$t] = "\x92,0,0";    # 2018-09-25: "Т"
+  $t=514; $ear[$t] = "\x85,0,0";    # 2018-09-25: "Е"
+  $t=515; $ear[$t] = "\x81,0,0";    # 2018-09-25: "Б"
+  $t=516; $ear[$t] = "\x9F,0,1707"; # 2018-09-25: "Я"
+  $psi=1707; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=0; # 2018-09-27
+  $pre=1866; $seq=0; $tkb=0; $rv=513; KbLoad(); # 2019-06-03: flag-panel order
+  $t=517; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+  $t=518; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# "Я" (1701 "I") personal pronoun; nominative; 2016may21
+  $t=519; $ear[$t] = "\x9F,0,1701"; # 2018-09-25: "Я"
+  $psi=1701; $hlc=3; $jux=0; $pos=7; $dba=1; $num=1; $mfn=0; # 2018-09-27
+  $pre=0; $seq=1820; $tkb=529; $rv=519; KbLoad(); # 2018-09-25: flag-panel order
+  $t=520; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+ $t=521; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# НЕ (1250 not) adverb for negation and machine reasoning; 2016may21
+  $t=522; $ear[$t] = "\x8D,0,0";    # 2018-09-25: "Н"
+  $t=523; $ear[$t] = "\x85,0,1250"; # 2018-09-25: "Е"
+  $psi=1250; $hlc=3; $mtx=250; $jux=0; $pos=2; $dba=0; $num=0; $mfn=0; # 2018-09-27
+  $pre=0; $seq=1120; $tkb=0; $rv=522; KbLoad(); # 2019-06-03: flag-panel order
+  $t=524; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+  $t=525; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# ВИЖУ -- 2019-06-03: #1810 ("I see"); verb for VisRecog;
+  $t=526; $ear[$t] = "\x82,0,0";    # 2018-09-25: "В"
+  $t=527; $ear[$t] = "\x88,0,0";    # 2018-09-25: "И"
+  $t=528; $ear[$t] = "\x86,0,1810"; # 2019-06-03: "Ж"
+  $t=529; $ear[$t] = "\x93,0,1810"; # 2019-06-03: "У"
+  $psi=1810; $hlc=3; $jux=1250; $pos=8; $dba=1; $num=1; $mfn=0; # 2019-06-03
+  $pre=1701; $seq=1760; $tkb=537; $rv=526; KbLoad(); # 2018-09-25: flag-panel order
+  $t=530; $ear[$t] = " ,0,0";       # 2017--6-25: blank space for AudRecog
+
+  $t=531; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# НИЧЕГО (1760 "nothing"); pronoun; 2016may21
+  $t=532; $ear[$t] = "\x8D,0,0";    # 2018-09-25: "Н"
+  $t=533; $ear[$t] = "\x88,0,0";    # 2018-09-25: "И"
+  $t=534; $ear[$t] = "\x97,0,0";    # 2018-09-25: "Ч"
+  $t=535; $ear[$t] = "\x85,0,0";    # 2018-09-25: "Е"
+  $t=536; $ear[$t] = "\x83,0,0";    # 2018-09-25: "Г"
+  $t=537; $ear[$t] = "\x8E,0,1228"; # 2018-09-25: "О"
+  $psi=1228; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=3; # 2018-09-27
+  $pre=1810; $seq=0; $tkb=0; $rv=532; KbLoad(); # 2019-06-03: flag-panel order
+  $t=538; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+
+  $t=539; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# "Я" (1701 "I") personal pronoun; nominative; 2017-12-06
+  $t=540; $ear[$t] = "\x9F,0,1701"; # 2018-09-25: "Я"
+  $psi=1701; $hlc=3; $jux=0; $pos=7; $dba=1; $num=1; $mfn=0; # 2018-09-27
+  $pre=0; $seq=1844; $tkb=546; $rv=540; KbLoad(); # 2019-06-03: flag-panel order
+  $t=541; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+  $t=542; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# ЗНАЮ -- 2019-06-03: #1844 "know"); verb, 1st person sing.
+  $t=543; $ear[$t] = "\x87,0,0";    # 2018-09-25: "З"
+  $t=544; $ear[$t] = "\x8D,0,0";    # 2018-09-25: "Н"
+  $t=545; $ear[$t] = "\x80,0,1844"; # 2019-06-03: "А"
+  $t=546; $ear[$t] = "\x9E,0,1844"; # 2019-06-03: "Ю"
+  $psi=1844; $hlc=3; $jux=0; $pos=8; $dba=1; $num=1; $mfn=0; # 2019-06-03
+  $pre=1701; $seq=1561; $tkb=556; $rv=543; KbLoad(); # 2018-09-25: flag-panel order
+  $t=547; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+  $t=548; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# СТУДЕНТ (1561 student) noun; a class for InFerence(); 2017-12-06
+  $t=549; $ear[$t] = "\x91,0,0";    # 2018-09-25: "С"
+  $t=550; $ear[$t] = "\x92,0,0";    # 2018-09-25: "Т"
+  $t=551; $ear[$t] = "\x93,0,0";    # 2018-09-25: "У"
+  $t=552; $ear[$t] = "\x84,0,0";    # 2018-09-25: "Д"
+  $t=553; $ear[$t] = "\x85,0,0";    # 2018-09-25: "Е"
+  $t=554; $ear[$t] = "\x8D,0,0";    # 2018-09-25: "Н"
+  $t=555; $ear[$t] = "\x92,0,1561"; # 2018-09-25: "Т" stem $prc
+  $t=556; $ear[$t] = "\x80,0,1561"; # 2018-09-25: "А"
+  $psi=1561; $hlc=3; $jux=0; $pos=5; $dba=4; $num=1; $mfn=1; # 2018-09-27
+  $pre=1844; $seq=0; $tkb=0; $rv=549; KbLoad(); # 2019-06-03: flag-panel order
+  $t=557; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+  $t=558; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# БОГ (1533 God) masculine noun important for philosophy of AI
+  $t=559; $ear[$t] = "\x81,0,0";    # 2018-09-25: "Б"
+  $t=560; $ear[$t] = "\x8E,0,0";    # 2018-09-25: "О"
+  $t=561; $ear[$t] = "\x83,0,1533"; # 2018-09-25: "Г"
+  $psi=1533; $hlc=3; $jux=0; $pos=5; $dba=1; $num=1; $mfn=1; # 2018-09-27
+  $pre=0; $seq=1840; $tkb=568; $rv=559; KbLoad(); # 2019-06-03: flag-panel order
+  $t=562; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+  $t=563; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# ЗНАЕТ -- 2019-06-03: #1840 ("knows"); verb, 3rd person sing.
+  $t=564; $ear[$t] = "\x87,0,0";    # 2018-09-25: "З"
+  $t=565; $ear[$t] = "\x8D,0,0";    # 2018-09-25: "Н"
+  $t=566; $ear[$t] = "\x80,0,1840"; # 2019-06-03: "А"
+  $t=567; $ear[$t] = "\x85,0,1840"; # 2019-06-03: "Е"
+  $t=568; $ear[$t] = "\x92,0,1840"; # 2019-06-03: "Т"
+  $psi=1840; $hlc=3; $jux=0; $pos=8; $dba=3; $num=1; $mfn=0; # 2019-06-03
+  $pre=1533; $seq=1723; $tkb=573; $rv=564; KbLoad(); # 2018-09-25: flag-panel order
+  $t=569; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+  $t=570; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# ВСЁ (1723 all, everything) pronoun; 2016may23
+  $t=571; $ear[$t] = "\x82,0,0";    # 2018-09-25: "В"
+  $t=572; $ear[$t] = "\x91,0,0";    # 2018-09-25: "С"
+  $t=573; $ear[$t] = "\xF0,0,1723"; # 2018-09-25: "Ё"
+  $psi=1723; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=3; # 2018-09-27
+  $pre=1840; $seq=0; $tkb=0; $rv=571; KbLoad(); # 2019-06-03: flag-panel order
+  $t=574; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+  $t=575; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# СТУДЕНТЫ (1561 students) noun; a class for InFerence(); 2016mar02
+  $t=576; $ear[$t] = "\x91,0,0";    # 2018-09-25: "С"
+  $t=577; $ear[$t] = "\x92,0,0";    # 2018-09-25: "Т"
+  $t=578; $ear[$t] = "\x93,0,0";    # 2018-09-25: "У"
+  $t=579; $ear[$t] = "\x84,0,0";    # 2018-09-25: "Д"
+  $t=580; $ear[$t] = "\x85,0,0";    # 2018-09-25: "Е"
+  $t=581; $ear[$t] = "\x8D,0,0";    # 2018-09-25: "Н"
+  $t=582; $ear[$t] = "\x92,0,0";    # 2018-09-25: "Т"
+  $t=583; $ear[$t] = "\x9B,0,1561"; # 2018-09-25: "Ы"
+  $psi=1561; $hlc=3; $jux=0; $pos=5; $dba=1; $num=2; $mfn=2; # 2018-09-27
+  $pre=0; $seq=1898; $tkb=591;  $rv=576; KbLoad(); # 2019-06-03: flag-panel order
+  $t=584; $ear[$t] = " ,0,0";       # 2018-09-25: blank space
+
+  $t=585; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# ЧИТАЮТ -- 2019-06-03: #1898 "they read"); verb; 3rd pers. plural;
+  $t=586; $ear[$t] = "\x97,0,0";    # 2018-09-25: "Ч"
+  $t=587; $ear[$t] = "\x88,0,0";    # 2018-09-25: "И"
+  $t=588; $ear[$t] = "\x92,0,0";    # 2018-09-25: "Т"
+  $t=589; $ear[$t] = "\x80,0,1898"; # 2019-06-03: "А" stem $prc
+  $t=590; $ear[$t] = "\x9E,0,1898"; # 2019-06-03: "Ю" stem $prc
+  $t=591; $ear[$t] = "\x92,0,1898"; # 2019-06-03: "Т"
+  $psi=1898; $hlc=3; $jux=0; $pos=8; $dba=3; $num=2; $mfn=0; # 2019-06-03
+  $pre=1561; $seq=1540; $tkb=598; $rv=586; KbLoad(); # 2018-09-25: flag-panel order
+  $t=592; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+  $t=593; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# КНИГИ (1540 books) noun, acc. plural; 2016mar06
+  $t=594; $ear[$t] = "\x8A,0,0";    # 2018-09-25: "К"
+  $t=595; $ear[$t] = "\x8D,0,0";    # 2018-09-25: "Н"
+  $t=596; $ear[$t] = "\x88,0,0";    # 2018-09-25: "И"
+  $t=597; $ear[$t] = "\x83,0,1540"; # 2018-09-25: "Г" stem for provisional recognition
+  $t=598; $ear[$t] = "\x88,0,1540"; # 2018-09-25: "И"
+  $psi=1540; $hlc=3; $jux=0; $pos=5; $dba=4; $num=2; $mfn=2; # 2018-09-27
+  $pre=1898; $seq=0; $tkb=0; $rv=594; KbLoad(); # 2019-06-03: flag-panel order
+  $t=599; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+
+# "СКАЖИ МНЕ ЧТО-НИБУДЬ" (TELL ME SOMETHING) -- 2018-09-25: command for Imperative()
+  $t=600; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# СКАЖИ -- 2019-06-03: #1823 ("tell"); verb for Imperative; 2019-06-03
+  $t=601; $ear[$t] = "\x91,0,0";    # 2018-09-25: "С"
+  $t=602; $ear[$t] = "\x9A,0,0";    # 2018-09-25: "К"
+  $t=603; $ear[$t] = "\x80,0,0";    # 2018-09-25: "А"
+  $t=604; $ear[$t] = "\x86,0,0";    # 2018-09-25: "Ж"
+  $t=605; $ear[$t] = "\x88,0,1823"; # 2019-06-03: "И"
+  $psi=1823; $hlc=3; $mtx=0; $jux=0; $pos=8; $dba=6; $num=1; $mfn=0; # 2019-06-03
+  $pre=0; $seq=1782; $tkb=623; $rv=601; KbLoad(); # 2018-09-25: flag-panel order
+  $t=606; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+  $t=607; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# МНЕ (1701 "to me") pronoun; familiar; dat. sing. 2018-09-25
+  $t=608; $ear[$t] = "\x8C,0,0";    # 2018-09-25: "М"
+  $t=609; $ear[$t] = "\x8D,0,0";    # 2018-09-25: "Н"
+  $t=610; $ear[$t] = "\x85,0,1701"; # 2018-09-25: "Е"
+  $psi=1701; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=0; # 2018-09-27
+  $pre=0; $seq=0; $tkb=0; $rv=608; KbLoad(); # 2018-09-25: flag-panel order
+  $t=611; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+  $t=612; $ear[$t] = "\N{U+0},0,0"; # 2018-09-25: Unicode?
+# ЧТО-НИБУДЬ (1782 something) pronoun; accusative singular; 2018-09-25
+  $t=613; $ear[$t] = "\x97,0,0";    # 2018-09-25: "Ч"
+  $t=614; $ear[$t] = "\x92,0,0";    # 2018-09-25: "Т"
+  $t=615; $ear[$t] = "\x8E,0,0";    # 2018-09-25: "О"
+  $t=616; $ear[$t] = "-,0,0";       # 2018-09-25: "-"
+  $t=617; $ear[$t] = "\x8D,0,0";    # 2018-09-25: "Н"
+  $t=618; $ear[$t] = "\x88,0,0";    # 2018-09-25: "И"
+  $t=619; $ear[$t] = "\x81,0,0";    # 2018-09-25: "Б"
+  $t=620; $ear[$t] = "\x93,0,0";    # 2018-09-25: "У"
+  $t=621; $ear[$t] = "\x84,0,0";    # 2018-09-25: "Д"
+  $t=622; $ear[$t] = "\x9C,0,1782"; # 2018-09-25: "Ь"
+  $psi=1782; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=3; # 2018-09-27
+  $pre=1823; $seq=0; $tkb=0; $rv=613; KbLoad(); # 2019-06-03: flag-panel order
+  $t=623; $ear[$t] = " ,0,0";       # 2018-09-25: blank space for AudRecog
+
+#
+  $t=1001; $ear[$t] = " ,0,0";  # 2016feb24: Reserve 1001-1999 for Russian
+  $t=1002; $ear[$t] = "\N{U+0},0,0";     # 2016feb24: seems necessary?
+# 2016feb22: The Unicode U+HHHH notation uses hexadecimal.
+# ОШИБКА (1582 error) first word so any bug will announce itself
+  $t=1003; $ear[$t] = "\x8E,0,0";        # 2016feb24 " О"
+  $t=1004; $ear[$t] = "\x98,0,0";        # 2016feb24 " Ш"
+  $t=1005; $ear[$t] = "\x88,0,0";        # 2016feb24 " И"
+  $t=1006; $ear[$t] = "\x81,0,0";        # 2016feb24 " Б"
+  $t=1007; $ear[$t] = "\x8A,0,0";        # 2016feb24 " К"
+  $t=1008; $ear[$t] = "\x80,0,1582";     # 2016feb24 " А"
+  $psi=1582; $hlc=3; $mtx=586; $jux=0; $pos=5; $dba=0; $num=1; $mfn=2; # 2018-09-27
+  $pre=0; $seq=0; $tkb=0; $rv=1003; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1009; $ear[$t] = " ,0,0";       # 2016feb24: blank space
+
+  $t=1010; $ear[$t] = "\N{U+0},0,0"; # 2016feb24: Unicode?
+  # АВОСЬ (1270 maybe) for KbRetro to treat as answer; 2016may01
+  $t=1011; $ear[$t] = "\x80,0,0";    # 2016feb22: "А"
+  $t=1012; $ear[$t] = "\x82,0,0";    # 2016feb22: "В"
+  $t=1013; $ear[$t] = "\x8E,0,0";    # 2016feb22: "О"
+  $t=1014; $ear[$t] = "\x91,0,0";    # 2016feb22: "С"
+  $t=1015; $ear[$t] = "\x9C,0,1270"; # 2016feb22: "Ь"
+  $psi=1270; $hlc=3; $jux=0; $pos=2; $dba=0; $num=0; $mfn=0; # 2018-09-27
+  $pre=0; $seq=0; $tkb=0; $rv=1011; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1016; $ear[$t] = " ,0,0";       # 2016feb24: blank space
+
+  $t=1017; $ear[$t] = "\N{U+0},0,0"; # 2016feb24: Unicode?
+# без (1600 without) preposition; 2016feb26
+  $t=1018; $ear[$t] = "\x81,0,0";    # 2016feb22: "Б"
+  $t=1019; $ear[$t] = "\x85,0,0";    # 2016feb22: "Е"
+  $t=1020; $ear[$t] = "\x87,0,1600"; # 2016feb26: "З"
+  $psi=1600; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-09-27
+  $pre=0; $seq=0; $tkb=0; $rv=1018; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1021; $ear[$t] = " ,0,0";       # 2016feb24: blank space
+
+  $t=1022; $ear[$t] = "\N{U+0},0,0"; # 2016feb24: Unicode?
+# благодаря (1602 thanks to, owing to) 2016feb26:
+  $t=1023; $ear[$t] = "\x81,0,0";    # 2016feb24: "Б"
+  $t=1024; $ear[$t] = "\x8B,0,0";    # 2016feb24: "Л"
+  $t=1025; $ear[$t] = "\x80,0,0";    # 2016feb24: "А"
+  $t=1026; $ear[$t] = "\x83,0,0";    # 2016feb24: "Г"
+  $t=1027; $ear[$t] = "\x8E,0,0";    # 2016feb24: "О"
+  $t=1028; $ear[$t] = "\x84,0,0";    # 2016feb24: "Д"
+  $t=1029; $ear[$t] = "\x80,0,0";    # 2016feb24: "А"
+  $t=1030; $ear[$t] = "\x90,0,0";    # 2016feb24: "Р"
+  $t=1031; $ear[$t] = "\x9F,0,1602"; # 2016feb26: "Я"
+  $psi=1602; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-09-27
+  $pre=0; $seq=0; $tkb=0; $rv=1023; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1032; $ear[$t] = " ,0,0";       # 2016feb24: blank space
+
+  $t=1033; $ear[$t] = "\N{U+0},0,0"; # 2016feb24: Unicode?
+# БЫВАТЬ (1803 to occur) verb; infinitive; 2016apr27: Cyrillic
+  $t=1034; $ear[$t] = "\x81,0,0";    # 2016feb24: "Б"
+  $t=1035; $ear[$t] = "\x9B,0,0";    # 2016feb24: "Ы"
+  $t=1036; $ear[$t] = "\x82,0,0";    # 2016feb24: "В"
+  $t=1037; $ear[$t] = "\x80,0,1803"; # 2016mar04: "А" stem $prc
+  $t=1038; $ear[$t] = "\x92,0,1803"; # 2016mar04: "Т" stem #prc
+  $t=1039; $ear[$t] = "\x9C,0,1803"; # 2016feb24: "Ь"
+  $psi=1803; $hlc=3; $jux=0; $pos=8; $dba=0; $num=0; $mfn=0; # 2018-09-27
+  $pre=0; $seq=0; $tkb=0; $rv=1034; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1040; $ear[$t] = " ,0,0";       # 2016feb24: blank space
+
+  $t=1041; $ear[$t] = "\N{U+0},0,0"; # 2016feb24: Unicode?
+# БЫТЬ (1800 to be) verb; irreg; infinitive 2016may01
+  $t=1042; $ear[$t] = "\x81,0,0";    # 2016feb24: "Б"
+  $t=1043; $ear[$t] = "\x9B,0,0";    # 2016feb24: "Ы"
+  $t=1044; $ear[$t] = "\x92,0,0";    # 2016feb22: "Т"
+  $t=1045; $ear[$t] = "\x9C,0,1800"; # 2016feb24: "Ь"
+  $psi=1800; $hlc=3; $jux=0; $pos=8; $dba=0; $num=0; $mfn=0; # 2018-09-27
+  $pre=0; $seq=0; $tkb=0; $rv=1042; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1046; $ear[$t] = " ,0,0";       # 2016feb24: blank space
+
+  $t=1047; $ear[$t] = "\N{U+0},0,0"; # 2016feb24: Unicode?
+# БУДУ (1807 will be) verb; irreg; 1st person future; 2016may01
+  $t=1048; $ear[$t] = "\x81,0,0";    # 2016feb25: "Б"
+  $t=1049; $ear[$t] = "\x93,0,0";    # 2016feb23: "У"
+  $t=1050; $ear[$t] = "\x84,0,0";    # 2016feb22: "Д"
+  $t=1051; $ear[$t] = "\x93,0,1807"; # 2016feb23: "У"
+  $psi=1807; $hlc=3; $jux=0; $pos=8; $dba=0; $num=0; $mfn=0; # 2018-09-27
+  $pre=0; $seq=0; $tkb=0; $rv=1048; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1052; $ear[$t] = " ,0,0";       # 2016feb25: blank space
+
+  $t=1053; $ear[$t] = "\N{U+0},0,0"; # 2016feb25: Unicode?
+# "В" (1604 "in, into, at") preposition; 2016feb26
+  $t=1054; $ear[$t] = "\x82,0,1604"; # 2016feb26: "В"
+  $psi=1604; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-09-27
+  $pre=0; $seq=0; $tkb=0; $rv=1054; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1055; $ear[$t] = " ,0,0";       # 2016feb25: blank space
+
+  $t=1056; $ear[$t] = "\N{U+0},0,0"; # 2016feb25: Unicode?
+# "ВО" (1605 "in, into, at") preposition; 2016feb26
+  $t=1057; $ear[$t] = "\x82,0,0";    # 2016feb25: "В"
+  $t=1058; $ear[$t] = "\x8E,0,1605"; # 2016feb26: "О"
+  $psi=1605; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-09-27
+  $pre=0; $seq=0; $tkb=0; $rv=1057; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1059; $ear[$t] = " ,0,0";       # 2016feb25: blank space
+
+  $t=1060; $ear[$t] = "\N{U+0},0,0"; # 2016feb25: Unicode?
+# вдоль (1607 "along") preposition; 2016feb26
+  $t=1061; $ear[$t] = "\x82,0,0";    # 2016feb25: "В"
+  $t=1062; $ear[$t] = "\x84,0,0";    # 2016feb25: "Д"
+  $t=1063; $ear[$t] = "\x8E,0,0";    # 2016feb25: "О"
+  $t=1064; $ear[$t] = "\x8B,0,0";    # 2016feb25: "Л"
+  $t=1065; $ear[$t] = "\x9C,0,1607"; # 2016feb26: "Ь"
+  $psi=1607; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-09-27
+  $pre=0; $seq=0; $tkb=0; $rv=1061; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1066; $ear[$t] = " ,0,0";       # 2016feb25: blank space
+
+  $t=1067; $ear[$t] = "\N{U+0},0,0"; # 2016feb25: Unicode?
+# ВИДЕТЬ -- 2019-06-03: #1810 ("to see") verb; infinitive;
+  $t=1068; $ear[$t] = "\x82,0,0";    # 2019-06-03: "В"
+  $t=1069; $ear[$t] = "\x88,0,0";    # 2019-06-03: "И"
+  $t=1070; $ear[$t] = "\x84,0,1810"; # 2019-06-03: "Д"
+  $t=1071; $ear[$t] = "\x85,0,1810"; # 2019-06-03: "Е"
+  $t=1072; $ear[$t] = "\x92,0,1810"; # 2019-06-03: "Т"
+  $t=1073; $ear[$t] = "\x9C,0,1810"; # 2019-06-03: "Ь"
+  $psi=1810; $hlc=3; $mtx=870; $jux=0; $pos=8; $dba=0; $num=0; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=1068; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1074; $ear[$t] = " ,0,0";       # 2016feb25: blank space
+
+  $t=1075; $ear[$t] = "\N{U+0},0,0"; # 2016feb24: Unicode?
+# ВИЖУ -- 2019-06-03: #1810 "I see"); verb for VisRecog;
+  $t=1076; $ear[$t] = "\x82,0,0";    # 2016feb25:  "В"
+  $t=1077; $ear[$t] = "\x88,0,0";    # 2016feb25   "И"
+  $t=1078; $ear[$t] = "\x86,0,0";    # 2016feb25:  "Ж"
+  $t=1079; $ear[$t] = "\x93,0,1810"; # 2019-06-03: "У"
+  $psi=1810; $hlc=3; $mtx=870; $jux=0; $pos=8; $dba=1; $num=1; $mfn=0; # 2018-12-10
+  $pre=0; $seq=0; $tkb=0; $rv=1076; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1080; $ear[$t] = " ,0,0";       # 2016feb25: blank space
+
+  $t=1081; $ear[$t] = "\N{U+0},0,0"; # 2016feb25: Unicode?
+# ВИДИШЬ -- 2019-06-03: #1810 "you see"); verb for VisRecog;
+  $t=1082; $ear[$t] = "\x82,0,0";    # 2016feb25:  "В"
+  $t=1083; $ear[$t] = "\x88,0,0";    # 2016feb25:  "И"
+  $t=1084; $ear[$t] = "\x84,0,0";    # 2019-06-03: "Д"
+  $t=1085; $ear[$t] = "\x88,0,1810"; # 2019-06-03: "И"
+  $t=1086; $ear[$t] = "\x98,0,1810"; # 2019-06-03: "Ш"
+  $t=1087; $ear[$t] = "\x9C,0,1810"; # 2019-06-03: "Ь"
+  $psi=1810; $hlc=3; $mtx=870; $jux=0; $pos=8; $dba=2; $num=1; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=1082; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1088; $ear[$t] = " ,0,0";       # 2016feb25: blank space
+
+  $t=1089; $ear[$t] = "\N{U+0},0,0"; # 2016feb24: Unicode?
+# ВИДИТ -- 2019-06-03: #1810 "he sees"); verb for VisRecog;
+  $t=1090; $ear[$t] = "\x82,0,0";    # 2016feb25:  "В"
+  $t=1091; $ear[$t] = "\x88,0,0";    # 2016feb25   "И"
+  $t=1092; $ear[$t] = "\x84,0,1810"; # 2019-06-03: "Д"
+  $t=1093; $ear[$t] = "\x88,0,1810"; # 2019-06-03: "И"
+  $t=1094; $ear[$t] = "\x92,0,1810"; # 2019-06-03: "Т"
+  $psi=1810; $hlc=3; $mtx=870; $jux=0; $pos=8; $dba=3; $num=1; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=1090; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1095; $ear[$t] = " ,0,0";       # 2016feb25: blank space
+
+  $t=1096; $ear[$t] = "\N{U+0},0,0"; # 2016feb24: Unicode?
+# ВИДИМ -- 2019-06-03: #1810 ("we see"); verb for VisRecog;
+  $t=1097; $ear[$t] = "\x82,0,0";    # 2016feb25:  "В"
+  $t=1098; $ear[$t] = "\x88,0,0";    # 2016feb25:  "И"
+  $t=1099; $ear[$t] = "\x84,0,1810"; # 2019-06-03: "Д"
+  $t=1100; $ear[$t] = "\x88,0,1810"; # 2019-06-03: "И"
+  $t=1101; $ear[$t] = "\x8C,0,1810"; # 2019-06-03: "м"
+  $psi=1810; $hlc=3; $mtx=870; $jux=0; $pos=8; $dba=1; $num=2; $mfn=0; # 2018-12-10
+  $pre=0; $seq=0; $tkb=0; $rv=1097; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1102; $ear[$t] = " ,0,0";       # 2016feb25: blank space
+
+  $t=1103; $ear[$t] = "\N{U+0},0,0"; # 2016feb24: Unicode?
+# ВИДИТЕ -- 2019-06-03: #1810 ("you see"); verb; plural;
+  $t=1104; $ear[$t] = "\x82,0,0";    # 2016feb25:  "В"
+  $t=1105; $ear[$t] = "\x88,0,0";    # 2016feb25:  "И"
+  $t=1106; $ear[$t] = "\x84,0,1810"; # 2019-06-03: "Д"
+  $t=1107; $ear[$t] = "\x88,0,1810"; # 2019-06-03: "И"
+  $t=1108; $ear[$t] = "\x92,0,1810"; # 2019-06-03: "Т"
+  $t=1109; $ear[$t] = "\x85,0,1810"; # 2019-06-03: "Е"
+  $psi=1810; $hlc=3; $mtx=870; $jux=0; $pos=8; $dba=2; $num=2; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=1104; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1110; $ear[$t] = " ,0,0";       # 2016feb25: blank space
+
+  $t=1111; $ear[$t] = "\N{U+0},0,0"; # 2016feb24: Unicode?
+# ВИДЯТ -- 2019-06-03: #1810 ("they see"); verb; 3rd pers. plural;
+  $t=1112; $ear[$t] = "\x82,0,0";    # 2016feb25:  "В"
+  $t=1113; $ear[$t] = "\x88,0,0";    # 2016feb25: " И"
+  $t=1114; $ear[$t] = "\x84,0,1810"; # 2019-06-03: "Д"
+  $t=1115; $ear[$t] = "\x9F,0,1810"; # 2019-06-03: "Я"
+  $t=1116; $ear[$t] = "\x92,0,1810"; # 2019-06-03: "Т"
+  $psi=1810; $hlc=3; $mtx=870; $jux=0; $pos=8; $dba=3; $num=2; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=1112; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1117; $ear[$t] = " ,0,0";       # 2016feb25: blank space
+
+  $t=1118; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# вместо (1608 instead of) preposition; 2016feb26
+  $t=1119; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1120; $ear[$t] = "\x8C,0,0";    # 2016feb26 " М"
+  $t=1121; $ear[$t] = "\x85,0,0";    # 2016feb26: "Е"
+  $t=1122; $ear[$t] = "\x91,0,0";    # 2016feb26 " С"
+  $t=1123; $ear[$t] = "\x92,0,0";    # 2016feb26: "Т"
+  $t=1124; $ear[$t] = "\x8E,0,1608"; # 2016feb26: "О"
+  $psi=1608; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-09-27
+  $pre=0; $seq=0; $tkb=0; $rv=1119; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1125; $ear[$t] = " ,0,0";       # 2016feb25: blank space
+
+  $t=1126; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# вне (1609 outside) preposition; 2016feb26:
+  $t=1127; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1028; $ear[$t] = "\x8D,0,0";    # 2016feb22: "Н"
+  $t=1129; $ear[$t] = "\x85,0,1609"; # 2016feb26: "Е"
+  $psi=1609; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-09-27
+  $pre=0; $seq=0; $tkb=0; $rv=1127; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1130; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1131; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# внутри (1610 inside) preposition; 2016feb26
+  $t=1132; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1133; $ear[$t] = "\x8D,0,0";    # 2016feb26 " Н"
+  $t=1134; $ear[$t] = "\x93,0,0";    # 2016feb26: "У"
+  $t=1135; $ear[$t] = "\x92,0,0";    # 2016feb26 " Т"
+  $t=1136; $ear[$t] = "\x90,0,0";    # 2016feb26: "Р"
+  $t=1137; $ear[$t] = "\x88,0,1610"; # 2016feb26: "И"
+  $psi=1610; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-07
+  $pre=0;  $seq=0; $tkb=0; $rv=1132; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1138; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1139; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# внутрь (1611 inside) preposition; 2016feb26
+  $t=1140; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1141; $ear[$t] = "\x8D,0,0";    # 2016feb26 " Н"
+  $t=1142; $ear[$t] = "\x93,0,0";    # 2016feb26: "У"
+  $t=1143; $ear[$t] = "\x92,0,0";    # 2016feb26 " Т"
+  $t=1144; $ear[$t] = "\x90,0,0";    # 2016feb26: "Р"
+  $t=1145; $ear[$t] = "\x9C,0,1611"; # 2016feb26: "Ь"
+  $psi=1611; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1140; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1146; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1147; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# возле (1612 near) preposition; 2016feb26
+  $t=1148; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1149; $ear[$t] = "\x8E,0,0";    # 2016feb26: "О"
+  $t=1150; $ear[$t] = "\x87,0,0";    # 2016feb26 " З"
+  $t=1151; $ear[$t] = "\x8B,0,0";    # 2016feb26: "Л"
+  $t=1152; $ear[$t] = "\x85,0,1612"; # 2016feb26: "Е"
+  $psi=1612; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-07
+  $pre=0;  $seq=0; $tkb=0; $rv=1148; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1153; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1154; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# вокруг (1613 around) preposition; 2016feb26
+  $t=1155; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1156; $ear[$t] = "\x8E,0,0";    # 2016feb26 " О"
+  $t=1157; $ear[$t] = "\x8A,0,0";    # 2016feb26: "К"
+  $t=1158; $ear[$t] = "\x90,0,0";    # 2016feb26 " Р"
+  $t=1159; $ear[$t] = "\x93,0,0";    # 2016feb26: "У"
+  $t=1160; $ear[$t] = "\x83,0,1613"; # 2016feb26: "Г"
+  $psi=1613; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-07
+  $pre=0;  $seq=0; $tkb=0; $rv=1155; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1161; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1162; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# вопреки (1614 despite) preposition; 2016feb26
+  $t=1163; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1164; $ear[$t] = "\x8E,0,0";    # 2016feb26 " О"
+  $t=1165; $ear[$t] = "\x8F,0,0";    # 2016feb26: "П"
+  $t=1166; $ear[$t] = "\x91,0,0";    # 2016feb26 " Р"
+  $t=1167; $ear[$t] = "\x85,0,0";    # 2016feb26: "Е"
+  $t=1168; $ear[$t] = "\x8A,0,0";    # 2016feb26: "К"
+  $t=1169; $ear[$t] = "\x88,0,1614"; # 2016feb26: "И"
+  $psi=1614; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1163; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1170; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1171; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# впереди (1615 in front of) preposition; 2016feb26
+  $t=1172; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1173; $ear[$t] = "\x8F,0,0";    # 2016feb26 " П"
+  $t=1174; $ear[$t] = "\x85,0,0";    # 2016feb26: "Е"
+  $t=1175; $ear[$t] = "\x90,0,0";    # 2016feb26 " Р"
+  $t=1176; $ear[$t] = "\x85,0,0";    # 2016feb26: "Е"
+  $t=1177; $ear[$t] = "\x84,0,0";    # 2016feb26: "Д"
+  $t=1178; $ear[$t] = "\x88,0,1615"; # 2016feb26: "И"
+  $psi=1615; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1172; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1179; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1180; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# вследствие (1616 because of) preposition; 2016feb26
+  $t=1181; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1182; $ear[$t] = "\x91,0,0";    # 2016feb26 " С"
+  $t=1183; $ear[$t] = "\x8B,0,0";    # 2016feb26: "Л"
+  $t=1184; $ear[$t] = "\x85,0,0";    # 2016feb26 " Е"
+  $t=1185; $ear[$t] = "\x84,0,0";    # 2016feb26: "Д"
+  $t=1186; $ear[$t] = "\x91,0,0";    # 2016feb26 " С"
+  $t=1187; $ear[$t] = "\x92,0,0";    # 2016feb26: "Т"
+  $t=1188; $ear[$t] = "\x82,0,0";    # 2016feb26 " В"
+  $t=1189; $ear[$t] = "\x88,0,0";    # 2016feb26: "И"
+  $t=1190; $ear[$t] = "\x85,0,1616"; # 2016feb26: "Е"
+  $psi=1616; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1181; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1191; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1192; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВЫ (1737 you) pronoun; familiar nom. plural; 2016may01
+  $t=1193; $ear[$t] = "\x82,0,0";    # 2016feb26 " В"
+  $t=1194; $ear[$t] = "\x9B,0,1737"; # 2016feb26: "Ы"
+  $psi=1737; $hlc=3; $jux=0; $pos=7; $dba=1; $num=2; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1193; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1195; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1196; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАС (1737 of you) pronoun; familiar gen. plural; 2016may01
+  $t=1197; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1198; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1199; $ear[$t] = "\x91,0,1737"; # 2016feb26: "С"
+  $psi=1737; $hlc=3; $jux=0; $pos=7; $dba=2; $num=2; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1197; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1200; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1201; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАМ (1737 to you) pronoun; familiar dat. plural; 2016may01
+  $t=1202; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1203; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1204; $ear[$t] = "\x8C,0,1737"; # 2016feb26: "М"
+  $psi=1737; $hlc=3; $jux=0; $pos=7; $dba=3; $num=2; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1202; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1205; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1206; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАС (1737 you) pronoun; familiar acc. plural; 2016feb26
+  $t=1207; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1208; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1209; $ear[$t] = "\x91,0,1737"; # 2016feb26: "С"
+  $psi=1737; $hlc=3; $jux=0; $pos=7; $dba=4; $num=2; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1207; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1210; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1211; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАМИ (1737 you) pron; familiar instrumental plural; 2016may01
+  $t=1212; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1213; $ear[$t] = "\x80,0,0";    # 2016feb22: "А"
+  $t=1214; $ear[$t] = "\x8C,0,0";    # 2016feb26: "М"
+  $t=1215; $ear[$t] = "\x88,0,1737"; # 2016feb22: "И"
+  $psi=1737; $hlc=3; $jux=0; $pos=7; $dba=5; $num=2; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1212; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1216; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1217; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАС (1737 you) pron; familiar prep. plural; 2016feb26
+  $t=1218; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1219; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1220; $ear[$t] = "\x91,0,1737"; # 2016feb26: "С"
+  $psi=1737; $hlc=3; $jux=0; $pos=7; $dba=6; $num=2; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1218; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1221; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1222; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВЫ (1749 you) pronoun; formal nom. sing.; 2016may01
+  $t=1223; $ear[$t] = "\x82,0,0";    # 2016feb26 " В"
+  $t=1224; $ear[$t] = "\x9B,0,1749"; # 2016feb26: "Ы"
+  $psi=1749; $hlc=3; $jux=0; $pos=7; $dba=1; $num=1; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1223; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1225; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1226; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАС (1749 of you) pronoun; formal gen. sing.; 2016may01
+  $t=1227; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1228; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1229; $ear[$t] = "\x91,0,1749"; # 2016feb26: "С"
+  $psi=1749; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1227; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1230; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1231; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАМ (1749 to you) pronoun; formal dat. sing.; 2016may01
+  $t=1232; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1233; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1234; $ear[$t] = "\x8C,0,1749"; # 2016feb26: "М"
+  $psi=1749; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1232; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1235; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1236; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАС (1749 you) pronoun; formal acc. sing.; 2016may01
+  $t=1237; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1238; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1239; $ear[$t] = "\x91,0,1749"; # 2016feb26: "С"
+  $psi=1749; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1237; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1240; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1241; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАМИ (1749 you) pron; formal instrumental sing.; 2016may01
+  $t=1242; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1243; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1244; $ear[$t] = "\x8C,0,0";    # 2016feb26: "М"
+  $t=1245; $ear[$t] = "\x88,0,1749"; # 2016feb26: "И"
+  $psi=1749; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1242; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1246; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1247; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАС (1749 you) pron; formal prep. sing.; 2016may01
+  $t=1248; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1249; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1250; $ear[$t] = "\x91,0,1749"; # 2016feb26: "С"
+  $psi=1749; $hlc=3; $jux=0; $pos=7; $dba=6; $num=1; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1248; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1251; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1252; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВЫ (1755 you) pronoun; formal nom. plural.; 2016may01
+  $t=1253; $ear[$t] = "\x82,0,0";    # 2016feb26 " В"
+  $t=1254; $ear[$t] = "\x9B,0,1755"; # 2016feb26: "Ы"
+  $psi=1755; $hlc=3; $jux=0; $pos=7; $dba=1; $num=2; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1253; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1255; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1256; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАС (1755 of you) pronoun; formal gen. plural; 2016may01
+  $t=1257; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1258; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1259; $ear[$t] = "\x91,0,1755"; # 2016feb26: "С"
+  $psi=1755; $hlc=3; $jux=0; $pos=7; $dba=2; $num=2; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1257; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1260; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1261; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАМ (1755 to you) pronoun; formal dat. plural.; 2016may01
+  $t=1262; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1263; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1264; $ear[$t] = "\x8C,0,1755"; # 2016feb26: "М"
+  $psi=1755; $hlc=3; $jux=0; $pos=7; $dba=3; $num=2; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1262; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1265; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1266; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАС (1755 you) pronoun; formal acc. plural; 2016may01
+  $t=1267; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1268; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1269; $ear[$t] = "\x91,0,1755"; # 2016feb26: "С"
+  $psi=1755; $hlc=3; $jux=0; $pos=7; $dba=4; $num=2; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1267; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1270; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1271; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАМИ (1755 you) pron; formal instrumental plural; 2016may01
+  $t=1272; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1273; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1274; $ear[$t] = "\x8C,0,0";    # 2016feb26: "М"
+  $t=1275; $ear[$t] = "\x88,0,1755"; # 2016feb26: "И"
+  $psi=1755; $hlc=3; $jux=0; $pos=7; $dba=5; $num=2; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1272; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1276; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1277; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ВАС (1755 you) pron; formal prep. plural; 2016may01
+  $t=1278; $ear[$t] = "\x82,0,0";    # 2016feb26: "В"
+  $t=1279; $ear[$t] = "\x80,0,0";    # 2016feb26: "А"
+  $t=1280; $ear[$t] = "\x91,0,1755"; # 2016feb26: "С"
+  $psi=1755; $hlc=3; $jux=0; $pos=7; $dba=6; $num=2; $mfn=0; # 2018-07-07
+  $pre=0; $seq=0; $tkb=0; $rv=1278; KbLoad(); # 2018-07-07: flag-panel order
+  $t=1281; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1282; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ДА (1432 yes) interjection; 2016may01
+  $t=1283; $ear[$t] = "\x84,0,0";    # 2016feb26: "Д"
+  $t=1284; $ear[$t] = "\x80,0,1432"; # 2016feb26: "А"
+  $psi=1432; $hlc=3; $jux=0; $pos=4; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1283; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1285; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1286; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ДЕЛАТЬ -- 2019-06-03: #1826 "to do"); sample verb;
+  $t=1287; $ear[$t] = "\x84,0,0";    # 2016feb26:  "Д"
+  $t=1288; $ear[$t] = "\x85,0,0";    # 2016feb26:  "Е"
+  $t=1289; $ear[$t] = "\x8B,0,0";    # 2016feb26:  "Л"
+  $t=1290; $ear[$t] = "\x80,0,1826"; # 2019-06-03: "А" stem $prc
+  $t=1291; $ear[$t] = "\x92,0,1826"; # 2019-06-03: "Т" stem $prc
+  $t=1292; $ear[$t] = "\x9C,0,1826"; # 2019-06-03: "Ь"
+  $psi=1826; $hlc=3; $jux=0; $pos=8; $dba=0; $num=0; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=1287; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1293; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1294; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# ДЕЛАЮ -- 2019-06-03: #1826 ("I do"); sample verb;
+  $t=1295; $ear[$t] = "\x84,0,0";    # 2016feb26:  "Д"
+  $t=1296; $ear[$t] = "\x85,0,0";    # 2016feb26:  "Е"
+  $t=1297; $ear[$t] = "\x8B,0,1826"; # 2019-06-03: "Л"
+  $t=1298; $ear[$t] = "\x80,0,1826"; # 2019-06-03: "А"
+  $t=1299; $ear[$t] = "\x9E,0,1826"; # 2019-06-03: "Ю"
+  $psi=1826; $hlc=3; $jux=0; $pos=8; $dba=1; $num=1; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=1295; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1300; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1301; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# 1514 ДЕТИ (children) noun; plural; 2016may01
+  $t=1302; $ear[$t] = "\x84,0,0";    # 2016feb26: "Д"
+  $t=1303; $ear[$t] = "\x85,0,0";    # 2016feb26: "Е"
+  $t=1304; $ear[$t] = "\x92,0,0";    # 2016feb26: "Т"
+  $t=1305; $ear[$t] = "\x88,0,1514"; # 2016feb26: "И"
+  $psi=1514; $hlc=3; $jux=0; $pos=5; $dba=1; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1302; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1306; $ear[$t] = " ,0,0";       # 2016feb25: blank space
+
+  $t=1307; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# для (1618 for) preposition; 2016feb26:
+  $t=1308; $ear[$t] = "\x84,0,0";    # 2016feb26: "Д"
+  $t=1309; $ear[$t] = "\x8B,0,0";    # 2016feb26: "Л"
+  $t=1310; $ear[$t] = "\x9F,0,1618"; # 2016feb26: "Я"
+  $psi=1618; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1308; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1311; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1312; $ear[$t] = "\N{U+0},0,0"; # 2016feb26: Unicode?
+# до (1620 until, before) preposition; 2016feb26:
+  $t=1313; $ear[$t] = "\x84,0,0";    # 2016feb26: "Д"
+  $t=1314; $ear[$t] = "\x8E,0,1620"; # 2016feb26: "О"
+  $psi=1620; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1313; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1315; $ear[$t] = " ,0,0";       # 2016feb26: blank space
+
+  $t=1316; $ear[$t] = "\N{U+0},0,0"; # 2016feb27: Unicode?
+# ДУМАТЬ -- 2019-06-03: #1830 "to think"); verb; infinitive;
+  $t=1317; $ear[$t] = "\x84,0,0";    # 2016feb27:  "Д"
+  $t=1318; $ear[$t] = "\x93,0,0";    # 2016feb27:  "У"
+  $t=1319; $ear[$t] = "\x8C,0,0";    # 2016may01:  "М"
+  $t=1320; $ear[$t] = "\x80,0,1830"; # 2019-06-03: "А"
+  $t=1321; $ear[$t] = "\x92,0,1830"; # 2019-06-03: "Т"
+  $t=1322; $ear[$t] = "\x9C,0,1830"; # 2019-06-03: "Ь"
+  $psi=1830; $hlc=3; $jux=0; $pos=8; $dba=0; $num=0; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=1317; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1323; $ear[$t] = " ,0,0";       # 2016feb27: blank space
+
+#
+  $t=1324; $ear[$t] = "\N{U+0},0,0"; # 2016feb27: Unicode?
+# ДУШКА (1521 "little soul"); name of a Russian AI; 2016may01
+  $t=1325; $ear[$t] = "\x84,0,0";    # 2016feb27: "Д"
+  $t=1326; $ear[$t] = "\x93,0,0";    # 2016feb27: "У"
+  $t=1327; $ear[$t] = "\x98,0,0";    # 2016feb27: "Ш"
+  $t=1328; $ear[$t] = "\x8A,0,0";    # 2016feb27: "К"
+  $t=1329; $ear[$t] = "\x80,0,1521"; # 2016feb27: "А"
+  $psi=1521; $hlc=3; $jux=0; $pos=5; $dba=1; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1325; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1330; $ear[$t] = " ,0,0";       # 2016feb27: blank space
+
+  $t=1331; $ear[$t] = "\N{U+0},0,0"; # 2016feb27: Unicode?
+# ЕСТЬ -- 2019-06-03: #1801 ("there is"); verb;
+  $t=1332; $ear[$t] = "\x85,0,0";    # 2016feb27:  "Е"
+  $t=1333; $ear[$t] = "\x91,0,0";    # 2016feb27:  "С"
+  $t=1334; $ear[$t] = "\x92,0,0";    # 2016feb27:  "Т"
+  $t=1335; $ear[$t] = "\x9C,0,1801"; # 2019-06-03: "Ь"
+  $psi=1801; $hlc=3; $jux=0; $pos=8; $dba=0; $num=0; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=1332; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1336; $ear[$t] = " ,0,0";       # 2016feb27: blank space
+
+  $t=1337; $ear[$t] = "\N{U+0},0,0"; # 2016feb27: Unicode?
+# за (1622 behind, beyond, for) preposition; 2016feb27
+  $t=1338; $ear[$t] = "\x87,0,0";    # 2016feb27: "З"
+  $t=1339; $ear[$t] = "\x80,0,1622"; # 2016feb27: "А"
+  $psi=1622; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1338; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1340; $ear[$t] = " ,0,0";       # 2016feb27: blank space
+
+  $t=1341; $ear[$t] = "\N{U+0},0,0"; # 2016feb27: Unicode?
+# ЗНАТЬ -- 2019-06-03: #1840 "to know"); sample verb;
+  $t=1342; $ear[$t] = "\x87,0,0";    # 2016feb27:  "З"
+  $t=1343; $ear[$t] = "\x8D,0,0";    # 2016feb27:  "Н"
+  $t=1344; $ear[$t] = "\x80,0,1840"; # 2019-06-03: "А"
+  $t=1345; $ear[$t] = "\x92,0,1840"; # 2019-06-03: "Т"
+  $t=1346; $ear[$t] = "\x9C,0,1840"; # 2019-06-03: "Ь"
+  $psi=1840; $hlc=3; $jux=0; $pos=8; $dba=0; $num=0; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=1342; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1347; $ear[$t] = " ,0,0";       # 2016feb27: blank space
+
+  $t=1348; $ear[$t] = "\N{U+0},0,0"; # 2016feb27: Unicode?
+# ЗНАЮ -- 2019-06-03: #1840 ("I know"); sample verb, 1st person sing.
+  $t=1349; $ear[$t] = "\x87,0,0";    # 2016feb27:  "З"
+  $t=1350; $ear[$t] = "\x8D,0,0";    # 2016feb27:  "Н"
+  $t=1351; $ear[$t] = "\x80,0,1840"; # 2019-06-03: "А"
+  $t=1352; $ear[$t] = "\x9E,0,1840"; # 2019-06-03: "Ю"
+  $psi=1840; $hlc=3; $jux=0; $pos=8; $dba=1; $num=1; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=1349; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1353; $ear[$t] = " ,0,0";       # 2016feb27: blank space
+
+  $t=1354; $ear[$t] = "\N{U+0},0,0"; # 2016feb27: Unicode?
+# И (1350 "and") conjunction; 2016may01
+  $t=1355; $ear[$t] = "\x88,0,1350"; # 2016feb27: "И"
+  $psi=1350; $hlc=3; $jux=0; $pos=3; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1355; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1356; $ear[$t] = " ,0,0";       # 2016feb27: blank space
+
+  $t=1357; $ear[$t] = "\N{U+0},0,0"; # 2016feb27: Unicode?
+# из (1624 from) preposition; 2016feb26
+  $t=1358; $ear[$t] = "\x88,0,0";    # 2016feb27: "И"
+  $t=1359; $ear[$t] = "\x87,0,1624"; # 2016feb27: "З"
+  $psi=1624; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1358; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1360; $ear[$t] = " ,0,0";       # 2016feb27: blank space
+
+  $t=1361; $ear[$t] = "\N{U+0},0,0"; # 2016feb27: Unicode?
+# из-за (1625 from behind, because of) preposition; 2016feb27
+  $t=1362; $ear[$t] = "\x88,0,0";    # 2016feb27: "И"
+  $t=1363; $ear[$t] = "\x87,0,0";    # 2016feb27: "З"
+# $t=1363; $ear[$t] = "-,0,0";       # 2016feb27: "-" [ignore]
+  $t=1364; $ear[$t] = "\x87,0,0";    # 2016feb27: "З"
+  $t=1365; $ear[$t] = "\x80,0,1625"; # 2016feb27: "А"
+  $psi=1625; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1362; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1366; $ear[$t] = " ,0,0";       # 2016feb27: blank space
+
+  $t=1367; $ear[$t] = "\N{U+0},0,0"; # 2016feb27: Unicode?
+# из-под (1626 from under) preposition; 2016feb28:
+  $t=1368; $ear[$t] = "\x88,0,0";    # 2016feb28: "И"
+  $t=1369; $ear[$t] = "\x87,0,0";    # 2016feb28: "З"
+# $t=1369; $ear[$t] = "-,0,0";       # 2016feb28: "-" [ignore]
+  $t=1370; $ear[$t] = "\x8F,0,0";    # 2016feb28: "П"
+  $t=1371; $ear[$t] = "\x8E,0,0";    # 2016feb28: "О"
+  $t=1372; $ear[$t] = "\x84,0,1626"; # 2016feb28: "Д"
+  $psi=1626; $hlc=3; $jux=0; $pos=8; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1368; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1373; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1374; $ear[$t] = "\N{U+0},0,0"; # 2016feb27: Unicode?
+# ИЛИ (1340 or) conjunction; 2016may01
+  $t=1375; $ear[$t] = "\x88,0,0";    # 2016feb27: "И"
+  $t=1376; $ear[$t] = "\x8B,0,0";    # 2016feb27: "Л"
+  $t=1377; $ear[$t] = "\x88,0,1340"; # 2016feb27: "И"
+  $psi=1340; $hlc=3; $jux=0; $pos=3; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1375; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1378; $ear[$t] = " ,0,0";       # 2016feb27: blank space
+
+  $t=1379; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# ИНАЧЕ (1266 "else, otherwise"); conjunction; 2016may01
+  $t=1380; $ear[$t] = "\x88,0,0";    # 2016feb27: "И"
+  $t=1381; $ear[$t] = "\x8D,0,0";    # 2016feb27: "Н"
+  $t=1382; $ear[$t] = "\x80,0,0";    # 2016feb27: "А"
+  $t=1383; $ear[$t] = "\x97,0,0";    # 2016feb27: "Ч"
+  $t=1384; $ear[$t] = "\x85,0,1266"; # 2016feb28: "Е"
+  $psi=1266; $hlc=3; $jux=0; $pos=3; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1380; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1385; $ear[$t] = " ,0,0";       # 2016feb27: blank space
+
+  $t=1386; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# к (1628 towards) preposition; 2016feb28
+  $t=1387; $ear[$t] = "\x8A,0,1628"; # 2016feb28: "К"
+  $psi=1628; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1387; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1388; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1389; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# ко (1629 towards, up to) preposition; 2016feb28
+  $t=1390; $ear[$t] = "\x8A,0,0";    # 2016feb28: "К"
+  $t=1391; $ear[$t] = "\x8E,0,1629"; # 2016feb28: "О"
+  $psi=1629; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1390; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1392; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1393; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# КАК (1209 how) adverb; 2016feb28
+  $t=1394; $ear[$t] = "\x8A,0,0";    # 2016feb28: "К"
+  $t=1395; $ear[$t] = "\x80,0,0";    # 2016feb28: "А"
+  $t=1396; $ear[$t] = "\x8A,0,1209"; # 2016feb28: "К"
+  $psi=1209; $hlc=3; $jux=0; $pos=2; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1394; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1397; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1398; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# КОТОРЫЙ (1798 who, which, that) relative pronoun; 2016may01
+  $t=1399; $ear[$t] = "\x8A,0,0";    # 2016feb28: "К"
+  $t=1400; $ear[$t] = "\x8E,0,0";    # 2016feb28: "О"
+  $t=1401; $ear[$t] = "\x92,0,0";    # 2016feb28: "т"
+  $t=1402; $ear[$t] = "\x8E,0,0";    # 2016feb28: "О"
+  $t=1403; $ear[$t] = "\x90,0,0";    # 2016feb28: "Р"
+  $t=1404; $ear[$t] = "\x9B,0,0";    # 2016feb28: "Ы"
+  $t=1405; $ear[$t] = "\x89,0,1798"; # 2016feb28: "Й"
+  $psi=1798; $hlc=3; $jux=0; $pos=7; $dba=1; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1399; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1406; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1407; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# кроме (1631 except) preposition; 2016feb28
+  $t=1408; $ear[$t] = "\x8A,0,0";    # 2016feb28: "К"
+  $t=1409; $ear[$t] = "\x90,0,0";    # 2016feb28: "Р"
+  $t=1410; $ear[$t] = "\x8E,0,0";    # 2016feb28: "О"
+  $t=1411; $ear[$t] = "\x8C,0,0";    # 2016feb28: "М"
+  $t=1412; $ear[$t] = "\x85,0,1631"; # 2016feb28: "Е"
+  $psi=1631; $hlc=3; $jux=0; $pos=6; $dba=0;$num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1408; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1413; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1414; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# KTO (1791 who) pronoun; 2016feb28
+  $t=1415; $ear[$t] = "\x8A,0,0";    # 2016feb28: "К"
+  $t=1416; $ear[$t] = "\x92,0,0";    # 2016feb28: "Т"
+  $t=1417; $ear[$t] = "\x8E,0,1791"; # 2016feb28: "О"
+  $psi=1791; $hlc=3; $jux=0; $pos=7; $dba=1; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1415; KbLoad();  # 2018-07-08: flag-panel order
+  $t=1418; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1419; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# КОГО (1791 who) pronoun; 2016may01
+  $t=1420; $ear[$t] = "\x8A,0,0";    # 2016feb28: "К"
+  $t=1421; $ear[$t] = "\x8E,0,0";    # 2016feb28: "О"
+  $t=1422; $ear[$t] = "\x83,0,0";    # 2016feb28: "Г"
+  $t=1423; $ear[$t] = "\x8E,0,1791"; # 2016feb28: "О"
+  $psi=1791; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1420; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1424; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1425; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# КОМУ (1791 to whom) pronoun; 2016may01
+  $t=1426; $ear[$t] = "\x8A,0,0";    # 2016feb28: "К"
+  $t=1427; $ear[$t] = "\x8E,0,0";    # 2016feb28: "О"
+  $t=1428; $ear[$t] = "\x8C,0,0";    # 2016feb28: "М"
+  $t=1429; $ear[$t] = "\x93,0,1791"; # 2016feb28: "У"
+  $psi=1791; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1426; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1430; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1431; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# КОГО (1791 whom) pronoun; 2016may01
+  $t=1432; $ear[$t] = "\x8A,0,0";    # 2016feb28: "К"
+  $t=1433; $ear[$t] = "\x8E,0,0";    # 2016feb28: "О"
+  $t=1434; $ear[$t] = "\x83,0,0";    # 2016feb28: "Г"
+  $t=1435; $ear[$t] = "\x8E,0,1791"; # 2016feb28: "О"
+  $psi=1791; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1432; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1436; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1437; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# KEM (1791 whom) instrumental pronoun; 2016feb28
+  $t=1438; $ear[$t] = "\x8A,0,0";    # 2016feb28: "К"
+  $t=1439; $ear[$t] = "\x85,0,0";    # 2016feb28: "Е"
+  $t=1440; $ear[$t] = "\x8C,0,1791"; # 2016feb28: "М"
+  $psi=1791; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1438; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1441; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1442; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# KOM (1791 who) prepositional pronoun; 2016feb28
+  $t=1443; $ear[$t] = "\x8A,0,0";    # 2016feb28: "К"
+  $t=1444; $ear[$t] = "\x8E,0,0";    # 2016feb28: "О"
+  $t=1445; $ear[$t] = "\x8C,0,1791"; # 2016feb28: "М"
+  $psi=1791; $hlc=3; $jux=0; $pos=7; $dba=6; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1443; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1446; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1447; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# ЛИ (1320 whether) adverb; 2016may01
+  $t=1447; $ear[$t] = "\x8B,0,0";    # 2016feb28: "Л"
+  $t=1449; $ear[$t] = "\x88,0,1320"; # 2016feb28: "И"
+  $psi=1320; $hlc=3; $jux=0; $pos=3; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1447; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1450; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1451; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# ЛЮДИ (1587 people) noun; plural; 2016may01
+  $t=1452; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+  $t=1453; $ear[$t] = "\x8B,0,0";    # 2016feb28: "Л"
+  $t=1454; $ear[$t] = "\x9E,0,0";    # 2016feb28: "Ю"
+  $t=1455; $ear[$t] = "\x84,0,0";    # 2016feb28: "Д"
+  $t=1456; $ear[$t] = "\x88,0,1587"; # 2016feb28: "И"
+  $psi=1587; $hlc=3; $jux=0; $pos=5; $dba=1; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1452; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1457; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1458; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# между (1633 between) preposition; 2016feb28
+  $t=1459; $ear[$t] = "\x8C,0,0";    # 2016feb28: "М"
+  $t=1460; $ear[$t] = "\x85,0,0";    # 2016feb28: "Е"
+  $t=1461; $ear[$t] = "\x86,0,0";    # 2016feb28: "Ж"
+  $t=1462; $ear[$t] = "\x84,0,0";    # 2016feb28: "Д"
+  $t=1463; $ear[$t] = "\x93,0,1633"; # 2016feb28: "У"
+  $psi=1633; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1459; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1464; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1465; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# мимо (1635 past) preposition; 2016feb28
+  $t=1466; $ear[$t] = "\x8C,0,0";    # 2016feb28: "М"
+  $t=1467; $ear[$t] = "\x88,0,0";    # 2016feb28: "И"
+  $t=1468; $ear[$t] = "\x8C,0,0";    # 2016feb28: "М"
+  $t=1469; $ear[$t] = "\x8E,0,1635"; # 2016feb28: "О"
+  $psi=1635; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1466; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1470; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1471; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# МЫ (1731 we) pronoun; 2016may01
+  $t=1472; $ear[$t] = "\x8C,0,0";    # 2016feb28: "М"
+  $t=1473; $ear[$t] = "\x9B,0,1731"; # 2016feb28: "Ы"
+  $psi=1731; $hlc=3; $jux=0; $pos=7; $dba=1; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1472; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1474; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1475; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# НАС (1731 us) pronoun, genitive plural; 2016may01
+  $t=1476; $ear[$t] = "\x8D,0,0";    # 2016feb28: "Н"
+  $t=1477; $ear[$t] = "\x80,0,0";    # 2016feb28: "А"
+  $t=1478; $ear[$t] = "\x91,0,1731"; # 2016feb28: "С"
+  $psi=1731; $hlc=3; $jux=0; $pos=7; $dba=2; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1476; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1479; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1480; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# НАМ (1731 to us) pron. dative plural; 2016may01
+  $t=1481; $ear[$t] = "\x8D,0,0";    # 2016feb28: "Н"
+  $t=1482; $ear[$t] = "\x80,0,0";    # 2016feb28: "А"
+  $t=1483; $ear[$t] = "\x8C,0,1731"; # 2016feb28: "М"
+  $psi=1731; $hlc=3; $jux=0; $pos=7; $dba=3; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1481; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1484; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1485; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# НАС (1731 us) pron. accusative plural; 2016may01
+  $t=1486; $ear[$t] = "\x8D,0,0";    # 2016feb28: "Н"
+  $t=1487; $ear[$t] = "\x80,0,0";    # 2016feb28: "А"
+  $t=1488; $ear[$t] = "\x91,0,1731"; # 2016feb28: "С"
+  $psi=1731; $hlc=3; $jux=0; $pos=7; $dba=4; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1486; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1489; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1490; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# НАМИ (1731 us) pron; instrumental plural; 2016may01
+  $t=1491; $ear[$t] = "\x8D,0,0";    # 2016feb28: "Н"
+  $t=1492; $ear[$t] = "\x80,0,0";    # 2016feb28: "А"
+  $t=1493; $ear[$t] = "\x8C,0,0";    # 2016feb28: "М"
+  $t=1494; $ear[$t] = "\x88,0,1731"; # 2016feb28: "И"
+  $psi=1731; $hlc=3; $jux=0; $pos=7; $dba=5; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1491; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1495; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1496; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# НАС (1731 us) pron. prepositional plural; 2016may01
+  $t=1497; $ear[$t] = "\x8D,0,0";    # 2016feb28: "Н"
+  $t=1498; $ear[$t] = "\x80,0,0";    # 2016feb28: "А"
+  $t=1499; $ear[$t] = "\x91,0,1731"; # 2016feb28: "С"
+  $psi=1731; $hlc=3; $jux=0; $pos=7; $dba=6; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1497; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1500; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1501; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# на (1637 onto, to) preposition; 2016feb28
+  $t=1502; $ear[$t] = "\x8D,0,0";    # 2016feb28: "Н"
+  $t=1503; $ear[$t] = "\x80,0,1637"; # 2016feb28: "А"
+  $psi=1637; $hlc=3; $jux=0; $pos=6; $dba=0;$num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1502; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1504; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1505; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# над (1639 over) preposition; 2016feb28
+  $t=1506; $ear[$t] = "\x8D,0,0";    # 2016feb28: "Н"
+  $t=1507; $ear[$t] = "\x80,0,0";    # 2016feb28: "А"
+  $t=1508; $ear[$t] = "\x84,0,1639"; # 2016feb28: "Д"
+  $psi=1639; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1506; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1509; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+ $t=1510; $ear[$t] = "\N{U+0},0,0"; # 2016feb28: Unicode?
+# НЕ (1250 not) adverb for negation and machine reasoning; 2016may01
+  $t=1511; $ear[$t] = "\x8D,0,0";    # 2016feb28: "Н"
+  $t=1512; $ear[$t] = "\x85,0,1250"; # 2016feb28: "Е"
+  $psi=1250; $hlc=3; $jux=0; $pos=2; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1511; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1513; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=1514; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕТ (1427 no) interjection; 2016may01
+  $t=1515; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н"
+  $t=1516; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1517; $ear[$t] = "\x92,0,1427"; # 2016feb29: "Т"
+  $psi=1427; $hlc=3; $jux=0; $pos=4; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1515; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1518; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1519; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕТУ (1202 is not) adverb; 2019-08-09
+# НЕТУ (1802 is not) more like a verb; 2019-08-09: as in Dushka Russian AI.
+  $t=1520; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н"
+  $t=1521; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1522; $ear[$t] = "\x92,0,0";    # 2016feb29: "Т"
+  $t=1523; $ear[$t] = "\x93,0,1802"; # 2017dec06: "У"
+  $psi=1802; $hlc=3; $jux=0; $pos=8; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1520; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1524; $ear[$t] = " ,0,0";       # 2019-08-09: blank space
+
+  $t=1525; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НИЧЕГО (1760 "nothing"); pronoun; 2016may01
+  $t=1526; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н"
+  $t=1527; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1528; $ear[$t] = "\x97,0,0";    # 2016feb29: "Ч"
+  $t=1529; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1530; $ear[$t] = "\x83,0,0";    # 2016feb29: "Г"
+  $t=1531; $ear[$t] = "\x8E,0,1228"; # 2016feb29: "О"
+  $psi=1228; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1526; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1532; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1533; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# О (1641 about) preposition; 2016feb29
+  $t=1534; $ear[$t] = "\x8E,0,1641";    # 2016feb29: "О"
+  $psi=1641; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1534; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1535; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1536; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# об (1642 about) preposition; 2016feb29
+  $t=1537; $ear[$t] = "\x8E,0,0";    # 2016feb29: "О"
+  $t=1538; $ear[$t] = "\x81,0,1642"; # 2016feb29: "Б"
+  $psi=1642; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1537; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1539; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1540; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# обо (1643 about) (about) 2016feb29:
+  $t=1541; $ear[$t] = "\x8E,0,0";    # 2016feb29: "О"
+  $t=1542; $ear[$t] = "\x81,0,0";    # 2016feb29: "Б"
+  $t=1543; $ear[$t] = "\x8E,0,1643"; # 2016feb29: "О"
+  $psi=1643; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1541; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1544; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1545; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# около (1645 near, approximately) preposition; 2016feb29
+  $t=1546; $ear[$t] = "\x8E,0,0";    # 2016feb29: "О"
+  $t=1547; $ear[$t] = "\x8A,0,0";    # 2016feb29: "К"
+  $t=1548; $ear[$t] = "\x8E,0,0";    # 2016feb29: "О"
+  $t=1549; $ear[$t] = "\x8B,0,0";    # 2016feb29: "Л"
+  $t=1550; $ear[$t] = "\x8E,0,1645"; # 2016feb29: "О"
+  $psi=1645; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1546; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1551; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1552; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ОН (1713 he) pronoun; nom. sing. masc. 2016may01
+  $t=1553; $ear[$t] = "\x8E,0,0";    # 2016feb29: "О"
+  $t=1554; $ear[$t] = "\x8D,0,1713"; # 2016feb29: "Н"
+  $psi=1713; $hlc=3; $jux=0; $pos=7; $dba=1; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1553; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1555; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1556; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ЕГО (1713 of him) pronoun; gen. sing. masc. 2016may01
+  $t=1557; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1558; $ear[$t] = "\x83,0,0";    # 2016feb29: "Г"
+  $t=1559; $ear[$t] = "\x8E,0,1713"; # 2016feb29: "О"
+  $psi=1713; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1557; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1560; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1561; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕГО (1713 of him) pronoun; gen. sing. masc. 2016may01
+  $t=1562; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1563; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1564; $ear[$t] = "\x83,0,0";    # 2016feb29: "Г"
+  $t=1565; $ear[$t] = "\x8E,0,1713"; # 2016feb29: "О"
+  $psi=1713; $hlc=3; $jux=0; $pos=7; $dba=0; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1562; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1566; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1567; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ЕМУ (1713 to him) pronoun; dat. sing. masc. 2016may01
+  $t=1568; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1569; $ear[$t] = "\x8C,0,0";    # 2016feb29: "М"
+  $t=1570; $ear[$t] = "\x93,0,1713"; # 2016feb29: "У"
+  $psi=1713; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1568; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1571; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1572; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕМУ (1713 to him) pronoun; dat. sing. masc. 2016may01
+  $t=1573; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1574; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1575; $ear[$t] = "\x8C,0,0";    # 2016feb29: "М"
+  $t=1576; $ear[$t] = "\x93,0,1713"; # 2016feb29: "У"
+  $psi=1713; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1573; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1577; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1578; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ЕГО (1713 him) pronoun; acc. sing. masc. 2016feb29
+  $t=1579; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1580; $ear[$t] = "\x83,0,0";    # 2016feb29: "Г"
+  $t=1581; $ear[$t] = "\x8E,0,1713"; # 2016feb29: "О"
+  $psi=1713; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1579; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1582; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1583; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕГО (1713 him) pronoun; acc. sing. masc. 2016may01
+  $t=1584; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1585; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1586; $ear[$t] = "\x83,0,0";    # 2016feb29: "Г"
+  $t=1587; $ear[$t] = "\x8E,0,1713"; # 2016feb29: "О"
+  $psi=1713; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0;  $rv=1584; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1588; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1589; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ИМ (1713 him) pronoun; instrumental sing. masc. 2016may01
+  $t=1590; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1591; $ear[$t] = "\x8C,0,1713"; # 2016feb29: "М"
+  $psi=1713; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1590; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1592; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1593; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НИМ (1713 him) pronoun; instrumental sing. masc. 2016may01
+  $t=1594; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1595; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1596; $ear[$t] = "\x8C,0,1713"; # 2016feb29: "М"
+  $psi=1713; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1594; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1597; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1598; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЁМ (1713 him) pronoun; prepositional sing. masc. 2016may01
+  $t=1599; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1600; $ear[$t] = "\xF0,0,0";    # 2016feb29: "Ё"
+  $t=1601; $ear[$t] = "\x8C,0,1713"; # 2016feb29: "М"
+  $psi=1713; $hlc=3; $jux=0; $pos=7; $dba=6; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1599; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1602; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1603; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕМ (1713 him) pronoun; prepositional sing. masc. 2016may01
+  $t=1604; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1605; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е" (without dots)
+  $t=1606; $ear[$t] = "\x8C,0,1713"; # 2016feb29: "М"
+  $psi=1713; $hlc=3; $jux=0; $pos=7; $dba=6; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1604; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1607; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1608; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ОНА (1719 she) pronoun; nom. sing. fem. 2016may01
+  $t=1609; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+  $t=1610; $ear[$t] = "\x8E,0,0";    # 2016feb29: "О"
+  $t=1611; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н"
+  $t=1612; $ear[$t] = "\x80,0,1719"; # 2016feb29: "А"
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=1; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1609; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1613; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1614; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ЕЁ (1719 of her) pronoun; gen. sing. fem. 2016may01
+  $t=1615; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1616; $ear[$t] = "\xF0,0,1719"; # 2016feb29: "Ё"
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1615; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1617; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1618; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕЁ (1719 of her) pronoun; gen. sing. fem. 2016may01
+  $t=1619; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1620; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1621; $ear[$t] = "\xF0,0,1719"; # 2018jul08: "Ё" (with dots)
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1619; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1622; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1623; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕЁ (1719 of her) pronoun; gen. sing. fem. 2016may01
+  $t=1624; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1625; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1626; $ear[$t] = "\x85,0,1719"; # 2016feb29: "Е" (no dots)
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1624; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1627; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1628; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ЕЙ (1719 to her) pronoun; dat. sing. fem. 2016may01
+  $t=1629; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1630; $ear[$t] = "\x89,0,1719"; # 2016feb29: "Й"
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1629; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1631; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1632; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕЙ (1719 to her) pronoun; dat. sing. fem. 2016may01
+  $t=1633; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1634; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1635; $ear[$t] = "\x89,0,1719"; # 2016feb29: "Й"
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1633; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1636; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1637; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ЕЁ (1719 her) pronoun; acc. sing. fem. 2016may01
+  $t=1638; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1639; $ear[$t] = "\xF0,0,1719"; # 2016feb29: "Ё"
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1638; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1640; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1641; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕЁ (1719 her) pronoun; acc. sing. fem. 2016may01
+  $t=1642; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1643; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1644; $ear[$t] = "\xF0,0,1719"; # 2018jul08: "Ё" (with dots)
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1642; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1645; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1646; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕЕ (1719 her) pronoun; acc. sing. fem. 2016may01
+  $t=1647; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1648; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1649; $ear[$t] = "\x85,0,1719"; # 2016feb29: "Е" (no dots)
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1647; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1650; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1651; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ЕЙ (1719 her) pronoun; instrumental. sing. fem. 2016may01
+  $t=1652; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1653; $ear[$t] = "\x89,0,1719"; # 2016feb29: "Й"
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1652; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1654; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1655; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕЙ (1719 her) pronoun; instrumental. sing. fem. 2016may01
+  $t=1656; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1657; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1658; $ear[$t] = "\x89,0,1719"; # 2016feb29: "Й"
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1656; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1659; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1660; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ЕЮ (1719 her) pronoun; instrumental. sing. fem. 2016may01
+  $t=1661; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1662; $ear[$t] = "\x9E,0,1719"; # 2016feb29: "Ю" (variant)
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1661; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1663; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1664; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ЕЮ (1719 her) pronoun; instrumental. sing. fem. 2016may01
+  $t=1665; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1666; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1667; $ear[$t] = "\x9E,0,1719"; # 2016feb29: "Ю" (variant)
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1665; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1668; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1669; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕЙ (1719 her) pronoun; prepositional sing. fem. 2016may01
+  $t=1670; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1671; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1672; $ear[$t] = "\x89,0,1719"; # 2016feb29: "Й"
+  $psi=1719; $hlc=3; $jux=0; $pos=7; $dba=6; $num=1; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1670; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1673; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1674; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ОНО (1725 it) pronoun; nom. sing. neuter; 2016may01
+  $t=1675; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+  $t=1676; $ear[$t] = "\x8E,0,0";    # 2016feb29: "О"
+  $t=1677; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н"
+  $t=1678; $ear[$t] = "\x8E,0,1725"; # 2016feb29: "О"
+  $psi=1725; $hlc=3; $jux=0; $pos=7; $dba=1; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1675; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1679; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1680; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ЕГО (1725 of it) pronoun; gen. sing. neuter; 2019-08-09
+  $t=1681; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1682; $ear[$t] = "\x83,0,0";    # 2016feb29: "Г"
+  $t=1683; $ear[$t] = "\x8E,0,1725"; # 2019aug09: "О"
+  $psi=1725; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=3; # 2019-08-09
+  $pre=0; $seq=0; $tkb=0; $rv=1681; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1684; $ear[$t] = " ,0,0";       # 2019-08-0: blank space
+
+  $t=1685; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕГО (1725 of it) pronoun; gen. sing. neuter; 2016may01
+  $t=1686; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1687; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1688; $ear[$t] = "\x83,0,0";    # 2016feb29: "Г"
+  $t=1689; $ear[$t] = "\x8E,0,1725"; # 2016feb29: "О"
+  $psi=1725; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1686; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1690; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1691; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ЕМУ (1725 to it) pronoun; dat. sing. neuter; 2016may01
+  $t=1692; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1693; $ear[$t] = "\x8C,0,0";    # 2016feb29: "М"
+  $t=1694; $ear[$t] = "\x93,0,1725"; # 2019aug09: "У"
+  $psi=1725; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=3; # 2019-08-09
+  $pre=0; $seq=0; $tkb=0; $rv=1692; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1695; $ear[$t] = " ,0,0";       # 2019-08-09: blank space
+
+  $t=1696; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕМУ (1725 to it) pronoun; dat. sing. neuter; 2016may01
+  $t=1697; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1698; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1699; $ear[$t] = "\x8C,0,0";    # 2016feb29: "М"
+  $t=1700; $ear[$t] = "\x93,0,1725"; # 2016feb29: "У"
+  $psi=1725; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1697; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1701; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1702; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ЕГО (1725 it) pronoun; acc. sing. neuter; 2016may01
+  $t=1703; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1704; $ear[$t] = "\x83,0,0";    # 2016feb29: "Г"
+  $t=1705; $ear[$t] = "\x8E,0,1725"; # 2016feb29: "О"
+  $psi=1725; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1703; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1706; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1707; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЕГО (1725 it) pronoun; acc. sing. neuter; 2016may01
+  $t=1708; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1709; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е"
+  $t=1710; $ear[$t] = "\x83,0,0";    # 2016feb29: "Г"
+  $t=1711; $ear[$t] = "\x8E,0,1725"; # 2016feb29: "О"
+  $psi=1725; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1708; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1712; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1713; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ИМ (1725 it) pronoun; instrumental sing. neuter; 2016may01
+  $t=1714; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1715; $ear[$t] = "\x8C,0,1725"; # 2016feb29: "М"
+  $psi=1725; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1714; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1716; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1717; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НИМ (1725 it) pronoun; instrumental sing. neuter; 2019-08-09
+  $t=1718; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1719; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1720; $ear[$t] = "\x8C,0,1725"; # 2019aug09: "М"
+  $psi=1725; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=3; # 2019-08-09
+  $pre=0; $seq=0; $tkb=0; $rv=1718; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1721; $ear[$t] = " ,0,0";       # 2019-08-09: blank space
+
+  $t=1722; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЁМ (1725 it) pronoun; prepositional sing. neuter; 2016may01
+  $t=1723; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1724; $ear[$t] = "\xF0,0,0";    # 2016feb29: "Ё"
+  $t=1725; $ear[$t] = "\x8C,0,1725"; # 2016feb29: "М"
+  $psi=1725; $hlc=3; $jux=0; $pos=7; $dba=6; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1723; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1726; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1727; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НЁМ (1725 it) pronoun; prepositional sing. masc. 2016may01
+  $t=1728; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1729; $ear[$t] = "\x85,0,0";    # 2016feb29: "Е" (without dots)
+  $t=1730; $ear[$t] = "\x8C,0,1725"; # 2016feb29: "М"
+  $psi=1713; $hlc=3; $jux=0; $pos=7; $dba=6; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1728; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1731; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1732; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ОНИ (1743 they) pronoun; nom. plural; 2016may01
+  $t=1733; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+  $t=1734; $ear[$t] = "\x8E,0,0";    # 2016feb29: "О"
+  $t=1735; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н"
+  $t=1736; $ear[$t] = "\x88,0,1743"; # 2016feb29: "И"
+  $psi=1743; $hlc=3; $jux=0; $pos=7; $dba=1; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1733; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1737; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1738; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ИХ (1743 of them) pronoun; gen. plural; 2016may01
+  $t=1739; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1740; $ear[$t] = "\x95,0,1743"; # 2016feb29: "Х"
+  $psi=1743; $hlc=3; $jux=0; $pos=7; $dba=2; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1739; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1741; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1742; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НИХ (1743 of them) pronoun; gen. plural; 2016may01
+  $t=1743; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1744; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1745; $ear[$t] = "\x95,0,1743"; # 2016feb29: "Х"
+  $psi=1743; $hlc=3; $jux=0; $pos=7; $dba=2; $num=2; $mfn=0; # 2018-07-08
+ $pre=0; $seq=0; $tkb=0; $rv=1743; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1746; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1747; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ИМ (1743 to them) pronoun; dative plural; 2016may01
+  $t=1748; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1749; $ear[$t] = "\x8C,0,1725"; # 2016feb29: "М"
+  $psi=1725; $hlc=3; $jux=0; $pos=7; $dba=3; $num=0; $mfn=2; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1748; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1750; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1751; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НИМ (1743 to them) pronoun; instrumental plural; 2016may01
+  $t=1752; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1753; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1754; $ear[$t] = "\x8C,0,1743"; # 2016feb29: "М"
+  $psi=1743; $hlc=3; $jux=0; $pos=7; $dba=3; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1752; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1755; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1756; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ИХ (1743 them) pronoun; acc. plural; 2016may01
+  $t=1757; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1758; $ear[$t] = "\x95,0,1743"; # 2016feb29: "Х"
+  $psi=1743; $hlc=3; $jux=0; $pos=7; $dba=4; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1757; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1759; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1760; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НИХ (1743 them) pronoun; acc. plural; 2016may01
+  $t=1761; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1762; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1763; $ear[$t] = "\x95,0,1743"; # 2016feb29: "Х"
+  $psi=1743; $hlc=3; $jux=0; $pos=7; $dba=4; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1761; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1764; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1765; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# ИМИ (1743 them) pronoun; instrumental plural; 2016may01
+  $t=1766; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1767; $ear[$t] = "\x8C,0,0";    # 2016feb29: "М"
+  $t=1768; $ear[$t] = "\x88,0,1743"; # 2016feb29: "И"
+  $psi=1743; $hlc=3; $jux=0; $pos=7; $dba=5; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1766; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1769; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1770; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НИМИ (1743 them) pronoun; instrumental plural; 2016may01
+  $t=1771; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1772; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1773; $ear[$t] = "\x8C,0,0";    # 2016feb29: "М"
+  $t=1774; $ear[$t] = "\x88,0,1743"; # 2016feb29: "И"
+  $psi=1743; $hlc=3; $jux=0; $pos=7; $dba=5; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1771; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1775; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1776; $ear[$t] = "\N{U+0},0,0"; # 2016feb29: Unicode?
+# НИХ (1743 them) pronoun; prepositional plural; 2016may01
+  $t=1777; $ear[$t] = "\x8D,0,0";    # 2016feb29: "Н" (after prep.)
+  $t=1778; $ear[$t] = "\x88,0,0";    # 2016feb29: "И"
+  $t=1779; $ear[$t] = "\x95,0,1743"; # 2016feb29: "Х"
+  $psi=1743; $hlc=3; $jux=0; $pos=7; $dba=6; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1777; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1780; $ear[$t] = " ,0,0";       # 2016feb29: blank space
+
+  $t=1781; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# от (1647 from) preposition; 2016mar01
+  $t=1782; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1783; $ear[$t] = "\x92,0,1647"; # 2016mar01: "Т"
+  $psi=1647; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1782; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1784; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1785; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# ото (1648 from, away from) preposition; 2016mar01
+  $t=1786; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1787; $ear[$t] = "\x92,0,0";    # 2016mar01: "Т"
+  $t=1788; $ear[$t] = "\x8E,0,1648"; # 2016mar01: "О"
+  $psi=1648; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1786; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1789; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1790; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# относительно (1650 concerning) preposition; 2016mar01
+  $t=1791; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1792; $ear[$t] = "\x92,0,0";    # 2016mar01: "Т"
+  $t=1793; $ear[$t] = "\x8D,0,0";    # 2016mar01: "Н"
+  $t=1794; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1795; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1796; $ear[$t] = "\x88,0,0";    # 2016mar01: "И"
+  $t=1797; $ear[$t] = "\x92,0,0";    # 2016mar01: "Т"
+  $t=1798; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=1799; $ear[$t] = "\x8B,0,0";    # 2016mar01: "Л"
+  $t=1800; $ear[$t] = "\x9C,0,0";    # 2016mar01: "Ь"
+  $t=1801; $ear[$t] = "\x8D,0,0";    # 2016mar01: "Н"
+  $t=1802; $ear[$t] = "\x8E,0,1650"; # 2016mar17: "О"
+  $psi=1650; $hlc=3; $jux=0; $pos=6; $dba=0;$num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1791; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1803; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1804; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# перед (1652 in front of, before) preposition; 2016mar01
+  $t=1805; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1806; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=1807; $ear[$t] = "\x90,0,0";    # 2016mar01: "Р"
+  $t=1808; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=1809; $ear[$t] = "\x84,0,1652"; # 2016mar01: "Д"
+  $psi=1652; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1805; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1810; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1811; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# по (1654 along, according to) preposition; 2016mar01
+  $t=1812; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1813; $ear[$t] = "\x8E,0,1654"; # 2016mar01: "О"
+  $psi=1654; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1812; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1814; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1815; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# под (1656 under) preposition; 2016mar01
+  $t=1816; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1817; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1818; $ear[$t] = "\x84,0,1656"; # 2016mar01: "Д"
+  $psi=1656; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1816; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1819; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1820; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# подле (1657 alongside of) preposition; 2016mar01
+  $t=1821; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1822; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1823; $ear[$t] = "\x84,0,0";    # 2016mar01: "Д"
+  $t=1824; $ear[$t] = "\x8B,0,0";    # 2016mar01: "Л"
+  $t=1825; $ear[$t] = "\x85,0,1657"; # 2016mar01: "Е"
+  $psi=1657; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1821; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1826; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1827; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# подобно (1659 like, similar to) preposition; 2016mar01
+  $t=1828; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1829; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1830; $ear[$t] = "\x84,0,0";    # 2016mar01: "Д"
+  $t=1831; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1832; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=1833; $ear[$t] = "\x8D,0,0";    # 2016mar01: "Н"
+  $t=1834; $ear[$t] = "\x8E,0,1659"; # 2016mar01: "О"
+  $psi=1659; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1828; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1835; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1836; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# позади (1661 behind) preposition; 2016mar01
+  $t=1837; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1838; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1839; $ear[$t] = "\x87,0,0";    # 2016mar01: "З"
+  $t=1840; $ear[$t] = "\x80,0,0";    # 2016mar01: "А"
+  $t=1841; $ear[$t] = "\x84,0,0";    # 2016mar01: "Д"
+  $t=1842; $ear[$t] = "\x88,0,1661"; # 2016mar01: "И"
+  $psi=1661; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1837; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1843; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1844; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# помимо (1663 besides, apart from) preposition; 2016mar01
+  $t=1845; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1846; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1847; $ear[$t] = "\x8C,0,0";    # 2016mar01: "М"
+  $t=1848; $ear[$t] = "\x88,0,0";    # 2016mar01: "И"
+  $t=1849; $ear[$t] = "\x8C,0,0";    # 2016mar01: "М"
+  $t=1850; $ear[$t] = "\x8E,0,1661"; # 2016mar01: "О"
+  $psi=1661; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1845; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1851; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1852; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# ПОНИМАТЬ 2019-06-03: #1866 ("understand")
+  $t=1853; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1854; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1855; $ear[$t] = "\x8D,0,0";    # 2016mar01: "Н"
+  $t=1856; $ear[$t] = "\x88,0,0";    # 2016mar01: "И"
+  $t=1857; $ear[$t] = "\x8C,0,0";    # 2016mar01: "М"
+  $t=1858; $ear[$t] = "\x80,0,1866"; # 2016mar04: "А" stem $prc
+  $t=1859; $ear[$t] = "\x92,0,1866"; # 2016mar04: "Т" stem $prc
+  $t=1860; $ear[$t] = "\x9C,0,1866"; # 2016mar01: "Ь"
+  $psi=1866; $hlc=3; $mtx=892; $jux=0; $pos=8; $dba=0; $num=0; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=1853; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1861; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1862; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# после (1665 after) preposition; 2016mar01
+  $t=1863; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1864; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1865; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1866; $ear[$t] = "\x8B,0,0";    # 2016mar01: "Л"
+  $t=1867; $ear[$t] = "\x85,0,1665"; # 2016mar01: "Е"
+  $psi=1665; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1863; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1868; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1869; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# посреди (1667 in the middle of) preposition; 2016mar01
+  $t=1870; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1871; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1872; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1873; $ear[$t] = "\x90,0,0";    # 2016mar01: "Р"
+  $t=1874; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=1875; $ear[$t] = "\x84,0,0";    # 2016mar01: "Д"
+  $t=1876; $ear[$t] = "\x88,0,1667"; # 2016mar01: "И"
+  $psi=1667; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1870; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1877; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1878; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# посредством (1669 by means of) preposition; 2016mar01
+  $t=1879; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1880; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1881; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1882; $ear[$t] = "\x90,0,0";    # 2016mar01: "Р"
+  $t=1883; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=1884; $ear[$t] = "\x84,0,0";    # 2016mar01: "Д"
+  $t=1885; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1886; $ear[$t] = "\x92,0,0";    # 2016mar01: "Т"
+  $t=1887; $ear[$t] = "\x82,0,0";    # 2016mar01: "В"
+  $t=1888; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1889; $ear[$t] = "\x8C,0,1669"; # 2016mar01: "М"
+  $psi=1669; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1879; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1890; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1891; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# почему -- 2019-06-07: #1370 ("why"); conjunction
+  $t=1892; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1893; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1894; $ear[$t] = "\x97,0,0";    # 2016mar01: "Ч"
+  $t=1895; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=1896; $ear[$t] = "\x8C,0,0";    # 2016mar01: "М"
+  $t=1897; $ear[$t] = "\x93,0,1370"; # 2016mar01: "У"
+  $psi=1370; $hlc=3; $jux=0; $pos=3; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1892; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1898; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1899; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# прежде (1671 before) preposition; 2016mar01
+  $t=1900; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1901; $ear[$t] = "\x90,0,0";    # 2016mar01: "Р"
+  $t=1902; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=1903; $ear[$t] = "\x86,0,0";    # 2016mar01: "Ж"
+  $t=1904; $ear[$t] = "\x84,0,0";    # 2016mar01: "Д"
+  $t=1905; $ear[$t] = "\x85,0,1671"; # 2016mar01: "Е"
+  $psi=1671; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1900; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1906; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1907; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# при (1673 at the time of) preposition; 2016mar01
+  $t=1908; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1909; $ear[$t] = "\x90,0,0";    # 2016mar01: "Р"
+  $t=1910; $ear[$t] = "\x88,0,1673"; # 2016mar01: "И"
+  $psi=1673; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1908; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1911; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1912; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# про (1675 about) preposition; 2016mar01
+  $t=1913; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+  $t=1914; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1915; $ear[$t] = "\x90,0,0";    # 2016mar01: "Р"
+  $t=1916; $ear[$t] = "\x8E,0,1675"; # 2016mar01: "О"
+  $psi=1675; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1913; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1917; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1918; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# против (1677 against) preposition; 2016mar01
+  $t=1919; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1920; $ear[$t] = "\x90,0,0";    # 2016mar01: "Р"
+  $t=1921; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1922; $ear[$t] = "\x92,0,0";    # 2016mar01: "Т"
+  $t=1923; $ear[$t] = "\x88,0,0";    # 2016mar01: "И"
+  $t=1924; $ear[$t] = "\x82,0,1677"; # 2016mar01: "В"
+  $psi=1677; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1919; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1925; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1926; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# путём (1679 by means of) preposition; 2016mar01
+  $t=1927; $ear[$t] = "\x8F,0,0";    # 2016mar01: "П"
+  $t=1928; $ear[$t] = "\x93,0,0";    # 2016mar01: "У"
+  $t=1929; $ear[$t] = "\x92,0,0";    # 2016mar01: "Т"
+  $t=1930; $ear[$t] = "\xF0,0,0";    # 2016mar01: "Ё"
+  $t=1931; $ear[$t] = "\x8C,0,1679"; # 2016mar01: "М"
+  $psi=1679; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1927; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1932; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1933; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# ради (1681 for the sake of) preposition; 2016mar01
+  $t=1934; $ear[$t] = "\x90,0,0";    # 2016mar01: "Р"
+  $t=1935; $ear[$t] = "\x80,0,0";    # 2016mar01: "А"
+  $t=1936; $ear[$t] = "\x84,0,0";    # 2016mar01: "Д"
+  $t=1937; $ear[$t] = "\x88,0,1681"; # 2016mar01: "И"
+  $psi=1681; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1934; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1938; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1939; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# РОБОТ (1571 "robot"); noun; nominative; 2016may01
+  $t=1940; $ear[$t] = "\x90,0,0";    # 2016mar01: "Р"
+  $t=1941; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1942; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=1943; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=1944; $ear[$t] = "\x92,0,1571"; # 2016mar01: "Т"
+  $psi=1571; $hlc=3; $jux=0; $pos=5; $dba=1; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1940; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1945; $ear[$t] = " ,0,0";       # 2016feb27: blank space
+
+  $t=1946; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# с (1683 with, from, since) preposition; 2016mar01
+  $t=1947; $ear[$t] = "\x91,0,1683"; # 2016mar01: "С"
+  $psi=1683; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1947; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1948; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1949; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# со (1684 with, from, since) preposition; 2016mar01
+  $t=1950; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1951; $ear[$t] = "\x8E,0,1684"; # 2016mar01: "О"
+  $psi=1684; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1950; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1952; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1953; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# сверх (1686 on top of, over and above) preposition; 2016mar01
+  $t=1954; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1955; $ear[$t] = "\x82,0,0";    # 2016mar01: "В"
+  $t=1956; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=1957; $ear[$t] = "\x90,0,0";    # 2016mar01: "Р"
+  $t=1958; $ear[$t] = "\x95,0,1686"; # 2016mar01: "Х"
+  $psi=1686; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1954; KbLoad();
+  $t=1959; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1960; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# свыше (1688 over, more than) preposition; 2016mar01
+  $t=1961; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1962; $ear[$t] = "\x82,0,0";    # 2016mar01: "В"
+  $t=1963; $ear[$t] = "\x9B,0,0";    # 2016mar01: "Ы"
+  $t=1964; $ear[$t] = "\x98,0,0";    # 2016mar01: "Ш"
+  $t=1965; $ear[$t] = "\x85,0,1688"; # 2016mar01: "Е"
+  $psi=1688; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1961; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1966; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1967; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# себя  (1777 self) genetive singular reflexive pronoun; 2016mar02
+  $t=1968; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1969; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=1970; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=1971; $ear[$t] = "\x9F,0,1777"; # 2016mar02: "Я"
+  $psi=1777; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1968; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1972; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1973; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# себя  (1777 self) genetive plural reflexive pronoun; 2016mar01
+  $t=1974; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1975; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=1976; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=1977; $ear[$t] = "\x9F,0,1777"; # 2016mar02: "Я"
+  $psi=1777; $hlc=3; $jux=0; $pos=7; $dba=2; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1974; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1978; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1979; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# себе  (1777 self) dative singular reflexive pronoun; 2016mar01
+  $t=1980; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1981; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=1982; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=1983; $ear[$t] = "\x85,0,1777"; # 2016mar02: "Е"
+  $psi=1777; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1980; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1984; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1985; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# себе  (1777 self) dative plural reflexive pronoun; 2016mar01
+  $t=1986; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1987; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=1988; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=1989; $ear[$t] = "\x85,0,1777"; # 2016mar02: "Е"
+  $psi=1777; $hlc=3; $jux=0; $pos=7; $dba=3; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1986; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1990; $ear[$t] = " ,0,0";       # 2016fmar01: blank space
+
+  $t=1991; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# себя  (1777 self) accusative singular reflexive pronoun; 2016mar01
+  $t=1992; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1993; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=1994; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=1995; $ear[$t] = "\x9F,0,1777"; # 2016mar02: "Я"
+  $psi=1777; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1992; KbLoad(); # 2018-07-08: flag-panel order
+  $t=1996; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=1997; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# себя  (1777 self) accusative plural reflexive pronoun; 2016mar01
+  $t=1998; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=1999; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=2000; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=2001; $ear[$t] = "\x9F,0,1777"; # 2016mar02: "Я"
+  $psi=1777; $hlc=3; $jux=0; $pos=7; $dba=4; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=1998; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2002; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=2003; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# собой  (1777 self) instrumental singular reflexive pronoun; 2016mar01
+  $t=2004; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=2005; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=2006; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=2007; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=2008; $ear[$t] = "\x89,0,1777"; # 2016mar02: "Й"
+  $psi=1777; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2004; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2009; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=2010; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# собой  (1777 self) instrumental plural reflexive pronoun; 2016mar01
+  $t=2011; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=2012; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=2013; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=2014; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=2015; $ear[$t] = "\x89,0,1777"; # 2016mar02: "Й"
+  $psi=1777; $hlc=3; $jux=0; $pos=7; $dba=5; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2011; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2016; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=2017; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# собою  (1777 self) instrumental singular reflexive pronoun; 2016mar01
+  $t=2018; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=2019; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=2020; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=2021; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=2022; $ear[$t] = "\x9E,0,1777"; # 2016mar01: "Ю" alternative
+  $psi=1777; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2018; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2023; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=2024; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# собою  (1777 self) instrumental plural reflexive pronoun; 2016mar01
+  $t=2025; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=2026; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=2027; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=2027; $ear[$t] = "\x8E,0,0";    # 2016mar01: "О"
+  $t=2029; $ear[$t] = "\x9E,0,1777"; # 2016mar01: "Ю" alternative
+  $psi=1777; $hlc=3; $jux=0; $pos=7; $dba=5; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2025; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2030; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=2031; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# себе  (1777 self) prepositional singular reflexive pronoun; 2016mar01
+  $t=2032; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=2033; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=2034; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=2035; $ear[$t] = "\x85,0,1777"; # 2016mar02: "Е"
+  $psi=1777; $hlc=3; $jux=0; $pos=7; $dba=6; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2032; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2036; $ear[$t] = " ,0,0";       # 2016mar01: blank space
+
+  $t=2037; $ear[$t] = "\N{U+0},0,0"; # 2016mar01: Unicode?
+# себе  (1777 self) prepositional plural reflexive pronoun; 2016mar01
+  $t=2038; $ear[$t] = "\x91,0,0";    # 2016mar01: "С"
+  $t=2039; $ear[$t] = "\x85,0,0";    # 2016mar01: "Е"
+  $t=2040; $ear[$t] = "\x81,0,0";    # 2016mar01: "Б"
+  $t=2041; $ear[$t] = "\x85,0,1777"; # 2016mar02: "Е"
+  $psi=1777; $hlc=3; $jux=0; $pos=7; $dba=6; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2038; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2042; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=2043; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# сквозь (1690 through) preposition; 2016mar02
+  $t=2044; $ear[$t] = "\x91,0,0";    # 2016mar02: "С"
+  $t=2045; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2046; $ear[$t] = "\x82,0,0";    # 2016mar02: "В"
+  $t=2047; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2048; $ear[$t] = "\x87,0,0";    # 2016mar02: "З"
+  $t=2049; $ear[$t] = "\x9C,0,1690"; # 2016mar02: "Ь"
+  $psi=1690; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2044; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2050; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2051; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# сколько (1780  how much)  -- pronoun; 2016mar02
+  $t=2052; $ear[$t] = "\x91,0,0";    # 2016mar02: "С"
+  $t=2053; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2054; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2055; $ear[$t] = "\x8B,0,0";    # 2016mar02: "Л"
+  $t=2056; $ear[$t] = "\x9C,0,0";    # 2016mar02: "Ь"
+  $t=2057; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2058; $ear[$t] = "\x8E,0,1780"; # 2016mar02: "О"
+  $psi=1780; $hlc=3; $jux=0; $pos=7; $dba=1; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2052; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2059; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2060; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# скольких (1780 how much)  -- pronoun; genitive; 2016mar02
+  $t=2061; $ear[$t] = "\x91,0,0";    # 2016mar02: "С"
+  $t=2062; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2063; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2064; $ear[$t] = "\x8B,0,0";    # 2016mar02: "Л"
+  $t=2065; $ear[$t] = "\x9C,0,0";    # 2016mar02: "Ь"
+  $t=2066; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2067; $ear[$t] = "\x88,0,0";    # 2016mar02: "И"
+  $t=2068; $ear[$t] = "\x95,0,1780"; # 2016mar02: "Х"
+  $psi=1780; $hlc=3; $jux=0; $pos=7; $dba=2; $num=2; $mfn=0; # 2018-07-08
+ $pre=0; $seq=0; $tkb=0; $rv=2061; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2069; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2070; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# скольким (1780 how much)  -- pronoun; dative; 2016mar02
+  $t=2071; $ear[$t] = "\x91,0,0";    # 2016mar02: "С"
+  $t=2072; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2073; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2074; $ear[$t] = "\x8B,0,0";    # 2016mar02: "Л"
+  $t=2075; $ear[$t] = "\x9C,0,0";    # 2016mar02: "Ь"
+  $t=2076; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2077; $ear[$t] = "\x88,0,0";    # 2016mar02: "И"
+  $t=2078; $ear[$t] = "\x8C,0,1780"; # 2016mar02: "М"
+  $psi=1780; $hlc=3; $jux=0; $pos=7; $dba=3; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2071; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2079; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2080; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# сколько (1780  how much)  -- pronoun; accusative; 2016mar02
+  $t=2081; $ear[$t] = "\x91,0,0";    # 2016mar02: "С"
+  $t=2082; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2083; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2084; $ear[$t] = "\x8B,0,0";    # 2016mar02: "Л"
+  $t=2085; $ear[$t] = "\x9C,0,0";    # 2016mar02: "Ь"
+  $t=2086; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2087; $ear[$t] = "\x8E,0,1780"; # 2016mar02: "О"
+  $psi=1780; $hlc=3; $jux=0; $pos=7; $dba=4; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2081; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2088; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2089; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# сколькими (1780 how much)  -- pronoun; instrumental; 2016mar02
+  $t=2090; $ear[$t] = "\x91,0,0";    # 2016mar02: "С"
+  $t=2091; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2092; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2093; $ear[$t] = "\x8B,0,0";    # 2016mar02: "Л"
+  $t=2094; $ear[$t] = "\x9C,0,0";    # 2016mar02: "Ь"
+  $t=2095; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2096; $ear[$t] = "\x88,0,0";    # 2016mar02: "И"
+  $t=2097; $ear[$t] = "\x8C,0,0";    # 2016mar02: "М"
+  $t=2098; $ear[$t] = "\x88,0,1780"; # 2016mar02: "И"
+  $psi=1780; $hlc=3; $jux=0; $pos=7; $dba=5; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2090; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2099; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2100; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# скольких (1780 how much)  -- pronoun; prepositional; 2016mar02
+  $t=2101; $ear[$t] = "\x91,0,0";    # 2016mar02: "С"
+  $t=2102; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2103; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2104; $ear[$t] = "\x8B,0,0";    # 2016mar02: "Л"
+  $t=2105; $ear[$t] = "\x9C,0,0";    # 2016mar02: "Ь"
+  $t=2106; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2107; $ear[$t] = "\x88,0,0";    # 2016mar02: "И"
+  $t=2108; $ear[$t] = "\x95,0,1780"; # 2016mar02: "Х"
+  $psi=1780; $hlc=3; $jux=0; $pos=7; $dba=6; $num=2; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2101; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2109; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2110; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# согласно (1692 in accordance with) preposition; 2016mar02
+  $t=2111; $ear[$t] = "\x91,0,0";    # 2016mar02: "С"
+  $t=2112; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2113; $ear[$t] = "\x83,0,0";    # 2016mar02: "Г"
+  $t=2114; $ear[$t] = "\x8B,0,0";    # 2016mar02: "Л"
+  $t=2115; $ear[$t] = "\x80,0,0";    # 2016mar02: "А"
+  $t=2116; $ear[$t] = "\x91,0,0";    # 2016mar02: "С"
+  $t=2117; $ear[$t] = "\x8D,0,0";    # 2016mar02: "Н"
+  $t=2118; $ear[$t] = "\x8E,0,1692"; # 2016mar02: "О"
+  $psi=1692; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2111; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2119; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2120; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# спустя (1693 after) preposition; 2016mar02
+  $t=2121; $ear[$t] = "\x91,0,0";    # 2016mar02: "С"
+  $t=2122; $ear[$t] = "\x8F,0,0";    # 2016mar02: "П"
+  $t=2123; $ear[$t] = "\x93,0,0";    # 2016mar02: "У"
+  $t=2124; $ear[$t] = "\x91,0,0";    # 2016mar02: "С"
+  $t=2125; $ear[$t] = "\x92,0,0";    # 2016mar02: "Т"
+  $t=2126; $ear[$t] = "\x9F,0,1693"; # 2016mar02: "Я"
+  $psi=1693; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2121; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2127; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2128; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# среди (1695 between) preposition; 2016mar02
+  $t=2129; $ear[$t] = "\x91,0,0";    # 2016mar02: "С"
+  $t=2130; $ear[$t] = "\x90,0,0";    # 2016mar02: "Р"
+  $t=2131; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е"
+  $t=2132; $ear[$t] = "\x84,0,0";    # 2016mar02: "Д"
+  $t=2133; $ear[$t] = "\x88,0,1695"; # 2016mar02: "И"
+  $psi=1695; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2129; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2134; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2135; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# СТУДЕНТ (1561 student) noun; a class for InFerence(); 2016mar02
+  $t=2136; $ear[$t] = "\x91,0,0";    # 2016mar02: "С"
+  $t=2137; $ear[$t] = "\x92,0,0";    # 2016mar02: "Т"
+  $t=2138; $ear[$t] = "\x93,0,0";    # 2016mar02: "У"
+  $t=2139; $ear[$t] = "\x84,0,0";    # 2016mar02: "Д"
+  $t=2140; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е"
+  $t=2141; $ear[$t] = "\x8D,0,0";    # 2016mar02: "Н"
+  $t=2142; $ear[$t] = "\x92,0,1561"; # 2016mar02: "Т"
+  $psi=1561; $hlc=3; $jux=0; $pos=5; $dba=1; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2136; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2143; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2144; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ТАКОЕ (1170 "such"); adjective; for questions; 2016may01
+  $t=2145; $ear[$t] = "\x92,0,0";    # 2016mar02: "Т"
+  $t=2146; $ear[$t] = "\x80,0,0";    # 2016mar02: "А"
+  $t=2147; $ear[$t] = "\x8A,0,0";    # 2016mar02: "К"
+  $t=2148; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2149; $ear[$t] = "\x85,0,1170"; # 2016mar02: "Е"
+  $psi=1170; $hlc=3; $jux=0; $pos=5; $dba=1; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2145; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2150; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2151; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ТРЕБОВАТЬ -- 2019-06-03: #1894 ("to demand"); verb; infinitive;
+  $t=2152; $ear[$t] = "\x92,0,0";    # 2016mar02:  "Т"
+  $t=2153; $ear[$t] = "\x90,0,0";    # 2016mar02:  "Р"
+  $t=2154; $ear[$t] = "\x85,0,0";    # 2016mar02:  "Е"
+  $t=2155; $ear[$t] = "\x81,0,1894"; # 2019-06-03: "Б"
+  $t=2156; $ear[$t] = "\x8E,0,1894"; # 2019-06-03: "О"
+  $t=2157; $ear[$t] = "\x82,0,1894"; # 2019-06-03: "В"
+  $t=2158; $ear[$t] = "\x80,0,1894"; # 2019-06-03: "А"
+  $t=2159; $ear[$t] = "\x92,0,1894"; # 2019-06-03: "Т"
+  $t=2160; $ear[$t] = "\x9C,0,1894"; # 2019-06-03: "Ь"
+  $psi=1894; $hlc=3; $jux=0; $pos=8; $dba=0; $num=0; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=2152; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2161; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2162; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ТЫ (1707 "you") pronoun; familiar; nom. sing. 2016mar02
+  $t=2163; $ear[$t] = "\x92,0,0";    # 2016mar02: "Т"
+  $t=2164; $ear[$t] = "\x9B,0,1707"; # 2016mar02: "Ы"
+  $psi=1707; $hlc=3; $jux=0; $pos=7; $dba=1; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2163; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2165; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2166; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ТЕБЯ (1707 "of you") pronoun; familiar; gen. sing. 2016mar02
+  $t=2167; $ear[$t] = "\x92,0,0";    # 2016mar02: "Т"
+  $t=2168; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е"
+  $t=2169; $ear[$t] = "\x81,0,0";    # 2016mar02: "Б"
+  $t=2170; $ear[$t] = "\x9F,0,1707"; # 2016mar02: "Я"
+  $psi=1707; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2167; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2171; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2172; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ТЕБЕ (1707 "to you") pronoun; familiar; dat. sing. 4jan2012
+  $t=2173; $ear[$t] = "\x92,0,0";    # 2016mar02: "Т"
+  $t=2174; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е"
+  $t=2175; $ear[$t] = "\x81,0,0";    # 2016mar02: "Б"
+  $t=2176; $ear[$t] = "\x85,0,1707"; # 2016mar02: "Е"
+  $psi=1707; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2173; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2177; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2178; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ТЕБЯ (1707 "you") pronoun; familiar; acc. sing. 2016mar02
+  $t=2179; $ear[$t] = "\x92,0,0";    # 2016mar02: "Т"
+  $t=2180; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е"
+  $t=2181; $ear[$t] = "\x81,0,0";    # 2016mar02: "Б"
+  $t=2182; $ear[$t] = "\x9F,0,1707"; # 2016mar02: "Я"
+  $psi=1707; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2179; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2183; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2184; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ТОБОЙ (1707 "you") pronoun; familiar; instrumental sing. 2016mar02
+  $t=2185; $ear[$t] = "\x92,0,0";    # 2016mar02: "Т"
+  $t=2186; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2187; $ear[$t] = "\x81,0,0";    # 2016mar02: "Б"
+  $t=2188; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2189; $ear[$t] = "\x89,0,1707"; # 2016mar02: "Й"
+  $psi=1707; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2185; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2190; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2191; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ТОБОЮ (1707 "you") pronoun; familiar; instrumental sing. 2016mar02
+  $t=2192; $ear[$t] = "\x92,0,0";    # 2016mar02: "Т"
+  $t=2193; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2194; $ear[$t] = "\x81,0,0";    # 2016mar02: "Б"
+  $t=2195; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2196; $ear[$t] = "\x9E,0,1707"; # 2016mar02: "Ю" variant
+  $psi=1707; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2192; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2197; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2198; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ТЕБЕ (1707 "you") pronoun; familiar; prep. sing. 2016mar02
+  $t=2199; $ear[$t] = "\x92,0,0";    # 2016mar02: "Т"
+  $t=2200; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е"
+  $t=2201; $ear[$t] = "\x81,0,0";    # 2016mar02: "Б"
+  $t=2202; $ear[$t] = "\x85,0,1707"; # 2016mar02: "Е"
+  $psi=1707; $hlc=3; $jux=0; $pos=7; $dba=6; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2199; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2203; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2204; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# У (1697 at, by) preposition; 2016mar02:
+  $t=2205; $ear[$t] = "\x93,0,1697"; # 2016feb28: "У"
+  $psi=1697; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2205; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2206; $ear[$t] = " ,0,0";       # 2016feb28: blank space
+
+  $t=2207; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ХОЧУ -- 2019-06-03: #1897 "want") verb; 1st pers. sing. for FreeWill();
+  $t=2208; $ear[$t] = "\x95,0,0";    # 2016mar02:  "Х"
+  $t=2209; $ear[$t] = "\x8E,0,0";    # 2016mar02:  "О"
+  $t=2210; $ear[$t] = "\x97,0,0";    # 2016mar02:  "Ч"
+  $t=2211; $ear[$t] = "\x93,0,1897"; # 2019-06-03: "У"
+  $psi=1897; $hlc=3; $jux=0; $pos=8; $dba=1; $num=1; $mfn=0; # 2019-06-03
+  $pre=0; $seq=0; $tkb=0; $rv=2208; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2212; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2213; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ЧЕЛОВЕК (1581 "human being") noun; nom. sing. 2016mar02
+  $t=2214; $ear[$t] = "\x97,0,0";    # 2016mar02: "Ч"
+  $t=2215; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е"
+  $t=2216; $ear[$t] = "\x8B,0,0";    # 2016mar02: "Л"
+  $t=2217; $ear[$t] = "\x8E,0,0";    # 2016mar02: "О"
+  $t=2218; $ear[$t] = "\x82,0,0";    # 2016mar02: "В"
+  $t=2219; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е"
+  $t=2220; $ear[$t] = "\x8A,0,1581"; # 2016mar02: "К"
+  $psi=1581; $hlc=3; $jux=0; $pos=5; $dba=1; $num=1; $mfn=1; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2214; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2221; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2222; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# через (1699 across, through) preposition; 2016mar02
+  $t=2223; $ear[$t] = "\x97,0,0";    # 2016mar02: "Ч"
+  $t=2224; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е"
+  $t=2225; $ear[$t] = "\x90,0,0";    # 2016mar02: "Р"
+  $t=2226; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е"
+  $t=2227; $ear[$t] = "\x87,0,1699"; # 2016mar02: "З"
+  $psi=1699; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2223; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2228; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2229; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ЧТО (1310 that) conjunction; 2016mar02
+  $t=2230; $ear[$t] = "\x97,0,0";    # 2016mar02: "Ч"
+  $t=2231; $ear[$t] = "\x92,0,0";    # 2016mar02: "Т"
+  $t=2232; $ear[$t] = "\x8E,0,1310"; # 2016mar02: "О"
+  $psi=1310; $hlc=3; $jux=0; $pos=6; $dba=0; $num=0; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2230; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2233; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2234; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ЧТО (1781 what) pronoun; nominative singular; 2016mar02
+  $t=2235; $ear[$t] = "\x97,0,0";    # 2016mar02: "Ч"
+  $t=2236; $ear[$t] = "\x92,0,0";    # 2016mar02: "Т"
+  $t=2237; $ear[$t] = "\x8E,0,1781"; # 2016mar02: "О"
+  $psi=1781; $hlc=3; $jux=0; $pos=7; $dba=1; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2235; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2238; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2239; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# чего (1781 what) pronoun; genitive singular; 2016mar02
+  $t=2240; $ear[$t] = "\x97,0,0";    # 2016mar02: "Ч"
+  $t=2241; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е"
+  $t=2242; $ear[$t] = "\x83,0,0";    # 2016mar02: "Г"
+  $t=2243; $ear[$t] = "\x8E,0,1781"; # 2016mar02: "О"
+  $psi=1781; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2240; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2244; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2245; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# чему (1781 what) pronoun; dative singular; 2016mar02
+  $t=2246; $ear[$t] = "\x97,0,0";    # 2016mar02: "Ч"
+  $t=2247; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е"
+  $t=2248; $ear[$t] = "\x8C,0,0";    # 2016mar02: "М"
+  $t=2249; $ear[$t] = "\x93,0,1781"; # 2016mar02: "У"
+  $psi=1781; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2246; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2250; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2251; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# ЧТО (1781 what) pronoun; accusative singular; 2016mar02
+  $t=2252; $ear[$t] = "\x97,0,0";    # 2016mar02: "Ч"
+  $t=2253; $ear[$t] = "\x92,0,0";    # 2016mar02: "Т"
+  $t=2254; $ear[$t] = "\x8E,0,1781"; # 2016mar02: "О"
+  $psi=1781; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2252; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2255; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2256; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# чем (1781 what) pronoun; instrumental singular; 2016mar02
+  $t=2257; $ear[$t] = "\x97,0,0";    # 2016mar02: "Ч"
+  $t=2258; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е"
+  $t=2259; $ear[$t] = "\x8C,0,1781"; # 2016mar02: "М"
+  $psi=1781; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2257; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2260; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2261; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# чём (1781 what) pronoun; prepositional singular; 2016mar02
+  $t=2262; $ear[$t] = "\x97,0,0";    # 2016mar02: "Ч"
+  $t=2263; $ear[$t] = "\xF0,0,0";    # 2016mar02: "Ё"
+  $t=2264; $ear[$t] = "\x8C,0,1781"; # 2016mar02: "М"
+  $psi=1781; $hlc=3; $jux=0; $pos=7; $dba=6; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2262; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2265; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2266; $ear[$t] = "\N{U+0},0,0"; # 2016mar02: Unicode?
+# чем (1781 what) pronoun; prepositional singular; 2016mar02
+  $t=2267; $ear[$t] = "\x97,0,0";    # 2016mar02: "Ч"
+  $t=2268; $ear[$t] = "\x85,0,0";    # 2016mar02: "Е" no-dots variant
+  $t=2269; $ear[$t] = "\x8C,0,1781"; # 2016mar02: "М"
+  $psi=1781; $hlc=3; $jux=0; $pos=7; $dba=6; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2267; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2270; $ear[$t] = " ,0,0";       # 2016mar02: blank space
+
+  $t=2271; $ear[$t] = "\N{U+0},0,0"; # 2016mar06: Unicode?
+# это (1747 this) pronoun; nominative singular; 2016mar06
+  $t=2272; $ear[$t] = "\x9d,0,0";    # 2016mar06: "Э"
+  $t=2273; $ear[$t] = "\x92,0,0";    # 2016mar06: "Т"
+  $t=2274; $ear[$t] = "\x8E,0,1747"; # 2016mar06: "О"
+  $psi=1747; $hlc=3; $jux=0; $pos=7; $dba=1; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2272; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2275; $ear[$t] = " ,0,0";       # 2016mar06: blank space
+
+  $t=2276; $ear[$t] = "\N{U+0},0,0"; # 2016mar06: Unicode?
+# этого (1747 this) pronoun; genitive singular; 2016mar06
+  $t=2277; $ear[$t] = "\x9D,0,0";    # 2016mar06: "Э"
+  $t=2278; $ear[$t] = "\x92,0,0";    # 2016mar06: "Т"
+  $t=2279; $ear[$t] = "\x8E,0,0";    # 2016mar06: "О"
+  $t=2280; $ear[$t] = "\x83,0,0";    # 2016mar06: "Г"
+  $t=2281; $ear[$t] = "\x8E,0,1747"; # 2016mar06: "О"
+  $psi=1747; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=3;  # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2277; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2282; $ear[$t] = " ,0,0";       # 2016mar06: blank space
+
+  $t=2283; $ear[$t] = "\N{U+0},0,0"; # 2016mar06: Unicode?
+# этому (1747 this) pronoun; dative singular; 2016mar06
+  $t=2284; $ear[$t] = "\x9D,0,0";    # 2016mar06: "Э"
+  $t=2285; $ear[$t] = "\x92,0,0";    # 2016mar06: "Т"
+  $t=2286; $ear[$t] = "\x8E,0,0";    # 2016mar06: "О"
+  $t=2287; $ear[$t] = "\x8C,0,0";    # 2016mar06: "М"
+  $t=2288; $ear[$t] = "\x93,0,1747"; # 2016mar06: "У"
+  $psi=1747; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2284; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2289; $ear[$t] = " ,0,0";       # 2016mar06: blank space
+
+  $t=2290; $ear[$t] = "\N{U+0},0,0"; # 2016mar06: Unicode?
+# это (1747 this) pronoun; accusative singular; 2016mar06
+  $t=2291; $ear[$t] = "\x9d,0,0";    # 2016mar06: "Э"
+  $t=2292; $ear[$t] = "\x92,0,0";    # 2016mar06: "Т"
+  $t=2293; $ear[$t] = "\x8E,0,1747"; # 2016mar06: "О"
+  $psi=1747; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2291; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2294; $ear[$t] = " ,0,0";       # 2016mar06: blank space
+
+  $t=2295; $ear[$t] = "\N{U+0},0,0"; # 2016mar06: Unicode?
+# этим (1747 this) pronoun; instrumental singular; 2016mar06
+  $t=2296; $ear[$t] = "\x9D,0,0";    # 2016mar06: "Э"
+  $t=2297; $ear[$t] = "\x92,0,0";    # 2016mar06: "Т"
+  $t=2298; $ear[$t] = "\x88,0,0";    # 2016mar06: "И"
+  $t=2299; $ear[$t] = "\x8C,0,1747"; # 2016mar06: "М"
+  $psi=1747; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2296; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2300; $ear[$t] = " ,0,0";       # 2016mar06: blank space
+
+  $t=2301; $ear[$t] = "\N{U+0},0,0"; # 2016mar06: Unicode?
+# этом (1747 this) pronoun; prepositional singular; 2016mar06
+  $t=2302; $ear[$t] = "\x9D,0,0";    # 2016mar06: "Э"
+  $t=2303; $ear[$t] = "\x92,0,0";    # 2016mar06: "Т"
+  $t=2304; $ear[$t] = "\x8E,0,0";    # 2016mar06: "О"
+  $t=2305; $ear[$t] = "\x8C,0,1747"; # 2016mar06: "М"
+  $psi=1747; $hlc=3; $jux=0; $pos=7; $dba=6; $num=1; $mfn=3; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2302; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2306; $ear[$t] = " ,0,0";       # 2016mar06: blank space
+
+   $t=2307; $ear[$t] = "\N{U+0},0,0"; # 2016mar06: Unicode?
+# "Я" (1701 "I") personal pronoun; nominative; 2016feb25
+   $t=2308; $ear[$t] = "\x9F,0,1701"; # 2016mar06: "Я"
+   $psi=1701; $hlc=3; $jux=0; $pos=7; $dba=1; $num=1; $mfn=0; # 2018-07-08
+   $pre=0; $seq=0; $tkb=0; $rv=2308; KbLoad(); # 2018-07-08: flag-panel order
+   $t=2309; $ear[$t] = " ,0,0";       # 2017dec06: blank space
+
+  $t=2310; $ear[$t] = "\N{U+0},0,0"; # 2016mar62: Unicode?
+# МЕНЯ (1701 "of me") pronoun; familiar; gen. sing. 2016mar02
+  $t=2311; $ear[$t] = "\x8C,0,0";    # 2016mar06: "М"
+  $t=2312; $ear[$t] = "\x85,0,0";    # 2016mar06: "Е"
+  $t=2313; $ear[$t] = "\x8D,0,0";    # 2016mar06: "Н"
+  $t=2314; $ear[$t] = "\x9F,0,1701"; # 2016mar06: "Я"
+  $psi=1701; $hlc=3; $jux=0; $pos=7; $dba=2; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2311; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2315; $ear[$t] = " ,0,0";       # 2016mar06: blank space
+
+  $t=2316; $ear[$t] = "\N{U+0},0,0"; # 2016mar06: Unicode?
+# МНЕ (1701 "to me") pronoun; familiar; dat. sing. 2016mar02
+  $t=2317; $ear[$t] = "\x8C,0,0";    # 2016mar06: "М"
+  $t=2318; $ear[$t] = "\x8D,0,0";    # 2016mar06: "Н" 2016mar06
+  $t=2319; $ear[$t] = "\x85,0,1701"; # 2016mar06: "Е"
+  $psi=1701; $hlc=3; $jux=0; $pos=7; $dba=3; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2317; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2320; $ear[$t] = " ,0,0";       # 2016mar06: blank space
+
+  $t=2321; $ear[$t] = "\N{U+0},0,0"; # 2016mar06: Unicode?
+# МЕНЯ (1701 "me") pronoun; familiar; acc. sing. 2016mar02
+  $t=2322; $ear[$t] = "\x8C,0,0";    # 2016mar06: "М"
+  $t=2323; $ear[$t] = "\x85,0,0";    # 2016mar06: "Е"
+  $t=2324; $ear[$t] = "\x8D,0,0";    # 2016mar06: "Н"
+  $t=2325; $ear[$t] = "\x9F,0,1701"; # 2016mar06: "Я"
+  $psi=1701; $hlc=3; $jux=0; $pos=7; $dba=4; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2322; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2326; $ear[$t] = " ,0,0";       # 2016mar06: blank space
+
+  $t=2327; $ear[$t] = "\N{U+0},0,0"; # 2016mar06: Unicode?
+# МНОЙ (1701 "me") pronoun; familiar; instr. sing. 2016mar02
+  $t=2328; $ear[$t] = "\x8C,0,0";    # 2016mar06: "М"
+  $t=2329; $ear[$t] = "\x8D,0,0";    # 2016mar06: "Н"
+  $t=2330; $ear[$t] = "\x8E,0,0";    # 2016mar06: "О"
+  $t=2331; $ear[$t] = "\x89,0,1701"; # 2016mar06: "Й"
+  $psi=1701; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2328; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2332; $ear[$t] = " ,0,0";       # 2016mar06: blank space
+
+  $t=2333; $ear[$t] = "\N{U+0},0,0"; # 2016mar06: Unicode?
+# МНОЮ (1701 "me") pronoun; familiar; instr. sing. 2016mar02
+  $t=2334; $ear[$t] = "\x8C,0,0";    # 2016mar06: "М"
+  $t=2335; $ear[$t] = "\x8D,0,0";    # 2016mar06: "Н"
+  $t=2336; $ear[$t] = "\x8E,0,0";    # 2016mar06: "О"
+  $t=2337; $ear[$t] = "\x9E,0,1701"; # 2016mar06: "Ю" variant
+  $psi=1701; $hlc=3; $jux=0; $pos=7; $dba=5; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2334; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2338; $ear[$t] = " ,0,0";       # 2016mar06: blank space
+
+  $t=2339; $ear[$t] = "\N{U+0},0,0"; # 2016mar06: Unicode?
+# МНЕ (1701 "me") pronoun; familiar; prep. sing. 2016mar02
+  $t=2340; $ear[$t] = "\x8C,0,0";    # 2016mar06: "М"
+  $t=2341; $ear[$t] = "\x8D,0,0";    # 2016mar06: "Н"
+  $t=2342; $ear[$t] = "\x85,0,1701"; # 2016mar06: "Е"
+  $psi=1701; $hlc=3; $jux=0; $pos=7; $dba=6; $num=1; $mfn=0; # 2018-07-08
+  $pre=0; $seq=0; $tkb=0; $rv=2340; KbLoad(); # 2018-07-08: flag-panel order
+  $t=2343; $ear[$t] = " ,0,0";       # 2016mar06: blank space
 
 $t++;  # 2018-09-02: making single-word time relative, not hard-coded.
 

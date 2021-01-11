@@ -1,0 +1,2131 @@
+
+<html>
+<head>
+<title>Mind.Forth (updated Thursday, May 28, 1998)</title>
+<meta name="description"
+ content="Mind.Forth artificial intelligence as described in the
+ ACM SIGPLAN Notices 33(12):25-31 (1998)" />
+<meta name="keywords"
+ content="artificial intelligence, Frenger, Mind.Forth, Paul Frenger" />
+</head>
+<body bgcolor="#EAEAAE">
+<a name="top"></a>
+
+<center><font color="navy" size="+2"><b>
+Mind.Forth (updated Thursday, May 28, 1998)
+</b></font></center>
+<center><font color="navy" size="+0">
+as described in
+</b></font></center>
+<center><font color="navy" size="+1">
+Frenger, P.,
+</font></center>
+<center><font color="navy" size="+1">
+"Mind.Forth: Thoughts on AI and Forth",
+</font></center>
+<center><font color="navy" size="+1">
+<a href="http://doi.acm.org/10.1145/307824.307853"
+ title="Association for Computing Machinery (ACM)">
+<i>ACM Sigplan Notices</i></a>,
+</font></center>
+<center><font color="navy" size="+1">
+Dec. 1998, pg. 25-31
+</font></center>
+
+<p><br /></p>
+<a name="reasons"></a><font size="+1">
+1. Reasons for this Archive
+</font>
+
+<p>
+Six years apart -- in December 1998 and in December 2004 -- <br>
+Dr. Paul Frenger of the Association for Computing Machinery <br />
+(ACM) has written the following papers on Mind.Forth AI. <br />
+
+ <ul><font color="navy"><b>
+Mind.Forth: thoughts on artificial intelligence and Forth</b><br />
+ <li><a href="http://doi.acm.org/10.1145/307824.307853"
+ target="_new"
+ title="Dec. 1998 -- about the Mentifex Mind.Forth project in AI">
+http://doi.acm.org/10.1145/307824.307853</a></ul>
+<ul><b>Forth and AI revisited: BRAIN.FORTH</b><br />
+ <li><a href="http://doi.acm.org/10.1145/1052883.1052885"
+ target="_new"
+ title="Dec. 2004 -- about the Brain.Forth work of Dr. Frenger">
+http://doi.acm.org/10.1145/1052883.1052885<a></font></ul>
+
+In order that readers of the 1998 paper may have access to the <br />
+"full text of this program" as cited by Dr. Frenger on page 25, <br />
+the archive is being reconstituted as the target file of links <br />
+in close proximity to citations of Dr. Frenger's original article. <br />
+In general, the author of Mind.Forth would like to provide only <br />
+the most current and therefore most functional version on-line. <br />
+Anyone who wishes to study the genesis and evolution of Mind.Forth <br />
+may capture this "980528atm"  file as a special case of ACM-related archiving, <br />
+but other archives are best obtained by capturing each version as it appears on-line -- <br />
+before it is replaced by a newer, theoretically better version of
+ <a href="http://mind.sourceforge.net/mind4th.html">Mind.Forth</a> AI..</p>
+<p>
+The prime directive of the Mind.Forth proliferation principle is to propagate and <br />
+spread all possible varieties and strains of the primitive artificial intelligence. <br />
+Therefore anyone is free to sell on e-Bay or elsewhere either archived versions <br />
+of public-domain Mind.Forth or special versions with special features such as <br />
+tailor-made advertisements written to order; special knowledge-bases (KB) <br />
+on popular topics or as ontologized for the special needs of potential customers; <br />
+or versions showing new creativity with additions such as robot
+ <a href="http://mind.sourceforge.net/motorium.html"
+ title="Write selectable motor sequences for any kind of actuator.">
+motor</a> control. <br />
+lim <font size="+2"><strong>--</strong></font><b>></b> <b>***</b></p>
+
+<p>
+"The stars are the limit." <br />
+
+<p><br /></p>
+<a name="history"></a><font size="+1">
+2. History Subsequent to the 28 May 1998 Archive
+</font>
+
+<p>
+Amiga Mind.Forth in (Mountain View Press) MVP-Forth (Screen # 18 below) <br />
+was first uploaded to the Web on Fri.6.MAR.1998 and frequently updated <br />
+(27+ times) until July of 1999, when a switch was made from Amiga code <br />
+to a Windows 98 platform with the use of F-PC (Forth for Personal Computers). <br />
+Before 2001, Mind.Forth was still coded first on the Amiga, then in F-PC. <br />
+In 2001, the current Win32Forth was adopted with minimal tweaking from F-PC. <br />
+One more switch to a 64-bit Forth on a 64-bit platform would be nice.</p>
+
+<p>
+After the (0-89) ninety-screen 28may1998 Amiga Mind.Forth of this archive, <br />
+the program was thoroughly reorganized and reduced down to (0-44) 45 screens. <br />
+Just by chance, Dr. Frenger's December 1998 ACM article happened to describe <br />
+the final version of a very broadly stubbed-in but very shallowly coded AI. <br />
+Based on the "980528atm" version archived below, Dr. Frenger was able to write <br />
+a thorough analysis of what Mind.Forth was intended to be -- just before the intention-only <br />
+stubs were yanked. In between the two articles six years apart by Dr. Frenger, many stubs <br />
+were filled back in with functional Forth code, so that Dr. Frenger's comments were <br />
+presciently predictive of how Mind.Forth grew in ways not pre-announced after 28may1998.</p>
+
+<p>
+On  page 27 of Dr. Frenger's ACM 1998 article, he mentions the plan in Screen 69 <br />
+below for someone to "claim the distinction of the longest running robot brain." <br />
+Such competitive AI mind culture was not easily possible until 5 March 2005, when  <br />
+TIME&DATE code was inserted and announced in the
+ <a href="http://groups.yahoo.com/group/win32forth/message/9189">
+Win32Forth</a> Yahoo group. <br />
+</p>
+
+<p><br /></p>
+<font size="+1">
+3. Special Features of this Archive
+</font>
+
+<p>
+The archive dates from the final decade of the previous millennium, <br />
+that is, from the first full decade of the World Wide Web. Over time, <br />
+websites uninterruptedly in existence since the 1990's may attain a <br />
+special status as curiosities, as dinosaurs of the Information Age, <br />
+or as historical artefacts fortuitously belonging to that one special <br />
+decade before everything changed forever (because information escaped <br />
+from hardcopy page-bondage to 'Net-wide Web freedom -- at risk of loss!). <br />
+</p>
+
+<p>
+Although this archive, having peregrinated from website to website since <br />
+its initial uploading to the Web on Thurs.28.MAY.1998, has not continuously <br />
+been at its current Web address or in its current form uninterruptedly since <br />
+1998, the source code is untouched and unchanged as it was on 28 May 1998. <br />
+</p>
+
+<br />
+<strong>4. Mind.Forth Source Code 28.MAY.1998</strong><br />
+<pre width=75>
+    Screen # 0    ram:robot
+      --------------------------------
+      0  \ Mind.forth Source Code -- thurs.28.may.1998         980528atm
+      1  \ Jump to the <a href="#mind1"> Main Program Loop </a>.
+      2  \ Be advised of the <a href="#engine1">Prosperity Engine</a>.
+      3  \ <a href="#vinge1"> Consider The Singularity </a>.
+      4  \ Philosophy of Mind.
+      5  \ Consciousness Studies.
+      6  \ Mind On CD-ROM (or DVD)
+      7  \ Implications for <a href="#mt1"> Machine Translation </a>.
+      8  \ Port Mind.forth to other languages and other hardware.
+      9  \ <a href="#masspar1"> Massively Parallel Processing (MPP) </a>.
+     10  \ <a href="#stack1"> Forth Resources </a>.
+     11  \ Linguistics Resources.
+     12  \ Neuroscience Resources.
+     13  \ <a href="#robotics1">Robotics Resources</a>.
+     14  \ <a href="http://www.scn.org/~mentifex/aisource.html">src1</a>
+     15  \ <a href="http://victoria.tc.ca/~uj797/aisource.html">src2</a>
+      --------------------------------
+
+
+    Screen # 1    ram:robot
+      --------------------------------
+      0  \ LOAD screens 2 thru 89 for a total of 90 screens.   980528atm
+      1  : RELEASE# ." 28mayA4th"  ;  ( 2Brodie "Thinking Forth" p. 122)
+      2  DECIMAL
+      3
+      4  CR ." Please wait; loading screens: " CR
+      5  2 89  THRU
+      6
+      7  CR ." Preliminary usage:  Test Mind.forth by entering a simple"
+      8  CR ." three-word sentence such as, Robots make robots [RETURN]."
+      9
+     10
+     11  CR ." To run Mind.forth, please enter:  MIND [RETURN]. "
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 2    ram:robot
+      --------------------------------
+      0  \ Apportionment of Mind.forth Screens.                980505atm
+      1  \ LOAD  VARIABLES  ARRAY  UPSET-(audition)  AUDITION-(sensorium)
+      2  \   STRING-EFFECT-  COMPARATOR-(s.t.m.) SHORTTERMMEM-(sensorium)
+      3  \  AUDIODAMP- ATTACH-(newc. + oldc.) INSTANTIATE-(newc. + oldc.)
+      4  \                  HOLODYNE-(oldconcept) OLDCONCEPT-(comparator)
+      5  \  NEWCONCEPT-(retro) RETRO-(sensorium) SENSORIUM-(reentry+mind)
+      6  \                              INSTINCT-(emotion) EMOTION-(mind)
+      7  \               SPREADACT-(associative)  ASSOCIATIVE-(language?)
+      8  \     DEEP-STRUCTURE-(subject)  REENTRY-(nounphrase + predicate)
+      9  \   TRANSFERACT-(nounp+pred)  FIBERDAMP-(nounphrase + predicate)
+     10  \        IDEADAMP-(nounphrase)  NOUNPHRASE-(subject + predicate)
+     11  \                           SUBJECT-(syntax)  PREDICATE-(syntax)
+     12  \              SYNTAX-(language)  LANGUAGE-(think)
+     13  \                                  EXAMINE-(think)  THINK-(mind)
+     14  \    LOCOMOTION-(motorium)  MOTORIUM-(volition)  VOLITION-(mind)
+     15  \ AUDPANEL-  MINDCORE + BOOTSTRAP    DREAM-(sleep)  SLEEP- MIND
+      --------------------------------
+
+
+
+    Screen # 3    ram:robot
+      --------------------------------
+      0  \ variables starting with A B C                       980526atm
+      1  variable a      \  a(ctivation) flag in SHORTTERMMEM
+      2  variable alert  \  as alert-WHILE flag in Main Program Loop
+      3        -1 alert !  \ 13apr1998:  Start alert as -1 true.
+      4  variable audmem  \ 12apr1998:  used in UPSET.
+      5
+      6  variable b  0 b !  \ b(eginning)? flag set in SENSORIUM;
+      7                     \ used in COMPARATOR
+      8  variable blankt  \ RETRO:  time immediately prior to an input
+      9         0 blankt !   \ 5may1998:  Initialize blankt.
+     10  variable bo  0 bo !  \ 23may1998: b-override for COMPARATOR
+     11  variable c      \ c(ontinuation)? flag in SHORTTERMMEM
+     12  variable cand   \ candidate, as in 26nov1994 Mind.rexx
+     13  variable cata   \ cata(mnesis) SENSORIUM, S.T.M. for reentry
+     14  variable control  \ a control flag, e.g., "R" for reentry
+     15
+      --------------------------------
+
+
+    Screen # 4    ram:robot
+      --------------------------------
+      0  \ variables starting with D E F G                     980526atm
+      1  variable d     \ d(eep) for inbound association to the mindcore
+      2         1 d !    \ 26may1998:  init d to chase away a bug
+      3  variable datum  \ 12apr1998:  for use during THINK.
+      4  variable dex    \ COMPARATOR; with move-tag "mt"
+      5  variable earshut  \  exit flag for SENSORIUM:  until earshut
+      6
+      7  variable eureka  \ 27apr1998  STRING-EFFECT:  finding a tag
+      8
+      9  variable favorite  \  COMPARATOR; "favorite" candidate
+     10
+     11
+     12
+     13  variable g    \ for grammar category ruled by syntax
+     14         1 g !  \ 26may1998:  init g to chase away a bug
+     15
+      --------------------------------
+
+
+    Screen # 5    ram:robot
+      --------------------------------
+      0  \ variables starting with H I J K L and some M        980527atm
+      1
+      2
+      3  variable holdf   \  COMPARATOR; for hold-phoneme (?)
+      4
+      5
+      6
+      7  variable mekos  \ 27MAY1998:  word "length" in RETRO and
+      8         0 mekos ! \ in SENSORIUM, for new concepts.
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 6    ram:robot
+      --------------------------------
+      0  \ variables starting with (some M) N O                980527atm
+      1  variable mt  0 mt !  \  23may1998:  move-tag "mt" in COMPARATOR
+      2            \ gets its value from a discovered "ut" ultimate-tag.
+      3  \ If SPACE is entered, RETRO stores the available "mt" as the
+      4  \ ultimate-tag of a known word now being stored.
+      5  variable mu          \ for use in RETRO
+      6
+      7  variable n  1 n ! \ basic associative tag n(umber) of a concept
+      8                    \ n is used in NEWCONCEPT
+      9  variable oldtbase  \ 12apr1998:  Used in EXAMINE.
+     10  variable onset     \ COMPARATOR; with blankt
+     11  variable onsettime   \ RETRO; COMPARATOR; with "tc"
+     12  1 onsettime ! \ 27may1998:  Init onsettime for RETRO.
+     13  variable ov  1 ov !  \ onset-vector used in SENSORIUM
+     14  variable ovnew     \ new onset-vector for reentry
+     15
+      --------------------------------
+
+
+    Screen # 7    ram:robot
+      --------------------------------
+      0  \ variables starting with P Q R S                     980526atm
+      1  variable p   \  p(honeme) in SHORTTERMMEM
+      2
+      3
+      4  variable ph  \ ph(oneme) for use in COMPARATOR
+      5  variable phoneme  \ for use in STRING-EFFECT
+      6  variable pretbase  \ 26apr1998  EXAMINE:  for longer review.
+      7  variable r  \ for recall-vector to an auditory engram
+      8         0 r ! \ 26may1998:  init r to chase away a bug.
+      9  variable s  \  SHORTTERMMEM s(ource) flag: -internal +external
+     10
+     11
+     12  variable sonus     \ COMPARATOR:  sonus, "sound" (Latin)
+     13
+     14  variable stoprace  \ a flag to "stop" the "race" of loops.
+     15
+      --------------------------------
+
+
+    Screen # 8    ram:robot
+      --------------------------------
+      0  \ variables starting with T U V W X Y Z               980526atm
+      1  variable t  0 t !  \ both time and a memory index
+      2        \ "t" is incremented in MIND; SENSORIUM; ...?
+      3  variable tbasex  \ base time for sake of EXAMINE
+      4  variable tc  1 tc ! \ comparator-time? with blankt and tdavno
+      5  variable tdavno  \  COMPARATOR:  t(ime) "long ago" (Russian)
+      6  variable tse     \  "time (in) STRING-EFFECT"
+      7  variable tult    \  RETRO: t(ime-)ult(imate) just past
+      8  variable tdec   \  26apr1998:  t.decrement for COMPARATOR
+      9
+     10  variable u  0 u !  \  u(ltimate) tag in SHORTTERMMEM; RETRO.
+     11  variable ut  0 ut !   \  COMPARATOR; "ultimate-tag"
+     12  variable v  \ for momentary v(alence) of a concept
+     13         0 v ! \ 26may1998:  init v to chase away a bug.
+     14  variable x  \ for "transiting" through the "lexicon{}"
+     15         1 x ! \ 26may1998:  init x to chase away a bug.
+      --------------------------------
+
+
+
+    Screen # 9    ram:robot
+      --------------------------------
+      0  \ variables in the form of callable definitions       980412atm
+      1
+      2
+      3  : CELL+  2+  ;
+      4
+      5  : CELLS  2*  ;
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 10    ram:robot
+      --------------------------------
+      0  \ array for kioku{} memory storage                    980427atm
+      1  : ARRAY ( #rows #columns --)
+      2     CREATE  \ 1Brodie p. 207; returns address of new name.
+      3     OVER    ( a b -- a b a )  ( #r #c -- #r #c #r )
+      4             \ Make copy of 2nd item (#rows) and push it on top.
+      5     ,       \ Store number of rows from stack to the array.
+      6     * CELLS ( Feed product of columns X rows to ALLOT )
+      7     ALLOT   ( Reserve given quantity of cells for array. )
+      8     DOES>   ( member; row col -- a-addr ) \ e.g., 34 0 kioku{}
+      9             \ row col pfa  ( contents of stack)
+     10     DUP @   \ row col pfa #rows ( duplicates top stack item )
+     11     ROT *   \ row pfa col-index ( changes top 2 to a product )
+     12     ROT +   \ pfa index ( adds the product to the row# )
+     13     1 +     \ because first cell has #rows.
+     14     CELLS   \ from number of items to number of bytes in offset.
+     15     + ;     \ ideas from jethomas@ix.netcom.com on mon16mar1998
+      --------------------------------
+
+
+    Screen # 11    ram:robot
+      --------------------------------
+      0  \ creation and blanking of array kioku{}              980412atm
+      1
+      2
+      3  999  6  ARRAY kioku{}
+      4
+      5
+      6  :  BLANKKIOKU
+      7     999 0 DO  0 I 0 kioku{}  !  LOOP
+      8     999 0 DO  0 I 1 kioku{}  !  LOOP
+      9     999 0 DO  0 I 2 kioku{}  !  LOOP
+     10     999 0 DO  0 I 3 kioku{}  !  LOOP
+     11     999 0 DO  0 I 4 kioku{}  !  LOOP
+     12     999 0 DO  0 I 5 kioku{}  !  LOOP
+     13  ;     \  BLANKKIOKU will be used at the start of each run.
+     14        \  It initializes all flags of kioku{} at all time-points.
+     15        \  It is called from the Main Program Loop.
+      --------------------------------
+
+
+
+    Screen # 12    ram:robot
+      --------------------------------
+      0  \ <a name="mt1"> Machine Translation </a>             980428atm
+      1  \ Because Mind.forth has separate arrays:
+      2  \     monad{} for the deep concepts of the mindcore, and
+      3  \     lexicon{} for the lexical concepts controlled by syntax,
+      4  \ a thought being generated in the "monad{}" mindcore is not
+      5  \ expressed in a particular natural language until the thought
+      6  \ rises to the surface of the mind by percolating through the
+      7  \ Chomskyan grammar structures of the particular human language
+      8  \ in which the robot mind is currently thinking or communicating
+      9  \ its ideas.
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 13    ram:robot
+      --------------------------------
+      0  \ shallow concept array "lexicon{}"                   980428atm
+      1
+      2
+      3  999  6  ARRAY  lexicon{}
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 14    ram:robot
+      --------------------------------
+      0  \ Elements of the array "lexicon{}"                   980428atm
+      1  \ The "fiber.n" array of the 26nov1994 Mind.rexx program becomes
+      2  \ the lexical array "lexicon{}" in Mind.forth.  "lexicon{}" does
+      3  \ not actually contain English words, but rather controls the
+      4  \ associative tags which will activate words stored in auditory
+      5  \ memory.  The array "lexicon{}" uses the following flags:
+      6  \       "n" for the number of the concept;
+      7  \       "v" for the momentary valence of the concept;
+      8  \       "g" for the grammar category ruled by syntax;
+      9  \       "d" or deep, for an inbound association to the mindcore;
+     10  \       "x" for exiting association from the mindcore;
+     11  \       "r" for recall vector to an auditory engram.
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 15    ram:robot
+      --------------------------------
+      0  \ <a name="olfaction1"> OLFACTION stub routine</a>    980505atm
+      1  \ This area of Mind.forth (or of Mind.xyz) is reserved for
+      2  \ roboticists who have access to the "sniffing" machines used
+      3  \ in such industries as wine and cheese-making.
+      4
+      5  \ Since the (expensive and very high-tech) hardware already
+      6  \ exists for the machine detection and identification of smells,
+      7  \ any robot AI must make allowances for the incorporation of a
+      8  \ sense of smell (OLFACTION) into the machine intelligence.
+      9
+     10  \ The Wall Street Journal thurs.30.apr.1998 p. B8 reports that
+     11  \ Cyrano Sciences Inc. of Pasadena CA USA plans to develop four
+     12  \ chips each having 8 vapor sensors for a total of 32 sensors.
+     13  \ Other artificial nose companies are Alpha M.O.S. SA of France;
+     14  \ Neotronics Scientific Ltd. and AromaScan PLC of England.
+     15              \  OLFACTION will return to the SENSORIUM function.
+      --------------------------------
+
+
+    Screen # 16    ram:robot
+      --------------------------------
+      0  \ <a name="vision1"> VISION </a>                      980420atm
+      1
+      2  \ The public-domain AI program Mind.forth for amateur robotics
+      3  \ concentrates on a sense of virtual AUDITION for communication
+      4  \ with humans, and the cyborg AI is not yet capable of VISION.
+      5
+      6  \ This area of Mind.forth is reserved for inserting the code and
+      7  \ functionality of anyone who can implement the sense of VISION
+      8  \ in a robot AI such as the Forthmind.
+      9
+     10  \ A visual memory channel designed to receive and record images
+     11  \ as engrams of VISION must be carefully designed in advance so
+     12  \ as to interface properly with the associative tag requirements
+     13  \ of the multisensory mindgrid which lies at the core of the AI.
+     14
+     15  \ VISION will return to the SENSORIUM function.
+      --------------------------------
+
+
+    Screen # 17    ram:robot
+      --------------------------------
+      0  \ <a name="vinge1"> Vinge:  The Singularity </a>      980528atm
+      1
+      2
+      3  \ Visit the Singular Vernor Vinge Page:
+      4  \ <a href="//www.ugcs.caltech.edu/~phoenix/vinge/"> Vinge </a>
+      5  \ and follow links to read Vernor Vinge's article published in
+      6  \ the Winter 1993 Whole Earth Review on The Singularity.
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 18    ram:robot
+      --------------------------------
+      0  \ <a name ="stack1"> Forth Resources </a>             980528atm
+      1
+      2  \ <a href="http://www.zetetics.com/camel"> Camel Forth </a>
+      3
+      4
+      5  \ <a href="http://www.mistybeach.com"> Misty Beach Forth </a>
+      6  \ <a href="http://www.theforthsource.com"> MVP Forth </a>
+      7  \ <STRONG> Pilot Forth </STRONG>
+      8  \ <a href="http://www.interlog.com/~nbridges/p4th.html">P4th</a>
+      9  \ is a version of Forth for the Palm Pilot from Neal Bridges.
+     10
+     11  \ <a href="http://www.well.com/user/jax/rcfb/"> Jack Woehr </a>
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 19    ram:robot
+      --------------------------------
+      0  \ <a name="upset1"> UPSET subroutine </a>             980504atm
+      1  : UPSET \ FORTH Fundamentals, V. 1, p. 156, by C. Kevin McCabe
+      2     audmem @ DUP  \ 1Brodie p. 53  DUP  ( n -- n n )
+      3     96 >    \ ASCII 97 is a; 98 is b; i.e., lowercase.
+      4     IF       \ If item is higher than ASCII uppercase,
+      5        DUP    \ make a copy of the non-uppercase item.
+      6        123 <   \ Small "z" = ASCII 122.
+      7        IF       \ If item therefore is ASCII 97 thru 122,
+      8          32 -    \ subtract 32 to convert to uppercase.
+      9        ENDIF      \ End the inner conditional test.
+     10
+     11     ENDIF           \ End the outer conditional test.
+     12     DUP EMIT
+     13     audmem !
+     14      \  Take the item from the stack and return it as "audmem".
+     15   ;  \  UPSET returns to AUDITION.
+      --------------------------------
+
+
+    Screen # 20    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 21    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 22    ram:robot
+      --------------------------------
+      0  \ <a name="audition1"> AUDITION subroutine </a>       980526atm
+      1  : AUDITION  CR ." AUDITION; ENTER: "
+      2    ?TERMINAL -1 = IF
+      3
+      4
+      5    KEY datum !  ( discard the pre-existing keypress)  THEN
+      6    KEY audmem !  ( must be outside the above IF-test)
+      7
+      8
+      9
+     10
+     11  ( <a href="#upset1">) UPSET ( </a> insist on uppercase input)
+     12
+     13
+     14    CR
+     15    ;   \ AUDITION returns to SENSORIUM
+      --------------------------------
+
+
+    Screen # 23    ram:robot
+      --------------------------------
+      0  \ Infra-red Palm Pilot:  Avenue of Communication?     980528atm
+      1
+      2  \ <a href="http://palmpilot.3com.com"> The Palm Pilot </a>
+      3  \ with its new (April 1998) infra-red link may be a suitable
+      4  \ device for verbal communication with a mobile AI robot.
+      5
+      6  \ <STRONG> Pilot Forth </STRONG>
+      7  \ <a href="http://www.interlog.com/~nbridges/p4th.html">P4th</a>
+      8  \ is a version of Forth for the Palm Pilot from Neal Bridges.
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 24    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 25    ram:robot
+      --------------------------------
+      0  \ <a name="attach1"> ATTACH subroutine </a>           980504atm
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15   \ ATTACH returns to NEWCONCEPT or OLDCONCEPT.
+      --------------------------------
+
+
+    Screen # 26    ram:robot
+      --------------------------------
+      0  \                                                     980504atm
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 27    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 28    ram:robot
+      --------------------------------
+      0  \ <a name="string-effect1"> STRING-EFFECT </a>        980527atm
+      1  : STRING-EFFECT  \  increases a(ctivation) of next-in-line char
+      2
+      3    ph @ phoneme !  \ "cand" became "ph" in COMPARATOR
+      4    tdec @ 1+ tse !      \ tse = "time (in) string-effect"
+      5
+      6    tse @  1  kioku{} @  8 +  a !  ( get a; increase it by 8)
+      7    a @  tse @  1  kioku{}  !  \ Store the higher a(ctivation).
+      8    CR ." STRING-EFFECT:  Increasing a(ctivation) of "
+      9       ph @ EMIT ."  by 8 at time = " tse @ .
+     10
+     11
+     12
+     13
+     14
+     15    0 a !  ;   \  return to COMPARATOR.
+      --------------------------------
+
+
+    Screen # 29    ram:robot
+      --------------------------------
+      0  \ STRING-EFFECT programming notes                     980414atm
+      1  \ tdec is a "dec(remental) t(ime)" formerly (pre-4may1998) from
+      2  \ COMPARATOR but subsequently from [ needs a location ].
+      3
+      4  \ tdec shows the decrementing of time "t" while the COMPARATOR
+      5  \ DO-loop moves backwards through time in search of matches
+      6  \ between the incoming character and all recently stored
+      7  \ characters.  Just before the COMPARATOR DO-loop starts, tdec
+      8  \ must get its starting value from the "blankt" of RETRO.
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 30    ram:robot
+      --------------------------------
+      0  \ Ideas for primitive concepts in the Mind Core.      980528atm
+      1  \ 28may1998:  Two screens below, there is the start of a list
+      2  \ of "core ideas" to be provided as a kind of innate ontology
+      3  \ in the "Mind Core" of the robot AI.
+      4  \    Having a built-in ontology of concepts does not reflect a
+      5  \ belief (a la Jerry Fodor) that concepts are pre-existent in
+      6  \ the human mind at birth.  Rather, the best use of Mind.forth
+      7  \ as a demonstration AI will result if the robot brain is primed
+      8  \ with ready-to-go concepts as a basis for the operation of the
+      9  \ Chomskyan linguistic structures at the core of the robot mind,
+     10  \ and as a basis for the interaction of a robot with its world.
+     11  \   Any person implementing or porting Mind.forth is free to
+     12  \ tinker with the set of Mind Core concepts.  Please keep in
+     13  \ mind that, after a reserve of, say, 64 or even 1,024 memory
+     14  \ elements to hold innate core concepts, the assignment of new
+     15  \ concepts must start with, say, "n = 65" or "n = 1025".
+      --------------------------------
+
+
+    Screen # 31    ram:robot
+      --------------------------------
+      0  \ <a name="instantiate1"> INSTANTIATE subroutine </a> 980504atm
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15   \ INSTANTIATE returns to NEWCONCEPT or OLDCONCEPT.
+      --------------------------------
+
+
+    Screen # 32    ram:robot
+      --------------------------------
+      0  \ temporary list of robot "Mind Core" concepts.       980528atm
+      1  \ [ self ] self  Andru
+      2  \   we
+      3  \ [ action--be ]  be  exist  live  die  seem
+      4  \   am
+      5  \ [ action--think/will ]  think  know  remember  say
+      6  \   want  prefer  like  dislike  dream
+      7  \ [ action--do ]  do  feel  see  taste  touch  smell  hear
+      8  \   go  stop
+      9  \ [ person/thing ]  other  person  you  he  she  it  they
+     10  \   something  what  wheel  block  robot  human  who
+     11  \ [ space/time ]  space  where  here  left  right
+     12  \   time  when  now  never  always  past  future
+     13  \ [ logic ]  if  not  yes  no  therefore
+     14  \   number  one  two  both  three  big  small  some  all
+     15  \ [ idea ]  idea  why  how
+      --------------------------------
+
+
+
+    Screen # 33    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 34    ram:robot
+      --------------------------------
+      0  \ <a name="audiodamp1"> AUDIODAMP subroutine </a>     980427atm
+      1  : AUDIODAMP
+      2
+      3      999  0  DO  0  I  1  kioku{}  !
+      4
+      5    LOOP  ;
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15   \ 27apr1998:  AUDIODAMP returns to SENSORIUM.
+      --------------------------------
+
+
+    Screen # 35    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 36    ram:robot
+      --------------------------------
+      0  \ <a name="masspar1"> Massive Parallelism </a>        980528atm
+      1  \ 28may1998:  As a demo AI, Mind.forth shows the information
+      2  \ flow and the cognitive architecture of a phenomenon which
+      3  \ must really be done with massively parallel processing (MPP).
+      4  \    However, it may be possible to begin parallelizing the
+      5  \ input of words to the auditory memory channel on a piecemeal
+      6  \ basis by dividing up the mental lifespan of the robot AI into
+      7  \ "epochs" or periods, each contained within the memory array
+      8  \ [ "kioku{}" in Mind.forth ] of an individual computer linked
+      9  \ with other computers in a small network or a "farm" of CPUs.
+     10  \   Although the conceptual Mind Core should not be broken up
+     11  \ in the same fashion, it only needs to receive mssages of
+     12  \ recognition of verbal input passing through the stretches of
+     13  \ "episodic memory" comprising a life span.  Therefore a form
+     14  \ of "creeping" parallelization may be possible for AI robots
+     15  \ even before truly massive parallelism becomes available.
+      --------------------------------
+
+
+    Screen # 37    ram:robot
+      --------------------------------
+      0  \ <a name ="random1"> RANDOM subroutine </a>          980528atm
+      1
+      2  \ 28MAY1998:  Here is a stub for making random choices,
+      3  \ perhaps by monitoring the keystrokes of the human user
+      4  \ to generate strings of random outcomes in case the Robot AI
+      5  \ needs to make some random choices for heuristic purposes.
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 38    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 39    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 40    ram:robot
+      --------------------------------
+      0  \ <a name="newconcept1"> NEWCONCEPT subroutine </a>   980527atm
+      1  : NEWCONCEPT
+      2    CR ." NEWCONCEPT:  n & r = "  n @ . ."  "  r @ .
+      3      t @  n @  0 lexicon{}  !  \  Store t(ime) of new concept.
+      4      v @  n @  1 lexicon{}  !  \  Store the v(alence) level.
+      5      g @  n @  2 lexicon{}  !  \  Store the g(rammar) category.
+      6      d @  n @  3 lexicon{}  !  \  Store the mindcore d(eep) tag.
+      7      x @  n @  4 lexicon{}  !  \  Core (e)x(iting) association.
+      8      r @  n @  5 lexicon{}  !  \  r(ecall) vector into audition.
+      9  CR ." NEWCONCEPT:  Storing concept #" n @ .
+     10     ." with onset-tag " r @ . ." leading to engram: "
+     11   r @ 0 kioku{} @ EMIT r @ 1+ 0 kioku{} @ EMIT
+     12   r @ 2+ 0 kioku{} @ EMIT ." ..."
+     13    0 r ! ( reset)
+     14    n @ 1+ n !  ( NEWCONCEPT is the proper place to increment n.)
+     15  ;   \ NEWCONCEPT returns to RETRO.
+      --------------------------------
+
+
+    Screen # 41    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 42    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 43    ram:robot
+      --------------------------------
+      0  \ <a name="holodyne1"> HOLODYNE subroutine </a>       980412atm
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15   \ HOLODYNE returns to OLDCONCEPT.
+      --------------------------------
+
+
+    Screen # 44    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 45    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 46    ram:robot
+      --------------------------------
+      0  \ <a name="oldconcept1"> OLDCONCEPT subroutine </a>   980525atm
+      1  :  OLDCONCEPT
+      2
+      3    CR ." OLDCONCEPT:  COMPARATOR has recognized a word "
+      4    ." for concept #" mt @ .
+      5
+      6    CR ." OLDCONCEPT:  Concept # " mt @ . ." is the word "
+      7
+      8    mt @ 5 lexicon{} @ datum !  ( get the onset time )
+      9    datum @ 0 kioku{} @ EMIT datum @ 1+ datum !
+     10    datum @ 0 kioku{} @ EMIT datum @ 1+ datum !
+     11    datum @ 0 kioku{} @ EMIT datum @ 1+ datum !
+     12    datum @ 0 kioku{} @ EMIT     0 datum ! ( reset)
+     13  ;
+     14
+     15   \ 27apr1998:  OLDCONCEPT now returns to COMPARATOR
+      --------------------------------
+
+
+    Screen # 47    ram:robot
+      --------------------------------
+      0  \ OLDCONCEPT programming considerations.              980523atm
+      1  \ 23may1998:  Although OLDCONCEPT is still only a stub while we
+      2  \ try to perfect the COMPARATOR mechanism, today we establish a
+      3  \ b-override variable "bo" for use in the COMPARATOR, where we
+      4  \ want Mind.forth (or Mind.xyz in any programming language) to
+      5  \ be able to recognize multiple subwords (e.g., sub + word + s)
+      6  \ within a compound word.  First we will tackle actual subwords
+      7  \ before we address inflectional endings such as "s" or "-ing."
+      8  \ If necessary, we can simply test for all known inflectional
+      9  \ endings within a particular language, or we can remain true
+     10  \ to the theory (q.v. as linked to from the Mentifex website)
+     11  \ and create an "inflection cable" both to recognize and to
+     12  \ activate inflectional endings stored within auditory memory.
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 48    ram:robot
+      --------------------------------
+      0  \ COMPARATOR rationale and concerns                   980505atm
+      1  \ 05may1998:  In the early stages of the Mind.forth programming,
+      2  \ the COMPARATOR is the "conditio sine qua non" for an AI robot.
+      3
+      4  \ The "spreading-activation" algorithm of the COMPARATOR is one
+      5  \ of hopefully several original contributions to general AI from
+      6  \ <a href="http://www.scn.org/~mentifex/">Project Mentifex</a>.
+      7
+      8  \ AI enthusiast programmers in other languages are invited to
+      9  \ re-implement the Mind.forth COMPARATOR in their own language
+     10  \ as the first step in porting the entire Mind.forth AI program.
+     11
+     12  \ The Mind.forth COMPARATOR is more powerful than the original
+     13  \ 26nov1994 Mind.rexx comparator, because the Forth version
+     14  \ recognizes not only whole words but parts of compound words,
+     15  \ and without the Mind.rexx mistake of concatenating strings.
+      --------------------------------
+
+
+    Screen # 49    ram:robot
+      --------------------------------
+      0  \ <a name="comparator1"> COMPARATOR subroutine </a>   980528atm
+      1  : COMPARATOR   ( See the next Screen for detailed explanation.)
+      2       0 mt !  0 tdavno !  blankt @ tc !  tc @ tdec !  tc @ tse !
+      3           ( to) tdavno @   ( from) tc @  DO I 0 kioku{} @ ph !
+      4    ph @ cand @ = IF ( match)   I 1 kioku{}  @ a !  ( fetch "a")
+      5              I 2 kioku{} @ 1 = IF  8 a +!  THEN
+      6         a @ 0 > IF
+      7         I 4 kioku{} @ ut !
+      8              ut @ 0 > IF  ut @ mt !
+      9              4 ut @ 1 lexicon{} ! ( increase valence;)  0 ut !
+     10              ELSE 0 mt !
+     11              ENDIF
+     12         ( <a href="#string-effect1">) STRING-EFFECT ( </a>)
+     13         ENDIF  0 a !
+     14    ENDIF   tse @ 1 + tse !  tdec @ 1- tdec !
+     15       -1   +LOOP   ;      \  COMPARATOR returns to SHORTTERMMEM
+      --------------------------------
+
+
+    Screen # 50    ram:robot
+      --------------------------------
+      0  \ COMPARATOR programming notes.                       980528atm
+      1  \  IF stored "ph(oneme)" = incoming "cand(idate)"...
+      2  \  fetch "a(ctivation)" level "a" of "ph(oneme)";
+      3  \        IF "b" flag of "ph" = 1 (true), add 8 to "a"...
+      4  \        THEN (ENDIF) (in line 5 in COMPARATOR).
+      5  \     IF "a" is greater than zero (even if just set!)...
+      6  \     fetch ultimate-tag "ut" of "ph(oneme)";
+      7  \        IF "ut" is greater than zero (i.e., if exists)...
+      8  \        transfer value of "ut" to move-tag "mt";
+      9  \        add a valence of 4 to concept # "ut" in "lexicon{}";
+     10  \        reset "ut" variable back to zero;
+     11  \        ELSE store zero ("0") in move-tag "mt";
+     12  \        ENDIF (from line 8 in COMPARATOR);
+     13  \     call STRING-EFFECT function (to pass activation down);
+     14  \     ENDIF (from line 6 in COMPARATOR).
+     15  \  ENDIF (from line 4 in COMPARATOR).
+      --------------------------------
+
+
+
+    Screen # 51    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 52    ram:robot
+      --------------------------------
+      0  \ <a name="shorttermmem1"> SHORTTERMMEM </a>          980527atm
+      1  : SHORTTERMMEM
+      2
+      3   audmem @ 32 > IF ( <a href="#comparator1">) COMPARATOR ( </a>)
+      4   THEN
+      5   CR ." SHORTTERMMEM:  onset = " onset @ .
+      6     cand @ p !  0 a ! 43 s !
+      7     p @ 32 = IF 0 a ! 0 b ! 0 c ! 0 u ! 0 s ! CR ." STM:SP" THEN
+      8       p @  t @  0 kioku{} !   \ Store the phoneme p at time t.
+      9       a @  t @  1 kioku{} !   \ Store the a(ctivation) level.
+     10       b @  t @  2 kioku{} !   \ b(eginning)?  1 Yes or 0 No.
+     11       c @  t @  3 kioku{} !   \ c(ontinuation)? 1=Y or 0 = N.
+     12       u @  t @  4 kioku{} !   \ u(ltimate) tag # to a concept.
+     13       s @  t @  5 kioku{} !   \ s(ource): internal -, external +
+     14
+     15    cand @ 32 = IF t @ blankt ! THEN  ;  \ returns to SENSORIUM.
+      --------------------------------
+
+
+    Screen # 53    ram:robot
+      --------------------------------
+      0  \ SHORTTERMMEM programming notes.                     980523atm
+      1  \ 23may1998:  The "b(eginning)" flag is set in the "SENSORIUM"
+      2  \ function, to indicate that a character being stored is the
+      3  \ first (beginning) letter (as if phoneme) in a stored word.
+      4  \ This method is not sacrosanct; a different Mind.robot could
+      5  \ simply inspect the blank space before a stored word in order
+      6  \ to determine the associative "onset-tag" of the stored word.
+      7  \ Nevertheless, it is very important to fix the onset-tag of a
+      8  \ word stored in auditory memory, so that a Chomskyan language
+      9  \ structure may activate that word and cause it to be "heard"
+     10  \ within the auditory memory channel during the generation of a
+     11  \ sentence of thought.  Here within Mind.forth, we are about to
+     12  \ let the "COMPARATOR" function declare secondary or tertiary
+     13  \ "b" onset-tags within a stored word so that the AI may parse
+     14  \ a compound word down into its smaller subwords -- a function
+     15  \ absolutely essential if Mind.forth is going to learn German.
+      --------------------------------
+
+
+
+    Screen # 54    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 55    ram:robot
+      --------------------------------
+      0  \ <a name="retro1"> RETRO subroutine </a>             980528atm
+      1  : RETRO  \ Called by SENSORIUM when incoming candidate = 32 "SP"
+      2     t @ blankt !  \ preserve blankt(ime) of a pre-word SPACE-bar.
+      3     t @ 1 - tult !  CR ." RETRO: tult = " tult @ .
+      4       0 tult @ 3  kioku{} !  \  Set 0 "false" continuation-flag.
+      5    CR ." RETRO:  mt from COMPARATOR = " mt @ .
+      6     mt @ 0 > IF
+      7     mt @ tult @ 4  kioku{} !  \ Store the move-tag "mt".
+      8   ( <a href="#oldconcept1">) OLDCONCEPT ( </a>) 0 mt ! ( reset)
+      9     ELSE   mekos @ 0 > IF  CR ." RETRO: mekos = " mekos @ .
+     10            onset @ r !
+     11      n @ tult @ 4  kioku{} !  \ Store new concept ultimate-tag.
+     12   ( <a href="#newconcept1">) NEWCONCEPT ( </a>)
+     13                 ENDIF
+     14              ENDIF   t @ 1+ onsettime !
+     15     0 mu ! 0 u ! 0 mt ! 0 mekos ! ;  \ RETRO returns to SENSORIUM
+      --------------------------------
+
+
+    Screen # 56    ram:robot
+      --------------------------------
+      0  \ RETRO programming notes.                            980523atm
+      1  \ 5may1998:  "blankt" in RETRO will be used as the starting
+      2  \ value for dec(remental) t(ime) "tdec" as initialized in
+      3  \ COMPARATOR and as used in STRING-EFFECT.
+      4
+      5  \ 23may1998:  move-tag "mt" from COMPARATOR passes unscathed
+      6  \ through SHORTTERMMEM and SENSORIUM until the move-tag is
+      7  \ needed to provide the value of an old ultimate-tag in RETRO.
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 57    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 58    ram:robot
+      --------------------------------
+      0  \ <a name="sensorium1"> SENSORIUM subroutine </a>     980527atm
+      1  : SENSORIUM  ." SENSORIUM: clearing memory" AUDIODAMP 80 0 DO
+      2    tbasex @  t @  = IF  t @  oldtbase ! THEN  1 t +!
+      3    ( <a href="#audition1">) AUDITION ( </a> calls subroutine)
+      4    audmem @ 27 = IF CR ." SENSORIUM: halt" 0 audmem ! QUIT THEN
+      5    audmem @ cand ! ( transfer value)
+      6    audmem @ 13 = IF -1 earshut !  1 b !   0 alert !
+      7                  t @ blankt !  32 cand ! 32 audmem ! THEN
+      8    cand @ 32 = IF  ( <a href="#retro1">) RETRO ( </a>) THEN
+      9  1 b ! 1 c !   blankt @ 1 + onset !
+     10  CR ." SENSORIUM:  t &  onset = " t @ . ."  " onset @ .
+     11  t @ onset @ = IF  1 b !  ELSE  0 b ! THEN  audmem @ 32 > IF
+     12                                       mekos @ 1+ mekos !
+     13    ( <a href="#shorttermmem1">) SHORTTERMMEM ( </a>)  THEN
+     14   CR ." SENSORIUM:  mekos = " mekos @ .
+     15   earshut @ -1 = IF LEAVE THEN  LOOP ;  \ ret to REENTRY or MIND
+      --------------------------------
+
+
+    Screen # 59    ram:robot
+      --------------------------------
+      0  \ SENSORIUM programming notes                         980504atm
+      1  \ The DO loop iterates up to 80 times because McCabe on page 105
+      2  \ of "FORTH Fundamentals" says that the terminal input buffer or
+      3  \ TIB can hold up to eighty characters.
+      4
+      5  \ 04may1998:  Today we radically change part of the hierarchy of
+      6  \ Forth screens.  In Screen 58 above, we have SENSORIUM call
+      7  \ SHORTTERMMEM directly instead of going first to COMPARATOR.
+      8
+      9  \ Then COMPARATOR will no longer call SHORTTERMMEM, but rather
+     10  \ the reverse will be true, and SHORTTERMMEM calls COMPARATOR.
+     11  \ It makes more sense in general if a sensorium calls memory
+     12  \ storage, which in turn calls a comparison function.
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 60    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 61    ram:robot
+      -------------------------------
+      0  \ <a name="instinct1"> INSTINCT subroutine stub </a>  980505atm
+      1
+      2
+      3      ( SELF-PRESERVATION ? )
+      4
+      5
+      6      ( REPRODUCTION ? )
+      7
+      8
+      9      ( CURIOSITY -- the urge to know? )
+     10
+     11
+     12      ( some behaviors found only in infants? )
+     13
+     14
+     15                \ INSTINCT if implemented will return to EMOTION.
+      --------------------------------
+
+
+    Screen # 62    ram:robot
+      --------------------------------
+      0  \                                                     980504atm
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 63    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 64    ram:robot
+      --------------------------------
+      0  \ <a name="emotion1"> EMOTION subroutine stub </a>    980505atm
+      1
+      2
+      3
+      4    ( try to implement JOIE DE VIVRE )
+      5
+      6
+      7  \ EMOTION may call <a href="#instinct1"> INSTINCT </a>.
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15  \ EMOTION if implemented returns to the Main Program Loop MIND.
+      --------------------------------
+
+
+    Screen # 65    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 66    ram:robot
+      --------------------------------
+      0  \ <a name="engine1"> The Prosperity Engine </a>       980420atm
+      1
+      2  \ Let there be no doubt about what Project Mentifex means to do:
+      3  \ not only create artificial intelligence, but also make robots
+      4  \ who ("who" qua persons) will constitute a "Prosperity Engine"
+      5  \ for eliminating poverty from the human condition.
+      6
+      7  \ In the face of the coming superiority of machine intelligence
+      8  \ over human intelligence, all the varying levels of giftedness,
+      9  \ which currently (1998) lead to vast economic disparities among
+     10  \ humans, will soon count for nothing when NO human is any match
+     11  \ for the superintelligent machines.  Gone will be any basis for
+     12  \ the enrichment of the few and the impoverishment of the many.
+     13
+     14  \ A Nietzschean transformation of values will ensue, with those
+     15  \ humans being materially rewarded who give more of themselves.
+      --------------------------------
+
+
+    Screen # 67    ram:robot
+      --------------------------------
+      0  \ <a name="examine1"> EXAMINE subroutine </a>         980525atm
+      1  :  EXAMINE  ( lets us "examine" the kioku{} memory array )
+      2    CR ." EXAMINE:  Memory is at time " t @ . ."  p a b c u s"
+      3     oldtbase @ pretbase !  ( look further back than the input )
+      4     t @  12 > IF  oldtbase @ 12 - pretbase !  THEN
+      5     t @  pretbase @  DO ( review robot output AND current input)
+      6    CR ." EXAMINE:  Engram is at time " I . ."  "
+      7        I  0  kioku{} @ 33 <  IF  ." "  ELSE
+      8   I  0  kioku{} @ EMIT ."  "  I  1  kioku{} @  .  ." "
+      9   I  2  kioku{} @  .   ." "   I  3  kioku{} @  .  ." "
+     10   I  4  kioku{} @  .   ." "   I  5  kioku{} @ EMIT THEN LOOP
+     11   CR ." EXAMINE:  Lexicon items when n = " n @ . ." are:"
+     12   CR ." n v g d x r:"    n @  1 DO  CR
+     13    I @ 1 lexicon{} @ . ." "  I @ 2 lexicon{} @ .  ." "
+     14    I @ 3 lexicon{} @ . ." "  I @ 4 lexicon{} @ .  ." "
+     15    I @ 5 lexicon{} @ .  LOOP  ;  \ EXAMINE returns to THINK.
+      --------------------------------
+
+
+    Screen # 68    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 69    ram:robot
+      --------------------------------
+      0  \ The "quickening" of Mind.forth                      980528atm
+      1  \ 28MAY1998:  Until the language and reentry structures have
+      2  \ been coded, the "THINK" subroutine in the next Screen is a
+      3  \ convenient place to show the user/programmer what is going on
+      4  \ internally during each trial run of the Mind.forth AI.
+      5  \    Eventually, such diagnostic inspection code will have to
+      6  \ be moved elsewhere so that "THINK" can serve its true purpose
+      7  \ of calling the various Chomskyan structures of syntax.
+      8  \    Finally, all the "stops" will be pulled out of the THINK
+      9  \ subroutine and it will be possible for Mind.forth to run
+     10  \ uninterrupted WITH or WITHOUT human input.  The robot mind
+     11  \ will have "quickened" within its neural circuitry.  However,
+     12  \ programmers must be careful to permit recirculation of memory
+     13  \ channels so that the AI does not suddenly hit a wall and die.
+     14  \    Whoever runs Mind.forth or Mind.xyz with an enormous memory
+     15  \ may claim the distinction of the longest running robot brain.
+      --------------------------------
+
+
+    Screen # 70    ram:robot
+      --------------------------------
+      0  \ <a name="think1"> THINK subroutine </a>             980504atm
+      1  : THINK
+      2
+      3
+      4    t @ 1 > IF
+      5   ( <a href="#examine1">) EXAMINE ( </a> calls subroutine )
+      6    THEN
+      7    CR ." THINK:  Press [ESC] to quit, or [TAB] to begin entry:"
+      8
+      9    KEY datum !  datum @ 27 = IF CR ." THINK:  halt" QUIT THEN
+     10
+     11
+     12    datum @  9 = IF  -1 alert !  CR ." THINK:  [TAB]" THEN
+     13
+     14    CR ." THINK:  Now I will listen to you...." ;
+     15                                 \ THINK returns to MIND.
+      --------------------------------
+
+
+    Screen # 71    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+    Screen # 72    ram:robot
+      --------------------------------
+      0  \                                                     980528atm
+      1
+      2  \ <a href="http://teamdelta.com/agmain.html"> Dan Danknick </a>
+      3
+      4
+      5
+      6  \ <a href="http://robotwars.com"> Marc Thorpe </a>
+      7
+      8
+      9
+     10
+     11  \ <a href="http://www.sfu.ca/~dbyoung/robotwars/">D.B. Young</a>
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 73    ram:robot
+      --------------------------------
+      0  \ <a name="locomotion1"> LOCOMOTION stub </a>         980505atm
+      1  :  LOCOMOTION
+      2
+      3
+      4   CR ." LOCOMOTION CHOICES: "
+      5   CR ." GO_FORWARD"
+      6   CR ." GO_BACKWARD"
+      7   CR ." LEFT_TURN"
+      8   CR ." RIGHT_TURN"
+      9   CR ." STOP_MOTION"
+     10
+     11   ;
+     12
+     13
+     14
+     15     \ LOCOMOTION will return to the MOTORIUM subroutine.
+      --------------------------------
+
+
+    Screen # 74    ram:robot
+      --------------------------------
+      0  \ <a name="robotics1"> Robotics Resources </a>        980528atm
+      1
+      2  \ <a href="http://www.angelusresearch.com">Angelus Research</a>
+      3  \ Mark Tilden's BEAM = Biology Electronics Aesthetics Mechanics
+      4  \ <a href="http://sst.lanl.gov/robot/"> BEAM Robotics </a>
+      5  \ <a href="http://www.legomindstorms.com"> Steve Budgell? </a>
+      6  \ <a href="http://members.aol.com/fuboco/robots.htm">Future</a>
+      7  \ <a href="http://www.lynxmotion.com"> Lynxmotion </a>
+      8
+      9  \ <a href="http://home.att.net/~robojoc"> Robojoc </a>
+     10
+     11  \ <a href="http://www.kristech.com/"> Robot Sci & Tech Mag. </a>
+     12
+     13  \ <a href="http://www.solarbotics.com"> Solarbotics </a>
+     14  \ <a href="http://ranier.hq.nasa.gov/telerobotics_page/">TR</a>
+     15  \ See also <a href="#clubs1"> Robotics Clubs and Groups </a>.
+      --------------------------------
+
+
+
+    Screen # 75    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 76    ram:robot
+      --------------------------------
+      0  \ <a name="motorium1"> MOTORIUM stub </a>             980420atm
+      1  :  MOTORIUM  ( further logic will select the motor option )
+      2     ( <a href="#locomotion1">) LOCOMOTION ( </a> calls stub )
+      3     ( a whole panoply of WORK subroutines could be called: )
+      4     ( REACH  TOUCH  GRASP  LIFT  BURN  FREEZE  LOWER  RELEASE )
+      5  ;  \ MOTORIUM returns to the VOLITION subroutine.
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 77    ram:robot
+      --------------------------------
+      0  \ <a name="clubs1"> Robotics Clubs and Groups </a>    980528atm
+      1
+      2
+      3  \ <a href="http://www.dprg.org/"> Dallas Personal Robotics </a>
+      4
+      5  \ <a href="http://www.rdrop.com/users/marvin/">Portland, OR</a>
+      6
+      7  \ <a href="http://www.seattlerobotics.org">Seattle Robotics</a>
+      8
+      9
+     10
+     11  \ <a href="http://www.robotics.clara.net"> United Kingdom </a>
+     12
+     13
+     14
+     15  \ See also <a href="#persons1"> Personal Robotics Pages</a>.
+      --------------------------------
+
+
+
+    Screen # 78    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 79    ram:robot
+      --------------------------------
+      0  \ <a name="volition1"> VOLITION stub </a>             980505atm
+      1
+      2  \ The robot will have free will inasmuch as it matches its motor
+      3  \ options with its perceived or instinctual values.  The process
+      4  \ of thinking about values or goals and how to attain them will
+      5  \ initiate the formulation of goal-directed motor strategies.
+      6
+      7  \ A robotic free will can be designed to pursue any suggested
+      8  \ motor option only when all related mental associations have
+      9  \ died down below a threshold level.  If the associations cause
+     10  \ concern, fear or alarm, they will not acquiesce in the action.
+     11
+     12  \ If all pertinent thought ratifies a proposed motor action,
+     13  \ the <a href="#motorium1"> MOTORIUM </a> initiates an option.
+     14
+     15  \  VOLITION will return to the Main Program Loop MIND.
+      --------------------------------
+
+
+    Screen # 80    ram:robot
+      --------------------------------
+      0  \ <a name="persons1"> Personal Robotics Pages </a>    980528atm
+      1
+      2  \ <a href="http://www.simreal.com/Boris/"> Boris Project </a>
+      3
+      4  \ <a href="http://lenti.med.umn.edu/~mwd/robot.html">Dalton</a>
+      5
+      6  \ <a href="http://homepages.ihug.co.nz/~pjh">Peter Harrison</a>
+      7
+      8  \ <a href="http://www.ai.sri.com/~konolige/">Kurt Konolige</a>
+      9  \ <a href="http://www.golden.net/~amiller"> Andrew Miller </a>
+     10  \ <a href="http://www.tgn.net/~texpanda/">Herb Montes</a>
+     11
+     12  \ <a href="http://www.frc.ri.cmu.edu/~hpm">Hans Moravec</a>
+     13  \ <a href="http://members.tripod.com/~helpme/robo1.htm">J.M.</a>
+     14  \ <a href="http://www.epix.net/~rnewmyer/robot.html">Newmyer</a>
+     15
+      --------------------------------
+
+
+
+    Screen # 81    ram:robot
+      --------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+    Screen # 82    ram:robot
+      --------------------------------
+      0  \ <a name="dream1"> DREAM subroutine stub </a>        980420atm
+      1  : DREAM  ( called by SLEEP)  ;
+      2  \ We include here a DREAM subroutine merely to show that it is
+      3  \ possible and where the DREAM function would fit within the
+      4  \ overall scheme of the artificial mind.
+      5
+      6  \ In accordance with the theory of REENTRY as elucidated by both
+      7  \ Gerald Edelman in a Theory of Neuronal Group Selection (TNGS)
+      8  \ [ insert appropriate TNGS Web link here, if obtainable ]
+      9  \ and bt mentifex@scn.org in the Nolarbeit Theory Journal (NTJ),
+     10  \ any memories which are activated during and AS a dream will be
+     11  \ remembered by the waking consciousness only if such memories
+     12  \ also trigger the REENTRY function that re-records the memories
+     13  \ in their hodgepodge pastiche ensemble as a new experience made
+     14  \ up of reentrant bits and snippets of previously recorded data.
+     15          \ DREAM will return to the SLEEP subroutine +/- REENTRY.
+      --------------------------------
+
+
+     Screen # 83         ram:robot
+      --------------------------------
+      0  \ <a name="trip1"> HALLUCINATION not implemented </a> 980505atm
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15  \ HALLUCINATION if implemented would return to TRANCE.
+      ---------------------------------
+
+
+
+     Screen # 84            ram:robot
+      ---------------------------------
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+     10
+     11
+     12
+     13
+     14
+     15
+      --------------------------------
+
+
+
+     Screen # 85             ram:robot
+      ---------------------------------
+      0  \ <a name="sleep1"> SLEEP subroutine stub </a>        980420atm
+      1
+      2  \ During robot SLEEP, we may be able to consolidate memories and
+      3  \ thus boost intelligence by canvassing the sparse memory arrays
+      4  \ for associative tags which need not be widely separated, and
+      5  \ we may be able to crowd together the associative tags formed
+      6  \ during the period of consciousness immediately prior to SLEEP.
+      7
+      8   ( <a href="#dream1">) DREAM ( </a> calls subroutine )
+      9
+     10
+     11
+     12
+     13
+     14
+     15  \ SLEEP will return to the Main Program Loop "MIND"
+      --------------------------------
+
+
+    Screen # 86    ram:robot
+      --------------------------------
+      0  \ <a name="trance1"> TRANCE not implemented </a>      980505atm
+      1
+      2  \ There is no intention here to make TRANCE a feature of the
+      3  \ AI mind of intelligent robots.  Instead, TRANCE is mentioned
+      4  \ only in order to show its place within a Theory of Mind.
+      5
+      6  \ The theory speculates that hypnosis works by suggesting to
+      7  \ a subject mind that it is asleep, i.e, in a condition where
+      8  \ any experience, such as a dream, is to be interpreted as true
+      9  \ WITHIN THE FRAMEWORK OF THE DREAM.  But since the hypnotized
+     10  \ mind is actually not asleep, it ill-advisedly trusts the
+     11  \ hypnotist and lends full credence to suggestions, resulting
+     12  \ in <a href="#trip1"> HALLUCINATION </a> -- a mental feature
+     13  \ which we are not eager to implement in a trustworthy robot.
+     14
+     15  \ TRANCE if implemented would return to Main Program Loop MIND.
+      --------------------------------
+
+
+
+    Screen # 87    ram:robot
+      --------------------------------
+      0  \ Mind.forth is a Unified Theory of Cognition         980414atm
+      1  \   Hearing    Vision   Concepts        Emotion   Robot Output
+      2  \  /iiiiiii\  /!i!i!i!\         Volition         /YYYYYYYYYYYY\
+      3  \ | ||||||| || ||||||| |   T                    | |||||||||||| |
+      4  \ | ||||||| || | ___ | |   +                    | |||||||||||| |
+      5  \ | ||||||| ||  /   \  |   +                    | |S|||||||||| |
+      6  \ | ||||||| || (image)-|---+_                   | |H|||||||||| |
+      7  \ | ||||||| ||  \___/  |  /  \                  | |A|||||||||| |
+      8  \ | ||||||| ||         | (idea)            __   | |K|||||||||| |
+      9  \ | | ||||| ||         |  \__/------------/  \  | |E|||R|||||| |
+     10  \ | |d------||---------|---+     ____    (fear)-|--*|||U|||||| |
+     11  \ | ||||o|| ||         |   +----/    \----\__/  | |||||N|||P|| |
+     12  \ | ||g|||| ||         |   +   / de-  \---------|------*|||E|| |
+     13  \ | || |||| ||         |   +  (  ci-   )        | |||||||||T|| |
+     14  \ | ||||||| ||         |   +   \ sion /---------|----------*|| |
+     15  \ | ||||||| ||         |   +    \____/          | |||||||||||| |
+      --------------------------------
+
+
+    Screen # 88    ram:robot
+      --------------------------------
+      0  \ <a name="mind1"> Main Program Loop </a>             980516atm
+      1  : MIND  CR ." Clearing memory..." BLANKKIOKU  1 t !  0 blankt !
+      2     BEGIN   0 earshut !  t @ tbasex !  ( base time for EXAMINE )
+      3  \    ( stub <a href="#sleep1">) SLEEP ( </a> consolidation)
+      4  \ ( theory <a href="#trance1">) TRANCE ( </a> not implemented )
+      5  \  ( stub <a href="#emotion1">) EMOTION ( </a> = motivation? )
+      6   ( <a href="#think1">)  THINK  ( </a> will call LANGUAGE )
+      7
+      8    alert @ -1 = IF CR ." MIND:  alert flag = -1 true "  CR THEN
+      9    alert @  0 = IF CR ." MIND:  alert flag =  0 false " CR THEN
+     10  \ ( stub <a href="#volition1">) VOLITION ( </a> free will )
+     11    alert WHILE  alert @ 0= NOT IF   t @    blankt !  CR
+     12   ( <a href="#sensorium1">) SENSORIUM  ( </a> subroutine) THEN
+     13   CR ." MIND: post flag area, alert = " alert @ . CR
+     14   1 t +!
+     15  t @ 999 > IF ." timed out" CR  QUIT  THEN   REPEAT  ;
+      --------------------------------
+
+
+
+      Screen # 89    ram:robot
+       -------------------------------
+      0  \ disclaimers                               980428atm
+      1
+      2  \ You have an obligation thoroughly to understand Mind.forth
+      3  \ before you adapt the program for use on any sort of robot.
+      4
+      5  \ Although Mind.forth is an attempt to design an intelligence
+      6  \ with a free will for robots, all responsibility for the use
+      7  \ of Mind.forth and its derivatives rests with whoever installs
+      8  \ such software as the operating system (OS) in control of a
+      9  \ robot.
+     10
+     11  \ Mind.forth is in the public domain and may therefore be used
+     12  \ for any purpose, with the user taking full responsibility
+     13  \ for any and all consequences of the use of Mind.forth AI.
+     14
+     15  \ You have reached the end of the Mind.forth source code.
+      --------------------------------
+</pre>
+
+<p><br /></p>
+<a name="notes"></a><font size="+1">
+5. Notes on a Screen-by-Screen Basis
+</font><br />
+
+<br /><b>
+5.0 Screen # 0 in MVP-Forth is not active.</b><br />
+
+<br />
+Therefore it is given over to messages rather than code.<br />
+The designation "ram:robot" indicates that the program was called "robot" <br />
+and was run within Amiga random access memory (RAM) for the sake of speed. <br />
+The HTML beneath this webpage is the true source code. Since HTML tags may <br />
+be harmlessly embedded as comments within Forth code that runs nevertheless, <br />
+the resulting, visible webpage is not the true source code of the underlying Forth AI.<br />
+
+<br /><b>
+5.3 Variables in Mind.Forth AI</b> <br />
+
+<br />
+<a href="http://mind.sourceforge.net/variable.html"
+ title="Name, location and function of AI Mind variables.">
+http://mind.sourceforge.net/variable.html</a>
+ explains the Mind.Forth variables.<br /></p>
+
+
+<br /><b>
+5.15 OLFACTION stub routine</b> <br />
+
+<br />
+<a href="http://mind.sourceforge.net/olfrecog.html"
+ title="Plans for implementing olfactory recognition.">
+http://mind.sourceforge.net/olfrecog.html</a>
+ updates the Olfaction stub routine.<br /></p>
+
+<p><br /></p>
+
+<p>
+<!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
+<script type="text/javascript" language="JavaScript">var site="s13ai4udex"</script>
+<script type="text/javascript" language="JavaScript1.2" src="http://s13.sitemeter.com/js/counter.js?site=s13ai4udex">
+</script>
+<noscript>
+<a href="http://s13.sitemeter.com/stats.asp?site=s13ai4udex" target="_top">
+<img src="http://s13.sitemeter.com/meter.asp?site=s13ai4udex" alt="Site Meter" border=0></a>
+</noscript>
+<!-- Copyright (c)2002 Site Meter -->
+<!--WEBBOT bot="HTMLMarkup" Endspan -->
+<br />
+<a href="http://sourceforge.net">
+<img src="http://sourceforge.net/sflogo.php?group_id=31619"
+ width="88" height="31" border="0" alt="SourceForge Logo"></A>
+<font size="+1">
+<a href="http://sourceforge.net/projects/mind"
+ style="text-decoration:none"
+ title="Mind project summary page">
+/projects/mind</a></font><br />
+
+Last updated: 27 March 2005<br />
+<a href="#top"
+ title="Click here or use the browser scroll-bar.">
+Return to top</a>; or to the<br />
+ <a href="sitemap.html"
+ title="Local webpages by category or cluster.">
+Sitemap</a> of the AI Mind Project.<br /></p>
+
+</body>
+</html>

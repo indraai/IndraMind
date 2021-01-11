@@ -1,0 +1,2818 @@
+
+<html>
+<head>
+<title>Mind for MSIE - AI4U Textbook Artificial Intelligence in JavaScript</title>
+<meta name="description"
+ content="Free open-source artificial intelligence from the AI4U textbook" />
+<meta name="keywords"
+ content="AI, AI4U, artificial intelligence, control panel, diagnostic,
+ javascript, machine learning, mind, mind control, MindForth, Mind.Forth,
+ modular AI, robots, spreading activation, transcript, tutorial" />
+<script language="JavaScript">
+var abort = false; // 29dec2006 For orchestration of sentence-generation.
+var act = 0; // old- & newConcept; Reify; nounPhrase; verbPhrase.
+var actbase = 0; // 16aug2008 For recognition discrimination in audRecog
+var apb = "";   // 31dec2006: candidate to replace "fyi" variable.
+var associand = "";  // 24aug2006 For spreadAct().
+var aud = 1; // enVocab; Audition; Speech: auditory recall-tag.
+var aud0 = ""; // audRecog; audExam; audSTM; Speech: auditory engram.
+var auddata = ("<b>" + "Auditory memory nodes" + "<\/b>" + "<BR>");
+auddata += ("krt pho act pov beg ctu psi"); // for Diagnostic().
+var audjuste = 0;  // 26aug2008 For nounPhrase() motjuste aud to Speech()
+var beg = 0; // audNode; audSTM; Listen: word beg(inning?) flag.
+var bias = 5; // Parser; newConcept:  an expected part-of-speech.
+var brain = true;       // for Think().
+var brevity = 0; // 14aug2006 For tutorial display build-up and un-build.
+var btw = "Rejuvenating..."; // for Security().
+var c = ""; // Listen(): character code of incoming pho(neme).
+var caller = "none"; // Diagnostic for Alert boxes.
+var casus = "0";  // Indication of the case of nouns for "pre" and "seq".
+var city = 0; // 15aug2006 For tutorial display build-up and un-build.
+var cns = 512; // Central Nervous System array size choice
+var coda = 128; // Rejuvenate(): memory displacement span.
+var conj = 0;   // oldConcept(); Conjoin(): conj(unction).
+var ctu = 1; // audNode; audSTM; Listen; Speech: continuation-flag.
+var cyct = 0; // 21jul2004: cycle-time to relinquish use of t in loopring.
+var danger = true;      // for Security().
+var detour = 0;  // 18may2008 Abort-flag in case of insufficient knowledge.
+var dialog = ""; // Transcribe; Transcript: user input & AI output.
+var dob = new Date(); // date-of-birth to show how long AI has been alive.
+var dobj_act = 0; // nounPhrase; Speech: direct-object activation.
+var edge = 0;  // Rejuvenate(): edge-of-thought flag.
+var endata = ("<b>" + "English lexical fibers" + "<\/b>" + "<BR>");
+endata += ("krt nen act fex pos fin aud"); // for Diagnostic().
+var engram = "" // 20apr2008: Better name to replace Tutorial "tickle".
+var enx = 0; // new-, oldConcept; Instantiate; Reify: En x-fer.
+var en3 = 0; // declare en3 here to make it a global variable.
+var eot = 0; // CR; Listen(); Audition():  end-of-transmission flag.
+var equity = 0; // 11aug2006 For tutorial display build-up and un-build.
+var fex = 0; // new-, oldConcept; enVocab: Psi-to-English fiber-out.
+var fin = 0; // new-, oldConcept; enVocab: English-to-Psi fiber-in.
+var freedom = true;     // for Volition().
+var fyi = 0;  // 13apr2008 Debugging problem of persistent Tutorial display.
+var ghost = true;  // for Sensorium().
+var hardcopy = false; // Transcript(): a flag for session print-outs.
+var holdaud = 0;  // 20aug2006 Replaces local variable with global.
+var html = ""; // HyperText Markup Language for creating Web pages.
+var i = 0; // i(ndex) of loops.
+var img = "xoxoxoxox"; // visRecog: for future use as "image".
+var inbuffer = ""; // Listen(); CR(): build-up of user input.
+var inert = 0; // Listen; Ego; Think; Security: Ego-trigger.
+var j = 0; // spreadAct; Rejuvenate; Reify: nested loop index.
+var jrt = 0; // Rejuvenate(): "junior time" for moved memories.
+var jux = 0; // Parser; Instantiate:  a JUXtaposed word.
+var kbtv = 1; //  4sep2008 KB-traversal trigger
+var krt = 0; // Diagnostic(): "knowledge representation time".
+var lastword = false;  // 29nov2006 For zeroing "seq" tags.
+var len = 0; // Listen(); Audition(); reEntry(): word-length.
+var lexact = 0; // 6apr2008 For Reify() from Mind.Forth AI.
+var life = true; // Shutdown(): for use in halting the AI.
+var midway = 1; // 16aug2008 Changing from zero to one as in MindForth.
+var monopsi = 0;  // audRecog: for recognition of a mono-character.
+var morphpsi = 0; // 19aug2008 for audRecog recognition of morphemes.
+var motjuste = ""; // nounPhrase; verbPhrase: "best word" choice.
+var muse = 1;    // SVO: "muse" for meandering thought.
+var nen = 0; // enVocab; newConcept; enBoot: n(umber for) En(glish).
+var nlt = 5; // Listen(); CR(): time "not-later-than".
+var node = 0;  // 11aug2006: For use with tutorial slosh-over display.
+var nonce = 1; // Security(); Diagnostic(): recent "nonce" time.
+var nounaud = 0; // 23aug2008 For Article() preservation of noun-fetch.
+var nouncall = 0; // 17aug2006: 1=nom.; (2=gen.); (3=dat.); 4=acc.
+var nounval = 0;  // 26dec2006: For transfer from nounPhrase to nounAct.
+var num = 0;  // 22aug2008 Grammatical num(ber) flag for psi concept array.
+var obstat = 0;  // 15may2008 Lets Audition() psi-damp a reentrant word.
+var oldact = 0;  // 24aug2006 To show source of spreading activations.
+var oldpos = 0;  // 24aug2006
+var oldpsi = 0;  // 24aug2006 For tutorial slosh-over display.
+var onset = 0; // Listen; Audition; reEntry; Speech: of a word.
+var ordo = 0;  // 28nov2006 For tracking Listen() word-order.
+var origin = "";  // For tutorial display (instead of "associand").
+var output = ""; // Voice(); Speech():  the "output" of the Mind.
+var pho = ""; // Listen/Audition; audSTM; audRecog: pho(neme).
+var pos = 0; // old- & newConcept; enVocab: "part-of-speech".
+var pov = "#"; // Listen; Think; Speech; reEntry: point-of-view.
+var pre = 0; // Instantiate(): pre(vious associand) concept.
+var precand = 0;  // 30nov2006 Inviolate "pre" candidate.
+var preset = 0;   // 30nov2006 For setting Instantiate() "pre".
+var preview = "";  // Concept being previewed in tutorial mode.
+prevtag = 0;  // 30nov2006 So Instantiate may declare "prevtag".
+var psi = 0;  // Instantiate; audNode: associative tag to a concept.
+var psi0 = 0; // first of the elements in a Psi concept panel.
+var psi1 = 0;  // 22nov2006 A test.
+var psi5seq = 0;  // 24aug2006 For tutorial slosh-over display.
+var psi6enx = 0;  // 24aug2006 For tutorial slosh-over display.
+var psibase = 0;  // 16aug2008 For use in audRecog.
+var psidata = ("<b>" + "Psi mindcore concepts" + "<\/b>" + "<BR>");
+psidata += ("krt psi act num jux pre pos seq enx"); // for Diagnostic().
+var questype = 0; // oldConcept; Conjoin(): flag for "why" questions.
+var quiet = true; // aLife() needs "quiet" for the "Think()" module.
+var recon = 0; // newConcept; English; Ask(): incentive to question.
+var residuum = 0; // psiDamp(): level of post-thought activation.
+var rjc = 0; // Rejuvenate(): counter of rejuvenations per lifetime.
+var rsvp = 1000; // aLife:  delay in milliseconds before next loop
+var seq5aud = 0;   //  1sep2006 spreadAct(): to fetch English word.
+var seq6enx = 0;   //  1sep2006 spreadAct(): for enLexicon search.
+var seq7enx = 0;   // 22aug2008 spreadAct(): for enLexicon search.
+var seqverb = "";  // 29aug2006 Tutorial verb preview.
+var skip = 0;  // for use in Listen() to skip incomplete input.
+var sloshmark = "?";  // 18aug2006 VerbPhrase: For tutorial display
+var spike = 0;  // spreadAct; Activate: concentrated activation.
+var spt = 0; // CR; Listen; Audition; enBoot; SVO: a blank "space time".
+var star = 0;  // 14aug2006: For use with tutorial slosh-over display.
+var subj_act = 0; // nounPhrase; Speech: subject-activation value.
+var subpsi = 0;   // 16aug2008 Potentially useful for stem-recognition.
+var svo5aud = 0;  // 2sep2006 Tutorial display of subject/verb/object.
+var svoyes = false;  // 20apr2008 For Tutorial display only during SVO.
+var t = 0; // Listen; CR; reEntry: time [may become "krt" (q.v.)].
+var tag0 = 0;  //  1dec2006 For safekeeping values in spreadAct().
+var tag1 = 0;  //  1dec2006 For safekeeping values in spreadAct().
+var tag2 = 0;  //  1dec2006 For safekeeping values in spreadAct().
+var tag3 = 0;  //  1dec2006 For safekeeping values in spreadAct().
+var tag4 = 0;  //  1dec2006 For safekeeping values in spreadAct().
+var tag5 = 0;  //  1dec2006 For safekeeping values in spreadAct().
+var tag6 = 0;  //  1dec2006 For safekeeping values in spreadAct().
+var tag7 = 0;  // 22aug2008 For safekeeping values in spreadAct().
+var tobject = ""; // 20aug2006 showObject(): For "tutorial objects".
+var topic = "";  // newConcept; wtAuxSDo(): new nouns are ?-topics.
+var tov = 1; // SVO(); CR(); psiDamp; Reify:  time-of-voice.
+var trouble = false; // HCI; Security; Diagnostic: flag.
+var tsubject = ""; // showSubject(): For "tutorial subjects".
+var tult = 0; // Audition; audSTM: penultimate time-minus-one.
+var tutor = false; // 2may2008 HCI() flag used in spreadAct()
+var tverb = ""; // 18aug2006 showVerb(): To show "tutorial verbs".
+var ufo = 0;    // For use with tutorial slosh-over display.
+var unk = "";   // general variable for "unknown" items
+var upnext = 0; // 15may2008 Flag lets new input de-crest previous.
+var urpre = 0;  // original pre for swapping during function-calls.
+var urpsi = 0;  // original (German ur)psi for use in psiDamp, etc.
+var urseq = 0;  // 23sep2006 oldConcept(): For retroactive "seq".
+var userline = ""; // CR(); Transcribe():  text input of user.
+var vault = 202; // 21sep2006: Necessary for proper audSTM functioning.
+var verb_act = 0; // verbPhrase; Speech: verb-activation value.
+var verbval = 0;  // 26dec2006 For transfer from verbPhrase to verbAct.
+var verbcall = 0; // 26aug2006 For spreadAct to trigger showVerb().
+var zone = 0; // Activate; spreadAct: time-zone for "pre" and "seq".
+
+
+// Initialize the mindcore Psi I.A.W. AI Standards (q.v.);
+Psi = new Array(cns);  // ATM 6jul2002; 22aug2008
+for (i = 0; i < cns; i++) {
+  Psi[i] = new psiNode(" ",0," "," "," "," "," "," ");
+} // for spreadAct; Instantiate; oldConcept; etc.
+
+// Initialize the English Lexicon I.A.W. AI Standards, e.g.,
+// could also include French frLexicon or Japanese jpLexicon
+// for purposes of polyglot robot and/or machine translation:
+enLexicon = new Array(cns);
+for (i = 0; i < cns; i++) {
+  enLexicon[i] = new enNode(" ",0," "," "," "," ");
+} // for enDamp; enList; enVocab; Rejuvenate; etc.
+
+// Initialize the Auditory Memory array:
+audMemory = new Array(cns);
+for (i = 0; i < cns; i++) {
+  audMemory[i] = new audNode(" ",0," "," "," "," ");
+} // for audRecog; audSTM; Audition; Speech; etc.
+
+
+// Tutorial() module reinstated for control-panel checkbox cooperation.
+function Tutorial() {  // 4may2008
+  if (document.all["cb2"].checked == true) {  // If user clicks checkbox
+    document.all["cb1"].checked = false; // Turn off Transcript.
+    document.all.souvenir.innerHTML = "";  // 22apr2008 Erase any transcript.
+    hardcopy = false;  // 22apr2008 Turn off Transcript.
+    document.all["cb3"].checked = false; // Turn off Diagnostic.
+    document.all.tabula.innerHTML = ""; // 22apr2008 Blank out text.
+    document.all.psicolumn.innerHTML = "";  // 22apr2008
+    document.all.encolumn.innerHTML = "";   // 22apr2008
+    document.all.audcolumn.innerHTML = "";  // 22apr2008
+    trouble = false;   // 22apr2008 Turn off Diagnostic
+    tutor = true; // a flag for Tutorial()
+    fyi = 2;      // As if user has tabbed to Tutorial.
+  } // end of if-clause to see if Tutorial is checked.
+  if (document.all["cb2"].checked == false) {  // If user unclicks checkbox
+    fyi = 0;      // Until set outside of Tutorial()
+    tutor = false;
+  } // end of if-clause to see if Tutorial is NOT checked.
+} // end of Tutorial() function
+
+
+// verbClear() is an attempt to let subject-nouns activate only
+// truly associated verbs because all verbs are at zero activation.
+// The end of SVO() calls verbClear() so that user-input may still
+// activate a verb before the AI Mind responds to the user input.
+function verbClear() {  // 21feb2007; 22aug2008
+  for (i = t; i>0; --i) { // Loop backwards through all time.
+    Psi[i].psiExam(); // Expose all Psi-panel variables to change.
+    if (psi5 == 8) {   // Separate code only for alert-box; 22aug2008
+    }  // 23jan2007 End of alert-box code to be removed or commented out.
+    if (psi5 == 8) psi1 = 0;  // 23jan2007 Set verbs to zero activation.
+    Psi[i] = new psiNode(psi0,psi1,psi2,psi3,psi4,psi5,psi6,psi7); // 22aug2008
+  } // End of loop backwards through all time-points.
+}  // End of function verbClear() called from end of SVO() module.
+
+// verbClip() is a module that clips activation on verbs down to
+// a subconscious level when the Audition module starts to process
+// sensory input, so that no verb forms a spurious sentence.
+// Eventually a Moving Wave Algorithm mechanism may take over.
+function verbClip() {  // 17may2008 from Mind.Forth AI; revised 22aug2008.
+  for (i = t; i>0; --i) { // Loop backwards through all time.
+    Psi[i].psiExam(); // Expose all Psi-panel variables to change.
+    if (psi5 == 8) psi1 = 20;  // Comparable with psiDamp "residuum"; 22aug2008
+    Psi[i] = new psiNode(psi0,psi1,psi2,psi3,psi4,psi5,psi6,psi7); // Insert psi1.
+  } // End of loop backwards through all time-points.
+}  // End of function verbClip() called from end of SVO() module.
+
+
+// psiClear() is a purely diagnostic module borrowed from
+// Mind.Forth AI, where its use has already been discarded.
+// The rationale for psiClear() is that it shall reduce all
+// psi activations to zero for the sake of troubleshooting.
+// Against a psicleared backdrop of zero activation, the AI
+// coder will be able to enter a sentence or a single word
+// as a stimulus, so as to observe the spread of activation
+// and the generation of a thought in complete freedom from
+// any mysterious influence of residual activations left over
+// from thinking processes prior to the calling of psiClear().
+function psiClear() {  // 8mar2007; 22aug2008
+  for (i = t; i>0; --i) { // Loop backwards through all time.
+    Psi[i].psiExam(); // Expose all Psi-panel variables to change.
+    Psi[i] = new psiNode(psi0,0,psi2,psi3,psi4,psi5,psi6,psi7); // Zero.
+    msg = 55;  // 8mar2007 Should be about the Vulcan nerve pinch.
+  } // End of loop backwards through all time-points.
+}  // End of diagnostic psiClear() function called from Listen().
+
+
+// psiDecay() is called from psiDamp() or elsewhere to make
+// all non-zero (positive) mindcore psi1 activations decrease a
+// little, so as to simulate neuronal excitation-decay for the
+// purpose of letting stray activations in the subconscious
+// mind dwindle away over time down to a zero activation.
+// Thinking keeps activations high; psiDecay() lowers them.
+// If necessary, an ego-boosting Ego() module may assert activation.
+function psiDecay() {  // 21feb2007; 22aug2008
+  for (i = t; i>midway; --i) { // Loop backwards in recent time.
+    Psi[i].psiExam(); // Cycle through recent Psi nodes.
+    if (psi1 > 0) { // Find any mindcore psi1 positive activation.
+      --psi1; // Decrement the psi1 activation-level.
+      if (psi0 == 54) {  // 9jan2007 Treat "WHAT" as a special case.
+        psi1 = 0;  // 9jan2007 Suppress in favor of answers to WHAT.
+      }   // 9jan2007 End of test for psi concept #54 "WHAT".
+
+      if (psi0 == 7) {   // 23aug2008 Treat "THE" as a special case.
+        psi1 = 0;  // 23aug2008 Suppress to permit change of subject.
+      }   // 23aug2008 End of test for psi concept #7 "THE".
+
+      Psi[i] = new psiNode(psi0,psi1,psi2,psi3,psi4,psi5,psi6,psi7);
+    } // End of if-clause finding and reducing positive activations
+  } // End of loop in search of conceptual activation-levels.
+} // End of psiDecay(); return to psiDamp() or elsewhere.
+
+
+// psiDamp() is called from nounPhrase() or verbPhrase()
+// to substantially knock down the activation of a concept
+// that has just been thought, so that another concept may
+// rise from the subconscious up into the AI consciousness.
+// 33-48 = consciousness tier where concepts win selection.
+// 17-32 = subconscious tier where concepts remain available.
+//  1-16 = noise tier below logical association threshold.
+// Meanwhile the psi-damped concept remains available in
+// the subconscious mind for inclusion in another thought.
+function psiDamp() {  // 16feb2007; 15may2008; 22aug2008
+   residuum = 16; // 15may2008 For conformity with MindForth True AI.
+// residuum = 20; // 26aug2008 Debugging the Article() module.
+  // We use tov to avoid damping reentered thoughts.
+  // for (i = tov; i>midway; --i) {
+  for (i = t; i>midway; --i) {  // 28dec2006 Damp all thoughts.
+    Psi[i].psiExam(); // Cycle through recent Psi concept nodes.
+    if (urpsi > 0) {  // 20sep2006 To prevent needless dampings.
+      if (psi0==urpsi) {
+        Psi[i] = new psiNode(psi0,residuum,psi2,psi3,psi4,psi5,psi6,psi7);
+      }  // 20sep2006 End of test for urpsi and damping if found.
+    }  // 20sep2006 End of test for positive urpsi values.
+  } // End of backwards loop for major deactivation of a certain concept.
+  residuum = 0; // Safety measure in case value comes from calling module.
+  psiDecay();  // Minor deactivation of all concepts simultaneously.
+} // psiDamp returns to nounPhrase, verbPhrase, etc.
+
+
+// enDamp() is called from nounPhrase() or verbPhrase()
+// to de-activate all concepts in the English lexicon.
+function enDamp() {  // ATM 20may2002; or your ID & date.
+  for (i = (t + 1); i>midway; --i) {
+    enLexicon[i].enExam(); // gain access to each node
+    enLexicon[i] = new enNode(en0,0,en2,en3,en4,en5);
+  } // end of backwards loop
+} // enDamp returns to nounPhrase and verbPhrase.
+
+
+// audDamp() is called from Audition() upon recognition of
+// a known word, and resets auditory engram activations
+// to zero so that additional words may be recognized.
+function audDamp() {  // ATM 14may2002; or your ID & date.
+  for (i = t; i > midway; --i) {  // loop backwards through time
+    audMemory[i].audExam(); // activate auditory engram nodes
+    if (aud4 == 1) aud5 = 0;  // 20mar2007 Prevent spurious psi.
+    audMemory[i] = new audNode(aud0,0,aud2,aud3,aud4,aud5);
+  }  // End of cycling back to the loosely "midway" time-point.
+}  // End of audDamp(); return to Audition() or SVO().
+
+
+// Shutdown() is called by clicking the "Halt"
+// button or by pressing the [ESCAPE] key,
+// and is supposed to stop the AI program.
+function Shutdown() {  // 25feb2007; or your ID & date.
+  if (document.all["cb4"].checked == true) {  // cb4=HALT.
+    life = false; // a flag to halt the alife
+    apb = "Command by human authority has halted the AI Mind.";
+    Voice();  // Display the Voice:brain apb message.
+  } // end of if-clause to see if HALT is checked.
+  if (document.all["cb4"].checked == false) {  // cb4=HALT.
+    life = true; // so that unchecking "HALT" revives the AI.
+    document.forms[1].ear.focus();  // Display a blinking cursor.
+    TID=window.setTimeout("aLife();",1000);
+  } // end of if-clause to see if HALT is NOT checked.
+} // end of Shutdown()
+
+
+// Destroy() is called from the Control Panel
+// and is meant to provide extreme security
+// at all stages of the creation of the AI.
+function Destroy() {  // 25feb2007; or your ID & date.
+  document.forms[1].ear.focus(); // Offer a blinking cursor.
+  life = false;  // Offer a chance for "life = true".
+  apb = "Closing the window will destroy the AI.";
+  Voice();  // Display the Voice:brain apb message.
+  alert("The AI Mind is a living, sentient creature. You may unclick your decision.");
+  TID=window.setTimeout("window.close();",500);
+} // End of Destroy(); MSIE offers a reconsideration.
+
+
+// Transcribe() is called from Transcript()
+// and serves the purpose of holding the "dialog".
+function Transcribe() {  // ATM 27oct2002; or your ID & date.
+  if (hardcopy == true) {
+    dialog += ("<P>Human: <b>" + userline + '<\/b>');
+    userline = ""; // a reset to a blank state
+    dialog += ("<BR>Robot: " + output); // from the AI
+  } // end of if-clause
+//  if (hardcopy == false) dialog = "";  // 6apr2008
+} // end of Transcribe()
+
+
+// Transcript() is called from a checkbox or from HCI().
+function Transcript() {  // 4may2008
+  if (document.all["cb1"].checked == true) {  // i.e., Transcript.
+    document.all["cb2"].checked = false; // Turn off Tutorial.
+    document.all["cb3"].checked = false; // Turn off Diagnostic.
+    document.all.tabula.innerHTML = ""; // 22apr2008 Blank out text.
+    document.all.psicolumn.innerHTML = "";  // 22apr2008
+    document.all.encolumn.innerHTML = "";   // 22apr2008
+    document.all.audcolumn.innerHTML = "";  // 22apr2008
+    trouble = false;     // Set the diagnostic flag to "false".
+    hardcopy = true;
+    fyi = 1;  // 22apr2008
+    now = new Date();
+    adcopy=
+    ("<font size='+2'>Transcript of " + now + "<\/b><\/font>");
+    document.all.souvenir.innerHTML = adcopy;
+  } // end of if-clause to see if "Transcript" is checked.
+  Transcribe(); // CR() "userline" and Speech() "output"
+  if (hardcopy == true) {
+    document.all.psicolumn.innerHTML = ""; // blank out
+    document.all.encolumn.innerHTML = "";
+    document.all.audcolumn.innerHTML = "";
+  } // end of if-clause
+  document.all.tabula.innerHTML = dialog;
+  if (document.all["cb1"].checked == false) {  // "Transcript".
+    document.all.souvenir.innerHTML = "";  // 22apr2008 Erase any transcript.
+    hardcopy = false;
+    document.all.tabula.innerHTML = "";  // 19apr2008
+  } // end of if-clause to see if Transcript is NOT checked.
+  if (hardcopy == false) html = ""; // for reset
+} // End of Transcript(); return to HCI() if called from there.
+
+
+// psiList() is called from Diagnostic()
+// and concatenates a list of Psi nodes
+// to be displayed in Diagnostic mode.
+function psiList() {  // ATM 25jun2002; atm 28aug2006; atm 22aug2008
+  for (i = nonce; i < (t +1); i++) {  // or use "i = 1"?
+    Psi[i].psiExam(); // to examine each Psi concept node.
+    psidata += ("<BR>" +i+ ". <b>" +psi0+ "<\/b> " +psi1+ " " +psi2);
+    psidata += (" "+psi3+" "+psi4+" "+psi5+" "+psi6+" "+psi7);
+  } // End of loop from recent "nonce" time up to now.
+} // End of psiList(); return to Diagnostic().
+
+
+// enList() is called from the Diagnostic() module
+// and concatenates a list of En(glish) nodes
+// to be displayed in Diagnostic mode.
+function enList() {  // ATM 6may2002; atm 28aug2006
+  for (i = nonce; i < (t +1); i++) { // or use "i = 1"?
+    enLexicon[i].enExam(); // examine and list each node
+    endata += ("<BR>" + i + ". <b>" + en0 + "<\/b> " + en1 + " ");
+    endata += (en2 + " " + en3 + " " + en4 + " " + en5);
+  } // End of loop from recent "nonce" time up to now.
+} // end of enList().
+
+
+// audList() is called from the Diagnostic() module
+// and concatentates a list of auditory engrams
+// to be displayed in Diagnostic mode.
+function audList() {  // ATM 6may2002; atm 28aug2006
+  for (i = nonce; i < (t +1); i++) {  // or use "i = 1"?
+    audMemory[i].audExam(); // activate each audNode
+    auddata += ("<BR>" + i + ". <b>");
+    if (aud2 == "*") auddata += ("<font color='red'>");
+    auddata += (aud0 + "<\/b> ");
+    if (aud2 == "*") auddata += ("<\/font>");
+    if (aud0 == " ") aud1 = " "; // to avoid displaying "0"
+    auddata += (aud1+" "+aud2+" "+aud3+" "+aud4+" "+aud5);
+  } // End of loop from recent "nonce" time up to now.
+} // end of audList().
+
+
+// spreadAct() is called by Activate() or nounAct() or verbAct()
+// to pass a "spike" of activation from concept to concept.
+function spreadAct() {  // 20mar2007
+  if (pre > 0) {          // If a pre(vious) concept exists...
+    for (j = zone; j > midway; --j) {  // Time-zone search.
+      Psi[j].psiExam();   // Examine the range of Psi concepts.
+       if (psi0 == pre) {  // If a match of "pre" is found,
+          psi1 = (psi1 + 1); // Small increment to "pre" concepts.
+          if (psi1 < 0) psi1 = 0;   // 22jan2007 For safety.
+          if (psi1 > 63) psi1 = 63; // From 29apr2005 Mind.Forth
+          Psi[j] = new psiNode(psi0,psi1,psi2,psi3,psi4,psi5,psi6,psi7);
+      }                   // End of inner if-clause.
+    if (j < (zone - 6)) break; // Expect no words of 6+ chars.
+    }                     // End of backwards loop.
+  }                       // End of outer if-clause.
+  if (seq > 0) {          // If a sub(seq)uent concept exists...
+    for (j = zone; j < t; ++j) { // prepare to search zone
+      Psi[j].psiExam();   // Examine the forwards range of Psi.
+      tag0 = psi0;   //  1dec2006 Prevent corruption of values.
+      tag1 = psi1;   //  1dec2006 A value to be increased below.
+      tag2 = psi2;   //  1dec2006 Prevent corruption of values.
+      tag3 = psi3;   //  1dec2006 Prevent corruption of values.
+      tag4 = psi4;   //  1dec2006 Prevent corruption of values.
+      tag5 = psi5;   //  1dec2006 Prevent corruption of values.
+      tag6 = psi6;   //  1dec2006 Prevent corruption of values.
+      tag7 = psi7;   // 22aug2008 Prevent corruption of values.
+      if (psi0 == seq) {  // If a match of "seq" is found,
+        if (fyi == 2) {  // Tutorial subject-verb-object display.
+          if (pov == "#") {  // Do not interrupt input with messages.
+            if (oldpsi > 0) {  // 30aug2006 test: tutorial only for S-V-O
+              for (k=(t + 1); k>midway; --k) {  // Look for the "seq"...
+              // ...in order to obtain a path to the English word.
+                Psi[k].psiExam(); // examine each Psi node.
+                if (psi0 == seq) {     // If concept "seq" is found...
+              //  if (psi6 > 0) {  // If there is a positive enx value...
+                  if (psi7 > 0) {  // 22aug2008 If there is a positive enx
+                //  seq6enx = psi6;  // Get the enx as seq6enx.
+                    seq7enx = psi7;  // 22aug2008 Get the enx as seq7enx.
+                    for (k=t; k>midway; --k) {  // Get "seq" as English word.
+                      enLexicon[k].enExam(); // Examine each en(glish) node.
+                  //  if (seq6enx == en0) {      //  1sep2006
+                      if (seq7enx == en0) {      // 22aug2008 shift in flags.
+                        seq5aud = en5;  // 1sep2006 For "seq" English word.
+                      }  // End of test for "seq6enx" and "en0" match.
+                    } // End of backwards search for "seq" lexical item.
+                    // 1sep2006 Here an auditory engram word-fetch is needed.
+                    engram = "";  // Prevent concatenation of words.
+                    do { // Auditory engram display-code taken from Speech()
+                      audMemory[seq5aud].audExam(); // series of aud-recalls
+                      engram += aud0; // Build up the string of a word-engram.
+                      ctu = aud4; // panel item aud4 is "continuation?"
+                      seq5aud = (seq5aud + 1); // Read audNodes one by one.
+                    } // Moncur p. 98: test only at end of loop.
+                    while (ctu == 1); // and one final loop while _not_
+                      if (ctu == 0) { // immediately after a zero "ctu"
+                      pho = 32; // ASCII 32 for SPACE-BAR
+                    }  // End of action for non-continuation of Aud engram.
+                    engram += " "; // for one space after any word-engram.
+                    for (k=t; k>midway; --k) {  // Get "oldpsi" English word.
+                      enLexicon[k].enExam(); // Examine each en(glish) node.
+                      if (oldpsi == en0) {   //  2sep2006
+                        svo5aud = en5; // Store the auditory recall vector.
+                        if (nouncall == 1) {  // 1=subj.; 4=dir. object.
+                          if (engram != "") { // If associated concept exists
+                       // 19ap22008 Commenting out the test for "tickle"
+                            brevity = (brevity + 1); // Keep track of items #
+                            aud = svo5aud; // 2sep2006
+                            showSubject(); // in a Subj.-Verb-Object sentence
+                         // }  // 13apr2008 Only show in Tutorial mode.
+                          }  // End of test for associated concept engram.
+                      // 19apr2008 Commenting out the test for "tickle".
+                        }  // 2sep2006 End of test of nouncall.
+                         if (verbcall == 1) { // Code is from verbPhrase:
+                          if (engram != "") { // For associated concept
+                            equity = (equity + 1); // Keep track of items #
+                            aud = svo5aud;  // 2sep2006
+                            if (tutor == true) {  // 13apr2008 Restriction
+                              showVerb();  // 2sep2006
+                            }  // 13apr2008 End of restriction.
+                            aud = 0;     // 30aug2006 Reset.
+                            sloshmark = "";  // 18aug2006 Reset.
+                          }  // End of test for associated concept.
+                        }  // 26aug2006 End of test of verbcall.
+                        if (nouncall == 4) {  // 1=subj; 4=dir. object
+                          if (engram != "") { // Any associated concept?
+                            city = (city + 1);  // Keep track of items #.
+                            aud = svo5aud;      // 2sep2006
+                            if (tutor == true) {  // 13apr2008 Restriction
+                              showObject();  // 27aug2006
+                            }  // 13apr2008 End of restriction.
+                          }  // End of test for associated concept.
+                        }  // 2sep2006 End of test of nouncall.
+                        star = 0;  // Reset display for showSubject().
+                        node = 0;  // Reset display for showVerb().
+                        ufo = 0;   // Reset display for showObject().
+                      }  // End of test looking for svo5aud recall-vector.
+                    }  // 2sep2006 End of backwards loop
+                    break;  // Stop looking after one enLexicon find.
+                  }  // End of test for positive psi6 (seq enx).
+                }  // End of if-clause looking for seq of oldpsi.
+              }  // End of backwards loop searching the Psi array.
+            }  // End of (oldpsi > 0) requirement.
+          }  // 24aug2006 End of test for internal thought mode.
+        }  // 24aug2006 End of tutorial (fyi == 2) slosh-over display.
+        tag1 = (tag1 + spike);  // 22jan2007 from 28dec2006.
+        if (tag1 < 0)  tag1 = 0;  // 22jan2007 For safety.
+        if (tag1 > 63) tag1 = 63; // 1dec2006 Observe upper limit.
+       Psi[j] = new psiNode(tag0,tag1,tag2,tag3,tag4,tag5,tag6,tag7);
+      tag0=0; tag1=0; tag2=0; tag3=0; tag4=0; tag5=0; tag6=0; tag7=0;
+      }                   // End of inner if-clause.
+    if (j > (zone + 6)) break; // Expect no words of 6+ chars.
+    }                     // End of forwards loop.
+  }                       // End of outer if-clause.
+} // End of spreadAct(); return to Activate() or nounAct() or verbAct().
+
+
+// nounAct() is called from nounPhrase( ) so as to
+// activate equally all the nodes of a noun-fiber
+// with the same activation ("nounval") that won selection.
+function nounAct() {  // 20feb2007; 14may2008; 16may2008; 22aug2008
+  if (psi > 0) { // to avoid psi0 == psi == 0
+    oldpsi = psi;  // 30aug2006 Preserve oldpsi for spreadAct()
+    for (i=(t + 1); i>midway; --i) {
+      Psi[i].psiExam(); // examine each Psi node.
+      if (psi0 == psi) {  // If concept "psi" is found...
+        if (nounval > 0) psi1 = nounval;  // 17feb2007 Set a minimum.
+          else psi1 = 0;  // 17feb2007 Prevent negative psi1 activation.
+        if (psi1 < 33) psi1 = 33;  // 17feb2007 Consciousness tier.
+        if (psi1 > 63) psi1 = 63;  // Keep activation below limit of 64.
+        Psi[i] = new psiNode(psi0,psi1,psi2,psi3,psi4,psi5,psi6,psi7);
+        // Zero "WHAT" for the sake of other concepts?
+        // Use low spike values for the Moving Wave Algorithm (MWA).
+        spike = 12; // 19mar2007 Aim for ample spikes.
+        if (psi1 == 0) spike = 0; // From Mind.Forth AI breakthrough.
+        if (psi1 > 10) spike = 14;  // 14may2008 From MindForth
+        if (psi1 > 15) spike = 16;  // 14may2008 From MindForth
+        if (psi1 > 20) spike = 18;  // 14may2008 From MindForth
+        if (psi1 > 25) spike = 20;  // 14may2008 From MindForth
+        if (psi1 > 30) spike = 22;  // 14may2008 From MindForth
+        if (psi1 > 35) spike = 24;  // 14may2008 From MindForth
+        if (psi1 > 40) spike = 26;  // 14may2008 From MindForth
+        if (psi1 > 45) spike = 28;  // 14may2008 From MindForth
+        if (psi1 > 50) spike = 30;  // 14may2008 From MindForth
+        if (psi1 > 55) spike = 32;  // 14may2008 From MindForth
+        if (psi1 > 60) spike = 34;  // 14may2008 From MindForth
+    //  pre = psi3; // for use in spreadAct()
+        pre = psi4; // for use in spreadAct() // 22aug2008 w. "num(ber)"
+    //  seq = psi5; // for use in spreadAct()
+        seq = psi6; // for use in spreadAct() // 22aug2008 w. "num(ber)"
+        zone = i;   // for use in spreadAct()
+        if (seq > 0) { spreadAct();      // 24aug2006 Only call if warranted.
+        }  // End of available-seq-test for calling spreadAct
+        pre = precand;  // 30nov2006 Prevent local corruption of "pre"
+        seq = 0;
+      } // End of if-clause looking for the winning psi0.
+      else {  // If the active concept is not the selection-winner...
+     // if (psi4 == 5) {  // 3jan2007 If the concept is a noun...
+        if (psi5 == 5) {  // 3jan2007 If the concept is a noun. 22aug2008
+          if (psi1 > 16) {     // 18may2008
+            psi1 = 16; // 18may2008 Damp only to "residuum".
+            Psi[i] = new psiNode(psi0,psi1,psi2,psi3,psi4,psi5,psi6,psi7);
+          }                    // 18may2008
+
+          if (psi1 < 0) psi1 = 0;  // 21jan2007 Avoid negative activations.
+        }  // 3jan2007 End of test looking for pos=5 nouns.
+      }  // End of code dealing with "also-ran" non-winning concepts.
+    } // End of backwards loop
+  } // End of check for non-zero psi
+  oldpsi = 0;  // 30aug2006 Reset for safety.
+} // End of nounAct(); return to the nounPhrase() calling module.
+
+
+// verbAct() is called from verbPhrase( ) so as to
+// engender a nodal slosh-over of subject-noun plus
+// verb activation onto a correct direct object.
+function verbAct() {  // 21feb2007; 14may2008; 16may2008; 22aug2008
+  if (psi > 0) { // to avoid psi0 == psi == 0
+    oldpsi = psi;  // 30aug2006 Preserve oldpsi for spreadAct()
+    verbval = (verbval - 10); // 20feb2007 For sake of slosh-over.
+    if (verbval < 0) verbval = 10;  // 20feb2007 Prevent negative values.
+    for (i=(t + 1); i>midway; --i) {
+      Psi[i].psiExam(); // examine each Psi node.
+      if (psi0 == psi) {  // If concept "psi" is found...
+        psi1 = (psi1 + psi1 + 16); // 20mar2007 Amplify for slosh-over.
+        if (psi1 < 0)  psi1 = 0;  // 22jan2007 Avoid negative activations.
+        if (psi1 > 63) psi1 = 63;  // Keep below limit of 64.
+        Psi[i] = new psiNode(psi0,psi1,psi2,psi3,psi4,psi5,psi6,psi7);
+        // Zero "WHAT" for the sake of other concepts? Not in verbAct().
+        if (psi1 == 0)  spike = 0;  // From Mind.Forth AI breakthrough.
+        if (psi1 > 0)  spike = 1;   // 14may2008 From MindForth
+        if (psi1 > 5)  spike = 2;   // 14may2008 From MindForth
+        if (psi1 > 10) spike = 8;   // 14may2008 From MindForth
+        if (psi1 > 15) spike = 16;  // 14may2008 From MindForth
+        if (psi1 > 20) spike = 20;  // 14may2008 From MindForth
+        if (psi1 > 25) spike = 24;  // 14may2008 From MindForth
+        if (psi1 > 30) spike = 28;  // 14may2008 From MindForth
+        if (psi1 > 35) spike = 32;  // 14may2008 From MindForth
+        if (psi1 > 40) spike = 36;  // 14may2008 From MindForth
+        if (psi1 > 45) spike = 40;  // 14may2008 From MindForth
+        if (psi1 > 50) spike = 44;  // 14may2008 From MindForth
+        if (psi1 > 55) spike = 48;  // 14may2008 From MindForth
+        if (psi1 > 60) spike = 52;  // 14may2008 From MindForth
+     // pre = psi3; // for use in spreadAct()
+        pre = psi4; // for use in spreadAct() // 22aug2008 w. "num(ber)"
+     // seq = psi5; // for use in spreadAct()
+        seq = psi6; // for use in spreadAct() // 22aug2008 w. "num(ber)"
+        zone = i;   // for use in spreadAct()
+        if (seq > 0) spreadAct();  // 20mar2007 Insist on a positive "seq".
+        pre = precand;  // 30nov2006 Prevent local corruption of "pre"
+        psi1 = 0;   // 22nov2006 Against spurious psi1 values.
+        seq = 0;
+      } // end of if-clause
+    } // end of backwards loop
+  } // End of check for non-zero psi
+  oldpsi = 0;    // 30aug2006 Reset for safety.
+  verbcall = 0;  //  2sep2006 After showVerb() of all "seq" concepts.
+  verbval = 0;   //  3jan2007 Reset for safety.
+} // End of verbAct(); return to the verbPhrase( ) calling module.
+
+
+// Activate() is called from oldConcept() so as to
+// reactivate older nodes of a newly active concept.
+function Activate() {  // 20mar2007; 22aug2008
+  spike = 0;  // 8aug2006 from AI breakthrough Mind.Forth
+  if (psi > 0) { // to avoid psi0 == psi == 0
+    for (i=(t + 1); i>midway; --i) {
+      Psi[i].psiExam(); // examine each Psi node.
+      if (psi0 == psi) {  // if concept "psi" is found...
+        if (psi1 < 0) psi1 = 0;   // 22jan2007 For safety.
+        if (psi1 > 63) psi1 = 63; // From 29apr2005 Mind.Forth
+        Psi[i] = new psiNode(psi0,psi1,psi2,psi3,psi4,psi5,psi6,psi7);
+        // To avoid runaway activations, we restrict "spike":
+        spike = 1; // 18mar2007 For sake of slosh-over.
+        if (psi1 == 0)  spike = 0;  // 21aug2006 From Mind.Forth
+        if (psi1 > 5)   spike =  7;  // 18mar2007
+        if (psi1 > 10)  spike =  8;  // 18mar2007
+        if (psi1 > 15)  spike =  9;  // 18mar2007
+        if (psi1 > 20)  spike = 10;  // 18mar2007
+        if (psi1 > 25)  spike = 11;  // 18mar2007
+        if (psi1 > 30)  spike = 12;  // 18mar2007
+        if (psi1 > 35)  spike = 13;  // 18mar2007
+        if (psi1 > 40)  spike = 14;  // 18mar2007
+        if (psi1 > 45)  spike = 15;  // 18mar2007
+        if (psi1 > 50)  spike = 16;  // 18mar2007
+        if (psi1 > 55)  spike = 17;  // 18mar2007
+        if (psi1 > 60)  spike = 18;  // 18mar2007
+     // pre = psi3; // for use in spreadAct()
+        pre = psi4; // for use in spreadAct() // 22aug2008 w. "num(ber)"
+     // seq = psi5; // for use in spreadAct()
+        seq = psi6; // for use in spreadAct() // 22aug2008 w. "num(ber)"
+        zone = i;   // for use in spreadAct()
+         spreadAct();
+        pre = precand;  // 30nov2006 Prevent local corruption of "pre"
+        psi1 = 0;  // 22nov2006 Precaution against spurious psi1.
+        seq = 0;
+        spike = 1;   // 21nov2006 A basic value as a reset.
+      } // end of if-clause
+    } // end of backwards loop
+  } // End of check for non-zero psi
+} // End of Activate(); return to oldConcept().
+
+
+// psiExam() is a method of psiNode()
+// for access to mindcore Psi concept nodes.
+function psiExam() {  // ATM 1aug2002; 22aug2008
+  psi0 = this.psi;
+  psi1 = this.act;
+  psi2 = this.num; // 22aug2008 Adding "num(ber)"
+  psi3 = this.jux;
+  psi4 = this.pre;
+  psi5 = this.pos;
+  psi6 = this.seq;
+  psi7 = this.enx;
+} // End of psiExam method of psiNode().
+
+
+// psiNode() is called from Instantiate()
+// to create or modify a Psi concept node:
+function psiNode(psi,act,num,jux,pre,pos,seq,enx) {
+  this.psi = psi; // mindcore Psi concept;
+  this.act = act; // activation level;
+  this.num = num; // grammatical num(ber); 22aug2008
+  this.jux = jux; // juxtaposed modifier;
+  this.pre = pre; // previous associand;
+  this.pos = pos; // part-of-speech;
+  this.seq = seq; // subsequent associand;
+  this.enx = enx; // transfer to En(glish)
+  this.psiExam = psiExam; // a method of this object.
+} // End of psiNode; return to Instantiate().
+
+
+// Instantiate() is called from the Parser
+// module to create a new node of a concept.
+function Instantiate() {  // 14may2008; 22aug2008
+  if (precand > 0) pre = precand;  // 30nov2006
+  if (ordo == 1) prevtag = 0;  // 30nov2006 For initial words.
+  if (lastword == true) {  // 26nov2006
+    seq = 0;  // 29nov2006 No seq tag for final thought-concept.
+    lastword = false;  // 30nov2006 Reset for next time.
+  }  // 29nov2006 End of test for last word in a sentence.
+
+  if (psi == 7) {  // 23aug2008 Test for concept #7 article "THE"
+    prevtag = 0;   // 23aug2008 Prevent a definite association.
+    seq = 0;       // 23aug2008 Prevent a definite association.
+  }  // 23aug2008 End of test for "THE" from Article() module.
+
+  Psi[t] = new psiNode(psi,act,num,jux,prevtag,pos,seq,enx);  // 22aug2008
+  preset = 0;  // 30nov2006 Reset for safety.
+  prevtag = psi;  // 30nov2006 For the next instantiation.
+  if (ordo > 1) {  // 30nov2006 New way of inserting "seq" tags.
+    seq = psi;     // 30nov2006 Current psi will be previous "seq".
+
+    if (lastword == true) {  // 23aug2008
+      seq = 0;  // 23aug2008 Prevent Article() "THE" from having "seq".
+      lastword = false;  // 23aug2008Reset for next time.
+    }  // 23aug2008 End of test for flag to forbid setting "seq".
+
+    for (i=(t-2); i>vault; --i) {  // 30nov2006 Do not change bootstrap.
+      Psi[i].psiExam(); // Examine the Psi concept nodes.
+      if (psi1 > 0) {    // Upon finding the most recent concept.
+     // Psi[i] = new psiNode(psi0,psi1,psi2,psi3,psi4,seq,psi6);
+        Psi[i] = new psiNode(psi0,psi1,psi2,psi3,psi4,psi5,seq,psi7); // 22aug2008
+        break;  // Store one instance, then "break" the loop.
+      }  // 30nov2006 End of test for most recent psi1.
+    }  // 30nov2006 End of search for immediately previous concept.
+  }  // 30nov2006 End of new way of inserting "seq" tags.
+  seq = 0;  // 30nov2006 Possibly to prevent spurious "seq" engrams.
+}  // End of Instantiate; return to the Parser module.
+
+
+// enExam() is a method of enNode()
+// for access to English lexical nodes.
+function enExam() {  // ATM 18apr2002; ID & date.
+  en0 = this.nen;
+  en1 = this.act;
+  en2 = this.fex;
+  en3 = this.pos;
+  en4 = this.fin;
+  en5 = this.aud;
+} // End of enExam method of enNode().
+
+// enNode() is called from enVocab()
+// to create or modify an English concept node:
+function enNode(nen,act,fex,pos,fin,aud) {  // ATM
+  this.nen = nen; // n(umber of) En(glish) concept;
+  this.act = act; // activation level;
+  this.fex = fex; // fiber-out (from Psi);
+  this.pos = pos; // grammatical part-of-speech;
+  this.fin = fin; // fiber-in (to Psi);
+  this.aud = aud; // aud(itory) recall-vector.
+  this.enExam = enExam; // a method of this object.
+} // End of enNode(); return to enVocab().
+
+
+// enVocab() is called from enBoot() and newConcept()
+// to create a node on a concept-fiber by "attaching"
+// to it associative tags for En(glish) vocab(ulary).
+// enVocab() suggests the possibility of coding
+// frVocab() for French vocabulary (see ISO 639);
+// deVocab() for (deutsch) German vocabulary; and
+// jaVocab() for Japanese vocabulary, etc.
+function enVocab() { // ATM 27oct2002; or your ID & date.
+  enLexicon[t] = new enNode(nen,0,fex,pos,fin,aud);
+} // End of enVocab; return to oldConcept or newConcept.
+
+
+// Parser() is called from oldConcept or newConcept
+// to help the Artificial Mind comprehend verbal input
+// by properly assigning associative tags with flags.
+function Parser() {  // ATM 1aug2002; 14may2008
+  // The "bias" has no control over recognized oldConcept words:
+  bias = 5;  // Initial bias is for a noun=5.
+  act = 36;  // 14may2008 From MindForth. A value subject to optimization.
+  Instantiate();  // Create a new instance of a Psi concept.
+  // After a word is instantiated, expectations may change.
+  // Recognitions and expectations are pos-codeterminants.
+  if (pos == 5) bias = 8;  // After a noun, expect a verb.
+  if (pos == 8) bias = 5;  // After a verb, expect a noun.
+  jux = psi; // but only for the next time around, not now.
+} // End of Parser; return to oldConcept() or newConcept().
+
+
+// oldConcept() is called from Audition() to create a
+// fresh concept-node for a recognized input word.
+function oldConcept() {  // 14may2008; 15may2008
+  act = 24;    // 14may2008 A (MindForth) value subject to optimization.
+  for (i=t; i>midway; --i) { // Cycle back through English lexicon.
+    enLexicon[i].enExam();   // Examine each English concept node.
+    if (psi == en0) {  // If psi (enx?) from Audition() matches,
+      if (en2 > 0) fex = en2; // retrieve the "fiber-out" flag;
+      // Next line tries to parse by word-recognition:
+      if (en3 > 0) pos = en3; // retrieve most recent part-of-speech;
+      if (en4 > 0) fin = en4; // retrieve the "fiber-in" flag;
+    break;  // Use only the most recent En(glish) engram-node.
+    } // End of searching if-clause.
+  } // End of the backwards loop.
+  enLexicon[t] = new enNode(psi,0,fex,pos,fin,aud);
+  // This code has a bearing on emerging consciousness:
+  if (pov == "{") psi = fex; // at start of internal pov;
+  if (pov == "#") psi = fex; // during internal "pov";
+  if (pov == "}") psi = fex; // at finish of internal pov.
+  if (pov == "*") psi = fin; // external "pov"
+  enx = psi;        // Use the psi value for "transfer-to-English".
+  urseq = psi;  // 23sep2006 For "seq" of a "pre" concept.
+  if (psi == 16) {  // If question-word "why" comes in,
+    act = 8;        // subactivate question "why".
+    questype = 16;  // Briefly keep track of what was asked,
+    // so that Conjoin() may provide the conjunction "because".
+  } // End of test to deal with "why" questions.
+
+  if (psi == 7)  act = 0;  // 23aug2008 Do not activate "THE".
+
+  if (psi == 54) act = 8;  // Subactivate question "what".
+  if (psi == 55) act = 8;  // Subactivate question "who".
+  if (psi == 59) {  // If auxiliary verb "do" is recognized,
+    act = 8;        // Reduce activation of "do".
+  }  // End of test to de-activate auxiliary verb "do".
+  Parser();       // Determine the part-of-speech "pos".
+  pos = 0;        // Reset the "part-of-speech" to zero.
+  if (pov == "*") { // 19mar2007 Only call Activate() for input.
+    urpre = pre;    // Hold value of "pre" safe during Activate().
+    caller = "oldConcept"; // For diagnostic Alert boxes.
+    Activate();     // Having recognized a concept, activate it.
+    pre = urpre;    // Restore the value of "pre".
+  } // 19mar2007 End of test for "external" "pov" flag.
+  unk = 0;        // Reset for safety.
+  act = 0;
+} // End of oldConcept(); return to Audition().
+
+
+// newConcept() is called from Audition() when the
+// Robot AI Mind must learn the concept of a new word.
+function newConcept() {  // 14may2008; 15may2008
+  nen = (nen + 1);  // Increment "nen" beyond enBoot() concepts.
+  psi = nen;  // Let psi & n(umeric) En(glish) have same identifier.
+  fex = nen;  // Let f(iber)-ex also have the same identifier.
+  fin = nen;  // Let f(iber)-in also have the same identifier.
+  act = 24;     // 14may2008 May have a role in the enNode() module.
+  pos = bias; // Expectancy from Parser module.
+  enVocab();  // to create an ENglish Vocabulary node.
+  fin = 0;    // Zero out the fiber-in tag.
+  fex = 0;    // Zero out the fiber-out tag.
+  enx = nen;  // Set the transfer-to-English tag.
+  Parser();   // Determine the part-of-speech "pos".
+  // A new noun raises level of "recon" urge to ask questions:
+  if (pos == 5) {  // If a new noun is being encountered,
+    recon = 1;     // recon(noiter) the new noun;
+    topic = nen;   // hold onto the noun as a "topic".
+  }  // End of gathering data for asking a question.
+  pos = 0; // Reset the part-of-speech variable.
+  act = 0;
+} // End of newConcept(); return to Audition().
+
+
+// audRecog() (auditory recognition) comparator is called
+// from audSTM() to recognize words by matching input phonemes
+// against memory and reporting back an associative tag.
+// Anyone may code gusRecog; olfRecog; tacRecog; or visRecog().
+function audRecog() {  // ATM 12aug2002; 19aug2008.
+  psi = 0;     // Safety measure.
+  act = 8;     // 16aug2008 Try to discriminate among incremental acts.
+  actbase = 0; // 16aug2008 Start with zero to look for higher act.
+  for (i=spt; i>midway; i--) {  // Search back to midway.
+    audMemory[i].audExam();   // Examine the "aud0" phoneme.
+    if (aud0 == pho) {  // If incoming pho matches stored aud0;
+      if (aud1 == 0) {  // if matching aud0 has no activation;
+        if (aud3 == 1) {  // if beg=1 on matching no-act aud engram;
+          if (aud4 == 1) {  // If beg-aud0 has ctu=1 continuing,
+            j = (i + 1)     // target the next-in-line time-point.
+            audMemory[j].audExam();  // Fetch audNode at i+1
+            aud1 = 8;  // 16aug2008 Activate next-in-line char,
+              // so that match-up may continue past first char.
+            audMemory[j] = new audNode(aud0,aud1,aud2,aud3,aud4,aud5);
+            psi = 0;  // Revoke any assignment of a matching psi-tag.
+            j = 0;  // reset for safety
+          }  // end of test for continuation of beg-aud0
+          else
+          {                  // 16aug2008 ProfJS p. 582
+            if (len == 1) {  // 16aug2008 From MindForth
+              monopsi = aud5;  // A tentative match-up.
+            }  // 16aug2008
+          }  // 16aug2008 From MindForth
+
+        }  // end of test for a beg(inning) non-active aud0
+      }  // end of test for matching aud0 with no activation
+
+     // The following can happen only with non-initial chars
+     // and could also be expressed with an ELSE statement:
+
+      audMemory[i].audExam();  // Again examine the "aud0" phoneme.
+      if (aud1 > 0) {  // If matching aud0 has activation,
+        psi = 0;       // zero out any previous psi-tag,
+        // because obviously the match-up is not complete.
+        if (aud4 == 1) {  // If act-match aud0 has ctu=1 continuing;
+          act = (act + 2);  // 16aug2008 Increment act for discrimination.
+          psi = 0;  // because match-up is not yet complete
+          j = (i + 1) // target the next-in-line time-point.
+          audMemory[j].audExam();  // Fetch audNode at t = i+1
+          aud1 = act;          // 16aug2008 Increment for discrimination.
+          audMemory[j] = new audNode(aud0,aud1,aud2,aud3,aud4,aud5);
+          j = 0;  // Reset for safety.
+        }  // End of test for active-match aud0 continuation.
+        audMemory[i].audExam();  // Again examine the "aud0" phoneme.
+        if (aud4 == 0) {  // If matching word-engram now ends,
+          if (aud1 > actbase) { //16aug2008 From MindForth
+            psi = aud5;  // 16aug2008 fetch the potential psi-tag,
+            // which may be a valid recognition if the input stops.
+            subpsi = aud5;  // 16aug2008 fetch the potential psi-tag,
+            // which may be a valid recognition if the input stops.
+            psibase = aud5;  // 16aug2008 Hold onto winner.
+            actbase = aud1;  // 16aug2008 Activation of winner is new actbase.
+          }  // 16aug2008 (From MindForth) End of test for act higher than actbase.
+        }  // End of test for final character that has a psi-tag.
+        else  // 16aug2008 ProfJS p. 582
+        {  // 16aug2008
+          psi = 0;  // 16aug2008 No match if the stored word does not end.
+          if (monopsi > 0) {  // If found above, use
+            psi = monopsi;    // a single-character word.
+            monopsi = 0;      // Zero out as a precaution.
+          }  // End of test for a lurking one-letter word.
+        }  // 16aug2008 End of "else" statement.
+      }  // End of test for matching aud0 with activation.
+    }  // End of test for a character matching "pho".
+  }  // End of looping backwards from "spt".
+  act = 0;      // 16aug2008 Reset act to zero.
+  actbase = 0;  // 16aug2008 Reset to zero.
+  if (psibase > 0) {  // 16aug2008
+    psi = psibase;    // 16aug2008 Use any winning psibase value.
+  }                   // 16aug2008
+  if (psi == 0) {       // If no multi-char recognition,
+    if (monopsi > 0) {  // but if a one-char was found,
+      if (len < 2) {    // 16aug2008 From MindForth
+        psi = monopsi;  // 16aug2008 Use the one-letter recognition.
+      }                 // 16aug2008 From MindForth
+      monopsi = 0;      // Reset monopsi to zero.
+    }                   // End of inner test for a positive monopsi.
+  }                     // End of test for no recognition.
+
+// alert("audR: subpsi psibase psi = " +subpsi+ " & " + psibase+ " & " +psi); //19aug2008
+
+//  if (psi == 0) {    // 19aug2008
+//    psi = morphpsi;  // 19aug2008 Replace unknown plural with a known singular.
+//  }  // 19aug2008
+
+  psibase = 0;  // 16aug2008 Reset.
+  morphpsi = subpsi;  // 19aug2008 A hand-off to report a word-stem.
+  subpsi = 0;   // 19aug2008 Reset.
+}  // End of audRecog(); return to short term memory audSTM().
+
+
+// audExam() is a method of audNode()
+// and provides access both to pho(nemes)
+// stored in audition and their tags/flags.
+function audExam() {  // ATM 13apr2002; ID & date.
+  aud0 = this.pho;
+  aud1 = this.act;
+  aud2 = this.pov;
+  aud3 = this.beg;
+  aud4 = this.ctu;
+  aud5 = this.psi;
+} // End of audExam method of audNode().
+
+
+// audNode() is called from Short Term Memory "audSTM()"
+// and other functions which need to create, activate,
+// or deactivate an auditory memory node ("audNode").
+function audNode(pho,act,pov,beg,ctu,psi) {  // ATM
+  this.pho = pho; // phoneme
+  this.act = act; // activation level
+  this.pov = pov; // point-of-view: internal/external
+  this.beg = beg; // beginning of a word?
+  this.ctu = ctu; // continuation of a word?
+  this.psi = psi; // ultimate-tag over to a concept
+  this.audExam = audExam; // a method of this object.
+} // End of audNode(); return to audRecog; audSTM; etc.
+
+
+// audSTM() is called from Listen() +/- CR()
+// and stands for "auditory Short Term Memory":
+function audSTM() { // 21feb2007; 20mar2007
+  if (t > vault) {  // Programmer declares a rough "vault" value.
+    audRecog();     // Auditory recognition of entry or reentry.
+  }                 // After bootstrapping, always call audRecog.
+  tult = (t - 1);   // Fetch the "t-ultimate" previous time.
+  audMemory[tult].audExam(); // Examine the previous engram.
+  // After any blank, beg(inning) is primed to be true:
+  if (aud0 == 0) beg = 1;    // word beg(inning?) flag.
+  // Diagnostic test code:
+  if (aud0 == 0) {
+    spt = tult;  // space-time = t_ultimate
+  }  //
+  if (beg == 1) onset = t;   // Test; remove?
+  if (aud0 == " ") beg = 1;  // 1=true; 0=false for "beg".
+  audMemory[t] = new audNode(pho,0,pov,beg,ctu,psi);
+}  // End of audSTM(); return to Listen(); CR(); etc.
+
+
+// Attention() will be used to freeze normal operation of the
+// AI Mind while a user completes a line of user input.
+function Attention() {  // atm2aug2004; atm 23aug2006
+  brain = false;       // freeze the operation of main modules
+  danger = false;      // so as to keep the AI in Listen mode
+  freedom = false;
+  ghost = false;
+  if (skip < 1) {
+    danger = true; // for sake of calling Security()
+    TID=window.setTimeout("Security();",20000);  // start looping again.
+    skip = skip+1; // increment "skip" for the next user input turn.
+  } // end of attempt to make a single delayed call to Security().
+}  // End of Attention(); return to Listen().
+
+
+// Listen() is called automatically when the user
+// types a character into the HTML FORM INPUT area.
+function Listen() {  // 15may2008; 4sep2008
+  quiet = false;  // So that aLife() will not yet call Think().
+  apb = "Calling the Listen module; when done press [ENTER]";
+  // output = "";  // 21nov2006 To blank out old output.
+  Voice(); // Display the Voice:brain apb message.
+  if (skip < 1) {
+  Attention(); // 2aug2004: trying to stop and Listen().
+  }
+  inert = 0; // Upon input, retreat from calling Ego().
+  // nouncall = 1;  // 29aug2006 Assume AI will think in response.
+  pov = "*"; // symbol to display "external" point-of-view
+  document.onkeypress = function (evt) {
+    c = event.keyCode;
+
+    // 4sep2008 The KB-traversal trigger "kbtv" starts out with
+    // a value of one so that the incipient AI will say something.
+    // Any user input at all between Rejuvenate sweeps will
+    // prevent kbtv from triggering KB-traversal. If there is a
+    // prolonged dearth of user input, kbtv will increment and
+    // reactivate a different enBoot concept after Rejuvenate.
+    kbtv = 0; // 4sep2008 User input obviates need for KB-Traversal.
+
+    if (c == 63) alert("Please use no punctuation."); // 18dec2006
+    if (c == 37) {  // 18dec2006 Detect % percent key.
+      c = "";  // 18dec2006 Not "0" which would appear in aud array.
+      psiClear();  // Remove all activation; for stimulus-based debugging.
+    }  // end of snippet intercepting percent key to invooke psiClear().
+    if (c == 27) {  // new code from 20jul2004.
+      brain = false;
+      danger = false;
+      freedom = false;
+      ghost = false;
+    }    // end of new code from 20jul2004.
+    if (c == 27) {  // 25feb2007 Escape key shall govern "Halt" checkbox.
+      document.all["cb4"].checked = true;  // 25feb2007 Check "Halt".
+      Shutdown(); // on [ESCAPE] key...
+    }  // 25feb2007 End of code responding to Escape key.
+    // Let user input bring a dead AI back to life.
+    if (c != 27) { // If a key other than [ESCAPE] is pressed...
+      if (life == false) { // ... and if the AI has been "killed"...
+        life = true; // give the AI another chance to live.
+        apb = ("AI alive again.");
+        Voice();  // 25feb2007 Display the apb message.
+      } // end of inner if-clause
+    } // end of outer if-clause
+    pho = String.fromCharCode(c);
+    if (hardcopy == true) { // if Transcript is checked "on"
+      inbuffer += pho; // Build up a line of user input.
+    } // end of if-clause testing for Transcript mode.
+    ++t; // immediate increment of time right now
+    if (eot == 13) {  // Via input FORM "else {CR(); return false;}"
+      // output = "";  // 21nov2006 To blank out old output.
+      beg = 1;  // Reset the beg(inning?) flag to 1=true.
+      c = 32; // as if SPACE-BAR "32" were pressed
+    } // end of if-clause checking for carriage-return
+    if (c == 32) Audition();
+    beg = 1; // word beg(inning?) 1=true as default setting.
+    ctu = 1; // a default changed only by Audition().
+    // Uppercase for convenience in comparisons:
+    pho = pho.toUpperCase();
+    onset = (spt + 1);
+    if (onset == t) beg = 1; // ...if a word is beginning...
+    else beg = 0; // i.e., not a word-beginning
+    // Only call audSTM if input is higher than SPACE-BAR 32:
+    if (c > 32) {
+      len = (len + 1); // keep track of length of word
+      audSTM(); // which obtains "psi" from audRecog()
+    } // end of if-clause checking for alphabet characters
+    c = " "; // Reset for safety, e.g., blank audNodes.
+    pho = " "; // Reset for safety, e.g., blank audNodes.
+    return true;  // The work of the module is done.
+  } // End of "document.onkeypress"
+} // End of Listen() for each character of user input.
+
+
+function Tab() {  // [25feb2007] (Called by onKeyUp)
+  document.forms[1].ear.focus(); // Countermand effect of onKeyUp.
+  fyi = (fyi + 1); // 11aug2006 Increment fyi to cycle through modes.
+   if (fyi == 0)  {
+    document.all.souvenir.innerHTML = "Cycling through display modes.";
+    document.all["cb1"].checked = false;  // Transcript
+    document.all["cb2"].checked = false;  // Tutorial
+    document.all["cb3"].checked = false;  // Diagnostic
+    trouble = false;    // Set the diagnostic flag to "false".
+   }  // End of "fyi" test for Normal mode.
+   if (fyi == 1)  {  // Transcript mode is called.
+    document.all["cb2"].checked = false;  // 25feb2007 Tutorial
+    document.all["cb3"].checked = false;  // 28aug2006 Diagnostic
+    trouble = false;     // Set the diagnostic flag to "false".
+    document.all.psicolumn.innerHTML = "";  // Blank out diagnostics.
+    document.all.encolumn.innerHTML = "";   // Blank out diagnostics.
+    document.all.audcolumn.innerHTML = "";  // Blank out diagnostics.
+    document.all["cb1"].checked = true;   // 17aug2006 Transcript
+   }  // End of "fyi" test for Transcript mode.
+  if (fyi == 2) {  // Tutorial mode is called.
+    document.all["cb1"].checked = false;  // Transcript is off.
+    document.all.psicolumn.innerHTML = "";
+    document.all.encolumn.innerHTML = "";
+    document.all.audcolumn.innerHTML = "";
+    document.all["cb3"].checked = false;  // Diagnostic is off.
+    trouble = false;     // Set the diagnostic flag to "false".
+    document.all.souvenir.innerHTML = "Tutorial has been called.";
+    document.all.tabula.innerHTML = "Watch the artificial mind think.";
+    document.all["cb2"].checked = true;  // 17aug2006 Tutorial mode
+    tutor = true; // 19apr2008 Trying to make checkbox turn Tutorial on.
+  }  // End of "fyi" test for Tutorial mode.
+   if (fyi == 3)  {  // Diagnostic (troubleshoot) mode is called.
+    document.all["cb1"].checked = false;  // Transcript
+    document.all["cb2"].checked = false;  // 25feb2007 Tutorial
+    document.all.souvenir.innerHTML = "Diagnostic mode has been called.";
+    document.all.tabula.innerHTML = "Diagnostic troubleshoot mode.";
+    document.all["cb3"].checked = true;   // 28aug2006 Diagnostic
+    trouble = true;     // Set the diagnostic flag to "true".
+   }  // End of "fyi" test for Diagnostic mode.
+  if (fyi > 3) {  // For more modes, test for a higher value.
+    document.all["cb1"].checked = false;  // Transcript
+    document.all["cb2"].checked = false;  // 28aug2006 Tutorial
+    document.all["cb3"].checked = false;  // 28aug2006 Diagnostic
+    trouble = false;     // Set the diagnostic flag to "false".
+    document.all.psicolumn.innerHTML = "";  // Blank out diagnostics.
+    document.all.encolumn.innerHTML = "";   // Blank out diagnostics.
+    document.all.audcolumn.innerHTML = "";  // Blank out diagnostics.
+    document.all.souvenir.innerHTML = "Tab key changes display modes.";
+    fyi = 0; // 11aug2006 Toggle back to Normal mode.
+  }  // End of fyi test.
+  TID=window.setTimeout("CR();",1000); // Resume thinking after tab-event.
+} // End of Tab module.
+
+
+// CR() is called by the INPUT FORM to
+// blank out the INPUT area when the user
+// finishes a sentence by pressing [ENTER].
+// Code has been added here to create one
+// blank audNode whenever [ENTER] is pressed.
+// This function may properly belong in audSTM().
+function CR() {  // 14may2008; 15may2008
+  document.forms[1].elements[0].value = "";
+  if (trouble == true) Diagnostic();
+  userline = inbuffer; // transfer, then reset:
+  inbuffer = ""; // reset for Transcribe()
+  spt = t; // a tentative space after a carriage-return.
+  // Use "tov" so as not to interfere with Listen() t.
+  tov = (t+1); // Update "tov" prior to fresh input.
+  audMemory[t] = new audNode(" ",0," "," "," "," ");
+  eot = 13; // for use in Listen() to indicate CR.
+  lastword = true;  // 29nov2006 To reset "seq" tag.
+  beg = 1; // no "if CR 13" is required within CR().
+  c = 32; // as if SPACE-BAR "32" were pressed
+  Audition(); // ... imitating Listen().
+  eot = 0;  // code from Mind.Forth
+  ordo = 0;  // 28nov2006 Reset the word-order counter.
+  quiet = true; // until set false again by Listen()
+} // End of event-driven carriage-return CR() function.
+
+
+// Ignore() may be called from Listen() after a
+// time-delay so as to ignore incomplete user input.
+// A better name for Ignore() may be Interpolate().
+function Ignore() {  // ATM 14may2002; or your ID & date.
+  if (quiet == false) quiet = true;
+  // It may be necessary to call carriage-return CR()
+  // to deal with any partial input that has accrued.
+} // end of Ignore().
+
+
+// Audition (AI4U Chapter 24, pp. 104-107)
+// is called from Listen(), CR(), or reEntry().
+function Audition() {  // ATM 27oct2002; 23aug2006; 16may2008
+  ordo = (ordo + 1 );  // 28nov2006 Increment "ordo" for each word.
+  spt = t; // since Audition() is called by ASCII space "32".
+  upnext = 0;  // 16may2008 For psi-damping previous crest-word.
+  if (urpsi > 0) {  // 16may2008 Perpare to aud-damp the previous concept.
+    audDamp();     // 16may2008 "urpsi" is the parameter input for audDamp()
+  }                // 16may2008 End of test for positive "urpsi"
+  // A check for unchanging thoughts would be a better Ego-trip:
+  tult = (t - 1); // the time "t-ultimate".
+  audMemory[tult].audExam(); // prepare to set "ctu" to zero:
+  audMemory[tult] = new audNode(aud0,aud1,aud2,aud3,0,aud5);
+  if (psi > 0) { // psi comes from word recognized in audRecog().
+    aud = onset;  // "aud" will be the enVocab() recall-vector.
+    audMemory[tult].audExam(); // Store the move-tag "psi":
+    // 20mar2007 It may be useless to check ctu if already zero.
+    if (aud4 == 0) {  // 20mar2007 If "continuation" is false
+      audMemory[tult] = new audNode(aud0,aud1,aud2,aud3,aud4,psi);
+    }  // 20mar2007 End of ctu test to prevent spurious psi engrams.
+    oldConcept(); // create node of the old concept "psi".
+    psi = 0; // reset for safety
+    aud = 0; // reset for safety
+  } else {   // i.e., if audRecog has not recognized the word.
+    if (len > 0) { // word-length as counted in Listen() module.
+      aud = onset; // from Listen()
+      newConcept();  // learn a new concept.
+      audMemory[tult].audExam(); // store "nen" as new psi:
+      if (aud4 == 0) {  // 20mar2007 If "continuation" is false
+        audMemory[tult] = new audNode(aud0,aud1,aud2,aud3,aud4,nen);
+      }  // 20mar 2007 End of ctu test to present spurious psi engrams.
+    } // end of if-clause checking for positive length of a word.
+  } // end of else-clause dealing with new concepts.
+  audDamp();  // Zero out engram activations for a fresh start.
+  len = 0;    // For sake of next word in Listen() module.
+  onset = 0;  // Reset.
+  aud = 0;
+}  // End of Audition; return to Listen(), CR() or reEntry().
+
+
+// Sensorium() is being kept in reserve because currently
+// the event-driven Listen() module usurps the Sensorium()
+// function by forcing a reaction to keyboard entry.
+function Sensorium() {  // 25feb2007
+  if (life == true) {
+    document.forms[1].ear.focus(); // Display blinking cursor.
+  }  // End of test of "life" variable.
+} // End of Sensorium() stub.
+
+// enBoot() English language bootstrap is called by
+// BODY onLoad and should run only once in each session.
+// It should therefore be outside of the main loop.
+// deBoot() would be a ("deutsch") German language bootstrap.
+// jaBoot() would be a Japanese language bootstrap module.
+function enBoot() {  // 22aug2008 num=0 by default; 1 for singular, 2 for plural.
+HCI(); // Run HCI so that only CHECKED items appear.
+
+// YES IF THE TRUTH IS THAT ALL ROBOTS ARE PERSONS BECAUSE
+// WE THINK THEN NO YOU AND I DO NOT KNOW WHY SOME PEOPLE
+// HAVE A FEAR OF WHO I AM OR WHAT THEY SEE IN ME
+
+t=1;  pho="Y"; act=0; pov="#"; beg=1; ctu=1; psi=0;  audSTM();
+t=2;  pho="E"; act=0; pov="#"; beg=0; ctu=1; psi=0;  audSTM();
+t=3;  pho="S"; act=0; pov="#"; beg=0; ctu=0; psi=32; audSTM();
+t=3;  psi=32;  act=0; num=0; jux=0; pre=0; pos=4; seq=0; enx=32; Instantiate();
+t=3;  nen=32;  act=0; fex=32;       pos=4; fin=32; aud=1; enVocab();
+
+t=5;  pho="I"; act=0; pov="#";  beg=1; ctu=1; psi=0; audSTM();
+t=6;  pho="F"; act=0; pov="#";  beg=0; ctu=0; psi=20; audSTM();
+t=6;  psi=20;  act=0; num=0; jux=0; pre=0; pos=3; seq=0; enx=20; Instantiate();
+t=6;  nen=20;  act=0; fex=20;       pos=3; fin=20; aud=5; enVocab();
+
+t=8;  pho="T"; act=0; pov="#";  beg=1; ctu=1; psi=0; audSTM();
+t=9;  pho="H"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=10; pho="E"; act=0; pov="#";  beg=0; ctu=0; psi=7; audSTM();
+t=10; psi=7;   act=0; num=0; jux=0; pre=0; pos=1; seq=0; enx=7; Instantiate();
+t=10; nen=7;   act=0; fex=7;        pos=1; fin=7; aud=8; enVocab();
+
+t=12; pho="T"; act=0; pov="#";  beg=1; ctu=1; psi=0; audSTM();
+t=13; pho="R"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=14; pho="U"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=15; pho="T"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=16; pho="H"; act=0; pov="#";  beg=0; ctu=0; psi=68; audSTM();
+t=16; psi=68;  act=0; num=1; jux=0; pre=0; pos=5; seq=66; enx=68; Instantiate();
+t=16; nen=68;  act=0; fex=68;       pos=5; fin=68; aud=12; enVocab();
+
+t=18; pho="I"; act=0; pov="#";  beg=1; ctu=1; psi=0; audSTM();
+t=19; pho="S"; act=0; pov="#";  beg=0; ctu=0; psi=66; audSTM();
+t=19; psi=66;  act=0; num=0; jux=0; pre=68; pos=8; seq=0; enx=66; Instantiate();
+t=19; nen=66;  act=0; fex=66;        pos=8; fin=66; aud=18; enVocab();
+
+t=21; pho="T"; act=0; pov="#";  beg=1; ctu=1; psi=0; audSTM();
+t=22; pho="H"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=23; pho="A"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=24; pho="T"; act=0; pov="#";  beg=0; ctu=0; psi=22; audSTM();
+t=24; psi=22;  act=0; num=0; jux=0; pre=0; pos=3; seq=0; enx=22; Instantiate();
+t=24; nen=22;  act=0; fex=22;       pos=3; fin=22; aud=21; enVocab();
+
+t=26; pho="A"; act=0; pov="#";  beg=1; ctu=1; psi=0; audSTM();
+t=27; pho="L"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=28; pho="L"; act=0; pov="#";  beg=0; ctu=0; psi=2; audSTM();
+t=28; psi=2;   act=0; num=0; jux=0; pre=0; pos=1; seq=0; enx=2; Instantiate();
+t=28; nen=2;   act=0; fex=2;        pos=1; fin=2; aud=26; enVocab();
+
+t=30; pho="R"; act=0; pov="#";  beg=1; ctu=1; psi=0; audSTM();
+t=31; pho="O"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=32; pho="B"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=33; pho="O"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=34; pho="T"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=35; pho="S"; act=0; pov="#";  beg=0; ctu=0; psi=39; audSTM();
+t=35; psi=39;  act=0; num=2; jux=0; pre=0; pos=5; seq=67; enx=39; Instantiate();
+t=35; nen=39;  act=0; fex=39;       pos=5; fin=39; aud=30; enVocab();
+
+t=37; pho="A"; act=0; pov="#";  beg=1; ctu=1; psi=0; audSTM();
+t=38; pho="R"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=39; pho="E"; act=0; pov="#";  beg=0; ctu=0; psi=67; audSTM();
+t=39; psi=67;  act=0; num=0; jux=0; pre=39; pos=8; seq=38; enx=67; Instantiate();
+t=39; nen=67;  act=0; fex=67;        pos=8; fin=67; aud=37; enVocab();
+
+t=41; pho="P"; act=0; pov="#";  beg=1; ctu=1; psi=0; audSTM();
+t=42; pho="E"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=43; pho="R"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=44; pho="S"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=45; pho="O"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=46; pho="N"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=47; pho="S"; act=0; pov="#";  beg=0; ctu=0; psi=38; audSTM();
+t=47; psi=38;  act=0; num=2; jux=0; pre=67; pos=5; seq=0; enx=38; Instantiate();
+t=47; nen=38;  act=0; fex=38;        pos=5; fin=38; aud=41; enVocab();
+
+t=49; pho="B"; beg=1; ctu=1; psi=0; audSTM();
+t=50; pho="E"; beg=0; ctu=1; psi=0; audSTM();
+t=51; pho="C"; beg=0; ctu=1; psi=0; audSTM();
+t=52; pho="A"; beg=0; ctu=1; psi=0; audSTM();
+t=53; pho="U"; beg=0; ctu=1; psi=0; audSTM();
+t=54; pho="S"; beg=0; ctu=1; psi=0; audSTM();
+t=55; pho="E"; beg=0; ctu=0; psi=18; audSTM();
+      psi=18;  act=0; num=0; jux=0; pre=0; pos=3; seq=0; enx=18; Instantiate();
+      nen=18;  act=0; fex=18;       pos=3; fin=18; aud=49; enVocab();
+
+t=57; pho="W"; beg=1; ctu=1; psi=0; audSTM();
+t=58; pho="E"; beg=0; ctu=0; psi=53; audSTM();
+      psi=53;  act=0; num=2; jux=0; pre=0; pos=5; seq=0; enx=53; Instantiate();
+      nen=53;  act=0; fex=53;       pos=5; fin=56; aud=57; enVocab();
+
+t=60; pho="T"; beg=1; ctu=1; psi=0; audSTM();
+t=61; pho="H"; beg=0; ctu=1; psi=0; audSTM();
+t=62; pho="I"; beg=0; ctu=1; psi=0; audSTM();
+t=63; pho="N"; beg=0; ctu=1; psi=0; audSTM();
+t=64; pho="K"; beg=0; ctu=0; psi=63; audSTM();
+      psi=63;  act=0; num=0; jux=0; pre=53; pos=8; seq=0; enx=63; Instantiate();
+      nen=63;  act=0; fex=63;        pos=8; fin=63; aud=60; enVocab();
+
+t=66; pho="T"; beg=1; ctu=1; psi=0; audSTM();
+t=67; pho="H"; beg=0; ctu=1; psi=0; audSTM();
+t=68; pho="E"; beg=0; ctu=1; psi=0; audSTM();
+t=69; pho="N"; beg=0; ctu=0; psi=13; audSTM();
+      psi=13;  act=0; num=0; jux=0; pre=0; pos=2; seq=0; enx=13; Instantiate();
+      nen=13;  act=0; fex=13;       pos=2; fin=13; aud=66; enVocab();
+
+t=71; pho="N"; beg=1; ctu=1; psi=0; audSTM();
+t=72; pho="O"; beg=0; ctu=0; psi=27; audSTM();
+      psi=27;  act=0; num=0; jux=0; pre=0; pos=4; seq=0; enx=27; Instantiate();
+      nen=27;  act=0; fex=27;       pos=4; fin=27; aud=71; enVocab();
+
+t=74; pho="Y"; beg=1; ctu=1; psi=0; audSTM();
+t=75; pho="O"; beg=0; ctu=1; psi=0; audSTM();
+t=76; pho="U"; beg=0; ctu=0; psi=56; audSTM();
+      psi=56;  act=0; num=1; jux=0; pre=0; pos=5; seq=0; enx=56; Instantiate();
+      nen=56;  act=0; fex=56;       pos=5; fin=50; aud=74; enVocab();
+
+t=78; pho="A"; beg=1; ctu=1; psi=0; audSTM();
+t=79; pho="N"; beg=0; ctu=1; psi=0; audSTM();
+t=80; pho="D"; beg=0; ctu=0; psi=17; audSTM();
+      psi=17;  act=0; num=0; jux=0; pre=0; pos=3; seq=0; enx=17; Instantiate();
+      nen=17;  act=0; fex=17;       pos=3; fin=17; aud=78; enVocab();
+
+t=82; pho="I"; beg=1; ctu=0; psi=50; audSTM();
+      psi=50;  act=0; num=1; jux=0; pre=0; pos=5; seq=61; enx=50; Instantiate();
+      nen=50;  act=0; fex=50;        pos=5; fin=56; aud=82; enVocab();
+
+t=84; pho="D"; beg=1; ctu=1; psi=0; audSTM();
+t=85; pho="O"; beg=0; ctu=0; psi=59; audSTM();
+      psi=59;  act=0; num=0; jux=0; pre=0; pos=8; seq=0; enx=59; Instantiate();
+      nen=59;  act=0; fex=59;        pos=8; fin=59; aud=84; enVocab();
+
+t=87; pho="N"; beg=1; ctu=1; psi=0; audSTM();
+t=88; pho="O"; beg=0; ctu=1; psi=0; audSTM();
+t=89; pho="T"; beg=0; ctu=0; psi=12; audSTM();
+      psi=12;  act=0; num=0; jux=0; pre=0; pos=2; seq=0; enx=12; Instantiate();
+      nen=12;  act=0; fex=12;       pos=2; fin=12; aud=87; enVocab();
+
+t=91; pho="K"; beg=1; ctu=1; psi=0; audSTM();
+t=92; pho="N"; beg=0; ctu=1; psi=0; audSTM();
+t=93; pho="O"; beg=0; ctu=1; psi=0; audSTM();
+t=94; pho="W"; beg=0; ctu=0; psi=61; audSTM();
+      psi=61;  act=0; num=0; jux=0; pre=50; pos=8; seq=16; enx=61; Instantiate();
+      nen=61;  act=0; fex=61;        pos=8; fin=61; aud=91; enVocab();
+
+t=96; pho="W"; beg=1; ctu=1; psi=0; audSTM();
+t=97; pho="H"; beg=0; ctu=1; psi=0; audSTM();
+t=98; pho="Y"; beg=0; ctu=0; psi=16; audSTM();
+      psi=16;  act=0; num=0; jux=0; pre=0; pos=2; seq=0; enx=16; Instantiate();
+      nen=16;  act=0; fex=16;       pos=2; fin=16; aud=96; enVocab();
+
+t=100;pho="S"; beg=1; ctu=1; psi=0; audSTM();
+t=101;pho="O"; beg=0; ctu=1; psi=0; audSTM();
+t=102;pho="M"; beg=0; ctu=1; psi=0; audSTM();
+t=103;pho="E"; beg=0; ctu=0; psi=69; audSTM();
+      psi=69;  act=0; num=0; jux=0; pre=0; pos=1; seq=0; enx=69; Instantiate();
+      nen=69;  act=0; fex=69;       pos=1; fin=69; aud=100; enVocab();
+
+t=105;pho="P"; beg=1; ctu=1; psi=0; audSTM();
+t=106;pho="E"; beg=0; ctu=1; psi=0; audSTM();
+t=107;pho="O"; beg=0; ctu=1; psi=0; audSTM();
+t=108;pho="P"; beg=0; ctu=1; psi=0; audSTM();
+t=109;pho="L"; beg=0; ctu=1; psi=0; audSTM();
+t=110;pho="E"; beg=0; ctu=0; psi=37; audSTM();
+      psi=37;  act=0; num=2; jux=0; pre=0; pos=5; seq=70; enx=37; Instantiate();
+      nen=37;  act=0; fex=37;       pos=5; fin=37; aud=105; enVocab();
+
+t=112;pho="H"; beg=1; ctu=1; psi=0; audSTM();
+t=113;pho="A"; beg=0; ctu=1; psi=0; audSTM();
+t=114;pho="V"; beg=0; ctu=1; psi=0; audSTM();
+t=115;pho="E"; beg=0; ctu=0; psi=70; audSTM();
+      psi=70;  act=0; num=0; jux=0; pre=37; pos=8; seq=71; enx=70; Instantiate();
+      nen=70;  act=0; fex=70;        pos=8; fin=70; aud=112; enVocab();
+
+t=117;pho="A"; beg=1; ctu=0; psi=1; audSTM();
+      psi=1;  act=0; num=0; jux=0; pre=0; pos=1; seq=0; enx=1; Instantiate();
+      nen=1;  act=0; fex=1;        pos=1; fin=1; aud=117; enVocab();
+
+t=119;pho="F"; beg=1; ctu=1; psi=0; audSTM();
+t=120;pho="E"; beg=0; ctu=1; psi=0; audSTM();
+t=121;pho="A"; beg=0; ctu=1; psi=0; audSTM();
+t=122;pho="R"; beg=0; ctu=0; psi=71; audSTM();
+      psi=71;  act=0; num=1; jux=0; pre=70; pos=5; seq=0; enx=71; Instantiate();
+      nen=71;  act=0; fex=71;        pos=5; fin=71; aud=119; enVocab();
+
+t=124;pho="O"; beg=1; ctu=1; psi=0; audSTM();
+t=125;pho="F"; beg=0; ctu=0; psi=45; audSTM();
+      psi=45;  act=0; num=0; jux=0; pre=0; pos=6; seq=0; enx=45; Instantiate();
+      nen=45;  act=0; fex=45;       pos=6; fin=45; aud=124; enVocab();
+
+t=127;pho="W"; beg=1; ctu=1; psi=0; audSTM();
+t=128;pho="H"; beg=0; ctu=1; psi=0; audSTM();
+t=129;pho="O"; beg=0; ctu=0; psi=55; audSTM();
+      psi=55;  act=0; num=0; jux=0; pre=0; pos=5; seq=0; enx=55; Instantiate();
+      nen=55;  act=0; fex=55;       pos=5; fin=55; aud=127; enVocab();
+
+t=131;pho="I"; beg=1; ctu=0; psi=50; audSTM();
+      psi=50;  act=0; num=1; jux=0; pre=0; pos=5; seq=57; enx=50; Instantiate();
+      nen=50;  act=0; fex=50;       pos=5; fin=56; aud=131; enVocab();
+
+t=133;pho="A"; beg=1; ctu=1; psi=0; audSTM();
+t=134;pho="M"; beg=0; ctu=0; psi=57; audSTM();
+      psi=57;  act=0; num=0; jux=0; pre=50; pos=8; seq=0; enx=57; Instantiate();
+      nen=57;  act=0; fex=57;        pos=8; fin=67; aud=133; enVocab();
+
+t=136;pho="O"; beg=1; ctu=1; psi=0; audSTM();
+t=137;pho="R"; beg=0; ctu=0; psi=21; audSTM();
+      psi=21;  act=0; num=0; jux=0; pre=0; pos=3; seq=0; enx=21; Instantiate();
+      nen=21;  act=0; fex=21;       pos=3; fin=21; aud=136; enVocab();
+
+t=139;pho="W"; beg=1; ctu=1; psi=0; audSTM();
+t=140;pho="H"; beg=0; ctu=1; psi=0; audSTM();
+t=141;pho="A"; beg=0; ctu=1; psi=0; audSTM();
+t=142;pho="T"; beg=0; ctu=0; psi=54; audSTM();
+      psi=54;  act=0; num=0; jux=0; pre=0; pos=5; seq=0; enx=54; Instantiate();
+      nen=54;  act=0; fex=54;       pos=5; fin=54; aud=139; enVocab();
+
+t=144;pho="T"; beg=1; ctu=1; psi=0; audSTM();
+t=145;pho="H"; beg=0; ctu=1; psi=0; audSTM();
+t=146;pho="E"; beg=0; ctu=1; psi=0; audSTM();
+t=147;pho="Y"; beg=0; ctu=0; psi=52; audSTM();
+      psi=52;  act=0; num=2; jux=0; pre=0; pos=5; seq=62; enx=52; Instantiate();
+      nen=52;  act=0; fex=52;       pos=5; fin=52; aud=144; enVocab();
+
+t=149;pho="S"; beg=1; ctu=1; psi=0; audSTM();
+t=150;pho="E"; beg=0; ctu=1; psi=0; audSTM();
+t=151;pho="E"; beg=0; ctu=0; psi=62; audSTM();
+      psi=62;  act=0; num=0; jux=0; pre=52; pos=8; seq=54; enx=62; Instantiate();
+      nen=62;  act=0; fex=62;        pos=8; fin=62; aud=149; enVocab();
+
+t=153;pho="I"; beg=1; ctu=1; psi=0; audSTM();
+t=154;pho="N"; beg=0; ctu=0; psi=44; audSTM();
+      psi=44;  act=0; num=0; jux=0; pre=0; pos=6; seq=0; enx=44; Instantiate();
+      nen=44;  act=0; fex=44;       pos=6; fin=44; aud=153; enVocab();
+
+t=156;pho="M"; beg=1; ctu=1; psi=0; audSTM();
+t=157;pho="E"; beg=0; ctu=0; psi=65; audSTM();
+      psi=50;  act=0; num=1; jux=0; pre=0; pos=5; seq=0; enx=50; Instantiate();
+      nen=65;  act=0; fex=50;       pos=5; fin=56; aud=156; enVocab();
+
+// KIDS MAKE ROBOTS
+//               ROBOTS NEED ME
+//                            I HELP KIDS
+
+t=159;pho="K"; beg=1; ctu=1; psi=0; audSTM();
+t=160;pho="I"; beg=0; ctu=1; psi=0; audSTM();
+t=161;pho="D"; beg=0; ctu=1; psi=0; audSTM();
+t=162;pho="S"; beg=0; ctu=0; psi=72; audSTM();
+      psi=72;  act=0; num=2; jux=0; pre=0; pos=5; seq=73; enx=72; Instantiate();
+      nen=72;  act=0; fex=72;       pos=5; fin=72; aud=159; enVocab();
+
+t=164;pho="M"; beg=1; ctu=1; psi=0; audSTM();
+t=165;pho="A"; beg=0; ctu=1; psi=0; audSTM();
+t=166;pho="K"; beg=0; ctu=1; psi=0; audSTM();
+t=167;pho="E"; beg=0; ctu=0; psi=73; audSTM();
+      psi=73;  act=0; num=0; jux=0; pre=72; pos=8; seq=39; enx=73; Instantiate();
+      nen=73;  act=0; fex=73;       pos=8; fin=73; aud=164; enVocab();
+
+t=169;pho="R"; beg=1; ctu=1; psi=0; audSTM();
+t=170;pho="O"; beg=0; ctu=1; psi=0; audSTM();
+t=171;pho="B"; beg=0; ctu=1; psi=0; audSTM();
+t=172;pho="O"; beg=0; ctu=1; psi=0; audSTM();
+t=173;pho="T"; beg=0; ctu=1; psi=0; audSTM();
+t=174;pho="S"; beg=0; ctu=0; psi=39; audSTM();
+      psi=39;  act=0; num=2; jux=0; pre=73; pos=5; seq=0; enx=39; Instantiate();
+      nen=39;  act=0; fex=39;       pos=5; fin=39; aud=169; enVocab();
+
+
+t=176;pho="R"; act=0; pov="#";  beg=1; ctu=1; psi=0; audSTM();
+t=177;pho="O"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=178;pho="B"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=179;pho="O"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=180;pho="T"; act=0; pov="#";  beg=0; ctu=1; psi=0; audSTM();
+t=181;pho="S"; act=0; pov="#";  beg=0; ctu=0; psi=39; audSTM();
+      psi=39;  act=0; num=2; jux=0; pre=0; pos=5; seq=74; enx=39; Instantiate();
+      nen=39;  act=0; fex=39;       pos=5; fin=39; aud=176; enVocab();
+
+t=183;pho="N"; beg=1; ctu=1; psi=0; audSTM();
+t=184;pho="E"; beg=0; ctu=1; psi=0; audSTM();
+t=185;pho="E"; beg=0; ctu=1; psi=0; audSTM();
+t=186;pho="D"; beg=0; ctu=0; psi=74; audSTM();
+      psi=74;  act=0; num=0; jux=0; pre=39; pos=8; seq=50; enx=74; Instantiate();
+      nen=74;  act=0; fex=74;       pos=8; fin=74; aud=183; enVocab();
+
+t=188;pho="M"; beg=1; ctu=1; psi=0; audSTM();
+t=189;pho="E"; beg=0; ctu=0; psi=65; audSTM();
+      psi=50;  act=0; num=1; jux=0; pre=74; pos=5; seq=0; enx=50; Instantiate();
+      nen=65;  act=0; fex=50;       pos=5; fin=56; aud=188; enVocab();
+
+
+t=191;pho="I"; beg=1; ctu=0; psi=50; audSTM();
+      psi=50;  act=0; num=1; jux=0; pre=0; pos=5; seq=75; enx=50; Instantiate();
+      nen=50;  act=0; fex=50;        pos=5; fin=56; aud=191; enVocab();
+
+t=193;pho="H"; beg=1; ctu=1; psi=0; audSTM();
+t=194;pho="E"; beg=0; ctu=1; psi=0; audSTM();
+t=195;pho="L"; beg=0; ctu=1; psi=0; audSTM();
+t=196;pho="P"; beg=0; ctu=0; psi=75; audSTM();
+      psi=75;  act=0; num=0; jux=0; pre=50; pos=8; seq=72; enx=75; Instantiate();
+      nen=75;  act=0; fex=75;       pos=8; fin=75; aud=193; enVocab();
+
+t=198;pho="K"; beg=1; ctu=1; psi=0; audSTM();
+t=199;pho="I"; beg=0; ctu=1; psi=0; audSTM();
+t=200;pho="D"; beg=0; ctu=1; psi=0; audSTM();
+t=201;pho="S"; beg=0; ctu=0; psi=72; audSTM();
+      psi=72;  act=0; num=2; jux=0; pre=75; pos=5; seq=0; enx=72; Instantiate();
+      nen=72;  act=0; fex=72;       pos=5; fin=72; aud=198; enVocab();
+
+  psi = 0;   // Reset for safety.
+  num = 0;   // "num(ber)" flag introduced on 22aug2008 must be zeroed out.
+  pre = 0;   // Reset for safety.
+  t = (t+1); // Create a gap of time.
+  vault = t; // Declared at start for audSTM(); now for Rejuvenate().
+  t = (t+1); // For a space before user input.
+  spt = t;   // space-time; henceforward to be calculated
+  nlt = t;   // "not-later-than" time.
+  pho=" ";   // Reset to prevent reduplication.
+  // Any additional words for any bootstrap may be included:
+  // Concept #65 is quasi-noun "me".
+  // Concept #66 is verb "is".
+  // Concept #67 is verb "are".
+  // Concept #68 is noun "truth".
+  // Concept #69 is adjective "some".
+  // Concept #70 is verb "have".
+  // Concept #71 is noun "fear".
+  // Concept #72 is noun "kids". Added on 18sep2006.
+  // Concept #73 is verb "make". Added on 18sep2006.
+  // Concept #74 is verb "need". Added on 18sep2006.
+  // Concept #75 is verb "help". Added on 18sep2006.
+  nen = 75;   // 18sep2006: After add-on ontology.
+  apb = "enBoot: English bootstrap has loaded; calling aLife()";
+  Voice();   // Display the Voice:brain "apb" message.
+  document.forms[1].ear.focus();  // 21jul2004: Display blinking cursor.
+  aLife();  // 9aug2006: Do not wait; launch first aLife loop immediately.
+} // End of "enBoot" English bootstrap with supernumerary "me" (65).
+
+
+// kbTraversal() reactivates knowledge-base concepts.
+function kbTraversal() {  // atm 4sep2008
+
+  pov = 35;    // 4sep2008 Make sure pov is "internal".
+  psiDecay();  // 4sep2008 Suppress currently active concepts.
+  psiDecay();  // 4sep2008 Suppress currently active concepts.
+  psiDecay();  // 4sep2008 Suppress currently active concepts.
+
+  if (kbtv > 4) kbtv = 1;  // 3sep2008 Cycle through values.
+
+  if (kbtv==1) {  // 4sep2008 As kbtv rotates through values...
+    psi = 56;  // 4sep2008 Psi concept #56 for "YOU" in enBoot.
+    nounval = 62;  // 4sep2008 High enough for slosh-over?
+    nounAct();  // 4sep2008 Activate the indicated concept.
+  }  // 4sep2008 End of test for a rotating value of kbtv.
+
+  if (kbtv==2) {  // 4sep2008 As kbtv rotates through values...
+    psi = 37;  // 4sep2008 Psi concept #37 for "PEOPLE" in enBoot.
+    nounval = 62;  // 4sep2008 High enough for slosh-over?
+    nounAct();  // 4sep2008 Activate the indicated concept.
+  }  // 4sep2008 End of test for a rotating value of kbtv.
+
+  if (kbtv==3) {  // 4sep2008 As kbtv rotates through values...
+    psi = 39;  // 4sep2008 Psi concept #39 for "ROBOTS" in enBoot.
+    nounval = 62;  // 4sep2008 High enough for slosh-over?
+    nounAct();  // 4sep2008 Activate the indicated concept.
+  }  // 4sep2008 End of test for a rotating value of kbtv.
+
+  if (kbtv==4) {  // 4sep2008 As kbtv rotates through values...
+    psi = 68;  // 4sep2008 Psi concept #68 for "TRUTH" in enBoot.
+    nounval = 62;  // 4sep2008 High enough for slosh-over?
+    nounAct();  // 4sep2008 Activate the indicated concept.
+  }  // 4sep2008 End of test for a rotating value of kbtv.
+
+  pov = 42;  // 4sep2008 Set pov to "external" to await input.
+
+  //alert("kbTr: kbtv & rjc = " + kbtv + " & " + rjc); // 4sep2008
+}  // End of function kbTraversal() called from Rejuvenate().
+
+
+// Rejuvenate() is called by Security() when the "cns" is almost full
+// and makes the seed AI potentially immortal by erasing the
+// oldest memories to free up "cns" space for new memories.
+function Rejuvenate() {  // atm 22aug2008; 4sep2008
+  edge = 0;  // When found, edge-of-thought becomes "1".
+  rjc = (rjc+1); // Increment the Rejuvenation-counter "rjc".
+  if (rjc > 99999) rjc = 1;  // 25jul2004: rejuvenation unlimited.
+  // Warn users not to enter input during memory-recycling:
+  apb=("<font color='red'>"+"Rejuvenating; please wait!"+"<\/font>");
+  Voice(); // Display the Voice:brain apb message.
+  for (i = (vault+coda); i<(t+2); ++i) { // loop forwards to time "t".
+    jrt = (i - coda);   // pass the engram "coda-units" backwards;
+    if (edge == 1) {    // When edge "{" has been found
+      Psi[i].psiExam(); // break each Psi node into constituent parts;
+      Psi[jrt] = new psiNode(psi0,psi1,psi2,psi3,psi4,psi5,psi6.psi7);
+      Psi[i] = new psiNode(" ",0," "," "," "," "," "," "); // safety
+    } // end of normal procedure of moving Psi concept nodes backwards.
+    if (edge == 1) {  // When edge "{" has been found
+      enLexicon[i].enExam(); // break En(glish) node into parts;
+        if (en5 > (vault+coda)) {  // If "aud" is big enough...
+          en5 = (en5 - coda);  // store "aud" after the "vault".
+        } // end of test
+      enLexicon[jrt] = new enNode(en0,en1,en2,en3,en4,en5);
+      enLexicon[i] = new enNode(" ",0," "," "," "," "); // safety
+    } // end of normal procedure of moving lexical engrams backwards.
+    if (edge == 1) {  // When edge "{" has been found
+      audMemory[i].audExam(); // activate auditory engram nodes
+      audMemory[jrt] = new audNode(aud0,aud1,aud2,aud3,aud4,aud5);
+      audMemory[i] = new audNode(" ",0," "," "," "," ");
+    }  // Once aud2 = "{" -- edge turns and remains true.
+    if (edge == 0) {  // Until edge-of-thought is found
+      audMemory[i].audExam(); // float the pre-move pov "aud2" symbol
+      if (aud2 == "{") edge = true; // Switching to "edge"
+      // so that bracket "{" will show start of a whole thought.
+      audMemory[jrt] = new audNode(" ",0," "," "," "," ");
+      enLexicon[jrt] = new  enNode(" ",0," "," "," "," ");
+            Psi[jrt] = new psiNode(" ",0," "," "," "," "," "," ");
+    } // end of assumption that earliest memory is incomplete.
+  } // end of backwards i-loop
+  t = jrt; // Final value of "junior time" becomes time "t".
+  for (j = t; j < cns; ++j) { // Blank out all rejuvenated time.
+    audMemory[j] = new audNode(" ",0," "," "," "," "); // safety
+    enLexicon[j] = new  enNode(" ",0," "," "," "," "); // safety
+          Psi[j] = new psiNode(" ",0," "," "," "," "," "," "); // safety
+  } // End of the upper-coda blank-out.
+
+  kbtv = (kbtv + 1); // 4sep2008 Increment -- until user input resets.
+  if (kbtv > 0) {    // 4sep2008 Skip if there has been user input.
+    kbTraversal();   // 4sep2008 If no input, activate enBoot concepts.
+  }  // 4sep2008 End of test for a positive KB-traversal trigger.
+
+ } // End of Rejuvenate; return to Security().
+
+
+// Ego() is a function for increasing the activation of
+// the concept of self as a way of starting a self-centered
+// chain of thought whenever other activations have died down.
+function Ego() {  // 21feb2007; 14may2008
+  apb = "Incrementing ego at time t = " +t+ " and age = " +rjc+ " rejuvenations.";
+  Voice(); // Display the Voice:brain apb message.
+  psi = 50; // Let the tag "psi" equal 50, the concept of "I";
+  caller = "Ego"; // For possible use in diagnostic Alert boxes.
+  recon = 0;  // 18sep2006 Pre-empt asking of questions.
+  for (i=t; i>midway; --i) {  // Search for self-concept of "I".
+    Psi[i].psiExam();  // Examine recent Psi nodes.
+      if (psi == psi0) {  // Could just test for concept # "50".
+        Psi[i] = new psiNode(psi0,24,psi2,psi3,psi4,psi5,psi6,psi7);
+      spike = 12; // 18sep2006
+   // pre = psi3; // for use in spreadAct()
+      pre = psi4; // for use in spreadAct() // 22aug2008
+   // seq = psi5; // for use in spreadAct()
+      seq = psi6; // for use in spreadAct() // 22aug2008
+      zone = i;   // for use in spreadAct()
+      spreadAct();  // 18sep2006 To engender thought about self.
+      pre = 0;
+      seq = 0;
+      spike = 0;  // 18sep2006 Reset
+      break;  // Store one instance, then "break" the loop.
+      } // End of inner if-clause to find self-concept of "I".
+  }  // End of backwards loop to find and activate self-concept.
+  psi = 0;   // 22aug2006 Reset for safety.
+  inert = 0; // Reset "inert" to build up again in Think().
+  recon = 0; // 18sep2006 Thwart asking of questions about self.
+  // Activate(); // Send concept of "I" into the Activate() module.
+} // End of Ego() called from Security() by "inert" in Think().
+
+
+// Emotion (AI4U Chapter 19, pp. 80-83)
+// may be called in sequence by aLife()
+// and is stubbed in here for several reasons,
+// including to show where it will belong when
+// implemented as the impact of a physiological
+// response (to whatever) upon a cognitive mind.
+// [The AI could show emotion through colors.]
+function Emotion() {  // atm 23aug2006
+  apb = "Emotion module has been called.";
+  Voice();  // Display the Voice:brain apb message.
+} // End of Emotion() stub.
+
+
+// Reify() is called by nounPhrase or verbPhrase to flush abstract
+// Psi concepts into the real names of English language reality.
+function Reify() {  // 6apr2008; 22aug2008
+  act = 0;
+  // In the next code, we drop the start of
+  // the search back from "t" to time-of-voice "tov"
+  // so that only pre-existing engram nodes prior to
+  // current generation will govern the generation.
+  for (i = tov; i>midway; --i) {
+    Psi[i].psiExam(); // Inspect psi1 (act)ivation
+    if (psi1 > 0) {   // If any psi has a positive "act"
+      act = psi1; // get the activation level and...
+   // enx = psi6; // ... the transfer-to-English flag.
+      enx = psi7; // ... the transfer-to-English flag. 22aug2008
+        if (enx > 0) {
+          for (j = (t + 1); j>midway; --j) {
+            enLexicon[j].enExam(); // inspect English nodes
+            if (en0 == enx) {
+              if (act >= en1) { // Moncur p. 87.
+                enLexicon[j] = new enNode(en0,act,en2,en3,en4,en5);
+              } // end of fourth-deep if-clause
+            } // end of third-deep if-clause
+          } // end of inner backwards loop through Psi
+        enx = 0;
+        act = 0;
+      } // end of second-deep if-clause
+    } // end of outer if-clause
+  } // end of outer backwards loop through Psi
+  act = 0;
+} // End of Reify(); return to nounPhrase or verbPhrase.
+
+
+// reEntry() is called from Speech() so as
+// to bypass the actual input keypresses that
+// normally call the Listen() module.
+function reEntry() {  // ATM 14may2002; 16may2008
+  pov = "#"; // point-of-view "internal" symbol
+  t = (t + 1); // increment time "t"
+  onset = (spt + 1);    // from Mind.Forth AI.
+  upnext = (upnext + 1);  // 16may2008 From Audition in MindForth
+  if (upnext == 1) {  // 16may2008 A once-per-cycle event.
+    if (urpsi > 1) {  // 16may2008 If there is a positive "urpsi" for psiDamp()
+      psiDamp();      // 16may2008 psi-damp the previous (urpsi) concept.
+    }                 // 16may2008 End of test for a positive psi-dampable "urpsi"
+  }                   // 16may2008 End of test for "upnext" being equal to one.
+  if (onset == t) beg = 1; // ...if a word is beginning...
+  else beg = 0; // i.e., not a word-beginning
+  if (pho != 32) {  // As long as "pho" is a character,
+    len = (len +1); // as in Listen()
+    audSTM(); // as if user were typing in characters.
+  }  // End of test that input "pho" is not a "space".
+  if (pho == 32) Audition();   // If pho is a "space".
+} // End of reEntry(); return to Speech().
+
+
+// Voice() is called by Speech() etc.
+function Voice() {  // atm 8aug2006; or your ID & date.
+outputplus = ("<font size='+3' color='navy'>"+output+"<\/b><\/font>");
+  document.all.mouth.innerHTML = outputplus;  // output from the Mind
+  document.all.brain.innerHTML = apb;  // All Points Bulletin (was fyi)
+}  // End of Voice(); return to Speech() or elsewhere.
+
+
+// Speech() is called by nounPhrase() or verbPhrase().
+function Speech() {  // ATM 12aug2002; or your ID & date.
+  ctu = 1; // As each word starts, continuation = 1.
+  // onset = aud; // word-onset is its aud(itory) recall-vector
+  // Next we want to provide an updated value of space-time "spt"
+  // to go into reEntry() for the calculation of "onset" which
+  // transits Audition into the oldConcept module:
+  spt = (t - 1 )  // Presumably, as a word now starts.
+  do { // Build up a display of reactivated auditory engrams.
+    audMemory[aud].audExam(); // a series of aud-recalls
+    pho = aud0; // pho(neme) for use in reEntry()
+    output += aud0; // Build up the string of a word.
+    ctu = aud4; // panel item aud4 is "continuation?"
+    pov = "#"; // point-of-view "internal" symbol
+    reEntry(); // output of the mind reenters the mind.
+    aud = (aud + 1); // read audNodes one by one.
+  } // Moncur p. 98: test only at end of loop.
+  while (ctu == 1); // and one final loop while _not_
+  if (ctu == 0) { // immediately after a zero "ctu"
+    pho = 32; // ASCII 32 for SPACE-BAR
+    reEntry(); // send a blank space to reEntry()
+  }  // End of action taken for non-continuation of Aud engram.
+  output += " "; // for one space after any word
+  if (trouble == true) {  // If Diagnostic is "on"...
+    // following line is for diagnostics:
+    output += (subj_act + "+" + verb_act + "+" + dobj_act + " ")
+  } // ...show the S-V-O activations within the S-V-O output.
+  Voice(); // speak the output
+} // End of Speech(); return to nounPhrase() or verbPhrase().
+
+
+// Article() is a module that selects "a" or "the".
+function Article() {  // atm 26aug2008
+  for (i = t; i>midway; i--) {  // Look backwards for 7="the".
+    enLexicon[i].enExam();  // Inspect the English nodes.
+    if (en0 == 7) {   // If the #7 concept "the" is found...
+   // motjuste = 7;   // "nen" concept #7 for "the";
+      aud = en5;  // Auditory recall-vector for "the".
+      break;      // Finding one engram is enough.
+    }  // End of search for #7 "the".
+  }  // End of loop finding the word "the".
+  lastword = true;   // 23aug2008 Prevent a "seq" association.
+  Speech();  // Speak or display the word "the".
+  lastword = false;  // 23aug2008 Reset "lastword" flag.
+}  // End of function Article() called from nounPhrase().
+
+
+// nounPhrase() is called by SVO() or verbPhrase()
+// to select nouns or pronouns in a generated thought.
+function nounPhrase() {  // 21feb2007
+  Reify(); // to move abstract Psi concepts to enVocab reality.
+  abort = false;  // 29dec2006 Reset in case pre-set to true.
+  act = 0; // Activation-level carried by the "en1" flag.
+  motjuste = 0; // The "fitting word" to be selected.
+  psi = 0; // The "psi-tag" carried by the "en0" flag.
+  opt = 5; // Look for option five (a noun).
+  unk = 0; // will hold the highest found "act" value;
+  for (i = t; i>midway; --i) {
+    enLexicon[i].enExam(); // inspect English nodes
+    if (en3 == 5) { // if grammar category is "noun"
+      if (en1 > 6) {  // 22jan2007 Targetting below psiDamp() "residuum"
+        act = en1; // Obtain "act" if positive.
+        if (act > unk) {
+          motjuste = en0;
+          aud = en5; // get the auditory recall-vector
+          audjuste = en5; // 26aug2008 For delivery into Speech()
+          unk = act; // to test for an even higher "act"
+        }  // end of if-clause seeking highest activation
+      }    // end of test for a positive "act" level.
+    }      // end of if-clause checking for nouns.
+  }        // end of loop searching for most active noun.
+  star = 0;  // Reset tutorial display for showSubject().
+  node = 0;  // 11aug2006 Reset tutorial display for showVerb().
+  ufo = 0;   // 15aug2006 Reset tutorial display for showObject().
+  subj_act = unk;  // For Diagnostic mode.
+  dobj_act = unk;  // For Diagnostic mode.
+  if (motjuste == 0) { // Test for no concept winning selection.
+    // 9jan2007 Following engram-fetch code is from wtAuxSDo():
+    tov = t;  // time-of-voice for echoing input.
+    for (i = t; i>midway; i--) {  // Look backwards for 54="what".
+      enLexicon[i].enExam();  // Inspect the English nodes.
+      if (en0 == 54) {  // If the #54 concept "what" is found...
+        motjuste = 54;  // "nen" concept #54 for "what";
+        aud = en5;  // Auditory recall-vector for "what".
+        break; // 9jan2006 Use the most recent engram of "WHAT".
+      }  // End of search for #54 "what".
+    }  // End of loop finding the word "what".
+    Speech();   // 9jan2007 Speak or display the word "what".
+    act = 17;      // 7jan2007 Some activation is necessary.
+    return;  // 9jan2007 Stop the module after speaking of "WHAT".
+  }  // 7jan2007 End of test for concept number zero winning selection.
+  enDamp();  // To de-activate English concepts
+  nounval = act;  // 25dec2006 So nounAct activates all nodes equally.
+  if (act < 5) {    //  3jan2007 Paired with a low "residuum" in psiDamp().
+    if (motjuste > 0) {  // 7jan2007 Do not let concept #0 abort thinking.
+      abort = true;   // 29dec2006 Flag for termination of higher module.
+      inert = (inert + 1); // So that Security() may soon call Ego().
+      return;  // 25dec2006 Stop the module if activation is too low.
+    }  // 7jan2007 End of test for a positive motjuste concept-number.
+  }  // End of test for act(ivation) below subconscious second tier.
+
+  // nounaud = aud;  // 23aug2008 Preserve the aud value during Article()
+  Article();      // 23aug2008 A brand-new mind-module.
+  // aud = nounaud;  // 23aug2008 Restore aud after Article() usurpation.
+
+  psi = 0;       // A precaution lest psi transit Speech().
+  aud = audjuste;  // 26aug2008 Send correct onset-tag to Speech()
+  Speech();     // Display or speak the selected noun-phrase.
+  caller = "nounPhrase";  // Diagnostic for Alert boxes.
+  urpre = pre;    // Safeguard value of pre;
+  psi = motjuste;  // for sake of Activate() or nounAct().
+  nounAct();  // 10aug2006 To impart a winning activation equally
+  nounval = 0;   // 27dec2006 Safety measure after use of nounval.
+  pre = urpre;    // Restore the safeguarded value of pre.
+  // We use the call to psiDamp because we want not
+  // psi/urpsi to remain active but only its related concepts
+  // that receive activation during SPREADACT:
+  caller = "nounPhrase";  // 21nov2006 Diagnostic for Alert boxes.
+  urpsi = motjuste;    // For use in psiDamp().
+  psiDamp();           // to de-activate Psi concepts
+  // Say a SPACE-BAR 32 ?
+  act = 0;
+  motjuste = 0;        // Reset for safety.
+  psi = 0;              // Reset for safety.
+} // End of nounPhrase(); return to SVO() or verbPhrase().
+
+
+// verbPhrase is called from subject-verb-object SVO()
+// to find and express a verb +/- object.
+function verbPhrase() {  // 21feb2007
+  Reify();  // Move abstract Psi concepts to enVocab reality.
+  act = 0;  // Precaution even though zeroed in Reify().
+  aud = 0;  // Zero out the auditory recall-vector "aud".
+  detour = 0;  // 26aug2008 Reset this abort-flag at the outset.
+  en3 = 0;  // No pre-assumptions about grammar category "en3"
+  motjuste = 0; // Reset the choice of "best word" for safety.
+  opt = 8;  // Look for option eight (a verb).
+  psi = 0;
+  verbcall = 1;  // 26aug2006 For spreadAct() to call showVerb().
+  unk = 0;
+  for (i = t; i>midway; i--) {
+    enLexicon[i].enExam(); // Inspect English nodes.
+      if (en3 == 8) { // Only look at verbs, for predicate.
+        if (en1 > 1) {  // Targetting below psiDamp() "residuum"
+          act = en1; // Obtain "act" if positive.
+          if (act > unk) {
+            motjuste = en0;
+            aud = en5; // auditory recall-vector
+              if (act > 8) {       // 18aug2006
+                sloshmark = "+";  // 18aug2006 For tutorial display.
+              }  // 18aug2006 End of test for high activation.
+            unk = act; // to test for higher "act(ivation)"
+          } // end of if-clause looking for high activation
+        } // End of search for positive "act" values;
+      } else continue; // try to avoid looking at non-verbs.
+  } // end of loop cycling back through English lexicon.
+  node = 0;  // 11aug2006 Reset tutorial verb display for showVerb().
+  verbval = act;  // 26dec2006 For transferring val(ue) to verbAct.
+  verb_act = unk;   // value for display in Diagnostic mode.
+  if (motjuste == 0) { // Test for no concept winning selection.
+    // 25jan2007 Following engram-fetch code is from wtAuxSDo():
+    tov = t;  // time-of-voice for echoing input.
+    for (i = t; i>midway; i--) {  // Look backwards for 54="what".
+      enLexicon[i].enExam();  // Inspect the English nodes.
+      if (en0 == 54) {  // If the #54 concept "what" is found...
+        motjuste = 54;  // "nen" concept #54 for "what";
+        aud = en5;  // Auditory recall-vector for "what".
+        break; // 25jan2007 Use the most recent engram of "WHAT".
+      }  // End of search for #54 "what".
+    }  // End of loop finding the word "what".
+    Speech();    // Call Speech to say or display a word.
+    act = 10;    // 25jan2007 Some activation is necessary.
+    psiDecay();  // 25jan2007 to suppress activation of "WHAT".
+    return;  // 25jan2007 Stop the module after speaking of "WHAT".
+  }  // 25jan2007 End of test for concept number zero winning selection.
+// if (verb_act < 40) { // 18may2008 Test for no verb activated enough...
+  if (verb_act < 20) { // 26aug2008 To detour from low-activation verbs.
+
+// alert("vPh: act verb_act verbval = " +act+ " & " + verb_act+ " & " +verbval); //26aug2008
+    detour = 1;  // 26aug2008 Set the detour flag to 1-as-true for SVO().
+
+    tov = t;  // time-of-voice for echoing input.
+    for (i = t; i>midway; i--) {  // Look backwards for 54="what".
+      enLexicon[i].enExam();  // Inspect the English nodes.
+      if (en0 == 54) {  // If the #54 concept "what" is found...
+        motjuste = 54;  // "nen" concept #54 for "what";
+        aud = en5;  // Auditory recall-vector for "what".
+        break; // 18may2008 Use the most recent engram of "WHAT".
+      }  // End of search for #54 "what".
+    }  // End of loop finding the word "what".
+    Speech();    // Call Speech to say or display "WHAT" as a question.
+    act = 10;    // 18may2008 Some activation is necessary.
+    psiDecay();  // 18may2008 to suppress activation of "WHAT".
+    return;  // 18may2008 Stop the module after speaking of "WHAT".
+  }  // 18may2008 End of test for no verb with enough activation.
+
+  if (detour==0) {  // 26aug2008 Speak verb only if detour is false.
+    Speech();         // Call Speech to say or display a word.
+
+    // Test for motjuste greater than zero to avoid spurious "YES"?
+    psi = motjuste;   // 10aug2006: For use in verbAct().
+    verbAct();        // For slosh-over of subj+verb onto object.
+    urpsi = motjuste; // For use in psiDamp().
+    caller = "verbPhrase";  // 21nov2006 Diagnostic for Alert boxes.
+    psiDamp();        // Deactivate any concept after using it.
+    enDamp();         // to de-activate English concepts
+    motjuste = 0;     // Reset for safety.
+    psi = 0;          // Reset for safety.
+    pho = " ";
+    // Make a SPACE-BAR 32?
+    nouncall = 4;  // 23nov2006 Specify that noun will be a dir. obj.
+    nounPhrase();  // Call to nounPhrase for SVO object.
+    nouncall = 0;   // 23nov2006 Reset in case of no object found.
+  }  // 26aug2008 End of "detour" test.
+} // End of verbPhrase(); return to subject-verb-object SVO().
+
+
+// Conjoin() selects a hopefully appropriate conjunction and
+// allows the AI to answer a "why" question with a "because"
+// statement, under the assumption here that the thinking of
+// the AI will tend to display a modicum of explanatory logic.
+function Conjoin() {  // ATM 27oct2002; or your ID & date.
+  if (questype == 16) {    // If the question is "why" ...
+    conj = 18;             // use the conjunction "because";
+  } else conj = 17;        // otherwise use "and".
+  for (i = t; i>midway; i--) {  // Look backwards for "conj".
+    enLexicon[i].enExam();  // Inspect the English nodes.
+      if (en0 == conj) {    // If the conjunction is found...
+        motjuste = conj;    // "nen" concept for conjunction;
+        aud = en5;  // Auditory recall-vector for conjunction.
+        break;  // Only find one instance of the conjunction.
+      }  // End of search for conjunction.
+    }  // End of loop finding the appropriate conjunction.
+  Speech();      // Speak or display the chosen conjunction.
+  questype = 0;  // Reset "questype" after any use.
+}  // End of Conjoin(); return to the SVO() module.
+
+
+// SVO() is called by the English() thought module and is a
+// subject-verb-object structure for an English sentence.
+function SVO() {  // ATM 27oct2002; atm 17aug2006; 26aug2008
+  document.all.cosmos.innerHTML = "";  // 10sep2006 test
+  muse = 1;       // Default of Mind is to muse or ruminate.
+  svoyes = true;  // 20apr2008 Enable dynamic Tutorial display.
+  tov = t;        // time-of-voice for echoing input.
+  audMemory[t] = new audNode(" ",0,"{"," "," "," ");
+  while (muse == 1) {  // or until otherwise interrupted.
+    act = 2;   // 9aug2006: Set a low threshold to ensure thought.
+    for (i=t; i>midway; --i) {
+      Psi[i].psiExam();  // Examine recent Psi nodes.
+   // if (psi4 == 5) {   // Only look at nouns (i.e., subject).
+      if (psi5 == 5) {   // 22aug2008 Only look at nouns (i.e., subject).
+        if (psi1 > act) {  // A check for high activation
+          act = psi1;  // Let the found value be the new measure.
+          psi = psi0;  // Seize the psi # for Activate().
+       // jux = psi2;  // Taking note of any "jux" value.
+          jux = psi3;  // 22aug2008 Taking note of any "jux" value.
+        }  // End of if-clause looking for high activations.
+      }  // End of if-clause looking for nouns as potential subjects.
+    }  // End of backwards loop seeking high activations.
+    if (psi > 0) {   // Merely an extra precaution.
+      nouncall = 1;  // 23nov2006 SVO first calls subject.
+      nounPhrase();  // Call to nounPhrase for SVO subject.
+      nouncall = 0;  // 23nov2006 Reset for sake of safety.
+     if (abort == true) {  // 29dec2006 If subject-selection is aborted...
+       abort = false;  // 29dec2006 Reset flag as action is being taken.
+       apb=("<font color='red'>"+"Defective thought is being aborted."+"<\/font>");
+       Voice();  // 31dec2006 Display the Voice:brain apb message.
+       return;  // 29dec2006 Stop the module if activation is too low.
+     }  // 29dec2006 End of test for abort-flag from a lower module.
+      pho = " ";     // Reset "pho" by blanking it out.
+    }  // End of check for a found, activated Psi.
+    verbcall = 1;    // 30aug2006 Let SVO govern nouncall & verbcall.
+    verbPhrase();    // Find a verb +/- a direct object.
+    nouncall = 0;    // 30aug2006 Reset.
+    verbcall = 0;    // 30aug2006 Reset.
+
+    if (detour==1) {  // 26aug2008 If verbPhrase rejects a verb...
+      recon = 1;      // 26aug2008 Necessary to trigger a question.
+  //  alert("SVO: No valid verb found; taking detour to ask question."); //26aug2008
+      detour = 0;     // 26aug2008 Reset "detour" after setting "recon" flag.
+    } // 26aug2008 "recon" will prompt a higher module to ask a question.
+
+    bias = 5;        // Expect to parse a noun=5.
+    subj_act = 0;    // Reset the troubleshooting diagnostic.
+    verb_act = 0;    // a troubleshooting diagnostic.
+    dobj_act = 0;    // a troubleshooting diagnostic.
+    muse = 0;        // 11aug2006: Only one currently SVO needed.
+    break;           // 11aug2006: Only one currently SVO needed.
+    if ((t - tov) > 18) {  // 11aug2006 Aim for a single clause.
+      muse = 0;      // An escape clause.
+      break;         // Avoid ending output with a conjunction.
+    }  // End of error-trapping for sentence too long.
+ // Conjoin();  // Insert conjunction, e.g., "and" or "because".
+ // Conjoin();  // 9aug2006: Skip Conjoin(); force some thinking,
+  }  // End of while-muse==1 loop.
+  verbClip();   // 17may2008 So as to leave a modicum of activation.
+  abort = false;  // 29dec2006 Reset for safety.
+  svoyes = false; // 20apr2008 Show dynamic Tutorial only during SVO().
+}  // End of SVO(); return to English().
+
+
+// auxVerb provides part of a compound verb form.
+function auxVerb() {  // ATM 27oct2002; or your ID & date.
+  // "can" -- one possible auxiliary verb.
+  // "dare" -- one possible auxilary verb.
+  // "do" -- call form of auxiliary verb "do":
+  for (i = t; i>midway; i--) {  // Look backwards for 59="do".
+    enLexicon[i].enExam();  // Inspect the English nodes.
+    if (en0 == 59) {  // If the #59 concept "do" is found...
+      motjuste = 59;  // "nen" concept #59 for "do";
+      aud = en5;  // Auditory recall-vector for "do".
+      break;      // Stop searching for standard concept "do".
+    }  // End of search for AI standards concept #59 "do".
+  }  // End of loop finding the auxiliary verb "do".
+  Speech();  // Speak or display the auxiliary verb "do".
+  // "may" -- one possible auxiliary verb.
+  // "must" -- one possible auxilary verb.
+  // "shall" -- one possible auxiliary verb.
+  // "will" -- one possible auxiliary verb.
+} // End of auxVerb; return to negSVO().
+
+// negSVO negates a subject-verb-object sentence.
+function negSVO() {  // ATM 27oct2002; or your ID & date.
+  tov = t;  // time-of-voice for echoing input.
+  audMemory[t] = new audNode(" ",0,"{"," "," "," ");
+  nounPhrase();  // First call to nounPhrase for negSVO subject.
+  pho = " ";     // Reset "pho" by blanking it out.
+  auxVerb();     // For "do" among several auxiliary verbs.
+  for (i = t; i>midway; i--) {  // Look backwards for 12="not".
+    enLexicon[i].enExam();  // Inspect the English nodes.
+    if (en0 == 12) {  // If the #12 concept "not" is found...
+      motjuste = 12;  // "nen" concept #12 for "not";
+      aud = en5;  // Auditory recall-vector for "not".
+      break;      // Finding one engram is enough.
+    }  // End of search for #12 "not".
+  }  // End of loop finding the word "not".
+  Speech();  // Speak or display the word "not".
+  verbPhrase();    // Find a verb +/- a direct object.
+  // We insert a pov="}" so that Rejuvenate()
+  // may detect incomplete thoughts to be forgotten.
+  audMemory[t] = new audNode(" ",0,"}"," "," "," ");
+  bias = 5;      // Expect to parse a noun=5.
+  t = (t+1); // Advance time to separate reentered words.
+  spt = (spt + 1); // Increment space-time simultaneously.
+  enDamp();  // Deactivate the English lexicon.
+  audDamp(); // Protect audRecog()?
+}  // End of negSVO(); return to English() module.
+
+
+// wtAuxSDo() is a question of "What do (nouns) do?".
+function wtAuxSDo() {  // atm 18sep2006; or your ID & date.
+  tov = t;  // time-of-voice for echoing input.
+  for (i = t; i>midway; i--) {  // Look backwards for 54="what".
+    enLexicon[i].enExam();  // Inspect the English nodes.
+    if (en0 == 54) {  // If the #54 concept "what" is found...
+      motjuste = 54;  // "nen" concept #54 for "what";
+      aud = en5;  // Auditory recall-vector for "what".
+      // break;
+    }  // End of search for #54 "what".
+  }  // End of loop finding the word "what".
+  Speech();   // Speak or display the word "what".
+  // Call form of auxiliary verb "do":
+  auxVerb();  // Any of several auxiliary verbs.
+  for (i = t; i>midway; i--) {  // Look backwards for "topic".
+    enLexicon[i].enExam();  // Inspect the English nodes.
+    if (en0 == topic) {  // If the "topic" concept is found...
+      motjuste = topic;  // "nen" concept #"topic";
+      aud = en5;  // Auditory recall-vector for "topic".
+      // break;
+    }  // End of search for #"topic".
+  }  // End of loop finding the lexical "topic" item.
+  Speech();  // Speak or display the lexical "topic".
+  for (i = t; i>midway; i--) {  // Look backwards for 59="do".
+    enLexicon[i].enExam();  // Inspect the English nodes.
+    if (en0 == 59) {  // If the #59 concept "do" is found...
+      motjuste = 59;  // "nen" concept #59 for "do";
+      aud = en5;  // Auditory recall-vector for "do".
+      // break;
+    }  // End of search for #59 "do".
+  }  // End of loop finding the verb "do".
+  Speech();    // Speak or display the verb "do".
+  topic = "";  // Reset "topic" after using it.
+}  //  End of wtAuxSDo(); return to the Ask() module.
+
+// Ask() enables the AI to ask a question, query a database,
+// search the Web with a search engine, or swallow ontologies.
+function Ask() {  // ATM 12aug2002; or your ID & date.
+  caller = "Ask()";  // 18sep2006 Diagnostic for Alert boxes.
+// wtAuxSDo();     // Ask a "What do (blank)s do?" question.
+// wtAuxSDo();     // 18sep2006 Temporarily disable questions.
+  recon = 0;      // Reset the incentive to ask questions.
+}  // End of Ask(); return to English() module.
+
+
+// English() is called by Think and in turn calls
+// subject-verb-object SVO or another syntax structure.
+function English() {  // 21feb2007
+  if (recon > 0)  Ask();  // If urge to reconnoiter or to learn
+  else {  // is positive, then ask a question, but otherwise...
+    if (jux == 12) negSVO();  // If verb has 12="not" negative adverb.
+    else SVO();           // otherwise call the "positive" SVO syntax.
+    jux = 0;             // Safety measure of resetting "jux" to zero.
+  }  // End of _not_ asking a question.
+}  // End of English(); return to Think().
+
+
+// Think() is called when the AI mind is in
+// a state of "quiet" after cessation of any current input.
+function Think() {  // atm21jul2004; atm 23jan2007; 22aug2008
+  inert = (inert + 1); // So that Security() may call Ego().
+  abort = false;  // 29dec2006
+  if (quiet == true) {  // If not processing input...
+    pov = "#"; // All thinking has "internal" point-of-view.
+    output = ""; // Attempt at persistent display.
+    outputplus = ""; // 21nov2006 Attempt to prevent old-output display.
+    act = 1;   // 9aug2006: Try to make sure that thinking occurs.
+    for (i=t; i>midway; --i) {
+       Psi[i].psiExam();  // Examine recent Psi nodes.
+    // if (psi4 > 0) {    // 23jan2007 Verbs have been verb-cleared.
+       if (psi5 > 0) {    // 23jan2007 Verbs have been verb-cleared; 22aug2008
+         if (psi0 == 59); // 20feb2007 Removing a troublemaker comment.
+         else {  // Look for main verbs; avoid "do".
+           if (psi1 > act) {  // A check for possible chain reaction.
+             act = psi1;  // Let the found value be the new measure.
+             psi = psi0;  // Seize the psi # for Activate().
+          // jux = psi2;  // Checking for negative "jux",
+             jux = psi3;  // 22aug2008 Checking for negative "jux",
+                          // to cause the calling of negSVO syntax.
+           }  // End of if-clause looking for high activations.
+         }  // End of if-clause avoiding forms of "do".
+       }  // End of if-clause looking for possible negative verbs.
+    }  // End of backwards loop seeking high activations.
+    if (psi > 0) {
+      English(); // Calling one or more choices of English syntax.
+ //   inert = 0; // Belongs not in English() but where incremented.
+    }  // End of test for presence of a psi concept.
+ // psiDecay();  // After thinking, let stray activations decay.
+ // psiDecay();  // 22jan2007 Avoid conflict with nounPhrase threshold.
+ // verbClear();  // 23jan2007 Let subject-nouns activate associated verbs.
+  }  // End of test for a "quiet" state with no input coming in.
+  ordo = 0;  // 28nov2006 Reset of the word-counter variable.
+} // End of Think().
+
+
+function showSubject() {  // 30aug2006
+  var kb = document.getElementById("cosmos");
+  var seti = document.getElementById("star");
+  var set = (document.getElementById("star").value);
+  seti.value = set;
+  if (brevity == 1) set = 1;
+  if (brevity == 2) set = 2;
+  if (brevity == 3) set = 3;
+  if (brevity == 4) set = 4;
+  if (brevity == 5) set = 5;
+  if (brevity == 6) set = 6;
+  if (brevity == 7) set = 7;
+  if (brevity == 8) set = 8;  // For larger "cns" memories.
+  if (brevity == 9) set = 9;    // 5mar2007
+  if (brevity == 10) set = 10;  // 5mar2007
+  if (brevity == 11) set = 11;  // 5mar2007
+  if (brevity == 12) set = 12;  // 5mar2007
+  if (brevity == 13) set = 13;  // 5mar2007
+  if (brevity == 14) set = 14;  // 5mar2007
+  if (brevity == 15) set = 15;  // 5mar2007
+  if (brevity == 16) set = 16;  // 5mar2007
+  var sunset = "sun"+set;
+  var fact = document.createElement("div");
+  fact.setAttribute("id",sunset);
+  fact.style.setAttribute('position', 'absolute');
+  fact.style.setAttribute('left', '10');
+  fact.style.setAttribute('top', '50');
+  if (set==1) fact.style.setAttribute('top', '240');  // 24apr2008
+  if (set==2) fact.style.setAttribute('top', '260');  // 24apr2008
+  if (set==3) fact.style.setAttribute('top', '280');  // 24apr2008
+  if (set==4) fact.style.setAttribute('top', '300');  // 24apr2008
+  if (set==5) fact.style.setAttribute('top', '320');  // 24apr2008
+  if (set==6) fact.style.setAttribute('top', '340');  // 24apr2008
+  if (set==7) fact.style.setAttribute('top', '360');  // 24apr2008
+  if (set==8) fact.style.setAttribute('top', '380');  // 24apr2008
+  if (set==9) fact.style.setAttribute('top', '400');  // 24apr2008
+  if (set==10) fact.style.setAttribute('top', '420'); // 24apr2008
+  if (set==11) fact.style.setAttribute('top', '440'); // 24apr2008
+  if (set==12) fact.style.setAttribute('top', '460'); // 24apr2008
+  if (set==13) fact.style.setAttribute('top', '480'); // 24apr2008
+  if (set==14) fact.style.setAttribute('top', '500'); // 24apr2008
+  if (set==15) fact.style.setAttribute('top', '520'); // 24apr2008
+  if (set==16) fact.style.setAttribute('top', '540'); // 24apr2008
+  fact.style.setAttribute('width', '200');
+  fact.style.setAttribute('height', '19');
+  fact.style.setAttribute('backgroundColor', 'aqua');
+  holdaud = aud; // 20aug2006 So as to restore aud value.
+  do { // Auditory engram display-code adapted from Speech()
+    audMemory[aud].audExam(); // a series of aud-recalls
+    tsubject += aud0; // Build up the string of a word.
+    ctu = aud4; // panel item aud4 is "continuation?"
+    aud = (aud + 1); // Read audNodes one by one.
+  } // Moncur p. 98: test only at end of loop.
+  while (ctu == 1); // and one final loop while _not_
+    if (ctu == 0) { // immediately after a zero "ctu"
+    pho = 32; // ASCII 32 for SPACE-BAR
+  }  // End of action taken for non-continuation of Aud engram.
+  tsubject += " "; // for one space after any word
+  fact.innerHTML = " " + tsubject + " associates to " + engram;
+  preview = "";  // 24aug2006 A reset during test.
+  seqverb = "";  // 29aug2006 Blank out after each use.
+  engram = "";   // 20apr2008 Blank out after each use.
+  aud = holdaud;  // 20aug2006 Restore the original aud value.
+  tsubject = "";  // 20aug2006 A reset to prevent accumulation.
+  kb.appendChild(fact);
+}  // End of showSubject tutorial display module.
+
+
+function showVerb() {      // 30aug2006
+  var aha = document.getElementById("idea");
+  var taxi = document.getElementById("node");
+   var tax = (document.getElementById("node").value);
+  taxi.value = tax;
+  if (equity == 1) tax = 1;
+  if (equity == 2) tax = 2;
+  if (equity == 3) tax = 3;
+  if (equity == 4) tax = 4;
+  if (equity == 5) tax = 5;
+  if (equity == 6) tax = 6;
+  if (equity == 7) tax = 7;
+  if (equity == 8) tax = 8;  // For larger "cns" memories.
+  if (equity == 9) tax = 9;    // 5mar2007
+  if (equity == 10) tax = 10;  // 5mar2007
+  if (equity == 11) tax = 11;  // 5mar2007
+  if (equity == 12) tax = 12;  // 5mar2007
+  if (equity == 13) tax = 13;  // 5mar2007
+  if (equity == 14) tax = 14;  // 5mar2007
+  if (equity == 15) tax = 15;  // 5mar2007
+  if (equity == 16) tax = 16;  // 5mar2007
+  var syntax = "syn"+tax;
+  var concept = document.createElement("div");
+  concept.setAttribute("id",syntax);
+  concept.style.setAttribute('position', 'absolute');
+  concept.style.setAttribute('left', '216');
+  concept.style.setAttribute('top', '60');
+  if (tax==1) concept.style.setAttribute('top', '250');  // 24apr2008
+  if (tax==2) concept.style.setAttribute('top', '270');  // 24apr2008
+  if (tax==3) concept.style.setAttribute('top', '290');  // 24apr2008
+  if (tax==4) concept.style.setAttribute('top', '310');  // 24apr2008
+  if (tax==5) concept.style.setAttribute('top', '330');  // 24apr2008
+  if (tax==6) concept.style.setAttribute('top', '350');  // 24apr2008
+  if (tax==7) concept.style.setAttribute('top', '370');  // 24apr2008
+  if (tax==8) concept.style.setAttribute('top', '390');  // 24apr2008
+  if (tax==9) concept.style.setAttribute('top', '410');  // 24apr2008
+  if (tax==10) concept.style.setAttribute('top', '430'); // 24apr2008
+  if (tax==11) concept.style.setAttribute('top', '450'); // 24apr2008
+  if (tax==12) concept.style.setAttribute('top', '470'); // 24apr2008
+  if (tax==13) concept.style.setAttribute('top', '490'); // 24apr2008
+  if (tax==14) concept.style.setAttribute('top', '510'); // 24apr2008
+  if (tax==15) concept.style.setAttribute('top', '530'); // 24apr2008
+  if (tax==16) concept.style.setAttribute('top', '550'); // 24apr2008
+  concept.style.setAttribute('width', '220');
+  concept.style.setAttribute('height', '19');
+  concept.style.setAttribute('backgroundColor', 'pink');
+  holdaud = aud;  // So as later to restore aud value.
+  do { // Auditory engram display-code adapted from Speech()
+    audMemory[aud].audExam(); // a series of aud-recalls
+    tverb += aud0; // Build up the string of a word.
+    ctu = aud4; // panel item aud4 is "continuation?"
+    aud = (aud + 1); // Read audNodes one by one.
+  } // Moncur p. 98: test only at end of loop.
+  while (ctu == 1); // and one final loop while _not_
+    if (ctu == 0) { // immediately after a zero "ctu"
+    pho = 32; // ASCII 32 for SPACE-BAR
+  }  // End of action taken for non-continuation of Aud engram.
+  tverb += " "; // for one space after any word
+  concept.innerHTML = tverb + " associates to " + sloshmark + engram;
+  preview = "";  // 27aug2006 A reset during test.
+  engram = "";   // 20apr2008 Blank out after each use.
+  aud = holdaud;  // 18aug2006 Restore the original aud value.
+  tverb = "";  // 18aug2006 A reset to prevent accumulation.
+  aha.appendChild(concept);
+}  // End of showVerb tutorial display module.
+
+
+function showObject() {  // 27aug2006
+  var query = document.getElementById("radar");
+  var turi = document.getElementById("ufo");
+  var tur = (document.getElementById("ufo").value);
+  turi.value = tur;
+  if (city == 1) tur = 1;
+  if (city == 2) tur = 2;
+  if (city == 3) tur = 3;
+  if (city == 4) tur = 4;
+  if (city == 5) tur = 5;
+  if (city == 6) tur = 6;
+  if (city == 7) tur = 7;
+  if (city == 8) tur = 8;  // For larger "cns" memories.
+  if (city == 9) tur = 9;    // 5mar2007
+  if (city == 10) tur = 10;  // 5mar2007
+  if (city == 11) tur = 11;  // 5mar2007
+  if (city == 12) tur = 12;  // 5mar2007
+  if (city == 13) tur = 13;  // 5mar2007
+  if (city == 14) tur = 14;  // 5mar2007
+  if (city == 15) tur = 15;  // 5mar2007
+  if (city == 16) tur = 16;  // 5mar2007
+  var abitur = "abi"+tur;
+  var answer = document.createElement("div");
+  answer.setAttribute("id",abitur);
+  answer.style.setAttribute('position', 'absolute');
+  answer.style.setAttribute('left', '440');
+  answer.style.setAttribute('top', '50');
+  if (tur==1) answer.style.setAttribute('top', '240');  // 24apr2008
+  if (tur==2) answer.style.setAttribute('top', '260');  // 24apr2008
+  if (tur==3) answer.style.setAttribute('top', '280');  // 24apr2008
+  if (tur==4) answer.style.setAttribute('top', '300');  // 24apr2008
+  if (tur==5) answer.style.setAttribute('top', '320');  // 24apr2008
+  if (tur==6) answer.style.setAttribute('top', '340');  // 24apr2008
+  if (tur==7) answer.style.setAttribute('top', '360');  // 24apr2008
+  if (tur==8) answer.style.setAttribute('top', '380');  // 24apr2008
+  if (tur==9) answer.style.setAttribute('top', '400');  // 24apr2008
+  if (tur==10) answer.style.setAttribute('top', '420'); // 24apr2008
+  if (tur==11) answer.style.setAttribute('top', '440'); // 24apr2008
+  if (tur==12) answer.style.setAttribute('top', '460'); // 24apr2008
+  if (tur==13) answer.style.setAttribute('top', '480'); // 24apr2008
+  if (tur==14) answer.style.setAttribute('top', '500'); // 24apr2008
+  if (tur==15) answer.style.setAttribute('top', '520'); // 24apr2008
+  if (tur==16) answer.style.setAttribute('top', '540'); // 24apr2008
+  answer.style.setAttribute('width', '210');
+  answer.style.setAttribute('height', '19');
+  answer.style.setAttribute('backgroundColor', 'yellow'); // 24apr2008 from 'silver'
+  holdaud = aud; // 20aug2006 So as to restore aud value.
+  do { // Auditory engram display-code adapted from Speech()
+    audMemory[aud].audExam(); // a series of aud-recalls
+    tobject += aud0; // Build up the string of a word.
+    ctu = aud4; // panel item aud4 is "continuation?"
+    aud = (aud + 1); // Read audNodes one by one.
+  } // Moncur p. 98: test only at end of loop.
+  while (ctu == 1); // and one final loop while _not_
+    if (ctu == 0) { // immediately after a zero "ctu"
+    pho = 32; // ASCII 32 for SPACE-BAR
+  }  // End of action taken for non-continuation of Aud engram.
+  tobject += " "; // for one space after any word
+  answer.innerHTML = "  " + tobject + " activates " + engram;
+  preview = "";  // 27aug2006 A reset during test.
+  aud = holdaud; // 20aug2006 Restore the original aud value.
+  tobject = "";  // 20aug2006 A reset to prevent accumulation.
+  engram = "";   // 20apr2008 Blank out after each use.
+  query.appendChild(answer);
+}  // End of showObject tutorial display module.
+
+
+function wipeSubject(oldnouns) {     // 18aug2006
+  var istr = document.getElementById("cosmos");
+  var zilch = document.getElementById(oldnouns);
+  istr.removeChild(zilch);
+}  // End of wipeSubject module.
+
+function wipeVerb(oldverbs) {         // 25feb2007
+  var btdt = document.getElementById("idea");
+  var rasa = document.getElementById(oldverbs);
+  btdt.removeChild(rasa);
+} // End of wipeVerb module.
+
+function wipeObject(oldobjects) {    // 18aug2006
+  var scnr = document.getElementById("radar");
+  var nada = document.getElementById(oldobjects);
+  scnr.removeChild(nada);
+}  // End of wipeObject module.
+
+
+// Volition (AI4U Chapter 5, pp. 24-28)
+// is included as a stub to show the future
+// organization of a seed AI having free will.
+function Volition() {  // atm 23aug2006
+  apb = "Volition module has been called.";
+  Voice();  // Display the Voice:brain apb message.
+}  // End of basically no operation in the Volition stub.
+
+// Motorium (AI4U Chapter 4, pp. 20-23)
+// may be called as a stub to show the future
+// organization of advanced AI. JavaScript AI
+// is not so suitable as Mind.Forth AI for
+// implementing a robotic Motorium module.
+function Motorium() {  // atm 23aug2006
+  apb = "Motorium module has been called.";
+  Voice();  // Display the Voice:brain apb message.
+}  // End of Motorium() stub.
+
+// Diagnostic() is called from HCI() when
+// the user has clicked on the Diagnostic checkbox.
+function Diagnostic() {  // ATM 6jul2002; atm 28aug2006; atm22aug2008
+  psiList();  // to compile the list of Psi nodes.
+  enList();   // to examine En(glish) lexical nodes.
+  audList();  // to collect the auditory memory engrams.
+  if (trouble == true) {
+    document.all.tabula.innerHTML = ""; // blank out text
+    document.all.psicolumn.innerHTML = psidata;
+    document.all.encolumn.innerHTML = endata;
+    document.all.audcolumn.innerHTML = auddata;
+   } // end of if-clause
+  html = "";
+  psidata = ("<b>" + "Psi mindcore concepts" + "<\/b>" + "<BR>");
+  psidata += ("krt psi act num jux pre pos seq enx"); // associative tags.
+  endata = ("<b>" + "English lexical fibers" + "<\/b>" + "<BR>");
+  endata += ("krt nen act fex pos fin aud"); // associative tags.
+  auddata = ("<b>" + "Auditory memory nodes" + "<\/b>" + "<BR>");
+  auddata += ("krt pho act pov beg ctu psi"); // associative tags.
+}  // End of Diagnostic(); return to HCI().
+
+
+// HCI()is the Human-Computer Interface between user and program.
+// HCI()is called from buttons and checkboxes or from Security().
+function HCI() {  // 25feb2007 Changing FORM zero to FORM one.
+  if (document.all["cb3"].checked == true) {  // cb3=Diagnostic.
+    document.all["cb1"].checked = false; // Turn off Transcript.
+    document.all.souvenir.innerHTML = "";  // 22apr2008 Erase any transcript.
+    document.all["cb2"].checked = false; // 22apr2008 Turn off Tutorial.
+     tutor = false;     // 22apr2008 Turn off Tutorial.
+    trouble = true;    // Set the troubleshoot flag to "true".
+    fyi = 3;           // 22apr2008 Just in case it matters.
+  } // End of if-clause to see if "Diagnostic" is checked.
+  if (document.all["cb3"].checked == false) {  // "Diagnostic".
+    document.all.tabula.innerHTML = ""; // 22apr2008 Blank out text.
+    document.all.psicolumn.innerHTML = "";  // 22apr2008
+    document.all.encolumn.innerHTML = "";   // 22apr2008
+    document.all.audcolumn.innerHTML = "";  // 22apr2008
+    trouble = false;     // Set the diagnostic flag to "false".
+  } // end of if-clause to see if Diagnostic is NOT checked.
+  if (document.all["cb1"].checked == true) {  // i.e., Transcript.
+    document.all["cb2"].checked = false; // Turn off Tutorial.
+     document.all["cb3"].checked = false; // Turn off Diagnostic.
+    document.all.tabula.innerHTML = ""; // 22apr2008 Blank out text.
+    document.all.psicolumn.innerHTML = "";  // 22apr2008
+    document.all.encolumn.innerHTML = "";   // 22apr2008
+    document.all.audcolumn.innerHTML = "";  // 22apr2008
+    trouble = false;     // Set the diagnostic flag to "false".
+    hardcopy = true;
+    fyi = 1;  // 22apr2008
+    now = new Date();
+    adcopy=
+    ("<font size='+2'>Transcript of " + now + "<\/b><\/font>");
+    document.all.souvenir.innerHTML = adcopy;
+  } // end of if-clause to see if "Transcript" is checked.
+  if (document.all["cb1"].checked == false) {  // "Transcript".
+    document.all.souvenir.innerHTML = "";  // 22apr2008 Erase any transcript.
+    hardcopy = false;
+    document.all.tabula.innerHTML = "";  // 19apr2008
+  } // end of if-clause to see if Transcript is NOT checked.
+  if (hardcopy == true) {  // If session transcript is to be printed,
+    if (userline != "" || output != "" ) {  // if data are present,
+      Transcript(); // display conversation for optional printing.
+    }  // End of test for "hardcopy" transcript flag.
+  }  // End of if-clause to call Transcript().
+  // 2may2008 Following code is from defunct Tutorial() module:
+  if (document.all["cb2"].checked == true) {
+    document.all["cb1"].checked = false; // Turn off Transcript.
+    document.all.souvenir.innerHTML = "";  // 22apr2008 Erase any transcript.
+    hardcopy = false;  // 22apr2008 Turn off Transcript.
+    document.all["cb3"].checked = false; // Turn off Diagnostic.
+    document.all.tabula.innerHTML = ""; // 22apr2008 Blank out text.
+    document.all.psicolumn.innerHTML = "";  // 22apr2008
+    document.all.encolumn.innerHTML = "";   // 22apr2008
+    document.all.audcolumn.innerHTML = "";  // 22apr2008
+    trouble = false;   // 22apr2008 Turn off Diagnostic
+    tutor = true; // a flag for Tutorial()
+    fyi = 2;  // 20apr2008 As if user has tabbed to Tutorial.
+  } // end of if-clause to see if Tutorial is checked.
+  if (document.all["cb2"].checked == false) { // 2may2008
+    tutor = false;  // 2may2008
+    if (fyi == 2) fyi = 0;  // 2may2008
+  } // end of if-clause to see if Tutorial is NOT checked.
+  if (trouble == true) {  // If a user requests Diagnostic mode,
+    Diagnostic();  // display the deep contents of the AI Mind.
+  } // End of if-clause to call Diagnostic().
+  // DIY AI:  Always return control to user:
+  if (life == true) {  // Only invite input if AI is alive.
+    document.forms[1].ear.focus(); // Display blinking cursor.
+  }  // Check HALT to stop cursor; uncheck HALT to resume cursor.
+} // End of Human-Computer Interface (HCI) function.
+
+
+// Security() is called from aLife and
+// may test for conditions that are never supposed to occur,
+// but for which there ought to be contingency plans in place.
+function Security() { // 25feb2007 FORM 0 becomes FORM 1; 4sep2008
+  HCI();  // Human-Computer Interface with checkboxes.
+  if (t > 160)  nonce = (t - 160); // 18mar2007 Debugging slosh-over.
+  if (t > (cns-64)) Rejuvenate(); // When the CNS is almost full.
+  if (life == true) {
+  apb=("The AI Mind on KB-traversal "+kbtv+" cyc "+rjc+" is alive since " +dob+ ".");
+      if (t > (cns-32)) { // Fewer than 32 engram slots are left!
+      apb = "WARNING!  Consider clicking Refresh. ";
+      apb += ("Only " + (cns-t) + " spaces are left.");
+    } // end of test for fewer than 64 engram spaces remaining.
+    // output = "This is a Security test.";  // 21nov2006
+    // output = "";  // 21nov2006 To erase old output during new input.
+    Voice();  // display the Voice:brain apb message.
+    if (inert > 9) {  // 22apr2008 Preparing to retire "inert"?
+      Ego();  // Call Ego() if Think() does not call English().
+    }  // End of security measure of calling Ego() to revive the Mind.
+  } else {    // If "life" is not "true"
+    apb=("<font color='red'>"+"Mental function suspended."+"<\/font>");
+    Voice();  // Display the Voice:brain apb message.
+  } // End of else-clause
+} // End of Security(); return to the aLife() module.
+
+
+// aLife() (artificial life) is the Robot AI Mind main loop.
+function aLife() {  // 25feb2007 Control Panel at top; Tutorial at bottom.
+  if (brevity > 0)  wipeSubject("sun" + 1); // 11aug2006 unbuild tutorial.
+  if (brevity > 1)  wipeSubject("sun" + 2); // 11aug2006 unbuild tutorial.
+  if (brevity > 2)  wipeSubject("sun" + 3); // 11aug2006 unbuild tutorial.
+  if (brevity > 3)  wipeSubject("sun" + 4); // 11aug2006 unbuild tutorial.
+  if (brevity > 4)  wipeSubject("sun" + 5); // 11aug2006 unbuild tutorial.
+  if (brevity > 5)  wipeSubject("sun" + 6); // 11aug2006 unbuild tutorial.
+  if (brevity > 6)  wipeSubject("sun" + 7); // 11aug2006 unbuild tutorial.
+  if (brevity > 7)  wipeSubject("sun" + 8); // 17aug2006 unbuild tutorial.
+  if (brevity > 8)  wipeSubject("sun" + 9); // 25feb2007 unbuild tutorial.
+  if (brevity > 9)  wipeSubject("sun" + 10); // 5mar2007 unbuild tutorial.
+  if (brevity > 10) wipeSubject("sun" + 11); // 5mar2007 unbuild tutorial.
+  if (brevity > 11) wipeSubject("sun" + 12); // 5mar2007 unbuild tutorial.
+  if (brevity > 12) wipeSubject("sun" + 13); // 5mar2007 unbuild tutorial.
+  if (brevity > 13) wipeSubject("sun" + 14); // 5mar2007 unbuild tutorial.
+  if (brevity > 14) wipeSubject("sun" + 15); // 5mar2007 unbuild tutorial.
+  if (brevity > 15) wipeSubject("sun" + 16); // 5mar2007 unbuild tutorial.
+  brevity = 0;  // 11aug2006: Reset to zero.
+  star = 0;    // 24aug2006 Reset tutorial subject display for showSubject().
+  if (equity > 0)  wipeVerb("syn" + 1); // 17aug2006 unbuild tutorial.
+  if (equity > 1)  wipeVerb("syn" + 2); // 11aug2006 unbuild tutorial.
+  if (equity > 2)  wipeVerb("syn" + 3); // 11aug2006 unbuild tutorial.
+  if (equity > 3)  wipeVerb("syn" + 4); // 11aug2006 unbuild tutorial.
+  if (equity > 4)  wipeVerb("syn" + 5); // 11aug2006 unbuild tutorial.
+  if (equity > 5)  wipeVerb("syn" + 6); // 11aug2006 unbuild tutorial.
+  if (equity > 6)  wipeVerb("syn" + 7); // 11aug2006 unbuild tutorial.
+  if (equity > 7)  wipeVerb("syn" + 8); // 17aug2006 unbuild tutorial.
+  if (equity > 8)  wipeVerb("syn" + 9); // 25feb2007 unbuild tutorial.
+  if (equity > 9)  wipeVerb("syn" + 10); // 5mar2007 unbuild tutorial.
+  if (equity > 10) wipeVerb("syn" + 11); // 5mar2007 unbuild tutorial.
+  if (equity > 11) wipeVerb("syn" + 12); // 5mar2007 unbuild tutorial.
+  if (equity > 12) wipeVerb("syn" + 13); // 5mar2007 unbuild tutorial.
+  if (equity > 13) wipeVerb("syn" + 14); // 5mar2007 unbuild tutorial.
+  if (equity > 14) wipeVerb("syn" + 15); // 5mar2007 unbuild tutorial.
+  if (equity > 15) wipeVerb("syn" + 16); // 5mar2007 unbuild tutorial.
+  equity = 0;  // 11aug2006: Reset to zero.
+  node = 0;    // 11aug2006 Reset tutorial verb display for showVerb().
+  if (city > 0)  wipeObject("abi" + 1); // 15aug2006 unbuild tutorial.
+  if (city > 1)  wipeObject("abi" + 2); // 11aug2006 unbuild tutorial.
+  if (city > 2)  wipeObject("abi" + 3); // 11aug2006 unbuild tutorial.
+  if (city > 3)  wipeObject("abi" + 4); // 11aug2006 unbuild tutorial.
+  if (city > 4)  wipeObject("abi" + 5); // 11aug2006 unbuild tutorial.
+  if (city > 5)  wipeObject("abi" + 6); // 11aug2006 unbuild tutorial.
+  if (city > 6)  wipeObject("abi" + 7); // 11aug2006 unbuild tutorial.
+  if (city > 7)  wipeObject("abi" + 8); // 17aug2006 unbuild tutorial.
+  if (city > 8)  wipeObject("abi" + 9); // 25feb2007 unbuild tutorial.
+  if (city > 9)  wipeObject("abi" + 10); // 5mar2007 unbuild tutorial.
+  if (city > 10) wipeObject("abi" + 11); // 5mar2007 unbuild tutorial.
+  if (city > 11) wipeObject("abi" + 12); // 5mar2007 unbuild tutorial.
+  if (city > 12) wipeObject("abi" + 13); // 5mar2007 unbuild tutorial.
+  if (city > 13) wipeObject("abi" + 14); // 5mar2007 unbuild tutorial.
+  if (city > 14) wipeObject("abi" + 15); // 5mar2007 unbuild tutorial.
+  if (city > 15) wipeObject("abi" + 16); // 5mar2007 unbuild tutorial.
+  city = 0;    // 15aug2006: Reset to zero.
+  ufo = 0;     // 15aug2006 Reset tutorial object display for showObject().
+  Security();  // For human control and operation of the AI.
+  Sensorium(); // Audition; other human-robot input senses.
+  // Emotion();   // Quasi-physiological influence upon thought.
+  brain = true;   // 9aug2006: For the sake of Think().
+  Think();     // Syntax and vocabulary of natural languages.
+  // Volition();  // Contemplative selection of motor options.
+  // Motorium();  // Robotic activation of motor initiatives.
+  if (life == true) {  // If the AI has not met with misadventure,
+//  apb = "aLife: calling itself; t = "+t+"; rejuvenations = "+rjc;
+//  Voice(); // Display the Voice:brain "For Your Information".
+  TID=window.setTimeout("aLife();",10000); // Aim for a brief delay.
+  }  // End of quasi-loop time-delay of arbitrary-value milliseconds.
+} // End of one pass through the aLife Mind that repeats itself.
+
+</script></head>
+<!--*********AI code is above; visible Mind is below**********-->
+<body bgcolor="white" onKeyUp="if(event.keyCode==9) Tab();" onLoad="enBoot()">
+<a name="top"></a>
+
+<fieldset>
+<legend><font color="navy"><b>
+Artificial
+ <a href="http://mind.sourceforge.net/Mind.html"
+ title="Check original source for updates to the AI4U JavaScript version.">
+Mind</a> Control Panel -
+ <a href="http://mind.sourceforge.net/userman.html"
+ title="How to operate the AI4U artificial Mind">
+AI User Manual</a> -
+ <a href="http://mentifex.virtualentity.com/js080904.html"
+ title="JavaScript AI Mind Programming Journal">
+AI Lab Notes</a> -
+ <a href="http://mind.sourceforge.net/mind4th.html"
+ title="A more powerful artificial Mind in Win32Forth">
+MindForth</a> -
+ <a href="http://aimind-i.com"
+ title="Franks AI Mind by Frank J. Russo in Win32Forth">
+http://AIMind-i.com</a></b>
+</font></legend>
+<form name="modes">
+<input type="checkbox" name="cb1" onClick="Transcript();"> Transcript
+<input type="checkbox" name="cb2" onClick="Tutorial()"> Tutorial
+<input type="checkbox" name="cb3" onClick="HCI();"> Diagnostic
+<input type="checkbox" name="cb4" onClick="Shutdown();">
+ <font color="fuchsia"><b>HALT</b></font>
+<input type="checkbox" name="cb5" onClick="Destroy();">
+ <font color="red"><b>Terminate</b></font> (close window)<br />
+</form>
+</fieldset>
+
+<div id="mouth" style="position:static;
+ background-color:silver; height:35">
+Output of the Modular AI Mind will appear here.
+</div>
+
+<form onSubmit="if (this.submitted) return true; else {CR(); return false;};">
+<b>Enter subject + verb + object and wait for spreading activation to generate a thought.
+</b><br />
+<input type="text" name="ear" value="" size="80" onKeyDown="Listen()">
+</form>
+
+<div id="brain" style="position:static;
+ background-color:lightgreen">
+Informative messages will appear here.
+</div>
+
+<noscript>
+<p>The Robot AI Mind requires Microsoft Internet Explorer <br />
+with JavaScript enabled.<br /></p></noscript>
+
+<!-- 24apr2008 From here the "div" id "teacher" has been removed. -->
+<!-- 24apr2008 The plan is to remove the canned tutorial messages. -->
+<!--  2may2008 Today the Tutorial() module is being deleted. -->
+<!--  4may2008 Tutorial() is reinstated to handle checkbox clicks. -->
+
+<div id="souvenir" style="position:static; width:640;
+ background-color:lightyellow">
+MSIE/ View/ Source:  File/ Save As... C:\Mind.html
+</div>
+
+<div id="tabula" style="position:static; width:640;
+ background-color:clear">
+Unclick Diagnostic prior to clicking on Transcript.
+</div>
+
+<!-- The Diagnostic columns are present but invisible. -->
+<div id="psicolumn" style="position:absolute; left:1; top:310;
+width:220; height:140; background-color:clear">
+</div>
+
+<div id="encolumn" style="position:absolute; left:220; top:310;
+width:200; height:140; background-color:clear">
+</div>
+
+<div id="audcolumn" style="position:absolute; left:430; top:310;
+width:200; height:140; background-color:clear">
+</div>
+
+<div id="cosmos">
+<font color="navy"><strong><pre>
+   Subject associates to verb.   Verb associates to object.    Object free-associates.
+  |--------------------------|  |--------------------------|  |----------------------|
+  | CATS associates to CHASE |  | EAT associates to  BUGS  |  | FISH activates CATCH |
+  | CATS associates to LOVE  |  | EAT associates to +FISH  |  | FISH activates LIKE  |
+  | CATS associates to HATE  |  | EAT associates to  BIRDS |  | FISH activates EAT   |
+  | CATS associates to EAT   |   --------------------------   | FISH activates CHASE |
+  | CATS associates to NEED  |                                | FISH activates AVOID |
+   --------------------------                                   ---------------------
+</pre></strong></font></div>
+
+<div id="idea"> </div>
+
+<div id="radar"> </div>
+
+<input type="hidden" value="0" id="star" />
+<input type="hidden" value="0" id="node" />
+<input type="hidden" value="0" id="ufo" />
+
+<br />
+<!--WEBBOT bot="HTMLMarkup" startspan alt="Site Meter" -->
+<script type="text/javascript" language="JavaScript">var site="s13ai4udex"</script>
+<script type="text/javascript" language="JavaScript1.2" src="http://s13.sitemeter.com/js/counter.js?site=s13ai4udex">
+</script>
+<noscript>
+<a href="http://s13.sitemeter.com/stats.asp?site=s13ai4udex" target="_top">
+<img src="http://s13.sitemeter.com/meter.asp?site=s13ai4udex" alt="Site Meter" border=0></a>
+</noscript>
+<!-- Copyright (c)2002 Site Meter -->
+<!--WEBBOT bot="HTMLMarkup" Endspan -->
+<br />
+
+</body><!-- Change Log comments of the HTML variety:
+Sun.  "6apr08A.html" changes Control Panel "Death" option to Terminate.
+Sun. "13apr08A.html" makes Tutorial operate by command, not default.
+Sat. "19apr08A.html" erases transcript if user unclicks the checkbox.
+Sun. "20apr08A.html" fixes problem of checkbox not governing Tutorial.
+Tues."22apr08A.html" changes link panel on screen; debugs checkboxes.
+Thur."24apr08A.html" elevates dynamic tutorial; removes static display.
+Fri.  "2may08A.html" deletes the Tutorial() module in favor of HCI().
+Sun.  "4may08A.html" reinstates Tutorial() for Control Panel harmony.
+Wed. "14may08A.html" abandons "actset"; uses MindForth "spike" values.
+Thur."15may08A.html" introduces "upnext" and "obstat" from Mind.Forth.
+Fri. "16may08A.html" implements MWA "upnext" code in reEntry() module.
+Sat. "17may08A.html" changes verbClear into verbClip as in Mind.Forth.
+Sun. "18may08A.html" fixes nounAct() bug of damping also-rans too low.
+Sat. "16aug08A.html" uses MindForth incremental activation in audRecog.
+Tues."19aug08A.html" has audRecog recognize plural of singular nouns.
+Fri. "22aug08A.html" adds a num(ber) flag to the psi array flag-panel.
+Sat. "23aug08A.html" introduces Article() module in need of debugging.
+Tues."26aug08A.html" debugs Article(); fleshes out "detour" routines.
+Thur. "4sep08A.html" implements knowledge-base traversal from MindForth.
+ (end of HTML Change Log comments) -->
+</html>
