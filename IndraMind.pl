@@ -1591,11 +1591,12 @@ $psi=101; $hlc=1; $pos=1; $num=1; $seq=571; $tkb=28; $rv=22; KbLoad();
 
   # ROBOT -- important for target user base
   # INDRA -- CHANGE ROBOT TO INDRA 2020-1-11
-$t=24; $ear[$t] = "I,0,0";    # 2018-09-08
-$t=25; $ear[$t] = "N,0,0";    # 2018-09-08
-$t=26; $ear[$t] = "D,0,0";    # 2018-09-08
-$t=27; $ear[$t] = "R,0,0";    # 2018-09-08
-$t=28; $ear[$t] = "A,0,571";  # 2018-09-08
+  # ROBOT -- CHANGE INDRA BACK TO ROBOT FOR IDENTITY BASE
+$t=24; $ear[$t] = "R,0,0";    # 2018-09-08
+$t=25; $ear[$t] = "O,0,0";    # 2018-09-08
+$t=26; $ear[$t] = "B,0,0";    # 2018-09-08
+$t=27; $ear[$t] = "O,0,0";    # 2018-09-08
+$t=28; $ear[$t] = "T,0,571";  # 2018-09-08
   $psi=571; $hlc=1; $pos=5; $dba=1; $num=1; $pre=800; $rv=24; KbLoad();
 
   # I -- innate KB-item for testing inhibition of idea-pairs
@@ -9708,7 +9709,7 @@ sub RuThink() {  #
   $output = "";  # 2016apr21: Show output between array-display and aud-input.
   $pov = 1;      # 2016apr01: thinking occurs in self or "I" mode.
   $tvb = 0;      # 2017-06-17: reset time-of-verb for safety before thinking.
-  print "\nIndra: ";  # 2016apr01: Listen to the ghost in the machine.
+  print "\nIndra: ";  # 2016apr01: Listen to the Indra in the machine.
   RuIndicative(); # 2018-09-26: Preparing also for RuImperative().
   $hlc = 3;   # 2016feb22: Think in the particular human language.
   $idea = " ";   # 2016apr23: reset for safety.
