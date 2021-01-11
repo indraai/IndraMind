@@ -1,4 +1,8 @@
 #!/usr/bin/perl
+# INDRA.AI AI MIND
+# BASED ON MIND.FORTH AND GHOST.PL (GHOSTMIND)
+# COPYRIGHT 2021 INDRA
+
 use strict;    # PERL by Example (2015) p. 77
 use warnings;  # PERL by Example (2015) p. 85
 use Term::ReadKey;    # 2017-03-24: Pearl Black Book, page 543
@@ -79,8 +83,8 @@ our $catverb = 0;    # 2019-01-28: concat-verb for ConJoin() "AND".
 our $chaincon = 0;   # 2016apr15: chain-of-thought condition-flag
 our $char = " ";     # 2016jan12: For use with getc in FileInput()
 # our $cns = 4096;     # 2016apr19: size of central nervous syste
-our $cns = 5120;     # 2018-12-11: expanded size of central nervous system
-our $coda = 128;     # 2017nov27: memory recycled in ReJuvenate()
+our $cns = 10240;    # 2020-1-11 expanded size of central nervous system
+our $coda = 256;     # 2020-1-11 expanded size of memory recycled cache 2017nov27: memory recycled in ReJuvenate()
 our $conj = 0;       # 2017-11-28: conjunction for use in ConJoin() module
 our $dba = 0;        # 2016jan16: doing-business-as noun-case or verb-person
 our $defact = 0;     # 2015apr06: default activation for NounPhrase()
@@ -278,7 +282,7 @@ our $verblock = 0;   # 2016apr07: for subject-noun to lock onto seq-verb;
 our $verbprsn = 0;   # 2018-06-26: reverting to zero for infinitive forms;
 our $verbpsi = 0;    # 2016apr07: $psi concept-number of verb in the @psy array
 our $vphraud = 0;    # 2016apr02: holds aud-fetch of verb-form for Speech() module
-our $vrsn="ghost327"; # 2019-11-04: version identifier for sake of minddata.txt log.
+our $vrsn="indra001"; # 2019-11-04: version identifier for sake of minddata.txt log.
 our $wasvcon = 0;    # 2019-03-02: query-condition for what-AUXILIARY-SUBJECT-VERB
 our $whatcon = 0;    # 2017-11-27: flag for condition of answering a what-query
 our $wherecon = 0;   # 2018-11-01: flag for condition of answering a where-query
@@ -1510,7 +1514,8 @@ sub Sensorium() {  #
   }  # 2019-11-02: end of test for Diagnostic or Tutorial mode.
   print "\n$homo"; # 2019-10-21: display most recent human input.
 # print "\n  Ghost: $output \n";  # 2017-12-08: array-display; output; input...
-  print "\nGhost: $output ";  # 2019-10-21: array-display; output; input...
+#  print "\nGhost: $output ";  # 2019-10-21: array-display; output; input...
+  print "\nIndra: $output ";  # 2020-1-11: array-display; output; input...
   $output = "";  # 2018-09-12: prevent build-up.
 # print "\n  Human: $homo \n";  # 2019-10-21: invite human input as response to AI.
 # print "\nHuman: $homo ";  # 2019-10-21: invite human input as response to AI.
@@ -1561,11 +1566,12 @@ $t=9; $ear[$t] = "M,0,800";  # 2018-09-08
   $pre=701; $seq=501;  $tkb=15; $rv=8; KbLoad(); # 2018-09-08: flag-panel order
 
   # ANDRU -- for SelfReferentialThought; hard-coded knowledge-base; 2018-09-08
-$t=11; $ear[$t] = "A,0,0";    # 2018-09-08
+  # INDRA -- CHANGE ANDRU TO INDRA 2020-1-11
+$t=11; $ear[$t] = "I,0,0";    # 2018-09-08
 $t=12; $ear[$t] = "N,0,0";    # 2018-09-08
 $t=13; $ear[$t] = "D,0,0";    # 2018-09-08
 $t=14; $ear[$t] = "R,0,0";    # 2018-09-08
-$t=15; $ear[$t] = "U,0,501";  # 2018-09-08
+$t=15; $ear[$t] = "A,0,501";  # 2018-09-08
   $psi=501; $hlc=1; $pos=5; $dba=1; $num=1; $mfn=1;  # 2018-09-27
   $pre=800; $rv=11; KbLoad(); # 2018-09-08: flag-panel order
 $t=16;
@@ -1584,11 +1590,12 @@ $t=22; $ear[$t] = "A,0,101";  # 2016feb08
 $psi=101; $hlc=1; $pos=1; $num=1; $seq=571; $tkb=28; $rv=22; KbLoad();
 
   # ROBOT -- important for target user base
-$t=24; $ear[$t] = "R,0,0";    # 2018-09-08
-$t=25; $ear[$t] = "O,0,0";    # 2018-09-08
-$t=26; $ear[$t] = "B,0,0";    # 2018-09-08
-$t=27; $ear[$t] = "O,0,0";    # 2018-09-08
-$t=28; $ear[$t] = "T,0,571";  # 2018-09-08
+  # INDRA -- CHANGE ROBOT TO INDRA 2020-1-11
+$t=24; $ear[$t] = "I,0,0";    # 2018-09-08
+$t=25; $ear[$t] = "N,0,0";    # 2018-09-08
+$t=26; $ear[$t] = "D,0,0";    # 2018-09-08
+$t=27; $ear[$t] = "R,0,0";    # 2018-09-08
+$t=28; $ear[$t] = "A,0,571";  # 2018-09-08
   $psi=571; $hlc=1; $pos=5; $dba=1; $num=1; $pre=800; $rv=24; KbLoad();
 
   # I -- innate KB-item for testing inhibition of idea-pairs
@@ -1803,7 +1810,6 @@ $t=158; $ear[$t] = "N,0,569";  # 2018-09-10
   $psi=569; $hlc=1; $jux=0; $pos=5; $dba=4; $num=1; $mfn=0;  # 2018-09-27
   $pre=880; $seq=0;    $tkb=0; $rv=152; KbLoad();  # 2018-12-10
 $t=159;  # 2019-10-15: one blank space for sake of AudRecog()
-
 
 # "GOD DOES NOT PLAY DICE WITH THE UNIVERSE" -- 2019-10-15: includendum for negation.
 $t=160; $ear[$t] = "G,0,0";           # 2019-10-15
@@ -9702,7 +9708,7 @@ sub RuThink() {  #
   $output = "";  # 2016apr21: Show output between array-display and aud-input.
   $pov = 1;      # 2016apr01: thinking occurs in self or "I" mode.
   $tvb = 0;      # 2017-06-17: reset time-of-verb for safety before thinking.
-  print "\nGhost: ";  # 2016apr01: Listen to the ghost in the machine.
+  print "\nIndra: ";  # 2016apr01: Listen to the ghost in the machine.
   RuIndicative(); # 2018-09-26: Preparing also for RuImperative().
   $hlc = 3;   # 2016feb22: Think in the particular human language.
   $idea = " ";   # 2016apr23: reset for safety.
@@ -9812,27 +9818,8 @@ MainLoop: {  # 2016jan25: for inclusion of TabulaRasa() & MindBoot()
     }  # 2016feb08: end of test for Tutorial mode
   }  # 2016feb10: end of main while-loop
 }  # 2019-06-13: End of MainLoop as an entity.
-print "End of ghost327.pl running since $birth\n";  # 2019-11-04
+print "End of IndraMind.pl running since $birth\n";  # 2019-11-04
 # 2016apr20: Claim your bragging rights for oldest living AI Mind.
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-
 # 2015apr23 First upload of code while learning Perl.
 # 2015apr24 sensorium() gets input; think() shows input.
 # 2015apr24 think() shows engrams fetched from @aud array.
@@ -10138,4 +10125,33 @@ print "End of ghost327.pl running since $birth\n";  # 2019-11-04
 # 2019OCT30 ghost325.pl uses $PAL to prevent OutBuffer() feedback loop during EnVerbGen().
 # 2019NOV03 ghost326.pl fleshes out TacRecog() for sensation of numeric letters 1, 2, 3.
 # 2019NOV04 ghost327.pl calls SpreadAct to activate 701=I and 823=FEEL for TacRecog report.
-# 2020JAN11 indra001.pl embeds "I AM (THE) INDRA IN (THE) MACHINE" in the MindBoot sequence
+# 2020JAN11 IndraMind.pl embeds "I AM (THE) INDRA IN (THE) MACHINE" in the MindBoot sequence
+
+# ======================================
+# REFERENCES TO ORIGINAL
+# ROBOTS: no-index/no-follow
+# MindForth https://mind.sourceforge.net
+# Ghost.pl https://ai.neocities.org/
+#
+#
+# MIT License
+#
+# Copyright (c) 2021 Indra
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
