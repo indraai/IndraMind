@@ -4946,6 +4946,8 @@ $t++; $ear[$t] = "R,0,0";           # 2019-11-04
 $t++; $ear[$t] = "O,0,590";         # 2019-11-04
   $psi=590; $hlc=1; $mtx=0; $pos=5; $dba=4; $num=0; $mfn=3; KbLoad();  # 2019-11-04
 $t++;  # 2019-11-04: one blank time-point for sake of AudRecog()
+
+
   print "Final size of MindBoot vault = $t. ";  # 2019-01-25: diagnostic = vault
   print "Escape to halt the AI Mind. \n";  # 2019-01-25: Inform user of option.
   print "\nTab cycles mode; Esc(ape) quits AI born $dob"; #2019-10-21
