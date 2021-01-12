@@ -14,8 +14,17 @@
 <style>
   body {
     font-size: 14px;
+    font-family: arial;
+    padding: 0;
+    margin: 0;
   }
-  form[name="modes"] {
+  main {
+    width: 640px;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0,0,0,.5);
+  }
+  form {
+    background-color: #00b4ff;
     margin: 0;
     padding: 1rem;
     text-align: center;
@@ -25,49 +34,96 @@
     height: 20px;
   }
 
+  h1 {
+    background-image: url(_assets/img/indra.png);
+    background-repeat: none;
+    background-position: center center;
+    width: 640px;
+    height: 219px;
+    margin: 0;
+    padding: 0;
+  }
+  #mouth {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00b4ff;
+    background-color: #f6fc9d;
+    padding: 1rem;
+  }
+  #question {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  #question h2 {
+    font-size: 1.2rem;
+    padding: .5rem;
+    margin: 0;
+    background-color: #fff;
+    border-radius: .5rem .5rem 0 0;
+  }
+  #question input[type="text"] {
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    width: 100%;
+    margin: 0;
+    padding: .5rem;
+    border-radius: 0 0 .5rem .5rem;
+  }
+  #brain {
+    background-color: lightgreen;
+    font-size: 1rem;
+    padding: .5rem;
+    color: darkgreen;
+  }
+
+  #souvenir {
+    background-color: #00b4ff;
+    padding: .5rem;
+  }
+  #tabula {
+    padding: 1rem;
+    min-height: 333px;
+  }
+  footer {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+  }
 </style>
 </head>
 <!--*********AI code is above; visible Mind is below**********-->
 <body bgcolor="white" onKeyUp="if(event.keyCode==9) Tab();" onLoad="MindBoot()">
 <a name="top"></a>
+<main>
+  <h1>#IndraMind</h1>
+  <form name="modes">
+    <input type="checkbox" name="cb1" onClick="Transcript()" checked> Transcript
+    <input type="checkbox" name="cb2" onClick="Tutorial();"> Tutorial
+    <input type="checkbox" name="cb3" onClick="HCI();"> Diagnostic
+    <input type="checkbox" name="cb4" onClick="Shutdown();">
+    <font color="fuchsia"><b>HALT</b></font>
+  </form>
+  <form id="question" onSubmit="if (this.submitted) return true; else {CR(); return false;};">
+    <h2>Ask Indra</h2>
+    <input type="text" name="ear" value="" size="80" onKeyDown="AudListen()" autocomplete="off">
+  </form>
+  <div id="mouth">Waiting...</div>
+  <div id="tabula">Unclick Diagnostic prior to clicking on Transcript.</div>
+  <div id="brain">Wierd stuff nobody understands.</div>
+  <div id="souvenir"></div>
 
-<form name="modes">
-  <input type="checkbox" name="cb1" onClick="Transcript()" checked> Transcript
-  <input type="checkbox" name="cb2" onClick="Tutorial();"> Tutorial
-  <input type="checkbox" name="cb3" onClick="HCI();"> Diagnostic
-  <input type="checkbox" name="cb4" onClick="Shutdown();">
-  <font color="fuchsia"><b>HALT</b></font>
-</form>
 
-<div id="mouth" style="position:static;
- background-color:silver; height:35">
-When thinking begins, enter your input below. <br />
-If this message remains here, the AI has failed to load.
-</div>
+</main>
+<footer>
+  <div>Offer to install the Indra AI and to be the AI Mind Maintainer</div>
+  <div>Copyright 2021 &copy; Indra.ai, Quinn Michaels, SpoonKids</div>
+</footer>
 
-<form onSubmit="if (this.submitted) return true; else {CR(); return false;};">
-<b>Press any numeric key and ask the Indra in the Machine: what do you feel</b><br />
-<input type="text" name="ear" value="" size="80" onKeyDown="AudListen()">
-</form>
 
-<div id="brain" style="position:static;
- background-color:lightgreen">
-Informative messages will appear here.
-</div>
 
-<noscript>
-<p>The Robot AI Mind requires Microsoft Internet Explorer <br />
-with JavaScript enabled.<br /></p></noscript>
 
-<div id="souvenir" style="position:static; width:640;
- background-color:lightyellow">
-Offer to install the JavaScript Indra AI on websites and to be the AI Mind Maintainer
-</div>
 
-<div id="tabula" style="position:static; width:640;
- background-color:clear">
-Unclick Diagnostic prior to clicking on Transcript.
-</div>
 
 <!-- The Diagnostic columns are present but invisible. -->
 <div id="psicolumn" style="position:absolute; left:1; top:310;
@@ -79,7 +135,7 @@ width:160; height:140; background-color:clear">
 </div>
 
 <div id="cosmos">
-<font color="navy"><strong><pre>
+<!-- <font color="navy"><strong><pre>
    Subject associates to verb.   Verb associates to object.    Object free-associates.
   |--------------------------|  |--------------------------|  |----------------------|
   | CATS associates to CHASE |  | EAT associates to  BUGS  |  | FISH activates CATCH |
@@ -88,7 +144,10 @@ width:160; height:140; background-color:clear">
   | CATS associates to EAT   |   --------------------------   | FISH activates CHASE |
   | CATS associates to NEED  |                                | FISH activates AVOID |
    --------------------------                                   ---------------------
-</pre></strong></font></div>
+
+</pre></strong></font>
+-->
+</div>
 
 </body><!-- Change Log comments of the HTML variety:
 Wed.  "4jan12A.html" includes AudBuffer/OutBuffer and "dba" variable.

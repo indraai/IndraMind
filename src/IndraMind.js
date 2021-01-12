@@ -324,7 +324,7 @@ var verbprsn = 0;  // reverting to zero for infinitive forms; 24jun2015
 var vip = 0;  // special ID for verb created by VerbGen; 17oct2012
 var vphract = 0;  // verb phrase activation level 22jun2011
 var vphraud = 0;  // holds aud-fetch for SpeechAct; 28jun2011
-var vrsn = "7nov19A"; // for Transcript mode; 2019-11-07
+var vrsn = "0.0.1"; // for Transcript mode; 2020.1.11
 var wasvcon = 0;  // 2019-03-03: query-condition for what-AUXILIARY-SUBJECT-VERB
 var wdsvcon = 0;  // 2018-12-22: what-do-subjects-VERB-condition for SpreadAct()
 var whatcon = 0;  // 2018-01-21: flag for condition of answering a what-query
@@ -413,8 +413,8 @@ function Destroy() {
 
 function Transcribe() {
   if (hardcopy == true) {
-   dialog += ("<P>Ghost: " + output);  // 2019-11-07: changed from Robot to Ghost
-    dialog += ("<BR>Human: <b>" + userline + '<\/b>');
+   dialog += ("<P>Indra: " + output);  // 2019-11-07: changed from Robot to Ghost
+    dialog += ("<BR>Hero: <b>" + userline + '<\/b>');
     output = "";  // avoid spurious repeats; 6nov2011
     userline = "";
   }
@@ -432,7 +432,7 @@ function Transcript() {
     hardcopy = true;
     fyi = 1;
     now = new Date();
-    adcopy=("<font size='+2'>AI Mind version "+vrsn+" on " +now+"<\/b><\/font>");
+    adcopy=("Indra Mind version "+vrsn+" on " +now);
     document.all.souvenir.innerHTML = adcopy;
   }
   Transcribe();
@@ -4993,7 +4993,7 @@ function ReEntry() {
 
 
 function Voice() {
-outputplus = ("<font size='+3' color='navy'>"+output+"<\/b><\/font>");
+outputplus = output;
   document.all.mouth.innerHTML = outputplus;
   document.all.brain.innerHTML = apb;
 }
@@ -6718,7 +6718,7 @@ function HCI() {  // http://mind.sourceforge.net/hci.html
     hardcopy = true;
     fyi = 1;
     now = new Date();
-    adcopy=("<font size='+2'>AI Mind version "+vrsn+" on " +now+"<\/b><\/font>");
+    adcopy=("Indra Mind version "+vrsn+" on " +now);
     document.all.souvenir.innerHTML = adcopy;
   }
   if (document.all["cb1"].checked == false) {
