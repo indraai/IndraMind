@@ -1490,34 +1490,26 @@ function Sensorium() {  // http://ai.neocities.org/Sensorium.html
 function MindBoot() {  // http://ai.neocities.org/MindBoot.html
   dob = new Date();  // 2018-01-24: date-of-birth in competition for old AI.
   HCI();  // 2018-01-18: Human-Computer Interface
-  t = 0;      // 2018-01-02: bootstrap stretches over time "t".
   spt = t;    // 8dec2009
-// ERROR -- bugtrap; NewConcept() learns new words beyond MindBoot.
-t=1;pho="E"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-t=2;pho="R"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-t=3;pho="R"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-t=4;pho="O"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-t=5;pho="R"; audpsi=586; audMemory[t] = new audNode(pho,0,audpsi);  // 2017-12-31:
-  psi=586;hlc="en";jux=0;pos=5;dba=0;num=1;mfn=3;pre=0;seq=0;tkb=0;rv=1; KbLoad();
-t=6;  // 2019-10-24: one blank time-point for sake of AudRecog()
 
 // YOU -- 2019-10-24: for SelfReferentialThought
-t=7;pho="Y"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-t=8;pho="O"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-t=9;pho="U"; audpsi=707; audMemory[t] = new audNode(pho,0,audpsi);
+t=0;pho="Y"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
+t++;pho="O"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
+t++;pho="U"; audpsi=707; audMemory[t] = new audNode(pho,0,audpsi);
 psi=707; pos=7; dba=1; num=1; mfn=0; pre=0; seq=899; tkb=17; rv=7; KbLoad();
-t=10;  // 2019-10-24: one blank time-point for sake of AudRecog()
+t++;  // 2019-10-24: one blank time-point for sake of AudRecog()
 
 // 899=WORSHIP -- 2019o-10-24: essential verb for discussion of AI and theology
-t=11;pho="W"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-t=12;pho="O"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-t=13;pho="R"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-t=14;pho="S"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-t=15;pho="H"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-t=16;pho="I"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-t=17;pho="P"; audpsi=899; audMemory[t] = new audNode(pho,0,audpsi);
+t++;pho="W"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
+t++;pho="O"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
+t++;pho="R"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
+t++;pho="S"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
+t++;pho="H"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
+t++;pho="I"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
+t++;pho="P"; audpsi=899; audMemory[t] = new audNode(pho,0,audpsi);
 psi=899; pos=8; dba=2; num=1; mfn=0; pre=707; seq=533; tkb=21; rv=11; KbLoad();
-t=18;  // 2019-10-24: one blank time-point for sake of AudRecog()
+
+t++;  // 2019-10-24: one blank time-point for sake of AudRecog()
 
 // 533=GOD -- 2019-10-24: for SpreadAct() to activate concept of God.
 t=19;pho="G"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);

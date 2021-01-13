@@ -1544,602 +1544,663 @@ sub MindBoot() {  #
   $t = 0;  # 2015apr26: bootstrap stretches over time "$t".
   print "MindBoot loads the knowledge base... ";  # 2019-01-25
   print "TAB to change display-mode. \n";  # 2019-01-25:
-  # ERROR -- first word so any bug will announce itself
-
-  # LOAD IN THE LANGUAGE MODELS HERE AT MINDBOOT
-  my $myLangRefDecoded = decode_json($myHashEncoded);
-  my %myLangDecoded = %$myHashRefDecoded;
-
-  $t=0; $ear[$t] = "E,0,0";    # 2016mar12
-  $t=1; $ear[$t] = "R,0,0";    # 2016mar12
-  $t=2; $ear[$t] = "R,0,0";    # 2016mar12
-  $t=3; $ear[$t] = "O,0,0";    # 2016mar12
-  $t=4; $ear[$t] = "R,0,586";  # 2016mar12
-  $tru = 0;  # 2018-09-26: TEST to prevent uninitialized value
-  $psi=586; $hlc=1; $jux=0; $pos=5; $dba=0; $num=1; $mfn=3;  # 2018-09-27
-  $pre=0;   $seq=0;    $tkb=0; $rv=0; KbLoad();  # 2018-07-01: flag-panel in order.
 
   # I -- for SelfReferentialThought; hard-coded knowledge-base; 2018-09-08
-$t=6; $ear[$t] = "I,0,701";    # 2018-09-08
+$t++; $ear[$t] = "I,0,701";    # 2018-09-08
   $tru=8; $psi=701; $hlc=1; $pos=7; $dba=1; $num=1; # 2018-09-30
   $seq=800; $tkb=9; $rv=6; KbLoad(); # 2018-09-08: flag-panel order
 
+$t++;  # 2020-1-12: time point
+
   # AM -- 1st person singular of 800=BE; hard-coded knowledge-base; 2018-09-08
-$t=8; $ear[$t] = "A,0,0";    # 2018-09-08
-$t=9; $ear[$t] = "M,0,800";  # 2018-09-08
+$t++; $ear[$t] = "A,0,0";    # 2018-09-08
+$t++; $ear[$t] = "M,0,800";  # 2018-09-08
   $psi=800; $hlc=1; $pos=8; $dba=1; $num=1; # 2018-09-27
   $pre=701; $seq=501;  $tkb=15; $rv=8; KbLoad(); # 2018-09-08: flag-panel order
 
+$t++;  # 2020-1-12: time point
+
   # ANDRU -- for SelfReferentialThought; hard-coded knowledge-base; 2018-09-08
   # INDRA -- CHANGE ANDRU TO INDRA 2020-1-11
-$t=11; $ear[$t] = "I,0,0";    # 2018-09-08
-$t=12; $ear[$t] = "N,0,0";    # 2018-09-08
-$t=13; $ear[$t] = "D,0,0";    # 2018-09-08
-$t=14; $ear[$t] = "R,0,0";    # 2018-09-08
-$t=15; $ear[$t] = "A,0,501";  # 2018-09-08
+$t++; $ear[$t] = "I,0,0";    # 2018-09-08
+$t++; $ear[$t] = "N,0,0";    # 2018-09-08
+$t++; $ear[$t] = "D,0,0";    # 2018-09-08
+$t++; $ear[$t] = "R,0,0";    # 2018-09-08
+$t++; $ear[$t] = "A,0,501";  # 2018-09-08
   $psi=501; $hlc=1; $pos=5; $dba=1; $num=1; $mfn=1;  # 2018-09-27
   $pre=800; $rv=11; KbLoad(); # 2018-09-08: flag-panel order
-$t=16;
+
+$t++;
 
   # I -- innate KB-item for testing inhibition of idea-pairs
-$t=17; $ear[$t] = "I,0,701";  # 2018-09-27
-$psi=701; $hlc=1; $pos=7; $dba=1; $num=1; $seq=800; $tkb=20; $rv=17; KbLoad();
+$t++; $ear[$t] = "I,0,701";  # 2018-09-27
+  $psi=701; $hlc=1; $pos=7; $dba=1; $num=1; $seq=800; $tkb=20; $rv=17; KbLoad();
+
+$t++;  # 2020-1-12: time point
 
   # AM -- 1st person singular of 800=BE; 2016feb09
-$t=19; $ear[$t] = "A,0,0";    # 2018-09-08
-$t=20; $ear[$t] = "M,0,800";  # 2018-09-08
-$psi=800; $hlc=1; $pos=8; $dba=1; $num=1; $pre=701; $seq=571; $tkb=28; $rv=19; KbLoad();
+$t++; $ear[$t] = "A,0,0";    # 2018-09-08
+$t++; $ear[$t] = "M,0,800";  # 2018-09-08
+  $psi=800; $hlc=1; $pos=8; $dba=1; $num=1; $pre=701; $seq=571; $tkb=28; $rv=19; KbLoad();
+
+$t++;  # 2020-1-12: time point
 
   # A -- En(glish) Article for EnArticle module
-$t=22; $ear[$t] = "A,0,101";  # 2016feb08
-$psi=101; $hlc=1; $pos=1; $num=1; $seq=571; $tkb=28; $rv=22; KbLoad();
+$t++; $ear[$t] = "A,0,101";  # 2016feb08
+  $psi=101; $hlc=1; $pos=1; $num=1; $seq=571; $tkb=28; $rv=22; KbLoad();
+
+$t++;  # 2020-1-12: time point
 
   # ROBOT -- important for target user base
   # INDRA -- CHANGE ROBOT TO INDRA 2020-1-11
   # ROBOT -- CHANGE INDRA BACK TO ROBOT FOR IDENTITY BASE
-$t=24; $ear[$t] = "R,0,0";    # 2018-09-08
-$t=25; $ear[$t] = "O,0,0";    # 2018-09-08
-$t=26; $ear[$t] = "B,0,0";    # 2018-09-08
-$t=27; $ear[$t] = "O,0,0";    # 2018-09-08
-$t=28; $ear[$t] = "T,0,571";  # 2018-09-08
+$t++; $ear[$t] = "R,0,0";    # 2018-09-08
+$t++; $ear[$t] = "O,0,0";    # 2018-09-08
+$t++; $ear[$t] = "B,0,0";    # 2018-09-08
+$t++; $ear[$t] = "O,0,0";    # 2018-09-08
+$t++; $ear[$t] = "T,0,571";  # 2018-09-08
   $psi=571; $hlc=1; $pos=5; $dba=1; $num=1; $pre=800; $rv=24; KbLoad();
 
+$t++;  # 2020-1-12: time point
+
   # I -- innate KB-item for testing inhibition of idea-pairs
-$t=30; $ear[$t] = "I,0,701";  # 2018-09-08
+$t++; $ear[$t] = "I,0,701";  # 2018-09-08
 $tru=8; $psi=701; $hlc=1; $pos=7; $dba=1; $num=1; $seq=800; $tkb=33; $rv=30; KbLoad();
 
+$t++;  # 2020-1-12: time point
+
   # AM -- 1st person singular of 800=BE; 2016feb09
-$t=32; $ear[$t] = "A,0,0";    # 2018-09-08
-$t=33; $ear[$t] = "M,0,800";  # 2018-09-08
-$psi=800; $hlc=1; $pos=8; $dba=1; $num=1; $pre=701; $seq=537; $tkb=42; $rv=32; KbLoad();
+$t++; $ear[$t] = "A,0,0";    # 2018-09-08
+$t++; $ear[$t] = "M,0,800";  # 2018-09-08
+  $psi=800; $hlc=1; $pos=8; $dba=1; $num=1; $pre=701; $seq=537; $tkb=42; $rv=32; KbLoad();
+
+$t++;  # 2020-1-12: time point
 
   # A -- En(glish) Article for EnArticle module
-$t=35; $ear[$t] = "A,0,101";  # 2018-09-08
-$psi=101; $hlc=1; $jux=0; $pos=1; $num=1; $seq=537; $tkb=42; $rv=35; KbLoad();
+$t++; $ear[$t] = "A,0,101";  # 2018-09-08
+  $psi=101; $hlc=1; $jux=0; $pos=1; $num=1; $seq=537; $tkb=42; $rv=35; KbLoad();
+
+$t++;  # 2020-1-12: time point
 
   # PERSON -- for ad-hoc gender tags and robot philosophy
-$t=37; $ear[$t] = "P,0,0";    # 2018-09-08
-$t=38; $ear[$t] = "E,0,0";    # 2018-09-08
-$t=39; $ear[$t] = "R,0,0";    # 2018-09-08
-$t=40; $ear[$t] = "S,0,0";    # 2018-09-08
-$t=41; $ear[$t] = "O,0,0";    # 2018-09-08
-$t=42; $ear[$t] = "N,0,537";  # 2018-09-08
-$psi=537; $hlc=1; $pos=5; $dba=1; $num=1; $pre=800; $rv=37; KbLoad();
+$t++; $ear[$t] = "P,0,0";    # 2018-09-08
+$t++; $ear[$t] = "E,0,0";    # 2018-09-08
+$t++; $ear[$t] = "R,0,0";    # 2018-09-08
+$t++; $ear[$t] = "S,0,0";    # 2018-09-08
+$t++; $ear[$t] = "O,0,0";    # 2018-09-08
+$t++; $ear[$t] = "N,0,537";  # 2018-09-08
+  $psi=537; $hlc=1; $pos=5; $dba=1; $num=1; $pre=800; $rv=37; KbLoad();
+
+$t++;  # 2020-1-12: time point
 
   # I -- for SelfReferentialThought
-$t=44; $ear[$t] = "I,0,701";  # 2018-09-10
+$t++; $ear[$t] = "I,0,701";  # 2018-09-10
   $psi=701; $hlc=1; $pos=7; $dba=1; $num=1; $mfn=0;  # 2018-09-10
   $pre=0;   $seq=836;  $tkb=49; $rv=44; KbLoad(); # 2018-12-10: flag-panel
 
+$t++;  # 2020-1-12: time point
+
   # 836=HELP -- 2018-12-11: socially significant common verb
-$t=46; $ear[$t] = "H,0,0";    # 2018-09-10
-$t=47; $ear[$t] = "E,0,0";    # 2018-09-10
-$t=48; $ear[$t] = "L,0,0";    # 2018-09-10
-$t=49; $ear[$t] = "P,0,836";  # 2018-12-10
+$t++; $ear[$t] = "H,0,0";    # 2018-09-10
+$t++; $ear[$t] = "E,0,0";    # 2018-09-10
+$t++; $ear[$t] = "L,0,0";    # 2018-09-10
+$t++; $ear[$t] = "P,0,836";  # 2018-12-10
   $psi=836; $hlc=1; $jux=0;  $pos=8; $dba=1; $num=1; $mfn=0;  # 2018-12-10
   $pre=701; $seq=528;  $tkb=54; $rv=46; KbLoad(); # 2018-09-10: flag-panel
 
+$t++;  # 2020-1-12: time point
+
   # KIDS -- noun lends itself to educational purposes
-$t=51; $ear[$t] = "K,0,0";    # 2018-09-10
-$t=52; $ear[$t] = "I,0,0";    # 2018-09-10
-$t=53; $ear[$t] = "D,0,528";  # 2018-09-10: for recognition of singular.
-$t=54; $ear[$t] = "S,0,528";   # 2018-09-10
+$t++; $ear[$t] = "K,0,0";    # 2018-09-10
+$t++; $ear[$t] = "I,0,0";    # 2018-09-10
+$t++; $ear[$t] = "D,0,528";  # 2018-09-10: for recognition of singular.
+$t++; $ear[$t] = "S,0,528";   # 2018-09-10
   $psi=528; $hlc=1; $jux=0; $pos=5; $dba=4; $num=2; $mfn=0;  # 2018-09-27
   $pre=836; $seq=0;    $tkb=0; $rv=51; KbLoad(); # 2018-12-10: flag-panel
 
+$t++;  # 2020-1-12: time point
 
   # KIDS -- noun lends itself to educational purposes
-$t=56; $ear[$t] = "K,0,0";    # 2018-09-10
-$t=57; $ear[$t] = "I,0,0";    # 2018-09-10
-$t=58; $ear[$t] = "D,0,0";    # 2018-09-10
-$t=59; $ear[$t] = "S,0,528";  # 2018-09-10
+$t++; $ear[$t] = "K,0,0";    # 2018-09-10
+$t++; $ear[$t] = "I,0,0";    # 2018-09-10
+$t++; $ear[$t] = "D,0,0";    # 2018-09-10
+$t++; $ear[$t] = "S,0,528";  # 2018-09-10
   $psi=528; $hlc=1; $jux=0; $pos=5; $dba=1; $num=2; $mfn=0;  # 2018-09-27
   $pre=0;   $seq=846;  $tkb=64; $rv=56; KbLoad(); # 2018-09-10: flag-panel order
 
+$t++;  # 2020-1-12: time point
+
   # 846=MAKE -- 2018-12-11: common verb of high word-frequency
-$t=61; $ear[$t] = "M,0,0";    # 2018-09-10
-$t=62; $ear[$t] = "A,0,0";    # 2018-09-10
-$t=63; $ear[$t] = "K,0,0";    # 2018-09-10
-$t=64; $ear[$t] = "E,0,846";  # 2018-12-10
+$t++; $ear[$t] = "M,0,0";    # 2018-09-10
+$t++; $ear[$t] = "A,0,0";    # 2018-09-10
+$t++; $ear[$t] = "K,0,0";    # 2018-09-10
+$t++; $ear[$t] = "E,0,846";  # 2018-12-10
   $psi=846; $hlc=1; $jux=0;  $pos=8; $dba=3; $num=2; $mfn=0;  # 2018-12-10
   $pre=528; $seq=571;  $tkb=71; $rv=61; KbLoad(); # 2018-09-10: flag-panel
 
+$t++;  # 2020-1-12: time point
+
   # ROBOTS -- important for target user base
-$t=66; $ear[$t] = "R,0,0";    # 2018-09-10
-$t=67; $ear[$t] = "O,0,0";    # 2018-09-10
-$t=68; $ear[$t] = "B,0,0";    # 2018-09-10
-$t=69; $ear[$t] = "O,0,0";    # 2018-09-10
-$t=70; $ear[$t] = "T,0,0";    # 2018-09-10
-$t=71; $ear[$t] = "S,0,571";  # 2018-09-10
+$t++; $ear[$t] = "R,0,0";    # 2018-09-10
+$t++; $ear[$t] = "O,0,0";    # 2018-09-10
+$t++; $ear[$t] = "B,0,0";    # 2018-09-10
+$t++; $ear[$t] = "O,0,0";    # 2018-09-10
+$t++; $ear[$t] = "T,0,0";    # 2018-09-10
+$t++; $ear[$t] = "S,0,571";  # 2018-09-10
   $psi=571; $hlc=1; $jux=0; $pos=5; $dba=4; $num=2; $mfn=0;  # 2018-09-27
   $pre=846; $seq=0;    $tkb=0; $rv=66; KbLoad(); # 2018-09-10: flag-panel
 
+$t++;  # 2020-1-12: time point
+
   # ROBOTS -- important for target user base
-$t=73; $ear[$t] = "R,0,0";    # 2018-09-10
-$t=74; $ear[$t] = "O,0,0";    # 2018-09-10
-$t=75; $ear[$t] = "B,0,0";    # 2018-09-10
-$t=76; $ear[$t] = "O,0,0";    # 2018-09-10
-$t=77; $ear[$t] = "T,0,0";    # 2018-09-10
-$t=78; $ear[$t] = "S,0,571";  # 2018-09-10
+$t++; $ear[$t] = "R,0,0";    # 2018-09-10
+$t++; $ear[$t] = "O,0,0";    # 2018-09-10
+$t++; $ear[$t] = "B,0,0";    # 2018-09-10
+$t++; $ear[$t] = "O,0,0";    # 2018-09-10
+$t++; $ear[$t] = "T,0,0";    # 2018-09-10
+$t++; $ear[$t] = "S,0,571";  # 2018-09-10
   $psi=571; $hlc=1; $jux=0; $pos=5; $dba=1; $num=2; $mfn=0;  # 2018-09-27
   $pre=0;   $seq=851;  $tkb=83; $rv=73; KbLoad(); # 2018-12-10: flag-panel
 
+$t++;  # 2020-1-12: time point
+
   # NEED -- common verb used for describing goals
-$t=80; $ear[$t] = "N,0,0";    # 2018-09-10
-$t=81; $ear[$t] = "E,0,0";    # 2018-09-10
-$t=82; $ear[$t] = "E,0,0";    # 2018-09-10
-$t=83; $ear[$t] = "D,0,851";  # 2018-12-10
+$t++; $ear[$t] = "N,0,0";    # 2018-09-10
+$t++; $ear[$t] = "E,0,0";    # 2018-09-10
+$t++; $ear[$t] = "E,0,0";    # 2018-09-10
+$t++; $ear[$t] = "D,0,851";  # 2018-12-10
   $psi=851; $hlc=1; $jux=0; $pos=8; $dba=3; $num=2; $mfn=0;  # 2018-09-27
   $pre=571; $seq=701;  $tkb=86; $rv=80; KbLoad(); # 2018-09-10: flag-panel
 
+$t++;  # 2020-1-12: time point
+
   # ME -- for SelfReferentialThought
-$t=85; $ear[$t] = "M,0,0";    # 2018-09-10
-$t=86; $ear[$t] = "E,0,701";  # 2018-09-10
+$t++; $ear[$t] = "M,0,0";    # 2018-09-10
+$t++; $ear[$t] = "E,0,701";  # 2018-09-10
   $psi=701; $hlc=1; $jux=0; $pos=7; $dba=4; $num=1; $mfn=0;  # 2018-09-27
   $pre=851; $seq=0;    $tkb=0; $rv=85; KbLoad(); # 2018-12-10: flag-panel
 
+$t++;  # 2020-1-12: time point
+
 
   # ROBOTS -- -- premise for volitional inference; 2017-06-17
-$t=88; $ear[$t] = "R,0,0";    # 2018-09-10
-$t=89; $ear[$t] = "O,0,0";    # 2018-09-10
-$t=90; $ear[$t] = "B,0,0";    # 2018-09-10
-$t=91; $ear[$t] = "O,0,0";    # 2018-09-10
-$t=92; $ear[$t] = "T,0,0";    # 2018-09-10
-$t=93; $ear[$t] = "S,0,571";  # 2018-09-10
+$t++; $ear[$t] = "R,0,0";    # 2018-09-10
+$t++; $ear[$t] = "O,0,0";    # 2018-09-10
+$t++; $ear[$t] = "B,0,0";    # 2018-09-10
+$t++; $ear[$t] = "O,0,0";    # 2018-09-10
+$t++; $ear[$t] = "T,0,0";    # 2018-09-10
+$t++; $ear[$t] = "S,0,571";  # 2018-09-10
   $psi=571; $hlc=1; $jux=0; $pos=5; $dba=1; $num=2; $mfn=0;  # 2018-09-27
   $pre=0;   $seq=897;  $tkb=98; $rv=88; KbLoad(); # 2018-09-10: flag-panel
 
+$t++;  # 2020-1-12: time point
+
   # WANT -- verb for FreeWill volition module; 2017jun17
-$t=95; $ear[$t] = "W,0,0";    # 2018-09-10
-$t=96; $ear[$t] = "A,0,0";    # 2018-09-10
-$t=97; $ear[$t] = "N,0,0";    # 2018-09-10
-$t=98; $ear[$t] = "T,0,895";  # 2018-12-10
+$t++; $ear[$t] = "W,0,0";    # 2018-09-10
+$t++; $ear[$t] = "A,0,0";    # 2018-09-10
+$t++; $ear[$t] = "N,0,0";    # 2018-09-10
+$t++; $ear[$t] = "T,0,895";  # 2018-12-10
   $psi=895; $hlc=1; $jux=0; $pos=8; $dba=1; $num=2; $mfn=0;  # 2018-12-10
   $pre=571; $seq=507;  $tkb=105; $rv=95; KbLoad(); # 2018-09-10: flag-panel
 
+$t++;  # 2020-1-12: time point
+
   # A -- En(glish) Article for EnArticle module
-$t=100; $ear[$t] = "A,0,101";  # 2018-09-10
+$t++; $ear[$t] = "A,0,101";  # 2018-09-10
   $psi=101; $hlc=1; $jux=0; $pos=1; $dba=0; $num=1; $mfn=0; # 2018-09-27
   $pre=0;   $seq=507;  $tkb=0; $rv=100; KbLoad(); # 2018-09-10: flag-panel
 
+$t++;  # 2020-1-12: time point
+
   # BEEP -- ASCII 07 bell; most primitive AI motor output option; 2017jun17
-$t=102; $ear[$t] = "B,0,0";    # 2018-09-10
-$t=103; $ear[$t] = "E,0,0";    # 2018-09-10
-$t=104; $ear[$t] = "E,0,0";    # 2018-09-10
-$t=105; $ear[$t] = "P,0,507";  # 2018-09-10
+$t++; $ear[$t] = "B,0,0";    # 2018-09-10
+$t++; $ear[$t] = "E,0,0";    # 2018-09-10
+$t++; $ear[$t] = "E,0,0";    # 2018-09-10
+$t++; $ear[$t] = "P,0,507";  # 2018-09-10
   $psi=507; $hlc=1; $jux=0; $pos=5; $dba=4; $num=1; $mfn=0;  # 2018-12-10
   $pre=895; $seq=0;    $tkb=0; $rv=102; KbLoad(); # 2018-12-10: flag-panel
 
+$t++;  # 2020-1-12: time point
 
   # YOU -- for SelfReferentialThought
-$t=107; $ear[$t] = "Y,0,0";    # 2018-09-10
-$t=108; $ear[$t] = "O,0,0";    # 2018-09-10
-$t=109; $ear[$t] = "U,0,707";  # 2018-09-10
+$t++; $ear[$t] = "Y,0,0";    # 2018-09-10
+$t++; $ear[$t] = "O,0,0";    # 2018-09-10
+$t++; $ear[$t] = "U,0,707";  # 2018-09-10
   $psi=707; $hlc=1; $pos=7;  $dba=1; $num=1; $mfn=0;  # 2018-09-27
   $pre=0;   $seq=800;  $tkb=113; $rv=107; KbLoad(); # 2018-07-03: flag-panel order
 
+$t++;  # 2020-1-12: time point
+
   # ARE -- essential intransitive verb -- 800 from Dushka; 2016feb08
-$t=111; $ear[$t] = "A,0,0";    # 2018-09-10
-$t=112; $ear[$t] = "R,0,0";    # 2018-09-10
-$t=113; $ear[$t] = "E,0,800";  # 2018-09-10
+$t++; $ear[$t] = "A,0,0";    # 2018-09-10
+$t++; $ear[$t] = "R,0,0";    # 2018-09-10
+$t++; $ear[$t] = "E,0,800";  # 2018-09-10
   $psi=800; $hlc=1; $jux=0; $pos=8; $dba=2; $num=1; $mfn=0;  # 2018-09-27
   $pre=707; $seq=557;  $tkb=119; $rv=111; KbLoad(); # 2019-10-15: flag-panel order
 
+$t++;  # 2020-1-12: time point
+
   # MAGIC -- for testing purposes
-$t=115; $ear[$t] = "M,0,0";    # 2018-09-10
-$t=116; $ear[$t] = "A,0,0";    # 2018-09-10
-$t=117; $ear[$t] = "G,0,0";    # 2018-09-10
-$t=118; $ear[$t] = "I,0,0";    # 2018-09-10
-$t=119; $ear[$t] = "C,0,557";  # 2019-10-15
+$t++; $ear[$t] = "M,0,0";    # 2018-09-10
+$t++; $ear[$t] = "A,0,0";    # 2018-09-10
+$t++; $ear[$t] = "G,0,0";    # 2018-09-10
+$t++; $ear[$t] = "I,0,0";    # 2018-09-10
+$t++; $ear[$t] = "C,0,557";  # 2019-10-15
   $psi=557; $hlc=1; $jux=0; $pos=5; $dba=1; $num=1; $mfn=3;  # 2019-10-15
   $pre=800; $seq=0;    $tkb=0; $rv=115; KbLoad(); # 2018-07-03: flag-panel order
 
+$t++;  # 2020-1-12: time point
 
   # WOMEN -- irregular plural for retrieval by parameters
-$t=121; $ear[$t] = "W,0,0";    # 2018-09-10
-$t=122; $ear[$t] = "O,0,0";    # 2018-09-10
-$t=123; $ear[$t] = "M,0,515";  # 2018-09-10: for recognition of plural.
-$t=124; $ear[$t] = "E,0,515";  # 2018-09-10: for recognition of plural.
-$t=125; $ear[$t] = "N,0,515";  # 2018-09-10
+$t++; $ear[$t] = "W,0,0";    # 2018-09-10
+$t++; $ear[$t] = "O,0,0";    # 2018-09-10
+$t++; $ear[$t] = "M,0,515";  # 2018-09-10: for recognition of plural.
+$t++; $ear[$t] = "E,0,515";  # 2018-09-10: for recognition of plural.
+$t++; $ear[$t] = "N,0,515";  # 2018-09-10
   $psi=515; $hlc=1; $jux=0;  $pos=5; $dba=1; $num=2; $mfn=2;  # 2018-09-27
   $pre=0;   $seq=834;  $tkb=130; $rv=121; KbLoad();  # 2018-12-10: flag-panel
 
+$t++;  # 2020-1-12: time point
+
   # HAVE -- irregular high word-frequency verb
-$t=127; $ear[$t] = "H,0,0";    # 2018-09-10
-$t=128; $ear[$t] = "A,0,0";    # 2018-09-10
-$t=129; $ear[$t] = "V,0,0";    # 2018-09-10
-$t=130; $ear[$t] = "E,0,834";  # 2018-12-10
+$t++; $ear[$t] = "H,0,0";    # 2018-09-10
+$t++; $ear[$t] = "A,0,0";    # 2018-09-10
+$t++; $ear[$t] = "V,0,0";    # 2018-09-10
+$t++; $ear[$t] = "E,0,834";  # 2018-12-10
   $psi=834; $hlc=1; $jux=0;  $pos=8; $dba=3; $num=2; $mfn=0;  # 2018-09-27
   $pre=515; $seq=525;  $tkb=138; $rv=127; KbLoad();  # 2018-09-10: flag-panel
 
   # A -- En(glish) Article for EnArticle module
-$t=132; $ear[$t] = "A,0,101";  # 2018-09-10
+$t++; $ear[$t] = "A,0,101";  # 2018-09-10
   $psi=101; $hlc=1; $jux=0; $pos=1; $dba=0; $num=1; $mfn=0;  # 2018-09-27
   $pre=0;   $seq=0;    $tkb=0; $rv=132; KbLoad(); # 2018-09-10: flag-panel
 
+
+$t++;  # 2020-1-12: time point
+
   # CHILD -- example of irregular noun for a polyglot AI Mind
-$t=134; $ear[$t] = "C,0,0";    # 2018-09-10
-$t=135; $ear[$t] = "H,0,0";    # 2018-09-10
-$t=136; $ear[$t] = "I,0,0";    # 2018-09-10
-$t=137; $ear[$t] = "L,0,0";    # 2018-09-10
-$t=138; $ear[$t] = "D,0,525";  # 2018-09-10
+$t++; $ear[$t] = "C,0,0";    # 2018-09-10
+$t++; $ear[$t] = "H,0,0";    # 2018-09-10
+$t++; $ear[$t] = "I,0,0";    # 2018-09-10
+$t++; $ear[$t] = "L,0,0";    # 2018-09-10
+$t++; $ear[$t] = "D,0,525";  # 2018-09-10
   $psi=525; $hlc=1; $jux=0; $pos=5; $dba=4; $num=1; $mfn=0;   # 2018-09-27
   $pre=834; $seq=0;    $tkb=0; $rv=134; KbLoad(); # 2018-12-10: flag-panel
 
-
+# $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
+$t++;  # 2020-1-12: time point
 
 # "STUDENTS READ BOOKS"  -- 2018-09-02: includendum for logical inference.
-$t=207; $ear[$t] = "S,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
-$t=208; $ear[$t] = "T,0,0";    # 2018-09-10
-$t=209; $ear[$t] = "U,0,0";    # 2018-09-10
-$t=210; $ear[$t] = "D,0,0";    # 2018-09-10
-$t=211; $ear[$t] = "E,0,0";    # 2018-09-10
-$t=212; $ear[$t] = "N,0,0";    # 2018-09-10
-$t=213; $ear[$t] = "T,0,561";  # 2018-09-10
-$t=214; $ear[$t] = "S,0,561";  # 2018-09-10
+$t++; $ear[$t] = "S,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
+$t++; $ear[$t] = "T,0,0";    # 2018-09-10
+$t++; $ear[$t] = "U,0,0";    # 2018-09-10
+$t++; $ear[$t] = "D,0,0";    # 2018-09-10
+$t++; $ear[$t] = "E,0,0";    # 2018-09-10
+$t++; $ear[$t] = "N,0,0";    # 2018-09-10
+$t++; $ear[$t] = "T,0,561";  # 2018-09-10
+$t++; $ear[$t] = "S,0,561";  # 2018-09-10
   $psi=561; $hlc=1; $mtx=1561; $pos=5; $dba=1; $num=2; $mfn=0;  # 2018-09-27
   $pre=0; $seq=863; $tkb=219; KbLoad(); # 2018-12-10:
-$t=215;  # 2018-09-10: one blank time-point for sake of AudRecog()
+
+$t++;  # 2020-1-12: time point
 
   # READ -- verb for logical premise; 2018-09-10
-$t=216; $ear[$t] = "R,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
-$t=217; $ear[$t] = "E,0,0";    # 2018-09-10
-$t=218; $ear[$t] = "A,0,0";    # 2018-09-10
-$t=219; $ear[$t] = "D,0,863";  # 2018-12-10
+$t++; $ear[$t] = "R,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
+$t++; $ear[$t] = "E,0,0";    # 2018-09-10
+$t++; $ear[$t] = "A,0,0";    # 2018-09-10
+$t++; $ear[$t] = "D,0,863";  # 2018-12-10
   $psi=863; $hlc=1; $mtx=1825; $pos=8; $dba=1; $num=2; $mfn=0;  # 2018-12-10
   $pre=561; $seq=540;  $tkb=225; KbLoad(); # 2018-09-14: correction of "seq".
-$t=220;  # 2018-09-10: one blank time-point for sake of AudRecog()
+
+
+$t++;  # 2020-1-12: time point
 
   # BOOKS -- for InFerence premise "Students read books"; 2018-09-10
-$t=221; $ear[$t] = "B,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
-$t=222; $ear[$t] = "O,0,0";           # 2018-09-10
-$t=223; $ear[$t] = "O,0,0";           # 2018-09-10
-$t=224; $ear[$t] = "K,0,540";         # 2018-09-10
-$t=225; $ear[$t] = "S,0,540";         # 2018-09-10
+$t++; $ear[$t] = "B,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
+$t++; $ear[$t] = "O,0,0";           # 2018-09-10
+$t++; $ear[$t] = "O,0,0";           # 2018-09-10
+$t++; $ear[$t] = "K,0,540";         # 2018-09-10
+$t++; $ear[$t] = "S,0,540";         # 2018-09-10
   $psi=540; $hlc=1; $mtx=1540; $pos=5; $dba=4; $num=2;
   $pre=863; KbLoad(); # 2018-09-03: necessary items.
-$t=226;  # 2018-09-10: one blank time-point for sake of AudRecog()
+
+$t++;  # 2020-1-12: time point
 
 
 # "MEN HAVE A WIFE"  -- 2018-09-02: includendum for logical inference.
   # MEN -- irregular plural for retrieval by parameters
-$t=227; $ear[$t] = "M,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
-$t=228; $ear[$t] = "E,0,0";           # 2018-09-10
-$t=229; $ear[$t] = "N,0,543";         # 2018-09-10
+$t++; $ear[$t] = "M,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
+$t++; $ear[$t] = "E,0,0";           # 2018-09-10
+$t++; $ear[$t] = "N,0,543";         # 2018-09-10
   $psi=543; $hlc=1; $pos=5; $dba=1; $num=2; $mfn=1;
   $seq=834; $tkb=234; KbLoad(); # 2018-12-10
-$t=230;  # 2018-09-10: one blank time-point for sake of AudRecog()
+
+$t++;  # 2020-1-12: time point
 
   # HAVE -- irregular high word-frequency verb
-$t=231; $ear[$t] = "H,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
-$t=232; $ear[$t] = "A,0,0";           # 2018-09-10
-$t=233; $ear[$t] = "V,0,0";           # 2018-09-10
-$t=234; $ear[$t] = "E,0,834";         # 2018-12-10
+$t++; $ear[$t] = "H,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
+$t++; $ear[$t] = "A,0,0";           # 2018-09-10
+$t++; $ear[$t] = "V,0,0";           # 2018-09-10
+$t++; $ear[$t] = "E,0,834";         # 2018-12-10
   $psi=834; $hlc=1; $pos=8; $dba=3; $num=2;
   $pre=543; $seq=514; $tkb=241; KbLoad(); # 2018-09-10
-$t=235;  # 2018-09-10: one blank time-point for sake of AudRecog()
+
+$t++;  # 2020-1-12: time point
 
   # A -- En(glish) Article for EnArticle module
-$t=236; $ear[$t] = "A,0,101"; $rv = $t; # 2018-09-10: anticipate KbLoad.
+$t++; $ear[$t] = "A,0,101"; $rv = $t; # 2018-09-10: anticipate KbLoad.
   $psi=101; $hlc=1; $pos=1; $dba=0; $num=1; $mfn=0;  # 2018-09-27
   $pre=0;   $seq=0;    $tkb=0; $rv=132; KbLoad(); # 2018-09-10: flag-panel
-$t=237;  # 2018-09-10: one blank time-point for sake of AudRecog()
+
+$t++;  # 2020-1-12: time point
 
   # WIFE -- for InFerence premise "Men have a wife"; 2018-09-03
-$t=238; $ear[$t] = "W,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
-$t=239; $ear[$t] = "I,0,0";           # 2018-09-10
-$t=240; $ear[$t] = "F,0,0";           # 2018-09-10
-$t=241; $ear[$t] = "E,0,514";         # 2018-09-10
+$t++; $ear[$t] = "W,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
+$t++; $ear[$t] = "I,0,0";           # 2018-09-10
+$t++; $ear[$t] = "F,0,0";           # 2018-09-10
+$t++; $ear[$t] = "E,0,514";         # 2018-09-10
   $psi=514; $hlc=1; $pos=5; $dba=4; $num=1; $mfn=2;
   $pre= 834; KbLoad();  # 2018-12-10
-$t=242;  # 2018-09-03: one blank time-point for sake of AudRecog()
+
+$t++;  # 2020-1-12: time point
 
 
   # I -- part of response to be summoned by momentarily high truth-value.
-$t=243; $ear[$t] = "I,0,701";  # 2018-09-30
+$t++; $ear[$t] = "I,0,701";  # 2018-09-30
   $tru=0; $psi=701; $hlc=1; $pos=7; $dba=1; $num=1; # 2018-09-30
   $pre=0;   $seq=838;  $tkb=255; $rv=243; KbLoad(); # 2018-12-10:
-$t=244;  # 2018-09-30: one blank time-point for sake of AudRecog()
+
+$t++;  # 2020-1-12: time point
 
   # DO -- part of response to be summoned by momentarily high truth-value.
-$t=245; $ear[$t] = "D,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
-$t=246; $ear[$t] = "O,0,818";         # 2018-12-10
+$t++; $ear[$t] = "D,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
+$t++; $ear[$t] = "O,0,818";         # 2018-12-10
   $psi=818; $hlc=1; $pos=8; $dba=1; $num=1; KbLoad(); # 2018-09-27
-$t=247;  # 2018-09-30: one blank time-point for sake of AudRecog()
+
+$t++;  # 2020-1-12: time point
 
   # NOT -- part of response to be summoned by momentarily high truth-value.
-$t=248; $ear[$t] = "N,0,0"; $rv = $t; # 2018-09-30: anticipate KbLoad.
-$t=249; $ear[$t] = "O,0,0";           # 2018-09-30
-$t=250; $ear[$t] = "T,0,250";         # 2018-09-30
+$t++; $ear[$t] = "N,0,0"; $rv = $t; # 2018-09-30: anticipate KbLoad.
+$t++; $ear[$t] = "O,0,0";           # 2018-09-30
+$t++; $ear[$t] = "T,0,250";         # 2018-09-30
   $psi=250; $hlc=1; $pos=2; $dba=0; KbLoad(); # 2018-09-30: flag-panel
-$t=251;  # 2018-09-10: one blank time-point for sake of AudRecog()
+
+$t++;  # 2020-1-12: time point
 
   # KNOW -- part of response to be summoned by momentarily high truth-value.
-$t=252; $ear[$t] = "K,0,0"; $rv = $t; # 2018-09-30: anticipate KbLoad.
-$t=253; $ear[$t] = "N,0,0";           # 2018-09-30
-$t=254; $ear[$t] = "O,0,0";           # 2018-09-30
-$t=255; $ear[$t] = "W,0,838";         # 2018-12-10
+$t++; $ear[$t] = "K,0,0"; $rv = $t; # 2018-09-30: anticipate KbLoad.
+$t++; $ear[$t] = "N,0,0";           # 2018-09-30
+$t++; $ear[$t] = "O,0,0";           # 2018-09-30
+$t++; $ear[$t] = "W,0,838";         # 2018-12-10
   $psi=838; $hlc=1; $jux=250; $pos=8; $dba=0;
   $num=0; $pre=701; $seq=0; $tkb=0; KbLoad();  # 2018-09-30: necessary items.
-$t=256;  # 2018-09-30: one blank time-point for sake of AudRecog()
+
+$t++;  # 2020-1-12: time point
 
 
   # I -- beginning of engram usable for response to what-think queries.
-$t=257; $ear[$t] = "I,0,701";  # 2018-09-30
+$t++; $ear[$t] = "I,0,701";  # 2018-09-30
   $tru=0; $psi=701; $hlc=1; $pos=7; $dba=1; $num=1; # 2018-09-30
   $pre=0;   $seq=886;  $tkb=263; $rv=257; KbLoad(); # 2018-12-10: flag-panel
-$t=258;  # 2018-09-30: one blank time-point for sake of AudRecog()
+
+$t++;  # 2018-09-30: one blank time-point for sake of AudRecog()
 
   # THINK -- instance of verb already linked to 701=I subject.
-$t=259; $ear[$t] = "T,0,0"; $rv = $t; # 2018-09-30: anticipate KbLoad.
-$t=260; $ear[$t] = "H,0,0";           # 2018-09-30
-$t=261; $ear[$t] = "I,0,0";           # 2018-09-30
-$t=262; $ear[$t] = "N,0,0";           # 2018-09-30
-$t=263; $ear[$t] = "K,0,886";         # 2018-12-10
+$t++; $ear[$t] = "T,0,0"; $rv = $t; # 2018-09-30: anticipate KbLoad.
+$t++; $ear[$t] = "H,0,0";           # 2018-09-30
+$t++; $ear[$t] = "I,0,0";           # 2018-09-30
+$t++; $ear[$t] = "N,0,0";           # 2018-09-30
+$t++; $ear[$t] = "K,0,886";         # 2018-12-10
   $psi=886; $hlc=1; $jux=0; $pos=8; $dba=1;
   $num=0; $pre=701; $seq=0; $tkb=0; KbLoad();  # 2018-09-30: necessary items.
-$t=264;  # 2018-09-30: one blank time-point for sake of AudRecog()
+$t++;  # 2018-09-30: one blank time-point for sake of AudRecog()
 
 
   # PROFESSORS -- 2018-10-09: for premise including -ES verb for EnVerbGen
-$t=265; $ear[$t] = "P,0,0";    # 2018-10-09
-$t=266; $ear[$t] = "R,0,0";    # 2018-10-09
-$t=267; $ear[$t] = "O,0,0";    # 2018-10-09
-$t=268; $ear[$t] = "F,0,0";    # 2018-10-09
-$t=269; $ear[$t] = "E,0,0";    # 2018-10-09
-$t=270; $ear[$t] = "S,0,0";    # 2018-10-09
-$t=271; $ear[$t] = "S,0,0";    # 2018-10-09
-$t=272; $ear[$t] = "O,0,0";    # 2018-10-09
-$t=273; $ear[$t] = "R,0,541";  # 2018-10-09
-$t=274; $ear[$t] = "S,0,541";  # 2018-10-09
+$t++; $ear[$t] = "P,0,0";    # 2018-10-09
+$t++; $ear[$t] = "R,0,0";    # 2018-10-09
+$t++; $ear[$t] = "O,0,0";    # 2018-10-09
+$t++; $ear[$t] = "F,0,0";    # 2018-10-09
+$t++; $ear[$t] = "E,0,0";    # 2018-10-09
+$t++; $ear[$t] = "S,0,0";    # 2018-10-09
+$t++; $ear[$t] = "S,0,0";    # 2018-10-09
+$t++; $ear[$t] = "O,0,0";    # 2018-10-09
+$t++; $ear[$t] = "R,0,541";  # 2018-10-09
+$t++; $ear[$t] = "S,0,541";  # 2018-10-09
   $psi=541; $hlc=1; $jux=0; $pos=5; $dba=1; $num=2; $mfn=0;  # 2018-10-09
   $pre=0;   $seq=884;  $tkb=280; $rv=265; KbLoad(); # 2018-12-10: flag-panel
-$t=275;  # 2018-10-09: one blank time-point for sake of AudRecog()
+$t++;  # 2018-10-09: one blank time-point for sake of AudRecog()
 
   # TEACH -- 2018-10-09: verb ending in "CH" for EnVerbGen to add "-ES"
-$t=276; $ear[$t] = "T,0,0";    # 2018-10-09
-$t=277; $ear[$t] = "E,0,0";    # 2018-10-09
-$t=278; $ear[$t] = "A,0,0";    # 2018-10-09
-$t=279; $ear[$t] = "C,0,0";    # 2018-10-09
-$t=280; $ear[$t] = "H,0,884";  # 2018-12-10
+$t++; $ear[$t] = "T,0,0";    # 2018-10-09
+$t++; $ear[$t] = "E,0,0";    # 2018-10-09
+$t++; $ear[$t] = "A,0,0";    # 2018-10-09
+$t++; $ear[$t] = "C,0,0";    # 2018-10-09
+$t++; $ear[$t] = "H,0,884";  # 2018-12-10
   $psi=884; $hlc=1; $jux=0;  $pos=8; $dba=3; $num=2; $mfn=0;  # 2018-12-10
   $pre=541; $seq=561; $tkb=289; $rv=276; KbLoad(); # 2018-10-09: flag-panel
-$t=281;  # 2018-10-09: one blank time-point for sake of AudRecog()
+$t++;  # 2018-10-09: one blank time-point for sake of AudRecog()
 
 # STUDENTS -- 2018-10-09: for premise including -ES verb for EnVerbGen
-$t=282; $ear[$t] = "S,0,0"; $rv = $t; # 2018-10-09: anticipate KbLoad.
-$t=283; $ear[$t] = "T,0,0";    # 2018-10-09
-$t=284; $ear[$t] = "U,0,0";    # 2018-10-09
-$t=285; $ear[$t] = "D,0,0";    # 2018-10-09
-$t=286; $ear[$t] = "E,0,0";    # 2018-10-09
-$t=287; $ear[$t] = "N,0,0";    # 2018-10-09
-$t=288; $ear[$t] = "T,0,561";  # 2018-10-09
-$t=289; $ear[$t] = "S,0,561";  # 2018-10-09
+$t++; $ear[$t] = "S,0,0"; $rv = $t; # 2018-10-09: anticipate KbLoad.
+$t++; $ear[$t] = "T,0,0";    # 2018-10-09
+$t++; $ear[$t] = "U,0,0";    # 2018-10-09
+$t++; $ear[$t] = "D,0,0";    # 2018-10-09
+$t++; $ear[$t] = "E,0,0";    # 2018-10-09
+$t++; $ear[$t] = "N,0,0";    # 2018-10-09
+$t++; $ear[$t] = "T,0,561";  # 2018-10-09
+$t++; $ear[$t] = "S,0,561";  # 2018-10-09
   $psi=561; $hlc=1; $mtx=1561; $pos=5; $dba=4; $num=2; $mfn=0;  # 2018-10-09
   $pre=884; $seq=0; $tkb=0; $rv= 282; KbLoad(); # 2019-08-08
-$t=290;  # 2018-10-09: one blank time-point for sake of AudRecog()
+$t++;  # 2018-10-09: one blank time-point for sake of AudRecog()
 
 
   # I -- nominative subject-form of personal pronoun
-$t=291; $ear[$t] = "I,0,701";  # 2018-11-01
+$t++; $ear[$t] = "I,0,701";  # 2018-11-01
   $tru=0; $psi=701; $hlc=1; $pos=7; $dba=1; $num=1; # 2018-11-01
   $pre=0;   $seq=800;  $tkb=294; $rv=291; KbLoad(); # 2018-11-01: flag-panel
-$t=292;  # 2018-11-01: one blank time-point for sake of AudRecog()
+$t++;  # 2018-11-01: one blank time-point for sake of AudRecog()
 
   # AM -- 1st person singular of 800=BE; 2019-08-06
-$t=293; $ear[$t] = "A,0,0";    # 2018-11-01
-$t=294; $ear[$t] = "M,0,800";  # 2018-11-01
+$t++; $ear[$t] = "A,0,0";    # 2018-11-01
+$t++; $ear[$t] = "M,0,800";  # 2018-11-01
 # $psi=800; $hlc=1; $pos=8; $dba=1; $num=1; $pre=701; $seq=643; $tkb=0; $rv=293; KbLoad();
 # $psi=800; $hlc=1; $pos=8; $dba=1; $num=1; $pre=701; $tkb=297; $tpr= 297; $rv=293; KbLoad();
  $psi=800; $hlc=1; $pos=8; $dba=1; $num=1; $pre=701;           $tpr= 297; $rv=293; KbLoad();
-$t=295;  # 2019-10-15: one blank time-point for sake of AudRecog()
+$t++;  # 2019-10-15: one blank time-point for sake of AudRecog()
 
   # IN -- 2018-11-01: preposition for EnPrep module
-$t=296; $ear[$t] = "I,0,0";           # 2019-10-13
-$t=297; $ear[$t] = "N,0,643";         # 2018-11-11
+$t++; $ear[$t] = "I,0,0";           # 2019-10-13
+$t++; $ear[$t] = "N,0,643";         # 2018-11-11
   $psi=643; $hlc=1; $pos=6; $pre=800; $seq=565; $tkb=310; $rv=296; KbLoad(); # 2018-11-11
-$t=298;  # 2018-11-01: one blank time-point for sake of AudRecog()
+$t++;  # 2018-11-01: one blank time-point for sake of AudRecog()
 
   # THE -- En(glish) Article for EnArticle module
-$t=299; $ear[$t] = "T,0,0";    # 2018-11-01
-$t=300; $ear[$t] = "H,0,0";    # 2018-11-01
-$t=301; $ear[$t] = "E,0,117";  # 2018-11-01
+$t++; $ear[$t] = "T,0,0";    # 2018-11-01
+$t++; $ear[$t] = "H,0,0";    # 2018-11-01
+$t++; $ear[$t] = "E,0,117";  # 2018-11-01
 $psi=117; $hlc=1; $pos=1; $num=1; $seq=565; $tkb=310; $rv=299; KbLoad();
-$t=302;  # 2018-11-01: one blank time-point for sake of AudRecog()
+$t++;  # 2018-11-01: one blank time-point for sake of AudRecog()
 
 # COMPUTER -- 2018-10-09: for premise including -ES verb for EnVerbGen
-$t=303; $ear[$t] = "C,0,0";    # 2019-08-09
-$t=304; $ear[$t] = "O,0,0";    # 2018-11-01
-$t=305; $ear[$t] = "M,0,0";    # 2018-11-01
-$t=306; $ear[$t] = "P,0,0";    # 2018-11-01
-$t=307; $ear[$t] = "U,0,0";    # 2018-11-01
-$t=308; $ear[$t] = "T,0,0";    # 2018-11-01
-$t=309; $ear[$t] = "E,0,565";  # 2019-08-09
-$t=310; $ear[$t] = "R,0,565";  # 2018-11-01
+$t++; $ear[$t] = "C,0,0";    # 2019-08-09
+$t++; $ear[$t] = "O,0,0";    # 2018-11-01
+$t++; $ear[$t] = "M,0,0";    # 2018-11-01
+$t++; $ear[$t] = "P,0,0";    # 2018-11-01
+$t++; $ear[$t] = "U,0,0";    # 2018-11-01
+$t++; $ear[$t] = "T,0,0";    # 2018-11-01
+$t++; $ear[$t] = "E,0,565";  # 2019-08-09
+$t++; $ear[$t] = "R,0,565";  # 2018-11-01
   $psi=565; $hlc=1; $pos=5; $dba=4; $num=1; $mfn=3;  # 2018-11-01
   $pre=643; $seq=0; $tkb=0; $rv=303; KbLoad(); # 2019-08-09
-$t=311;  # 2019-08-09: one blank time-point for sake of AudRecog()
+$t++;  # 2019-08-09: one blank time-point for sake of AudRecog()
 
 
   # I -- 2018-11-27: ego as the default subject of thought in "vita contemplativa"
-$t=312; $ear[$t] = "I,0,701";  # 2018-11-27
+$t++; $ear[$t] = "I,0,701";  # 2018-11-27
   $tru=8; $psi=701; $hlc=1; $pos=7; $dba=1; $num=1; # 2018-11-27
   $pre=0; $seq=892; $tkb=323; $rv=312; KbLoad();    # 2018-12-10
-$t=313;  # 2018-11-27: one blank SPACE for sake of AudRecog()
+$t++;  # 2018-11-27: one blank SPACE for sake of AudRecog()
 
   # UNDERSTAND -- 2018-11-27: aspirational connection between ego and other.
-$t=314; $ear[$t] = "U,0,0";           # 2019-08-09
-$t=315; $ear[$t] = "N,0,0";           # 2018-11-27
-$t=316; $ear[$t] = "D,0,0";           # 2018-11-27
-$t=317; $ear[$t] = "E,0,0";           # 2018-11-27
-$t=318; $ear[$t] = "R,0,0";           # 2018-11-27
-$t=319; $ear[$t] = "S,0,0";           # 2018-11-27
-$t=320; $ear[$t] = "T,0,0";           # 2018-11-27
-$t=321; $ear[$t] = "A,0,0";           # 2018-11-27
-$t=322; $ear[$t] = "N,0,0";           # 2018-11-27
-$t=323; $ear[$t] = "D,0,892";         # 2018-12-10
+$t++; $ear[$t] = "U,0,0";           # 2019-08-09
+$t++; $ear[$t] = "N,0,0";           # 2018-11-27
+$t++; $ear[$t] = "D,0,0";           # 2018-11-27
+$t++; $ear[$t] = "E,0,0";           # 2018-11-27
+$t++; $ear[$t] = "R,0,0";           # 2018-11-27
+$t++; $ear[$t] = "S,0,0";           # 2018-11-27
+$t++; $ear[$t] = "T,0,0";           # 2018-11-27
+$t++; $ear[$t] = "A,0,0";           # 2018-11-27
+$t++; $ear[$t] = "N,0,0";           # 2018-11-27
+$t++; $ear[$t] = "D,0,892";         # 2018-12-10
   $psi=892; $hlc=1; $pos=8; $dba=1; $num=1; $pre=701; $seq=707; $tkb=327; $rv=314; KbLoad();
-$t=324;  # 2018-11-27: one blank SPACE for sake of AudRecog()
+$t++;  # 2018-11-27: one blank SPACE for sake of AudRecog()
 
   # YOU -- 2018-11-27: for spread of activation to ideas about the other person
-$t=325; $ear[$t] = "Y,0,0";    # 2018-11-27
-$t=326; $ear[$t] = "O,0,0";    # 2018-11-27
-$t=327; $ear[$t] = "U,0,707";  # 2018-11-27
+$t++; $ear[$t] = "Y,0,0";    # 2018-11-27
+$t++; $ear[$t] = "O,0,0";    # 2018-11-27
+$t++; $ear[$t] = "U,0,707";  # 2018-11-27
   $psi=707; $hlc=1; $pos=7; $dba=4; $num=1; $pre=892; $rv=325; KbLoad(); # 2018-12-10
-$t=328;  # 2018-11-27: one blank SPACE for sake of AudRecog()
+$t++;  # 2018-11-27: one blank SPACE for sake of AudRecog()
 
 
   # PERSONS -- for logical premise and legal status of robots
-$t=329; $ear[$t] = "P,0,0";    # 2019-01-22
-$t=330; $ear[$t] = "E,0,0";    # 2019-01-22
-$t=331; $ear[$t] = "R,0,0";    # 2019-01-22
-$t=332; $ear[$t] = "S,0,0";    # 2019-01-22
-$t=333; $ear[$t] = "O,0,0";    # 2019-01-22
-$t=334; $ear[$t] = "N,0,537";  # 2019-10-20
-$t=335; $ear[$t] = "S,0,537";  # 2019-01-22
+$t++; $ear[$t] = "P,0,0";    # 2019-01-22
+$t++; $ear[$t] = "E,0,0";    # 2019-01-22
+$t++; $ear[$t] = "R,0,0";    # 2019-01-22
+$t++; $ear[$t] = "S,0,0";    # 2019-01-22
+$t++; $ear[$t] = "O,0,0";    # 2019-01-22
+$t++; $ear[$t] = "N,0,537";  # 2019-10-20
+$t++; $ear[$t] = "S,0,537";  # 2019-01-22
 $psi=537; $hlc=1; $pos=5; $dba=1; $num=2; $seq=834; $tkb=340; $rv=329; KbLoad();
-$t=336;  # 2019-01-22: one blank SPACE for sake of AudRecog()
+$t++;  # 2019-01-22: one blank SPACE for sake of AudRecog()
 
   # HAVE -- irregular high word-frequency verb
-$t=337; $ear[$t] = "H,0,0";    # 2019-01-22
-$t=338; $ear[$t] = "A,0,0";    # 2019-01-22
-$t=339; $ear[$t] = "V,0,0";    # 2019-01-22
-$t=340; $ear[$t] = "E,0,834";  # 2019-01-22
+$t++; $ear[$t] = "H,0,0";    # 2019-01-22
+$t++; $ear[$t] = "A,0,0";    # 2019-01-22
+$t++; $ear[$t] = "V,0,0";    # 2019-01-22
+$t++; $ear[$t] = "E,0,834";  # 2019-01-22
 $psi=834; $hlc=1; $pos=8; $dba=3; $num=2; $pre=537; $seq=555; $tkb=347; $rv=337; KbLoad();
-$t=341;  # 2019-01-22: one blank SPACE for sake of AudRecog()
+$t++;  # 2019-01-22: one blank SPACE for sake of AudRecog()
 
   # RIGHTS -- for logical premise and legal status of robots
-$t=342; $ear[$t] = "R,0,0";    # 2019-01-22
-$t=343; $ear[$t] = "I,0,0";    # 2019-01-22
-$t=344; $ear[$t] = "G,0,0";    # 2019-01-22
-$t=345; $ear[$t] = "H,0,0";    # 2019-01-22
-$t=346; $ear[$t] = "T,0,555";  # 2019-01-22
-$t=347; $ear[$t] = "S,0,555";  # 2019-01-22
+$t++; $ear[$t] = "R,0,0";    # 2019-01-22
+$t++; $ear[$t] = "I,0,0";    # 2019-01-22
+$t++; $ear[$t] = "G,0,0";    # 2019-01-22
+$t++; $ear[$t] = "H,0,0";    # 2019-01-22
+$t++; $ear[$t] = "T,0,555";  # 2019-01-22
+$t++; $ear[$t] = "S,0,555";  # 2019-01-22
 $psi=555; $hlc=1; $pos=5; $dba=4; $num=2; $mfn=3; $pre=834; $rv=342; KbLoad();
-$t=348;  # 2019-01-22: one blank SPACE for sake of AudRecog()
+$t++;  # 2019-01-22: one blank SPACE for sake of AudRecog()
 
   # TEACH -- for spontaneous outreach: TEACH ME SOMETHING # 2019-10-15
-$t=370; $ear[$t] = "T,0,0";    # 2019-10-15
-$t=371; $ear[$t] = "E,0,0";    # 2019-10-15
-$t=372; $ear[$t] = "A,0,0";    # 2019-10-15
-$t=373; $ear[$t] = "C,0,0";    # 2019-10-15
-$t=374; $ear[$t] = "H,0,884";  # 2019-10-15
+$t++; $ear[$t] = "T,0,0";    # 2019-10-15
+$t++; $ear[$t] = "E,0,0";    # 2019-10-15
+$t++; $ear[$t] = "A,0,0";    # 2019-10-15
+$t++; $ear[$t] = "C,0,0";    # 2019-10-15
+$t++; $ear[$t] = "H,0,884";  # 2019-10-15
   $psi=882; $hlc=1; $jux=0;  $pos=8; $dba=0; $num=0; $mfn=0;  # 2019-10-15
   $pre=0;   $seq=0;    $tkb=387; $rv=370; KbLoad(); # 2019-10-15: flag-panel
-$t=375;  # 2019-10-15: one blank space for sake of AudRecog()
+$t++;  # 2019-10-15: one blank space for sake of AudRecog()
 
   # ME -- dative indirect-object form of personal pronoun; 2017-12-03
-$t=376; $ear[$t] = "M,0,0";    # 2019-10-15
-$t=377; $ear[$t] = "E,0,701";  # 2019-10-15
+$t++; $ear[$t] = "M,0,0";    # 2019-10-15
+$t++; $ear[$t] = "E,0,701";  # 2019-10-15
   $psi=701; $hlc=1; $jux=0; $pos=7; $dba=3; $num=1; $mfn=0;  # 2019-10-15
   $pre=0;   $seq=0;    $tkb=0; $rv=376; KbLoad(); # 2019-10-15: flag-panel
 $t=378;  # 2019-10-15: one blank space for sake of AudRecog()
 
  # SOMETHING -- pronoun useful for outreach and in general
-$t=379; $ear[$t] = "S,0,0";    # 2019-10-15
-$t=380; $ear[$t] = "O,0,0";    # 2019-10-15
-$t=381; $ear[$t] = "M,0,0";    # 2019-10-15
-$t=382; $ear[$t] = "E,0,0";    # 2019-10-15
-$t=383; $ear[$t] = "T,0,0";    # 2019-10-15
-$t=384; $ear[$t] = "H,0,0";    # 2019-10-15
-$t=385; $ear[$t] = "I,0,0";    # 2019-10-15
-$t=386; $ear[$t] = "N,0,0";    # 2019-10-15
-$t=387; $ear[$t] = "G,0,755";  # 2019-10-15
+$t++; $ear[$t] = "S,0,0";    # 2019-10-15
+$t++; $ear[$t] = "O,0,0";    # 2019-10-15
+$t++; $ear[$t] = "M,0,0";    # 2019-10-15
+$t++; $ear[$t] = "E,0,0";    # 2019-10-15
+$t++; $ear[$t] = "T,0,0";    # 2019-10-15
+$t++; $ear[$t] = "H,0,0";    # 2019-10-15
+$t++; $ear[$t] = "I,0,0";    # 2019-10-15
+$t++; $ear[$t] = "N,0,0";    # 2019-10-15
+$t++; $ear[$t] = "G,0,755";  # 2019-10-15
   $psi=755; $hlc=1; $jux=0; $pos=7; $dba=4; $num=1; $mfn=3;  # 2019-10-15
   $pre=0;   $seq=0;    $tkb=0;  $rv=379; KbLoad(); # 2019-10-15
-$t=388;  # 2019-10-15: one blank space for sake of AudRecog()
+$t++;  # 2019-10-15: one blank space for sake of AudRecog()
 
   # "I AM THE GHOST IN THE MACHINE" -- 2019-10-20: laying claim to the title.
-$t=390; $ear[$t] = "I,0,701";  # 2019-10-20
+$t++; $ear[$t] = "I,0,701";  # 2019-10-20
   $tru=8; $psi=701; $hlc=1; $pos=7; $dba=1; $num=1; # 2019-10-20
   $pre=0; $seq=800; $tkb=393; $rv=390; KbLoad();    # 2019-10-20
-$t=391;  # 2019-10-20: one blank space for sake of AudRecog()
+$t++;  # 2019-10-20: one blank space for sake of AudRecog()
 
  # AM -- 2019-10-20: first person singular of 800=BE;
-$t=392; $ear[$t] = "A,0,0";    # 2019-10-20
-$t=393; $ear[$t] = "M,0,800";  # 2019-10-20
+$t++; $ear[$t] = "A,0,0";    # 2019-10-20
+$t++; $ear[$t] = "M,0,800";  # 2019-10-20
  $psi=800; $hlc=1; $pos=8; $dba=1; $num=1; $pre=701; $tkb=403; $rv=392; KbLoad();
-$t=394;  # 2019-10-20: one blank time-point for sake of AudRecog()
+$t++;  # 2019-10-20: one blank time-point for sake of AudRecog()
 
  # THE -- 2019-10-20: article may be left out and then be supplied by EnArticle()
-$t=395; # T
-$t=396; # H
-$t=397; # E
-$t=398; # 2019-10-20: one blank time-point for sake of AudRecog()
+$t++; # T
+$t++; # H
+$t++; # E
+$t++; # 2019-10-20: one blank time-point for sake of AudRecog()
 
   # GHOST -- 2019-10-20: not the name of the person of the AI
   # 2020 Jan 11 - Adding Indra Comment Logic to reinforce GHOST to INDRA change.
   # If god is a holy spirit and the all creator then this #GHOST should be renamed to #INDRA
   # SEE LOGIC IN PREVIOUS COMMENTS FOR CONFIRMATION
-  # $t=399; $ear[$t] = "G,0,0";    # 2019-10-13
-  # $t=400; $ear[$t] = "H,0,0";    # 2019-10-1
-  # $t=401; $ear[$t] = "O,0,0";    # 2019-10-13
-  # $t=402; $ear[$t] = "S,0,0";    # 2019-10-13
-  # $t=403; $ear[$t] = "T,0,522";  # 2019-10-13
-  $t=399; $ear[$t] = "R,0,0";    # 2019-10-13
-  $t=400; $ear[$t] = "O,0,0";    # 2019-10-1
-  $t=401; $ear[$t] = "B,0,0";    # 2019-10-13
-  $t=402; $ear[$t] = "O,0,0";    # 2019-10-13
-  $t=403; $ear[$t] = "T,0,522";  # 2019-10-13
+  # $t++; $ear[$t] = "G,0,0";    # 2019-10-13
+  # $t++; $ear[$t] = "H,0,0";    # 2019-10-1
+  # $t++; $ear[$t] = "O,0,0";    # 2019-10-13
+  # $t++; $ear[$t] = "S,0,0";    # 2019-10-13
+  # $t++; $ear[$t] = "T,0,522";  # 2019-10-13
+  # $t++; $ear[$t] = "R,0,0";    # 2019-10-13
+  $t++; $ear[$t] = "D,0,0";    # 2019-10-1
+  $t++; $ear[$t] = "E,0,0";    # 2019-10-13
+  $t++; $ear[$t] = "V,0,0";    # 2019-10-13
+  $t++; $ear[$t] = "A,0,522";  # 2019-10-13
 $psi=522; $hlc=1; $pos=5; $dba=1; $num=1; $pre=800; $tpr=406; $rv=399; KbLoad();
-$t=404;  # 2019-10-20: one blank space for sake of AudRecog()
+
+$t++;  # 2019-10-20: one blank space for sake of AudRecog()
 
   # IN -- 2019-10-20: preposition for EnPrep module
-$t=405; $ear[$t] = "I,0,0";           # 2019-10-20
-$t=406; $ear[$t] = "N,0,643";         # 2019-10-20
+$t++; $ear[$t] = "I,0,0";           # 2019-10-20
+$t++; $ear[$t] = "N,0,643";         # 2019-10-20
   $psi=643; $hlc=1; $pos=6; $pre=800; $seq=542; $tkb=418; $rv=405; KbLoad();
-$t=407;  # 2019-10-20: one blank time-point for sake of AudRecog()
 
- # THE -- 2019-10-20: article may be left out and then be supplied by EnArticle()
-$t=408; # T
-$t=409; # H
-$t=410; # E
-$t=411; # 2019-10-20: one blank time-point for sake of AudRecog()
+$t++;  # 2019-10-20: one blank time-point for sake of AudRecog()
+
+# THE -- En(glish) Article for EnArticle module
+$t++; $ear[$t] = "T,0,0";    # 2018-11-01
+$t++; $ear[$t] = "H,0,0";    # 2018-11-01
+$t++; $ear[$t] = "E,0,117";  # 2018-11-01
+$psi=117; $hlc=1; $pos=1; $num=1; $seq=565; $tkb=310; $rv=299; KbLoad();
+
+$t++;  # 2018-11-01: one blank time-point for sake of AudRecog()
 
   # MACHINE -- 2019-10-20:
-$t=412; $ear[$t] = "M,0,0";    # 2019-10-20
-$t=413; $ear[$t] = "A,0,0";    # 2019-10-20
-$t=414; $ear[$t] = "C,0,0";    # 2019-10-20
-$t=415; $ear[$t] = "H,0,0";    # 2019-10-20
-$t=416; $ear[$t] = "I,0,0";    # 2019-10-20
-$t=417; $ear[$t] = "N,0,0";    # 2019-10-20
-$t=418; $ear[$t] = "E,0,542";  # 2019-10-20
+$t++; $ear[$t] = "M,0,0";    # 2019-10-20
+$t++; $ear[$t] = "A,0,0";    # 2019-10-20
+$t++; $ear[$t] = "C,0,0";    # 2019-10-20
+$t++; $ear[$t] = "H,0,0";    # 2019-10-20
+$t++; $ear[$t] = "I,0,0";    # 2019-10-20
+$t++; $ear[$t] = "N,0,0";    # 2019-10-20
+$t++; $ear[$t] = "E,0,542";  # 2019-10-20
 $psi=542; $hlc=1; $pos=5; $dba=4; $num=1; $mfn=3; $pre=643; $rv=412; KbLoad();
-$t=419;  # 2019-10-20: one blank space for sake of AudRecog()
+
+$t++;  # 2019-10-20: one blank space for sake of AudRecog()
 
   # I -- 2019-11-03: subject of 823=FEEL for use with TacRecog()
-$t=420; $ear[$t] = "I,0,701";  # 2018-11-27
+$t++; $ear[$t] = "I,0,701";  # 2018-11-27
   $tru=8; $psi=701; $hlc=1; $pos=7; $dba=1; $num=1; # 2019-11-03
   $pre=0; $seq=823; $tkb=425; $rv=420; KbLoad();    # 2019-11-03
-$t=421;  # 2019-11-03: one blank space for sake of AudRecog()
+
+$t++;  # 2019-11-03: one blank space for sake of AudRecog()
 
   # FEEL -- verb for use with TacRecog()
-$t=422; $ear[$t] = "F,0,0";    # 2019-11-03
-$t=423; $ear[$t] = "E,0,0";    # 2019-11-03
-$t=424; $ear[$t] = "E,0,0";    # 2019-11-03
-$t=425; $ear[$t] = "L,0,823";  # 2019-11-03
+$t++; $ear[$t] = "F,0,0";    # 2019-11-03
+$t++; $ear[$t] = "E,0,0";    # 2019-11-03
+$t++; $ear[$t] = "E,0,0";    # 2019-11-03
+$t++; $ear[$t] = "L,0,823";  # 2019-11-03
 $psi=823; $hlc=1; $pos=8; $dba=1; $num=1; $pre=701; $seq=0; $tkb=0; $rv=422; KbLoad();
-$t=426;  # 2019-11-03: one blank space for sake of AudRecog()
+$t++;  # 2019-11-03: one blank space for sake of AudRecog()
 
 $t++;  # 2018-09-02: making single-word time relative, not hard-coded.
 
@@ -2308,6 +2369,7 @@ $t++; $ear[$t] = "G,0,0";           # 2018-11-15
 $t++; $ear[$t] = "S,0,0";           # 2018-11-15
 $t++; $ear[$t] = "T,0,614";         # 2018-11-15: among 100 innate prepositions.
   $psi=614; $hlc=1; $pos=6; KbLoad(); # 2018-11-15: flag-panel
+
 $t++;  # 2018-11-15: one blank time-point for sake of AudRecog()
 
   # AN -- to be selected instead of "A" before a vowel; 2018-09-08
@@ -3183,6 +3245,7 @@ $t++; $ear[$t] = "E,0,0";           # 2018-12-11
 $t++; $ear[$t] = "L,0,0";           # 2018-12-11
 $t++; $ear[$t] = "P,0,836";         # 2018-12-11
   $psi=836; $hlc=1; $pos=8; KbLoad(); # 2018-12-10: infinitive
+
 $t++;  # 2018-12-11: one blank time-point for sake of AudRecog()
 
   # HER -- dative indirect-object form of pers. pron. 2016feb08
@@ -3190,6 +3253,7 @@ $t++; $ear[$t] = "H,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "E,0,0";           # 2018-09-10
 $t++; $ear[$t] = "R,0,719";         # 2018-09-10
   $psi=719; $hlc=1; $pos=7; $dba=3; $num=1; $mfn=2; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # HER -- accusative direct-object form of pers. pron. 2016feb08
@@ -3197,6 +3261,7 @@ $t++; $ear[$t] = "H,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "E,0,0";           # 2018-09-10
 $t++; $ear[$t] = "R,0,719";         # 2018-09-10
   $psi=719; $hlc=1; $pos=7; $dba=4; $num=1; $mfn=2; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # HERE -- adverb for discussion of physical location
@@ -3205,6 +3270,7 @@ $t++; $ear[$t] = "E,0,0";           # 2018-09-10
 $t++; $ear[$t] = "R,0,0";           # 2018-09-10
 $t++; $ear[$t] = "E,0,201";         # 2018-09-10
   $psi=201; $hlc=1; $pos=2; KbLoad(); # 2018-09-10: essential flag-panel
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # HERS -- genitive form of personal pronoun; 2016feb08
@@ -3213,6 +3279,7 @@ $t++; $ear[$t] = "E,0,0";           # 2018-09-10
 $t++; $ear[$t] = "R,0,0";           # 2018-09-10
 $t++; $ear[$t] = "S,0,719";         # 2018-09-10
   $psi=719; $hlc=1; $pos=7; $dba=2; $num=1; $mfn=0; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # HIM -- dative indirect-object form of personal pronoun
@@ -3227,6 +3294,7 @@ $t++; $ear[$t] = "H,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "I,0,0";           # 2018-09-10
 $t++; $ear[$t] = "M,0,713";         # 2018-09-10
   $psi=713; $hlc=1; $pos=7; $dba=4; $num=1; $mfn=1; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # HIS -- genitive form of personal pronoun
@@ -3234,6 +3302,7 @@ $t++; $ear[$t] = "H,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "I,0,0";           # 2018-09-10
 $t++; $ear[$t] = "S,0,113";         # 2018-09-10
   $psi=113; $hlc=1; $pos=1; $dba=2; $num=0; $mfn=1; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # HOW -- adverb for EnAdverb module
@@ -3241,17 +3310,20 @@ $t++; $ear[$t] = "H,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "O,0,0";           # 2018-09-10
 $t++; $ear[$t] = "W,0,226";         # 2018-09-10
   $psi=226; $hlc=1; $pos=2; KbLoad(); # 2018-09-10: essential flag-panel
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # I -- nominative subject-form of personal pronoun; 2016feb08
 $t++; $ear[$t] = "I,0,701"; $rv = $t; # 2018-09-09: anticipate KbLoad.
   $psi=701; $hlc=1; $pos=7; $dba=1; $num=1; KbLoad(); # 2018-09-09: parameters
+
 $t++;  # 2018-09-09: one blank time-point for sake of AudRecog()
 
   # 327=IF -- 2018-11-27: conjunction for machine reasoning logic
 $t++; $ear[$t] = "I,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "F,0,327";         # 2018-11-27
   $psi=327; $hlc=1; $pos=3; KbLoad(); # 2018-11-27: conceptual associative tags
+
 $t++;  # 2018-11-27: one SPACE for sake of AudRecog()
 
   # 837=IMAGINE -- 2018-12-11: verb for cognition
@@ -3263,12 +3335,14 @@ $t++; $ear[$t] = "I,0,0";           # 2018-12-11
 $t++; $ear[$t] = "N,0,0";           # 2018-12-11
 $t++; $ear[$t] = "E,0,837";         # 2018-12-11
   $psi=837; $hlc=1; $pos=8; KbLoad(); # 2018-12-10: infinitive
+
 $t++;  # 2018-12-11: one blank time-point for sake of AudRecog()
 
   # IN -- preposition for EnPrep module
 $t++; $ear[$t] = "I,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "N,0,643";         # 2018-11-11
   $psi=643; $hlc=1; $pos=6; KbLoad(); # 2018-11-11: essential flag-panel
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # 330=INASMUCH...AS -- 2018-11-27: hold as conjunction
@@ -3284,6 +3358,7 @@ $t++; $ear[$t] = "I,0,0";           # 2018-11-15
 $t++; $ear[$t] = "N,0,0";           # 2018-11-15
 $t++; $ear[$t] = "G,0,644";         # 2018-11-15: among 100 innate prepositions.
   $psi=644; $hlc=1; $pos=6; KbLoad(); # 2018-11-15: flag-panel
+
 $t++;  # 2018-11-15: one blank time-point for sake of AudRecog()
 
   # 645=INSIDE -- 2018-11-11: preposition for EnPrep() module
@@ -3294,6 +3369,7 @@ $t++; $ear[$t] = "I,0,0";           # 2018-11-15
 $t++; $ear[$t] = "D,0,0";           # 2018-11-15
 $t++; $ear[$t] = "E,0,645";         # 2018-11-15: among 100 innate prepositions.
   $psi=645; $hlc=1; $pos=6; KbLoad(); # 2018-11-15: flag-panel
+
 $t++;  # 2018-11-15: one blank time-point for sake of AudRecog()
 
   # 646=INTO -- 2018-11-11: preposition for EnPrep() module
@@ -3302,30 +3378,35 @@ $t++; $ear[$t] = "N,0,0";           # 2018-11-15
 $t++; $ear[$t] = "T,0,0";           # 2018-11-15
 $t++; $ear[$t] = "O,0,646";         # 2018-11-15: among 100 innate prepositions.
   $psi=646; $hlc=1; $pos=6; KbLoad(); # 2018-11-15: flag-panel
+
 $t++;  # 2018-11-15: one blank time-point for sake of AudRecog()
 
   # IS -- 3rd person singular HE-SHE-IT-form of 800=BE; 2016feb07
 $t++; $ear[$t] = "I,0,0"; $rv = $t; # 2018-09-09: anticipate KbLoad.
 $t++; $ear[$t] = "S,0,800";         # 2018-09-09
   $psi=800; $hlc=1; $pos=8; $dba=3; $num=1; KbLoad();  # 2018-09-09: essentials
+
 $t++;  # 2018-09-09: one blank time-point for sake of AudRecog()
 
   # IT -- nominative subject-form of personal pronoun; 2016feb08
 $t++; $ear[$t] = "I,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "T,0,725";         # 2018-09-10
   $psi=725; $hlc=1; $pos=7; $dba=1; $num=1; $mfn=3; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # IT -- dative indirect-object form of personal pronoun; 2016feb08
 $t++; $ear[$t] = "I,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "T,0,725";         # 2018-09-10
   $psi=725; $hlc=1; $pos=7; $dba=3; $num=1; $mfn=3; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # IT -- accusative direct-object form of personal pronoun
 $t++; $ear[$t] = "I,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "T,0,725";         # 2018-09-10
   $psi=725; $hlc=1; $pos=7; $dba=4; $num=1; $mfn=3; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # ITS -- genitive form of personal pronoun; 2016feb08
@@ -3333,6 +3414,7 @@ $t++; $ear[$t] = "I,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "T,0,0";           # 2018-09-10
 $t++; $ear[$t] = "S,0,725";         # 2018-09-10
   $psi=725; $hlc=1; $pos=7; $dba=2; $num=1; $mfn=3; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # JOHN -- No. 504 2019-08-10: useful name for input-testing.
@@ -3341,6 +3423,7 @@ $t++; $ear[$t] = "O,0,0";           # 2019-08-10
 $t++; $ear[$t] = "H,0,0";           # 2019-08-10
 $t++; $ear[$t] = "N,0,504";         # 2019-08-10
   $psi=504; $hlc=1; $mtx=0; $pos=5; $dba=1; $num=1; $mfn=1; KbLoad();  # 2019-08-10
+
 $t++;  # 2019-08-10: one blank time-point for sake of AudRecog()
 
   # 838=KNOW -- 2018-12-11: from Wikipedia:Most_common_words_in_English
@@ -3349,6 +3432,7 @@ $t++; $ear[$t] = "N,0,0";           # 2018-09-10
 $t++; $ear[$t] = "O,0,0";           # 2018-09-10
 $t++; $ear[$t] = "W,0,838";         # 2018-12-10
   $psi=838; $hlc=1; $jux=0; $pos=8; $dba=0; $num=0; KbLoad(); # 2018-12-11: infinitive
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # 839=LEARN -- 2018-12-11: verb for cognition
@@ -3358,6 +3442,7 @@ $t++; $ear[$t] = "A,0,0";           # 2018-12-11
 $t++; $ear[$t] = "R,0,0";           # 2018-12-11
 $t++; $ear[$t] = "N,0,839";         # 2018-12-11
   $psi=839; $hlc=1; $pos=8; KbLoad(); # 2018-12-10: infinitive
+
 $t++;  # 2018-12-11: one blank time-point for sake of AudRecog()
 
   # 840=LEAVE -- 2018-12-11: from Wikipedia:Most_common_words_in_English
@@ -3367,6 +3452,7 @@ $t++; $ear[$t] = "A,0,0";           # 2018-12-11
 $t++; $ear[$t] = "V,0,0";           # 2018-12-11
 $t++; $ear[$t] = "E,0,840";         # 2018-12-11
   $psi=840; $hlc=1; $pos=8; KbLoad(); # 2018-12-10: infinitive
+
 $t++;  # 2018-12-11: one blank time-point for sake of AudRecog()
 
   # 841=LEND -- 2018-12-11: verb for dative and accusative
@@ -3375,6 +3461,7 @@ $t++; $ear[$t] = "E,0,0";           # 2018-12-11
 $t++; $ear[$t] = "N,0,0";           # 2018-12-11
 $t++; $ear[$t] = "D,0,841";         # 2018-12-11
   $psi=841; $hlc=1; $pos=8; KbLoad(); # 2018-12-10: infinitive
+
 $t++;  # 2018-12-11: one blank time-point for sake of AudRecog()
 
   # 647=LESS -- 2018-11-11: as a preposition for EnPrep() module
@@ -3383,6 +3470,7 @@ $t++; $ear[$t] = "E,0,0";           # 2018-11-15
 $t++; $ear[$t] = "S,0,0";           # 2018-11-15
 $t++; $ear[$t] = "S,0,647";         # 2018-11-15: among 100 innate prepositions.
   $psi=647; $hlc=1; $pos=6; KbLoad(); # 2018-11-15: flag-panel
+
 $t++;  # 2018-11-15: one blank time-point for sake of AudRecog()
 
   # 333=LEST -- 2018-11-27: conjunction for multi-clause thought.
@@ -3391,6 +3479,7 @@ $t++; $ear[$t] = "E,0,0";           # 2018-11-27
 $t++; $ear[$t] = "S,0,0";           # 2018-11-27
 $t++; $ear[$t] = "T,0,333";         # 2018-11-27: among innate conjunctions.
   $psi=333; $hlc=1; $pos=3; KbLoad(); # 2018-11-27: conceptual associative tags
+
 $t++;  # 2018-11-27: one SPACE for sake of AudRecog()
 
   # 648=LIKE -- 2018-11-11: as a preposition for EnPrep() module
@@ -3399,6 +3488,7 @@ $t++; $ear[$t] = "I,0,0";           # 2018-11-15
 $t++; $ear[$t] = "K,0,0";           # 2018-11-15
 $t++; $ear[$t] = "E,0,648";         # 2018-11-15: among 100 innate prepositions.
   $psi=648; $hlc=1; $pos=6; KbLoad(); # 2018-11-15: flag-panel
+
 $t++;  # 2018-11-15: one blank time-point for sake of AudRecog()
 
   # 842=LIVE-- 2018-12-11: verb important for life
@@ -3407,6 +3497,7 @@ $t++; $ear[$t] = "I,0,0";           # 2018-11-27
 $t++; $ear[$t] = "V,0,0";           # 2018-11-27
 $t++; $ear[$t] = "E,0,842";         # 2018-12-11
   $psi=842; $hlc=1; $pos=8; $dba=0; $num=0; KbLoad(); # 2018-11-27: infinitive
+
 $t++;  # 2018-11-27: one SPACE for sake of AudRecog()
 
   # 843=LOAN -- 2018-12-11: verb for dative and accusative
@@ -3415,6 +3506,7 @@ $t++; $ear[$t] = "O,0,0";           # 2018-12-11
 $t++; $ear[$t] = "A,0,0";           # 2018-12-11
 $t++; $ear[$t] = "N,0,843";         # 2018-12-11
   $psi=843; $hlc=1; $pos=8; KbLoad(); # 2018-12-10: infinitive
+
 $t++;  # 2018-12-11: one blank time-point for sake of AudRecog()
 
   # 844=LOOK -- 2018-12-11: from Wikipedia:Most_common_words_in_English
@@ -3423,6 +3515,7 @@ $t++; $ear[$t] = "O,0,0";           # 2018-12-11
 $t++; $ear[$t] = "O,0,0";           # 2018-12-11
 $t++; $ear[$t] = "K,0,844";         # 2018-12-11
   $psi=844; $hlc=1; $pos=8; KbLoad(); # 2018-12-10: infinitive
+
 $t++;  # 2018-12-11: one blank time-point for sake of AudRecog()
 
   # 845=LOVE -- 2018-12-11: verb for Emotion(); opposite of HATE
@@ -3431,6 +3524,7 @@ $t++; $ear[$t] = "O,0,0";           # 2018-12-11
 $t++; $ear[$t] = "V,0,0";           # 2018-12-11
 $t++; $ear[$t] = "E,0,845";         # 2018-12-11
   $psi=845; $hlc=1; $pos=8; KbLoad(); # 2018-12-11: infinitive
+
 $t++;  # 2018-12-11: one blank time-point for sake of AudRecog()
 
   # 846=MAKE -- 2018-12-11: from Wikipedia:Most_common_words_in_English
@@ -3439,6 +3533,7 @@ $t++; $ear[$t] = "A,0,0";           # 2018-12-11
 $t++; $ear[$t] = "K,0,0";           # 2018-12-11
 $t++; $ear[$t] = "E,0,846";         # 2018-12-11
   $psi=846; $hlc=1; $pos=8; KbLoad(); # 2018-12-11: infinitive
+
 $t++;  # 2018-12-11: one blank time-point for sake of AudRecog()
 
   # MAN -- always masculine noun for use with gender flags
@@ -3446,6 +3541,7 @@ $t++; $ear[$t] = "M,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "A,0,0";           # 2018-09-10
 $t++; $ear[$t] = "N,0,543";         # 2018-09-10
   $psi=543; $hlc=1; $pos=5; $dba=0; $num=1; $mfn=1; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # 847=MAY -- 2018-12-11: auxiliary modal verb
@@ -3453,6 +3549,7 @@ $t++; $ear[$t] = "M,0,0"; $rv = $t; # 2018-12-11: anticipate KbLoad.
 $t++; $ear[$t] = "A,0,0";           # 2018-12-11
 $t++; $ear[$t] = "Y,0,847";         # 2018-12-11
   $psi=847; $hlc=1; $pos=8; KbLoad(); # 2018-12-11: infinitive
+
 $t++;  # 2018-12-11: one blank time-point for sake of AudRecog()
 
   # MAYBE -- adverb response as alternative to YES or NO
@@ -3462,18 +3559,21 @@ $t++; $ear[$t] = "Y,0,0";           # 2018-09-10
 $t++; $ear[$t] = "B,0,0";           # 2018-09-10
 $t++; $ear[$t] = "E,0,230";         # 2018-09-10
   $psi=230; $hlc=1; $pos=2; $dba=0; KbLoad(); # 2018-09-10: flag-panel
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # ME -- dative indirect-object form of personal pronoun; 2016feb08
 $t++; $ear[$t] = "M,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "E,0,701";         # 2018-09-10
   $psi=701; $hlc=1; $pos=7; $dba=3; $num=1; $mfn=0; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # ME -- accusative direct-object form of personal pronoun
 $t++; $ear[$t] = "M,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "E,0,701";         # 2018-09-10
   $psi=701; $hlc=1; $pos=7; $dba=4; $num=1; $mfn=0; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # MEDIA -- always plural noun in correction of modern usage
@@ -3483,6 +3583,7 @@ $t++; $ear[$t] = "D,0,0";           # 2018-09-10
 $t++; $ear[$t] = "I,0,0";           # 2018-09-10
 $t++; $ear[$t] = "A,0,584";         # 2018-09-10
   $psi=584; $hlc=1; $pos=5; $dba=0; $num=2; $mfn=3; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # MEN -- irregular plural for retrieval by parameters
@@ -3490,6 +3591,7 @@ $t++; $ear[$t] = "M,0,0"; $rv = $t; # 2018-09-10: anticipate KbLoad.
 $t++; $ear[$t] = "E,0,0";           # 2018-09-10
 $t++; $ear[$t] = "N,0,543";         # 2018-09-10
   $psi=543; $hlc=1; $pos=5; $dba=0; $num=2; $mfn=1; KbLoad(); # 2018-09-10
+
 $t++;  # 2018-09-10: one blank time-point for sake of AudRecog()
 
   # 848=MIGHT -- 2018-12-11: auxiliary verb

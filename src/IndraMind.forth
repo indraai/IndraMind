@@ -2826,15 +2826,15 @@ cns @   3  CHANNEL  ear{  ( 2016JUL25: Auditory memory channel "ear" )
 ( ENOUGH -- 2016aug16: 128 psi ! -- adjective important for logic )
 ( ENOUGH -- 2016aug16: 728 psi ! -- pronoun )
 
- ( 538=ERROR -- 2018-11-24: was first word so any bug would announce itself )
-   1 t +! 69 pho !   0 audpsi ! AudMem t @ rv ! \ E
-   1 t +! 82 pho !   0 audpsi !          AudMem \ R
-   1 t +! 82 pho !   0 audpsi !          AudMem \ R
-   1 t +! 79 pho !   0 audpsi !          AudMem \ O
-   1 t +! 82 pho ! 538 audpsi !          AudMem \ R 2018-11-24
-   538 psi !  5 pos ! 0 jux !   0 pre ! 0 tkb ! 0 seq ! \ 2018-11-24
-    1 num !  3 mfn ! 0 dba !  KbLoad  \ 2016aug19
- 1 t +!  \ 2018-09-01
+ \ ( 538=ERROR -- 2018-11-24: was first word so any bug would announce itself )
+ \   1 t *! 73 pho !  0 audpsi ! AudMem \ 2016aug16: E
+ \   1 t *! 78 pho !  0 audpsi ! AudMem \ 2016aug16: R
+ \   1 t *! 68 pho !  0 audpsi ! AudMem \ 2016aug16: R
+ \   1 t *! 82 pho !  0 audpsi ! AudMem \ 2016aug16: O
+ \   1 t *! 65 pho ! 538 audpsi ! AudMem \ 2016aug16: R
+ \   538 psi !  5 pos ! 0 jux !   0 pre ! 0 tkb ! 0 seq ! \ 2018-11-24
+ \    1 num !  3 mfn ! 0 dba !  KbLoad  \ 2016aug19
+ \ 1 t +!  \ 2018-09-01
 
  ( EVEN  -- 2016aug18: 214 psi ! -- adverb ) ( 846+5=851 )
 
