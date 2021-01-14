@@ -6546,6 +6546,10 @@ cns @   3  CHANNEL  ear{  ( 2016JUL25: Auditory memory channel "ear" )
 ;   \ 2019-10-04: Robot Motorium module returns to Volition.
 
 
+:  Security ( Security added to IndraMind 2021-1-11 )
+   7 EMIT  \ 2021-1-11: sound a beep
+; \ 2021-1-11: Securit stub
+
 : Volition ( http://ai.neocities.org/Volition.html )
   ( EmotiOn )  \ 2016aug18: Influence of physiology upon thinking.
   0 aud !         \ 2016aug30: zero out to prevent carry-over
@@ -6572,6 +6576,7 @@ cns @   3  CHANNEL  ear{  ( 2016JUL25: Auditory memory channel "ear" )
 
 :  MainLoop ( http://ai.neocities.org/MainLoop.html )
   TIME&DATE byear ! bmonth ! bday ! bhour ! bminute ! bsec !
+  Security    \ 2021Jan13 Added Security Stub
   TabulaRasa      \ 2016aug29: clear memory in advance of AI.
   MindBoot  \ 2016JUL26: runs once before the main loop
   CR ." ESCape to quit AI; bye to end Forth; EXIT from DOS." CR

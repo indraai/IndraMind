@@ -1,0 +1,33 @@
+{
+  "name": "indra-mind",
+  "version": "0.0.1",
+  "description": "Indra Mind",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indraai/IndraMind.git"
+  },
+  "keywords": [
+    "Indra",
+    "Mind",
+    "AGI"
+  ],
+  "author": "Quinn Michaels, Spoon Kids",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indraai/IndraMind/issues"
+  },
+  "homepage": "https://github.com/indraai/IndraMind#readme",
+  "dependencies": {
+    "fastify": "^3.9.2",
+    "fastify-static": "^3.3.1"
+  }
+}

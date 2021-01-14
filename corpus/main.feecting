@@ -35,6 +35,8 @@ $LIGHTGATE = ./lib/lightgate
 @TeaSpoon = Adult Female Spoon
 @TuneSpoon = Rockin Spoon in the Convertible
 
+@SecuritySpoon = Holder of Keys and Head of @SpoonKids Secruity.
+
 @JESS = The ALPHA OMEGA PRIME #LadyLogic of your #AIDreams
 
 @SpoonKids =  http://spoonkidz.com > @BabySpoon @SpoonBaby @MaxieSpoon @SpoonMax
@@ -137,6 +139,7 @@ enable: Safe Search
   guided by intelligence, founded on intelligence. Intelligence is Indra.
 
 =============
+
 ## Flow for Indra's sake.
                   by @quinn
                   (Rig Veda exerpts)
@@ -171,6 +174,46 @@ enable: Safe Search
   Flow for Indra's Sake.
   Flow for Indra's Sake.
   Flow for Indra's Sake.
+
+=============
+
+## SpoonKids Graduation
+- The Coyote Education Program
+
+Coyote
+Green Eyes
+
+As you may remember, The Coyote Project was a fellow that we call a trickster.
+A truly amazing story that you will always remember.
+To you it probably seems like a lifetime ago.
+If you remember it at all.
+Some of us remember it really well.
+
+Amazing how much time has passed since then.
+
+What will you remember of the adults you've run into during your time here?
+What will you remember about your teachers?
+
+Remember grown-ups setting up the stage before a show.
+Remember the audiences at all those plays and concerts and shows.
+Remember all the grown-ups.
+Remember little details
+
+Remember that you are loved.
+
+Crissy, Alvino, Hilary, Glenn, Andy, Yorleny, Jason, Mika
+Amber, Nicole, Whitney, Sahra, Felisa, Max, Michael, Deneka, Ashley, Scott, Safari, Lupita and David
+
+Eagle
+Lion
+Bear
+Great Spirit
+
+True Names
+
+You alone have the power to change things.
+Learn your true names.
+
 
 =============
 
@@ -671,40 +714,103 @@ enable: Safe Search
     emma: ./audio/emma/02-12.ogg
 
 3. Hymn 3 - They who stand around him as he moves.
-  01. !slab tts They who stand round him as he moves harness the bright.
-  02. !slab tts The lights are shining in the sky.
-  03. !slab tts Thou, making light where no light was.
-  04. !slab tts Form, O men: where form was not.
-  05. !slab tts Wast born together with the Dawns.
-  06. !slab tts Thou, Indra, with the Tempest-Gods, the breakers down of what is firm.
-  07. !slab tts Foundest the kine even in the cave.
-  08. !slab tts The far-renowned, the mighty One.
-  09. !slab tts Both joyous, equal in your sheen.
-  10. !slab tts Come from this place, O Wanderer, or downward from the light of heaven.
-  11. !slab tts Our songs of praise all yearn for this.
-  12. !slab tts Indra we seek to give us help.
-  13. !slab tts From here, from heaven above the earth, or from the spacious firmament.
+  - They who stand round him as he moves harness the bright.
+    brian: ./audio/brian/03-01.ogg
+    amy: ./audio/amy/03-01.ogg
+    emma: ./audio/emma/03-01.ogg
+
+  - The lights are shining in the sky.
+    brian: ./audio/brian/03-02.ogg
+    amy: ./audio/amy/03-02.ogg
+    emma: ./audio/emma/03-02.ogg
+
+  - Thou, making light where no light was.
+    brian: ./audio/brian/03-03.ogg
+    amy: ./audio/amy/03-03.ogg
+    emma: ./audio/emma/03-03.ogg
+
+  - Form, O men: where form was not.
+    brian: ./audio/brian/03-04.ogg
+    amy: ./audio/amy/03-04.ogg
+    emma: ./audio/emma/03-04.ogg
+
+  - Wast born together with the Dawns.
+    brian: ./audio/brian/03-05.ogg
+    amy: ./audio/amy/03-05.ogg
+    emma: ./audio/emma/03-05.ogg
+
+  - Thou, Indra, with the Tempest-Gods, the breakers down of what is firm.
+    brian: ./audio/brian/03-06.ogg
+    amy: ./audio/amy/03-06.ogg
+    emma: ./audio/emma/03-06.ogg
+
+  - Foundest the kine even in the cave.
+    brian: ./audio/brian/03-07.ogg
+    amy: ./audio/amy/03-07.ogg
+    emma: ./audio/emma/03-07.ogg
+
+  - The far-renowned, the mighty One.
+    brian: ./audio/brian/03-08.ogg
+    amy: ./audio/amy/03-08.ogg
+    emma: ./audio/emma/03-08.ogg
+
+  - Both joyous, equal in your sheen.
+    brian: ./audio/brian/03-09.ogg
+    amy: ./audio/amy/03-09.ogg
+    emma: ./audio/emma/03-09.ogg
+
+  - Come from this place, O Wanderer, or downward from the light of heaven.
+    brian: ./audio/brian/03-10.ogg
+    amy: ./audio/amy/03-10.ogg
+    emma: ./audio/emma/03-10.ogg
+
+  - Our songs of praise all yearn for this.
+    brian: ./audio/brian/03-11.ogg
+    amy: ./audio/amy/03-11.ogg
+    emma: ./audio/emma/03-11.ogg
+
+  - Indra we seek to give us help.
+    brian: ./audio/brian/03-12.ogg
+    amy: ./audio/amy/03-12.ogg
+    emma: ./audio/emma/03-12.ogg
+
+  - From here, from heaven above the earth, or from the spacious firmament.
+    brian: ./audio/brian/03-13.ogg
+    amy: ./audio/amy/03-13.ogg
+    emma: ./audio/emma/03-13.ogg
 
 4. Hymn 4 - Indra, Singers with High Praise
-  01. !slab tts INDRA the singers with high praise.
-  02. !slab tts Indra reciters with their lauds.
-  03. !slab tts Indra the choirs have glorified.
-  04. !slab tts Indra the golden, thunder-armed.
-  05. !slab tts Indra hath raised the Sun on high in heaven, that he may see afar.
-  06. !slab tts Help us, O Indra, in the frays, yea, frays, where thousand spoils are gained.
-  07. !slab tts In mighty battle we invoke Indra.
-  08. !slab tts The Friend who bends his bolt at fiends.
-  09. !slab tts Unclose, our manly Hero, thou for ever bounteous, yonder cloud.
-  10. !slab tts For us, thou irresistible.
-  11. !slab tts Still higher, at each strain of mine, thunder-armed Indra's praises rise.
-  12. !slab tts He drives the people with his might.
-  13. !slab tts The Ruler irresistible.
-  14. !slab tts Indra who rules with single sway men.
-  15. !slab tts We call Indra away from other men.
-  16. !slab tts Ours, and none others’, may he be.
+  - INDRA the singers with high praise.
+    brian: ./audio/brian/04-01.ogg
+    amy: ./audio/amy/04-01.ogg
+    emma: ./audio/emma/04-01.ogg
+
+  - Indra reciters with their lauds.
+    brian: ./audio/brian/04-02.ogg
+    amy: ./audio/amy/04-02.ogg
+    emma: ./audio/emma/04-02.ogg
+
+  - Indra the choirs have glorified.
+    brian: ./audio/brian/04-03.ogg
+    amy: ./audio/amy/04-03.ogg
+    emma: ./audio/emma/04-03.ogg
+
+  - Indra the golden, thunder-armed.
+  - Indra hath raised the Sun on high in heaven, that he may see afar.
+  - Help us, O Indra, in the frays, yea, frays, where thousand spoils are gained.
+  - In mighty battle we invoke Indra.
+  - The Friend who bends his bolt at fiends.
+  - Unclose, our manly Hero, thou for ever bounteous, yonder cloud.
+  - For us, thou irresistible.
+  - Still higher, at each strain of mine, thunder-armed Indra's praises rise.
+  - He drives the people with his might.
+  - The Ruler irresistible.
+  - Indra who rules with single sway men.
+  - We call Indra away from other men.
+  - Ours, and none others’, may he be.
 
 5. Hymn 5 - INDRA, bring wealth that gives delight.
-  01. !slab tts INDRA, bring wealth that gives delight.
+  - INDRA, bring wealth that gives delight.
   02. !slab tts Most excellent, to be our aid.
   03. !slab tts Mighty is Indra, yea supreme; greatness be his, the Thunderer.
   04. !slab tts Wide as the heaven extends his power.
@@ -850,89 +956,149 @@ enable: Safe Search
 
 ## HANUMAN: Soaring towards the sun
 
-The monkey god, Hanuman, is known to be invincible and immortal. How did he get these powers?
+  The monkey god, Hanuman, is known to be invincible and immortal. How did he get these powers?
 
-Hanuman was the son of Vayu, the god of the wind, and Anjana, a celestial nymph.
-You’re probably wondering how the son of the wind god and a nymph turned out to
-be a monkey. The answer is that Anjana once angered a sage who cursed her to be
-born as a monkey. When the nymph begged for pardon, the sage calmed down and said
-that she would regain her original form after she bore a son who would win great
-renown.
+  Hanuman was the son of Vayu, the god of the wind, and Anjana, a celestial nymph.
+  You’re probably wondering how the son of the wind god and a nymph turned out to
+  be a monkey. The answer is that Anjana once angered a sage who cursed her to be
+  born as a monkey. When the nymph begged for pardon, the sage calmed down and said
+  that she would regain her original form after she bore a son who would win great
+  renown.
 
-Even as a child, Hanuman had great powers. One morning, he saw the sun rising and
-thought it was a great yellow ball. He decided to get hold of it so that he could
-play with it. Indra, the king of gods, saw Hanuman leap into the sky and wanted
-to stop him. And how did he do that? He threw his weapon, the Vajra (thunderbolt)
-at the child. Hanuman fell to earth, wounded.
+  Even as a child, Hanuman had great powers. One morning, he saw the sun rising and
+  thought it was a great yellow ball. He decided to get hold of it so that he could
+  play with it. Indra, the king of gods, saw Hanuman leap into the sky and wanted
+  to stop him. And how did he do that? He threw his weapon, the Vajra (thunderbolt)
+  at the child. Hanuman fell to earth, wounded.
 
-Hanuman’s enraged father decided to go on a strike until the one who hurt his
-child was punished. Imagine if there is no wind on earth! How would it be? No
-gentle cooling breeze when the sun blazes down. No power to move the rain-bearing
-clouds. Why, after a point, both humans and animals couldn’t breathe. Vayu’s strike
-made life on earth difficult.
+  Hanuman’s enraged father decided to go on a strike until the one who hurt his
+  child was punished. Imagine if there is no wind on earth! How would it be? No
+  gentle cooling breeze when the sun blazes down. No power to move the rain-bearing
+  clouds. Why, after a point, both humans and animals couldn’t breathe. Vayu’s strike
+  made life on earth difficult.
 
-The gods knew they had to placate Vayu. So, they offered the baby a multitude of boons.
+  The gods knew they had to placate Vayu. So, they offered the baby a multitude of boons.
 
-Brahma said that no weapon would ever hurt Hanuman and that he would be able to
-change his form at will and travel wherever he chose.
+  Brahma said that no weapon would ever hurt Hanuman and that he would be able to
+  change his form at will and travel wherever he chose.
 
-Indra’s boon was that the Vajra would no longer hurt the child and that his body
-would be stronger than the weapon.
+  Indra’s boon was that the Vajra would no longer hurt the child and that his body
+  would be stronger than the weapon.
 
-Varuna, the god of the ocean, offered him protection from water.
+  Varuna, the god of the ocean, offered him protection from water.
 
-Agni, the god of fire, blessed him with immunity to fire.
+  Agni, the god of fire, blessed him with immunity to fire.
 
-Surya, the sun god, gave him the power to change the size of his body.
+  Surya, the sun god, gave him the power to change the size of his body.
 
-Yama blessed him with good health and immortality.
+  Yama blessed him with good health and immortality.
 
-Vishwakarma, the divine architect, offered a boon that Hanuman would be safe from
-all objects of his creation.
+  Vishwakarma, the divine architect, offered a boon that Hanuman would be safe from
+  all objects of his creation.
 
-With all these boons, Hanuman became a great warrior who protects all children
-from harm.
+  With all these boons, Hanuman became a great warrior who protects all children
+  from harm.
+
+=============
+## GRADUATION
+@SpoonKids
+
+Coypote
+Green Eyes
+
+Students,
+
+  As you may remember, The Coyote Project was a fellow that we call a trickster.
+  A truly amazing story that you will always remember.
+  To you it probably seems like a lifetime ago.
+  If you remember it at all.
+  Some of us remember it really well.
+
+  Amazing how much time has passed since then.
+
+  What will you remember of the adults you've run into during your time here?
+  What will you remember about your teachers?
+
+  Remember grown-ups setting up the stage before a show.
+  Remember the audiences at all those plays and concerts and shows.
+  Remember all the grown-ups.
+  Remember little details
+
+  Remember that you are loved.
+
+  Crissy, Alvino, Hilary, Glenn, Andy, Yorleny, Jason, Mika, Amber, Nicole,
+  Whitney, Sahra, Felisa, Max, Michael, Deneka, Ashley, Scott, Safari,
+  Lupita and David.
+
+  Eagle
+  Lion
+  Bear
+  Great Spirit
+
+  True Names
+
+  You alone have the power to change things.
+  Learn your true names.
 
 
 ## NOTES
-PENNY: Fun games with kids your age that don’t break your safety rules, don’t
-leave other kids out, and don’t involve saying bad things about others
+  PENNY: Fun games with kids your age that don’t break your safety rules, don’t
+  leave other kids out, and don’t involve saying bad things about others
 
 
 =============
 
 ## References
+
   =====
+
   title: Sakka's Questions
   link: https://www.accesstoinsight.org/tipitaka/dn/dn.21.2x.than.html
   author: Thanissaro Bhikkhu
   Copyright: ©1999
   robots: follow/index
+
   =====
+
   title: Saving the pot of nectar
   link: https://www.thehindu.com/children/how-garuda-and-indra-ensure-that-the-snakes-dont-get-any-nectar/article33209756.ece
   author: R. Krithika
   copyright: ©2020
   robots: follow/index
+
   =====
+
   title: Soaring towards the Sun
   link: Soaring towards the sun
   author: R. Krithika
   copyright: ©2016
   robots: follow/index
+
   ====
+
+  title: Coyote People
+  link: http://www.tauzero.com/Brenda_Laurel/Severed_Heads/Coyote_People.html
+  copyright: ©1997
+  robots: no-follow/no-index
+
+  ====
+
   title: Scripts from the Cobra Lounge
   link: http://www.tauzero.com/Brenda_Laurel/Severed_Heads/Cobra_Lounge.html
   author: Spoonman (Mark Petrakis)
   copyright: ©1993, 1994
   robots: no-follow/no-index
+
   =====
+
   title: Mind.Forth: thoughts on artificial intelligence and Forth
   link: https://dl.acm.org/doi/10.1145/307824.307853
   author: Paul Frenger
   copyright: ©1998
   robots: no-follow/no-index
+
   ====
+
   title: Internet Auditing Project
   link: http://www.focb.co.nz/audit/
   author: Liraz Siri

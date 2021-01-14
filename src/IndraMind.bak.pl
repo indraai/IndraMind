@@ -335,9 +335,7 @@ sub PsiDecay() {  #
     if ($k[3] < 0) {  # 2017-06-24:
       $k[3] = ($k[3] + 2);   # 2017-06-24: rapid recovery.
     }  # 2017-06-24: end of test
-    $psy[$i]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"  # 2018-07-01: insertion.
-    . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
-    . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01: expanded panel.
+    $psy[$i]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01: expanded panel.
   }  # 2016apr13: End of (for loop) moving backwards in time
 }  # 2019-09-27: PsiDecay() returns to EnThink() etc.
 

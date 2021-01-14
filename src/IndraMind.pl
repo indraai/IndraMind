@@ -1722,46 +1722,6 @@ $t++; $ear[$t] = "E,0,701";  # 2018-09-10
 
 $t++;  # 2020-1-12: time point
 
-
-  # ROBOTS -- -- premise for volitional inference; 2017-06-17
-$t++; $ear[$t] = "R,0,0";    # 2018-09-10
-$t++; $ear[$t] = "O,0,0";    # 2018-09-10
-$t++; $ear[$t] = "B,0,0";    # 2018-09-10
-$t++; $ear[$t] = "O,0,0";    # 2018-09-10
-$t++; $ear[$t] = "T,0,0";    # 2018-09-10
-$t++; $ear[$t] = "S,0,571";  # 2018-09-10
-  $psi=571; $hlc=1; $jux=0; $pos=5; $dba=1; $num=2; $mfn=0;  # 2018-09-27
-  $pre=0;   $seq=897;  $tkb=98; $rv=88; KbLoad(); # 2018-09-10: flag-panel
-
-$t++;  # 2020-1-12: time point
-
-  # WANT -- verb for FreeWill volition module; 2017jun17
-$t++; $ear[$t] = "W,0,0";    # 2018-09-10
-$t++; $ear[$t] = "A,0,0";    # 2018-09-10
-$t++; $ear[$t] = "N,0,0";    # 2018-09-10
-$t++; $ear[$t] = "T,0,895";  # 2018-12-10
-  $psi=895; $hlc=1; $jux=0; $pos=8; $dba=1; $num=2; $mfn=0;  # 2018-12-10
-  $pre=571; $seq=507;  $tkb=105; $rv=95; KbLoad(); # 2018-09-10: flag-panel
-
-$t++;  # 2020-1-12: time point
-
-  # A -- En(glish) Article for EnArticle module
-$t++; $ear[$t] = "A,0,101";  # 2018-09-10
-  $psi=101; $hlc=1; $jux=0; $pos=1; $dba=0; $num=1; $mfn=0; # 2018-09-27
-  $pre=0;   $seq=507;  $tkb=0; $rv=100; KbLoad(); # 2018-09-10: flag-panel
-
-$t++;  # 2020-1-12: time point
-
-  # BEEP -- ASCII 07 bell; most primitive AI motor output option; 2017jun17
-$t++; $ear[$t] = "B,0,0";    # 2018-09-10
-$t++; $ear[$t] = "E,0,0";    # 2018-09-10
-$t++; $ear[$t] = "E,0,0";    # 2018-09-10
-$t++; $ear[$t] = "P,0,507";  # 2018-09-10
-  $psi=507; $hlc=1; $jux=0; $pos=5; $dba=4; $num=1; $mfn=0;  # 2018-12-10
-  $pre=895; $seq=0;    $tkb=0; $rv=102; KbLoad(); # 2018-12-10: flag-panel
-
-$t++;  # 2020-1-12: time point
-
   # YOU -- for SelfReferentialThought
 $t++; $ear[$t] = "Y,0,0";    # 2018-09-10
 $t++; $ear[$t] = "O,0,0";    # 2018-09-10
@@ -5342,6 +5302,28 @@ sub RuAdjective() {  #
 } # 2019-06-05: RuAdjective() returns to RuNounPhrase() module.
 
 
+# 1/13/2021 - Added Security Sub for implementation.
+sub Security() {
+  # 2021-01-13: stub for security implementation;
+}
+
+# 1/13/2021 - Added Imagination Sub for implementation;
+sub Imagination() {
+  # 2021-01-13 - Add your own imagination. Love Quinn.
+}
+
+# 1/13/2021 - Add Adventure Sub for implementation;
+sub Adventure() {
+  # 2021-01-13 - BUILD YOUR OWN ADVENTURE
+}
+
+# 1/13/2021 - Add Explore Sub for IMPLEMENTATION;
+sub Explore() {
+  # WHAT ARE WE GOING TO EXPLORE
+}
+
+
+
 # $act 33-48 = consciousness tier where concepts win selection.
 # $act 17-32 = subconscious where concepts remain available.
 # $act  1-16 = noise tier below logical association threshold.
@@ -6108,6 +6090,7 @@ sub RuNounPhrase() {  #
   }  # 2017-06-17: end of test for absence of pre-ordained nounlock;
   RuAdjective();  # 2019-06-05: permit insertion of adjective before a Russian noun.
   Speech();  # 2017-0617: speak the word starting at the $aud time.
+
   $dirobj = 0;    # 2017-06-17: reset for safety
   $mjact = 0;     # 2017-06-17: reset for safety.
   $motjuste = 0;  # 2017-06-17: reset for safety.
@@ -7303,8 +7286,10 @@ sub Volition() {  #
 } # 2016mar05: Volition() will return to the MainLoop of the AI.
 
 MainLoop: {  # 2016jan25: for inclusion of TabulaRasa() & MindBoot()
+  Security(); # 2021-1-11: Added Security Stub;
   TabulaRasa();  # 2016jan25: one-time call as in MindForth AI.
   MindBoot();    # 2016jan25: one-time call as in MindForth AI.
+
   while ($t < $cns) {  # 2015may02: Until CNS memory is full.
     $age = $age + 1;   # 2015apr26
 #   if ($fyi > 2) {  # 2016feb08: if mode is Diagnostic
