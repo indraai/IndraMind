@@ -1,4 +1,6 @@
-.DS_Storey
+.DS_Store
+node_modules 
+.config.json
 
 !Build/
 .last_cover_stats
