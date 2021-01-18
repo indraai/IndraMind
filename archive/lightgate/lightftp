@@ -1,0 +1,126 @@
+#!/usr/bin/perl
+#
+# lightftp.pl
+#
+# Author: Liraz Siri <liraz@hushmail.com>
+#
+# Copyright (c) 1998 Liraz Siri <liraz@hushmail.com>, Ariel, Israel
+#		All rights reserved.
+#
+# Created: Tue Oct 20 12:30:20 IST 1998
+#
+# Lightftp - the worlds smallest (practical) ftp protocol daemon EVER.
+# paste-a-foo(tm) compliant: .z (11 lines/856 bytes)
+#
+# lightftp is the client side of the lightgate->lightftpd package.
+# Designed to be as small as possible while still retaining useability,
+# functionality and reliability, this miniature client/server package
+# can be used to download as well as upload files between two machines.
+#
+# Usage is simple:
+# lightftp.pl -(p|g) daemon_address[:port] local_file [remote_file]
+#
+# p => put, g => get. (get/put? get/put file! DUH!)
+#
+# any questions?
+# Note that lightftp.pl is the long version of the client, just take a look
+# through lightftp.z.pl which is only 12 lines / 856 bytes long, while
+# still being relatively user-friendly (command line! wooo!!).
+#
+# Designed in the spirit of the lightgate package, .z versions of these
+# miniature applications offer full fuctionality while still complying
+# with strict paste-a-foo(tm) standards.
+#
+# Remember, if it's not paste-a-foo(tm)... you can't paste it!!!
+
+use Socket;
+use FileHandle;
+
+sub usage {
+ printf<<EOF;
+Lightgate FTP, [zaril (c) 1998] Usage: 
+$0 -(p|g) address[:port] (local|remote)_file [(remote|local)_file]
+EOF
+ exit;
+}
+
+$| = 1;
+
+if(!$#ARGV < 3 && $ARGV[0] =~ /^-([pg])$/)
+{
+ $1 eq "p" && ($action = 'PUT');
+ $1 eq "g" && ($action = 'GET'); 
+} else { &usage; }
+
+$daemon_address = $ARGV[1];
+$daemon_port = 5051;
+
+if($ARGV[1] =~ /^([^:]+):(\d+)$/) 
+{ 
+ $daemon_address = $1; 
+ $daemon_port = $2;
+}
+
+socket(S, AF_INET, SOCK_STREAM, 0);
+
+$raddr = inet_aton($daemon_address) || die "inet_aton: failed\n";
+
+connect(S, sockaddr_in($daemon_port, $raddr)) || die "connect: $!\n";
+S->autoflush;
+
+SWITCH: {
+ $action eq 'PUT' && do {
+
+  $file_local = $ARGV[2];
+  $file_remote = $ARGV[3] || ($file_remote = $file_local);
+
+  open(F, "<$file_local") || die "Error (read): $!\n";
+
+  $content_length = (stat(F))[7];
+  $fh_read=F;
+  $fh_write=S;
+
+  print S "$action\n$file_remote\n$content_length\n";
+
+  $_ = <S>;
+  /^OK:(.+)$/ && ($file_remote = $1) && last;
+
+ };
+
+ $action eq 'GET' && do {
+
+  ($file_remote = $ARGV[2]) =~ /\/?([^\/]+)$/;
+  $file_local = $ARGV[3] || ($file_local = $1);
+
+  open(F, ">$file_local") || die "Error (write): $!\n";
+
+  $fh_read = S;
+  $fh_write = F;
+
+  print S "$action\n$file_remote\n";
+  $_ = <S>;
+  /^OK:(\d+)$/ && ($content_length = $1) && last;
+
+ };
+
+ die "Fatal: server did not confirm our request. aborting\n";
+}
+
+printf("Transfering file [Remote:%s, Local:%s] %ld bytes...\n",
+       $file_remote, $file_local, $content_length);
+
+while(<$fh_read>) {
+ print $fh_write $_;
+ $bytes += length;
+
+ $percentage = int($bytes/$content_length*80);
+
+ if($percentage_last < $percentage) {
+  print "X" x ($percentage - $percentage_last);
+  $percentage_last = $percentage;
+ }
+
+}
+
+printf("Data transfer complete, transfered %ld bytes.\n", $bytes);
+

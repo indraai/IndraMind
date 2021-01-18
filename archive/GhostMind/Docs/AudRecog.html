@@ -1,0 +1,687 @@
+
+<html>
+<head>
+<title>AudRecog Module of a Strong AI Mind</title>
+<meta name="description"
+ content="AudRecog performs auditory recognition of sensory input for artificial intelligence." />
+<meta name="keywords"
+ content="AI, AGI, artificial general intelligence, AudRecog Perl" />
+</head>
+<body bgcolor="#FFFACD">
+<a name="top"></a>
+
+<center><h2>
+<a href="http://ai.neocities.org/AudRecog.html"
+ title="This webpage may be copied to other websites."
+ style="text-decoration:none;">
+AudRecog</a> auditory recognition module of the
+</h2></center>
+
+<center><h2>
+<a href="http://ai.neocities.org/Ghost.html"
+ title="English tutorial in JavaScript for Microsoft Internet Explorer">English</a>
+and
+<a href="http://ai.neocities.org/Dushka.html"
+ title="Russian tutorial AI in JavaScript for MSIE">
+Russian</a> bilingual
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="Perl AI source code"
+ style="text-decoration:none;">
+ghost</a>.pl AI in
+ <a href="http://strawberryperl.com"
+ title="Download Perl for free."
+ style="text-decoration:none;">
+Perl</a>
+</h2></center>
+
+<h2><center>
+<a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer">
+<i>Mens Latina</i></a> in
+ <a href="http://ai.neocities.org/MLPJ2019.html"
+ title="Mens Latina Programming Journal"
+ style="text-decoration:none;">
+Latin</a> --
+<a href="http://dl.acm.org/citation.cfm?doid=307824.307853"
+ title="Association for Computing Machinery"
+ style="text-decoration:none;">
+MindForth</a> for
+ <a href="http://rodneybrooks.com/agi-has-been-delayed/#comment-18915"
+ title="Robotics and AI weblog"
+ style="text-decoration:none;">
+Robots</a>
+</h2></center>
+
+
+<font face="Verdana">
+<p><br /></p>
+<p><a name="diagram"></a>
+<a name="1"></a><font color="navy" size="+1">
+1. <a href="http://ai.neocities.org/DiaGram.html#AudRecog"
+ title="ASCII diagrams of Mentifex mind-modules for artificial intelligence.">
+Diagram</a> of AudRecog Auditory Recognition Mind-Module</font> <br />
+</p>
+
+<font color="navy" size="+1"><strong><pre>
+   /^^^^^^^^^\  Auditory Recognition of "c-a-t-s"  /^^^^^^^^^\
+  /    EYE    \ REACTIVATED                       /   EAR     \
+ /             \ CONCEPTS                        /"CATS"=input \
+|   _______     |   | | |    SEMANTIC MEMORY    |               |
+|  /old    \!!!!|!!!| | |                       |  C     match! |
+| / image   \---|-----+ |             ___       |  -A    match! |
+| \ fetch   /   |   |c| |            /   \      |    R    stop  |
+|  \_______/    |   |a| |           /     \     |     S   drop  |
+|               |   |t| |          / Old-  \    |               |
+|  visual       |   |s| |         ( Concept )   |  C     match! |
+|               |  e| | |          \       /    |  -A    match! |
+|  memory       |  a| | |          /\     /!!!!!|!!!!T   match! |
+|               |  t| | |   ______/  \___/------|-----S  recog! |
+|  reactivation |   | |f|  /      \             |               |
+|               |   | |i| ( Parser )            |  C     match! |
+|  channel      |   | |s|  \______/             |  -A    match! |
+|   _______     |   | |h|      |                |  --T   match! |
+|  /old    \    |   |_|_|     _V_________       |  ---S   busy  |
+| / image   \   |  /     \   /           \      |      U  drop  |
+| \ store   /---|--\ Psi /--( InStantiate )     |       P drop  |
+|  \_______/    |   \___/    \___________/      |               |
+</pre></strong></font></p>
+
+
+<p><br /></p>
+<p><a name="purpose"></a>
+<a name="2"></a><font color="navy" size="+1">
+2. Purpose of the AudRecog Auditory Recognition Mind-Module</font> <br />
+</p>
+
+<p>
+The AudRecog() module uses quasi-neuronal activation to recognize
+words by matching up a chain of activated phonemes until the
+end of a word of input is reached and a matching word in auditory
+memory is either found, resulting in a call to the
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="OldConcept documentation page"
+ style="text-decoration:none;">
+OldConcept</a> mind-module, or not found, resulting in a call to the
+ <a href="http://ai.neocities.org/NewConcept.html"
+ title="NewConcept documentation page"
+ style="text-decoration:none;">
+NewConcept</a> mind-module.
+</p>
+
+<p>
+The <a href="http://ai.neocities.org/perlmind.txt"
+ title="Perl AI Mind-in-a-box"
+ style="text-decoration:none;">
+ghost</a>.pl AI Mind in
+ <a href="http://strawberryperl.com"
+ title="Download Strawberry Perl 5 free of charge."
+ style="text-decoration:none;">
+Perl</a> uses an AudRecog() algorithm much simpler in construction than
+the older algorithm used in the older AI Minds. Since the introduction
+of the Perl AI, the <b>@aud</b> auditory array no longer uses the
+ <a href="http://mind.sourceforge.net/variable.html#beg"
+ title="old table of Variables"
+ style="text-decoration:none;">
+beg</a> flag to hold on to the beginning of a word in memory, or the
+ <a href="http://mind.sourceforge.net/variable.html#ctu"
+ title="old table of Variables"
+ style="text-decoration:none;">
+ctu</a> continuation-flag to indicate whether a word continues from
+one phonemic character to the next. Instead, the
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="Perl AI Mind-in-a-box"
+ style="text-decoration:none;">
+ghost</a>.pl AI and
+the newer versions of the
+ <a href="http://dl.acm.org/citation.cfm?doid=307824.307853"
+ title="Association for Computing Machinery, SIGPLAN Notices"
+ style="text-decoration:none;">
+MindForth</a> AI dynamically ascertain
+whether a phonemic character is the beginning of a word in
+memory, and whether a phonemic character is the final character
+of a word stored in the auditory memory.
+</p>
+
+<p>
+AudRecog() must eventually make the switch from keyboard entry of
+characters as if they were phonemes and morphemes, to actual
+acoustic input of sound-wave phonemes and morphemes.
+</p>
+
+<p><br /></p>
+<p><a name="algorithm"></a>
+<a name="3"></a><font color="navy" size="+1">
+3. Algorithm of the AudRecog Auditory Recognition Mind-Module</font> <br />
+</p>
+
+<p>
+ <a href="http://ai.neocities.org/AudMem.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudMem</a>() calls AudRecog() to process each character of dynamic input
+from the keyboard or from the
+ <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a>() module during re-entry of
+output back into the AI Mind. For the first character of an input
+word, AudRecog() finds every initial instance of the same first character
+starting a word stored in memory as far back as the
+$<a href="http://ai.neocities.org/var.html#midway">midway</a> time-point,
+which may be set to zero in early versions of the first working
+artificial intelligence.
+</p>
+
+<p>
+As each additional character comes in, AudRecog() activates the
+next-in-line character in the thus-far matching stored word,
+for the sake of continuing the match-up with the next incoming
+character. The next incoming character continues the next-in-line
+activation only if the found character not only matches the
+input character but also carries the arbitrary activation
+ordained in the software by the AI Mind
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="job description"
+ style="text-decoration:none;">
+Maintainer</a>. In that way,
+some partial recognitions die out and do not result in a final match,
+as soon as one stored character fails to match the input stream.
+</p>
+
+<p>
+As the match-up process approaches the end of a word stored in the @ear
+auditory memory channel, enough of the stored word as to constitute
+a <i>stem</i> of an inflected word should have an
+$<a href="http://ai.neocities.org/var.html#audpsi">audpsi</a>
+concept-number at the end of the row holding the final stem-character,
+such as the letter "K" in the stored plural word "BOOKS". Then the final
+letter itself will also have the
+$<a href="http://ai.neocities.org/var.html#audpsi">audpsi</a> concept-number,
+so that either the stem or the full word for a concept may be recognized.
+As part of the same process for word-recognition, the
+ <a href="http://ai.neocities.org/AudMem.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudMem</a>() module stores not only the
+$<a href="http://ai.neocities.org/var.html#audpsi">audpsi</a> concept-number
+at the end of a word being stored, but also at the end of an array-row
+holding the character calculated to be the end of the stem of a word.
+</p>
+
+
+<p><br /></p>
+<p><a name="code"></a>
+<a name="4"></a><font color="navy" size="+1">
+4. Code of  <a href="http://ai.neocities.org/AudRecog.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudRecog</a>() from the ghost299.pl AI Mind in
+ <a href="http://strawberryperl.com"
+ title="Free download of Strawberry Perl Five"
+ style="text-decoration:none;">
+Perl</a></font> <br />
+</p>
+
+<pre><b>
+sub AudRecog() {  # http://ai.neocities.org/AudRecog.html
+  if ($len > 0 && $finlen == 0 && $pho eq chr(32)) { $finlen = $len }  # 2017-12-26
+  if ($pho ne chr(13)&& $pho ne chr(32) && $pho ne "\N{U+0}") { # 2017-12-24:
+    if ($audrec  > 0) {  # 2017-03-16: if positive $audrec before end of word...
+      if ($pho ne chr(83)) {  # 2017-03-15: keep audrec if current pho is 83=S
+        if ($audrec > 0) { $prc = $audrec }  # 2018-09-16: preserve non-final $audrec
+        $audrec = 0;  # 2017-03-16: zero out non-final audrec.
+      }  # 2017-03-15: end of test for final "S" as inflectional ending.
+    }  # 2017-03-15: end of test for $audrec before word-end
+  }  # 2017-03-15: end of test for an alphabetic character
+  if ($pho eq chr(32) || $pho eq chr(13) || $pho eq "\N{U+0}") {  # 2017-126
+    if ($fyi > 0) {  # 2017-12-26: show message
+    # print " AudR after audrec= $audrec finds CR-13 or SP-32 \n";  # 2017-12-26
+    } # 2017-04-05: end of test for fyi=4 Diagnostic Mode.
+    if ($audrec > 0) {  # 2017-03-15: if positive audrec before 32=SPACE...
+      $audpsi = $audrec;  # 2017-03-15: recognized item becomes storage item.
+    }  # 2017-03-15: end of test for a positive audrec before 32=SPACE
+  }  # 2017-03-15: end of test for a positive audrec before 32=SPACE
+  for (my $i=$spt; $i>$midway; $i--) {  # 2017-03-15: search backwards in time.
+    if ($pho ne chr(32)) {  # 2017-03-15: disregard 32=SPACE pho until end of input.
+      my @aud=split(',',$ear[$i]);  # 2017-03-15: separate @ear rows into parts.
+      if ($pho ne $aud[0]) { $ear[$i] = "$aud[0],0,$aud[2]" }  #2017-03-15: de-activate
+      if ($pho eq $aud[0])  { # 2017-03-15: If incoming pho matches stored aud0;
+        if ($aud[1]==0) { # 2017-03-15: if matching engram has no activation;
+          my @prv=split(',',$ear[$i-1]);  # 2017-03-15: "@prv" for "previous" row.
+          if ($prv[0] eq chr(13) || $prv[0] eq chr(32) || $prv[0] eq "\N{U+0}") { # 2017-12-24:
+            if ($audrun < 2) { # 2017-03-15: "if comparing start of a word"
+              my @nxr=split(',',$ear[($i+1)]);  # 2017-03-15: for next-in-line char
+              if ($nxr[0] ne chr(13) && $nxr[0] ne chr(32)) {  # 2017-12-24
+                $ear[$i+1] = "$nxr[0],8,$nxr[2]"; # 2017-03-15: "activate N-I-L charcter"
+              }  # 2017-03-15: end of test for continuation of stored comparand.
+              my @aud=split(',',$ear[($i)]);  # 2017-03-15: for current char
+              if ($aud[2] > 0)  {  # 2017-03-15: if concept number present
+                $prc = $aud[2];  # 2017-12-26: provisional recognition
+              }  # 2017-03-15: end of test for potential monopsi ultimate-tag
+            }  # 2017-03-15: "end of test for audrun=1 start of word"
+          }  # 2017-03-15: "end of test for a beg(inning) non-active aud0"
+        }  # 2017-03-15: "end of test for matching aud0 with no activation"
+        my @aud=split(',',$ear[$i]);  # 2017-03-15: break apart @ear auditory array.
+        if ($aud[1] > 0) {  # 2017-03-15: "If matching aud0 has activation"
+          my @nxr=split(',',$ear[($i+1)]);  # 2017-03-15: for next-in-line char
+          if ($nxr[0] eq $pho) {  # 2017-12-26: TEST
+            $ear[$i+1] = "$nxr[0],8,$nxr[2]"; # 2017-12-26: "activate N-I-L character"
+          }  # 2017-12-26: end of match-test
+          if ($nxr[0] eq chr(13) || $nxr[0] eq chr(32) || $nxr[0] eq "\N{U+0}") { # 2017-12-26
+            if ($aud[2] > 0) {  # 2017-03-15: check for an audpsi tag
+              $prc = $aud[2]; # 2017-10-20: provisional recognition of a stem
+            }  # 2017-03-15: end of test for an available audpsi.
+          }  # 2017-03-15: end of test for next-in-line non-alphabetic character.
+          if ($aud[2] > 0) { $prc = $aud[2] }  # 2018-09-16: provisional recognition.
+          if ($fyi > 0) {  # 2017-12-26: show message only during Diagnostic Mode
+          }  # 2017-04-05: end of test for fyi=4 Diagnostic Mode.
+          if ($pho eq chr(32) || $pho eq chr(13) || $pho eq "\N{U+0}") { # 2017-12-26
+            if ($audrec > 0) {  # 2017-03-15: if an audrec has been found...
+              $audpsi = $audrec;  # 2017-03-15: send audpsi into AudMem
+            } # 2017-03-15: end of test for a positive audrec
+          }  # 2017-03-15: end of test for SPACE-32 or CR-13
+          if ($pho ne chr(32)&& $pho ne chr(13)&& $pho ne "\N{U+0}") { # 2017-12-26
+            my @nxr=split(',',$ear[($i+1)]);  # 2017-03-15: for next-in-line char
+            if ($nxr[0] ne chr(32) && $nxr[0] ne "\N{U+0}" && $finlen==0) { # 2017-12-26
+              $ear[$i+1] = "$nxr[0],8,$nxr[2]"; # 2017-03-15: "activate N-I-L character"
+            }  # 2017-03-15: since next engram is a letter...
+          }  # 2017-03-15: end of test for 32-SPACE after input word.
+        }  # 2017-03-15: "End of test for matching aud0 with activation."
+      }  # 2017-03-15: "End of test for a character matching 'pho'."
+    }  # 2017-03-15: end of test for alphabet letter
+  }  # 2017-03-15: End of backwards search through auditory memory.
+  if ($audrec > 0) { $audpsi = $audrec }  # 2017-12-26: TEST
+  if ($prc > 0) {    # 2017-10-20:
+    $audrec = $prc;  # 2017-10-20: from Dushka RuAi; prov. recog;
+    if ($audrec > 0) { $audpsi = $audrec }  # 2018-09-16: for passage to AudMem()
+  }  # 2017-10-20
+  $audrun++;   # 2017-03-15: audrun is only a counter, not a factor.
+}  # 2017-03-15: End of AudRecog(); return to AudMem()
+</b></pre>
+
+
+<p><br /></p>
+<p><a name="variables"></a>
+<a name="5"></a><font color="navy" size="+1">
+5. <a href="http://ai.neocities.org/var.html"
+ title="Table of Variables for First Working AGI"
+ style="text-decoration:none;">
+Variables</a> for the AudRecog Auditory Recognition Mind-Module</font> <br />
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#audpsi">audpsi</a> --
+concept number of word in @ear auditory memory array.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#audrec">audrec</a> --
+auditory recognition concept-number.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#audrun">audrun</a> --
+in the
+ <a href="http://ai.neocities.org/AudRecog.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudRecog</a>() module, which increments <i>audrun</i>,
+it is a counter of how many times the incrementing module
+has been called. If the <i>audrun</i> count is at unitary one or below two,
+then the initial character at the start of a word is being processed.
+<i>audrun</i> is reset to one in the
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a>() and FileInput() modules.
+</p>
+
+<p>
+$finlen -- (obsolete) fin(al) len(gth) or end-of-word for AudRecog.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#fyi">fyi</a> --
+(for your information) 2 = Tutorial mode; 3 = Diagnostic mode
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#len">len</a> --
+length, for avoiding input non-words. The <i>len</i> variable increments with
+each additional character during
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a>, and is reset to zero at the end of
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OldConcept</a> and
+ <a href="http://ai.neocities.org/NewConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+NewConcept</a>.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#midway">midway</a> --
+dynamically adjustable time-limit for searching backwards in the experiential
+memory of the AI.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#pho">pho</a> --
+a "phoneme" or character of auditory input.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#prc">prc</a> --
+provisional recognition in AudRecog()
+</p>
+
+
+<p><br /></p>
+<p><a name="debug"></a>
+<a name="6"></a><font color="navy" size="+1">
+6. Troubleshooting and Robotic Psychosurgery</font> <br />
+</p>
+
+<p><a name="6.1"></a><font color="red">
+<b>6.1.a.  Symptom:</b></font> (Something goes wrong.)<br />
+<font color="green"><b>
+6.1.b.  Solution:</b></font> (AI Mind
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="Job Description"
+ style="text-decoration:none;">
+Maintainer</a> devises solution.) <br />
+</p>
+
+<p>
+A team of
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="AI Mind Maintainer"
+ style="text-decoration:none;">
+AI Mind Maintainers</a> may debug the AudRecog() module by first inserting,
+and later commenting out, diagnostic messages to inform the AI coder
+what is happening inside the AudRecog() module at various stages of
+its operation, and what values are carried by
+ <a href="http://ai.neocities.org/var.html"
+ title="Table of Variables"
+ style="text-decoration:none;">
+variables</a> used
+within the AudRecog() module.
+</p>
+
+
+<p><br /></p>
+<p><a name="future"></a>
+<a name="7"></a><font color="navy" size="+1">
+7. Future Development</font> <br />
+</p>
+
+<p>
+AudRecog() must eventually be made to work with acoustic phonemes for
+speech recognition, instead of keyboard characters representing phonemes.
+</p>
+
+<p>
+<a href="http://ai.neocities.org/RoadMap.html"
+ title="With links to various AI readmaps"
+ style="text-decoration:none;">
+Roadmap</a> to Artificial Intelligence
+</p>
+
+
+<p><br /></p>
+<p><a name="resources"></a>
+<a name="8"></a><font color="navy" size="+1">
+8. Resources for AudRecog</font> <br />
+</p>
+
+Please see <br />
+<br />
+<a href="http://mind.sourceforge.net/audrecog.html"
+ title="Older version of this AI documentation"
+ style="text-decoration:none;">
+http://mind.sourceforge.net/audrecog.html</a> <br />
+
+<br />
+<a href="http://theintercept.com/2018/06/25/interpol-voice-identification-database"
+ title="Interpol Rolls Out International Voice Identification Database
+Using Samples From 192 Law Enforcement Agencies"
+ style="text-decoration:none;">
+http://theintercept.com/2018/06/25/interpol-voice-identification-database</a> <br />
+
+<p>
+<a href="http://thoughtistblog.wordpress.com/2018/08/03/on-morphology-and-contra-some-current-machine-learning-techniques"
+ title="pertinent blog post"
+ style="text-decoration:none;">
+http://thoughtistblog.wordpress.com/2018/08/03/on-morphology-and-contra-some-current-machine-learning-techniques</a><br />
+</p>
+
+<p>
+<li><a href="https://www.youtube.com/watch?v=yFEiIWW-heE"
+ title="Making My Own Speech Recognition"
+ style="text-decoration:none;">
+https://www.youtube.com/watch?v=yFEiIWW-heE</a> <br />
+<i>Making My Own Speech Recognition</i> -- Published on October 14, 2018 <br />
+</p>
+</font>
+
+<p><br /></p>
+<p><a name="aitree"></a>
+<a name="9"></a><font color="navy" size="+2">
+9. <a href="http://ai.neocities.org/AiTree.html"
+ title="stand-alone AI Tree of mind-modules"
+ style="text-decoration:none;">
+AiTree</a> of the Strong AI Mind Cognitive Architecture</font> <br />
+</p>
+
+<font face="Verdana">
+<ul><a href="http://ai.neocities.org/MainLoop.html"
+ style="text-decoration:none;">MainLoop</a> of First Working Artificial General Intelligence<br />
+  <ul><li>TabulaRasa -- wipe memory clean</ul>
+  <ul><li><a href="http://ai.neocities.org/MindBoot.html"
+ style="text-decoration:none;">MindBoot</a> of English and
+ <a href="http://github.com/kernc/mindforth/blob/master/wiki/RuBoot.wiki"
+ style="text-decoration:none;">Russian</a> vocabulary
+    <ul><li>KbLoad -- load the Knowledge Base</ul></ul>
+  <ul><li><a href="http://ai.neocities.org/ReJuvenate.html"
+ style="text-decoration:none;">ReJuvenate</a> -- recycle memory space</ul>
+  <ul><li><a href="http://ai.neocities.org/Sensorium.html"
+ style="text-decoration:none;">Sensorium</a> -- sensory input with associative tagging to concepts
+    <ul><li><a href="http://ai.neocities.org/AudInput.html"
+ style="text-decoration:none;">AudInput</b></a> -- auditory input
+      <ul><li><a href="http://ai.neocities.org/AudListen.html"
+ style="text-decoration:none;">AudListen</a> -- listen for input</ul>
+      <ul><li><a href="http://ai.neocities.org/AudMem.html"
+ style="text-decoration:none;">AudMem</a> -- English auditory memory
+        <ul><li><a href="http://ai.neocities.org/AudRecog.html"
+ style="text-decoration:none;">AudRecog</a> --
+<font color="red"><b>auditory recognition</b></font></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/OldConcept.html"
+ style="text-decoration:none;">OldConcept</a> -- recognize a known old concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/NewConcept.html"
+ style="text-decoration:none;">NewConcept</a> -- create a new concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul></ul></ul>
+    <ul><li>FileInput -- read files on a server</ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/GusRecog.html"
+ style="text-decoration:none;">GusRecog</a> -- sense of taste</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/OlfRecog.html"
+ style="text-decoration:none;">OlfRecog</a> -- sense of smell</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/TacRecog.html"
+ style="text-decoration:none;">TacRecog</a> -- sense of touch</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a> -- sense of vision</font></ul></ul>
+  <ul><li><a href="http://ai.neocities.org/Volition.html"
+ style="text-decoration:none;">Volition</a> -- free will resulting from feeling and thinking
+    <ul><li><a href="http://ai.neocities.org/Emotion.html"
+ style="text-decoration:none;">Emotion</a> as influence on thought and free will</ul>
+    <ul><li><a href="http://ai.neocities.org/EnThink.html"
+ style="text-decoration:none;">EnThink</a> -- think in English
+      <ul><li><a href="http://ai.neocities.org/KbRetro.html"
+ style="text-decoration:none;">KbRetro</a> -- retroactively adjust knowledge base</ul>
+      <ul><li><a href="http://ai.neocities.org/Imperative.html"
+ style="text-decoration:none;">Imperative</a> -- mood for issuing commands</ul>
+      <ul><li><a href="http://ai.neocities.org/Indicative.html"
+ style="text-decoration:none;">Indicative</a> -- mood for declarative statements
+      <ul><li><a href="http://ai.neocities.org/InFerence.html"
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></ul>
+      <ul><li><a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</ul>
+      <ul><li><a href="http://ai.neocities.org/EnNounPhrase.html"
+ style="text-decoration:none;">EnNounPhrase</a> -- think with a noun
+        <ul><li><a href="http://ai.neocities.org/EnPrep.html"
+ style="text-decoration:none;">EnPrep</a> -- use a preposition</ul>
+        <ul><li><a href="http://ai.neocities.org/EnArticle.html"
+ style="text-decoration:none;">EnArticle</a> -- use "a" or "the"</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdjective.html"
+ style="text-decoration:none;">EnAdjective</a> -- insert an adjective</ul>
+        <ul><li><a href="http://ai.neocities.org/EnPronoun.html"
+ style="text-decoration:none;">EnPronoun</a> -- substitute a pronoun for a noun</ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/EnVerbPhrase.html"
+ style="text-decoration:none;">EnVerbPhrase</a> -- think with a verb
+        <ul><li><a href="http://ai.neocities.org/EnAuxVerb.html"
+ style="text-decoration:none;">EnAuxVerb</a> -- use auxiliary verb</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies a verb
+          <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies another adverb</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/EnVerbGen.html"
+ style="text-decoration:none;">EnVerbGen</a> -- generates an English verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores English phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies English verb-form</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a> -- visual recognition inserts a noun</ul></ul></ul>
+      <ul><li>Subjunctive -- mood for conditional phrases</ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> --
+insert a conjunction if two thoughts are active</ul></ul>
+    <ul><li><a href="http://ai.neocities.org/RuThink.html"
+ style="text-decoration:none;">RuThink</a> -- think in Russian
+   <ul><li>RuImperative -- needs to be coded</ul>
+   <ul><li><a href="http://ai.neocities.org/RuIndicative.html"
+ style="text-decoration:none;">RuIndicative</a> -- needs to be coded
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/InFerence.html"
+ title="Create new ideas from old ideas."
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></font></ul>
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</font></ul>
+     <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- think with a Russian noun
+        <ul><li><a href="http://ai.neocities.org/RuAdjective.html"
+ style="text-decoration:none;">RuAdjective</a> -- insert a Russian adjective
+    <ul><li><font color="gray">RuAdjGen -- to generate a Russian adjective-form</font></ul>
+        <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/RuPrep.html"
+ style="text-decoration:none;">RuPrep</a> -- insert a Russian preposition</ul>
+        <ul><li><a href="http://ai.neocities.org/RuPronoun.html"
+ style="text-decoration:none;">RuPronoun</a> --
+substitute a Russian pronoun for a noun</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/RuVerbPhrase.html"
+ style="text-decoration:none;">RuVerbPhrase</a> -- think with a Russian verb
+        <ul><li><a href="http://ai.neocities.org/RuVerbGen.html"
+ style="text-decoration:none;">RuVerbGen</a> -- generate a Russian verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores Russian phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies Russian verb-form</ul></ul>
+       <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul>
+            <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a></font> -- visual recognition inserts a noun</ul>
+      <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- direct-object noun
+    <ul><li><font color="gray">RuNounGen -- to generate a Russian noun-form</font></ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+         <ul><li><a href="http://ai.neocities.org/Speech.html"
+ style="text-decoration:none;">Speech</a> -- output to screen or loudspeaker</ul>
+      <ul><li><a href="http://ai.neocities.org/PsiDecay.html"
+ style="text-decoration:none;">PsiDecay</a> lowers conceptual activation</ul></ul></ul>
+    <ul><li><a href="http://ai.neocities.org/SpreadAct.html"
+ style="text-decoration:none;">SpreadAct</a> -- spreading activation from concept to concept</ul>
+    <ul><li><a href="http://ai.neocities.org/Spawn.html"
+ style="text-decoration:none;"><b>Spawn</b></a> --
+ <a href="http://agi.topicbox.com/groups/agi/T57cced66d45fa115"
+ title="AGI Mail List discussion forum"
+ style="text-decoration:none;">AI Go FOOM</a></ul>
+    <ul><li><a href="http://ai.neocities.org/MetEmPsychosis.html"
+ style="text-decoration:none;">MetEmPsychosis</a> -- AI soul travel from webserver to webserver</ul>
+    <ul><li><font color="gray">MindMeld -- merge two AI Minds by sharing memories</font></ul>
+    <ul><li><font color="gray">
+<a href="http://ai.neocities.org/Motorium.html"
+ style="text-decoration:none;">Motorium</a> (MotorOutPut) -- for AI-Minded robots</font></ul>
+    <ul><li><a href="http://ai.neocities.org/Consciousness.html"
+ style="text-decoration:none;">Consciousness</a> -- emergent property, not a module</ul></ul></ul>
+</font>
+
+
+<p><br /></p>
+<a href="https://m.media-amazon.com/images/I/51fCt9yasXL.jpg"
+ title="Image provided for bloggers, authors, students, et al."
+ style="text-decoration:none;">
+https://m.media-amazon.com/images/I/51fCt9yasXL.jpg</a> --
+cover image of "<i>Artificial Intelligence in Ancient Latin</i>"<br />
+
+<a href="http://www.amazon.com/dp/B08NRQ3HVW"
+ title="Paperback version"
+ style="text-decoration:none;">
+http://www.amazon.com/dp/B08NRQ3HVW</a> --
+paperback version of Kindle eBook "Artificial Intelligence in Ancient Latin"<br />
+
+<a href="https://www.metrofarecomic.com/post/109206873347/latin"
+ title="Cartoon of persons speaking ancient Latin on a bus"
+ style="text-decoration:none;">
+https://www.metrofarecomic.com/post/109206873347/latin</a> --
+cartoon image for Chapter 43<br />
+
+<p><br /></p>
+<center><a href="http://www.amazon.com/dp/B08NGMK3PN"
+ title="Artificial Intelligence in Ancient Latin">
+<img src="https://m.media-amazon.com/images/I/51fCt9yasXL.jpg"></a></center>
+<br />
+
+
+<p><br /></p>
+<a href="http://livetrafficfeed.com" data-num="10" data-width="210"
+data-responsive="0" data-time="America%2FNew_York" data-root="0"
+data-cheader="2853a8" data-theader="ffffff" data-border="2853a8"
+data-background="ffffff" data-normal="000000" data-link="135d9e"
+target="_blank" id="LTF_live_website_visitor">Website Counter</a>
+<script type="text/javascript" src="//cdn.livetrafficfeed.com/static/v4/live.js">
+</script><noscript><a href="http://livetrafficfeed.com">Website Counter</a></noscript>
+<a name="bottom"></a>
+<p><br /></p>
+</body>
+</html>

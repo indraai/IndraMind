@@ -1,0 +1,1056 @@
+
+<html>
+<head>
+<title>InStantiate Module of a Strong AI Mind</title>
+<meta name="description"
+ content="InStantiate creates associative tags for each instance of a concept." />
+<meta name="keywords"
+ content="AI, artificial intelligence, ghost.pl, MindForth, Perl" />
+</head>
+<body bgcolor="#FFFACD">
+<a name="top"></a>
+
+<center><h1>
+<a href="http://ai.neocities.org/InStantiate.html"
+ title="This webpage may be copied to other websites."
+ style="text-decoration:none;">
+InStantiate</a> Module of the
+</h1></center>
+
+<center><h2>
+<a href="http://ai.neocities.org/Ghost.html"
+ title="The Ghost in the Machine">English</a>
+and
+<a href="http://ai.neocities.org/Dushka.html"
+ title="Russian tutorial AI in JavaScript for MSIE">
+Russian</a> bilingual
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="Perl AI source code"
+ style="text-decoration:none;">
+ghost</a>.pl AI in
+ <a href="http://strawberryperl.com"
+ title="Download Perl for free."
+ style="text-decoration:none;">
+Perl</a>
+</h2></center>
+
+<h2><center>
+<a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer">
+<i>Mens Latina</i></a> in
+ <a href="http://ai.neocities.org/MLPJ2019.html"
+ title="Mens Latina Programming Journal"
+ style="text-decoration:none;">
+Latin</a> --
+<a href="http://dl.acm.org/citation.cfm?doid=307824.307853"
+ title="Association for Computing Machinery"
+ style="text-decoration:none;">
+MindForth</a> for
+ <a href="http://rodneybrooks.com/agi-has-been-delayed/#comment-18915"
+ title="Robotics and AI weblog"
+ style="text-decoration:none;">
+Robots</a>
+</h2></center>
+
+
+<p><br /></p>
+<font face="Verdana">
+<p><a name="diagram"></a>
+<a name="1"></a><font size="+1">
+1. <a href="http://ai.neocities.org/DiaGram.html#InStantiate"
+ title="ASCII diagrams of Mentifex mind-modules for artificial intelligence.">
+Diagram</a> of the InStantiate Mind-Module</font> <br />
+
+<p><a name="instantiate"></a><font size="+1"><strong><pre>
+InStantiate creates a Psy node for each instance of a concept.
+
+   /^^^^^^^^^\ InStantiate Associates Psy Concepts /^^^^^^^^^\
+  /   EYE     \   PSY                   _____     /   EAR     \
+ /             \  MINDCORE             /New- \   /             \
+|   _______     | CONCEPTS   _______  (Concept)-|-------------\ |
+|  /old    \    |  | | |    / Old-  \  \_____/  |  Audition   | |
+| / image   \---|----+ |   ( Concept )---|------|----------\  | |
+| \ recog   /   |  | | |    \_______/----|------|-------\  |  | |
+|  \_______/    | a| | |      |     \  __|___   |  c    |  |  | |
+|               | b|C| |      }      \/ POS  \  |   a   |  |  | |
+|   visual      | s|O|f|      |      ( Parser ) |    t  |  |  | |
+|               | t|N|i|      |       \______/  |     s-/  |  | |
+|   memory      | r|C|b|      |        |noun?   |          |  | |
+|               | a|E|e|   ___V_____   |verb?   |  e       |  | |
+|   remembrance | c|P|r|  /         \  |adj.?   |   a      |  | |
+|               | t|T|s| / SpreadAct \ |adverb? |    t-----/  | |
+|   channel     |  |_|_| \___________/ |prep.?  |             | |
+|   _______     | /Mind-\/  ___________|conj.?  |  f          | |
+|  /new    \    |( Core  ) /INSTANTIATE\        |   a         | |
+| / percept \---|-\"Psy"/-/ psi     pos \       |    u        | |
+| \ engram  /   |  \___/ ( act       pre )      |     n       | |
+|  \_______/    |         \ jux     seq /       |      a------/ |
+|               |          \___________/        |               |
+</pre></strong></font></p>
+
+<p><br /></p>
+<p><a name="purpose"></a>
+<a name="2"></a><font size="+1">
+2. Purpose of the InStantiate Module</font> <br />
+</p>
+
+<p>
+The main purpose of the
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> module is to create a new time-bound
+instance of a concept in conceptual memory whenever the AI Mind processes
+a concept either as an element of input or as part of a thought being
+remembered or generated. Other purposes of
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> involve "trapping" or the special processing of input-concepts
+for the sake of special handling in other mind-modules such as the
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a> module for spreading activation.
+</p>
+
+
+<p><br /></p>
+<p><a name="algorithm"></a>
+<a name="3"></a><font size="+2">
+3. Algorithm of the InStantiate AI Mind-Module</font> <br />
+</p>
+
+<p><font size="-1">
+3.A. Instantiating time-bound associative nodes in the conceptual memory array.
+</font></p>
+
+<p>
+When the AI Mind has either recognized an input word as an
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+old concept</a> or encountered a new word and is creating a
+ <a href="http://ai.neocities.org/NewConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+new concept</a> for the new word,
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> creates a new instance of the concept by attaching any
+available associative tags to a node of the concept at the time-point
+of the advancing front of
+ <a href="http://ai.neocities.org/Consciousness.html"
+ title="documentation page"
+ style="text-decoration:none;">
+consciousness</a>. Some associative tags must be assigned <i>retroactivately</i> by
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> because a word of input may have an associative relationship
+to another word that has not yet arrived as additional input. For instance,
+a conceptual node for a verb of input may need the retroactive addition of
+an associative tag for the object of the verb, which arrives in the AI Mind
+not simultaneously with the verb, but slightly delayed.
+</p>
+
+
+<p><font size="-1">
+3.B. Activating old associative nodes for a concept.
+</font></p>
+
+<p><font size="-1">
+3.B.1. Inhibiting a current node while activating older nodes.
+</font></p>
+
+<p>
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> imparts a modest level of activation to the previous nodes of
+a known concept stretching back over the conceptual
+<a href="http://github.com/PriorArt/AGI/wiki/MindGrid"
+ title="AI prior art on GitHub"
+ style="text-decoration:none;">
+MindGrid</a> in such a way as to create a <i>trough</i> of inhibition
+for the most recent instantiation of the concept, so that old ideas
+involving the concept may contribute to thinking and so that
+current thoughts, being immediately inhibited, may yield to
+remembered thoughts or to the results of automated reasoning by means of logical
+<a href="http://ai.neocities.org/InFerence.html
+ title="documentation page"
+ style="text-decoration:none;">
+inference</a>.
+</p>
+
+<p><font size="-1">
+3.B.2. Spreading activation sideways from old associative nodes of a concept.
+</font></p>
+
+<p>
+Already in the
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="AI source code in Strawberry Perl Five"
+ style="text-decoration:none;">
+ghost</a>.pl AI and upcoming in the
+ <a href="http://ai.neocities.org/mindforth.txt"
+ title="AI source code in Win32Forth"
+ style="text-decoration:none;">
+Forth</a> and
+ <a href="http://ai.neocities.org/FirstWorkingAGI.html"
+ title="Requires Microsoft Internet Explorer"
+ style="text-decoration:none;">
+JavaScript</a> AI Minds,
+InStantiate passes activation sideways from a newly activated concept
+to other concepts associated in the past with the concept for which
+a fresh associative node is being instantiated. If the AI Mind is
+familiar with a noun like "DICE" only as the direct object of a verb in memory,
+the sideways spread of activation makes it possible for a human user
+to input the one noun and to observe that the AI uses the sideways spread
+of activation to remember and output a thought like "GOD DOES NOT PLAY DICE".
+</p>
+
+<p><font size="-1">
+3.C. Trapping the input of interrogative words requiring a query-response.
+</font></p>
+
+<p>
+Besides assigning associative tags,
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> also sets various conditional flags for dealing with
+special inputs such as query-words or adverbs of negation, such as "not".
+<p>
+
+
+<p><br /></p>
+<p><a name="code"></a>
+<a name="4"></a><font size="+1">
+4. Code of InStantiate() from ghost327.pl AI
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="ghost.pl AI Mind in Strawberry Perl Five"
+ style="text-decoration:none;">
+source code</a> in
+ <a href="http://strawberryperl.com"
+ title="Free download of Strawberry Perl Five"
+ style="text-decoration:none;">
+Perl</a>
+</font> <br />
+</p>
+
+<pre><b>
+sub InStantiate() {  # http://ai.neocities.org/InStantiate.html
+  if ($pre == 0) { $pre = $prevtag }  # 2017-09-25: still needed.
+  $prevtag = 0;  # 2016mar12: Reset for safety.
+  if ($pov == 2) {  # 2017-09-17: only during external input, not re-entry
+    if ($psi == 781)  {  # 2017-11-27: upon input of 781=WHAT
+      if ($whatcon == 0)  {  # 2017-11-27: to set only once per input idea
+        $whatcon = 1;  # 2017-11-27: set positive to process rest of input.
+      }  # 2017-11-27: end of test for $whatcon at zero.
+    }  # 2019-01-25: end of test for input of query-word 781=WHAT.
+    if ($psi == 791)  {  # 2018-09-30: upon input of 791=WHO
+      $whocon = 1;  # 2018-09-30: set positive for use in SpreadAct()
+    }  # 2019-01-25: end of test for input of query-word 791=WHO.
+    if ($psi==781 || $psi==791)  {  # 2018-09-29: upon 781=WHAT or 791=WHO
+        $qucon = 1;  # 2017-09-17: set positive to process rest of input.
+    }  # 2019-01-25: end of test for input of query-words 781=WHAT or 791=WHO.
+  } # 2017-11-27: end of test for point-of-view to be 2=pov external for input.
+  if ($qucon > 0 || $whatcon > 0) {  # 2018-09-29: deal with more than "who is" queries...
+    if ($psi == 800)  {  # 2017-09-17: if 800=Be-Verb...
+      $qv2psi = 800;  # 2017-09-17: for transfer to SpreadAct.
+    }  # 2017-09-17: end of test for 800=BE.
+    if ($pos==8 && $psi != 800 && $psi != 818) { # 2018-12-10: not 800=BE or 818=DO
+      $qvdocon = 1;    # 2017-09-26: set flag for query who+verb+direct-object.
+      $qv2psi = $psi;  # 2017-10-24: for transfer to SpreadAct.
+    }  # 2017-09-26: end of test for verb other than 800=BE.
+    if ($qvdocon > 0 && $pos == 5) { # 2017-09-26: if 5=noun comes in...
+      $qv4psi = $psi;  # 2017-09-26: to send direct object into SpreadAct()
+    } # 2017-09-26: end of test for noun during who-verb-dirobj query.
+    if ($pos==5 && $dba==4) {  # 2018-09-30: if noun and direct object...
+      $qv4psi = $psi;  # 2018-09-30: to send direct object into SpreadAct()
+    } # 2018-09-30: end of test for noun with query involving direct object.
+  }  # 2017-09-26: end of test for positive query-condition $qucon.
+  if ($whatcon > 0) {  # 2017-11-27: deal with what-queries...
+    if ($psi == 800)  {  # 2017-11-27: if 800=Be-Verb...
+      $qv2psi = 800;  # 2017-11-27: for transfer to SpreadAct.
+    }  # 2017-11-27: end of test for 800=BE.
+    if ($pos==5 || $pos==7) { # 2017-11-27: if 5=noun or 7=pronoun...
+      $qv1psi = $psi;  # 2017-11-27: for transfer as query-subject to SpreadAct.
+    }  # 2017-11-27: end of test for 5=noun or 7=pronoun
+    if ($pos==8 && $psi != 800 && $psi != 818) { # 2018-12-10: if verb but not 818=DO
+      $qv2psi = $psi;  # 2017-11-27: for transfer as query-verb to SpreadAct.
+    }  # 2018-12-10: end of test for verb other than auxiliary 818=DO.
+  }  # 2017-11-27: end of test for positive query-condition $whatcon.
+  if ($oldpsi == 701) { $pos = 7 }  # 2016jun19: 7 = pronoun.
+  $act = 0;   # 2016jun26: preparing to activate only older nodes of concepts.
+  if ($moot == 0) {  # 2017-09-18: if no query is being input...
+    my @k=split(',',$psy[$tvb]);  # 2017-06-30: inspect @psy flag-panel at time of verb
+    if ($qucon==1 && $k[11]==701) { $k[7] = 2 } #2019-08-02: 2nd person 800=ARE
+    if ($whatcon==1 && $k[1]==800) { $k[7] = 0 } #2017-11-28: skip $dba person.
+    if ($whatcon==1 && $k[1]==781) { $k[3] = 0 } # 2018-09-11: deactivate 781=WHAT
+    if ($whatcon > 0) {  # 2018-09-12: deal with what-queries...
+      if ($pos==8 && $psi != 800 && $psi != 818) {  # 2018-12-10: if not BE or DO
+        $qv2psi = $psi;  # 2018-09-12: for transfer as query-verb to SpreadAct()
+      }  # 2018-09-12: end of test for verb other than auxiliary BE or DO.
+    }  # 2018-09-12: end of test for positive query-condition $ whatcon.
+    $psy[$tvb]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+    . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
+    . "$tkb,$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01: insert $tkb
+  }  # 2017-09-18: end of test for no suppression of associative tag $tkb
+  if ($pov == 2) {  # 2019-01-25: only during external input, not re-entry
+    for (my $i=$tpu; $i>$midway; $i--) {  # 2018-06-28: search backwards in time.
+      my @k=split(',',$psy[$i]);  # 2016jun26: inspect @psy flag-panel
+      if ($k[1] == $psi) {  # 2019-01-19: increment activation on matching concepts
+        if ($k[0] < 1) { $k[0] = 0 };  # 2018-09-26: BUGFIX: initialize.
+        $k[3] = ($k[3] + 16);  # 2019-09-26: activate enough to spark a thought
+        if ($psi == 781) { $k[3] = 0 } # 2017-11-27: upon input of 781=WHAT
+        $psy[$i]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+        . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
+        . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01
+        if ($k[10] > 0) {  # 2019-03-31: if there is a "pre" concept...
+          $prepsi = $k[10];  # 2019-03-31: grab hold of the "pre" as $prepsi
+          for (my $j=$tpu; $j>$midway; $j--) {  # 2019-03-31: search within a search.
+            my @p=split(',',$psy[$j]);  # 2019-03-31: inspect @psy flag-panel
+            if ($p[1] == $prepsi)  {  # 2019-03-31: if first inner loop finds $prepsi...
+              for (my $x=$tpu; $x>$midway; $x--) {  # 2019-03-31: search within a search.
+                my @q=split(',',$psy[$x]);  # 2019-03-31: inspect @psy flag-panel
+                if ($q[1] > 0 && $q[11] == $prepsi) {  # 2019-08-01: if subject of $prepsi
+                  $psy[$x]="$k[0],$q[1],$q[2],24,$q[4],$q[5],$q[6],"  # 2019-09-27: sufficient
+                  . "$q[7],$q[8],$q[9],$q[10],$q[11],$q[12],$q[13],"
+                  . "$q[14],$q[15],$q[16],$q[17],$q[18],$q[19],$q[20]";
+                }  # 2019-03-31: end of test for subject of $prepsi.
+              }  # 2019-03-31: end of second inner loop spreading activation sideways.
+            }  # 2019-03-31: end of test for $prepsi.
+          }  # 2019-03-31: end of first inner loop with its own index.
+        }  # 2019-03-31: end of test for existence of a "pre" concept.
+      } # 2016-06-24: end of test for matching concept.
+    }  # 2016jun26: end of (for loop) searching backwards in time.
+  } # 2019-01-25: end of test for point-of-view to be 2=pov external for input.
+  $tult = ($t - 1);  # 2017-06-25: penultimate time
+  $act = -48;  # 2016JUL06: for a "trough" of recent-most inhibition.
+  if ($qv2num > 0) { $num = $qv2num }  # 2017-10-22: for who+verb+dir.obj. query-response
+  my @k=split(',',$psy[$tult]);  # 2018-07-03: expose flag-panel at tult;
+  $psy[$tult]="$k[0],$k[1],$k[2],$act,404,$k[5],$k[6],"  # 2019-10-23: negative activation
+  . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
+  . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]"; # 2019-08-01: expanded panel.
+  @k=split(',',$psy[$tvb]);  # 2019-06-13: expose flag-panel at $tvb
+  if ($b2 eq "Ш" && $b1 eq "Ь") { $k[7] = 2; } # 2019-06-13: 2nd person Russian verb.
+# if ($moot == 0) {  # 2019-10-21: TEST; TRUNCATE
+#  $psy[$tvb]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+#  . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
+#  . "$tdo,$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]"; # 2019-08-01: tdo as tkb
+# }  # 2019-10-21: end of test for $moot TEST; TRUNCATE
+#  if ($tkb == $tdo) { $tkb = 0 }  # 2017-09-19: prevent direct-object $tkb
+ if ($moot == 0) {  # 2019-10-23: in normal circustances...
+  if ($pos == 8) { $dba = $prsn; }  # 2019-10-19: for verbs, use "$prsn" as "$dba".
+  # 2019-10-23 Next code is the main instantiation of English words.
+  $psy[$tult] = "$tru,$psi,$hlc,$act,$mtx,$jux,$pos,"
+  . "$dba,$num,$mfn,$pre,$seq,$tgn,$tdt,"
+  . "$tkb,$tia,$tcj,$tdj,$tdv,$tpr,$rv";  # 2019-08-01: expanded conceptual flag-panel.
+  if ($pos == 5 || $pos == 7) {  # 2019-10-19: test for noun or pronoun
+    if ($dba == 1) {  # 2019-10-19: test for nominative-case subject
+      if ($tsj == 0) {  # 2019-10-19: if not already declared...
+        $tsj = $tult;  # 2019-10-19: declare time-of-subject.
+      }  # 2019-10-19: end of test for valid previous declaration of $tsj.
+    }  # 2019-10-19: end of test for nominative-case "dba".
+  }  # 2019-10-19: end of test of "pos" part of speech.
+ }  # 2019-10-23: end of test of $moot flag.
+  if ($pos == 5 || $pos == 8) {  # 2019-08-11: for a noun or a verb...
+    $mri = $tult;  # 2019-08-10: time-of-most-recent-instantiation, for back-tagging.
+  }  # 2019-08-11: end of restriction by part-of-speech.
+  $tult = 0;  # 2017-06y-23: reset for safety
+  if ($jux == 250) { $jux = 0 }  # 2016jun17: Reset after use.
+  if ($prejux == 250) {  # 2016jun17: 250=NOT from OldConcept()
+    $jux = 250;  # 2016jun17: set $jux for next instantiand;
+    $prejux = 0;  # 2016jun17: Reset for safety.
+  }  # 2016jun17: end of post-instantiation test;
+  if ($hlc == 3) {     # 2018-09-27: only for Russian input
+    if ($seqneed == 8 && (ord $pho) == 32) {
+      if ($pov > 1) {   # 2017-09-10: only during input
+        $tvb = ($t - 1);  # 2019-06-09: TEST; REMOVE
+        $t++;  # 2017-09-10: increment internal AI time "t"
+        $audpsi = 1800;  # 2017-09-10: by default assume provisional 1800=BE verb.
+        $ear[$t] = "$pho,0,$audpsi";     # 2017-09-10: store verb 800=BE
+        $psi = 1800;  # 2017-09-10: set the concept to 800=BE.
+        $prevpsi = 1800;  # 2017-09-10: to enable cancellation of be-verb
+        $pos = 8;    # 2017-09-10: set the part-of-speech $pos to 8=verb.
+      # 2019-10-23 Next code is the main instantiation of Russian words.
+        $psy[$t] = "$tru,$psi,$hlc,$act,$mtx,$jux,$pos,"
+        . "$dba,$num,$mfn,$pre,$seq,$tgn,$iob,"
+        . "$tkb,$tia,$tcj,$tdj,$tdv,$tpr,$rv";  # 2019-08-01: expanded flag-panel.
+        $t++;  # 2017-09-10: increment internal AI time "t"
+      }  # 2017-09-10: end of test for input-mode only.
+    }  # 2017-09-10: test for 32=SPACE
+    if ($prevpsi == 1800 && $seqneed == 5) {  # 2017-09-10: if noun is expected...
+      if ($pos == 8)  {  # 2017-09-10: if real verb follows pseudo-be-verb
+        $seqneed = 8;  # 2017-09-10: the seq to the real verb is needed
+        $prevpsi = 0;  # 2017-09-10: reset after using.
+      }  # 2017-09-10: end of test for a real verb
+    }  # 2017-09-10: end of test
+  }  # 2017-09-10: end of test for Russian human-language-code $hlc
+  if ($pos == 5) { $usx = $psi };  # 2018-09-03: for transfer to EnArticle()
+  if ($pos != 5) { $usx = 0 };  # 2018-09-03: transfer only noun-concepts.
+  if ($pos == 5 || $pos == 7) { $prevtag = $psi };  # 2016mar12: after subject
+  if ($pos == 8) { $prevtag = $psi };  # 2016mar12: after a verb.
+  if ($pos == 8 && $seqneed == 0) { $seq = $psi };  # 2016mar15: for the $seq of a subject
+  if ($pos == 5 || $pos == 7) {  # 2016mar15: if noun or pronoun...
+    $seq = 0;  # 2016mar15: until set by the $seqneed mechanism...
+    if ($seqneed == 0) { $seqneed = 8 } # 2016mar15: if start of input sentence...
+    if ($seqneed == 5) { $seqneed = 0 } # 2016mar15: for subject only
+  }  # 2016mar15:
+  if ($pos == 5 || $pos == 7) { $actpsi = $psi }  # 2016JUL10: for ReEntry() & SpreadAct()
+  if ($pos == 5 || $pos == 7) {$qv1psi = $psi}   # 2017-11-24: SUCCEEDS AS A BUGFIX
+  if ($qucon == 0) { # 2017-11-24: not during who-queries:
+    if ($pos == 5 || $pos == 7) { $qv1psi = $psi }  # 2017-09-17: subj. for SpreadAct
+    if ($pos == 5 || $pos == 7) {  # 2019-06-08: TEST; REMOVE
+      if ($tsj > 1 && $verbcon == 1 && $tdo == 0) { $tdo = ($t - 1) }  # 2019-06-08: TEst
+    }  # 2019-06-08: End of TEST; REMOVE
+  }  # 2017-09-26: end of test to prevent interference with who-queries.
+  if ($pos == 8) { $qv2psi = $psi }  # 2017-09-17: verb for SpreadAct
+  if ($pos == 8) { $seqneed = 5 };  # 2016mar15: if verb, need direct object.
+  $act = 0;  # 2016apr27: reset to prevent carry-over
+  $finlen = 0;  # 2017-12-26: reset to prevent carry-over.
+  $prc = 0;  # 2017-12-26: reset to prevent carry-over.
+  $pre = 0;  # 2016mar12: Reset to prevent carry-over.
+}  # 2019-10-23: InStantiate() returns to EnParser() or RuParser().
+</b></pre>
+
+
+<p><br /></p>
+<p><a name="variables"></a>
+<a name="5"></a><font size="+1">
+5. <a href="http://ai.neocities.org/var.html"
+ title="Table of Variables for First Working AGI"
+ style="text-decoration:none;">
+Variables</a> for the InStantiate AI Mind-Module</font> <br />
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#audpsi">audpsi</a> --
+ -- concept number of word in @ear auditory memory array.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#finlen">finlen</a>
+ -- fin(al) len(gth) or end-of-word for
+ <a href="http://ai.neocities.org/AudRecog.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudRecog</a> auditory recognition module.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#hlc">hlc</a>
+ -- human-language code; 1=en; 2=de; 3=ru. May eventually be ubject to
+override by the <i>$engov</i> or <i>$degov</i> or <i>$rugov</i> flag.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#j">j</a> --
+secondary index beyond "<i>i</i>" for the first inner loop of
+InStantiate code that implements <i>sideways</i> spreading activation
+so that the input of a word may cause the activation of not only the
+word itself in conceptual memory, but also of other concepts associated
+with the input-word. Since one loop is already searching backwards in time
+for instances of the input-word in memory using "<i>i</i>" for "index",
+a different variable must be used to loop through a separate search for any
+associated concepts when the input-word is found in memory. Then a second inner
+loop must be based on yet another index variable for yet another associated concept.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#jux">jux</a> --
+jux(taposed) concept in @psy array, especially the word "NOT" to negate a verb.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#midway">midway</a> --
+dynamically adjustable time-limit for searching backwards in the experiential
+memory of the AI.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#moot">moot</a> --
+&#8211; as in legally <i>moot</i> &#8211; is a flag to prevent
+the formation of associative tags during mental operations which
+are not truly a part of cognition, such as the processing of an
+input query, the formation of a silent
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+inference</a>, or the creation of an output query.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#oldpsi">oldpsi</a> --
+used in
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OldConcept</a> to de-globalize "psi"
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#pos">pos</a>
+ -- (part of speech) with a numeric value
+(1=adj 2=adv 3=conj 4=interj 5=noun 6=prep 7=pron 8=verb)
+to be inserted into the conceptual flag-panel of a concept during the
+process of instantiation of a concept-node at a particular time-point.
+The part-of-speech parameter allows an AI Mind to restrict operations to
+one particular part of speech, such as verb, or to similar parts of speech,
+such as nouns and pronouns to be used as subjects or objects of a verb.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#pov">pov</a> --
+point-of-view: 1=self; 2=dual; 3=alien.
+When pov=1, the word "you" is somebody in the external word.
+When pov=2, the word "you" refers to the self-concept "I" in the AI.
+When pov=3, the word "you" is interpreted as part of a conversation
+by a third-party or as a word in a text, not referring to the
+self-concept of either the AI or of someone talking to the AI.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#prc">prc</a>
+ -- provisional recognition in
+ <a href="http://ai.neocities.org/AudRecog.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudRecog</a>()
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#pre">pre</a> --
+pre(vious) associated @psy concept.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#prejux">prejux</a> --
+ -- previous $jux to carry "NOT" to a verb.
+If the adverb "not" passes through the
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OldConcept</a> module in the process of the negation of a verb,
+the "<i>prejux</i>" variable holds the value for negation and
+passes it as "<i>jux</i>" to the flag-panel of the verb being
+negated.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#prevpsi">prevpsi</a>
+-- a value-holder to be used by
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+InStantiate</a> to cancel an imputed Russian BeVerb which has been tentatively
+instantiated after the input of a noun or pronoun potentially
+serving as the subject of an imputed verb of being. For instance,
+if someone begins a sentence in Russian with a noun like "The teacher...",
+it is not yet known whether the intended verb will be a be-verb like "is"
+or some ordinary verb like "plays (chess)". The AI software must
+instantiate an imputed verb of being in case the next input word is
+something like a noun or an adjective, and not a normal verb.
+But if a normal verb is indeed the next word of input, the
+imputed be-verb must be discarded in favor of the real verb,
+and the "<i>prevpsi</i>" identifier will help the AI program
+to declare that the "<i>seq</i>" of the Russian subject is
+the real verb, and not the momentarily imputed verb of being.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#prevtag">prevtag</a> --
+local pre(vious) tag for use in
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a>(). After a noun or a verb has been instantiated,
+<i>$prevtag</i> holds its concept-number ready to be inserted as a
+<i>$pre</i> tag, if needed, during the instantiation of a succeeding concept.
+Thus a verb can have a <i>$pre</i> back to its subject, and a direct object
+can have a <i>$pre</i> back to a verb.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#psi">psi</a> --
+variable for an element of the @psy conceptual array, with a numeric
+identifier serving as an <i>mtx</i> tag for the same concept in another language.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#qucon">qucon</a> --
+<i>query-condition</i> &#8211; segregates
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="Spreading Activation"
+ style="text-decoration:none;">
+SpreadAct</a>() code to respond to input who-queries.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#qv2psi">qv2psi</a> --
+concept for
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a> to seek as a verb,
+so that the AI may remember ideas containing the same verb.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#qv4psi">qv4psi</a> --
+concept for
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a> to seek as a direct object,
+so that the AI may use the target concept as a subject or as a
+direct object in the remembrance of ideas.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#qvdocon">qvdocon</a> --
+<i>query-condition for who+verb+direct-object</i> &#8211; segregates
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="Spreading Activation"
+ style="text-decoration:none;">
+SpreadAct</a>() code to respond to input queries similar in form
+to "Who makes robots?"
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#rv">rv</a>
+ -- recall-vector for auditory memory. The time-point value of <i>rv</i> is
+first set in the
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a> module after an intervening space when the first character
+of an input-word is being passed into the
+ <a href="http://ai.neocities.org/AudMem.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudMem</a> module. The recall-vector <i>rv</i> is reset to zero in
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a> after a call to
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OldConcept</a> or to
+ <a href="http://ai.neocities.org/NewConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+NewConcept</a>.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#seqneed">seqneed</a>
+-- an obsolescent flag to indicate whether a (pro)noun or verb is needed
+as a "seq" to be recorded retroactively within the flag-panel of a word
+that has already been instantiated as a subject or as a verb.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tbev">tbev</a> --
+ -- time of be-verb for use with negjux negation-flag. In the
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OldConcept</a> module, <i>tbev</i> is set for any 800=BE verb and
+is used for inserting a
+<a href="#jux">jux</a> of 250=NOT into the flag-panel of a negated be-verb.
+The <i>tbev</i> flag may be reset to zero in the
+ <a href="http://ai.neocities.org/Sensorium.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Sensorium</a> module after
+any input has been processed by the
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a> module.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tpu">tpu</a> --
+time-pen-ultimate before current I/O (input and output).
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tult">tult</a> --
+<i>t</i> penultimate, or time-minus-one.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tvb">tvb</a> --
+time-of-verb for parsing. The
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnParser</a> module sets
+"t - 1" as the <i>tvb</i> if the word being parsed is a verb by part-of-speech.
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> uses the time-of-verb <i>tvb</i> to fill the
+ <i>tkb</i>-slot in a
+verb-panel with the time-location of the direct object of the verb.
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnParser</a> uses the time-of-verb tvb to find the numeric verb-concept
+that will be the <i>pre</i> of a direct object being parsed.
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnParser</a> also uses the time-of-verb <i>tvb</i> to store the time-of-direct-object
+<i>tdo</i> as the <i>tkb</i> in the flag-panel of the verb.
+Therefore the tvb-flag needs to be reset to zero not during but <i>after</i>
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a>, when program-flow has returned to the
+ <a href="http://ai.neocities.org/Sensorium.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Sensorium</a> module.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#usx">usx</a> --
+a transfer variable for
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> to transfer the concept number of an incoming noun to
+whichever us1-us7 <i>upstream</i> variable is up next in the rotation
+of up to seven recently mentioned noun-concepts, so that the
+ <a href="http://ai.neocities.org/EnArticle.html">
+EnArticle</a> module may insert the definite article "the" before
+any noun currently under discussion in a conversation or an internal thought.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#whatcon">whatcon</a> --
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a>() flag for condition of answering a what-query <br />
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#whocon">whocon</a>
+ -- flag for condition of answering a who-query. The
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> module sets <i>whocon</i> to a positive one ("1")
+when the input of the interrogative pronoun "who" is detected.
+</p>
+
+<p><br /></p>
+<p><a name="debug"></a>
+<a name="6"></a><font size="+1">
+6. Troubleshooting and Debugging the InStantiate Mind-Module</font> <br />
+</p>
+
+<p><a name="6.1"></a><font color="red">
+<b>6.1.a.  Symptom:</b></font> (Something goes wrong.)<br />
+<font color="green"><b>
+6.1.b.  Solution:</b></font> (AI Mind
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="Job Description"
+ style="text-decoration:none;">
+Maintainer</a> devises solution.) <br />
+</p>
+
+
+<p><br /></p>
+<p><a name="future"></a>
+<a name="7"></a><font size="+1">
+7. Future Development</font> <br />
+</p>
+
+<p>
+<a href="http://ai.neocities.org/RoadMap.html"
+ title="With links to various AI readmaps"
+ style="text-decoration:none;">
+Roadmap</a> to Artificial Intelligence
+</p>
+
+<p><br /></p>
+<p><a name="resources"></a>
+<a name="8"></a><font size="+1">
+8. Resources</font> <br />
+</p>
+
+Please see <br />
+<p>
+<a href="http://mind.sourceforge.net/instiate.html"
+ title="Older version of this AI documentation"
+ style="text-decoration:none;">
+http://mind.sourceforge.net/instiate.html</a> <br />
+</p>
+
+<p>
+<a href="http://github.com/PriorArt/AGI/wiki/MindGrid"
+ title="includes ASCII diagram"
+ style="text-decoration:none;">
+http://github.com/PriorArt/AGI/wiki/MindGrid</a>
+</p>
+
+<p>
+<a href="http://github.com/kernc/mindforth/blob/master/wiki/InStantiate.wiki"
+ title="Older version of this AI documentation"
+ style="text-decoration:none;">
+http://github.com/kernc/mindforth/blob/master/wiki/InStantiate.wiki</a>
+</p>
+
+<p>
+<a href="http://en.wikipedia.org/wiki/Grandmother_cell"
+ title="Wikipedia article"
+ style="text-decoration:none;">
+http://en.wikipedia.org/wiki/Grandmother_cell</a> <br />
+</p>
+
+<p>
+<a href="http://www.scholarpedia.org/article/Binding_by_synchrony"
+ title="Scholarpedia"
+ style="text-decoration:none;">
+http://www.scholarpedia.org/article/Binding_by_synchrony</a> <br />
+</p>
+</font>
+
+
+<p><br /></p>
+<p><a name="aitree"></a>
+<a name="9"></a><font color="navy" size="+2">
+9. <a href="http://ai.neocities.org/AiTree.html"
+ title="stand-alone AI Tree of mind-modules">
+AiTree</a> of Mind-Modules for
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding">
+Natural Language Understanding
+</font> <br />
+</p>
+
+
+<font face="Verdana">
+<ul><a href="http://ai.neocities.org/MainLoop.html"
+ style="text-decoration:none;">MainLoop</a> of Strong AI Mind-Modules<br />
+  <ul><li>TabulaRasa -- wipe memory clean</ul>
+  <ul><li><a href="http://ai.neocities.org/MindBoot.html"
+ style="text-decoration:none;">MindBoot</a> of English and
+ <a href="http://github.com/kernc/mindforth/blob/master/wiki/RuBoot.wiki"
+ style="text-decoration:none;">Russian</a> vocabulary
+    <ul><li>KbLoad -- load the Knowledge Base</ul></ul>
+  <ul><li><a href="http://ai.neocities.org/LangLearn.html"
+ style="text-decoration:none;">LangLearn</a> -- habituate new syntax; learn a language</ul>
+  <ul><li><a href="http://ai.neocities.org/ReJuvenate.html"
+ style="text-decoration:none;">ReJuvenate</a> -- recycle memory space</ul>
+  <ul><li><a href="http://ai.neocities.org/Sensorium.html"
+ style="text-decoration:none;">Sensorium</a> -- sensory input with associative tagging to concepts
+    <ul><li><a href="http://ai.neocities.org/AudInput.html"
+ style="text-decoration:none;">AudInput</b></a> -- auditory input
+      <ul><li><a href="http://ai.neocities.org/AudListen.html"
+ style="text-decoration:none;">AudListen</a> -- listen for input</ul>
+      <ul><li><a href="http://ai.neocities.org/AudMem.html"
+ style="text-decoration:none;">AudMem</a> -- English auditory memory
+        <ul><li><a href="http://ai.neocities.org/AudRecog.html"
+ style="text-decoration:none;">AudRecog</a> -- auditory recognition</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/OldConcept.html"
+ style="text-decoration:none;">OldConcept</a> -- recognize a known old concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> --
+<font color="red">create new instance of concept</font></ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> --
+<font color="red">create new instance of concept</font></ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/NewConcept.html"
+ style="text-decoration:none;">NewConcept</a> -- create a new concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> --
+<font color="red">create instance of new concept</font></ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> --
+<font color="red">create instance of new concept</font></ul>
+</ul></ul></ul>
+    <ul><li>FileInput -- read files on a server</ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/GusRecog.html"
+ style="text-decoration:none;">GusRecog</a> -- sense of taste</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/OlfRecog.html"
+ style="text-decoration:none;">OlfRecog</a> -- sense of smell</font></ul>
+    <ul><li><a href="http://ai.neocities.org/TacRecog.html"
+ style="text-decoration:none;">TacRecog</a> -- sense of touch</ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a> -- sense of vision</font></ul></ul>
+  <ul><li><a href="http://ai.neocities.org/Volition.html"
+ style="text-decoration:none;">Volition</a> -- free will resulting from feeling and thinking
+    <ul><li><a href="http://ai.neocities.org/Emotion.html"
+ style="text-decoration:none;">Emotion</a> as influence on thought and free will</ul>
+    <ul><li><a href="http://ai.neocities.org/EnThink.html"
+ style="text-decoration:none;">EnThink</a> -- think in English
+      <ul><li><a href="http://ai.neocities.org/KbRetro.html"
+ style="text-decoration:none;">KbRetro</a> -- retroactively adjust knowledge base</ul>
+      <ul><li><a href="http://ai.neocities.org/Imperative.html"
+ style="text-decoration:none;">Imperative</a> -- mood for issuing commands</ul>
+      <ul><li><a href="http://ai.neocities.org/Indicative.html"
+ style="text-decoration:none;">Indicative</a> -- mood for declarative statements
+      <ul><li><a href="http://ai.neocities.org/InFerence.html"
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></ul>
+      <ul><li><a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</ul>
+      <ul><li><a href="http://ai.neocities.org/EnNounPhrase.html"
+ style="text-decoration:none;">EnNounPhrase</a> -- think with a noun
+        <ul><li><a href="http://ai.neocities.org/EnPrep.html"
+ style="text-decoration:none;">EnPrep</a> -- insert an English preposition</ul>
+        <ul><li><a href="http://ai.neocities.org/EnArticle.html"
+ style="text-decoration:none;">EnArticle</a> -- use "a" or "the"</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdjective.html"
+ style="text-decoration:none;">EnAdjective</a> -- insert an adjective</ul>
+        <ul><li><a href="http://ai.neocities.org/EnPronoun.html"
+ style="text-decoration:none;">EnPronoun</a> -- substitute a pronoun for a noun</ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/EnVerbPhrase.html"
+ style="text-decoration:none;">EnVerbPhrase</a> -- think with a verb
+        <ul><li><a href="http://ai.neocities.org/EnAuxVerb.html"
+ style="text-decoration:none;">EnAuxVerb</a> -- use auxiliary verb</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies a verb
+          <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies another adverb</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/EnVerbGen.html"
+ style="text-decoration:none;">EnVerbGen</a> -- generates an English verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores English phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies English verb-form</ul></ul>
+</ul></ul>
+      <ul><li>Subjunctive -- mood for conditional phrases</ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> --
+insert a conjunction if two thoughts are active</ul></ul>
+    <ul><li><a href="http://ai.neocities.org/RuThink.html"
+ style="text-decoration:none;">RuThink</a> -- think in Russian
+   <ul><li>RuImperative -- needs to be coded</ul>
+   <ul><li><a href="http://ai.neocities.org/RuIndicative.html"
+ style="text-decoration:none;">RuIndicative</a> -- mood for declarative Russian sentences
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/InFerence.html"
+ title="Create new ideas from old ideas."
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></font></ul>
+      <ul><li><a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</ul>
+     <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- think with a Russian noun
+        <ul><li><a href="http://ai.neocities.org/RuAdjective.html"
+ style="text-decoration:none;">RuAdjective</a> -- insert a Russian adjective
+    <ul><li><font color="gray">RuAdjGen -- to generate a Russian adjective-form</font></ul>
+        <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul></ul></ul>
+        <ul><li><a href="http://ai.neocities.org/RuPrep.html"
+ style="text-decoration:none;">RuPrep</a> -- insert a Russian preposition</ul>
+        <ul><li><a href="http://ai.neocities.org/RuPronoun.html"
+ style="text-decoration:none;">RuPronoun</a> -- substitute a Russian pronoun for a noun</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/RuVerbPhrase.html"
+ style="text-decoration:none;">RuVerbPhrase</a> -- think with a Russian verb
+        <ul><li><a href="http://ai.neocities.org/RuVerbGen.html"
+ style="text-decoration:none;">RuVerbGen</a> -- generate a Russian verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores Russian phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies Russian verb-form</ul></ul>
+         <ul><li><a href="http://ai.neocities.org/Speech.html"
+ style="text-decoration:none;">Speech</a> -- output to screen or loudspeaker</ul>
+       <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul>
+            <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a></font> -- visual recognition inserts a noun</ul>
+      <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- direct-object noun
+    <ul><li><font color="gray">RuNounGen -- to generate a Russian noun-form</font></ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/PsiDecay.html"
+ style="text-decoration:none;">PsiDecay</a> lowers conceptual activation</ul></ul></ul>
+    <ul><li><a href="http://ai.neocities.org/SpreadAct.html"
+ style="text-decoration:none;">SpreadAct</a> -- spreading activation from concept to concept</ul>
+    <ul><li><a href="http://ai.neocities.org/Spawn.html"
+ style="text-decoration:none;"><b>Spawn</b></a> --
+ <a href="http://agi.topicbox.com/groups/agi/T57cced66d45fa115"
+ title="AGI Mail List discussion forum"
+ style="text-decoration:none;">AI Go FOOM</a></ul>
+    <ul><li><a href="http://ai.neocities.org/MetEmPsychosis.html"
+ style="text-decoration:none;">MetEmPsychosis</a> -- AI soul travel from webserver to webserver
+ <ul><li><a href="https://en.wikipedia.org/wiki/Port_scanner"
+ style="text-decoration:none;">PortScan</a> -- find a receptive
+ <a href="http://en.wikipedia.org/wiki/Open_port"
+ title="Wikipedia article"
+ style="text-decoration:none;">
+open port</a> for relocation of the Ghost AI</ul></ul>
+    <ul><li><font color="gray">MindMeld -- merge two AI Minds by sharing memories</font></ul>
+    <ul><li><a href="http://ai.neocities.org/Motorium.html"
+ style="text-decoration:none;">Motorium</a> (MotorOutPut) -- for AI-Minded robots</ul>
+    <ul><li><a href="http://ai.neocities.org/Consciousness.html"
+ style="text-decoration:none;">Consciousness</a> -- emergent property, not a module</ul></ul></ul>
+</font>
+
+
+<p><br /></p>
+<a href="https://m.media-amazon.com/images/I/51fCt9yasXL.jpg"
+ title="Image provided for bloggers, authors, students, et al."
+ style="text-decoration:none;">
+https://m.media-amazon.com/images/I/51fCt9yasXL.jpg</a> --
+cover image of "<i>Artificial Intelligence in Ancient Latin</i>"<br />
+
+<a href="http://www.amazon.com/dp/B08NRQ3HVW"
+ title="Paperback version"
+ style="text-decoration:none;">
+http://www.amazon.com/dp/B08NRQ3HVW</a> --
+paperback version of Kindle eBook "Artificial Intelligence in Ancient Latin"<br />
+
+<a href="https://www.metrofarecomic.com/post/109206873347/latin"
+ title="Cartoon of persons speaking ancient Latin on a bus"
+ style="text-decoration:none;">
+https://www.metrofarecomic.com/post/109206873347/latin</a> --
+cartoon image for Chapter 43<br />
+
+<p><br /></p>
+<center><a href="http://www.amazon.com/dp/B08NGMK3PN"
+ title="Artificial Intelligence in Ancient Latin">
+<img src="https://m.media-amazon.com/images/I/51fCt9yasXL.jpg"></a></center>
+<br />
+
+
+<p><br /></p>
+<a href="http://livetrafficfeed.com" data-num="10" data-width="210"
+data-responsive="0" data-time="America%2FNew_York" data-root="0"
+data-cheader="2853a8" data-theader="ffffff" data-border="2853a8"
+data-background="ffffff" data-normal="000000" data-link="135d9e"
+target="_blank" id="LTF_live_website_visitor">Website Counter</a>
+<script type="text/javascript" src="//cdn.livetrafficfeed.com/static/v4/live.js">
+</script><noscript><a href="http://livetrafficfeed.com">Website Counter</a></noscript>
+<a name="bottom"></a>
+<p><br /></p>
+</body>
+</html>

@@ -1,0 +1,433 @@
+
+<html>
+<head>
+<title>MainLoop Module of a Strong AI Mind</title>
+<meta name="description"
+ content="MainLoop calls the topmost mind-modules of an artificial intelligence." />
+<meta name="keywords"
+ content="AI, artificial intelligence, ghost.pl, MainLoop, MindForth, Perl" />
+</head>
+<body bgcolor="#FFFACD">
+<a name="top"></a>
+
+<center><h1>
+<a href="http://ai.neocities.org/MainLoop.html"
+ title="This webpage may be copied to other websites."
+ style="text-decoration:none;">
+MainLoop</a> module of the
+</h1></center>
+
+<center><h2>
+<a href="http://ai.neocities.org/Ghost.html"
+ title="English tutorial in JavaScript for Microsoft Internet Explorer">English</a>
+and
+<a href="http://ai.neocities.org/Dushka.html"
+ title="Russian tutorial AI in JavaScript for MSIE">
+Russian</a> bilingual
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="Perl AI source code"
+ style="text-decoration:none;">
+ghost</a>.pl AI in
+ <a href="http://strawberryperl.com"
+ title="Download Perl for free."
+ style="text-decoration:none;">
+Perl</a>
+</h2></center>
+
+<h2><center>
+<a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer">
+<i>Mens Latina</i></a> in
+ <a href="http://ai.neocities.org/MLPJ2019.html"
+ title="Mens Latina Programming Journal"
+ style="text-decoration:none;">
+Latin</a> --
+<a href="http://dl.acm.org/citation.cfm?doid=307824.307853"
+ title="Association for Computing Machinery"
+ style="text-decoration:none;">
+MindForth</a> for
+ <a href="http://rodneybrooks.com/agi-has-been-delayed/#comment-18915"
+ title="Robotics and AI weblog"
+ style="text-decoration:none;">
+Robots</a>
+</h2></center>
+
+
+
+<font face="Verdana">
+<p><br /></p>
+<p>
+<a name="abstract"></a>
+<b>Abstract</b> <br />
+The MainLoop module calls several housekeeping modules to
+launch the Artificial General Intelligence (AGI) and then
+repeatedly calls the main modules for sensory input and for
+rational intelligence in control of voluntary motor output.
+</p>
+<p><br /></p>
+
+<font face="Verdana">
+<p><a name="diagram"></a>
+<a name="1"></a><font size="+1">
+1. <a href="http://ai.neocities.org/DiaGram.html"
+ title="ASCII diagrams of Mentifex mind-modules for artificial intelligence.">
+Diagram</a> of MainLoop Mind-Module</font> <br />
+<p><br /></p>
+
+<font face="Verdana">
+
+<font size="+1"><strong><pre>
+  /^^^^^^^^^^^\                                    Motor Output
+ /   EYE       \            _________________     /YYYYYYYYYYYY\
+|               |CONCEPTS  /                 \   | | ||| ||| || |
+|   _______     |   | | | /     MainLoop      \  | | ||| ||| || |
+|  / old   \    |   | | | \___________________/  | | ||| ||| || |
+| /  dog    \!!!|!!!|!|!|   |    | | |    |      | |S||| ||| || |
+| \ recog   /---|---|-|-+ __V___ | | |  __V___   | |H||| ||| || |
+|  \_______/    |  p| | |(Tabula)| } | /      \  | |A|||R|||P|| |
+|               |  e| | | \Rasa/ | | |(Volition) | |K|||U|||E|| |
+|               |  r| | |  \__/  | | | \______/\ | |E|||N|||T|| |
+|               |  s| |d|   _____| | |   |   |  \| |?|||?|||?|| |
+|   visual      |  o| |o|  |     | | |  _V   |   \ | ||| ||| || |
+|               |  n| |g|  |Mind-| | | /  \  |   |\  ________   |
+|   memory      |  s| |s|  |Boot | | |/Emo-\ |   | \/        \  |
+|               |   |f| |  |_____| | |\tion/ |   | ( Motorium ) |
+|   channel     |   |e| | _________V | \__/  |   |  \________/  |
+|               |   |a| |/          \|  _____V_  | |||||||||||| |
+|               |   |r| |\ReJuvenate/| (EnThink) | |||||||||||| |
+|   _______     |   | | | \________/ |  \_____/  | |||||||||||| |
+|  /new    \    |   |_|_|      ______V__         | |||||||||||| |
+| / percept \   |  /     \    /         \        | |||||||||||| |
+| \ engram  /---|-(  Psy  )--( Sensorium )       | |||||||||||| |
+|  \_______/    |  \_____/    \_________/        | |||||||||||| |
+</pre></strong></font></p>
+
+<p><br /></p>
+<a name="2"></a><b>2. Algorithm of the MainLoop</b> <br />
+
+<p>
+In F0rth, MainLoop is a module that loops repeatedly until terminate3d, In
+JavaScript, MainLoop() calls itself repeatedly.
+</p>
+
+<p><br /></p>
+<p><a name="code"></a>
+<a name="3"></a><font size="+1">
+3. Code of MainLoop() from
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="Source code in Strawberry Perl Five"
+ style="text-decoration:none;">
+ghost</a>.pl Strong AI Mind in
+ <a href="http://strawberryperl.com"
+ title="Strawberry Perl Five"
+ style="text-decoration:none;">
+Perl</a></font> <br />
+</p>
+
+<pre><b>
+MainLoop: {  # 2016jan25: for inclusion of TabulaRasa() & MindBoot()
+  TabulaRasa();  # 2016jan25: one-time call as in MindForth AI.
+  MindBoot();    # 2016jan25: one-time call as in MindForth AI.
+  while ($t < $cns) {  # 2015may02: Until CNS memory is full.
+    $age = $age + 1;   # 2015apr26
+    if ($fyi > 2) {  # 2016feb08: if mode is Diagnostic
+#     print "\nEnter a simple sentence in English or Russian: \n"; #2017-11-27
+      print "\nEnter simple English or Russian to the Artificial Intelligence: \n"; #2017-11-27
+    }  # 2016feb07: end of test for Diagnostic or Tutorial mode.
+    if ($t > ($cns - 64)) {  ReJuvenate() }  # 2016apr18: near end of memory.
+    $tai = $t;  # 2016apr14: time of AI for diagnostic screen display
+    $tpu = $t;  # 2018-06-26: isolate tpu from later input-and-output.
+    Sensorium(); # 2016mar26: as avenue to auditory input module.
+    if ($fyi > 2) {  # 2017-04-12: Tutorial Mode
+    }  # 2017-04-12: end of test for #3 Tutorial Mode or higher.
+    Volition();  # 2017-03-18: to link Emotion() Think() and ()Motorium.
+    if ($fyi > 2) {  # 2017-04-12: if in #3 Tutorial or #4 Diagnostic Mode...
+      my $rsvp = 0;  # 2018-06-2016: counter for response-delay;
+      until ($rsvp == 500000) {  # 2018-06-26: upper limit on count;
+        $rsvp++;  # 2018-06-26: Increment $rsvp counter
+      }  # 2018-06-26: end of loop waitng for user-response.
+#     print "\n \nMindGrid of ghost267.pl born $birth\n";  #2018-07-06
+      print "Psy and Ear arrays hold your input and the AI output: \n\n"; # 2016JUL10
+      print "time tru psi hlc act mtx jux pos dba num "; # 2017jun08
+      print "mfn pre iob seq tkb rv  pho audpsi \n"; # 2017jun08
+#     $tai = ($tai - 44);  # 2018-06-28: temporary KbRetro() TEST; REMOVE
+#     $tai = ($tai - 60);  # 2018-07-06: temporary KbRetro() TEST; REMOVE
+      do {  # 2016mar26: Show @psy and @ear engrams of recent input.
+        $tai++;  # 2017-03-31: increment $tai up until current time $t.
+        print "t=$tai. $psy[$tai], ";  # 2017jun08: show @psy concept array
+        print " aud= $ear[$tai], \n";  # 2016apr14: show @ear auditory array
+        if ($tai == $krt) { print "   \n" }  # 2016apr15: Show a gap.
+      } while ($tai < ($t - 2));  # 2017-11-28: show @ear array at recent time-points
+    }  # 2016feb08: end of test for Tutorial mode
+#  $hlc = "en";  # 2016feb24: If no Russian input, switch to default English.
+#  $hlc = "ru";  # 2016may21: Alternate between English and Russian default?
+  }  # 2016feb10: end of main while-loop
+}  # 2016jan25: End of MainLoop as an entity.
+</b></pre>
+
+<p><br /></p>
+<p><a name="debug"></a>
+<a name="4"></a><font size="+1">
+4. Troubleshooting and Debugging</font> <br />
+</p>
+
+<p><a name="4.1"></a><font color="red">
+<b>4.1.a.  Symptom:</b></font> (Something goes wrong.)<br />
+<font color="green"><b>
+4.1.b.  Solution:</b></font> (AI Mind
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="Job Description"
+ style="text-decoration:none;">
+Maintainer</a> devises solution.) <br />
+</p>
+
+<p><br /></p>
+<p><a name="variables"></a>
+<a name="5"></a><font size="+1">
+5. <a href="http://ai.neocities.org/var.html"
+ title="Table of Variables for First Working AGI"
+ style="text-decoration:none;">
+Variables</a> for MainLoop</font> <br />
+</p>
+
+$<a href="http://ai.neocities.org/var.html#cns">cns</a> --
+(adjustable) size of "central nervous system" memory in the Ghost Perl AI <br />
+
+<p><br /></p>
+<a name="6"></a><b>6. Resources</b> <br />
+<br />
+
+
+<p><br /></p>
+Please see <br />
+
+<br />
+<a href="http://cyborg.blogspot.com/2009/11/mainloop.html"
+ title="blog post"
+ style="text-decoration:none;">
+http://cyborg.blogspot.com/2009/11/mainloop.html</a> <br />
+
+<br />
+<a href="http://github.com/kernc/mindforth/blob/master/wiki/MainLoop.wiki"
+ title="Older version of this AI documentation"
+ style="text-decoration:none;">
+http://github.com/kernc/mindforth/blob/master/wiki/MainLoop.wiki</a> <br />
+
+<br />
+<a href="http://mind.sourceforge.net/alife.html"
+ title="Older version of this AI documentation"
+ style="text-decoration:none;">
+http://mind.sourceforge.net/alife.html</a> <br />
+</font>
+
+
+<p><br /></p>
+<p><a name="aitree"></a>
+<a name="7"></a><font size="+1">
+7. <a href="http://ai.neocities.org/AiTree.html"
+ title="stand-alone AI Tree of mind-modules"
+ style="text-decoration:none;">
+AiTree</a> of Mind-Modules for
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding">
+Natural Language Understanding
+</font> <br />
+</p>
+
+
+
+<font face="Verdana">
+<br />
+<ul><font color="red"><b>MainLoop</b></font><br />
+  <ul><li>TabulaRasa -- wipe memory clean</ul>
+  <ul><li><a href="http://ai.neocities.org/MindBoot.html"
+ style="text-decoration:none;">MindBoot</a> of English and
+ <a href="http://github.com/kernc/mindforth/blob/master/wiki/RuBoot.wiki"
+ style="text-decoration:none;">Russian</a> vocabulary
+    <ul><li>KbLoad -- load the Knowledge Base</ul></ul>
+  <ul><li><a href="http://ai.neocities.org/ReJuvenate.html"
+ style="text-decoration:none;">ReJuvenate</a> -- recycle memory space</ul>
+  <ul><li><a href="http://ai.neocities.org/Sensorium.html"
+ style="text-decoration:none;">Sensorium</a> (SensoryInput)
+    <ul><li><a href="http://ai.neocities.org/AudInput.html"
+ style="text-decoration:none;">AudInput</a> -- auditory input
+      <ul><li><a href="http://ai.neocities.org/AudListen.html"
+ style="text-decoration:none;">AudListen</a> -- listen for input</ul>
+      <ul><li><a href="http://ai.neocities.org/AudMem.html"
+ style="text-decoration:none;">AudMem</a> -- English auditory memory
+        <ul><li><a href="http://ai.neocities.org/AudRecog.html"
+ style="text-decoration:none;">AudRecog</a> -- auditory recognition</ul></ul>
+      <ul><li>RuAudMem -- Russian auditory memory
+        <ul><li>RuAudRecog -- Russian auditory recognition</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/OldConcept.html"
+ style="text-decoration:none;">OldConcept</a> -- recognize a known old concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/NewConcept.html"
+ style="text-decoration:none;">NewConcept</a> -- create a new concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul>
+</ul></ul></ul>
+    <ul><li>FileInput -- read files on a server</ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/GusRecog.html"
+ style="text-decoration:none;">GusRecog</a> -- sense of taste</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/OlfRecog.html"
+ style="text-decoration:none;">OlfRecog</a> -- sense of smell</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/TacRecog.html"
+ style="text-decoration:none;">TacRecog</a> -- sense of touch</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a> -- sense of vision</font></ul></ul>
+  <ul><li><a href="http://ai.neocities.org/Volition.html"
+ style="text-decoration:none;">Volition</a>
+    <ul><li><font color="gray">
+<a href="http://ai.neocities.org/Emotion.html"
+ style="text-decoration:none;">Emotion</a></font> as influence on thought and free will</ul>
+    <ul><li><a href="http://ai.neocities.org/EnThink.html"
+ style="text-decoration:none;">EnThink</a> -- think in English
+      <ul><li><a href="http://ai.neocities.org/KbRetro.html"
+ style="text-decoration:none;">KbRetro</a> -- retroactively adjust knowledge base</ul>
+      <ul><li><a href="http://ai.neocities.org/Imperative.html"
+ style="text-decoration:none;">Imperative</a> -- mood for issuing commands</ul>
+      <ul><li><a href="http://ai.neocities.org/Indicative.html"
+ style="text-decoration:none;">Indicative</a> -- mood for declarative statements
+      <ul><li><font color="gray"><a href="http://ai.neocities.org/InFerence.html"
+ title="Create new ideas from old ideas."
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></font></ul>
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">
+AskUser</a> -- validate an inference</font></ul>
+      <ul><li><a href="http://ai.neocities.org/EnNounPhrase.html"
+ style="text-decoration:none;">EnNounPhrase</a> -- think with a noun
+        <ul><li><font color="gray">
+<a href="http://ai.neocities.org/EnPrep.html"
+ style="text-decoration:none;">EnPrep</a> -- use a preposition</font></ul>
+        <ul><li><font color="gray">
+<a href="http://ai.neocities.org/EnArticle.html"
+ style="text-decoration:none;">EnArticle</a> -- use "a" or "the"</font></ul>
+        <ul><li><a href="http://ai.neocities.org/EnPronoun.html"
+ style="text-decoration:none;">EnPronoun</a> -- substitute a pronoun for a noun</ul>
+        <ul><li><font color="gray">
+<a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- use a conjunction</font></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/EnVerbPhrase.html"
+ style="text-decoration:none;">EnVerbPhrase</a> -- think with a verb
+        <ul><li><a href="http://ai.neocities.org/EnAuxverb.html"
+ style="text-decoration:none;">EnAuxverb</a> -- use auxiliary verb</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies a verb
+          <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies another adverb</ul></ul></ul></ul>
+      <ul><li>Subjunctive -- mood for conditional phrases</ul>
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">
+ConJoin</a> -- use a conjunction if two thoughts are active</font></ul></ul>
+    <ul><li><a href="http://ai.neocities.org/RuThink.html"
+ style="text-decoration:none;">RuThink</a> -- think in Russian
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/InFerence.html"
+ title="Create new ideas from old ideas."
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></font></ul>
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</font></ul>
+     <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- think with a Russian noun
+        <ul><li><a href="http://ai.neocities.org/RuAdjective.html"
+ style="text-decoration:none;">RuAdjective</a> -- insert a Russian adjective</ul>
+        <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul>
+        <ul><li><a href="http://ai.neocities.org/RuPrep.html"
+ style="text-decoration:none;">RuPrep</a> -- insert a Russian preposition</ul>
+        <ul><li><a href="http://ai.neocities.org/RuPronoun.html"
+ style="text-decoration:none;">RuPronoun</a> -- substitute a Russian pronoun for a noun</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- use a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/RuVerbPhrase.html"
+ style="text-decoration:none;">RuVerbPhrase</a> -- think with a Russian verb
+        <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul>
+        <ul><li><a href="http://ai.neocities.org/RuVerbGen.html"
+ style="text-decoration:none;">RuVerbGen</a> -- generate a Russian verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> stores Russian phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> for manipulation of Russian phonemes</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/Speech.html"
+ style="text-decoration:none;">Speech</a> -- output to screen or loudspeaker</ul>
+            <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a></font> -- visual recognition inserts a noun</ul>
+      <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- direct-object noun</ul></ul>
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- use a conjunction</font></ul>
+      <ul><li><a href="http://ai.neocities.org/PsiDecay.html"
+ style="text-decoration:none;">PsiDecay</a> lowers conceptual activation</ul></ul>
+    <ul><li><a href="http://ai.neocities.org/SpreadAct.html"
+ style="text-decoration:none;">SpreadAct</a> -- spreading activation from concept to concept</ul>
+    <ul><li><a href="http://ai.neocities.org/MetEmPsychosis.html"
+ style="text-decoration:none;">MetEmPsychosis</a> -- AI soul travel from webserver to webserver</ul>
+    <ul><li><font color="gray">MindMeld -- merge two AI Minds by sharing memories</font></ul>
+    <ul><li><font color="gray">
+<a href="http://ai.neocities.org/Motorium.html"
+ style="text-decoration:none;">Motorium</a> (MotorOutPut) -- for AI-Minded robots</font></ul></ul></ul>
+</font>
+
+
+<p><br /></p>
+<a href="https://m.media-amazon.com/images/I/51fCt9yasXL.jpg"
+ title="Image provided for bloggers, authors, students, et al."
+ style="text-decoration:none;">
+https://m.media-amazon.com/images/I/51fCt9yasXL.jpg</a> --
+cover image of "<i>Artificial Intelligence in Ancient Latin</i>"<br />
+
+<a href="http://www.amazon.com/dp/B08NRQ3HVW"
+ title="Paperback version"
+ style="text-decoration:none;">
+http://www.amazon.com/dp/B08NRQ3HVW</a> --
+paperback version of Kindle eBook "Artificial Intelligence in Ancient Latin"<br />
+
+<a href="https://www.metrofarecomic.com/post/109206873347/latin"
+ title="Cartoon of persons speaking ancient Latin on a bus"
+ style="text-decoration:none;">
+https://www.metrofarecomic.com/post/109206873347/latin</a> --
+cartoon image for Chapter 43<br />
+
+<p><br /></p>
+<center><a href="http://www.amazon.com/dp/B08NGMK3PN"
+ title="Artificial Intelligence in Ancient Latin">
+<img src="https://m.media-amazon.com/images/I/51fCt9yasXL.jpg"></a></center>
+<br />
+
+<p><br /></p>
+<a href="http://livetrafficfeed.com" data-num="10" data-width="210"
+data-responsive="0" data-time="America%2FNew_York" data-root="0"
+data-cheader="2853a8" data-theader="ffffff" data-border="2853a8"
+data-background="ffffff" data-normal="000000" data-link="135d9e"
+target="_blank" id="LTF_live_website_visitor">Website Counter</a>
+<script type="text/javascript" src="//cdn.livetrafficfeed.com/static/v4/live.js">
+</script><noscript><a href="http://livetrafficfeed.com">Website Counter</a></noscript>
+<a name="bottom"></a>
+<p><br /></p>
+</body>
+</html>

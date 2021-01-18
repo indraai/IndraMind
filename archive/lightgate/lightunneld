@@ -1,0 +1,65 @@
+#!/usr/bin/perl
+# 
+# lightunneld.pl
+#
+# Author: Liraz Siri <liraz@hushmail.com>
+# 
+# Copyright (c) 1998 Liraz Siri <liraz@hushmail.com> Ariel, Israel
+#		All rights reserved.
+#
+# Created: Tue Oct 20 11:19:47 IST 1998
+#
+# Lightunneld is the server side of the lightunnel package. This is VERY
+# simple, and could be done just as easily using netcat. This isn't even
+# very compact as there should be little reason to try to execute it from
+# command line like several other parts of the lightgate project.
+#
+# Use is simple:
+# lightunneld [port]
+#
+# Note: by default we bind to port 80.
+
+use Socket;
+my $listen_port;
+
+$listen_port = 80;
+$listen_port = int($ARGV[0]) if($ARGV[0]);
+
+socket(SOCK, AF_INET, SOCK_STREAM, 0);
+bind(SOCK, sockaddr_in($listen_port, INADDR_ANY)) || 
+ die "Error: failed binding socket to port $listen_port\n";
+
+listen(SOCK, 1);
+
+printf(STDERR "Waiting for incoming connection on port %d...\n", $listen_port);
+
+my ($rport, $raddr) = sockaddr_in(accept(NEWSOCK, SOCK));
+my $hostname = gethostbyaddr($raddr, AF_INET);
+$hostname eq "" && ($hostname = "unresolved");
+
+printf(STDERR "Connection from %s (%s):%d received... begin session\n", 
+       hostname, inet_ntoa($raddr), $rport);
+
+close(SOCK);
+
+my ($readfds, $bytes, $stdin_buffer);
+
+vec($readfds, fileno(NEWSOCK), 1) = 1;
+vec($readfds, fileno(STDIN), 1) = 1;
+
+
+for(;;) {
+ next if(!select($rs = $readfds, undef, undef, undef));
+ if(vec($rs, fileno(STDIN), 1) == 1) {
+  $bytes = sysread(STDIN, $stdin_buffer, 1024);
+  syswrite(NEWSOCK, $stdin_buffer, $bytes); 
+ } 
+
+ if(vec($rs, fileno(NEWSOCK), 1) == 1) {
+  if(!($bytes = sysread(NEWSOCK, $stdout_buffer, 1024))) 
+  {
+   die "Connection reset by remote host.\n";
+  }
+  syswrite(STDOUT, $stdout_buffer, $bytes);
+ } 
+}

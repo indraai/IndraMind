@@ -335,6 +335,9 @@ sub PsiDecay() {  #
     if ($k[3] < 0) {  # 2017-06-24:
       $k[3] = ($k[3] + 2);   # 2017-06-24: rapid recovery.
     }  # 2017-06-24: end of test
+    # note fix error in concatonation string. 2021-01-14
+    # TODO fix solution for random uninitialized variable
+    # place print on here to observe error
     $psy[$i]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"  # 2018-07-01: insertion.
     . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
     . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01: expanded panel.
@@ -672,6 +675,7 @@ sub InStantiate() {  #
   $finlen = 0;  # 2017-12-26: reset to prevent carry-over.
   $prc = 0;  # 2017-12-26: reset to prevent carry-over.
   $pre = 0;  # 2016mar12: Reset to prevent carry-over.
+  Security(); #2021-1-15: Added Security Check.
 }  # 2019-10-23: InStantiate() returns to EnParser() or RuParser().
 
 
@@ -5023,6 +5027,7 @@ $t++;  # 2019-11-04: one blank time-point for sake of AudRecog()
   $hlc = 1;  # 2019-08-06: English by default; Cyrillic input changes to Russian.
 # $hlc = 3;  # 2019-06-07: Cyrillic by default; English input changes to Roman.
   $nxt = 3001;  # 2018-09-02: First 3K for English and Russian MindBoot.
+  Security();
 };  # 2019-10-21: MindBoot() runs once and returns to the MainLoop.
 
 
@@ -5301,10 +5306,15 @@ sub RuAdjective() {  #
   # print "\n RuAdjective: adjcon= $adjcon \n";  # 2019-06-05: TEST
 } # 2019-06-05: RuAdjective() returns to RuNounPhrase() module.
 
+# 1/14/2021 - Added Medical Sub for implementation
+sub Medical() {
 
+}
 # 1/13/2021 - Added Security Sub for implementation.
 sub Security() {
   # 2021-01-13: stub for security implementation;
+  # pass userdata to a security module
+  Medical();
 }
 
 # 1/13/2021 - Added Imagination Sub for implementation;

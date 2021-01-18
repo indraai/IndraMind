@@ -660,6 +660,7 @@ cns @   3  CHANNEL  ear{  ( 2016JUL25: Auditory memory channel "ear" )
   0 act !   \ 2016aug28: reset to prevent carry-over.
   0 pre !   \ 2016aug28: Reset to prevent carry-over.
   0 len !   \ 2018-11-24: for sake of next word before end of input.
+  Security
 ;  \ 2019-10-04: InStantiate returns to EnParser robot mind-module.
 
 
@@ -6546,8 +6547,13 @@ cns @   3  CHANNEL  ear{  ( 2016JUL25: Auditory memory channel "ear" )
 ;   \ 2019-10-04: Robot Motorium module returns to Volition.
 
 
+:  Medical ( Security added to IndraMind 2021-1-14 )
+   7 EMIT  \ 2021-1-11: sound a beep
+; \ 2021-1-11: Securit stub
+
 :  Security ( Security added to IndraMind 2021-1-11 )
    7 EMIT  \ 2021-1-11: sound a beep
+   Medical \ 2021-1-14: Added Medical Sub
 ; \ 2021-1-11: Securit stub
 
 : Volition ( http://ai.neocities.org/Volition.html )

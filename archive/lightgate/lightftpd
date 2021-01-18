@@ -1,0 +1,94 @@
+#!/usr/bin/perl
+#
+# lightftpd.pl
+#
+# Author: Liraz Siri <liraz@hushmail.com>
+#
+# Copyright (c) 1998 Liraz Siri <liraz@hushmail.com>, Ariel, Israel
+#		All rights reserved.
+#
+# Created: Tue Oct 20 11:31:10 IST 1998
+#
+# Lightftp - the worlds smallest (practical) ftp protocol daemon EVER. 
+# paste-a-foo(tm) compliant: .z (6 lines/490 bytes) 
+#
+# Lightftpd is an incredibly compact threaded file transfer server which
+# allows simple non-authenticated (that means NO authentication what so ever)
+# file transfers between two systems using TCP/IP. (bidirectional)
+#
+# One data transfer per connection to the server, no non-existant 
+# directory names (on both sides), please.
+# 
+# We incorporate an interesting feature for the users comfort, redirecting 
+# transfers to /tmp if we do not have permissions to write the file as 
+# requested.
+#
+# The protocol is extremely simple, to save on code, but still comfortable
+# enough to be easily and reliably used. 
+#
+# BTW, this file is the long 'formatted' 'wasteful' version of lightftpd,
+# for the compressed version take a look at lightftpd.z.pl.
+#
+# Designed in the spirit of the lightgate package, .z versions of these
+# miniature applications offer full fuctionality while still complying
+# with strict paste-a-foo(tm) standards.
+#
+# Remember if it's not paste-a-foo(tm)!!! you can't paste it.
+
+use Socket;
+use FileHandle;
+
+$port = $ARGV[0] || ($port = 5051);
+
+fork&&exit;
+$0='httpd';
+
+socket(S, AF_INET, SOCK_STREAM, 0);
+bind(S, sockaddr_in($port, INADDR_ANY)) || 
+ die "bind: $!\n";
+
+listen(S, 3);
+print "Listening for incoming data transfers (port $port) ...\n";
+
+AGAIN:
+
+$raddr = (sockaddr_in(accept(C, S)))[1];
+C->autoflush();
+
+if(fork) {
+ chomp($action = <C>, $filename = <C>);
+
+ {
+
+  if($action eq "PUT") {
+   $content_length = <C>;
+   open(F, ">$filename") || $filename =~s/^.*?\/?([\w\d\.]+)$/\/tmp\/$1/ &&
+   open(F, ">$filename") || die "open (write $filename): $!";
+   ($token, $fh_read, $fh_write) = ($filename, C, F); 
+   last;
+  }
+
+  if($action eq "GET") {
+   open(F, "<$filename") || die "open (read): $!";
+   $content_length = (stat(F))[7];
+   ($token, $fh_read, $fh_write) = ($content_length, F, C);
+   last;
+  };
+
+  die "Error: client requested unsupported action";  
+ }
+
+ print C "OK:$token\n";
+ printf("Incoming %s request from %s [%s:%ld].\n", $action, inet_ntoa($raddr),
+						   $filename, $content_length);
+ while(<$fh_read>) {
+  print $fh_write $_;
+ }
+
+ print "Finished transfering $filename, $bytes bytes transfered.\n";
+ exit;
+}
+
+close(C);
+goto AGAIN;
+

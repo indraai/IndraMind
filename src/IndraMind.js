@@ -1,3 +1,5 @@
+// check variable scope
+
 var abc = "";  // AudBuffer() transfer character; 4jan2012
 var abort = false;  // 29dec2006 For orchestration of sentence-generation.
 var act = 0;  // AI4U: old- & newConcept; Reify(); nounPhrase; verbPhrase.
@@ -106,7 +108,7 @@ var indefmust = 0;  // force saying of "A" or "AN"; 23oct2011
 var inert = 0;  // for quick asking of a cogpsi question; 23oct2011
 var inft = 0;  // inference-time for AskUser; 18mar2013
 var infincon = 0;  // infinitive condition flag; 24jun2015
-var inhibcon = 0;  // flag for inhibition in InStantiate; 27oct2011
+var inhibcon = 0;  // flag for inhibition in Instantiate; 27oct2011
 var input = ""; // 2018-01-19: string of input for diagnostic TEST
 var instnum = 0;  // instantiation number for immediate or delayed use )
 var iob = 0;  // 2017-12-31: indirect-object tag for psy concept array
@@ -142,7 +144,7 @@ var nonce = 630;  // AI4U: Security(); Troubleshoot(): recent "nonce" time.
 var nounlock = 0;  // for a verb to lock onto a seq-noun; 13oct2011
 // var nounval = 0;  // 20mar07A: 26dec2006: For transfer from nounPhrase to nounAct.
 var now = "";     // 2018-01-24: holder of a Date() string for TranScript() etc.
-var nphrnum = 0;  // 2018-03-17: noun-phrase num(ber) in InStantiate() etc.
+var nphrnum = 0;  // 2018-03-17: noun-phrase num(ber) in Instantiate() etc.
 var nphrpos = 0;  // for testing in EnCog; 13aug2010
 var nucon = 0;  // 2018-01-23 flag to indicate a new concept for SpreadAct()
 var num = 0;  // 2018-01-27: grammatical num(ber)
@@ -184,7 +186,20 @@ var prv = 0;   // 2017-12-31: for AudRecog() to examine pre(vious) row
 var psi = 0;  // AI4U: Instantiate; audNode: associative tag to a concept.
 var psi0 = 0; // AI4U: first of the elements in a Psi concept panel.
 var psi1 = 0;
-var psi8 = 0;  // test; 13oct2011
+var psi2 = 0;
+var psi3 = 0;
+var psi4 = 0;
+var psi5 = 0;
+var psi6 = 0;
+var psi7 = 0;
+var psi8 = 0;
+var psi9 = 0;
+var psi10 = 0;
+var psi11 = 0;
+var psi12 = 0;
+var psi13 = 0;
+var psi14 = 0;
+
 // var psibase = 0;
 var psidata = ("<b>" + "Concepts with associative tags for ");
 psidata += ("Natural Language Understanding:" + "<\/b>" + "<BR>");
@@ -611,7 +626,7 @@ function psyNode(tru,psi,hlc,act,mtx,jux,pos,dba,num,mfn,pre,iob,seq,tkb,rv) {
 }  // 2018-01-23: end of psyNode
 
 
-function InStantiate() { // http://ai.neocities.org/InStantiate.html
+function Instantiate() { // http://ai.neocities.org/Instantiate.html
   prevtag = 0;  // 2018-01-11: Reset for safety.
   if (qucon > 0 && qv2psi == 800) {  // 2018-03-2: before query-subject comes in...
   }  // 2018-03-02: end of test for who-query and be-verb before query-subject.
@@ -704,11 +719,12 @@ psyNode(psi0,psi1,psi2,psi3,psi4,psi5,psi6,psi7,psi8,psi9,psi10,psi11,psi12,psi1
   if (pos == 8) seqneed = 5;  // 2018-01-11: if verb, need direct object.
   pre = 0;  // 2018-01-21: Reset to prevent carry-over.
   rv = 0;  // 2018-01-11: reset for safety.
-}  // 2018-01-10: InStantiate() returns to EnParser().
+  Security('Instantiate');
+}  // 2018-01-10: Instantiate() returns to EnParser().
 
 
 function EnParser() { // http://ai.neocities.org/EnParser.html
-  act = 48; // 2018-01-11: an arbitrary activation for InStantiate()
+  act = 48; // 2018-01-11: an arbitrary activation for Instantiate()
   bias = 5; // 2018-01-10: Expect a noun until overruled.
   if (pos == 5) bias = 8;  // 2018-01-11: after noun, expect verb.
   if (pos == 7) bias = 8;  // 2018-01-11: after pronoun, expect verb.
@@ -776,7 +792,7 @@ function EnParser() { // http://ai.neocities.org/EnParser.html
     psyNode(psi0,psi1,psi2,psi3,psi4,psi5,psi6,psi7,psi8,psi9,subjpre,psi11,0,psi13,psi14);
     subjpre = 0;  // 2018-01-21: Reset for safety.
   }  // 2018-01-21: end of test for a pos=8 verb.
-  InStantiate();  // 2018-01-10: for creating psy concept-nodes
+  Instantiate();  // 2018-01-10: for creating psy concept-nodes
 }  // 2018-01-10: EnParser() returns to OldConcept() or NewConcept().
 
 
@@ -842,7 +858,7 @@ function OldConcept() { // http://ai.neocities.org/OldConcept.html
     }  // 2018-01-23: end of test for negation of a verb with "NOT".
     if (oldpsi == 432) kbzap = 432;  // 2018-01-28: 432=YES for KbRetro()
     if (oldpsi == 404) kbzap = 404;  // 2018-01-28: 404=NO for KbRetro()
-    psi = oldpsi;  // 2018-01-11: for transfer to InStantiate()
+    psi = oldpsi;  // 2018-01-11: for transfer to Instantiate()
     if (pov == 2) {  // 2018-01-23: during a pov "dual" (you and I) conversation...
       if (oldpsi == 245) wherecon = 1;  // 2018-10-28: if "Where?"
       if (oldpsi == 245) prepgen = 8;  // 2018-01-23: if "Where?" call EnPrep()
@@ -856,7 +872,7 @@ function OldConcept() { // http://ai.neocities.org/OldConcept.html
     if (pos==5) num = audnum;  // 2018-01-27:
     if (pos==8) num = holdnum;  // 2018-01-27:
     if (pos==5) holdnum = audnum;  // 2018-01-27: transfer to verb;
-    EnParser(); // 2018-01-11: In preparation to call InStantiate().
+    EnParser(); // 2018-01-11: In preparation to call Instantiate().
   }  // 2018-01-23: end of test for English human-language-code
   if (pov == 2) {  // 2018-01-25: external pov during input;
     if (pos == 5) {  // nouns only, not yet pronouns; 18mar2013
@@ -889,9 +905,9 @@ function OldConcept() { // http://ai.neocities.org/OldConcept.html
 
 
 function NewConcept() {  // http://ai.neocities.org/NewConcept.html
-  psi = nxt; // 2018-01-10: For xfer to InStantiate().
+  psi = nxt; // 2018-01-10: For xfer to Instantiate().
   qusub = nxt; // 2018-01-23: for sending new concept into SpreadAct()
-  pos = bias;  // 2018-01-23: InStantiate() stores value from Parser().
+  pos = bias;  // 2018-01-23: Instantiate() stores value from Parser().
   if (predflag == 1 && pos == 5) dba = 1;  // 2018-01-27: noun;
   if (pov == 2) {  // 2018-01-27: if new psi, probably external POV anyway;
     if (pos == 5) {  // 2018-01-27: if noun...
@@ -907,9 +923,9 @@ function NewConcept() {  // http://ai.neocities.org/NewConcept.html
   if (pos==5) num = audnum;  // 2018-01-27: pass for storage;
   if (pos==8) num = holdnum;  // 2018-01-27:
   if (pos==5) holdnum = audnum;  // 2018-01-27: transfer to verb.
-  EnParser();  // 2018-01-10: In preparation to call InStantiate().
+  EnParser();  // 2018-01-10: In preparation to call Instantiate().
   if (pos == 5) {  // 2018-01-27: if noun
-    cognum = instnum;  // 2018-01-27: from InStantiate;
+    cognum = instnum;  // 2018-01-27: from Instantiate;
     nucon = 1;  // 2018-01-27: for SpreadAct()
     qusub = psi;  // 2018-01-27: for SpreadAct()
     recon = 1;  // 2018-01-27:
@@ -1063,7 +1079,7 @@ function Attention() {
   freedom = false;
   if (skip < 1) {
     danger = true;
-    TID=window.setTimeout("SeCurity();",20000);
+    TID=window.setTimeout("Security('Attention');",20000);
     skip = skip+1;
   }
 }
@@ -1072,9 +1088,9 @@ function Attention() {
 function AudListen() {  // 2018-01-17: http://ai.neocities.org/AudListen.html
   apb = "Calling AudListen module; when done press [ENTER]";
   Voice();
-  pos = 0;  // 2018-01-21: Reset to prevent InStantiate() carry-over.
-  pre = 0;  // 2018-01-21: Reset to prevent InStantiate() carry-over.
-  psi = 0;  // 2018-01-21: Reset to prevent InStantiate() carry-over.
+  pos = 0;  // 2018-01-21: Reset to prevent Instantiate() carry-over.
+  pre = 0;  // 2018-01-21: Reset to prevent Instantiate() carry-over.
+  psi = 0;  // 2018-01-21: Reset to prevent Instantiate() carry-over.
   if (skip < 1) {
   Attention();
   }
@@ -1227,7 +1243,7 @@ function CR() {  // 2018-05-20: called from input Form if there is no input.
 function AudInput() {  // http://ai.neocities.org/AudInput.html
   iob = 0;  // 2018-01-21: reset indirect-object identifier for safety.
   spt = t;
-  tio = 0;  // 2018-01-21: reset at level above EnParser() and InStantiate()
+  tio = 0;  // 2018-01-21: reset at level above EnParser() and Instantiate()
   if (doa > 31) t = (t + 1); // 2018-01-17: TEST
   if (doa == 13) {  // 2018-01-17: intercept 13=CR for sake of AudRecog().
     t = (t + 1); // 2018-01-19: prevent dropping last character of word?
@@ -1273,9 +1289,9 @@ function AudInput() {  // http://ai.neocities.org/AudInput.html
     }  // end of test for positive len(gth); 14apr2013
   }
  }  // 2018-01-17: end of test for post-word SPACE.
-  pos = 0;  // 2018-01-21: Reset to prevent InStantiate() carry-over.
-  pre = 0;  // 2018-01-21: Reset to prevent InStantiate() carry-over.
-  psi = 0;  // 2018-01-21: Reset to prevent InStantiate() carry-over.
+  pos = 0;  // 2018-01-21: Reset to prevent Instantiate() carry-over.
+  pre = 0;  // 2018-01-21: Reset to prevent Instantiate() carry-over.
+  psi = 0;  // 2018-01-21: Reset to prevent Instantiate() carry-over.
   len = 0;
   onset = 0;
   predflag = 0;  // prevent carry-over; 5dec2012
@@ -1327,12 +1343,40 @@ function Sensorium() {  // http://ai.neocities.org/Sensorium.html
   tvb = 0;  // 2018-11-14: reset to prevent false tkb-values on verbs.
 }  // 2018-01-06: Sensorium() module returns to MainLoop.
 
+// sub for creativity
+function Creativity() {
+  // insert creativity code here;
+};
+
+// sub for imagination
+function Imagination() {
+  // insert imagination here;
+};
+
+// sub for awareness
+function Awareness() {
+  // insert awareness here;
+};
 
 function MindBoot() {  // http://ai.neocities.org/MindBoot.html
   dob = new Date();  // 2018-01-24: date-of-birth in competition for old AI.
+  Creativity();
+  Awareness();
+  Imagination();
+
   t=0
   HCI();  // 2018-01-18: Human-Computer Interface
   spt = t;    // 8dec2009
+
+  // INDRA
+  t++;pho="I"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
+  t++;pho="N"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
+  t++;pho="D"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
+  t++;pho="R"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
+  t++;pho="A"; audpsi=93; audMemory[t] = new audNode(pho,0,audpsi);
+  psi=93; pos=5; dba=1; num=1; mfn=1; pre=800; seq=0; tkb=0; rv=26; KbLoad();
+
+  t++;
 
   // I -- for SelfReferentialThought
   t++;pho="I"; audpsi=701; audMemory[t] = new audNode(pho,0,audpsi);
@@ -1342,16 +1386,6 @@ function MindBoot() {  // http://ai.neocities.org/MindBoot.html
   t++;pho="A"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
   t++;pho="M"; audpsi=800; audMemory[t] = new audNode(pho,0,audpsi);
   psi=800; pos=8; dba=1; num=1; mfn=0; pre=701;seq=501; tkb=30; rv=23; KbLoad();
-
-  t++;
-
-  // ANDRU -- for SelfReferentialThought
-  t++;pho="I"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-  t++;pho="N"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-  t++;pho="D"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-  t++;pho="R"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-  t++;pho="A"; audpsi=701; audMemory[t] = new audNode(pho,0,audpsi);
-  psi=701; pos=5; dba=1; num=1; mfn=1; pre=800; seq=0; tkb=0; rv=26; KbLoad();
 
   t++;
 
@@ -1693,8 +1727,11 @@ function MindBoot() {  // http://ai.neocities.org/MindBoot.html
   vault = t;  // 2018-07-12: dynamically calculated by incremental t++
   apb = "MindBoot: English bootstrap has loaded and now calling MainLoop()";
   Voice();
+
   document.forms[1].ear.focus();
-  MainLoop();
+
+  Security('MindBoot'); // 2021-01-11 added security check before initial MindLoop
+  MainLoop('MindBoot');
 }  // 2018-06-11: end of MindBoot English bootstrap; NewConcept() learns more words.
 
 
@@ -1736,7 +1773,7 @@ psyNode(psi0,psi1,psi2,psi3,psi4,psi5,psi6,psi7,psi8,psi9,psi10,psi11,psi12,(psi
     audMemory[j] = new audNode(" ",0," ");  // 2018-01-18: pho(neme); act; audpsi
     Psy[j] = new psyNode(" "," "," "," "," "," "," "," "," "," "," "," "," "," "," ");
   }  // 2018-10-12: end of sweep of memory beyond current time "t".
-}  // 2018-01-18: End of ReJuvenate(); return to SeCurity();
+}  // 2018-01-18: End of ReJuvenate(); return to Security();
 
 
 function ReEntry() {
@@ -1751,9 +1788,9 @@ function ReEntry() {
   if (pho == " ") { // 2018-01-15: If pho is a "space".
     AudInput();  // Re-entry into audition; 13jul2010
   }  // End of test for space-bar re-entry; 13jul2010
-  pos = 0;  // 2018-01-21: Reset to prevent InStantiate() carry-over.
-  pre = 0;  // 2018-01-21: Reset to prevent InStantiate() carry-over.
-  psi = 0;  // 2018-01-21: Reset to prevent InStantiate() carry-over.
+  pos = 0;  // 2018-01-21: Reset to prevent Instantiate() carry-over.
+  pre = 0;  // 2018-01-21: Reset to prevent Instantiate() carry-over.
+  psi = 0;  // 2018-01-21: Reset to prevent Instantiate() carry-over.
 }  // End of ReEntry(); return to SpeechAct().
 
 
@@ -3334,33 +3371,39 @@ function HCI() {  // http://mind.sourceforge.net/hci.html
   if (life == true) {
     document.forms[1].ear.focus();
   }
-}  // 2018-01-21: HCI() returns to SeCurity module.
+}  // 2018-01-21: HCI() returns to Security module.
 
+// 2021-01-14 - Sub in Medical FUNCTIONS
+function Medical(_state) {
 
-function SeCurity() {
+}
+
+function Security(_state) {
   HCI();  // 2018-01-18: Human Computer Interfact
-  if (t > 160)  nonce = vault;  // Diagnostic display of all thought.
-// nonce = 381;  // to view innate KB for testing; 19oct2012
-// nonce = 1;  // show changes being made to EnBoot; 25oct2012
-  nonce = vault;  // for quicker loading; 25oct2012
-  if (t > (cns-64)) ReJuvenate();
-  if (life == true) {
-    apb=("AI Mind at t="+t+" is alive on cyc #"+rjc+" since " +dob+ "."); // 2018-09-21
-    if (t > (cns-32)) {
-    apb = "WARNING!  Consider clicking Refresh. ";
-    apb += ("Only " + (cns-t) + " spaces are left.");
-  }
   Voice();
-  } else {
-    apb=("<font color='red'>"+"Mental function suspended."+"<\/font>");
-    Voice();
+  console.log('STATE: ', _state, 'PSI', psi);
+
+  if (t > (cns-64)) ReJuvenate();
+
+  if (t > 160)  nonce = vault;  // Diagnostic display of all thought.
+  nonce = vault;  // for quicker loading; 25oct2012
+
+  if (life == true) {
+    // build security protocols for monitoring active agents.
+    apb=`AI Mind at t${t} is alive on cyc #${rjc} since ${dob}`;
+    if (t > (cns-32)) apb = `WARNING!  Consider clicking Refresh. Only ${cns-t}`;
   }
+  else {
+    // monitor for dead ghosts
+    apb=("<font color='red'>"+"Mental function suspended."+"<\/font>");
+  }
+  Medical();
 }
 
 
 function MainLoop() {  // http://ai.neocities.org/MainLoop.html
   isolation++;  // 2018-10-03: increment incentive for Imperative()
-  SeCurity();
+  Security('MindLoop');
   Sensorium();  // 2018-01-18:
   brain = true;
   Volition(); // 2018-01-15: in conformance with modern ghost.pl AI

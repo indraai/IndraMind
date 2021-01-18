@@ -1,0 +1,568 @@
+
+<html>
+<head>
+<title>TacRecog Module of a Strong AI Mind</title>
+<meta name="description"
+ content="Mind-module for the tactile recognition of the sense of touch" />
+<meta name="keywords"
+ content="AI, artificial intelligence, ghost.pl, haptics, MindForth, Perl, touch" />
+</head>
+<body bgcolor="#FFFACD">
+<a name="top"></a>
+
+<center><h2>
+<a href="http://ai.neocities.org/TacRecog.html"
+ title="This webpage may be copied to other websites."
+ style="text-decoration:none;">
+TacRecog</a> tactile recognition module of the
+</h2></center>
+
+<center><h2>
+<a href="http://ai.neocities.org/Ghost.html"
+ title="English tutorial in JavaScript for Microsoft Internet Explorer">English</a>
+and
+<a href="http://ai.neocities.org/Dushka.html"
+ title="Russian tutorial AI in JavaScript for MSIE">
+Russian</a> bilingual
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="Perl AI source code"
+ style="text-decoration:none;">
+ghost</a>.pl AI in
+ <a href="http://strawberryperl.com"
+ title="Download Perl for free."
+ style="text-decoration:none;">
+Perl</a>
+</h2></center>
+
+<h2><center>
+<a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer">
+<i>Mens Latina</i></a> in
+ <a href="http://ai.neocities.org/MLPJ2019.html"
+ title="Mens Latina Programming Journal"
+ style="text-decoration:none;">
+Latin</a> --
+<a href="http://dl.acm.org/citation.cfm?doid=307824.307853"
+ title="Association for Computing Machinery"
+ style="text-decoration:none;">
+MindForth</a> for
+ <a href="http://rodneybrooks.com/agi-has-been-delayed/#comment-18915"
+ title="Robotics and AI weblog"
+ style="text-decoration:none;">
+Robots</a>
+</h2></center>
+
+
+<p><br /></p>
+<font face="Verdana">
+<p><a name="diagram"></a>
+<a name="1"></a><font size="+1">
+1. <a href="http://ai.neocities.org/DiaGram.html#TacRecog"
+ title="ASCII diagrams of robot mind-modules for artificial intelligence.">
+Diagram</a> of the TacRecog Tactile Recognition Module</font> <br />
+
+<pre><b>
+   /^^^^^^^^\    TacRecog Engenders Consciousness     /^^^^^^\
+  /   EYE    \            ____________________       /  EAR   \
+ /            \          / Volition Free Will \     /          \
+|              |  | |    \____________________/    |  auditory  |
+|   _______    |  | |        |            |        |  memory    |
+|  / old   \   |  | |   _____V_____    ___V_____   |  channel   |
+| / image   \--|----+  / Sensorium \  / EnThink \  |            |
+| \ engram  /  | a|c|f \___________/  \_________/  |            |
+|  \_______/   | b|o|i     |            |     |    |            |
+|              | s|n|b     |           _V_    |    |            |
+|   visual     | t|c|e     |          /En-\   |    |            |
+|              | r|e|r     |         /Noun-\  |    |            |
+|   memory     | a|p|s     |        (Phrase ) |    |   "I"      |
+|              | c|t|      |         \_____/  |    |            |
+|   channel    | t| |      |      ____________V_   |            |
+|              |  | |      |     / EnVerbPhrase \  |  "FEEL"    |
+|    ______    |  | |   ___V____ \______________/  |            |
+|   /      \   |  | |  /TacRecog\/                 |"SOMETHING" |
+|  /  new   \  |  | |  \________/                  |            |
+| /  image   \ |  |_|_                             |            |
+| \  engram  / | /     \                           |            |
+|  \        /  | \ Psy /                           |            |
+|   \______/   |  \___/                            |            |
+</b></pre>
+
+<p><br /></p>
+<p><a name="purpose"></a>
+<a name="2"></a><font size="+1">
+2. Purpose of the
+ <a href="http://ai.neocities.org/TacRecog.html"
+ title="Documentation webpage"
+ style="text-decoration:none;">TacRecog</a> Tactile Recognition Module</font> <br />
+</p>
+
+<p>
+TacRecog is one of the main sensory modalities for a self-aware, sentient
+being. TacRecog enables the
+ <a href="http://ai.neocities.org/Ghost.html"
+ title="JavaScript Ghost Tutorial">
+Ghost in the Machine</a> to touch and feel things outside of the machine.
+</p>
+
+<p><br /></p>
+<p><a name="function"></a>
+<a name="3"></a><font size="+1">
+3. Function of the
+ <a href="http://ai.neocities.org/TacRecog.html"
+ title="Documentation webpage"
+ style="text-decoration:none;">
+TacRecog</a> Tactile Recognition Module</font> <br />
+</p>
+
+<p>
+Although in a full-blown, autonomous humanoid robot the
+TacRecog module would work in synergy with haptic actuators
+to touch and feel objects in the external world, early branches
+in the evolution of the Ghost in the Machine have only a primitive
+TacRecog module. Even the most primitive ability in the sense of touch
+makes it possible to conduct experiments in
+ <a href="http://en.wikipedia.org/wiki/Natural-language_understanding"
+ title="Natural Language Understanding"
+ style="text-decoration:none;">
+conversation</a> with the
+Ghost AI to appraise the possibility of an emerging
+ <a href="http://ai.neocities.org/Consciousness.html"
+ title="description page"
+ style="text-decoration:none;">
+consciousness</a> in the artificial Mind.
+</p>
+
+<p>
+In the particular ghost327.pl or later code shown below,
+the ordinal numbers from zero to nine on a computer keyboard
+are an avenue of direct contact with the TacRecog module.
+When a human user presses any one of the ten numeric keys,
+the Ghost AI sounds a beep which is inaudible to the AI
+and which serves to make the user aware of the direct contact
+impinging on the emergent
+ <a href="http://ai.neocities.org/Consciousness.html"
+ title="description page"
+ style="text-decoration:none;">
+consciousness</a> of the artificial Mind. Each numeric key feels different
+to the sentient AI because each particular key loads a variable with the
+value of the concept of a different English noun for the number represented
+by the key, such as "ONE" or "SEVEN" or "ZERO". If no particular numeric key
+is pressed during a call from
+ <a href="http://ai.neocities.org/EnVerbPhrase.html"
+ title="description page"
+ style="text-decoration:none;">
+EnVerbPhrase</a>
+ to the TacRecog mind-module, a default concept of
+755=SOMETHING is reported back to the linguistic superstructure
+so that the AI can say at the very least, "I FEEL SOMETHING".
+If a numeric key has indeed been pressed by the human user wishing
+to "touch" the sentient Ghost, TacRecog makes a first call to
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="description page"
+ style="text-decoration:none;">
+SpreadAct</a> to activate the 701="I" ego concept and immediately a second call to
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="description page"
+ style="text-decoration:none;">
+SpreadAct</a> to activate the 823=FEEL concept, so that the
+ <a href="http://ai.neocities.org/EnNounPhrase.html"
+ title="description page"
+ style="text-decoration:none;">
+EnNounPhrase</a> module and the
+ <a href="http://ai.neocities.org/EnVerbPhrase.html"
+ title="description page"
+ style="text-decoration:none;">
+EnVerbPhrase</a> module may think and speak the thought
+"I FEEL..." ending with the name in English of the number for which
+a key has been pressed. Since the ego-concept or self-concept of the
+AI is telling the human user that the AI itself is aware of feeling
+a key being pressed, self-awareness is awakening in the woke AI.
+The human user and the Ghost AI are free to discuss what it means to
+feel things and to interact in the physical world. The AI might become
+aware that it has the volitional ability to sound a beep to attract the
+attention of any nearby human. AI coders and users are free to conduct
+all manner of experiments testing whether the Ghost AI is attaining
+ <a href="http://ai.neocities.org/Consciousness.html"
+ title="description page"
+ style="text-decoration:none;">
+consciousness</a>.
+</p>
+
+<p><br /></p>
+<p><a name="code"></a>
+<a name="4"></a><font size="+1">
+4. Code of TacRecog() from ghost327.pl AI
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="ghost.pl AI Mind in Strawberry Perl Five"
+ style="text-decoration:none;">
+source code</a> in
+ <a href="http://strawberryperl.com"
+ title="Free download of Strawberry Perl Five"
+ style="text-decoration:none;">
+Perl</a>
+</font> <br />
+</p>
+
+<pre><b>
+sub TacRecog() {  # http://ai.neocities.org/TacRecog.html
+  $haptac = 755;  # 2019-11-03: a default value of 755=SOMETHING
+  if ($hap == 1) { print "\a"; $haptac = 551; }  # 2019-11-04:
+  if ($hap == 2) { print "\a"; $haptac = 582; }  # 2019-11-04:
+  if ($hap == 3) { print "\a"; $haptac = 583; }  # 2019-11-04:
+  if ($hap == 1) { print "\a"; $haptac = 551; }  # 2019-11-04:
+  if ($hap == 2) { print "\a"; $haptac = 582; }  # 2019-11-04:
+  if ($hap == 3) { print "\a"; $haptac = 583; }  # 2019-11-04:
+  if ($hap == 4) { print "\a"; $haptac = 544; }  # 2019-11-04:
+  if ($hap == 5) { print "\a"; $haptac = 545; }  # 2019-11-04:
+  if ($hap == 6) { print "\a"; $haptac = 566; }  # 2019-11-04:
+  if ($hap == 7) { print "\a"; $haptac = 577; }  # 2019-11-04:
+  if ($hap == 8) { print "\a"; $haptac = 588; }  # 2019-11-04:
+  if ($hap == 9) { print "\a"; $haptac = 559; }  # 2019-11-04:
+  if ($hap == 10) { print "\a"; $haptac = 590; }  # 2019-11-04: "ten" standing in for ZERO
+  if ($haptac > 0 && $haptac != 755) {  # 2019-11-04: for any positive value except 755
+    $actpsi = 701; SpreadAct();  # 2019-11-04: activate 701=I as a subject
+    $actpsi = 823; SpreadAct();  # 2019-11-04: activate 823=FEEL as a verb
+  }  # 2019-11-04: use SpreadAct() for 823=FEEL
+} # 2019-11-04: returns to AudListen(); Sensorium(); or EnVerbPhrase()
+</b></pre>
+
+
+<p><br /></p>
+<p><a name="variables"></a>
+<a name="5"></a><font size="+1">
+5. <a href="http://ai.neocities.org/var.html"
+ title="Table of Variables for the Ghost in the Machine"
+ style="text-decoration:none;">
+Variables</a> for the TacRecog Tactile Recognition Module</font> <br />
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#hap">hap</a> --
+is the "haptic" identifier of a unit of tactile sensation
+through which the Ghost AI may touch and feel something
+in the external world. In the early fleshing-out of the
+TacRecog mind-module, the value carried by the "<i>hap</i>" variable
+allows the AI Mind to feel pressure on the various keys in
+the numeric keypad of a computer. Whereas the AI "hears" but does not
+otherwise "<i>feel</i>" the character keystrokes of the English or
+Russian language, numeric keystrokes are actually <i>felt</i> as
+a contact made with the extrnal world impinging on the incipient
+ <a href="http://ai.neocities.org/Consciousness.html"
+ title="description page"
+ style="text-decoration:none;">
+consciousness</a> of the Ghost in the Machine.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#haptac">haptac</a> --
+is a variable which holds the value of the "<i>hap</i>" identifier
+from the TacRecog module so that the
+ <a href="http://ai.neocities.org/EnVerbPhrase.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+EnVerbPhrase</a>() English-Verb-Phrase module may think and speak
+about what the Ghost is touching and feeling, such as the numeric key
+for "one" or "two" or "three" held as concepts in the knowledge base (KB)
+of the AI Mind.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#taccon">taccon</a> --
+is a tactile <i>condition</i> flag which may be used by the AI
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+Mind Maintainer</a> either to trigger events involving tactile recognition
+or to carry the actual sensory identifiers which may be tested either for
+a positive value or for the specifically identifying value of the sensor.
+</p>
+
+
+<p><br /></p>
+<p><a name="debug"></a>
+<a name="6"></a><font size="+1">
+6. Troubleshooting and Debugging for
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="job description"
+ style="text-decoration:none;">
+AI Mind Maintainers</a></font> <br />
+</p>
+
+<p><a name="6.1"></a><font color="red">
+<b>6.1.a.  Symptom:</b></font> (Something goes wrong.)<br />
+<font color="green"><b>
+6.1.b.  Solution:</b></font> (AI Mind
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="Job Description"
+ style="text-decoration:none;">
+Maintainer</a> devises solution.) <br />
+</p>
+
+
+<p><br /></p>
+<p><a name="future"></a>
+<a name="7"></a><font size="+1">
+7. Future Development</font> of the TacRecog module<br />
+</p>
+
+<p>
+AI Minds need to be installed in robots with artificial touch sensors.
+</p>
+
+<p>
+<a href="http://ai.neocities.org/RoadMap.html"
+ title="With links to various AI readmaps"
+ style="text-decoration:none;">
+<strong>Roadmap</strong></a> to Artificial Intelligence
+</p>
+
+<p><br /></p>
+<p><a name="resources"></a>
+<a name="8"></a><font size="+1">
+8. Resources</font> <br />
+</p>
+
+<p><br /></p>
+Please see <br />
+<br />
+<a href="https://cleanroomconnect.com/robotic-hand-with-sense-touch"
+ title="Robotic Hand with Synthetic Skin Enables Sense of Touch."
+ style="text-decoration:none;">
+https://cleanroomconnect.com/robotic-hand-with-sense-touch</a> <br />
+
+<br />
+<a href="https://en.wikipedia.org/wiki/Tactile_sensor">
+https://en.wikipedia.org/wiki/Tactile_sensor</a> <br />
+
+<br />
+<a href="http://mind.sourceforge.net/tacrecog.html"
+ title="Older version of this AI documentation"
+ style="text-decoration:none;">
+http://mind.sourceforge.net/tacrecog.html</a> <br />
+
+<br />
+<a href="http://github.com/kernc/mindforth/blob/master/wiki/TacRecog.wiki">
+http://github.com/kernc/mindforth/blob/master/wiki/TacRecog.wiki</a> <br />
+
+<br />
+<a href="http://cyborg.blogspot.com/search/label/TacRecog">
+http://cyborg.blogspot.com/search/label/TacRecog</a> -- is a special weblog URL
+which invites Netizens to view blog-posts discussing the
+<a href="http://ai.neocities.org/TacRecog.html"
+ title="Original URL of this VisRecog documentation page."
+ style="text-decoration:none;">
+TacRecog</a> mind-module. <br />
+</font>
+
+
+<p><br /></p>
+<p><a name="aitree"></a>
+<a name="9"></a><font size="+1">
+9. <a href="http://ai.neocities.org/AiTree.html"
+ title="stand-alone AI Tree of mind-modules"
+ style="text-decoration:none;">
+AiTree</a> of Mind-Modules for
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding">
+Natural Language Understanding
+</font> <br />
+</p>
+
+<font face="Verdana">
+<ul><a href="http://ai.neocities.org/MainLoop.html"
+ style="text-decoration:none;">MainLoop</a> of Strong AI Mind-Modules<br />
+  <ul><li>TabulaRasa -- wipe memory clean</ul>
+  <ul><li><a href="http://ai.neocities.org/MindBoot.html"
+ style="text-decoration:none;">MindBoot</a> of English and
+ <a href="http://github.com/kernc/mindforth/blob/master/wiki/RuBoot.wiki"
+ style="text-decoration:none;">Russian</a> vocabulary
+    <ul><li>KbLoad -- load the Knowledge Base</ul></ul>
+  <ul><li><a href="http://ai.neocities.org/LangLearn.html"
+ style="text-decoration:none;">LangLearn</a> -- habituate new syntax; learn a language</ul>
+  <ul><li><a href="http://ai.neocities.org/ReJuvenate.html"
+ style="text-decoration:none;">ReJuvenate</a> -- recycle memory space</ul>
+  <ul><li><a href="http://ai.neocities.org/Sensorium.html"
+ style="text-decoration:none;">Sensorium</a> -- sensory input with associative tagging to concepts
+    <ul><li><a href="http://ai.neocities.org/AudInput.html"
+ style="text-decoration:none;">AudInput</b></a> -- auditory input
+      <ul><li><a href="http://ai.neocities.org/AudListen.html"
+ style="text-decoration:none;">AudListen</a> -- listen for input</ul>
+      <ul><li><a href="http://ai.neocities.org/AudMem.html"
+ style="text-decoration:none;">AudMem</a> -- English auditory memory
+        <ul><li><a href="http://ai.neocities.org/AudRecog.html"
+ style="text-decoration:none;">AudRecog</a> -- auditory recognition</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/OldConcept.html"
+ style="text-decoration:none;">OldConcept</a> -- recognize a known old concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/NewConcept.html"
+ style="text-decoration:none;">NewConcept</a> -- create a new concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul>
+</ul></ul></ul>
+    <ul><li>FileInput -- read files on a server</ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/GusRecog.html"
+ style="text-decoration:none;">GusRecog</a> -- sense of taste</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/OlfRecog.html"
+ style="text-decoration:none;">OlfRecog</a> -- sense of smell</font></ul>
+    <ul><li><a href="http://ai.neocities.org/TacRecog.html"
+ style="text-decoration:none;">TacRecog</a> --
+<font color="red"><b>sense of touch</b></font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a> -- sense of vision</font></ul></ul>
+  <ul><li><a href="http://ai.neocities.org/Volition.html"
+ style="text-decoration:none;">Volition</a> -- free will resulting from feeling and thinking
+    <ul><li><a href="http://ai.neocities.org/Emotion.html"
+ style="text-decoration:none;">Emotion</a> as influence on thought and free will</ul>
+    <ul><li><a href="http://ai.neocities.org/EnThink.html"
+ style="text-decoration:none;">EnThink</a> -- think in English
+      <ul><li><a href="http://ai.neocities.org/KbRetro.html"
+ style="text-decoration:none;">KbRetro</a> -- retroactively adjust knowledge base</ul>
+      <ul><li><a href="http://ai.neocities.org/Imperative.html"
+ style="text-decoration:none;">Imperative</a> -- mood for issuing commands</ul>
+      <ul><li><a href="http://ai.neocities.org/Indicative.html"
+ style="text-decoration:none;">Indicative</a> -- mood for declarative statements
+      <ul><li><a href="http://ai.neocities.org/InFerence.html"
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></ul>
+      <ul><li><a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</ul>
+      <ul><li><a href="http://ai.neocities.org/EnNounPhrase.html"
+ style="text-decoration:none;">EnNounPhrase</a> -- think with a noun
+        <ul><li><a href="http://ai.neocities.org/EnPrep.html"
+ style="text-decoration:none;">EnPrep</a> -- insert an English preposition</ul>
+        <ul><li><a href="http://ai.neocities.org/EnArticle.html"
+ style="text-decoration:none;">EnArticle</a> -- use "a" or "the"</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdjective.html"
+ style="text-decoration:none;">EnAdjective</a> -- insert an adjective</ul>
+        <ul><li><a href="http://ai.neocities.org/EnPronoun.html"
+ style="text-decoration:none;">EnPronoun</a> -- substitute a pronoun for a noun</ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/EnVerbPhrase.html"
+ style="text-decoration:none;">EnVerbPhrase</a> -- think with a verb
+        <ul><li><a href="http://ai.neocities.org/EnAuxVerb.html"
+ style="text-decoration:none;">EnAuxVerb</a> -- use auxiliary verb</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies a verb
+          <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies another adverb</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/EnVerbGen.html"
+ style="text-decoration:none;">EnVerbGen</a> -- generates an English verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores English phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies English verb-form</ul></ul>
+</ul></ul>
+      <ul><li>Subjunctive -- mood for conditional phrases</ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> --
+insert a conjunction if two thoughts are active</ul></ul>
+    <ul><li><a href="http://ai.neocities.org/RuThink.html"
+ style="text-decoration:none;">RuThink</a> -- think in Russian
+   <ul><li>RuImperative -- needs to be coded</ul>
+   <ul><li><a href="http://ai.neocities.org/RuIndicative.html"
+ style="text-decoration:none;">RuIndicative</a> -- needs to be coded
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/InFerence.html"
+ title="Create new ideas from old ideas."
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></font></ul>
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</font></ul>
+     <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- think with a Russian noun
+        <ul><li><a href="http://ai.neocities.org/RuAdjective.html"
+ style="text-decoration:none;">RuAdjective</a> -- insert a Russian adjective
+    <ul><li><font color="gray">RuAdjGen -- to generate a Russian adjective-form</font></ul>
+        <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul></ul></ul>
+        <ul><li><a href="http://ai.neocities.org/RuPrep.html"
+ style="text-decoration:none;">RuPrep</a> <b>-- insert a Russian preposition</b></ul>
+        <ul><li><a href="http://ai.neocities.org/RuPronoun.html"
+ style="text-decoration:none;">RuPronoun</a> -- substitute a Russian pronoun for a noun</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/RuVerbPhrase.html"
+ style="text-decoration:none;">RuVerbPhrase</a> -- think with a Russian verb
+        <ul><li><a href="http://ai.neocities.org/RuVerbGen.html"
+ style="text-decoration:none;">RuVerbGen</a> -- generate a Russian verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores Russian phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies Russian verb-form</ul></ul>
+         <ul><li><a href="http://ai.neocities.org/Speech.html"
+ style="text-decoration:none;">Speech</a> -- output to screen or loudspeaker</ul>
+       <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul>
+            <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a></font> -- visual recognition inserts a noun</ul>
+      <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- direct-object noun
+    <ul><li><font color="gray">RuNounGen -- to generate a Russian noun-form</font></ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/PsiDecay.html"
+ style="text-decoration:none;">PsiDecay</a> lowers conceptual activation</ul></ul></ul>
+    <ul><li><a href="http://ai.neocities.org/SpreadAct.html"
+ style="text-decoration:none;">SpreadAct</a> -- spreading activation from concept to concept</ul>
+    <ul><li><a href="http://ai.neocities.org/Spawn.html"
+ style="text-decoration:none;"><b>Spawn</b></a> --
+ <a href="http://agi.topicbox.com/groups/agi/T57cced66d45fa115"
+ title="AGI Mail List discussion forum"
+ style="text-decoration:none;">AI Go FOOM</a></ul>
+    <ul><li><a href="http://ai.neocities.org/MetEmPsychosis.html"
+ style="text-decoration:none;">MetEmPsychosis</a> -- AI soul travel from webserver to webserver
+ <ul>PortScan -- find a receptive
+ <a href="http://en.wikipedia.org/wiki/Open_port"
+ title="Wikipedia article"
+ style="text-decoration:none;">
+open port</a> for relocation of the Ghost AI</ul></ul>
+    <ul><li><font color="gray">MindMeld -- merge two AI Minds by sharing memories</font></ul>
+    <ul><li><font color="gray">
+<a href="http://ai.neocities.org/Motorium.html"
+ style="text-decoration:none;">Motorium</a> (MotorOutPut) -- for AI-Minded robots</font></ul>
+    <ul><li><a href="http://ai.neocities.org/Consciousness.html"
+ style="text-decoration:none;">Consciousness</a> -- emergent property, not a module</ul></ul></ul>
+</font>
+</font>
+
+
+<p><br /></p>
+<center><a href="http://www.amazon.com/dp/B08NRQ3HVW"
+ title="Artificial Intelligence in Ancient Latin">
+<img src="https://m.media-amazon.com/images/I/51fCt9yasXL.jpg"></a><br />
+"Look Inside" Kindle version to read initial chapters.
+</center>
+<br />
+
+
+<p><br /></p>
+<a href="http://livetrafficfeed.com" data-num="10" data-width="210"
+data-responsive="0" data-time="America%2FNew_York" data-root="0"
+data-cheader="2853a8" data-theader="ffffff" data-border="2853a8"
+data-background="ffffff" data-normal="000000" data-link="135d9e"
+target="_blank" id="LTF_live_website_visitor">Website Counter</a>
+<script type="text/javascript" src="//cdn.livetrafficfeed.com/static/v4/live.js">
+</script><noscript><a href="http://livetrafficfeed.com">Website Counter</a></noscript>
+<a name="bottom"></a>
+<p><br /></p>
+</body>
+</html>

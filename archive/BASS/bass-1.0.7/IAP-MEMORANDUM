@@ -1,0 +1,1292 @@
+Sat Aug  7 07:14:09 IDT 1999
+
+The Internet Auditing Project (beta 1)
+======================================
+
+=== Introduction
+
+Today, when too many people think of security on the Internet, they think
+of individual hosts and networks. Alone. Got a problem? Damn! Must
+be those damn hacker punks. Again. Keep it to yourself. Call the Feds,
+call the New York Times. Make sure we don't get it. Didn't keep
+your systems patched? Moron. Don't make us sue you.
+
+With the growing irrelevance of security organizations like CERT and
+law enforcement on the Internet, an ever growing number of attacks are
+handled in isolation.
+
+Hundreds of millions of Internet users around the world have become
+accustomed to an Internet beyond boundaries.  One site flows to the
+next, a jungle of software, protocols, media and people connecting,
+signal, noise, mixing, evolving, together.
+
+It seems silly to ignore the security of the system _as a whole_, but
+we still do. A helpful analogy might be to consider the Internet more
+a living organism then a neighborhood. A security compromise is
+can behave more like a disease then a "breakin". It is often contagious, and
+can spread. Remotely exploitable security vulnerabilities are like
+the natural wounds of the skin. They are relatively rare, sometimes
+difficult to squirm through, but once inside, infection can begin.
+
+This article describes the efforts of a small, independent,
+security research group to audit some 36 million hosts connected
+to the Internet, for commonly known security vulnerabilities
+in an unfocused low-res scan.
+
+=== Why?
+
+Because we're a curious bunch, because we've been speculating 
+(rather academicly) over the results for several years, and of course,
+because we can.
+
+=== Why are we publishing now, Why haven't we published before?
+
+We know other groups, working for everyone from the UKUSA SIGINT agencies,
+foreign intelligence, private corporations and organized crime
+are not likely, for many obvious reasons, to disclose any "privileged
+information" to the general public. We feel this is not A Good Thing, and
+would like to do what we can to help level the playing field. We don't
+have any money, resources or academic prestige to back us up, but we
+do have a few, humble insights to share, and we hope these can speak for
+themselves.
+
+Besides, wouldn't it be a shame to keep all of our busy work to ourselves,
+when it could be reaching a much wider audience, spark debate, and
+maybe even making a difference?
+
+Up until now, a couple of issues have held us back. First of all,
+the timeless responsibility factor. We could not avoid the possibility
+(certainty?) that our work would be abused by malicious parties
+and we've all seen before how easy it is for people to point the finger.
+
+Secondly, we've been busy and publishing involves a significant
+investment in time writing articles, cleaning code, reaching the
+potential audience and reading (sometimes answering) endless e-mails.
+
+=== Walk forth in dread
+
+So you want to scan the millions of computers on the Internet from
+Japan to Egypt to Florida? Reach out and audit the networks of Internet Service
+Providers, corporations, universities, government facilities, banks and
+sensitive military installations?
+
+First, take another moment to think about it.
+
+Many people get nervous on the receiving end of an uninvited security
+audit, and you'll eventually step on quite a few toes. In some
+countries, you can even expect unpleasant house-calls from local law
+enforcement which will brand you a criminal for your unusual
+efforts. Citizens of a large democracy with many three letter agencies
+should be aware that a fully-equipped SWAT team is likely to tag
+along.
+
+While this may deter, possibly comfort law-abiding readers, a criminally
+inclined party is not without it's options. Resources are abundant
+on the Internet, and many suitable, unsuspecting, high-bandwidth volunteers
+are not hard to find, with the modest help of your favorite bulk auditing
+software.
+
+Not intimidated? That's the spirit!
+
+=== Quick & Dirty Overview
+
+Let's take a look at some of the basic ingredients we're going
+to need:
+
+1) Some wheels. (BASS, a Bulk Auditing Security Scanner)
+2) A map. (address search space)
+3) Fuel. (resources)
+
+Although they are not required, logistical management skills, competence
+and patience can also come in real handy.
+
+=== Wheels
+
+The Internet is getting rather big these days, and exploring it's
+tens of millions of unique hosts is by no means an easy task. 
+Manually, we could never get the job done. Fortunately, we can
+let a computer (or several) do most of the dirty work, allowing us to
+concentrate on coordination and management.
+
+Assuming of course, we have the right software. In this case, we're
+going to need a robust bulk security scanner that can monotonicly run
+for weeks, even months at a time, efficiently processing millions of addresses,
+generating gigabytes of traffic and surviving everything from broken routing,
+to system shutdowns and unfriendly sysadmins.
+
+Since we've never liked re-inventing the wheel, the first thing we did,
+(circa Sep 1998) was take a look at existing scanning software. 
+
+We were disappointed. There was no shortage of software, from
+Satan, to Nessus, with a jungle of (often silly) cracker tools in
+between, but none of them would do. Nessus was impressive, but clearly
+not designed with bulk in mind. Most of the rest were unreliable, poorly
+written, slow and inextensible. Primitive, specialized scanners (foobar-scan)
+were also common, and equally useless.
+
+So, it looked like we'd need to write "Yet Another Security
+Scanner" ourselves. 
+
+During development, we were careful not to complicate the design
+and code any more then we had to, aware of the many virtues of
+simplicity (especially in security software). Our goal was producing
+a scanner which was reliable, efficient and extensible.
+
+After a several weeks of on-off programming, the first alpha version
+of BASS, the Bulk Auditing Security Scanner was ready for it's first
+test run. Israel was the first target in a series of trials.
+
+At this point (Sep-Oct 98) BASS could only identify 4 common
+security vulnerabilities, but adding more later was a simple
+matter. What we really needed to evaluate was how well the
+multi-threaded scanning architecture worked.
+
+"beware the bugs that bite beta programs"
+
+It didn't. Even with a small target like Israel, the scan came to a
+final halt after about 18,000 addresses. It seemed threads would
+occasionally freeze, waiting for service from a host they knew was
+online, but behind a misconfigured firewall, or a broken router. The
+frozen threads were rare but persistent. They would build up in BASS's
+scheduler over time, eventually choking the scanner to a grinding halt.
+
+A fail-safe timeout circuit fixed the problem, and we tried again.
+This time, the scan finished on schedule. 110,000 addresses in under 4 hours,
+on a dual ISDN 128k connection. 
+
+We selected the United Kingdom, with an address space of 1.4 million,
+for our next trial. If there were any further bugs, they were going to
+show, and they did. Around a million UK addresses later, BASS broke
+down and was dragging the entire system down with it. This time, several
+obscure memory leaks had slowly inflated BASS to monstrous
+proportions, consuming all available system memory. Several further
+painful debugging sessions were needed to bring the scanner up to par,
+during which 5 million addresses around the world had been scanned.
+
+Now that the architecture was stable, we proceeded to familiarizing
+BASS with the wonders of CGI and RPC, allowing the scanner to test for
+up to 18 widely known security vulnerabilities (see detailed listing
+in suffix item 1). The tests were designed to reduce false positives and
+false negatives to a minimum, combining passive (server's version header) and
+interactive (server's response to ill-formed input: a buffer-overflow,
+sneaky characters) implementation signatures to determine vulnerability.
+
+So now we could sit back, feed BASS a really big map of the Internet,
+and wait a few months (or weeks, depending on our resources) for results.
+
+=== A map
+
+- A map you say?
+
+Yeah, well what I really mean is a really long list of "all" the
+computers connected to the Internet. Please note the term "all" is used 
+loosely ("most" or the "majority" would probably be more accurate).
+
+- How many of them are there anyway?
+
+Reader, that's a tougher question then you might think.
+
+An Internet Protocol address, or IP for short, is a 32 bit integer.
+This means are there 2^32 (4.3 billion) possible unique IPs,
+the IP address space. In practice, only a very small fraction of this
+space is really used.
+
+Due to the anarchic nature of the Internet, nobody has any exact
+figures on usage statistics, but most estimates (circa Jan 1999)
+settle around 100 million users worldwide. The number of computers
+online is more around an order of a magnitude lower (15 million). This
+is because most users still access the Internet dynamicly, by dialup,
+over phone lines. ISPs (Internet Service Providers) can often manage to
+provide service with an address pool 4 to 10 times smaller then their
+customer base.
+
+Ideally, since BASS is (currently) Unix oriented, we would like
+to eliminate any non-unix computers (not that non-unix's are any more
+secure, quite the contrary) from our Really Big List. We would also want
+to skip any dynamic IP pools. In a perfect world, this would be a
+good idea. In ours, eliminating poor scanning candidates in advance
+would actually take longer then the scan itself. Optimizing a scan this way
+is only useful if you plan on repeating it frequently.
+
+- I'm confused, how many IPs are we going to end up scanning?
+
+That depends,..
+
+In our case, we ended up scanning around 36 million IPs, which we estimates
+covered 85 percent of the active address space at the time.
+
+Keep in mind, however, that the Internet is growing very quickly,
+so these numbers will get bigger by the time you try this out yourself.
+Search for "Internet Surveys" on the web, and get an updated
+figure.
+
+- Wait, what's with the 85 percent?
+
+Calm down, mapping the entire used IP space is nearly impossible,
+even assuming you can agree with anyone else (try Usenet folks first!)
+on what "used" should mean. The main problem is using an IP is an internal
+decision organizations with an allocated slice of the address space
+makes for themselves. All those slices add up to 300 million IP addresses,
+of which only 5 percent have a computer at the other end, so we need
+to narrow down our search space.
+
+This is where the Domain Name System (DNS) comes to the rescue.
+The DNS is a tree structured lookup directory used (primarily) to map
+a hostname to an IP and vice-versa (www.nsa.gov <=>
+208.212.172.33). By convention, most of the Internet's active
+addresses are registered with the DNS, although this is a not a mandatory
+requirement.
+
+- So we can just download the DNS's records from the Internet?
+
+Yes, and no. The DNS protocol has an "AXFR zone transfer" mechanism
+designed to allow one DNS server to mirror the contents of another, by
+requesting an AXFR zone transfer, you can download a server's records. This
+is helpful in providing for redundant backups, should the primary
+server fail. Unfortunately, since the DNS is a distributed system, we
+can't just download it's complete contents from any central authority.
+
+To make matters worse, many DNS servers nowadays (40 percent) refuse
+zone transfer requests, due to several (misunderstood) concerns over
+it's security implications.
+
+- Sounds rough.
+
+Well if you're going the do-it-yourself way, it's not going to be easy,
+but isn't as difficult as it sounds.
+
+Let's take a look at some of our options
+(If you aren't the do-it-yourself type, skip to item 4):
+
+1) A top - down recursive download of the DNS.
+
+   Using the DNS protocol's AXFR zone-transfer mechanism it is possible to
+   recursively download the DNS's contents one zone at a time.
+   In practice however, this method is usually reserved for mapping
+   a known target that has not explicitly restricted zone-transfers.
+
+   Trying to map the DNS this way has the disadvantage of being slow,
+   unreliable and incomplete.
+
+   A description of process is available in RFC1296.
+
+2) Exploiting in-addr.arpa.
+
+   We start off by recursively downloading the DNS's relatively small
+   in-addr.arpa. domain. This will give us the allocated address
+   space (300 million IPs). Most of the active addresses (the ones we want)
+   in this space will have a PTR record somewhere in the in-addr.arpa domain.
+   (so they can be mapped in reverse from IP numbers to hostnames). Many
+   Internet protocols and applications rely on this pointer, by convention, so 
+   it is not likely to be absent on purpose. Unless the address isn't 
+   being used, of course, but we don't want any of those anyway. 
+   By checking to see which IPs in the allocated address space have a 
+   pointer in the in-addra.arpa. domain, we can narrow down the search 
+   space to about 13 percent (45 million IPs).
+
+   This process demonstrates that the ever popular practice of blocking
+   zone-transfers will not hide a network's topology. People relying
+   on this method to obscure their security problems are begging for
+   trouble.
+  
+   BTW, 'Network Wizards' are doing their Internet Survey this way,
+   since the beginning of 1998, check them out.
+   (http://www.nw.com/)
+
+   The job is likely to take between a week, and a month (or several),
+   depending on how much available bandwidth you have, and the quality
+   of the software your using to get it done.
+
+3) Scavenging Network Information Centers for pre-compiled lists.
+
+   It turns out some NICs have precompiled data files available over
+   anonymous FTP. Getting the data this way is much easier, faster and
+   more reliable then slowly milking the DNS through the traditional
+   AXFR zone-transfer protocol.
+
+   As of Nov 1998, RIPE (ftp.ripe.net) was offering raw output files from
+   it's recursive hostcount (Covering Europe, Russia and others. 98 countries
+   in total) for download at ftp://ftp.ripe.net/ripe/hostcount.
+
+   Update: On the 01/02/1999 they restricted anonymous FTP access to the raw
+           hostcount output files. You now have to either convince RIPE
+           you really need them at hostcount@ripe.net (for saving the world,
+           no less) or grab them at one of RIPE's many mirrors.
+
+   Network Wizards, the guys doing the Internet Survey, offer (some) of the raw
+   data from their older surveys, up to 1997, at
+   "http://www.isc.org/ISC_HTML/domainsurvey/archive-data/".
+
+   ARIN (http://www.arin.net), the American Registry for Internet Numbers,
+   is an interesting site to look into. While your reading exciting
+   new number policies, grab ftp.arin.net/domain/inaddr.zone over anonymous
+   FTP. (doing a zone-transfer take's so much longer)
+   
+   There are hundreds of NICs, structured hierarchicly. Search
+   the web for "Network Information Centers", and you'll find quite a few.
+   APNIC (Asian Pacific) and JPNIC (Japan's NIC at NIC.ad.jp) are two you
+   should really look into.
+
+   Then there's InterNIC, run by Network Solutions (NSI, the "dot com" guys),
+   in charge of the root servers, ([A-M].ROOT-SERVERS.NET), at the root
+   of Internet's DNS, all the three letter top level domains (com, net,
+   org, edu, gov and mil) and the top level in-addr.arpa. domain (for reverse
+   lookups). InterNIC is the closest thing the Internet has to a central
+   authority on anything, and is currently being run as a lucrative
+   for-profit US-government sanctioned monopoly. InterNIC no longer
+   provides anonymous FTP access to most of it's DNS records, with the
+   exception of the top-level in-addr.arpa. domain, stating it is trying
+   to prevent spammers and squatters (domain name speculators) from
+   abusing the DNS. As such, InterNIC will only offer FTP
+   access to "organizations that can demonstrate a technical need for
+   the information". 
+
+   Fortunately, the information is already out there, available on several  
+   anonymous FTP sites hosted by InterNIC affiliates (government, military,
+   educational,. etc) who share it's records, but do not enforce it's
+   censorship policies.
+
+   Personally, we downloaded the top level .com, .net, .org, .edu, .mil and
+   .gov domains from ftp.nic.mil (the first NIC we tried) several minutes
+   after a disappointing encounter with an almost empty 'domains' directory
+   at ftp.internic.net. (Update: ftp.nic.mil no longer
+   provides these records over anon FTP)
+
+4) The Greener Path
+
+   The Internet Software Consortium (http://www.isc.org), of the
+   bi-annual "Internet Survey", is offering it's raw data sets for resale
+   through MIDS, Matrix Information and Directory Services
+   (http://www.mids.org) at $2500.
+
+   Frankly, shelling the green is alot easier, faster and even less expensive
+   then trying to compile the data yourself, especially if you don't
+   already have the software, expertise and bandwidth to pull it off.
+
+- What about you guys? What did you do?
+
+We like banging our heads against the wall, so we went down the
+slippery do-it-yourself path.
+
+We started off by learning as much as we could about the DNS, reading
+any RFCs that were relevant to the protocol, browsed through the
+documentation of it's most popular implementation "BIND", downloaded a
+zoo of freely available DNS utilities from the major FTP sites and
+read lots of source code.
+
+Eventually we ended up hacking a couple of popular DNS utilities,
+wrote way too many ugly shell scripts, C application wrappers, and
+some pretty silly Perl filters, mixing alot of method 3 (scavenging),
+2 (in-addr.arpa.) and just a bit of 1 (vanilla zone-transfers).
+
+If you have any good sense, you'll do otherwise.
+
+=== Fuel
+
+Swarming the Internet with probes requires some resources, bandwidth
+mostly. How much of it you need depends on how flexible your schedule
+is. Generally speaking, You're likely to find you need a lot less of it
+then you might first imagine.
+
+The good news is that scans are easy to parallelize, so you can divide
+the load over as many different computers and networks as you have access to,
+to either get the scan finished faster, or to consume fewer resources
+from each participating scanning node. This is similar logisticly
+to the distributed computing effort used to break a cryptographic
+key challenge. The difference is that our effort consumes network
+bandwidth instead of CPU cycles, and is much much easier.
+
+How much easier? (Assuming a search space of 40 million IPs...)
+
+One workstation running BASS, with enough memory (to 
+support hundreds of scanning threads), and a T3's equivalence in bandwidth,
+could probe the entire Internet in under a week at about 4500 JPM.
+(Jobs Per Minute, the scanner's schedule goal, set on the command line
+at the beginning of a scanning session, or during recovery).
+
+At the other extreme, a small disperse group, running BASS on 10
+personal computers with dailup-strength connections, could probe
+the entire Internet in a month or so at a modest 90 JPM each. (around
+2 kilobytes/second).
+
+=== A minor detour, introducing IDDN.
+    (the International Digital Defense Network)
+
+All of this brings us to an interesting idea we've been playing around
+with that could dramaticly influence Internet security for the good,
+if / when it is eventually implemented.  Frankly, the idea deserves an
+article of it's own, but since we are so busy, we will introduce it
+here.
+
+Inspired by the high response to cryptographic key challenges,
+distributed.net and the SETI effort, we vision a non-profit
+foundation, which we like to ambitiously call IDDN, the International
+Digital Defense Network, working in the public interest to organize
+massively distributed scanning efforts which routinely probe the
+Internet for security vulnerabilities. 10,000 participants could
+finish a scan cycle every 2-3 days at an insignificant, single JPM
+each. At the end of a cycle, an automated system could draw the
+attention of administrators worldwide to some of their local security
+problems, and offer whatever information and solutions (bug-fixes,
+patches, workarounds) it has on database (patches, advisories,
+exploits). In our opinion, such an effort is highly practical and
+could contribute more to the stability and security of the Internet
+then the traditional (somewhat pointless?) bruteforce crypto key
+challenges. We believe organizing an Internet neighborhood-watch of
+sorts is in everyone's interests, especially the Internet's commercial
+industry which depend on the Internet to eventually fulfill it's
+potential for global electronic commerce.
+
+We do not have the time or resources to get the IDDN off the drawing
+board by ourselves and would be interested in the community's input
+on this issue.
+
+=== Let the show begin
+
+Tuesday, 1 December 1998. 
+
+We've installed BASS on 8 Unix boxes around the world, each with at least
+512kbps bandwidth. 8 different geographicly located participants
+in 5 different countries: Israel(1), Mexico(1), Russia(2), Japan(2)
+and Brazil(2).
+
+Two machines have already proven their strength during the scanner's
+painful debugging sessions. Three more will join them for the first
+time when we begin. The others are backups, ready in case anything
+goes wrong, and frankly, we have some concerns.
+
+Mostly, we expect the scan to raise some complaints, especially
+passing through the Internet's sensitive military, government and
+private networks, where snooping around is nothing short of a shooting
+offense, the prelude to a fullblown attack. Our probes 'come in
+peace', so to speak, but how can they know? They'll perceive us as a
+threat and could very well retaliate.
+
+We want the scan over before the new year, so we've set BASS's
+schedulers to finish in 3 weeks, at 250 JPM x 5. If all goes well,
+we'll be going over the results in the last week of 1998. If not,
+we'll have an extra week (at least) to fix whatever comes up and still
+be on schedule.
+
+An interesting point to note is how we've constructed the search space.
+We'll cover the domains by size, starting with the smaller domains first,
+so by the first week we'll have finished scanning 216 of the 228 active
+domains in the DNS (*.org, *.gov, *.int, and 212 countries, from
+Afghanistan with 1 host to the UK with 1.4 million). We create the
+individual search space of each participant by dividing the global
+space the same way you would deal a deck of cards, so that
+the original scanning order is preserved.
+
+At 02:00 GMT, we flip the switch, so to speak, activating BASS on the five
+participating hosts. Since these have all been configured to automaticly
+recover from any power failure or unexpected system shutdowns, we really
+don't have much to do now, besides keeping a lazy eye on progress.
+
+=== First week.
+
+There is definitely a response out there to the scan, but it's much
+friendlier then we anticipated. Harmless acts of mindless automata and
+mutual curiosity, mostly. Pings, traceroutes, telnet sessions and
+finger attempts. Four to eight portscans a day. An occasional TCP/IP
+stack exercise, an OS fingerprint, a few mostly polite e-mails
+asking why our network was "attacking" theirs, frequently warning us 
+that crackers may be abusing our systems, suggesting we look into it.
+Very mild, we are running into much less hostility then we expected.
+
+People either don't realize the scope of the scan, or don't care. On
+an individual basis, one quick security probe isn't usually enough to
+get the local sysadmin to notice. Those who do are probably security
+conscious enough to keep their networks up to date anyway, and
+confident enough to keep their cool when yet another 13 year old punk
+(who else?) bangs on their network walls.
+
+Oh, did we mention the scanner is precisely on schedule? 12 million
+hosts scanned by the end of the week, covering the US government's
+*.gov domain, Canada, Australia, Europe, and a window to some of the
+most intriguing corners of the world: Hostile mind-control regimes like
+China and Iran for example, which suffocate their repressed
+population's access to free ideas and information, but are still paradoxicly
+connected (albeit, very poorly) to the Internet. Third world
+potentials like India (the world's largest democracy!) and the rapidly
+developing countries of the far east. Exotic paradise locations like the
+Cocos Islands, Bahamas, the Virgin Islands, Barbados, Fiji, and Micronesia
+All of them as close and accessible as if they were right across
+the street, and in a certain way even closer. Computer expertise is rare in
+many of these countries, security expertise even rarer. Cracking into
+a Chinese computer half a world away, for example, is usually easier,
+more interesting, and safer (assuming you are not in Chinese
+jurisdiction of course) then cracking into a comparable western computer.
+
+As a precaution, all eight participants have backed up the 13 MBs
+worth of precious results, to make sure an emergency relocation recovery
+is possible, should this become necessary. 
+
+(I.e, in case of a small thermonuclear attack on one or more scanning
+ participants, possibly effecting their performance. Caution,
+ nuclear warfare can really ruin your entire scan)
+
+=== Second week.
+
+We started the week off by scanning US Military networks. Admitingly,
+we were pretty nervous, and spent much of the day keeping an eye out for
+telltale signs of a pissed off military retaliation.
+
+(also known as "InfoWar" and "spooky shit" in professional terminology)
+
+In just under 24 hours it was all over, and while we did notice a
+significant increase in the number of probes we were getting, to say
+we were not impressed by the security of the military network is a big fat
+major understatement. This might not be a problem, since according
+to NSCS (National Computer Security Center) network security policies,
+none of the systems on the public *.mil network could qualify for the
+storage and handling of classified DoD (Department of Defense)
+information. How strictly these policies are adhered to is another
+matter. And even if they are (and this is a _big_ if), the DoD is still
+(justifiably) concerned that crackers might glue together classified
+information from the little pieces of unclassified information
+fragments lying around their *.mil network (in great abundance). So they have
+plenty of good reasons to keep their network secure, but are (un)?fortunately
+doing a pretty lousy job.
+
+= DoS six o'clock.
+
+Wednesday, our Russian scanner runs into trouble. A denial of
+service attack, 512kbps stream of packets amplified 120 times strong
+over an unsuspecting Canadian broadcast amplifier.  Half a world a
+way, the packet storm brings a large Russian ISP to it's knees,
+overwhelming it's available bandwidth. Ouch.
+
+Apparently, we stepped on someone's toes. At first, we assumed this was
+somehow connected to yesterday's *.mil scan, but no, it was just 
+some ill-tempered English fellow who didn't appreciate getting probed last
+Monday. He tried crashing our stack first, with some nasty DoS attacks for NT
+and Unix. That didn't work, so he blasted our ISP out of the sky. Clear
+and simple, he didn't want to, but we left him no choice. You can't
+have decent English folks being polked around at by some Russian punks ... 
+
+The attack lasted 16 hours straight, and since it wasn't too difficult to
+track down where it was coming from, we were very tempted to return the
+favor, or at least give this trigger-happy netizen a free security audit.
+
+We didn't though, the net's resources are much too valuable to further
+waste on such brutish exhibition of ego (a "cyber" pissing contest?).
+Besides, an eye for an eye and everyone goes blind, right?
+
+Anyway, one of our backups (also in Russia) quickly substituted for the lost
+computer as soon as we noticed the attack 6 hours later at 255 JPM, with
+no other significant setbacks to our week's schedule.
+
+The rest of the week chugged along nicely, scanning the United States (or
+more precisely, the *.us domain), Japan (*.jp), and the educational networks
+(*.edu). Hmmm, Has anyone noticed how unsymmetricly biased the DNS is
+in favor of the United States? Dot gov, dot mil, dot org, dot edu. Being so
+homogeneously American, shouldn't these go under the *.us domain?
+
+= "You're gonna rot in jail" - the legal corner
+
+We've began receiving e-mail's this week by people with alot less tolerance
+for our activities, most in delayed response to last week's scans. Some
+of these were written by lawyers who informed us we were either supporting
+or perpetrating acts of computer crime against their clients. They had
+notified the authorities (CERT and the FBI were commonly cited) and threatened
+to take us to court if we did not offer our full cooperation in immediately
+identifying the attacking party. Right...
+
+It seems some organizations hire fulltime "security officers" known
+for exaggerating the significance of petty incidents to justify getting
+payed. Unfortunately, in certain parts of the worlds, charges like
+these can cost you a fortune in legal defense, and with the wrong
+judge, a conviction, and a sentence anywhere between a large fine, and
+a few years in jail. Fortunately, on the Internet, getting around
+this is as easy as scanning from places which are not known for
+overzealousness in regard to their definition of "computer
+crime". This is just another example of how poorly the local and
+international legal system deals with so called "computer crime" and
+the Internet.
+
+Under the (US) state of Oregon's computer crime law (164-377a), for
+example, we could definitely be defined as computer criminals, trailed
+and sent away to many years in prison. (But so could everyone else...)
+
+A chosen excerpt from the law:
+
+(4) Any person who knowingly and without authorization uses,
+    accesses or attempts to access any computer, computer system,
+    computer network, or any computer software, program,
+    documentation or data contained in such computer, computer
+    system or computer network, commits computer crime.
+
+As you can see, the law is unreasonably vague. "Criminal" or not, it
+all comes down to your definition of "authorization". But, having it would
+constitute some sort of prior agreement between a user and the owners
+of a computer, computer network or computer software. The Internet
+however is a public network, and the majority of it's services are
+used anonymously, by users with which there is no persistent
+relationship.
+
+In the physical world, any behavior is possible, so society
+enforces order by restricting behavior it finds unacceptable through
+the regulative government system, which is "programmed" by the code
+of the law. 
+
+The computer world is pure code, instructions and information,
+none of which are capable of discrimination. The computer programmer
+is the god of a perfectly obedient universe. Like the artist, the
+canvas of his creation is as expressive or inexpressive of his will
+and intention as he has made it to be.
+
+This means software, like the law, can inherit the imperfections of
+it's creator. Poorly written computer and legal code can allow the
+system to behave in conflict with the original intentions of the men
+who wrote it. Legal loopholes and software bugs, Lawyers and Hackers,
+different sides of the same coin. The only way to really prevent the
+abuse of the system is to write better code.
+
+This is the reason we find most "computer crime" legislation so
+absurd. The laws try to protect computer systems from being misused,
+when the only definitive expression of what constitutes "acceptable
+use" is in the code itself, which may or may not be a precise
+manifestation of the author's intentions, depending on his competence
+as a programmer.
+
+If the public insists on "computer crime" legislation anyway, we believe most
+of the it's problems could be easily resolved by eliminating ambiguous
+wording, over generalization, and specificly breaking down what the
+law defines as acts of "computer crime":
+
+1) knowingly exploiting a finite list of common misimplementations
+   (bufferoverflow, a race condition, ...)
+2) intentionally performing a Denial of Service attack.
+3) wiretapping (sniffing a network, capturing keyboard strokes,
+   screen content, etc.)
+4) using a party's identification token[s] (username / password) without the
+   party's permission. (logging into a system on someone elses account,
+   reading someone else's email)
+5) Spam. (death penalty for repeated offenders)
+
+Note that we've removed "attempted" attacks from the offense
+list, since these are hard to define, prove, and cause no damage. 
+
+(If in the course of an attempted attack a system is damaged, in a denial
+ of service attack for example, then we can prosecute this event as a
+ separate incident, with nothing "attempted" about it)
+
+Interested readers are advised to read up on the Oregon vs. Randal
+L. Schwartz case, a good example as to why Draconian "computer crime"
+legislation should be fought with a vengeance. (http://www.lightlink.com/fors)
+
+=== Third week:
+
+Last week. Only the mammoth *.com and half of the *.net domain left
+and we're done.
+
+= they're heeeere...
+
+Friday, our Japanese participants discover that a computer on their
+company network has been cracked into, one very secure Linux box running
+only SSH and Apache 1.3.4. Now this would definitely send a chill
+up your spine if you knew just how fanatic our friends are when it comes
+to network security. Furthermore, they only detected the intrusion three
+days after the fact, which is unbelievable when you consider the insane
+monitoring levels they've been keeping since they agreed to participate
+in the scan. They would have noticed any funny stuff, and in fact, they did,
+lots of it, but none of which came close enough to a security breach to raise
+any alarms.
+
+Readers should also note how although a key binary in the cracked
+machine had been modified, tripwire and an assortment of other booby
+traps failed to detect this had happened. Even a close-up manual inspection
+(comparing file contents with a trusted backup, playing with it's name)
+could not detect any odd behavior. This trick, and others equally spooky
+were achieved by clever manipulation of the OS's kernel code
+(dynamicly, through a module).
+
+Other characteristics of the attack which make it so eerily sophisticated:
+
+1) The attacker (convincingly) masquerades as a local employee.
+
+The attacker knows the employee's username and password and is even connecting
+through the employee's Japanese ISP on the employee's account!
+(the phone company identified this was an untraceable overseas caller)
+
+This information could not have been sniffed, since network
+services are only provided over encrypted SSH sessions.
+
+Further investigation shows that this employee's personal NT box,
+connected over a dynamic dailup connection, had been cracked into
+4 days earlier.
+
+His ssh client (TTSSH extension to TeraTerm) had been trojaned to
+transmit XOR garbled account information (hostname/username/password)
+over pseudo-DNS udp packets to a refurnished i486 Redhat v4.2 box used
+as a single-purpose cheap Samba fileserver in a small Australian
+ISP.
+
+The little box was every cracker's dream, a discrete, utopian crack
+haven, installed by a former Linux-savvy administrator, the last of
+it's kind in a homogeneous Unix-illiterate Microsoft environment. The
+ISP practicly ignored the box, which was running (up 270 days
+straight) so reliably none of them had even bothered to log in since
+mid 1997! So as long as the crackers kept Samba running, they would
+the box completely to themselves.
+
+How the NT box was cracked into in the first place is still a mystery. The
+logs weren't helpful (surprise! surprise!) and the only way we were
+even able to confirm this had happened was by putting a sniff on the NT's
+traffic (following a hunch) and catching those sneaky packets redhanded,
+transmitting our SSH identification down under. 
+
+We never liked NT before, being generally suspicious of propriety
+blackbox OS, from a company with a long history of poor quality
+bloatware. But realizing just how helpless we were against an attacker
+that obviously knew the ins and outs of this can-of-worms OS, the
+company recognized that NT was a serious security hazard and changed
+it's security policies to keep it as far away from it's systems as
+possible, and this included restricting employees from using it from
+at home to log into the company network (even with SSH).
+
+2) The attacker is using a custom built software penetration agent.
+   
+This is only an hypothesis, but is strongly supported by the fact that
+the entire attack only lasted an incredible 8 seconds! During which
+the attacker manages to log on (over an employee's SSH account, no
+less), gain root privileges, backdoor the system, remove any
+(standard) traces of it's activity and log off.
+
+And they probably would have gotten away with it too, if it wasn't for
+those meddling kids!
+
+Who thoughtfully installed a crude old tty surveillance-camera hack
+that trapped IO calls to and from isatty(3) file descriptors, in
+realtime, saving them on file along with a timestamp for neato
+it's-almost-as-if-you-were-there playback qualities.
+    
+And Wow! If there ever was a crack to appreciate for it's elegance,
+simplicity, and efficiency, this was it.
+
+First off this thing is smoking fast! Which puts the likelihood of any
+manual intervention at square zero. It's also mean and lean. Forget
+fumbling with an FTP client, leave that to the slow soft pink-bellied
+human cracker-weenies, real agents pump files directly through the
+shell (uuencode(1)'d at one end, uudecode(1)'d at the
+other). Extending privileges with an army of amateurish recipe-book
+Bugtraq exploits? I think not! Introducing the super-exploit, an
+all-in-one security penetration wonder which quickly identifies and
+exploits any local security vulnerabilities for that wholesome,
+crispy, UID zero flavor (we were vulnerable to a recent KDE
+buffer overflow).  After promptly confirming it's shiny new
+root privileges, the agent transfers it's last archive (a cross
+between a self-installing feature-rich backdoor, and a
+clean-up-the-mess, we-were-never-here log doctor), executes it and
+logs off. 
+
+After watching the attack on playback (at 1/8 of it's original speed)
+several times over, standard security-compromise ritual kicked
+in. We took the affected machine offline, remounted the disks
+read-only, fired up our trusty filesystem debugger, and slaved away to
+salvage whatever we could. Luckily, we found the attacker's
+transfered archives still intact, along with large fragments of the
+undoctored logs, allowing us to fill any still-missing details on the
+blitz attack. At the end of the day, when we finished playing with the
+cracked machine on loopback, we changed the compromised account's
+password, restored binary integrity, rebooted the system and put it
+back on the network, this time running a network dump of all
+it's incoming-outgoing traffic, just to be on the safe side.
+
+Whoever they were, they certainly knew what they were doing, and for
+the most part seemed very good at it. But being determined, clever,
+and sophisticated just doesn't cut it when you do battle with wizardly
+foes (that's us) yielding the great powers of the Universe to their
+command: Dumb luck and clinical paranoia.
+
+So who done it ???
+
+Could it be ...
+
+(A government conspiracy I tell ya'!)
+
+Any one of the many press-savvy three letter agencies scrambling for a bigger
+slice of the US-government funding pie? They've got motive, but are
+they really sneaky, clue-full and competent enough to take the blame?
+
+How about the SIGINT spooks? The NSA (Information superiority 
+for Americans!), or the GHCQ (Her Royal Majesty's Intelligence)?
+Someone working for the Chinese? The KGB? The Russian mob?
+The giant from Redmond?
+Elvis and Bigfoot?! 
+
+Who knows ...
+
+They tried something spooky 2 nights later, when around 4 AM
+(Japanese time) our network dump captures several pseudo-DNS udp
+packets originating from a familiar Linux box in a small Australian
+ISP. We assume they were attempting to communicate with the software
+they left behind during their brisk first visit. Several minutes pass, and
+the attempt is followed by a "TCP ping" (a stealthy alternative to an
+ICMP ping), several more pseudo-DNS udp packets, and silence.
+
+To the best of my knowledge, we haven't heard from them since.
+How discrete.
+
+=== End of the road
+
+That's it, it's over, on time, 10 days before the new year, 1999.
+
+Our success. Scattered across the world, from Japan to Russia, from the
+Middle East to Mexico to Brazil. We were all awake when the scanners
+calmed down, within an hour of each other, on Dec 21th, 1998 08:00 GMT.
+
+We celebrated the event at "the bunker" (see suffix item 2 for details), a
+discrete gathering corner where we hang out, meditate, plot, debate,
+and coordinate cr^H^Hhacking campaigns of mystical lore. <grin>
+Most of the attention (not to mention conversation) concentrated 
+around "iap-results.txt.gz", a humble 6.4 MB compressed (1:8 ratio)
+textfile which embodied the sum results of our 4 month long effort.
+In no time, people downloaded local copies of the post, and were reading,
+grepping, parsing, cross referencing and analyzing this, that and other.
+
+It was unbelievable non-stop fun the likes we had never before
+and never since enjoyed at the bunker.
+
+A very memorable un"real" moment. It's funny how close the Net can
+bring a group of people who have never "really" met, who've never
+"really" seen each other face to face.  And it doesn't seem to
+"really" matter, it's just as "real", as "real" as anything else
+gets. "real" is really overrated these days anyway, I mean, really.
+
+"He's suffering from some sort of reality complex,.. obviously."
+
+Friendship, cooperation, common interests, goals and ideals. They're
+the same here, in this funny netherworld, "cyberspace", as anywhere
+else. Across the barriers of culture, language and geography. The
+universality of human kinship, the couple, the pact, the tribe, the
+organization, the community, gracefully extended into the online
+domain. It's all about having a medium, connecting people,
+communicating. 
+
+Together we are better.
+
+=== IAP cheat-sheet
+
+BEGIN TIME: 02:00, Dec 01, 1998 GMT
+END TIME: 08:00, Dec 21 1998 GMT
+
+Scanning nodes: 5
+Jobs Per Minute: 250
+Scan time: 20.24 days
+
+Vulnerabilities tested: 18
+
+Domain count: 7 three letter domains, 214 national domains (see suffix item 3)
+Host count: 36,431,374
+Vulnerability count: 730,213
+Vulnerable host count: 450,000
+
+Statistical output:
+
+service       |     vulnerability count, percentage
+--------------------------------------------------------
+webdist       |  5622 hosts counted,    0.77% from total
+wu_imapd      |  113183 hosts counted,  15.5% from total
+qpopper       |  90546 hosts counted,   12.4% from total
+innd          |  3797 hosts counted,    0.52% from total
+tooltalk      |  190585 hosts counted,  26.1% from total
+rpc_mountd    |  78863 hosts counted,   10.8% from total
+bind          |  132168 hosts counted,  18.1% from total
+wwwcount      |  86165 hosts counted,   11.8% from total
+phf           |  6790 hosts counted,    0.93% from total
+ews           |  9346 hosts counted,    1.28% from total
+
+(other vulnerabilities which weren't common enough to generate statistics for)
+other:        |  18K hosts counted,     2.42% from total
+
+=== Conclusions
+
+A global fury of half a billion packets, digital signals zipping back
+and force across the planet at the speed of light. Above the Earth,
+across the land, under the sea, over satellite microwave, copper
+wiring, fiberoptics, wireless and undersea cable. Probing cyberspace.
+
+Pretty cool, the kind of power information technology puts in our hands
+these days.
+
+Seven hundred thousand vulnerabilities, gaping holes, wounds in the
+skin of our present and future information infrastructures, our dream
+for a free nexus of knowledge, a prosperous digital economy, where
+we learn, work, play and live our lives.
+
+Easy pickings, at the fingerprints of anyone who follows in our
+footsteps, friend or foe.
+
+These open points of penetration immediately threaten the security of
+their affiliated networks, putting many millions of systems in
+commercial, academic, government and military organizations at a high
+compromise risk.
+
+Ironicly, the sheer mass of vulnerable hosts on the Internet
+offers it's members a primitive form of protection, that is, in a
+you-can-eat-the-other-guy school of fish sort of way.
+
+Unfortunately, this doesn't work when you're flashing bright colors and
+look tasty. If you show up when a shark greps your school for
+"bank", you're in really bad shape. As this is *not* an example.
+
+We were stunned to find just how many networks you would expect
+to be ultra secure were wide open to attack. Banks, billion dollar
+commerce sites, computer security companies, even nuclear weapon research
+centers, goddamit!
+
+You'd think people would have some good sense and _at least_
+patch their systems when an advisory comes out.
+
+"Computers are unreliable, but humans are even more unreliable.
+ Any system which depends on human reliability is unreliable."
+
+        - Gilb
+
+Looking at the big picture, the problem gets worse. A catastrophe
+in the works. So far, we've been pretty lucky. 
+
+Consider the power these unsecure networks represent
+_together_. Penetrating and controlling millions of hosts? You
+couldn't do it manually, but with the right software, you could
+automate most of the dirty work. You'd need a careful network worm
+(suffix item 4), stealthy remote administration software (suffix item 5)
+and a self organizing network nervous system by which you could
+propagate control.
+
+Imagine the implications if this sort of capability ever fell into the
+wrong hands. A government (China perhaps), a political terrorist group
+or organized crime. On bandwidth alone they could shut down any part (or all)
+of the Internet in mammoth DoS attacks. A country, a portal,
+a news site, or maybe just InterNIC. Leverage and attention, for
+fun and profit. They could "build" the world's largest distributed
+supercomputer, or construct an Intelligence network rivalled only by the
+NSA's Echelon.
+
+Of course, who says only one group can play the game? Struggles for
+power in the digital domain could very well develop into the world's
+first real information war, with the very future of the Internet as a
+free unregulated supernetwork caught in the cross fire. 
+
+Unlikely? Far fetched? We hope so.
+
+Still, with all the hype Y2K is getting, it seems ludicrous that the most
+serious _real_ threat to information technology is consistently ignored.
+
+The only thing necessary for the triumph of evil is for good men to do 
+nothing. Wake up fellow countrymen. Let's get to work.
+
+        Everywhere you go you'll see them searching,
+        Everywhere you turn you'll feel the pain,
+        Everyone is looking for the answer,
+        Well look again.
+                -- Moody Blues, "Lost in a Lost World"
+
+=== SUFFIX
+
+= [item 1] Vulnerabilities BASS can test for (as of version 1.0.7):
+
+General: bind           CA-98.05
+         wu_imapd       CA-98.09
+         innd           CA-97.08
+         qpopper        CA-98.08
+
+RPC: rpc.mountd         CA-98.12
+     tooltalk           CA-98.11
+
+CGI: wwwcount phf php handler compas faxsurvey webdist ews glimpse
+     info2www webgais websendmail
+
+= [item 2] "the bunker" - a technical reference guide
+
+"The bunker" was hacked together by a friend who noticed how badly the
+group needed a realtime, secure communication forum. Our configuration
+combines an unmodified IRC server, SSH, a firewall and a Linux box (or two).
+There are two possible implementations, one more secure then the other
+but also (slightly) more expensive (you'll need another cheap i[345]86 box).
+
+We'll start with our (secure) configuration. We take a cheap Linux box
+(i486, 8mb RAM, 500mb diskspace, two $15 Ethernet cards), with the
+bare minimum Debian installation, remove any "privilege relays"
+(network services, daemons (crond), suid files) and configure the
+kernel _with_ firewall support and _without_ IP forwarding. We then
+installed the SSH suite, and double check to make sure the *only*
+available network service is sshd's port 22 (ICMP / UDP included). As an
+additional layer of security, we enforce our SSH only policy at the OS
+level, by setting up the kernel's IP firewall to reject *all* incoming
+and outgoing _Internet_ packet traffic by default, except what we
+explicitly need to maintain *incoming* SSH sessions.
+
+incoming rules:
+* default policy: deny
+* accept TCP packets from any source to thebunker.com port SSH(22)
+
+outgoing rules:
+* default policy: deny
+* accept TCP packets from thebunker.com port SSH(22) to any destination
+
+An example implementation (Our ipfwadm(8) bootup configuration):
+
+#!/etc/ipfw/ipfw-setup
+
+# * eth0 interfaces the Internet, and eth1 interfaces the private IRC
+#   server.
+#
+# * On 2.2.X kernels and higher the IP firewalling code has been replaced,
+#   so ipfwadm (and this configuration) will no longer work. ipchains(8)
+#   should be used instead.
+
+# * Since we are not forwarding between interfaces, 0.0.0.0/0 can be used
+#   as a safe (portable) alternative to our IP address. Those of you
+#   who would rather be specific should put their IP here with a mask of 32.
+#   (For example: 208.212.172.33/32)
+
+ipfwadm -I -f
+ipfwadm -I -p deny
+ipfwadm -I -a accept -W eth1
+ipfwadm -I -a accept -W eth0 -P tcp -D 0.0.0.0/0 22
+
+ipfwadm -O -f
+ipfwadm -O -p deny
+ipfwadm -O -a accept -W eth1
+ipfwadm -O -a accept -W eth0 -P tcp -S 0.0.0.0/0 22
+
+---[ EOF ]---
+
+A simple, airtight firewall. One interface faces the Internet, and the other
+jacks straight into the safehouse (our IRC server), which should *not* be
+capable of accessing the Internet directly and vice versa. The safehouse is a
+similarly configured bare metal, secure Linux configuration running 
+_only_ Ircd (_not_ as root!) and sshd. General purpose use of the safehouse
+is strongly discouraged.
+
+User accounts on the firewall are opened for authorized members of the
+group, but despite trusting the system's users, access to
+administrative account must be strictly limited. This is to insulate
+the system from the possible security problems of its users, with the
+added benefit of protecting a user from coercion (they couldn't
+compromise security if their life depended on it).
+
+The second configuration may be less secure, depending on your risk
+model, but is also less expensive. You would only need one Linux box,
+and one Ethernet card. We eliminate the "safehouse" and trust the
+firewall to run the Ircd server safely on loopback (_not_ as root!),
+while isolating it from the Internet. In this case, the security of
+the system _depends_ on correctly enforcing the strict IP firewall
+filters, and these are not merely an additional layer of
+security. Because we are running a service on loopback, the IP
+firewall must be set up to allow packets to and from the server on the
+local interface. While this setup is theoreticly secure "enough", it
+leaves a larger margin for error and malice.
+
+In a nostalgic tribute to the old BBS days, "the bunker" features a
+black and white (green), menu driven default login shell (based on
+pdmenu), which greets users with the message of the day, announces
+events, and offers a consistent customizable UI to local mail, project
+forums, IRC (directly into the official, often the only system
+channel), and an ever growing list of other system activities. ("just
+one more feature"!)
+
+The interface started out as a joke, and while it sounds out of date,
+with the current explosion of graphics, sound and video on the WWW,
+it's oddly cozy, and most of us have warmed around to it. (besides,
+when real work needs to get done, reaching emacs (or a shell) is just
+a key-press away)
+ 
+= [item 3] domains scanned
+
+7 three letter domains:
+com - Commercial
+net - Networks
+edu - Educational
+mil - US Military
+org - Organizations
+gov - Government
+int - International Organizations
+
+214 national domains (sorted by size, left right, top down): 
+jp (Japan)                                us (United States)
+uk (United Kingdom)                       de (Germany)
+ca (Canada)                               au (Australia)
+nl (Netherlands)                          fi (Finland)
+fr (France)                               se (Sweden)
+it (Italy)                                no (Norway)
+tw (Taiwan, Province Of China)            dk (Denmark)
+es (Spain)                                ch (Switzerland)
+br (Brazil)                               kr (Korea, Republic)
+be (Belgium)                              ru (Russian Federation)
+za (South Africa)                         at (Austria)
+nz (New Zealand)                          mx (Mexico)
+pl (Poland)                               il (Israel)
+hu (Hungary)                              hk (Hong Kong)
+cz (Czech Republic)                       sg (Singapore)
+ar (Argentina)                            ie (Ireland)
+gr (Greece)                               pt (Portugal)
+my (Malaysia)                             tr (Turkey)
+cl (Chile)                                ee (Estonia)
+is (Iceland)                              th (Thailand)
+su (Soviet Union)                         sk (Slovakia, Slovak Republic)
+ae (United Arab Emirates)                 si (Slovenia)
+cn (China)                                ro (Romania)
+co (Colombia)                             ua (Ukraine)
+id (Indonesia)                            uy (Uruguay)
+in (India)                                lv (Latvia)
+lt (Lithuania)                            ph (Philippines)
+ve (Venezuela)                            bg (Bulgaria)
+hr (Croatia 'Hrvatska')                   yu (Yugoslavia)
+lu (Luxembourg)                           kw (Kuwait)
+do (Dominican Republic)                   pe (Peru)
+cy (Cyprus)                               nu (Niue)
+cr (Costa Rica)                           pk (Pakistan)
+na (Namibia)                              lb (Lebanon)
+tt (Trinidad And Tobago)                  eg (Egypt)
+kg (Kyrgyzstan)                           to (Tonga)
+gl (Greenland)                            pr (Puerto Rico)
+ec (Ecuador)                              kz (Kazakhstan)
+bm (Bermuda)                              bn (Brunei Darussalam)
+py (Paraguay)                             zw (Zimbabwe)
+mt (Malta)                                gt (Guatemala)
+sv (El Salvador)                          cc (Cocos 'Keeling' Islands)
+cx (Christmas Island)                     pa (Panama)
+by (Belarus)                              ni (Nicaragua)
+ge (Georgia)                              ke (Kenya)
+om (Oman)                                 bw (Botswana)
+bo (Bolivia)                              fo (Faroe Islands)
+bh (Bahrain)                              mu (Mauritius)
+ma (Morocco)                              lk (Sri Lanka)
+ad (Andorra)                              mk (Macedonia, Former Yugoslav)
+md (Moldova, Republic)                    bs (Bahamas)
+vi (Virgin Islands, US)                   ng (Nigeria)
+am (Armenia)                              ba (Bosnia And Herzegowina)
+jo (Jordan)                               ky (Cayman Islands)
+li (Liechtenstein)                        jm (Jamaica)
+sa (Saudi Arabia)                         gi (Gibraltar)
+zm (Zambia)                               pf (French Polynesia)
+sz (Swaziland)                            tm (Turkmenistan)
+bz (Belize)                               mc (Monaco)
+ir (Iran, Islamic Republic)               ci (Cote D'Ivoire)
+uz (Uzbekistan)                           sm (San Marino)
+ai (Anguilla)                             fj (Fiji)
+sn (Senegal)                              gh (Ghana)
+bf (Burkina Faso)                         ag (Antigua And Barbuda)
+fm (Micronesia, Federated States)         az (Azerbaijan)
+gp (Guadeloupe)                           np (Nepal)
+dm (Dominica)                             mo (Macau)
+mz (Mozambique)                           tz (Tanzania, United Republic)
+pg (Papua New Guinea)                     st (Sao Tome And Principe)
+ug (Uganda)                               nc (New Caledonia)
+gf (French Guiana)                        tg (Togo)
+mv (Maldives)                             gu (Guam)
+al (Albania)                              hn (Honduras)
+im (Isle of Man)                          aw (Aruba)
+cu (Cuba)                                 vu (Vanuatu)
+tc (Turks And Caicos Islands)             et (Ethiopia)
+tj (Tajikistan)                           hm (Heard And Mc Donald Islands)
+gy (Guyana)                               tn (Tunisia)
+mg (Madagascar)                           kh (Cambodia)
+ac (Ascension Island)                     as (American Samoa)
+nf (Norfolk Island)                       aq (Antarctica)
+io (British Indian Ocean Territory)       ck (Cook Islands)
+bb (Barbados)                             gb (United Kingdom)
+je (Jersey)                               mq (Martinique)
+sh (St. Helena)                           bt (Bhutan)
+vn (Viet Nam)                             ms (Montserrat)
+lc (Saint Lucia)                          dz (Algeria)
+vg (Virgin Islands, British)              ye (Yemen)
+sb (Solomon Islands)                      mn (Mongolia)
+ls (Lesotho)                              gg (Guernsey)
+ne (Niger)                                mr (Mauritania)
+mp (Northern Mariana Islands)             gw (Guinea-Bissau)
+sl (Sierra Leone)                         qa (Qatar)
+tf (French Southern Territories)          bj (Benin)
+va (Vatican City State)                   cd (Congo, Democratic Republic)
+an (Netherlands Antilles)                 km (Comoros)
+sc (Seychelles)                           gs (South Sandwich Islands)
+kn (Saint Kitts And Nevis)                ly (Libyan Arab Jamahiriya)
+pn (Pitcairn)                             gd (Grenada)
+cm (Cameroon)                             tp (East Timor)
+mh (Marshall Islands)                     ws (Samoa)
+um (United States Minor Outlying Islands) tv (Tuvalu)
+sy (Syrian Arab Republic)                 re (Reunion)
+pw (Palau)                                mw (Malawi)
+mm (Myanmar)                              ml (Mali)
+lr (Liberia)                              cv (Cape Verde)
+cg (Congo, Republic)                      af (Afghanistan)
+
+= [item 4] Lukemia
+
+One of our first research projects (circa 1997) involved researching
+possible designs of a modern network worm. We even developed a
+prototype in C which implements some of our ideas.
+
+Today, we're pretty horrified by our choice of language (In C, everything
+is equally difficult, "help save the world!" -- use Perl) and the quality
+of the code (butt ugly).
+
+= [item 5] Portacelo
+
+"Local security subversion. Why human and (current) software
+ (tripwire and others) host-based Intrusion Detection Systems
+ are a bad idea."
+
+We did some research (right after the IAP was over) in this
+subject, and plan to release an article sometime in the near future.
+
+A fully-featured backdoor implementation is available, demonstrating
+the concept, which combines SSH ESP (suffix item 6), a kernel module,
+direct memory manipulation, and a good old fashioned binary trojan.
+
+= [item 6] SSH ESP
+
+A hacked SSH suite modified to implement ESP (Encapsulated encrypted
+STREAMS Protocol) at the application level. 
+
+Notable features include:
+* piercing almost any current filter firewall.
+  (ab-uses any available packet traffic: tcp, udp and icmp)
+* invisible at the operating system level. (netstat and friends
+  will not register any activity)
+* practical. (ESP is almost as fast and reliable as TCP, including
+             error correction)
+* military strength encryption. (thanks to SSH) 
+
+= [iem 7] Note to the reader
+
+Christ, it took me, Liraz, over 2 weeks to write this silly article, during
+which I had to drop whatever I was doing, and devote the bulk of my time to
+writing this memorandum of the IAP in English, which is not my native
+language.
+
+(Disclaimer: 
+ Please excuse any errors in syntax, grammar or spelling. That felt good.
+ Please forgive my bad writing, untasteful dramatics, poor sense of humor...
+ I'll stop now...)
+
+In the process I had to convince my fellow project associates
+(some of them very strong willed) that documenting the
+IAP was A Good Thing, at least for posterity's sake...
+
+And all so I could offer you, dear reader, a chance to share some of my humble
+insights on computer security, and a taste of hacker culture.  This is
+my first publication, I'm not too sure on how this is going to be
+accepted. Frankly, I prefer writing code, so I'm not sure I'll be 
+writing any more articles soon. Whether or not that happens depends
+on the response I get from interested readers.
+
+If there is a good response, there will be more. But goddammit, they'll
+be shorter this time!
+
+I hope the article wasn't too technical for your tastes, but the
+project was mostly about overcoming technical and logistical
+difficulties, so that was hard to escape.
+
+Also, I am very short on time and resources, so if anyone is
+interested in sponsoring the material (an official SSR website for the
+rant and the software), that would be great.
+
+Oh, any takers on the IDDN front? We can start out with a (preferably
+archived) mailing list, find some interested people, get the ball
+rolling...
+
+All points of contact: liraz@bigfoot.com

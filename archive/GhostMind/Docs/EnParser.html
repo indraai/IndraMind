@@ -1,0 +1,916 @@
+
+<html>
+<head>
+<title>EnParser Module of a Strong AI Mind</title>
+<meta name="description"
+ content="EnParser both determines and comprehends English parts of speech. />
+<meta name="keywords"
+ content="Natural Language Understanding, NLU, AI, artificial intelligence, parser" />
+</head>
+<body bgcolor="#FFFACD">
+<a name="top"></a>
+
+<center><h1>
+<a href="http://ai.neocities.org/EnParser.html"
+ title="This webpage may be copied to other websites."
+ style="text-decoration:none;">
+EnParser</a> English Parser Module of the
+</h1></center>
+
+<center><h2>
+<a href="http://ai.neocities.org/Ghost.html"
+ title="English tutorial in JavaScript for Microsoft Internet Explorer">English</a>
+and
+<a href="http://ai.neocities.org/Dushka.html"
+ title="Russian tutorial AI in JavaScript for MSIE">
+Russian</a> bilingual
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="Perl AI source code"
+ style="text-decoration:none;">
+ghost</a>.pl AI in
+ <a href="http://strawberryperl.com"
+ title="Download Perl for free."
+ style="text-decoration:none;">
+Perl</a>
+</h2></center>
+
+<h2><center>
+<a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer">
+<i>Mens Latina</i></a> in
+ <a href="http://ai.neocities.org/MLPJ2019.html"
+ title="Mens Latina Programming Journal"
+ style="text-decoration:none;">
+Latin</a> --
+<a href="http://dl.acm.org/citation.cfm?doid=307824.307853"
+ title="Association for Computing Machinery"
+ style="text-decoration:none;">
+MindForth</a> for
+ <a href="http://rodneybrooks.com/agi-has-been-delayed/#comment-18915"
+ title="Robotics and AI weblog"
+ style="text-decoration:none;">
+Robots</a>
+</h2></center>
+
+
+<p><br /></p>
+<font face="Verdana">
+<p><a name="diagram"></a>
+<a name="1"></a><font size="+1">
+1. <a href="http://ai.neocities.org/DiaGram.html#EnParser"
+ title="ASCII diagrams of Mentifex mind-modules for artificial intelligence.">
+Diagram</a> of the EnParser English Parser Module</font> <br />
+<pre><b>
+   /^^^^^^^^^\  EnParser Tags Subject-Verb-Object  /^^^^^^^^^\
+  /   EYE     \  MINDCORE               _____     /   EAR     \
+ /             \ CONCEPTS              /New- \   /             \
+|   _______     |   | | |      _____  (Concept)-|-------------\ |
+|  /old    \    |   | | |     /Old- \  \_____/  |  Audition   | |
+| / image   \---|-----+ |    (Concept)------|---|----------\  | |
+| \ recog   /   |   | | |     \_____/-------|---|-------\  |  | |
+|  \_______/    |  a| | |          |________V   |  c    |  |  | |
+|               |  b|C| |         / EnParser \  |   a   |  |  | |
+|   visual      |  s|O|f|         \__________/  |    t  |  |  | |
+|               |  t|N|i|              |noun?   |     s-/  |  | |
+|   memory      |  r|C|b|              |verb?   |          |  | |
+|               |  a|E|e|              |adj.?   |  e       |  | |
+|   channel     |  c|P|r|              |adverb? |   a      |  | |
+|               |  t|T|s|              |prep.?  |    t-----/  | |
+|   _______     |   | | |              |conj.?  |             | |
+|  /new    \    |   |_|_|        ______V____    |  f          | |
+| / percept \   |  /     \      /           \   |   i         | |
+| \ engram  /---|--\ Psi /-----( InStantiate )  |    s        | |
+|  \_______/    |   \___/       \___________/   |     h-------/ |
+</b></pre>
+</ul>
+
+<p><br /></p>
+
+<a name="2"></a>
+<b>2. Purpose of the EnParser English Parser Module</b> <br />
+<p>
+<a href="http://ai.neocities.org/EnParser.html">
+EnParser</a> serves the purpose of not only identifying a part of speech
+such as a noun, preposition or verb, but also of <i>comprehending</i>
+the part of speech in context by helping to assign associative tags
+among concepts in the <b>Psy</b> conceptual array. Thus
+ <a href="http://ai.neocities.org/EnParser.html">
+EnParser</a>
+and its Russian counterpart
+ <a href="http://ai.neocities.org/RuParser.html"
+ title="document page"
+ style="text-decoration:none;">
+RuParser</a> serve the purpose of
+ <a href="http://en.wikipedia.org/wiki/Natural-language_understanding"
+ title="Wikipedia article"
+ style="text-decoration:none;">
+Natural Language Understanding</a>
+(<a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding"
+ style="text-decoration:none;">NLU</a>).
+</p>
+
+
+<p><br /></p>
+<p><a name="algorithm"></a>
+<a name="3"></a><font size="+2">
+3. Algorithm of the
+ <a href="http://ai.neocities.org/EnParser.html">
+EnParser</a> AI Mind-Module</font> <br />
+</p>
+
+<p>
+Since the main feature of the concept-based AI Minds is their demonstration
+of solving the AI-hard problem of
+ <a href="http://en.wikipedia.org/wiki/Natural-language_understanding"
+ title="Wikipedia article"
+ style="text-decoration:none;">
+natural language understanding</a> (NLU), the
+  <a href="http://ai.neocities.org/EnParser.html">
+EnParser</a> module for parsing English is the main instrument of achieving the
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding"
+ style="text-decoration:none;">NLU</a> goal.
+</p>
+
+<p>
+The
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="free AI source code"
+ style="text-decoration:none;">
+ghost</a>.pl AI Mind in
+ <a href="http://strawberryperl.com"
+ title="free download"
+ style="text-decoration:none;">
+Strawberry</a> Perl Five is becoming a conversational agent that may be
+installed to run in either the background or the foreground on any host computer.
+</p>
+
+<p>
+The
+ <a href="http://ai.neocities.org/Ghost.html"
+ title="Requires Microsoft Internet Explorer"
+ style="text-decoration:none;">
+JavaScript</a> AI Mind requires no download of either source code or programming language.
+Simply clicking on the link brings the tutorial
+ <a href="http://ai.neocities.org/Ghost.html"
+ title="Requires Microsoft Internet Explorer">AI Mind</a> into your
+ <a href="http://en.wikipedia.org/wiki/Internet_Explorer"
+ title="Microsoft Internet Explorer"
+ style="text-decoration:none;">
+MSIE</a> browser, where you may use the AI to teach students
+or AI coders.
+</p>
+
+<p>
+If you want to issue verbal instructions to your autonomous humanoid robot,
+ <a href="http://dl.acm.org/citation.cfm?doid=307824.307853"
+ title="Association for Computing Machinery"
+ style="text-decoration:none;">
+MindForth</a> as the robot brain enables you and the robot to engage in a discussion
+of what work the robot should be doing, and how the work should be done, and
+how the robot should engage in back-and-forth communication using English for you
+to clarify youe instructions and for the robot to report to you its completion of tasks.
+</p>
+
+<p><font size="-1">
+3.A. Words included in the
+ <a href="http://ai.neocities.org/MindBoot.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+MindBoot</a> sequence lighten the load of
+ <a href="http://ai.neocities.org/EnParser.html">
+EnParser</a>.
+</font></p>
+
+<p>
+Populating the MindBoot sequence with English words, the AI
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+mind maintainer</a> tries to include the most frequent English nouns and verbs,
+all the conjunctions, all the prepositions, and all the pronouns.
+Except for disambiguation, the embedded words do not need further parsing as
+to their parts of speech.
+</p>
+
+<p><font size="-1">
+3.B. The first AI Minds could only parse SVO sentences into nouns and verbs.
+</font></p>
+
+<p>
+The subject-verb-object (SVO) format of admissible inputs made it simple for
+the earliest AI Minds to classify English words as nouns or verbs. The parsing
+module could skip over the known English articles and an important adverb like
+the word "NOT" being used to negate an English sentence.
+</p>
+
+<p><font size="-1">
+3.C. The ghost112.pl AI became able to parse prepositional phrases.
+</font></p>
+
+<p>
+Since the
+ <a href="http://ai.neocities.org/MindBoot.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+MindBoot</a> sequence innately contains all the English prepositions identified as such,
+the AI Mind easily detects the input of a known English preposition and sets the
+ $<a href="http://ai.neocities.org/var.html#prepcon">prepcon</a> flag
+to a positive number one and loads the
+ $<a href="http://ai.neocities.org/var.html#tpp">tpp</a> time-of-preposition flag
+with the ending time-point at which the input preposition is being instantiated
+as a node in conceptual memory. Then
+ $<a href="http://ai.neocities.org/var.html#tpp">tpp</a> is used to zero in on the
+associative-tag flag-panel of the preposition, filling in the next noun or pronoun as the
+ $<a href="http://ai.neocities.org/var.html#seq">seq</a> of the preposition. Then the
+ $<a href="http://ai.neocities.org/var.html#tvb">tvb</a> time-of-verb flag is used
+to insert the concept-number of the preposition as a
+ $<a href="http://ai.neocities.org/var.html#seq">seq</a> of the verb.
+</p>
+
+
+<p><font size="-1">
+3.D. The ghost114.pl AI began to parse the indirect objects of verbs.
+</font></p>
+
+<p>
+To parse and comprehend an indirect object,
+ <a href="http://ai.neocities.org/EnParser.html">
+EnParser</a> tentatively
+fills the time-of-indirect-object
+ $<a href="http://ai.neocities.org/var.html#tio">tio</a> flag
+with the input-time of the first noun being input after a verb. The
+ $<a href="http://ai.neocities.org/var.html#tio">tio</a> flag is
+set only once by requiring that it be at zero for it to be set.
+Simultaneously, the time-of-direct-object flag
+ $<a href="http://ai.neocities.org/var.html#tdo">tdo</a> is filled
+with the same value as the
+ $<a href="http://ai.neocities.org/var.html#tio">tio</a> flag
+for an indirect object, because it is not yet known whether one noun
+or two nouns are being entered subsequent to the input of a transitive verb.
+If and when a second noun comes in, the value for the
+time-of-direct-object
+ $<a href="http://ai.neocities.org/var.html#tdo">tdo</a> flag,
+originally filled with the same value as the indirect-object
+ $<a href="http://ai.neocities.org/var.html#tio">tio</a> flag,
+is replaced or overwritten with the new time of the
+second post-verb noun in the input stream.
+</p>
+
+<p>
+If only one noun comes in after the verb, the identifier of
+the direct object is set only once. If two post-verb nouns
+come in, the first noun becomes the indirect object and the
+second noun becomes the direct object.
+</p>
+
+<p><font size="-1">
+3.E. The ghost309.pl AI became able not only to parse the input of
+a prepositional phrase but also to think with a prepositional phrase.
+</font></p>
+
+
+<p><br /></p>
+<p><a name="code"></a>
+<a name="4"></a><font size="+1">
+4. Code of EnParser() from ghost327.pl AI
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="ghost.pl AI Mind in Strawberry Perl Five"
+ style="text-decoration:none;">
+source code</a> in
+ <a href="http://strawberryperl.com"
+ title="Free download of Strawberry Perl Five"
+ style="text-decoration:none;">
+Perl</a>
+</font> <br />
+</p>
+
+<pre><b>
+# 2017-09-03: Requirements of English Parser module:
+# 2017-09-13: EnParser shall at first assume that a new word is a noun.
+sub EnParser() {  # http://ai.neocities.org/EnParser.html
+  if ($pos == 5 || $pos == 7) {  # 2019-10-19: if noun or pronoun...
+    if ($tsj == 0) { $dba = 1; }  # 2019-10-19: if not subject has been declared...
+    if ($tult == $tdo) { $dba = 4; }  # 2019-10-19: acc. dir. obj.
+  }  # 2019-10-19: end of test for noun or pronoun.
+  $act = 48;  # 2016apr27: an arbitrary activation for InStantiate()
+  $bias = 5;  # 2015jun04: Expect a noun until overruled.
+  $tkb = 0;   # 2019-10-22: BUGFIX
+  if ($fyi > 2) {  # 2016feb08: if mode is Diagnostic
+    # 2018-07-01: Diagnostic or tutorial message.
+  }  # 2016feb07: end of test for Diagnostic or Tutorial mode.
+  InStantiate(); # 2019-08-08: first instantiation during parsing Stage One
+  if ($pos == 5) { $bias = 8 }  # 2016feb10: after noun, expect verb.
+  if ($pos == 7) { $bias = 8 }  # 2016feb10: after pronoun, expect verb.
+  if ($pos == 8) { $bias = 5 }  # 2016feb10: after verb, expect noun
+  if ($prepcon == 0) {  # 2017-09-13: if not handling a preposition...
+    if ($pos == 5 || $pos == 7) {  # 2016mar21: expanding then-clause
+#     $tsj = ($t - 1);     # 2017-09-13: subject?
+#     $tsj = ($t - 1);  # 2019-10-19: declare subject-time elsewhere?
+      if ($verbcon == 1) {  # 2017-09-13: if a verb has come in...
+        if ($tvb > 0) { $tdo = $tult; }  # 2019-10-19: a default value.
+        if ($tio == 0) {$tdo = $tult}  # 2017-09-13: set once or twice
+        if ($tio == 0) {$tio = $tult}  # 2017-09-13: set only once
+        if ($tio > 0)  {  # 2017-09-13: if $tio previously set...
+          $tdo = $tult;  # 2017-09-13: second noun sets time of dir.obj.
+        }  # 2017-09-13: end of test to make 2nd noun the direct object.
+        $tkb = $tdo;  # 2019-10-18: let verb have a "nounlock" to direct object.
+        my @k=split(',',$psy[$tvb]);  # 2017-09-13: expose flag-panel of verb
+        $pre = $k[1];  # 2017-09-13: verb psi will be $pre of direct object
+        @k=split(',',$psy[$tio]);  # 2017-09-13: expose flag-panel of indir.obj.
+        $iob = $k[1];  # 2019-08-01: excerpt indirect-object concept for k[13]
+        $psy[$tio]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+        . "3,$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
+        . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01: panel
+        # 2017-09-13: Above lines insert k7 dba=3 for dative-case indirect object.
+        @k=split(',',$psy[$tdo]);  # 2017-09-13: expose flag-panel of dir.obj.
+        $psy[$tdo]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+        . "4,$k[8],$k[9],$k[10],0,$k[12],$k[13],"
+        . "0,$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]"; # 2019-08-02: no $tkb for dir.obj.
+        # 2017-09-13: Above lines insert verb-$psi as k10 $pre of direct object.
+        @k=split(',',$psy[$tvb]);  # 2017-09-13: expose flag-panel of main verb.
+        if ($k[5]==250) { $k[7]=0;$k[8]=0; }  # 2019-10-23: negated verb is dba=0 infinitive.
+        $tdo = $t - 1;  # 2017-09-13: insert time-of-direct-object for nounlock;
+        $tkb = $tdo;  # 2017-09-13: TEST
+        # 2017-09-13: Next two lines create psy-array row for a verb.
+        $psy[$tvb]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+        . "$k[7],$k[8],$k[9],$k[10],$psi,$k[12],$iob,"
+        . "$tkb,$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01: panel.
+        @k=split(',',$psy[$tdo]);  # 2019-10-19: expose flag-panel of direct object
+        $psy[$tdo]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+        . "4,$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"   # 2019-10-19: acc. dba=4 dir.obj.
+        . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-10-19: tdo-panel
+      }  # 2017-09-13: end of test for a condition following a verb.
+    }  # 2017-09-13: end of test for noun not object of a preposition.
+  }  # 2017-09-13: end of test for a non-prepositional condition.
+  if ($pos == 6) { $prepcon = 1 }  # 2019-09-24: prepare for noun.
+  if ($pos == 5 || $pos == 7) {  # 2017-09-13:
+    if ($prepcon == 1) {  # 2017-09-13:
+      my @k=split(',',$psy[$tpr]);  # 2019-08-06: expose flag-panel of preposition;
+      $pre = $k[1];  # 2017-09-13: Let $pre briefly be the preposition.
+      $prep = $k[1];  # 2018-11-08: identify prep. to be the $seq of the verb.
+      $k[14] = $tult;  # 2019-08-01: establish $tkb between preposition and its object.
+      @k=split(',',$psy[$tult]);  # 2017-09-13: expose flag-panel of obj of prep.
+      $psy[$tult]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+      . "4,$k[8],$k[9],$pre,0,$k[12],$k[13],"
+      . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01: panel.
+      $prep = 0;  # 2018-11-08: Reset to prevent carry-over.
+      $prepcon = 0;  # 2017-09-13: Reset to prevent carry-over.
+    }  # 2017-09-13: end of test for a positive $prepcon.
+  }  # 2017-09-13: end of test for a noun or pronoun.
+  if ($pos == 8 && $psi != 800 && $psi != 818) {  # 2019-08-06: not "BE" or "DO"
+    $tvb = ($t - 1);  # 2017-09-13: hold onto time-of-verb for flag-insertions.
+    $verbcon = 1;  # 2017-09-13: verb-condition is "on" for ind. & dir. objects.
+    my @k=split(',',$psy[$tsj]);  # 2017-09-13: expose flag-panel of subject noun
+    $subjpre = $k[1];  # 2017-09-13: Hold onto $subjpre for the pos=8 verb
+    $psy[$tsj]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+   . "1,$k[8],$k[9],$k[10],$psi,$k[12],$k[13],"
+   . "$tvb,$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01
+    @k=split(',',$psy[$tult]);  # 2017-09-13: expose flag-panel of verb.
+    $psy[$tult]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+    . "$k[7],$k[8],$k[9],$subjpre,0,$k[12],$k[13],"
+    . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01
+    $subjpre = 0;  # 2017-09-13: Reset for safety.
+  }  # 2017-09-13: end of test for a pos=8 verb.
+# if ($pos == 8 && $psi == 800) {  # 2019-10-18: if 800=BE verb...
+  if ($pos == 8) {  # 2019-10-19: any verb...
+    $tvb = ($t - 1);  # 2019-10-18: hold onto time-of-verb for flag-insertions.
+    my @k=split(',',$psy[$tsj]);  # 2019-10-18: expose flag-panel of subject noun
+    $psy[$tsj]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+   . "$k[7],$k[8],$k[9],$k[10],$psi,$k[12],$k[13],"  # 2019-10-18: verb is "seq" of noun.
+   . "$tvb,$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-10-18: verb "tkb" of noun.
+  }  # 2019-10-18: end of test for 800=BE verb.
+# if ($tpr > 0 && $pos == 5) {  # 2019-08-11: if a noun follows a preposition...
+  if ($tpr > $vault && $pos == 5) {  # 2019-10-22: if a noun follows a preposition...
+    my @k=split(',',$psy[$tpr]);  # 2019-08-10: expose flag-panel at time-of-prep.
+    $tkb = ($t-1);  # 2019-08-11: time of object of preposition
+    $psy[$tpr]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+    . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
+    . "$tkb,$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-11
+  }  # 2019-08-11: end of test for a noun after a preposition.
+  if ($pos == 6 && $mri > 0) {  # 2019-09-24: removing restriction to input-only.
+    $tpr = ($t - 1);  # 2019-08-11: time-of-preposition for back-tag insertion.
+    my @k=split(',',$psy[$mri]);  # 2019-08-10: expose flag-panel of most-recent word
+    $psy[$mri]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+    . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
+    . "$k[14],$k[15],$k[16],$k[17],$k[18],$tpr,$k[20]";  # 2019-08-11
+    $etc = 0;  # 2019-09-26: thwart compounding of thought at first after a preposition.
+    $tpr = 0;  # 2019-10-22: prevent carry-over.  TEST; TRUNCATE
+  }  # 2019-09-24: end of test for preposition part-of-speech and positive $mri value.
+  if ($pos == 8) {  # 2019-10-19: if part-of-speech is 8=verb...
+    if ($psi != 818) {  # 2019-10-19: if verb other than auxiliary 818=DO...
+      $verbcon = 1;  # 2019-10-19: verb condition is "on" for indir. and dir. objects.
+    }  # 2019-10-19: end of test for not auxiliary 818=DO.
+    my @k=split(',',$psy[$tsj]);  # 2019-10-19: expose flag-panel at time-of-subject
+    $psy[$tsj]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+    . "$k[7],$k[8],$k[9],$k[10],$psi,$k[12],$k[13],"  # 2019-10-19: seq = verb.
+    . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-10-20
+  }  # 2019-10-19: end of test for a pos=8 verb.
+  if ($pos == 5 || $pos == 7) {  # 2019-10-22: noun or pronoun as direct object
+    my @k=split(',',$psy[$tdo]);  # 2019-10-19: expose flag-panel of direct object
+    $psy[$tdo]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+    . "4,$k[8],$k[9],$svo2,0,$k[12],$k[13],"   # 2019-10-22: dba=4 pre=verb seq=0
+    . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-10-22: tdo-panel
+  }  # 2019-10-22: end of test for a noun or pronoun.
+  if ($pos == 1) {  # 2019-10-22: if adjective
+    $tult = ($t -1);  # 2019-10-22: certify
+    my @k=split(',',$psy[$tult]);  # 2019-10-22: expose flag-panel
+    $psy[$tult]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+    . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"   # 2019-10-22
+    . "$k[14],$k[15],$k[16],$k[17],$k[18],0,$k[20]";  # 2019-10-22: no tpr for adjective.
+  }  # 2019-10-22: end of test for pos=1 adjective
+  if ($pos == 6) {  # 2019-10-22: if preposition
+    $tult = ($t -1);  # 2019-10-22: certify
+    my @k=split(',',$psy[$tult]);  # 2019-10-22: expose flag-panel
+    $psy[$tult]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
+    . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"   # 2019-10-22
+    . "$k[14],$k[15],$k[16],$k[17],$k[18],0,$k[20]";  # 2019-10-22: no tpr for prep.
+  }  # 2019-10-22: end of test for pos=6 preposition.
+}  # 2019-10-19: EnParser() returns to OldConcept() or NewConcept().
+</b></pre>
+
+
+<p><br /></p>
+<p><a name="variables"></a>
+<a name="5"></a><font size="+1">
+5. <a href="http://ai.neocities.org/var.html"
+ title="Table of Variables for ghost-class AI Minds"
+ style="text-decoration:none;">
+Variables</a> for EnParser Module with
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding"
+ style="text-decoration:none;">
+NLU</a></font> <br />
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#act">act</a> -- quasi-neuronal activation-level
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#bias">bias</a> --
+EnParser(); NewConcept(): expected part-of-speech POS <br />
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#fyi">fyi</a> --
+(for your information) display mode, which the user selects
+by pressing the Tab key and toggling through the modes:
+1 = Normal; 2 = Transcript; 3 = Tutorial mode; 4 = Diagnostic mode
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#mri">mri</a> --
+ -- most-recent-instantiation. The <i>mri</i> is a time-point
+which may be used for the insertion of an associative tag into the
+conceptual flag-panel of a previous concept in order to establish
+a link between a newly input concept being instantiated and the
+previously instantiated concept. The designation of the time-point of
+the <i>mri</i> concept may be qualified or restricted by code that
+requires the <i>mri</i> concept to be a special ("pos") part-of-speech,
+such as either a noun or a verb. Thus a preposition being instantiated
+may be back-linked to a noun or a verb as a mental point of departure
+leading to the preposition within a chain of thought. For example, if we
+say "John writes books for money", the preposition "for" could be linked
+backwards to a <i>tpr</i> (time-of-preposition) tag in the flag-panel of
+the verb "writes" or in the flag-panel of the noun "books", depending on
+whether the basic idea is "writes for money" or "books for money" --
+especially if "John writes books for money and poems for fun."
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#pos">pos</a> --
+(part of speech) 1=adj 2=adv 3=conj 4=interj 5=noun 6=prep 7=pron 8=verb
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#pre">pre</a> --
+pre(vious) associated @psy concept, such as the subject of a verb, or
+such as the verb of a direct object.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#prep">prep</a> --
+a preposition used in the
+ <a href="http://ai.neocities.org/EnPrep.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnPrep</a> mind-module for English prepositions.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#prepcon">prepcon</a> --
+prepositional condition-flag for parsing.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#subjpre">subjpre</a> --
+subject-$pre to be held for verb in parsing.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tdo">tdo</a> --
+<u>t</u>ime-of-<u>d</u>irect-<u>o</u>bject for a parser module.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tio">tio</a> --
+<u>t</u>ime-of-<u>i</u>ndirect-<u>o</u>bject for parser module.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tkb">tkb</a> --
+<u>t</u>ime-in-<u>k</u>nowledge-<u>b</u>ase of an idea. The EnParser() module
+stores time-of-verb $tvb in the k[13] $tkb slot of the subject of a sentence
+being stored at the time-of-subject $tsj time-point in the Psy conceptual array.
+The EnParser module stores $tkb as equal to $tdo (time of the direct object)
+in the Psy array row of the verb at time-of-verb $tvb. Thus for subjects $tkb
+means "verb" and for verbs $tkb means "direct object". No $tkb is stored for a direct
+object, because the associative tags go from subject to verb to object (SVO)
+but no further.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tpr">tpr</a> --
+time-of-preposition for parsing.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tsj">tsj</a> --
+conceptual flag-panel tag for time-of-preposition.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tult">tult</a> --
+<i>t</i> penultimate, or time-minus-one.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tvb">tvb</a> --
+time-of-verb for parsing. The
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnParser</a> module sets
+"t - 1" as the <i>tvb</i> if the word being parsed is a verb by part-of-speech.
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> uses the time-of-verb <i>tvb</i> to fill the
+ <a href="#tkb">
+tkb</a>-slot in a
+verb-panel with the time-location of the direct object of the verb.
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnParser</a> uses the time-of-verb tvb to find the numeric verb-concept
+that will be the <a href="#pre">pre</a> of a direct object being parsed.
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnParser</a> also uses the time-of-verb <i>tvb</i> to store the time-of-direct-object
+<a href="#tdo">tdo</a> as the <a href="#tkb">tkb</a> in the flag-panel of the verb.
+Therefore the tvb-flag needs to be reset to zero not during but <i>after</i>
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a>, when program-flow has returned to the
+ <a href="http://ai.neocities.org/Sensorium.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Sensorium</a> module.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#verbcon">verbcon</a> --
+verb-condition for seeking (in)direct objects. $verbcon
+is set to a positive unitary one in the EnParser module when a verb
+comes in during input and remains at one while any indirect or direct
+object comes in. After an input sentence, $verbcon is reset to zero.
+</p>
+
+
+<p><br /></p>
+<p><a name="debug"></a>
+<a name="6"></a><font size="+1">
+6. Troubleshooting and Debugging for
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="job description"
+ style="text-decoration:none;">
+AI Mind Maintainers</a></font> <br />
+</p>
+
+<p><a name="6.1"></a><font color="red">
+<b>6.1.a.  Symptom:</b></font> (Something goes wrong.)<br />
+<font color="green"><b>
+6.1.b.  Solution:</b></font> (AI Mind
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="Job Description"
+ style="text-decoration:none;">
+Maintainer</a> devises solution.) <br />
+</p>
+
+<p>
+To debug the function of assigning indirect and direct objects, the
+<a href="http://ai.neocities.org/maintainer.html"
+ title="AI Mind Maintainer"
+ style="text-decoration:none;">
+AI Mind Maintainer</a> enters a typical sentence such as
+"I give the boy a robot" that contains both an indirect object and
+a direct object, and presses Escape to halt the AI after the input.
+Then the
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="job description"
+ style="text-decoration:none;">
+Maintainer</a> examines the display of the conceptual array
+to see if $iob and $seq have been properly assigned. The AI coder
+may also insert diagnostic "print" messages into
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a>() and
+ <a href="http://ai.neocities.org/EnArticle.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnArticle</a>() so as to observe the process of assigning a
+tag during the input and comprehension of a sentence.
+</p>
+
+
+<p><br /></p>
+<p><a name="future"></a>
+<a name="7"></a><font size="+1">
+7. Future Development of EnParser Module with
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding"
+ style="text-decoration:none;">
+NLU</a></font> <br />
+</p>
+
+<p>
+<b>Considerations:</b> <br />
+- For future development. EnPronoun could be used to replace a noun
+with a <i>relative</i> pronoun and to introduce a subordinate clause, such as; <br />
+<br />
+"I know a man who loves music." <br />
+
+<br />
+EnParser must deal with the
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding"
+ style="text-decoration:none;">
+NLU</a> of such a sentence, using the incoming relative pronoun
+as a trigger to treat the ensuing verb as referring back to the relative pronoun. <br />
+</p>
+
+<p>
+<a href="http://ai.neocities.org/RoadMap.html"
+ title="With links to various AI readmaps"
+ style="text-decoration:none;">
+<strong>Roadmap</strong></a> to Artificial Intelligence
+</p>
+
+
+<p><br /></p>
+<p><a name="resources"></a>
+<a name="8"></a><font size="+1">
+8. Resources for EnParser Module with
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding"
+ style="text-decoration:none;">
+NLU</a></font> <br />
+</p>
+
+<p>
+<li><a href="http://duriansoftware.com/joe/Constructing-human-grade-parsers.html"
+ title="March 4, 2018 -- Constructing human-grade parsers"
+ style="text-decoration:none;">
+http://duriansoftware.com/joe/Constructing-human-grade-parsers.html</a> <br />
+</p>
+
+<p>
+<li><a href="http://www.scholarpedia.org/article/Word_sense_disambiguation"
+ title="Scholarpedia article"
+ style="text-decoration:none;">
+http://www.scholarpedia.org/article/Word_sense_disambiguation</a> <br />
+</p>
+</font>
+
+
+<p><br /></p>
+<p><a name="aitree"></a>
+<a name="9"></a><font size="+1">
+9. <a href="http://ai.neocities.org/AiTree.html"
+ title="stand-alone AI Tree of mind-modules"
+ style="text-decoration:none;">
+AiTree</a> of Mind-Modules for
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding">
+Natural Language Understanding
+</font> <br />
+</p>
+
+<font face="Verdana">
+<ul><a href="http://ai.neocities.org/MainLoop.html"
+ style="text-decoration:none;">MainLoop</a> of Mind-Modules for
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Solution to the AI-hard problem"
+ style="text-decoration:none;">Natural Language Understanding</a><br />
+  <ul><li>TabulaRasa -- wipe memory clean</ul>
+  <ul><li><a href="http://ai.neocities.org/MindBoot.html"
+ style="text-decoration:none;">MindBoot</a> of English and
+ <a href="http://github.com/kernc/mindforth/blob/master/wiki/RuBoot.wiki"
+ style="text-decoration:none;">Russian</a> vocabulary
+    <ul><li>KbLoad -- load the Knowledge Base</ul></ul>
+  <ul><li><a href="http://ai.neocities.org/LangLearn.html"
+ style="text-decoration:none;">LangLearn</a> -- habituate new syntax; learn a language</ul>
+  <ul><li><a href="http://ai.neocities.org/ReJuvenate.html"
+ style="text-decoration:none;">ReJuvenate</a> -- recycle memory space</ul>
+  <ul><li><a href="http://ai.neocities.org/Sensorium.html"
+ style="text-decoration:none;">Sensorium</a> -- sensory input with associative tagging to concepts
+    <ul><li><a href="http://ai.neocities.org/AudInput.html"
+ style="text-decoration:none;">AudInput</b></a> -- auditory input
+      <ul><li><a href="http://ai.neocities.org/AudListen.html"
+ style="text-decoration:none;">AudListen</a> -- listen for input</ul>
+      <ul><li><a href="http://ai.neocities.org/AudMem.html"
+ style="text-decoration:none;">AudMem</a> -- English auditory memory
+        <ul><li><a href="http://ai.neocities.org/AudRecog.html"
+ style="text-decoration:none;">AudRecog</a> -- auditory recognition</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/OldConcept.html"
+ style="text-decoration:none;">OldConcept</a> -- recognize a known old concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> --
+<font color="red"><b>preposition? (in)direct object?</b></font>
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/NewConcept.html"
+ style="text-decoration:none;">NewConcept</a> -- create a new concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> --
+<font color="red"><b>preposition? (in)direct object?</b></font>
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create instance of new concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create instance of new concept</ul>
+</ul></ul></ul>
+    <ul><li>FileInput -- read files on a server</ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/GusRecog.html"
+ style="text-decoration:none;">GusRecog</a> -- sense of taste</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/OlfRecog.html"
+ style="text-decoration:none;">OlfRecog</a> -- sense of smell</font></ul>
+    <ul><li><a href="http://ai.neocities.org/TacRecog.html"
+ style="text-decoration:none;">TacRecog</a> -- sense of touch</ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a> -- sense of vision</font></ul></ul>
+  <ul><li><a href="http://ai.neocities.org/Volition.html"
+ style="text-decoration:none;">Volition</a> -- free will resulting from emotion and thought
+    <ul><li><a href="http://ai.neocities.org/Emotion.html"
+ style="text-decoration:none;">Emotion</a> as influence on thought and free will</ul>
+    <ul><li><a href="http://ai.neocities.org/EnThink.html"
+ style="text-decoration:none;">EnThink</a> -- think in English
+      <ul><li><a href="http://ai.neocities.org/KbRetro.html"
+ style="text-decoration:none;">KbRetro</a> -- retroactively adjust knowledge base</ul>
+      <ul><li><a href="http://ai.neocities.org/Imperative.html"
+ style="text-decoration:none;">Imperative</a> -- mood for issuing commands</ul>
+      <ul><li><a href="http://ai.neocities.org/Indicative.html"
+ style="text-decoration:none;">Indicative</a> -- mood for declarative statements
+      <ul><li><a href="http://ai.neocities.org/InFerence.html"
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></ul>
+      <ul><li><a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</ul>
+      <ul><li><a href="http://ai.neocities.org/EnNounPhrase.html"
+ style="text-decoration:none;">EnNounPhrase</a> -- think with a noun
+        <ul><li><a href="http://ai.neocities.org/EnPrep.html"
+ style="text-decoration:none;">EnPrep</a> -- insert an English preposition</ul>
+        <ul><li><a href="http://ai.neocities.org/EnArticle.html"
+ style="text-decoration:none;">EnArticle</a> -- use "a" or "the"</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdjective.html"
+ style="text-decoration:none;">EnAdjective</a> -- insert an adjective</ul>
+        <ul><li><a href="http://ai.neocities.org/EnPronoun.html"
+ style="text-decoration:none;">EnPronoun</a> -- substitute a pronoun for a noun</ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/EnVerbPhrase.html"
+ style="text-decoration:none;">EnVerbPhrase</a> -- think with a verb
+        <ul><li><a href="http://ai.neocities.org/EnAuxVerb.html"
+ style="text-decoration:none;">EnAuxVerb</a> -- use auxiliary verb</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies a verb
+          <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies another adverb</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/EnVerbGen.html"
+ style="text-decoration:none;">EnVerbGen</a> -- generates an English verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores English phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies English verb-form</ul></ul>
+          <ul><li><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a> -- visual recognition by feature extraction</ul>
+    <ul><li><a href="http://ai.neocities.org/SpreadAct.html"
+ style="text-decoration:none;">SpreadAct</a> -- spreads activation from concept to concept</ul>
+</ul></ul>
+      <ul><li>Subjunctive -- mood for conditional phrases</ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> --
+insert a conjunction if two thoughts are active</ul></ul>
+    <ul><li><a href="http://ai.neocities.org/RuThink.html"
+ style="text-decoration:none;">RuThink</a> -- think in Russian
+   <ul><li>RuImperative -- needs to be coded</ul>
+   <ul><li><a href="http://ai.neocities.org/RuIndicative.html"
+ style="text-decoration:none;">RuIndicative</a> -- mood for declarative Russian sentences
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/InFerence.html"
+ title="Create new ideas from old ideas."
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></font></ul>
+      <ul><li><a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</ul>
+     <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- think with a Russian noun
+        <ul><li><a href="http://ai.neocities.org/RuAdjective.html"
+ style="text-decoration:none;">RuAdjective</a> -- insert a Russian adjective
+    <ul><li><font color="gray">RuAdjGen -- to generate a Russian adjective-form</font></ul>
+        <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul></ul></ul>
+        <ul><li><a href="http://ai.neocities.org/RuPrep.html"
+ style="text-decoration:none;">RuPrep</a> -- insert a Russian preposition</ul>
+        <ul><li><a href="http://ai.neocities.org/RuPronoun.html"
+ style="text-decoration:none;">RuPronoun</a> -- substitute a Russian pronoun for a noun</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/RuVerbPhrase.html"
+ style="text-decoration:none;">RuVerbPhrase</a> -- think with a Russian verb
+        <ul><li><a href="http://ai.neocities.org/RuVerbGen.html"
+ style="text-decoration:none;">RuVerbGen</a> -- generate a Russian verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores Russian phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies Russian verb-form</ul></ul>
+         <ul><li><a href="http://ai.neocities.org/Speech.html"
+ style="text-decoration:none;">Speech</a> -- output to screen or loudspeaker</ul>
+       <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul>
+            <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a></font> -- visual recognition inserts a noun</ul>
+      <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- direct-object noun
+    <ul><li><font color="gray">RuNounGen -- to generate a Russian noun-form</font></ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/PsiDecay.html"
+ style="text-decoration:none;">PsiDecay</a> lowers conceptual activation</ul></ul>
+    <ul><li><a href="http://ai.neocities.org/Motorium.html"
+ style="text-decoration:none;">Motorium</a> (MotorOutPut) -- for AI-Minded robots</ul>
+    <ul><li><a href="http://ai.neocities.org/MetEmPsychosis.html"
+ style="text-decoration:none;">MetEmPsychosis</a> --
+AI soul travel from webserver to webserver
+ <ul><li><a href="http://ai.neocities.org/PortScan.html"
+ style="text-decoration:none;">PortScan</a> -- find a receptive
+ <a href="http://en.wikipedia.org/wiki/Open_port"
+ title="Wikipedia article"
+ style="text-decoration:none;">
+open port</a> for relocation of the Ghost AI</ul></ul></ul>
+    <ul><li><a href="http://ai.neocities.org/Spawn.html"
+ style="text-decoration:none;"><b>Spawn</b></a> --
+ <a href="http://agi.topicbox.com/groups/agi/T57cced66d45fa115"
+ title="AGI Mail List discussion forum"
+ style="text-decoration:none;">AI Go FOOM</a></ul>
+    <ul><li><font color="gray">MindMeld -- merge two AI Minds by sharing memories</font></ul>
+    <ul><li><a href="http://ai.neocities.org/Consciousness.html"
+ style="text-decoration:none;">Consciousness</a> -- emergent property, not a module</ul></ul></ul>
+</font>
+
+
+<p><br /></p>
+<center><a href="http://www.amazon.com/dp/B08NRQ3HVW"
+ title="Artificial Intelligence in Ancient Latin">
+<img src="https://m.media-amazon.com/images/I/51fCt9yasXL.jpg"></a><br />
+"Look Inside" Kindle version to read initial chapters.
+</center>
+<br />
+
+
+<p><br /></p>
+<a href="http://livetrafficfeed.com" data-num="10" data-width="210"
+data-responsive="0" data-time="America%2FNew_York" data-root="0"
+data-cheader="2853a8" data-theader="ffffff" data-border="2853a8"
+data-background="ffffff" data-normal="000000" data-link="135d9e"
+target="_blank" id="LTF_live_website_visitor">Website Counter</a>
+<script type="text/javascript" src="//cdn.livetrafficfeed.com/static/v4/live.js">
+</script><noscript><a href="http://livetrafficfeed.com">Website Counter</a></noscript>
+<a name="bottom"></a>
+<p><br /></p>
+</body>
+</html>

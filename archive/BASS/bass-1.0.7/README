@@ -1,0 +1,431 @@
+BASS, The Bulk Auditing Security Scanner Version 1.0
+====================================================
+Copyright 1998-1999 Liraz Siri, All rights reserved.
+
+Licensing: Please see the file called LICENSE
+Why / How: Please see the file called IAP-MEMORANDUM
+
+Table of Contents:
+=================
+1) Features
+2) Setup and configuration
+3) Running the scanner
+4) Recovery
+5) Customization
+6) Vulnerability checklist
+7) Log Format
+
+============
+1) Features:
+============
+
+* "mission critical" reliability.
+   goal: scanner will monotonicly process a several million long host list
+         over a period of several weeks or months, surviving broken
+         routers, system shutdowns and even the occasional unfriendly
+         sysadmin.
+  - robust fail-safe, timeout scanning architecture, to prevent
+    the scanner from hanging on any particular host.
+  - crash / host shutdown recovery. (automatic with portacelo)
+  - care is taken to minimize false negatives and false positives.
+
+* efficient. (scanning the net on schedule)
+  goal: convert all available bandwidth to pure scanning "power".
+  - multi-threaded (fork-model) dynamic scheduler:
+
+    The scheduler is supplied with goal (in a jobs-per-minute metric)
+    and will dynamicly adjust the number of scanning agents
+    to adjust for changes in available bandwidth,
+    network congestion, etc.
+
+    Using the scheduler, users can determine in advance how much time
+    the scanner has to complete a scan.
+
+  - test for only the most common vulnerabilities.
+
+    factors which can influence our vulnerability-test diversity:
+    1) resources: (time, resources)
+    2) audited network size
+
+    diversity = (available_time * available_resources) /
+                audited_network_size;
+
+  - vulnerabilities get grouped into service classes (CGI, RPC, general).
+    when a service class is determined unavailable, all vulnerability tests
+    are skipped as a group. (this may seem obvious, but many scanners
+    don't implement this simple behavior)
+
+  - small memory / CPU footprint.
+
+* sneaky.
+  - coward 'mode':
+    begin scanning when the host system is idle, pause when anyone
+    logs on, and resume when they log off.
+
+  - add in portacelo for extra-sneakiness (hiding processes, binaries,
+    scan results)
+        
+* extensible. (new vulnerability tests are easy to add)
+* special facilities to support CGI and RPC vulnerabilities.
+* tests for up to 18 common vulnerabilities
+
+===========================
+2) Setup and configuration:
+===========================
+
+There really isn't much to configure, unless you would like to
+limit the types of vulnerabilities BASS checks for during a scan,
+and this is hardwired into the binary so you have to edit a header
+file or two and recompile BASS. (Crude, but I wasn't going to waste
+any time implementing features we didn't really need)
+
+Assuming you have a copy of the source code, there are currently three
+classes of vulnerability test hooks you might want to activate / deactivate.
+Just comment out what you don't like.
+
+cgihooks.h - the cgi_hooks structure.
+rpchooks.h - the rpc_hooks structure.
+hooks.h - the scan_hooks structure. (o'ma gud, it's inconsistent!)
+
+You can't miss them.
+
+Just type "make" to compile BASS and "make install" to copy it to the
+default distribution directory (where we keep our logs and recovery
+cookie), which you can change by replacing BASS_DISTDIR in the Makefile.
+
+Our development and target OS was Linux, so you might experience minor
+problems compiling BASS on a different flavor of Unix. Note that the
+code is not Linux specific in anyway I am aware of (it only uses some
+very standardized library facilities) so the object files should
+compile right out of the box. If they a few minor hacks should do the
+trick.
+
+Linker flags, external libraries and so forth may vary. Check the
+Makefile comments for details. 
+
+If someone sends in any patches, I'll include them immediately
+in the new version.
+
+Oh, and there's no chance in hell you'll get this to compile under various
+out-of-the-box Win32s. I consider this a feature. Even if it did, what are
+the chances a Microsoft box has of surviving 5 minutes into the scan?
+If you demand Win32 support anyway, I suggest you first calm down a
+bit (playing solitaire helps), and get Cygnus support packages for
+your OS. $hit, I hear these fellas are turning Windows into more then
+just an expensive cutting-edge blue paperweight these days.
+
+Send me a message if you get lucky.
+
+====================
+3) Running the scan:
+====================
+
+Running the scanner is very straightforward.
+
+Note: BASS needs root privileges to access the low level ICMP
+      interface that allows it to \"ping\" hosts for availability.
+      You _may_ use BASS as a non root user, but this will disable pings,
+      harming the efficiency of your scan, which will run slower.
+
+If you do do no run BASS as root, BASS will show you the above warning.
+
+Because the scanner runs as root, special attention has been applied during
+development to avoid common misimplementation flaws (bufferoverflows
+for example) which could compromise the scanning host. But you don't have
+take my word for it, read the source!
+
+Usage: BASS [options] Hostlists:
+-l file       Log file [/default/log/file]
+-t seconds    Generic timeout definition [#default_timeout]
+-j jpm        Jobs per minute [#JPM]
+-c            Coward mode [on / off]
+-v            Verbose, log verbose events
+
+Most of the options are optional, which means they are only for overriding
+BASS's reasonable defaults (displayed between the square brackets []).
+
+Two of the most significant options are the JPM rate (the dynamic scheduler's
+per minute scanning goal) and the short-circuit timeout definition. You
+should experiment with these and find whatever works best for your
+computer-network configuration.
+
+Hostlists are one or more files with the lists of hosts we are going
+to scan (thats what they call a no-brainer). You cannot run a BASS
+session (for the first time) without at least one of them. The format
+is very simple, one address at a time, line by line, no scribbling, no
+whitespace. The scanner allows either IP's or DNS hostnames, but we
+recommend a clean IP list whenever possible to save the scanning host
+the extra load (and wait) of DNS lookups.
+
+A well behaved sample hostfile would look like this:
+208.212.172.33
+208.212.172.34
+208.212.172.39
+208.212.172.56
+208.212.39.1
+194.90.1.3
+195.47.3.1
+[ 40 million addresses, snipped... ]
+
+If coward mode is activated, the BASS will monitor it's local host 
+(every 1-3 seconds) for user activity and run only when the system is
+idle (idle users or no users at all). If during the scan a user logs in or
+wakes up, BASS will immediately shutdown all of it's scanning threads,
+and wait for the system to become idle again. Combined with portacelo
+techniques (which hide and protect the scheduler process from signals, and
+are *not* part of this distribution) the scan can be cloaked almost
+completely from the prying eyes of localhost users. Users have not yet become
+accustomed to this sort of shy behavior in software, so when they
+finally notice something funny is going on, they usually misinterpret
+it's source. It takes a pretty paranoid sysadmin to suspect an equally 
+paranoid invisible ghost program is sneaking around his system.
+
+============
+4) Recovery:
+============
+
+When a BASS scan begins, BASS creates a recovery cookie file,
+and will save it's state (command line optionals / defaults) and
+progress every several minutes. If the scanner is terminated for any reason,
+(a fatal signal, power failure, system crash, shutdown...) re-executing
+BASS with _no_ arguments will restore it's previous state and continue
+the scan from where it had left off.
+
+To automate recovery from system failure, you can execute BASS this way
+from your system initialization scripts. If there is nothing to recover from
+(I.e, a scan has either finished or has not yet begun), BASS will
+print a message stating the fact, and exit.
+
+================================================
+6) Vulnerability checklist (as of version 1.0.7):
+================================================
+
+General: bind           CA-98.05
+         wu_imapd       CA-98.09
+         innd           CA-97.08
+         qpopper        CA-98.08
+
+RPC: rpc.mountd         CA-98.12
+     tooltalk           CA-98.11
+
+CGI: wwwcount phf php handler compas faxsurvey webdist ews glimpse
+     info2www webgais websendmail       (see respective advisories)
+
+Last updated: Nov 11 1998
+
+================
+7) Customization
+================
+
+BASS was developed with extensibility in mind. Unfortunately, it doesn't
+(currently) implement any sort of loadable module support for third
+party extensions, so extensions have to be staticly built into the
+compiled scanner binary. Don't worry, with such a small codebase, this is
+really a Good Thing.
+
+New test hooks are the most likely extension candidates, and as such
+are the most strongly supported.
+
+Briefly, I'll describe how you would go about adding a new test hook,
+so you can save some time going through the source code yourself.
+
+First, classify your new vulnerability into either the CGI, RPC or
+other category. These correspond to the cgihooks.h, rpchooks.h and
+hooks.h header files, respectively, which contain a hook structure
+array.  The hook structure simply contains a pointer to a function
+(the test handler), and it's name (a string constant). The format is
+very simple, read the hook header files for an example.
+
+A handler's prototype is the same for all three test categories:
+int foobar_handlehost(addr, host, timer)
+        struct sockaddr_in *    addr;  /* a filled-in sockaddr_in record:
+                                          used with tconnect() */
+        char *                  host;  /* the name of our host:
+                                          used with log() */
+        int                     timer; /* our argument for the timeout-circuit
+                                          socket wrappers (see network.h) */
+
+A well behaved handler most obey several conventions:
+1) Honor the timeout-circuit.
+
+   Instead of using the regular socket API, use BASS's wrappers
+   (use our handler's timer argument for these, that's what it's there for):
+
+   /* tconnect, wrapped connect with a timer */
+   int tconnect(int sockfd, struct sockaddr *serv_addr, int addrlen, int timer)
+
+   /* writes to a socket as much as it can within the timeout, returns number
+      of bytes sent or -1 if anything really annoying happens it can't
+      block and wait out. assume sockfd is blocking */
+   int network_twrite(int sockfd, void *buf, int buf_size, int timer)
+
+   /* Get a newline terminated string from fd, of maximum size bytes,
+      wrapped with a timer of course. we return -1 on error, and the number
+      of characters we received [_not_ including null characters which we
+      ignore] on success, or timeout. network_gets assumed fd is blocking */
+   int network_gets(int fd, char *buf, int size, int timer);
+
+2) Don't trust input from an audited host.
+
+   Don't compromise our security, by letting a server buffer overflow
+   the scanner, or anything equally devious. (use your head)
+
+3) Follow the logging conventions.
+
+   Use the log() function. Follow the formatting conventions:
+   "$vulnerability_name - [$host] $MSG".
+
+   $MSG should state whatever you would like a human/machine reader/parser to
+   know about the service implementation you are testing for vulnerabilities:
+   vulnerable/secure|immune, version, OS (if available)
+
+   It should be unambiguous, it should be easy to parse
+   (I.e, `grep vulnerable result-file > only-vulnerable-results`).
+
+   For more details see the code.
+
+4) if ($error) return -1 else return >= 0;
+   If this isn't clear, look at some examples.
+
+Special CGI facilities:
+
+If you're writing a new CGI vulnerability-test handler, you may find
+this is very easy. CGI vulnerabilities tests are often very similar
+to each other (connect to the web server, make a request, strip headers,
+judge response), so to make things easier, I've offer these convenience
+routines:
+
+int cgi_exec_uname(char *cgi_alias, char *request, struct sockaddr_in *addr,
+                   char *host, int timer)
+
+cgi_exec_uname() sends a request (the request argument) which is supposed
+to try and trick the web server into running uname(1) (See cgi.h *_REQUEST
+macros for an example). Ussually, if a program is executed by a CGI,
+it's output will be to the CGI's stdout, and will show up in it's response,
+which we will check for anything that looks like it's coming from
+`uname` (we strstr(3) for OS names).
+
+We return 1 if uname output was detected, 0 when it is non detected,
+and -1 on an error.
+
+We need the 'cgi_alias' argument because we 
+**take care of logging ourselves***.
+
+int cgi_evaluate_potential(char *cgi_alias, char *request,
+                           struct sockaddr_in *addr, char *host, int timer);
+
+cgi_evaluate_potential() will check for the presence of a CGI script
+on a web server. This routine should be used as a weaker alternative
+to cgi_exec_uname() when the program we trick the vulnerable CGI into
+running does not show up in it's reply.
+
+This only detects presence, not vulnerability, although in many
+cases this is enough.
+
+We return 1 when the CGI is present, 0 if otherwise, and -1 on error.
+
+int cgi_makerequest(char *request, char **response, int max_response_size,
+		    int max_response_lines, struct sockaddr_in *addr, 
+		    int timer)
+
+cgi_makerequest() assumes you want to "GET /cgi-bin/$request"
+I find this behavior silly today, but it isn't too bad, since in my
+great ignorance, I am not aware of any common CGI vulnerabilities
+which only work under POST or ignore the /cgi-bin/ convention.
+
+If you _must_ make an HTTP request yourself (cgi_exec_uname() doesn't work,
+and cgi_evaluate_potential() isn't enough), use cgi_makerequest(). The
+prototype is ugly, but isn't uglier then implementing it yourself.
+
+Let's start with a bit of real code (from cgi.c):
+if(cgi_makerequest(request, &cgi_response, CGI_RESPONSE_MAXLEN,
+		    CGI_DEFAULT_MAX_LINES, addr, timer) < 0) return -1;
+
+The 'cgi_response' (char **) argument is where we put the response. You can
+have the routine allocate what it needs by itself, by setting cgi_response
+to NULL. The server's response does *not* include the server's headers,
+so you can count on the routine to parse them into oblivion.
+
+We limit the length of the response (CGI_RESPONSE_MAXLEN), so we don't hang,
+buffer overflow, or gobble up all available memory, when a server sends us
+a Really Big or infinite (this is never *supposed* to happen) response.
+
+Addr is where you expect us to connect, and timer is the standard
+timeout circuit argument.
+
+Take a look at cgi.c examples for more info.
+
+Special RPC facilities:
+
+/* Modest timer wrap for standard rpc functions */
+CLIENT *tclnttcp_create(struct sockaddr_in *raddr, unsigned long prog,
+			unsigned long vers, int *sockp, unsigned int sendsz, 
+		        unsigned int recvsz, int timer)
+
+When adding an RPC hook, please specify the RPC number of the service
+you're testing for vulnerability. Since we list available RPC services through
+portmap, your handler won't be called if the service is unavailable. Don't
+waste any time doublechecking this yourself.
+
+==================
+=== LOG FORMAT ===
+==================
+
+BASS reports vulnerabilities to it's log files as a human readable line of
+text. Unless you specificly asked for veborseness (with the -v option)
+you won't get alot of useless information. Filtering the logs for
+any reports of invulnerable services is as easy as
+`grep vulnerable result-file > vulnerable-only-result-file`;
+
+Formats:
+(you really shouldn't have to read source code for this kind of thing)
+
+Vulnerable:
+==========
+
+ [DAEMON-hooks]:
+  "bind - [$addr] DNS server supports IQUERY (Version denied)"
+  "bind - [$addr] DNS server supports IQUERY ($version)"
+  "wu_imapd - [$addr] vulnerable (bufferoverflowed) version ($version)."
+  "wu_imapd - [$addr] SHOULD be vulnerable. no overflow ($version)."
+  "wu_imapd - [$addr] definately immune server. version ($version)."
+  "innd - [$addr] vulnerable version ($version)."
+  "innd - [$addr] immune version ($version)."
+
+  "qpopper - [$addr] vulnerable (bufferoverflowed) version ($version)."
+  "qpopper - [$addr] SHOULD be vulnerable. no overflow. version ($version)."
+ 
+ [RPC-hooks]:
+  "tooltalk - [$addr] vulnerable tooltalk version."
+  "tooltalk - [$addr] tooltalk detected. vulnerable???."
+
+  "rpc.mountd - [$addr] likely vulnerable version."
+
+ [CGI-hooks]:
+  "(handler|campas|faxsurvey|webdist) - \
+   [$addr] vulnerable version detected ($uname)."
+
+  "(ews|glimpse|info2www|webgais|websendmail) - \
+   [$addr] potentially (commonly) vulnerable cgi detected."
+
+  "wwwcount - [$addr] probably vulnerable version `$version'"
+  "phf - [$addr] vulnerable version ($uname)"
+  "php - [$addr] detected vulnerable (bufferoverflowed) cgi."
+
+Not vulnerable:
+==============
+
+ [DAEMON-hooks]:
+  "qpopper - [$addr] definately immune server. version ($version)."
+
+ [CGI-hooks]:
+  "($cgi_any) - [$addr] immune/dummy cgi version."
+
+ "wwwcount - [$addr] no version returned, probably immune."
+ "wwwcount - [$addr] immune version `$wwwcount_version'"
+
+ "php - [$addr] probably immune/dummy cgi version."
+ "phf - [$addr] definately patched/immune version"
+
+ [RPC-hooks]:
+ "rpc.mountd - [$addr] service running, probably immune."
