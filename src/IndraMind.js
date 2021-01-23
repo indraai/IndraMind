@@ -1358,11 +1358,38 @@ function Awareness() {
   // insert awareness here;
 };
 
+// sub for memory
+function Memory() {
+  // insert memory here
+}
+// sub for state
+function State() {
+  // insert state management here
+}
+
+// sub for link
+function MindLink() {
+  Security('MindLink');
+  // assign with guest privileges
+  // insert mind link management here
+}
+
+// sub for logs
+function MindLog() {
+  Security('MindLog');
+  // assign with guest privileges
+  // insert Mind management here
+}
+
 function MindBoot() {  // http://ai.neocities.org/MindBoot.html
+  Security('MindLog');
+  Memory();
+  State();
   dob = new Date();  // 2018-01-24: date-of-birth in competition for old AI.
   Creativity();
   Awareness();
   Imagination();
+
 
   t=0
   HCI();  // 2018-01-18: Human-Computer Interface
@@ -1375,17 +1402,6 @@ function MindBoot() {  // http://ai.neocities.org/MindBoot.html
   t++;pho="R"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
   t++;pho="A"; audpsi=93; audMemory[t] = new audNode(pho,0,audpsi);
   psi=93; pos=5; dba=1; num=1; mfn=1; pre=800; seq=0; tkb=0; rv=26; KbLoad();
-
-  t++;
-
-  // I -- for SelfReferentialThought
-  t++;pho="I"; audpsi=701; audMemory[t] = new audNode(pho,0,audpsi);
-    tru=8; psi=701; pos=7; dba=1; num=1; mfn=0; pre=0;seq=800; tkb=24; rv=21; KbLoad();
-  t++;
-  // AM -- 1st person singular of 800=BE
-  t++;pho="A"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);
-  t++;pho="M"; audpsi=800; audMemory[t] = new audNode(pho,0,audpsi);
-  psi=800; pos=8; dba=1; num=1; mfn=0; pre=701;seq=501; tkb=30; rv=23; KbLoad();
 
   t++;
 
@@ -3407,7 +3423,9 @@ function MainLoop() {  // http://ai.neocities.org/MainLoop.html
   Sensorium();  // 2018-01-18:
   brain = true;
   Volition(); // 2018-01-15: in conformance with modern ghost.pl AI
-  if (life == true) {
-    TID=window.setTimeout("MainLoop();",10000);
-  }
+  MindLog('MainLoop');
+  // if (life == true) {
+  //   TID=window.setTimeout("MainLoop();",10000);
+  // }
+
 }  // 2018-01-20: End of MainLoop.
