@@ -308,8 +308,6 @@ sub motorium;    # 2015apr25 PbEx5e p. 351: Forward declaration.
 sub NewConcept;  # 2015may28 PbEx5e p. 351: Forward declaration.
 sub NounPhrase;  # 2016feb11: for nouns and pronouns in a thought.
 sub OldConcept;  # 2016jan14 PbEx5e p. 351: Forward declaration.
-sub RuAudMem;    # 2017jun17: auditory memory module for storing engrams.
-sub RuThink;     # 2016jan24: Selected dynamically by $hlc flag.
 sub Sensorium;   # 2016mar26: sensory input module
 sub TabulaRasa;  # 2016jan25: Called from MainLoop as in MindForth
 sub VisRecog;    # 2015apr26 PbEx5e p. 351: Forward declaration.
@@ -597,7 +595,6 @@ sub InStantiate() {  #
   . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
   . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]"; # 2019-08-01: expanded panel.
   @k=split(',',$psy[$tvb]);  # 2019-06-13: expose flag-panel at $tvb
-  if ($b2 eq "Ш" && $b1 eq "Ь") { $k[7] = 2; } # 2019-06-13: 2nd person Russian verb.
 # if ($moot == 0) {  # 2019-10-21: TEST; TRUNCATE
 #  $psy[$tvb]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
 #  . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
@@ -627,30 +624,6 @@ sub InStantiate() {  #
     $jux = 250;  # 2016jun17: set $jux for next instantiand;
     $prejux = 0;  # 2016jun17: Reset for safety.
   }  # 2016jun17: end of post-instantiation test;
-  if ($hlc == 3) {     # 2018-09-27: only for Russian input
-    if ($seqneed == 8 && (ord $pho) == 32) {
-      if ($pov > 1) {   # 2017-09-10: only during input
-        $tvb = ($t - 1);  # 2019-06-09: TEST; REMOVE
-        $t++;  # 2017-09-10: increment internal AI time "t"
-        $audpsi = 1800;  # 2017-09-10: by default assume provisional 1800=BE verb.
-        $ear[$t] = "$pho,0,$audpsi";     # 2017-09-10: store verb 800=BE
-        $psi = 1800;  # 2017-09-10: set the concept to 800=BE.
-        $prevpsi = 1800;  # 2017-09-10: to enable cancellation of be-verb
-        $pos = 8;    # 2017-09-10: set the part-of-speech $pos to 8=verb.
-      # 2019-10-23 Next code is the main instantiation of Russian words.
-        $psy[$t] = "$tru,$psi,$hlc,$act,$mtx,$jux,$pos,"
-        . "$dba,$num,$mfn,$pre,$seq,$tgn,$iob,"
-        . "$tkb,$tia,$tcj,$tdj,$tdv,$tpr,$rv";  # 2019-08-01: expanded flag-panel.
-        $t++;  # 2017-09-10: increment internal AI time "t"
-      }  # 2017-09-10: end of test for input-mode only.
-    }  # 2017-09-10: test for 32=SPACE
-    if ($prevpsi == 1800 && $seqneed == 5) {  # 2017-09-10: if noun is expected...
-      if ($pos == 8)  {  # 2017-09-10: if real verb follows pseudo-be-verb
-        $seqneed = 8;  # 2017-09-10: the seq to the real verb is needed
-        $prevpsi = 0;  # 2017-09-10: reset after using.
-      }  # 2017-09-10: end of test for a real verb
-    }  # 2017-09-10: end of test
-  }  # 2017-09-10: end of test for Russian human-language-code $hlc
   if ($pos == 5) { $usx = $psi };  # 2018-09-03: for transfer to EnArticle()
   if ($pos != 5) { $usx = 0 };  # 2018-09-03: transfer only noun-concepts.
   if ($pos == 5 || $pos == 7) { $prevtag = $psi };  # 2016mar12: after subject
@@ -822,60 +795,6 @@ sub EnParser() {  #
 }  # 2019-10-19: EnParser() returns to OldConcept() or NewConcept().
 
 
-sub RuParser() {  #
-  if ($b2 == "Ш" && $b1 == "Ь") { $dba = 2; } # 2019-06-10: recognize second person
-  InStantiate(); # 2019-06-09: instantiate a concept and then work changes on it below.
-  $act = 48;  # 2016apr28: an arbitrary activation for InStantiate()
-  $bias = 5;  # 2016feb24: Expect a noun until overruled.
-  if ($fyi > 2) {  # 2016feb24: if mode is Diagnostic
-  }  # 2016feb24: end of test for Diagnostic or Tutorial mode.
-  if ($tsj > 0 && $tvb > 0 && $tdo > 0) {  # 2019-06-09: if SVO input complete...
-    my @k=split(',',$psy[$tsj]);  # 2019-06-09: expose flag-panel of subject.
-    $psy[$tsj]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6]," # insert tvb as tkb
-    . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
-    . "$tvb,$k[15],$k[16],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01: panel.
-    @k=split(',',$psy[$tvb]);  # 2019-06-13: expose flag-panel of verb.
-    $psy[$tvb]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6]," # insert tdo as tkb
-    . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
-    . "$tdo,$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01: panel.
-    $tdo = 0;  # 2019-06-09: reset for safety.
-    $tvb = 0;  # 2019-06-09: reset for safety.
-  }  # 2019-06-09: end of test for completion of subject-verb-object input.
-  if ($pos == 5) { $bias = 8 }  # 2016feb24: after noun, expect verb.
-  if ($pos == 7) { $bias = 8 }  # 2016feb24: after pronoun, expect verb.
-  if ($pos == 8) { $bias = 5 }  # 2016feb24: after verb, expect noun
-  if ($pos == 6) { $prepcon = 1; $tpp = $tult }  # 2017-09-17: prepare for noun.
-  if ($pos == 5 || $pos == 7) {  # 2017-09-17: if (pro)noun follows preposition...
-    if ($verbcon == 0) { $tsj = ($t - 1) }  # 2019-06-08: BEFORE a verb
-    if ($verbcon == 1) { $tdo = ($t - 1) }  # 2019-06-08: AFTER a verb
-    if ($prepcon == 1) {  # 2017-09-17: if preposition-condition is on...
-      my @k=split(',',$psy[$tpp]);  # 2017-09-17: expose flag-panel of preposition;
-      $pre = $k[1];  # 2017-09-17: Let $pre briefly be the preposition.
-      $psy[$tpp]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
-      . "$k[7],$k[8],$k[9],$k[10],$psi,$k[12],$k[13],"
-      . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01: panel
-      @k=split(',',$psy[$tult]);  # 2017-09-13: expose flag-panel of obj of prep.
-      $psy[$tult]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
-      . "4,$k[8],$k[9],$pre,0,$k[12],$k[13],"
-      . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01: panel
-      $prepcon = 0;  # 2017-09-17: Reset to prevent carry-over.
-    }  # 2017-09-17: end of test for a positive $prepcon.
-    if ($prepcon == 0) {  # 2019-06-08: if there is no preposition
-      if ($verbcon == 1) {  # 2019-06-08: if a verb has already come in...
-        my @k=split(',',$psy[$tvb]);  # 2019-06-06: expose flag-panel of verb
-        $psy[$tvb]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
-        . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"  # 2019-08-01: insertion?
-        . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";   # 2019-08-01
-      }  # 2019-06-08: end of test for $verbcon.
-    }  # 2019-06-08: end of test for zero "prepcon".
-  }  # 2017-09-17: end of test for a noun or pronoun.
-  if ($pos == 8) {  # 2019-06-06: if part of speech is Russian 8=verb...
-    $verbcon = 1;  # 2019-06-06: verb-condition is "on" for ind. & dir. objects.
-    $subjpre = 0;  # 2019-06-06: Reset for safety.
-  }  # 2019-06-06: end of test for a pos=8 Russian verb.
-}  # 2019-06-09: RuParser() returns to OldConcept() or NewConcept().
-
-
 sub KbRetro() {  #
   if ($kbzap == 432 || $kbzap == 404) {  # 2018-06-26: if 432=YES or 404=NO...
     if ($kbzap == 404) {  # 2018-06-26: 404=NO;
@@ -969,17 +888,6 @@ sub OldConcept() {  #
 #   }  # 2017-09-22: end of test for $moot suppressing associative tags
 #   }  # 2019-10-21: end of test for $moot suppressing associative tags
   }  # 2016feb10: end of test for English human-language-code
-  if ($hlc == 3) {     # 2018-09-27: test for governing human-language-code
-    $psi = $oldpsi;  # 2016feb24: from MindForth.
-    if ($pov == 2) {  # 2016apr01: during a pov "dual" conversation...
-      if ($oldpsi == 245) { $prepgen = 8 }  # 2016apr01: if "Where?" call RuPrep()
-      # 2017-09-24: Above line needs to test not for English but for Russian.
-      if ($oldpsi == 1707) { $psi=1701; $num=1; $dba=1; $rv = 0 } #2016apr01: ТЫ --> Я
-      if ($oldpsi == 1701) { $psi=1707; $num=1; $dba=1; $rv = 0 } #2016apr01: Я --> ТЫ
-      if ($oldpsi == 1731) { $psi=1737; $num=2; $dba=1; $rv=0 }   #2016apr01: МЫ --> ВЫ
-    }  # 2016mar27: end of test for other person communicating with the AI.
-    RuParser();   # 2017-09-13: In preparation to call InStantiate().
-  }  # 2016feb24: end of test for Russian human-language-code
   $audnew = 0;  # 2016feb09: Reset for sake of $rv of next input word.
   $audpsi = 0;  # 2017-03-15: From MindForth -- prevent carry-over.
   $audrec = 0;  # 2018-09-16: prevent carry-over.
@@ -1001,9 +909,6 @@ sub NewConcept() {  #
   if ($hlc == 1) {     # 2018-09-27: test for governing human-language-code
     EnParser(); # 2017-09-13: In preparation to call InStantiate().
   }  # 2016jan22: end of test for English human-language-code
-  if ($hlc == 3) {     # 2018-09-27: test for governing human-language-code
-    RuParser(); # 2017-09-13: In preparation to call InStantiate().
-  }  # 2016feb24: end of test for Russian human-language-code.
   if ($fyi > 2) {  # 2016feb08: if mode is Diagnostic
   }  # 2016feb07: end of test for Diagnostic or Tutorial mode.
   if ($pos == 5) { $nucon = 1; $qusub = $psi }  # 2017-09-22: send $nxt into SpreadAct()
@@ -1542,19 +1447,32 @@ sub Sensorium() {  #
   $pov = 1;  # 2017-12-08: during thinking; prevents duplicate line of display.
 } # 2019-10-23: Sensorium() module returns to MainLoop.
 
+sub Memory() {}
+sub State() {}
+sub Creativity() {}
+sub Imagination() {}
+sub Awareness() {}
 
 sub MindBoot() {  #
   $dob = $birth;  # 2017-03-30: isolated from dynamic $birth value.
-  $t = 0;  # 2015apr26: bootstrap stretches over time "$t".
+  Security('MindBoot');
+  Memory();
+  State();
+  Creativity();
+  Imagination();
+  Awareness();
+
   print "MindBoot loads the knowledge base... ";  # 2019-01-25
   print "TAB to change display-mode. \n";  # 2019-01-25:
 
+  $t = 0;  # 2015apr26: bootstrap stretches over time "$t".
   # I -- for SelfReferentialThought; hard-coded knowledge-base; 2018-09-08
-$t++; $ear[$t] = "I,0,701";    # 2018-09-08
+  $t++; $ear[$t] = "I,0,701";    # 2018-09-08
+
   $tru=8; $psi=701; $hlc=1; $pos=7; $dba=1; $num=1; # 2018-09-30
   $seq=800; $tkb=9; $rv=6; KbLoad(); # 2018-09-08: flag-panel order
 
-$t++;  # 2020-1-12: time point
+  $t++;  # 2020-1-12: time point
 
   # AM -- 1st person singular of 800=BE; hard-coded knowledge-base; 2018-09-08
 $t++; $ear[$t] = "A,0,0";    # 2018-09-08
@@ -5285,12 +5203,6 @@ sub EnAdverb() {  #
   # print "\n EnAdverb: adverbact= $adverbact \n";  # 2019-03-02: TEST; REMOVE
 } # 2019-03-02: EnAdverb() returns to EnNounPhrase() module.
 
-sub RuAdverb() {  #
-  # 2019-06-05: stub only; needs full implementation.
-  # print "\n RuAdverb: adverbact= $adverbact \n";  # 2019-06-05: TEST
-} # 2019-06-05: RuAdverb() shall return to RuNounPhrase() module.
-
-
 sub EnAdjective() {  #
   my @k=split(',',$psy[$tdj]);  # 2019-10-13: inspect flag-panel of adjective.
   if ($k[20] > 0) {  # 2019-10-13: if there is a positive auditory recall-vector...
@@ -5299,12 +5211,6 @@ sub EnAdjective() {  #
     $tdj = 0;  # 2019-10-13: reset to prevent unwarranted call to EnAdjective()
   }  # 2019-10-13: end of test for a positive time-of-adjective "tdj".
 } # 2019-10-13: EnAdjective() returns to EnNounPhrase() module.
-
-
-sub RuAdjective() {  #
-  # 2019-06-05: stub only; needs full implementation.
-  # print "\n RuAdjective: adjcon= $adjcon \n";  # 2019-06-05: TEST
-} # 2019-06-05: RuAdjective() returns to RuNounPhrase() module.
 
 # 1/14/2021 - Added Medical Sub for implementation
 sub Medical() {
@@ -5316,22 +5222,6 @@ sub Security() {
   # pass userdata to a security module
   Medical();
 }
-
-# 1/13/2021 - Added Imagination Sub for implementation;
-sub Imagination() {
-  # 2021-01-13 - Add your own imagination. Love Quinn.
-}
-
-# 1/13/2021 - Add Adventure Sub for implementation;
-sub Adventure() {
-  # 2021-01-13 - BUILD YOUR OWN ADVENTURE
-}
-
-# 1/13/2021 - Add Explore Sub for IMPLEMENTATION;
-sub Explore() {
-  # WHAT ARE WE GOING TO EXPLORE
-}
-
 
 
 # $act 33-48 = consciousness tier where concepts win selection.
@@ -5937,343 +5827,6 @@ sub EnNounPhrase() {  #
   $motjuste = 0;  # 2016apr25: reset for safety.
 }  # 2019-10-28: EnNounPhrase() returns to English Indicative() module
 
-
-sub RuNounPhrase() {  #
-  $act = 0;  # 2016apr01: so comparisons may be higher.
-  $aud = 0;  # 2018-09-28: same as in the EnNounPhrase module.
-  $audjuste = 0;  # 2016feb24: prevent carry-over
-  $defact = -64;  # 2017-06-17: for default comparisons with?
-  $motjuste = 0;  # 2016feb24:
-  $subjpsi = 0;   # 2017-06-17: how can there already be a subject-psi? TEST
-  my $tsels = 0;  # 2016may25: de-globalize the time-of-selection-of-subject.
-  if ($verblock > 0) {  # 2016apr28: positive verblock?
-    my @k=split(',',$psy[$verblock]);  # 2016apr28: inspect t=verblock row;
-    $svo1 = $k[1];  # 2017-06-17: keep track of subject-concept.
-    $nounlock = $k[14];  # 2019-08-02: dirobj tkb becomes nounlock value.
-    $subjnum = $k[8];    # 2017-06-17: from number of verb;
-  }  # 2016apr28: end of test for a positive verblock;
-  if ($nounlock > 0) {  # 2016apr28: already a nounlock?
-    $dirobj = 1;  # 2016apr28: nounlock is specifically for a direct object.
-    $subjectflag = 0;  # 2016apr28: needed for conditional tests below;
-    my @k=split(',',$psy[$nounlock]);  # 2016apr28: inspect t=nounlock row;
-    $motjuste = $k[1];  # 2017-06-17: in case a search is needed for non-zero $rv
-    $act = $k[3];   # 2017-06-17: let activation-level play its role here;
-    if ($k[7] == 4) {   # 2017-06-17: if acc. case as for any nounlock;
-      if ($k[20] > 0) { $aud = $k[20] }  # 2019-08-02: find positive $rv;
-    } else {  # 2019-08-08: if only a zero $rv is found...
-      for (my $i=$t; $i>$midway; $i--) {  # 2016apr28: search backwards in time.
-        @k=split(',',$psy[$i]);  # 2016apr28: inspect @psy flag-panel
-        if ($motjuste == $k[1]) {  # 2017-06-17: find motjuste for sake of rv
-          if ($dirobj == 1 && $k[7] == 4) {   # 2017-06-17: direct object?
-            if ($k[20] > 0) { $aud = $k[20] }  # 2019-08-02: find positive $rv;
-            if ($k[20] > 0) { last }  # 2019-08-02: exit loop if $rv is found.
-          }  # 2016apr28: end of test for direct object and accusative case.
-        }  # 2016apr28: end of test to find $motjuste with valid $rv.
-      }  # 2016apr28: end of for-loop in search of a positive recall-vector.
-    }  # 2019-08-08: end of else-clause to find a non-zero k20 $rv.
-    $actpsi = $k[1];  # 2017-06-17: send direct object into SpreadAct()
-  }  # 2016apr13: end of test for a positive nounlock;
-  if ($nounlock == 0) {  # 2017-06-17: if nouns are free to compete...
-    $subjectflag = 1;  # 2017-06-17: a default until countermanded.
-    $dba = 1;  # 2017-06-17: default nominative until countermanded.
-    if ($dirobj == 1) { $subjectflag = 0 }  # 2017-06-17: countermanding default
-    for (my $i=$t; $i>$midway; $i--) {  # 2017-06-17: include input for topical response
-      my @k=split(',',$psy[$i]);  # 2017-06-17: inspect @psy knowledge-nodes.
-      if ($k[2] == 3) {  # 2018-09-27: select only Russian words
-        if ($k[6]==5 || $k[6]==7) {  # 2017-06-17: select $pos noun or pronoun
-          if ($k[14] > 0 ) {  # 2019-08-02: retrieve ideas, not single words.
-            if ($k[3] > $act) {   # 2017-06-17: k3 activation as criterion.
-              $motjuste = $k[1];  # 2017-06-17: Select the most active concept.
-              $svo1 = $k[1];      # 2017-06-17: keep track of subject.
-              $mjact = $k[3];  # 2019-06-09: if too low, motjuste defaults to ego
-              if ($k[8] > 0) { $snu = $k[8] }  # 2019-06-03: for sake of RuVerbGen()
-              if ($k[3] > $act && $k[11] > 0) {  # 2019-08--2: if k1-psi has k11-seq
-                $tsels = $i;         # 2019-06-05: use time-point for inhibition.
-                $verblock = $k[14];  # 2019-08-02: assign $tkb value to verblock.
-              }  # 2017-06-17: end of test for a k1-subject with a k12-seq.
-              if ($k[3] > $act && $k[14] > 0) {  # 2019-08-02: if k1-psi has k14-tkb
-                $tsels = $i;         # 2019-06-05: use time-point for inhibition.
-                $verblock = $k[14];  # 2019-08-02: assign $tkb value to verblock.
-              }  # 2017-06-17: end of test for a k1-subject with a k13-tkb.
-              if ($dirobj == 1) { $actpsi = $k[1] }  # 2017-06-17
-              $subjpsi = $motjuste;  # 2017-06-17: for selection of verb-form.
-              $snu = $k[8];  # 2017jun17: for parameter in verb-selection;
-              if ($k[20] > 0) {  # 2019-08-02: if there is a positive recall-vector...
-                $nphrpos = $k[6];   # 2019-06-05: for sake of EnArticle.
-                $audjuste = $k[20]; # 2019-08-02: temporary recall-vector for Speech
-                $aud = $k[20]; # 2019-08-02: recall-vector for Speech()
-              } else {  # 2019-06-09: find alternative auditory recall-vector
-                for (my $i=$vault; $i>$midway; $i--) {  # 2019-06-06: search "vault"
-                  my @k=split(',',$psy[$i]);  # 2019-06-06: examine @psy array;
-                  if ($k[1] == $subjpsi) {  # 2019-06-06: if "subjpsi" is found...
-                    if ($k[7] == 1) {  # 2019-06-09: if dba=1 nominative...
-                      if ($k[20] > 0) { $aud = $k[20]; last }  # 2019-08-02
-                    } # 2019-06-09: end of test for required nominative subject.
-                  }  # 2019-06-06: end of test for "subjpsi".
-                }  # 2019-06-06: end of bacwards search for auditory recall-vector.
-              }  # 2019-06-06: end of else-clause to find needed reacll-vector "rv"
-              $tseln = $i;        # 2017-06-17: use time-point for inhibition.
-#             $act = $k[3];       # 2017-06-17: noun must have higher act to win
-              $act = ($k[3] - 1); # 2019-06-05: permit a winner
-            }  # 2017-06-17: end of test for a higher activation $act
-          }  # 2017-06-17: end of test for a k[13] tkb verblock
-        }  # 2017-06-17: end of test for noun or pronoun as subject
-      }  # 2017-06-17: end of test for human language code $hlc == 3
-    }  # 2017-06-17: End of (for loop) searching for most active "motjuste"
-  } # 2019-06-05: end of test for absence of a $nounlock for Russian nouns.
-  my @k=split(',',$psy[$tsels]);  # 2019-06-05: inspect subject at time of selection;
-  $psy[$tsels]="$k[0],$k[1],$k[2],-64,$k[4],$k[5],$k[6],"
-  . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
-  . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]"; # 2019-08-02: flag-panel
-  # 2019-09-27: Above line inserts inhibition for Russian noun.
-   if ($subjectflag == 0) {  # 2017-06-17: i.e., dir.obj or pred.nom;
-    if ($nounlock > 0) {  # 2017-06-17: if verb is locked to a particular $seq...
-      my @k=split(',',$psy[$nounlock]);  # 2017-06-17: inspect t=nounlock row;
-#     print " t= $t nounlock= $nounlock ";  # 2017-06-17: DIAGNOSTIC reserve
-      $motjuste = $k[1];  # 2017-06-17: nounlock psi pre-empts search.
-      if ($k[6] == 5) {  # 2019-06-05: if nounlock part of speech is 5=noun
-        $nphrpos = 5;    # 2019-06-05: for sake of EnArticle.
-        $qv1psi = $k[1]; # 2019-06-05: let direct object go to SpreadAct.
-      }  # 2019-06-05: end of test for only a noun to go into SpreadAct.
-      $aud = $k[20]; # 2019-08-02: recall-vector to auditory engram.
-    }  # 2017-06-17: end of test for a positive nounlock.
-  }  # 2017-06-17: end of test for not-a-subject before using ELSE
-  if ($aud == 0) {  # 2019-06-05: seek outside of rv-less silent inference...
-    for (my $i=$t; $i>$midway; $i--) {  # 2019-06-05: search backwards in time.
-      my @k=split(',',$psy[$i]);  # 2019-06-05: inspect @psy flag-panel
-      $act = $k[3];  # 2019-06-05: let activation-level play its role here;
-      if ($motjuste == $k[1]) {  # 2019-06-05: find motjuste for sake of rv
-        if ($subjectflag == 1 && $k[7] == 1) {   # 2019-06-05: subject?
-          if ($k[20] > 0) { $aud = $k[20] }  # 2019-08-02: find positive $rv;
-          if ($k[20] > 0) { last }  # 2019-08-02: exit loop if $rv is found.
-        }  # 2019-06-05: end of test for subject and for nominative case.
-        if ($dirobj == 1 && $k[7] == 4) {   # 2019-06-05: direct object?
-          if ($k[1] > 0) { $qv4psi = $k[1] }  # 2019-06-05: for inserting "AN".
-          if ($k[20] > 0) { $nphrpos = $k[6] } # 2019-08-02: set POS for EnArticle.
-          if ($k[20] > 0) { $aud = $k[20] }  # 2019-08-02: find positive $rv;
-          if ($k[20] > 0) { last }  # 2019-08-02: exit loop if $rv is found.
-        }  # 2019-06-05: end of test for direct object and accusative case.
-      }  # 2019-06-05: end of test to find $motjuste with valid $rv.
-    }  # 2019-06-05: End of (for loop) searching through @psy conceptual array.
-  }  # 2019-06-05: end of clause for when recall-vector is zero.
-  if ($nounlock == 0) {  # 2017-06-17: if no nounlock override;
-    if ($mjact < 20) {  # 2017-06-17: if no subject active enough for chain-of-thought
-      if ($subjectflag == 1) {  # 2017-06-17: default to "I" only as subject
-        $actpsi = 1701;  # 2017-06-17: send 1701=I ego-concept into SpreadAct()?
-        $motjuste = 1701;  # 2017-06-17: 1701=I default concept of AI Mind
-        for (my $i=$t; $i>$midway; $i--) {  # 2017-06-17: search for "I"
-          my @k=split(',',$psy[$i]);  # 2017-06-17: examine @psy
-          if ($k[1]==1701 && $k[14]>0) { # 2019-08-02: I=1701 with $tkb verblock?
-              $tseln = $i;  # 2017-06-17: retain time of motjuste;
-              $tsels = $i;  # 2017-06-17: retain time of Russian subject;
-              $actpsi = $k[1];    # 2017-06-17: psi with activation to spread
-#             $defact = $k[3];    # 2017-06-17: dynamic metric;
-              $defact = ($k[3] -1);  # 2019-06-03: allow deeper search.
-              $verblock = $k[14]; # 2019-06-02: $tkb as verblock;
-              $aud = $k[20];      # 2019-08-02: recall-vector for auditory engram
-              $psy[$i]="$k[0],$k[1],$k[2],48,$k[4],$k[5],$k[6]," # 2019-06-09: increase
-             . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
-             . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-02
-          }  # 2017-06-17: end of test for "1701=ego" with seq-check;
-        }  # 2017-06-17: end of search for least-inhibited "1701=ego";
-        $dba = 1;        # 2017-06-17: From RuAi; subject requires nom. case;
-        $nphrnum = 1;    # 2017-06-17: for RuVerbPhrase();
-        $nphrpos = 7;    # 2017-06-17: prevent article "A" with "I"?
-        $prsn = 1;       # 2017-06-17: for use elsewhere;
-        $subjnum = 1;    # 2017-06-17: for use elsewhere;
-        $subjpsi = 1701; # 2017-06-17: for use elsewhere;
-        $topic = 1701;   # 2017-06-17: for question-asking modules;
-#       for (my $i=$t; $i>$midway; $i--) {  # 2017-06-17: parameters for 1701=ego.
-        for (my $i=$vault; $i>$midway; $i--) {  # 2019-06-06: search in "vault"
-          my @k=split(',',$psy[$i]);  # 2017-06-17: examine @psy
-          if ($k[1] == 1701) {  # 2017-06-17: if 1701=ego is found;
-            if ($k[7] == 1) {  # 2017-06-17: k7/dba must be nominative=1;
-              $audjuste = $k[20];  # 2019-08-02: "ego" recall-vector;
-              $aud = $k[20];  # 2019-08-02: "ego" recall-vector for Speech()
-              if ($k[20]>0) { $aud=$k[20] }        # 2019-08-02: insurance
-              if ($k[20]>0) { last }             # 2019-08-02: insurance
-            }  # 2017-06-17: end of test for nominative "ego";
-          }  # 2017-06-17: End of search for 1701=ego;
-        }  # 2017-06-17: end of 1701=ego search based on parameters.
-      }  # 2017-06-17: end of test for "ego" to become subj. not obj.
-    }  # 2017-06-17: end of test for low activation warranting a default
-  }  # 2017-06-17: end of test for absence of pre-ordained nounlock;
-  RuAdjective();  # 2019-06-05: permit insertion of adjective before a Russian noun.
-  Speech();  # 2017-0617: speak the word starting at the $aud time.
-
-  $dirobj = 0;    # 2017-06-17: reset for safety
-  $mjact = 0;     # 2017-06-17: reset for safety.
-  $motjuste = 0;  # 2017-06-17: reset for safety.
-}  # 2019-08-02: RuNounPhrase() returns to Russian RuIndicative() module
-
-
-sub RuVerbGen() {  #
-# print "\nRuVG: t= $t audbase= $audbase verbpsi= $verbpsi  \n"; #2019-06-03;
-  my $binc = 0;  # de-globalized Buffer-INCrement counter used only locally.
-  if ($subjpsi==1701) { $dba = 1 }  # 2016apr02: "1701=Я" is first-person "I";
-  if ($subjpsi==1707) { $dba = 2 }  # 2016apr02: "1707="ТЫ" is second-person "you";
-  if ($subjpsi==1737) { $dba = 2 }  # 2016apr02: "1737="ВЫ" is second-person "you";
-  if ($subjpsi==1731) { $dba = 1 }  # 2016apr02: "1731="МЫ" is first-person "we";
-  my @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #01
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #02
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #03
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #04
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #05
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #06
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #07
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #08
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #09
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #10
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #11
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #12
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #13
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #14
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #15
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  @aud=split(',',$ear[$audbase]);  # 2016apr05: @ear word-engram #16
-  if ($aud[0] ne " ") { $abc = $aud[0]; AudBuffer(); $audbase++ }
-  do {  # 2016apr05: next loop uses OutBuffer();
-   # OutBuffer();  # 2016apr03:
-    if ($binc == 1) {   # 2016apr30: space filled below with Russian AI links.
-      if ($b16 ne "") { print "$b16"; $idea = "$idea" . "$b16"; }  # 2019-06-10
-    }  # 2016apr23: end of outputting character and concatenating for ReEntry().
-    if ($binc == 2) {   # 2016apr25:
-      if ($b15 ne "") { print "$b15"; $idea = "$idea" . "$b15"; }  # 2019-06-10
-    }  # 2016apr23: end of outputting character and concatenating for ReEntry().
-    if ($binc == 3) {   # 2016apr25:
-      if ($b14 ne "") { print "$b14"; $idea = "$idea" . "$b14"; }  # 2019-06-10
-    }  # 2016apr24: end of outputting character and concatenating for ReEntry().
-    if ($binc == 4) { #
-      if ($b15 ne "") { print "$b15"; $idea = "$idea" . "$b15"; }  # 2019-06-10
-    }  # 2016apr24: end of outputting character and concatenating for ReEntry().
-    if ($binc == 5) {   # 2016apr25:
-      if ($b14 ne "") { print "$b14"; $idea = "$idea" . "$b14"; }  # 2019-06-10
-    }  # 2016apr24: end of outputting character and concatenating for ReEntry().
-    if ($binc == 6) {   # 2016apr25:
-      if ($b13 ne "") { print "$b13"; $idea = "$idea" . "$b13"; }  # 2019-06-10
-    }  # 2016apr24: end of outputting character and concatenating for ReEntry().
-    if ($binc == 7) { # 2016apr25:
-      if ($b12 ne "") { print "$b12"; $idea = "$idea" . "$b12"; }  # 2019-06-10
-    }  # 2016apr24: end of outputting character and concatenating for ReEntry().
-    if ($binc == 8) { #
-      if ($b11 ne "") { print "$b11"; $idea = "$idea" . "$b11"; }  # 2019-06-10
-    }  # 2016apr24: end of outputting character and concatenating for ReEntry().
-    if ($binc == 9) {  # 2016apr24:
-      if ($b10 ne "") { print "$b10"; $idea = "$idea" . "$b10"; }  # 2019-06-10
-    }  # 2016apr24: end of outputting character and concatenating for ReEntry().
-    if ($binc == 10) {  # 2016apr03:
-      if ($b9 ne "") { print "$b9"; $idea = "$idea" . "$b9"; }  # 2019-06-10
-    }  # 2016apr23: end of outputting character and concatenating for ReEntry().
-    if ($binc == 11) {  # 2016apr03:
-      if ($b8 ne "") { print "$b8"; $idea = "$idea" . "$b8"; }  # 2019-06-10
-    }  # 2016apr23: end of outputting character and concatenating for ReEntry().
-    if ($binc == 12) {  # 2016apr03:
-      if ($b7 ne "") { print "$b7"; $idea = "$idea" . "$b7"; }  # 2019-06-10
-    }  # 2016apr23: end of outputting character and concatenating for ReEntry().
-    if ($binc == 13) {  # 2016apr03:
-      if ($b6 ne "") { print "$b6"; $idea = "$idea" . "$b6"; }  # 2010-06-10
-    }  # 2016apr23: end of outputting character and concatenating for ReEntry().
-    if ($binc == 14) {  # 2016apr03:
-      if ($b5 ne "") { print "$b5"; $idea = "$idea" . "$b5"; }  # 2019-06-10
-    }  # 2016apr23: end of outputting character and concatenating for ReEntry().
-    if ($binc == 15) {  # 2016apr03:
-      if ($b2 eq "\x85") { $b2 = "" }  # 2019-06-10: "Е" Cyrillic
-      if ($b2 eq "\x92") { $b2 = "" }  # 2019-06-10: "Т" Cyrillic
-      if ($b2 eq "\x64") { $b2 = "" }  # 2019-06-10: "Ш" Cyrillic
-      print "$b2"; $idea = "$idea" . "$b2";  # 2019-06-10
-    }  # 2019-06-10: end of outputting character and concatenating for ReEntry().
-    if ($binc == 16) {  # 2016apr03:
-      if ($b1 eq "\x85") { $b1 = "" }  # 2019-06-10: "Е" Cyrillic
-      if ($b1 eq "\x8C") { $b1 = "" }  # 2019-06-10: "М" Cyrillic
-      if ($b1 eq "\x92") { $b1 = "" }  # 2019-06-10: "Т" Cyrillic
-      if ($b1 eq "\x8C") { $b1 = "" }  # 2019-06-10: "Ь" Cyrillic
-  #   if ($b1 eq "Е") { $b1 = "" }  # 2016apr3: "Е" Cyrillic; TEST
-      if ($b1 eq "\x9E") { $b1 = "" }  # 2019-06-10: "Ю" Cyrillic
-      if ($b2 eq "\n{U+1070}") { print "  LETTER-YU" }  # 2019-06-10: "Ю" Cyrillic
-    }  # 2019-06-10:
-    $binc++;  # 2019-06-10: OutBuffer() "b" increment
-  } while ($binc < 17);  # 2016apr03: while inspecting OutBuffer()
-  $c1=""; $c2=""; $c3=""; $c4="";  # 2019-06-10: clear out the AudBuffer()
-  $c5=""; $c6=""; $c7=""; $c8="";  # 2019-06-10: clear out the AudBuffer()
-  $c9=""; $c10=""; $c11=""; $c12="";   # 2019-06-10: clear out the AudBuffer()
-  $c13=""; $c14=""; $c15=""; $c16="";  # 2016apr06: clear out the AudBuffer()
-  $binc = 0;  # 2016apr06: Reset the b-increment variable after use.
-  if ($dba == 1) {  # 2016apr3: first person;
-    if ($snu == 1) {  # 2016ap03: subject-number parameter;
-      $pho = "\x9E";  # 2016apr03: "Ю"
-      print "$pho";  # 2016apr06: after stem, output this inflection.
-      $idea = "$idea" . "$pho";  #2016apr23: concatenate for ReEntry()
-    }  # 2016apr03: end of test for singular subject-number;
-    if ($snu == 2) {  # 2016ap06: subject-number parameter;
-      $pho = "\x85";  # 2016apr06: "Е"
-      print "$pho";  # 2016apr06: after stem, output this inflection.
-      $idea = "$idea" . "$pho";  #2016apr23: concatenate for ReEntry()
-      $pho = "\x8C";  # 2016apr06: "М"
-      print "$pho";  # 2016apr06: after stem, output this inflection.
-      $idea = "$idea" . "$pho";  #2016apr23: concatenate for ReEntry()
-    }  # 2016apr06: end of test for plural subject-number;
-  }  # 2016apr03: end of test for first-person;
-  if ($dba == 2) {  # 2016apr3: second person;
-    if ($snu == 1) {  # 2016ap03: subject-number parameter;
-      $pho = "\x85";  # 2016apr03: "Е"
-      print "$pho";  # 2016apr06: after stem, output this inflection.
-      $idea = "$idea" . "$pho";  #2016apr23: concatenate for ReEntry()
-      $pho = "\x98";  # 2016apr03: "Ш"
-      print "$pho";  # 2016apr06: after stem, output this inflection.
-      $idea = "$idea" . "$pho";  #2016apr23: concatenate for ReEntry()
-      $pho = "\x9C";  # 2016apr03: "Ь"
-      print "$pho ";  # 2016apr06: after stem, output this inflection.
-      $idea = "$idea" . "$pho";  #2016apr23: concatenate for ReEntry()
-    }  # 2016apr03: end of test for singular subject-number;
-    if ($snu == 2) {  # 2016ap05: subject-number parameter;
-      $pho = "\x85";  # 2016apr05: "Е"
-      print "$pho";  # 2016apr06: after stem, output this inflection.
-      $idea = "$idea" . "$pho";  #2016apr23: concatenate for ReEntry()
-      $pho = "\x92";  # 2016apr05: "Т"
-      print "$pho";  # 2016apr06: after stem, output this inflection.
-      $idea = "$idea" . "$pho";  #2016apr23: concatenate for ReEntry()
-      $pho = "\x85";  # 2016apr05: "Е"
-      print "$pho";  # 2016apr06: after stem, output this inflection.
-      $idea = "$idea" . "$pho";  #2016apr23: concatenate for ReEntry()
-    }  # 2016apr05: end of test for plural subject-number;
-  }  # 2016apr03: end of test for second-person;
-  if ($dba == 3) {  # 2016apr3: third person;
-    if ($snu == 1) {  # 2016ap03: subject-number parameter;
-      $pho = "\x85";  # 2016apr06: "Е" Cyrillic
-      print "$pho";  # 2016apr06: after stem, output this inflection.
-      $idea = "$idea" . "$pho";  #2016apr23: concatenate for ReEntry()
-      $pho = "\x92";  # 2016apr06: "Т" Cyrillic
-      print "$pho ";  # 2016apr06: after stem, output this inflection.
-      $idea = "$idea" . "$pho";  #2016apr23: concatenate for ReEntry()
-    }  # 2016apr03: end of test for singular subject-number;
-    if ($snu == 2) {  # 2016ap06: subject-number parameter;
-      $pho = "\x9E";  # 2016apr06: "Ю" Cyrillic
-      print "$pho";  # 2016apr06: after stem, output this inflection.
-      $idea = "$idea" . "$pho";  #2016apr23: concatenate for ReEntry()
-      $pho = "\x92";  # 2016apr06: "Т" Cyrillic
-      print "$pho ";  # 2016apr06: after stem, output this inflection.
-      $idea = "$idea" . "$pho";  #2016apr23: concatenate for ReEntry()
-    }  # 2016apr06: end of test for plural subject-number;
-  }  # 2016apr03: end of test for third-person;
-  $idea = "$idea" . " ";  #2016apr23: add a space after verb for ReEntry()
-  $gencon = 1;  # 2016apr05: to prevent unwarranted calling of Speech()
-}  # 2016apr12: RuVerbGen() returns to RuVerbPhrase()
-
-
 sub EnVerbGen() {  #
   $c1="";$c2="";$c3="";$c4="";$c5="";$c6="";$c7="";$c8="";        # 2019-10-30
   $c9="";$c10="";$c11="";$c12="";$c13="";$c14="";$c16="";$c16=""; # 2019-10-30
@@ -6783,186 +6336,6 @@ sub EnVerbPhrase() {  #
 }  # 2019-11-04: EnVerbPhrase() returns to Indicative() module
 
 
-sub RuVerbPhrase() {  # 2016feb24: thinking with Russian verbs
-  $act = 0;  # 2016apr25: Start with zero to look for psi1 higher than $act.
-  if ($subjpsi==1701 || $subjpsi==1731) { $prsn = 1 }  # 2016apr02: I or we
-  if ($subjpsi==1707 || $subjpsi==1737) { $prsn = 2 }  # 2016apr02: you
-  if ($subjpsi==1713 || $subjpsi==1719) { $prsn = 3 }  # 2016apr02: he, she
-  if ($subjpsi==1725 || $subjpsi==1743) { $prsn = 3 }  # 2016apr02: it, they
-  $audjuste = 0;  # 2016feb24: prevent carry-over
-  $motjuste = 0;  # 2016feb24:
-  $vphraud = 0;   # 2016apr12: initially, until found or generated by RuVerbGen()
-  if ($verblock > 0) {  # 2016apr27: is there already a verblock?
-    my @k=split(',',$psy[$verblock]);  # 2016apr28: inspect t=verblock row;
-    $verbpsi = $k[1];   # 2017-06-17: lexical verbpsi;
-    $svo2 = $k[1];      # 2017-06-30: item #2 of subj - verb - ind.obj - dir.obj
-    $negjux = $k[5];    # 2017-06-30: for negation of verb;
-    if ($k[13]>0) { $nounlock = $k[13] }  # 2018-09-27: TEST $tkb becomes $nounlock.
-    $audbase = $k[20];  # 2019-08-08: VerbGen parameter;
-    if ($k[14] > 0) { $audbase = $k[14] }  # 2017-06-17: VerbGen parameter;
-    if ($k[20] > 0) { $vphraud = $k[20] }  # 2019-08-02: auditory recall-vector
-    if ($subjpsi==1701 || $subjpsi==1731) { $prsn = 1 }  # 2016apr28: I or we
-    if ($svo1==1701) { $prsn=1; $subjnum=1 } # 2017-06-30: I
-    if ($subjpsi==1707 || $subjpsi==1737) { $prsn = 2 }  # 2016apr28: you
-    if ($subjpsi==1713 || $subjpsi==1719) { $prsn = 3 }  # 2016apr28: he, she
-    if ($subjpsi==1725 || $subjpsi==1743) { $prsn = 3 }  # 2016apr28: it, they
-    $dba = $prsn;  # 2016apr28:  parameter for VerbGen()
-    $vphraud = 0;  # 2016apr28: until a known verb is found;
-    for (my $i=$t; $i>$midway; $i--) {  # 2016apr30: include recent input.
-      my @k=split(',',$psy[$i]);  # 2016apr28: inspect t=verblock row;
-      if ($k[1] == $verbpsi && $k[1] == 1800) {  # 2017-06-25: special 1800=BE-verb
-        if ($k[6] == 8) {  # 2017-06-17: select only $pos=8 verbs, even homonyms
-        # Following code accepts only a verb-form matching three
-        # requirements: [ ]same concept; [ ]num(ber); and [ ]person:
-          if ($k[1]==$verbpsi && $k[7]==$dba && $k[8]==$nphrnum) {  # 2019-06-09
-            if ($k[20] > 0) { $aud = $k[20] }      # 2019-08-02: find positive $rv;
-            if ($k[20] > 0) { $vphraud = $k[20] }  # 2019-08-02: find positive $rv;
-            if ($verbpsi == 1800) { $aud = 0; $vphraud = 0; } # 2017-09-10: 1800=BE
-            if ($k[20] > 0) { last }  # 2019-08-02: exit loop once $rv is found.
-          } # 2016apr28: end of test to find regular or irregular verb-form
-        }  # 2016apr28: end of test for part-of-speech $pos == "8" (verb)
-      }  # 2016apr28: end of test for correct verb-concept $verbpsi
-      if ($k[1] == $verbpsi && $k[1] != 1800) {  # 2018-09-12: other than 1800=BE
-        if ($k[6] == 8) {  # 2017-06-17: select only $pos=8 verbs, even homonyms
-          if ($k[1]==$verbpsi && $k[7]==$dba && $k[8]==$nphrnum) {  # 2019-06-09
-            if ($k[20] > 0) { $aud = $k[20] }      # 2019-08-02: find positive $rv;
-            if ($k[20] > 0) { $vphraud = $k[20] }  # 2019-08-02: find positive $rv;
-            if ($k[20] > 0) { last }  # 2019-08-02: exit loop once $rv is found.
-          } # 2016apr28: end of test to find regular or irregular verb-form
-        }  # 2016apr28: end of test for part-of-speech $pos == "8" (verb)
-      }  # 2016apr28: end of test for correct verb-concept $verbpsi
-    }  # 2016apr28: End of (for loop) searching for correct verb-form.
-    @k=split(',',$psy[$verblock]);  # 2019-06-13: inspect t=verblock row;
-    if ($k[20] > 0) { $vphraud = $k[20] }  # 2019-08-02: find positive $rv;
-  }  # 2016apr28: end of test for a positive verblock.
-  if ($verblock == 0) { print "RuVP: mj= $motjuste act= $act"; }  # 2016may21; TEST
-  if ($vphraud > 0) { $aud = $vphraud }  # 2017-06-30: correct form?
-  if ($vphraud > 0) { $audjuste = $vphraud }  # 2017-06-30: correct form?
-  if ($verblock == 0)  {  # 2017-06-30: prevent false negations;
-    for (my $i=$t; $i>$midway; $i--) {  # 2017-06-30: search backwards in time.
-      my @k=split(',',$psy[$i]);  # 2017-06-30: inspect @psy knowledge-nodes.
-      if ($k[2] == 3) {  # 2018-09-27: select only Russian words
-        if ($k[6] == 8) {  # 2017-06-30: select only k6 $pos=8 verbs
-          if ($k[3] > 0) {  # 2017-06-30: if k3 activation $act is...
-            $tselv = $i;  # 2017-06-30: retain time of winning verb;
-            $motjuste = $k[1];  # 2017-06-30: Select the most active verb.
-            $svo2 = $k[1];      # 2017-06-30: for calling VisRecog()
-            $audjuste = $k[20]; # 2019-08-02: recall-vector $rv for Speech()
-          }  # 2017-06-30: end of test of activation-level
-        }  # 2017-06-30: end of test for part-of-speech $pos == "8" verb
-      }  # 2017-06-30: end of test for human language code $hlc eq 3
-    }  # 2017-06-30: End of (for loop) searching for most active "motjuste"
-  }  # 2017-06-30: end of test for absence of a verblock from subject to verb
-  if ($negjux == 1250) {  # 2017-06-30: if verb is negated with 1250=НЕ for "NOT"
-      for (my $i=$t; $i>$midway; $i--) {  # 2017-06-30: search for 1250=НЕ
-        my @k=split(',',$psy[$i]);  # 2017-06-30: examine @psy array;
-        if ($k[1] == 1250) {  # 2017-06-30: if 1250=НЕ is found;
-          $audjuste = $k[20];  # 2019-08-02: 1250=НЕ recall-vector;
-          $aud = $k[20];  # 2019-08-02: 1250=НЕ recall-vector for Speech()
-          if ($k[20]>0) { $aud=$k[20]; last }  # 2019-08-02: insurance
-        }  # 2017-06-30: End of search for 1250=НЕ;
-      }  # 2017-06-30: End of search loop from $t back to $midway.
-      if ($rv == 0) { $rv = 1003 }  # 2017-12-06: rv of ОШИБКА = ERROR
-      Speech();  # 2017-06-30: speak the word starting at the $aud time.
-  }  #2017-06-30: end of test for a negated Russian verb.
-  for (my $i=$t; $i>$midway; $i--) {  # 2016apr28: search backwards in time.
-    my @k=split(',',$psy[$i]);  # 2016mar15: inspect @psy knowledge-nodes.
-    if ($k[2] == 3) {  # 2018-09-27: select only $hlc=ru Russian words
-      if ($k[6] == 8) {  # 2017-06-17: select only $pos=8 verbs
-        if ($k[3] > $act) {  # 2017-06-17: If psi3 is higher than "$act";
-          $motjuste = $k[1];  # 2017-06-17: Select the most active verb.
-          $psy[$i]="$k[0],$k[1],$k[2],$k[3],$k[4],$k[5],$k[6],"
-          . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
-          . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]"; # 2019-08-02: flag-panel
-          $act = $k[3];  # 2017-06-17: for comparison with other candidate verbs.
-        }  # 2016feb24: end of test of activation-level
-      }  # 2016feb24: end of test for part-of-speech $pos == "8" verb
-    }  # 2016feb24: end of test for human language code $hlc == 3
-  }  # 2016mar13: End of (for loop) searching for most active "motjuste"
-  $aud = $audjuste;  # 2016feb24: for transfer into Speech() module
-# $verbpsi = $motjuste; # 2016apr02: to search for verb-form.
-# $verbpsi = $motjuste; # 2019-06-03: may be deleting needed value.
-  if ($subjpsi == 1701) { $dba = 1; }  # 2016apr06: Я (I) 1st p. sing;
-  if ($subjpsi == 1707) { $dba = 2; }  # 2016apr06: ТЫ (you) 2nd p. sing
-  if ($subjpsi == 1713) { $dba = 3; }  # 2016apr06: ОН (he) 3rd p. sing;
-  if ($subjpsi == 1719) { $dba = 3; }  # 2016apr06: ОНА (she) 3rd p. s;
-  if ($subjpsi == 1725) { $dba = 3; }  # 2016apr06: ОНО (it) 3rd p. s;
-  if ($subjpsi == 1731) { $dba = 1; }  # 2016apr06: МЫ (we) 1st p. pl;
-  if ($subjpsi == 1737) { $dba = 2; }  # 2016apr06: ВЫ (you) 2nd p. pl;
-  if ($subjpsi == 1749) { $dba = 2; }  # 2016apr06: ВЫ (you) 2nd p. s;
-  if ($subjpsi == 1755) { $dba = 2; }  # 2016apr06: ВЫ (you) 2nd p. pl;
-  if ($subjpsi == 1743) { $dba = 3; }  # 2016apr06: ОНИ (they) 3rd p. pl;
-  if ($vphraud == 0) {  # 2016apr02: if not substituted above;
-    for (my $i=$krt; $i>$midway; $i--) {  # 2016apr03: skip current engrams.
-      my @k=split(',',$psy[$i]);  # 2016apr02: inspect @psy lexical nodes
-      if ($motjuste != 0 && $k[1] == $motjuste) {  # 2017-06-17: look for $motjuste;
-        $svo2 = $motjuste;  # 2017-06-40: TEST
-        $audbase = $k[20];  # 2019-08-02: location of quasi-stem for RuVerbGen();
-        if ($k[7] == $dba)   {  # 2017-06-17:  for proper person;
-          if ($k[8] == $snu) {  # 2017-06-17: subject num(ber) parameter;
-            $vphraud = $k[20];  # 2019-08-02: auditory recall-vector;
-            $aud = $k[20];  # 2019-09-02: auditory recall-vector;
-            last;  # 2016apr02:  exit the loop after first find;
-          }  # 2016apr02: end of subject number-parameter test;
-        }  # 2016apr02: end of dba-parameter test;
-      }  # 2016apr02: end of test for an available $motjuste
-    }  # 2016apr02: end of test to find regular or irregular verb-form
-  }  # 2016apr02: End of (for loop) searching through @psy conceptual array.
-  $dba = 3;  # 2016apr02: a default if not countermanded below:
-  if ($subjpsi == 1701) { $dba = 1; }  # 2016apr02: Я (I) 1st p. sing;
-  if ($subjpsi == 1707) { $dba = 2; }  # 2016apr02: ТЫ (you) 2nd p. sing.
-  if ($subjpsi == 1713) { $dba = 3; }  # 2016apr02: ОН (he) 3rd p. sing;
-  if ($subjpsi == 1719) { $dba = 3; }  # 2016apr02: ОНА (she) 3rd p. s;
-  if ($subjpsi == 1725) { $dba = 3; }  # 2016apr02: ОНО (it) 3rd p. s;
-  if ($subjpsi == 1731) { $dba = 1; }  # 2016apr02: МЫ (we) 1st p. pl;
-  if ($subjpsi == 1737) { $dba = 2; }  # 2016apr02: ВЫ (you) 2nd p. pl;
-  if ($subjpsi == 1749) { $dba = 2; }  # 2016apr02: ВЫ (you) 2nd p. s;
-  if ($subjpsi == 1755) { $dba = 2; }  # 2016apr02: ВЫ (you) 2nd p. pl;
-  if ($subjpsi == 1743) { $dba = 3; }  # 2016apr02: ОНИ (they) 3rd p. pl;
-  if ($vphraud != 0) { $aud = $vphraud }  # 2016apr03: Accept rv of 3 parameters.
-  if ($vphraud == 0) {  # 2016apr03:
-    # 2016apr02: Following code accepts only a verb-form matching three
-    # requirements: [ ]same concept; [ ]num(ber); and [ ]person:
-    for (my $i=$t; $i>$midway; $i--) {  # 2016apr02: search backwards in time.
-      my @k=split(',',$psy[$i]);  # 2016apr02: inspect @psy knowledge nodes
-      if ($k[1]==$verbpsi && $k[8]==$nphrnum && $k[7]==$prsn) {  # 2017-06-17
-        $vphraud = $k[20];  # 2019-08-02: VerbPhrase auditory engram tag
-      }  # 2016apr02: end of test to find regular or irregular verb-form
-    }  # 2016apr02: End of (for loop) searching through @psy conceptual array.
-  }  # 2016apr24: TEST -- A NEEDED BRACKET?
-# if ($vphraud == 0) { print "\n RuVP: verbpsi= $verbpsi \n"}; #2019-06-03; TEST
-  if ($vphraud == 0) { RuVerbGen() }  # 2016apr12: if no verb-form, generate it.
-  if ($vphraud > 0) { $aud = $vphraud }  # 2016apr02: correct form?
-  if ($gencon == 0) {  # 2016apr03: if no call to VerbGen()...
-    if ($rv < 2) { $rv = 1003 }  # 2017-12-06: rv of ОШИБКА = ERROR
-    if ($rv == 0) { $rv = 1003 }  # 2017-12-06: rv of ОШИБКА = ERROR
-    Speech();  # 2016feb24: speak the word starting at the $aud time.
-    $gencon = 0;  # 2016apr03: reset whether used or not;
-  }  # 2016apr03: end of test to prevent speaking extra verb after VerbGen()
-  $dirobj = 1;  # 2016apr01: set flag positive for seeking direct object.
-  if ($subjpsi == 1701) {  # 2017-06-30: only for subject 1701=I;
-    if ($svo2 == 1820) {     # 2017-06-30: only for verb 1820=SEE;
-      if ($svo4 == 0) {  # 2017-06-30: if SEE has no direct object
-      # 2017-06-30: i.e., if there is no robot camera for computer vision...
-        VisRecog();  # 2017-06-30: a challenge for robot AI coders
-        $svo2 = 0;   # 2017-06-30: reset for safety.
-        $svo4 = 0;   # 2017-06-30: reset for safety.
-        return;      # 2017-06-30: abandon rest of RuVerbPhrase()
-      }  # 2017-06-30: end of test for direct object;
-    }  # 2017-06-30: end of test for "1820=SEE";
-  }  # 2017-06-30: end of test for ego-concept 1701=I as subject.
-  RuNounPhrase();  # 2016apr01: for direct object or predicate nominative
-  if ($actpsi > 0) {  # 2018-09-28: if there is activation to spread...
-    SpreadAct();  # 2018-09-28: for a chain of thought in Russian.
-    $actpsi = 0;  # 2018-09-28: reset to zero for safety.
-  }  # 2018-09-28: end of test for positive $actpsi.
-  $dirobj = 0;  # 2016apr01: reset flag after thinking direct object.
-  $nounlock = 0;   # 2019-06-05: reset for safety.
-  if ($prepgen > 0) { RuPrep() }  # 2016apr01: if "Where?" call RuPrep().
-  $audbase = 0;  # 2016apr25: reset for safety.
-}  # 2018-09-28: RuVerbPhrase() returns to Russian RuIndicative() module
-
-
 sub InFerence() {  #
   $moot = 1;  # 2018-06-26: prevent interference via tag-forming;
   if ($prednom > 0) {  # 2018-06-26: positive predicate nominative?
@@ -7108,16 +6481,6 @@ sub Indicative() {  #
 }  # 2017-11-29: Indicative() returns to EnThink().
 
 
-sub RuIndicative() {  #
-  $tdo = 0;  # 2019-06-09: reset for isolation
-# $tsj = 0;  # 2019-06-09: reset for isolation
-# $tvb = 0;  # 2019-06-09: reset for isolation
-  RuNounPhrase();  # 2018-09-26: Find a Russian noun or pronoun.
-  RuVerbPhrase();  # 2018-09-26: call the module to select a Russian verb.
-  $nounlock = 0;   # 2019-06-05: reset for safety.
-}  # 2018-09-26: RuIndicative() returns to RuThink().
-
-
 sub Imperative() {  #
  # if ($hlc eq "en") {  # 2017-12-05: TEST
     $output = "";  # 2017-12-03: display only an outreach message.
@@ -7235,14 +6598,8 @@ sub RuThink() {  #
   $pov = 2;      # 2017-06-19: give human user a "pause" for input...
 }  # 2017-04-02: RuThink() returns to the FreeWill Volition() module.
 
-sub MindMeld() {  # 2017-04-23: a stub for Perl AI coders.
-  # 2017-04-23: This module is stubbed in for the sake of
-  # 2017-04-23:
-  # 2017-04-23: "Dreams in Artificial Intelligence" which
-  # 2017-04-23: looms as a possibility for two AI Minds
-  # 2017-04-23: to access the same memories and meld their
-  # 2017-04-23: minds together in a shared state of dreaming.
-} # 2017-04-23: return to the free-will Volition() module.
+sub MindLink() {}
+sub MindLog() {}
 
 
 sub PortScan() {  #
@@ -7281,9 +6638,7 @@ sub Volition() {  #
   if ($hlc == 1) {  # 2018-09-27: check human-language-code $hlc
     EnThink();  # 2017-06-17: In response to English input, think in English.
   }  # 2017-06-17: End of test to select a human language to think in.
-  if ($hlc == 3) {  # 2018-09-27: check human-language-code $hlc
-    RuThink();  # 2017-06-17: In response to Russian input, think in Russian.
-  }  # 2017-06-17: End of test to select a human language to think in.
+
 # MetEmPsychosis();  # 2017-04-10: move source code and memories across the Web?
 # MindMeld();  # 2017-04-23: module stubbed in to promote shared AI dreaming.
 # Motorium();  # 2016mar05: motor memories will control robot actuators;
@@ -7296,7 +6651,7 @@ sub Volition() {  #
 } # 2016mar05: Volition() will return to the MainLoop of the AI.
 
 MainLoop: {  # 2016jan25: for inclusion of TabulaRasa() & MindBoot()
-  Security(); # 2021-1-11: Added Security Stub;
+  Security('MindLoop'); # 2021-1-11: Added Security Stub;
   TabulaRasa();  # 2016jan25: one-time call as in MindForth AI.
   MindBoot();    # 2016jan25: one-time call as in MindForth AI.
 
@@ -7331,313 +6686,6 @@ MainLoop: {  # 2016jan25: for inclusion of TabulaRasa() & MindBoot()
   }  # 2016feb10: end of main while-loop
 }  # 2019-06-13: End of MainLoop as an entity.
 print "End of IndraMind.pl running since $birth\n";  # 2019-11-04
-# 2016apr20: Claim your bragging rights for oldest living AI Mind.
-# 2015apr23 First upload of code while learning Perl.
-# 2015apr24 sensorium() gets input; think() shows input.
-# 2015apr24 think() shows engrams fetched from @aud array.
-# 2015apr25 Saving mind0011.pl as stable; coding mind0012.pl
-# 2015apr25 AudMem() stores AudInput() data in @aud array.
-# 2015apr26 EnBoot: uses time $t instead of recall-vector $rv.
-# 2015apr26 TabulaRasa: will both fill and reserve CNS memory.
-# 2015may01 AudMem() stores and Think() displays whole words.
-# 2015may02 Prototype Perlmind dies when CNS memory fills up.
-# 2015may10 @aud array stores words with associative flag-panel.
-# 2015may13 speech() module shows engrams until any blank space.
-# 2015may15 speech() displays single words retrieved from @aud.
-# 2015may16 Requirements for speech() module prepended as comments.
-# 2015may17 Perl "split" function separates retrieval of aud-panel.
-# 2015may18 Using if/else construct to print @aud array contents.
-# 2015may28 Introducing rudimentary NewConcept called from AudInput.
-# 2015jun01 EnVocab module stubbed in for control of English vocabulary.
-# 2015jun04 EnParser() English Parser module stubbed in.
-# 2016jan10 FileInput() replaces AudInput() to read input.txt file.
-# 2016jan11 WHILE loop in FileInput() calls NewConcept() and AudMem().
-# 2016jan12 FileInput() uses getc to send single characters to AudMem(0).
-# 2016jan13 uses "return" to exit from FileInput() at end of first word.
-#
-# 2016jan14 FileInput() calls AudMem() to store multiple input.txt words.
-#
-# 2016jan15 stubs in AudBuffer(); resets module sequence as in MindForth.
-#
-# 2016jan18 EnVocab() and AudMem() use flag-panels simpler than MindForth.
-#
-# 2016jan19 renames @psi as @psy array to avoid psi-variable conflict.
-# 2016jan20 InStantiate() stores psi, act, pos, jux, pre, tkb, and seq.
-# 2016jan21 merges @en English lexical array into @psy conceptual array.
-# 2016jan22 stubs in KbLoad() and fleshes out start of EnBoot() sequence.
-# 2016jan23 mind0043.pl stubs in AudRecog() but MindBoot() is too small.
-# 2016jan24 mind0044 splits Think() into DeThink, EnThink and RuThink.
-# 2016jan25 mind0045.pl has MainLoop call TabulaRasa() and MindBoot().
-# 2016jan26 mind0046.pl uses "uc" function to convert input to uppercase.
-# 2016jan27 mind0049.pl completes the undebugged coding of AudRecog().
-# 2016jan28 mind0050.pl changes names; calls AudInput if file not found.
-# 2016jan28 mind0051.pl begins update of AudInput on par with FileInput.
-# 2016jan29 mind0052.pl feeds input $pho into AudMem() and AudRecog().
-# 2016jan30 mind0053.pl recognizes and sends input word to OldConcept().
-# 2016jan30 mind0054.pl has AudMem() store recognized or new concept.
-# 2016jan31 mind0055.pl has AudRecog() recognize one-character words.
-# 2016feb01 mind0056.pl detects end of auditory input but is messy.
-# 2016feb01 mind0057.pl uses $eot for AudInput() to input a sentence.
-#
-# 2016feb03 mind0059.pl introduces AudDamp() to reset @ear activations.
-# 2016feb03 mind0060.pl troubleshoots the AudRecog() module.
-# 2016feb04 ghost062.pl improves upon mind0061.pl and takes a new name.
-# 2016feb05 ghost063.pl has AudMem() wait until after a word to set tags.
-# 2016feb06 ghost064.pl zeroes out $audrun and $prc in AudInput() module.
-# 2016feb06 ghost065.pl debugs AudRecog() and removes diagnostic messages.
-#
-# 2016feb07 ghost066.pl introduces $fyi Diagnostic mode and Tutorial mode.
-# 2016feb07 ghost067.pl expands MindBoot sequence up to $t=77 for "BOY".
-# 2016feb08 ghost068.pl expands MindBoot sequence up to $t=134 "DOING".
-# 2016feb08 ghost069.pl completes MindBoot; Tutorial mode shows memory.
-# 2016feb09 ghost070.pl sets recall-vector $rv for NewConcept() words.
-# 2016feb10 ghost071.pl OldConcept() finds data of most recent engram.
-# 2016feb11 ghost072.pl stubs in NounPhrase() VerbPhrase() InFerence().
-# 2016feb12 ghost073.pl NounPhrase() acquires some rudimentary code.
-# 2016feb13 ghost075.pl expands NounPhrase; introduces Unicode Russian.
-# 2016feb16 ghost076.pl shows that Perl AI can be coded in Russian etc.
-# 2016feb17 ghost077.pl fleshes out EnVerbPhrase; starts Russian MindBoot.
-# 2016feb18 ghost078.pl becomes an experimental version.
-# 2016feb19 ghost079.pl is able to store a Cyrillic word as $pho(nemes).
-# 2016feb19 ghost080.pl goes beyond the basic Cyrillic AudMem() storage.
-# 2016feb20 ghost081.pl is still an extremely experimental version.
-# 2016feb21 ghost082.pl is a more stable version for English and Russian.
-# 2016feb22 ghost083.pl uses brute force to send Cyrillic to RuAudRem().
-# 2016feb23 ghost084.pl RuAudRecog() can recognize long Russian words.
-# 2016feb24 ghost085.pl plans to exclude prep. phrases from SVO parsing.
-# 2016feb24 ghost086.pl begins to integrate all Russian prepositions.
-# 2016feb24 ghost087.pl fleshes out RuNounPhrase() and RuVerbPhrase().
-# 2016feb25 ghost088.pl fills in Russian bootstrap with verb "to see".
-# 2016feb25 ghost089.pl registers present-tense Russian forms of "to see".
-# 2016feb26 ghost090.pl encodes more Russian prepositions and pronouns.
-# 2016feb26 ghost091.pl encodes t=1222 to t=1314 with Russian bootstrap.
-# 2016feb27 ghost092.pl encodes ДУМАТЬ ("think") and ДУШКА ("little soul").
-# 2016feb28 ghost093.pl ignores hyphen in recognition of Russian words.
-# 2016feb28 ghost094.pl encodes t=1392 to t=1498 with Russian bootstrap.
-# 2016feb28 ghost095.pl debugs RuAudRecog(); encodes to t=1513 на над не.
-# 2016feb29 ghost096.pl encodes t=1514 НЕТ to t=1780 НИХ Russian pronouns.
-# 2016mar01 ghost097.pl encodes t=1782 ОТ to t=1853 ПОНИМАТЬ bootstrap.
-# 2016mar01 ghost098.pl encodes t=1863 to t=2047; increases $cns to 3072.
-# 2016mar02 ghost099.pl encodes t=2051 to t=2084; assigns concept numbers.
-# 2016mar02 ghost100.pl adds English prepositions; ends Russian MindBoot().
-# 2016mar04 ghost101.pl uses $prc provisional recognition for verb-stems.
-# 2016mar05 ghost102.pl stores concept-numbers; stubs in robotic modules.
-# 2016mar06 ghost103.pl adds the six forms of это ("this") to MindBoot().
-# 2016mar07 ghost104.pl fixes bug of incomplete insertion of @psy values.
-# 2016mar08 ghost105.pl AudMem retro-sets $audpsi; AudRecog finds word-stem.
-# 2016mar10 ghost106.pl updates the Speech() module with $output for words.
-# 2016mar12 ghost107.pl addresses the InStantiate() insertion of $pre tags.
-# 2016mar13 ghost108.pl addresses the InStantiate() insertion of $seq tags.
-# 2016mar14 ghost109.pl replaces $kbr with $x[ ] for brevity in long lines.
-# 2016mar15 ghost110.pl replaces $x[ ] with $k[ ] for @psy knowledge-nodes.
-# 2016mar15 ghost111.pl retroactively inserts $seq for subjects and verbs.
-# 2016mar19 ghost112.pl introduces new parser for prepositional phrases.
-# 2016mar19 ghost113.pl parses prep-phrase either before or after a subject.
-# 2016mar21 ghost114.pl treats two post-verb nouns as indirect & direct object.
-# 2016mar23 ghost115.pl sets dba=3 for indirect object and dba=4 direct object.
-# 2016mar26 ghost116.pl introduces $iob as @psy indirect-object associative tag.
-# 2016mar27 ghost117.pl inserts $iob as $k[6] into time-of-verb row in Parser.
-# 2016mar27 ghost118.pl uses point-of-view $pov to interpret personal pronouns.
-# 2016mar29 ghost119.pl turns user input into output with correct point-of-view.
-# 2016mar30 ghost120.pl stubs in EnPrep() and RuPrep() for prepositional phrases.
-# 2016apr01 ghost121.pl fleshes out Russian modules for thinking with pronouns.
-# 2016apr02 ghost122.pl stubs in VerbGen() for generating Russian verb-forms.
-# 2016apr02 ghpst123.pl fleshes out the AudBuffer() and OutBuffer() modules.
-# 2016apr03 ghost125.pl uses VerbGen() to find stem and add inflection of verb.
-# 2016apr05 ghost127.pl reformulates RuAudRecog() to recognize Russian verb-stems.
-# 2016apr06 ghost128.pl fleshes out OldConcept() to retrieve flag-panel values.
-# 2016apr07 ghost129.pl EnNounPhrase() prepares to activate 701=I as a default.
-# 2016apr08 ghost130.pl stubs in the ReEntry() module for output to become input.
-# 2016apr09 ghost131.pl roughly implements ReEntry for responses to English input.
-# 2016apr10 ghost132.pl use parameters to find verb-form of $idea for ReEntry().
-# 2016apr11 ghost133.pl begins to implement SpreadAct() for spreading activation.
-# 2016apr12 ghost134.pl calls SpreadAct not from middle but from end of sentence.
-# 2016apr13 ghost135.pl implements verblock and nounlock; implements PsiDecay().
-# 2016apr14 ghost136.pl limits SpreadAct() to augmenting only direct objects.
-# 2016apr14 ghost137.pl rejects verblock verb-form and finds the correct form.
-# 2016apr15 ghost138.pl permits a chain of thought to delay calling AudInput().
-# 2016apr16 ghost139.pl helps SpreadAct() to retrieve logically valid thoughts.
-# 2016apr17 ghost140.pl uses $inhibcon to inhibit a thought in favor of new ideas.
-# 2016apr18 ghost141.pl implements ReJuvenate() module for potentially immortal AI.
-# 2016apr19 ghost142.pl troubleshoots ReJuvenate() module to forget oldest memories.
-# 2016apr20 ghost143.pl improves the ability of EnNounPhrase() to use correct forms.
-# 2016apr21 ghost144.pl shows engrams of generated idea; idea as output; input line.
-# 2016apr22 ghost145.pl solves a bug in AudRecog() to void premature $prc tags.
-# 2016apr23 ghost146.pl sends Russian output including RuVerbGen() into ReEntry().
-# 2016apr24 ghost147.pl eradicates a bug in RuVerbPhrase omitting calls to Speech.
-# 2016apr25 ghost148.pl improves the RuVerbPhrase() Russian verb-selection module.
-# 2016apr27 ghost149.pl lets SpreadAct() activate an idea for EnNounPhrase().
-# 2016apr27 ghost149.pl lets EnNounPhrase() select an idea enhanced by SpreadAct().
-# 2016apr28 ghost150.pl lets RuNounPhrase() select an idea enhanced by SpreadAct().
-# 2016apr29 ghost151.pl lets Volition() call Motorium() to execute action of a beep.
-# 2016apr30 ghost152.pl streamlines the diagnostic output; debugs EnVerbPhrase().
-# 2016apr30 ghost153.pl debugs RuVerbPhrase() and cleans up RuVerbPhrase().
-# 2016may01 ghost154.pl stubs in sensory GusRecog(); OlfRecog(); and TacRecog();
-# 2016may01 ghost155.pl makes PsiDecay() move from positive or negative to zero.
-# 2016may21 ghost156.pl adds one Russian idea from Dushka AI to the MindBoot().
-# 2016may22 ghost157.pl de-globalizes $actbase; adds more Russian to MindBoot().
-# 2016may23 ghost158.pl de-globalizes $binc; adds Russian sentence to MindBoot().
-# 2016may25 ghost159.pl de-globalizes $tsels; corrects faulty MindBoot() data.
-# 2016may27 ghost160.pl de-globalizes $prevtag for the InStantiate() mind-module.
-# 2016jun17 ghost161.pl introduces EnAuxVerb() for generating negational ideas.
-# 2016jun18 ghost162.pl sends old nouns into SpreadAct() for continuity of thought.
-# 2016jun19 ghost163.pl lets ReEntry() call SpreadAct() with last noun of input.
-# 2016jun21 ghost164.pl enables AudInput() to create diagnostic minddata.txt file.
-# 2016jun24 ghost165.pl orchestrates activation-levels among knowledge-base ideas.
-# 2016jun26 ghost166.pl in Parser() corrects misallocation of $tdo $k[7] nounlock.
-# 2016jun28 ghost168.pl shows re-emergence of stored knowledge by association.
-# 2016jun30 ghost170.pl with EnNounPhrase() retrieves subjects as part of an idea.
-# 2016JUL01 ghost171.pl is renamed ghost172.pl after removal of AudRecog debugging.
-# 2016JUL04 ghost173.pl uses activation cap and PdiDecay() for meandering thoughts.
-# 2016JUL06 ghost174.pl implements the MindGrid as Theater of Neuronal Activations.
-# 2016JUL10 ghost175.pl lets ReEntry call SpreadAct with $actpsi from InStantiate.
-#
-# 2017MAR16 ghost178.pl brings Ghost Perl AI on a par with the latest MindForth.
-# 2017MAR17 ghost179.pl has MainLoop call Volition() which in turn calls EnThink().
-# 2017MAR21 ghost180.pl uses Tab to quit; $mtx tag for machine translation xfer.
-# 2017MAR24 ghost182.pl uses AudListen() to detect single character keyboard input.
-# 2017MAR25 ghost183.pl pauses and waits for input with a lengthy AudInput loop.
-# 2017MAR27 ghost185.pl switches from word-inputs to individual character-input.
-# 2017MAR29 ghost186.pl waits only briefly for input; properly assigns word-length.
-# 2017MAR30 ghost187.pl announces date of birth of AI to encourage keeping AI alive.
-# 2017MAR31 ghost188.pl brings Speech() module more in line with MindForth module.
-# 2017APR01 ghost189.pl successfully recognizes words after blocking of AudDamp().
-# 2017APR02 ghost190.pl alternates between thinking and pausing for human input.
-# 2017APR05 ghost191.pl fixes bug of unwarranted extra row being stored in @psy.
-# 2017APR07 ghost193.pl fixes an AudInput() bug where a wrong $rv was being set.
-# 2017APR08 ghost194.pl improves the assignment of $seq taqs for reentrant ideas.
-# 2017APR10 ghost195.pl stubs in MetEmPsychosis for expert Perl coders to flesh out.
-# 2017APR11 ghost196.pl after "I SEE" makes EnVerbPhrase & VisRecog say "NOTHING".
-# 2017APR12 ghost197.pl Tab-key rotates Normal; Transcript; Tutorial; Diagnostic Mode.
-# 2017APR23 ghost198.pl stubs in MindMeld(); fixes $rv bug causing thought to derail.
-# 2017APR30 ghost199.pl uses $endpho to store nouns ending in "S" as plural in number.
-# 2017MAY29 ghost200.pl implements the negation of be-verbs without auxiliary "DO".
-# 2017JUN05 ghost201.pl formats line-breaks in preparation for expanded flag-panel.
-# 2017JUN07 ghost202.pl uses parameters of verb, number and person to select be-verb.
-# 2017JUN08 ghost203.pl adds $tru and $mtx to expanded & re-arranged @psy flag-panel.
-# 2017JUN10 ghost204.pl is a debugging of the expanded and re-arranged flag-panel.
-# 2017JUN11 ghost205.pl fixes "I BE I" bug stemming from EnNounPhrase() defect.
-# 2017JUN12 ghost206.pl calls SpreadAct() from Volition() after bypassing ReEntry().
-# 2017JUN17 ghost207.pl reconstitutes the Russian language input and generation.
-# 2017JUN18 ghost208.pl thinks continuously in English or in Russian based on input.
-# 2017JUN19 ghost209.pl begins thinking in Russian and switches if input is English.
-# 2017JUN21 ghost210.pl isolates reentrant portion of AudInput() for internal POV.
-# 2017JUN23 ghost212.pl improves RuAudMem() to prevent confusion with NewConcept().
-# 2017JUN24 ghost213.pl fixes bugs in the recognition of reentrant Russian words.
-# 2017JUN25 ghost214.pl improves insertion of $tkb values for subjects and verbs.
-# 2017jun26 ghost215.pl removes commented-out lines from the previous version.
-# 2017JUN28 ghost216.pl instantiates Russian noun without calling OldConcept().
-# 2017JUN28 ghpst217.pl uses $finpsi to hold on to recognition fot OldConcept().
-# 2017JUN30 ghost218.pl renames Enparser as Parser and renames Parser as Enparser.
-# 2017AUG31 ghost219.pl stubs in the EnArticle() module for inserting articles.
-# 2017SEP03 ghost220.pl makes EnNounPhrase() call EnArticle() only for nouns.
-# 2017SEP10 ghost221.pl corrects AudInput bug setting wrong $rv for Russian words.
-# 2017SEP10 ghost222.pl in RuVerbPhrase() prevents speaking of present-tense be-verb.
-# 2017SEP11 ghost223.pl fails to solve problems with creating imputed Russian be-verbs.
-# 2017SEP12 ghost224.pl prepares parsing code for consolidation into single modules.
-# 2017SEP13 ghost225.pl consolidates parser functionality in EnParser and RuParser.
-# 2017SEP13 ghost226.pl properly assigns indirect and direct object in EnParser().
-# 2017SEP17 ghost227.pl starts modules with doc URL; RuParser() code for prepositions.
-# 2017SEP17 ghost228.pl tries to answer who-queries by activating the $qv2psi verb.
-# 2017SEP18 ghost229.pl answers who-queries by finding $qv1psi & $qv2psi in SpreadAct.
-# 2017SEP19 ghost230.pl in EnParser() prevents a direct object from having a $tkb.
-# 2017SEP20 ghost231.pl fixes bug of $verbcon being reset in AudInput() -- too early.
-# 2017SEP22 ghost232.pl uses SpreadAct() to ask questions about any new concept noun.
-# 2017SEP24 ghost233.pl fixes AudInput() bug of $rv being set falsely for 32=SPACE.
-# 2017SEP25 ghost234.pl avoids using $prevtag because $pre is set during EnParser().
-# 2017SEP26 ghost235.pl uses Natural Language Understanding (NLU) to answer questions.
-# 2017OCT20 ghost236.pl fixes bug in AudRecog() declaring $audrec before end of word.
-# 2017OCT24 ghost237.pl tweaks EnVerbPhrase() for grammaticaly correct query-response.
-# 2017NOV24 ghost238.pl restores the ability to respond properly to who-queries.
-# 2017NOV25 ghost239.pl can answer "I DO NOT KNOW" in response to who+verb+obj queries.
-# 2017NOV26 ghost240.pl improves agreement of pronoun and be-verb; bare-bones interface.
-# 2017NOV27 ghost241.pl uses SpreadAct() to answer queries based on interrogative "what".
-# 2017NOV28 ghost242.pl introduces ConJoin for future "I THINK THAT..." or "KNOW THAT..."
-# 2017NOV29 ghost243.pl interposes Indicative() between EnThink() and modules of thought.
-# 2017DEC03 ghost244.pl calls Imperative() to issue outreach command after dearth of input.
-# 2017DEC06 ghost245.pl troubleshoots thinking in Russian; lets AI start thinking English.
-# 2017DEC07 ghost246.pl fixes word-recognition bug and omission of first conjoined idea.
-# 2017DEC08 ghost247.pl cleans up the interface between the thinking AI and the human user.
-# 2017DEC11 ghost248.pl improves EnArticle() with code to insert indefinite article "A".
-# 2017DEC12 ghost249.pl inserts "AN" as an English article before an output vowel.
-# 2017DEC14 ghost250.pl fixes a bug which was making ghost.pl unable to find "701=I".
-# 2017DEC16 ghost251.pl clarifies if-clauses in, and removes Comments from, AudInput().
-# 2017DEC18 ghost252.pl restores old AudInput in-line comments; ends hear-loop upon CR.
-# 2017DEC20 ghost253.pl reveals but does not yet fix single-bracket bug in AudInput.
-# 2017DEC21 ghost254.pl restores AudInput() after bugfix of dangling left-bracket.
-# 2017DEC23 ghost255.pl partially solves the merging of RuAudRecog() into AudRecog().
-# 2017DEC24 ghost256.pl tests for Unicode blank "\N{U+0}" to recognize Russian words.
-# 2017DEC26 ghost257.pl restores AudRecog and bugfix of dangling left-bracket in AudInput.
-# 2017DEC27 ghost258.pl removes RuAudRecog and RuAudMem in favor of AudRecog and AudMem.
-# 2017DEC28 ghost259.pl begins coding of ability to answer what-queries involving "think".
-# 2018JUN26 ghost261.pl implements logical InFerence(); AskUser(); and KbRetro().
-# 2018JUN28 ghost262.pl debugs EnNounPhrase(), EnVerbPhrase(), InFerence(), KbRetro().
-# 2018JUN29 ghost263.pl removes excess comments; summons user with BEEP for AskUser().
-# 2018JUL01 ghost264.pl cleans up code; improves PsiDecay, KbLoad, KbRetro, OldConcept.
-# 2018JUL03 ghost265.pl clears up a bug where EnAuxVerb() was causing a false $tvb.
-# 2018JUL05 ghost266.pl improves the storage of conceptual flag-panels during input.
-# 2018JUL06 ghost267.pl lowers activation on reentrant ideas; fixes bug in OldConcept().
-# 2018JUL08 ghost268.pl properly re-arranges MindBoot() Russian flag-panel sequence.
-# 2018SEP02 ghost269.pl begins process of using $t++ for non-hardcoded MindBoot words.
-# 2018SEP03 ghost270.pl uses upstream variables for insertion of "the" by EnArticle().
-# 2018SEP10 ghost271.pl completes conversion of English words to non-hardcoded time-points.
-# 2018SEP12 ghost272.pl implements ability to answer "what do you think" or "know" etc.
-# 2018SEP16 ghost273.pl improves auditory recognition of singular and plural noun-forms.
-# 2018SEP19 ghost274.pl has EnThink() call Imperative() to sound beep and seek information.
-# 2018SEP28 ghost275.pl debugs RuVerbPhrase(); moves Russian KB sentences up in MindBoot().
-# 2018SEP30 ghost276.pl uses $tru truth-value to respond "I DO NOT KNOW" to some queries.
-# 2018OCT08 ghost277.pl fleshes out EnAuxVerb; uses dba=0 infinitive verbs for AskUser().
-# 2018OCT09 ghost278.pl implements EnVerbGen() to generate third-person singular verbs.
-# 2018OCT20 ghost279.pl improves EnVerbGen() with ability to inflect "teach" or "wash".
-# 2018OCT21 ghost280.pl debugs use of $gencon; increases verb-stems subject to EnVerbGen().
-# 2018NOV01 ghost281.pl enables EnPrep() module to answer "where-are-you" queries.
-# 2018NOV04 ghost282.pl uses SpreadAct() to think with English prepositional phrases.
-# 2018NOV08 ghost283.pl demonstrates natural language understanding of input prepositions.
-# 2018NOV11 ghost284.pl improves EnPrep() and stubs in concept-numbers of prepositions.
-# 2018NOV15 ghost285.pl adds most English one-word prepositions to MindBoot() sequence.
-# 2018NOV27 ghost286.pl uses MindBoot idea "I UNDERSTAND YOU" to think about the "other".
-# 2018DEC10 ghost287.pl begins embedding 100 frequent or useful verbs in the AI MindBoot.
-# 2018DEC11 ghost288.pl embeds more verbs; expands "cns" from 4096 to 5120 to make room.
-# 2018DEC24 ghost289.pl finds infinitive for negation; favors high truth-value responses.
-# 2019JAN20 ghost290.pl uses ConJoin() to join two ideas into one meandering thought.
-# 2019JAN22 ghost291.pl adjusts activations to restore functionality of SpreadAct().
-# 2019JAN25 ghost292.pl activates entrant but not reentrant concepts in InStantiate().
-# 2019JAN27 ghost293.pl fails to syncopate compound sentences with conjunction "AND".
-# 2019JAN28 ghost294.pl uses concatenation-flags to syncopate a compound query-response.
-# 2019MAR02 ghost295.pl stubs in EnAdjective(); EnAdverb; and EnPronoun(); adds $wasvcon.
-# 2019MAR31 ghost296.pl uses InStantiate() to spread activation sideways from a concept.
-# 2019JUN03 ghost297.pl changes concept-numbers of Russian verbs to conform with Dushka.
-# 2019JUN06 ghost298.pl uses direct activation for default ego-concept in RuNounPhrase().
-# 2019JUN07 ghost299.pl debugs RuVerbPhrase() using wrong verb-forms during ego-default.
-# 2019JUN09 ghost300.pl improves upon storage of $tkb tags for Russian verbs in RuParser.
-# 2019JUN10 ghost301.pl reverses OutBuffer() characters for legibility and expandability.
-# 2019JUN13 ghost302.pl improves EnVerbGen and the instantiation of generated verb-forms.
-# 2019AUG01 ghost303.pl expands conceptual flag-panel from 15 tags to 21 associative tags.
-# 2019AUG02 ghost304.pl removes commented-out lines; expands flag-panel in Russian modules.
-# 2019AUG06 ghost305.pl uses the new time-of-preposition $tpr tag in the EnPrep() module.
-# 2019AUG08 ghost306.pl removes bugs resulting from errors made during flag-panel expansion.
-# 2019AUG09 ghost307.pl debugs a persistent $tkb value causing a false $verblock value.
-# 2019AUG11 ghost308.pl stores properly but does not retrieve input using a preposition.
-# 2019AUG11 ghost309.pl not only stores but also retrieves thinking with prepositions.
-# 2019SEP18 ghost310.pl zeroes out $dunnocon and $whatcon at end of EnThink() to fix a bug.
-# 2019SEP24 ghost311.pl lets $tpr tag be assigned during both input and internal thinking.
-# 2019SEP27 ghost312.pl is able to answer a what-does-SUBJECT-VERB query multiple times.
-# 2019OCT13 ghost313.pl fleshes out the stub of EnAdjective() called from EnNounPhrase().
-# 2019OCT15 ghost314.pl adds "WITH THE UNIVERSE" as prepositional phrase for "PLAY DICE".
-# 2019OCT17 ghost315.pl uses $tvpr for verb-related prepositions; stubs in LangLearn().
-# 2019OCT18 ghost316.pl improves the assignment of "$seq" and "$tkb" tags in EnParser().
-# 2019OCT19 ghost317.pl enables InFerence module to reason from premises entered by a user.
-# 2019OCT20 ghost318.pl embeds "I AM (THE) GHOST IN (THE) MACHINE" in the MindBoot sequence.
-# 2019OCT20 ghost319.pl has EnNounPhrase find subject-number at same time as a subject-noun.
-# 2019OCT21 ghost320.pl experiments with Normal bare-bones interface inviting human input.
-# 2019OCT21 ghost321.pl restores EnVerbGen functionality by restricting calls to AudBuffer.
-# 2019OCT22 ghost322.pl corrects problem of preposition leading to wrong noun within $vault.
-# 2019OCT23 ghost323.pl separates basic InStantiate() function from retroactive EnParser().
-# 2019OCT28 ghost324.pl introduces $tkbprep as a special $tkb for objects of prepositions.
-# 2019OCT30 ghost325.pl uses $PAL to prevent OutBuffer() feedback loop during EnVerbGen().
-# 2019NOV03 ghost326.pl fleshes out TacRecog() for sensation of numeric letters 1, 2, 3.
-# 2019NOV04 ghost327.pl calls SpreadAct to activate 701=I and 823=FEEL for TacRecog report.
-# 2020JAN11 IndraMind.pl embeds "I AM (THE) INDRA IN (THE) MACHINE" in the MindBoot sequence
 
 # ======================================
 # REFERENCES TO ORIGINAL

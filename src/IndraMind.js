@@ -1381,14 +1381,15 @@ function MindLog() {
   // insert Mind management here
 }
 
-function MindBoot() {  // http://ai.neocities.org/MindBoot.html
-  Security('MindLog');
+// MIND BOOT FUNCTION
+function MindBoot() {
+  dob = new Date();
+  Security('MindBoot');
   Memory();
   State();
-  dob = new Date();  // 2018-01-24: date-of-birth in competition for old AI.
   Creativity();
-  Awareness();
   Imagination();
+  Awareness();
 
 
   t=0
@@ -3277,12 +3278,6 @@ function EnThink() {  // http://ai.neocities.org/EnThink.html
 } // 2018-01-20: EnThink() returns to the FreeWill Volition() module.
 
 
-function RuThink() {  // http://ai.neocities.org/RuThink.html
-  RuNounPhrase();  // 2018-06-05: tentative preparation for thinking in Russian.
-  RuVerbPhrase();  // 2018-06-05: tentative preparation for bilingual AI.
-}  // End of stub-only RuThink(); return to Volition(); // 2018-06-05
-
-
 function Volition() {  // http://ai.neocities.org/Volition.html
   apb = "Volition has been called and life = "+life;  // 2018-01-21: more informative
   Voice();
@@ -3292,11 +3287,6 @@ function Volition() {  // http://ai.neocities.org/Volition.html
   }  // 2018-01-21: end of test for "life" status.
 // Motorium();  // 2018-03-17: so that emotion and thought may initiate actions.
 } // 2018-01-20: FreeWill Volition() module returns to MainLoop()
-
-
-function MindMeld() {  // 2018-01-14
-  // 2018-01-14: stubbed in for AI Mind Maintainers to consider.
-}  // MindMeld() will return to...
 
 
 function MetEmPsychosis() {  // 2018-01-14
@@ -3393,6 +3383,10 @@ function HCI() {  // http://mind.sourceforge.net/hci.html
 function Medical(_state) {
 
 }
+// 2021-01-24 Adding Defense Measures
+Defense() {
+
+}
 
 function Security(_state) {
   HCI();  // 2018-01-18: Human Computer Interfact
@@ -3414,6 +3408,7 @@ function Security(_state) {
     apb=("<font color='red'>"+"Mental function suspended."+"<\/font>");
   }
   Medical();
+  Defense();
 }
 
 
@@ -3424,6 +3419,7 @@ function MainLoop() {  // http://ai.neocities.org/MainLoop.html
   brain = true;
   Volition(); // 2018-01-15: in conformance with modern ghost.pl AI
   MindLog('MainLoop');
+
   // if (life == true) {
   //   TID=window.setTimeout("MainLoop();",10000);
   // }
