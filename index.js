@@ -5,6 +5,12 @@
 
 const path = require('path');
 const fs = require('fs');
+const readline = require('readline');
+const {name, version} = require('./package.json');
+const shell = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
 const fast = require('fastify')({
   logger:true
@@ -30,4 +36,24 @@ fast.get('/IndraMind', function (req, reply) {
 
 fast.listen(93).then(() => {
   console.log('INDRA IS LISTENING:93');
+});
+
+shell.setPrompt('Indra: ');
+
+shell.on('line', answer => {
+  console.log('input', answer);
+}).on('pause', () => {
+
+}).on('resume', () => {
+
+}).on('close', () => {
+  console.log('Many Offerings!');
+  process.exit(0);
+
+}).on('SIGCONT', () => {
+
+}).on('SIGINT', () => {
+
+}).on('SIGSTOP', () => {
+
 });

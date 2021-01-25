@@ -5216,11 +5216,24 @@ sub EnAdjective() {  #
 sub Medical() {
 
 }
+# 1/24/2021 - Added Defense Mechanism
+sub Defense() {
+
+}
+sub Offense() {
+
+}
 # 1/13/2021 - Added Security Sub for implementation.
-sub Security() {
+sub Security($state) {
   # 2021-01-13: stub for security implementation;
   # pass userdata to a security module
-  Medical();
+  Medical($state);
+
+  my $DefenseOffense = Sub::Chain->new();
+  $DefenseOffense->append(\&Defense, $state);
+  $DefenseOffense->appen(\&Offense, $state);
+  $DefenseOffense->call($state);
+
 }
 
 

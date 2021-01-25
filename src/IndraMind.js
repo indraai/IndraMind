@@ -3379,16 +3379,31 @@ function HCI() {  // http://mind.sourceforge.net/hci.html
   }
 }  // 2018-01-21: HCI() returns to Security module.
 
+// 2021-01-24
+function Health(_state) {
+  Medical(_state); // call Medical Function from health for security reasons
+}
+
 // 2021-01-14 - Sub in Medical FUNCTIONS
 function Medical(_state) {
+  // medical request/response Medical Health and Security
+}
+
+// 2021-01-24 Adding Offense Measures
+// Used for Defensive Returns
+function Offense() {
 
 }
+
 // 2021-01-24 Adding Defense Measures
-Defense() {
+function Defense() {
 
 }
 
 function Security(_state) {
+  Health(_state);
+  Defense(_state).Offense(_state);
+
   HCI();  // 2018-01-18: Human Computer Interfact
   Voice();
   console.log('STATE: ', _state, 'PSI', psi);
@@ -3407,8 +3422,6 @@ function Security(_state) {
     // monitor for dead ghosts
     apb=("<font color='red'>"+"Mental function suspended."+"<\/font>");
   }
-  Medical();
-  Defense();
 }
 
 

@@ -1,0 +1,1192 @@
+
+<html>
+<head>
+<title>Variables for Artificial Intelligence as Used in Mind.Forth Seed AI</title>
+<meta name="description"
+ content="Names, locations and functions of suggested variables for AI Mind software." />
+<meta name="keywords"
+ content="artificial intelligence software, computer programming,
+ memetics, Mind.Forth, Robot AI Mind, seed AI, standards, variables" />
+</head>
+<body bgcolor="#FFF0E0">
+<a name="top"></a>
+
+<center><font color="navy">
+<h1>Variables for Artificial Intelligence</h1>
+</font></center>
+
+<center>by A.T. Murray</center>
+
+<p><br /></p>
+
+<p>
+<b>The AI variables named below</b> have evolved from
+ <a href="http://mind.sourceforge.net/mind4th.html"
+ title="a self-rejuvenating potentially immortal artificial Mind
+implemented in Forth for robots and cyborgs">
+Mind.Forth</a><br />
+and the artificial
+ <a href="http://mind.sourceforge.net/seedai.html"
+ title="for the Microsoft Internet Explorer Web browser">
+mind in JavaScript</a> as published in 2002 in the<BR>
+AI-For-You textbook
+ <a href="http://books.iuniverse.com/viewgiftoc.asp?isbn=0595654371&page=1"
+ title="with the full JavaScript source code listing of the Mind-1.1 release">
+<i>AI4U: Mind-1.1 Programmer's Manual</i></a>.<br /></p>
+<P>
+Great care has been taken in the naming of these global variables.<BR>
+Firstly, they necessarily do not conflict with the reserved words<BR>
+of the Forth and JavaScript programming languages -- or else the<BR>
+AI would not properly implement the
+ <a href="theory5.html"
+ title="Brain-Mind: Know Thyself!">
+Theory of Cognitivity</a>.<br /></p>
+<P>
+If these variable names are found to conflict with reserved words<BR>
+in other AI languages -
+ <a href="cpp.html" TARGET="_new" TITLE="C++ AI Blog">
+C++</a> -
+ <a href="java.html" TARGET="_new" TITLE="Java AI Weblog">
+Java</a> -
+ <a href="lisp.html" TARGET="_new" TITLE="Lisp AI Weblog">
+Lisp</a> -
+ <a href="perl.html" TARGET="_new" TITLE="Perl AI Weblog">
+Perl</a> - <BR>
+<a href="prolog.html" TARGET="_new" TITLE="Prolog AI Weblog">
+Prolog</a> -
+ <a href="python.html" TARGET="_new" TITLE="Python AI Weblog">
+Python</a> -
+ <a href="ruby.html" TARGET="_new" TITLE="Ruby AI Weblog">
+Ruby</a> -
+ <a href="scheme.html" TARGET="_new" TITLE="Scheme AI Weblog">
+Scheme</a> -
+ <a href="vb.html" TARGET="_new" TITLE="Visual Basic AI Weblog">
+Visual Basic</a> - etc. -<BR>
+then new variable names may be chosen for the target language, and<BR>
+the new names - if especially apt - may optionally migrate into<BR>
+other instantiations of any species of evolving artificial Minds.<BR></P>
+<P>
+Secondly, the variable names have been chosen to be not too short<BR>
+and not too long -- typically three characters, such as "
+ <a href="#pho"
+ TITLE="Jump to the 'pho' variable in this document."
+ style="text-decoration:none">
+pho</a>(neme)" --<BR>
+so that the names are substantial enough to remember and not so<BR>
+short as to be difficult to find in a text-search of source code.<BR>
+(One-character variable names would be found in too many words.)<BR></P>
+<P>
+Thirdly, where possible, variable names have been chosen so as to<BR>
+reflect common usage elsewhere of such common terms as "
+<a href="#meme"
+ TITLE="Jump to the 'meme' variable in this document."
+ style="text-decoration:none">
+meme</a>" or<BR>
+"<a href="#cns"
+ TITLE="Jump to the 'cns' variable in this document."
+ style="text-decoration:none">
+cns</a>" ("central nervous system") or "
+<a href="#fyi"
+ TITLE="Jump to the 'fyi' variable in this document."
+ style="text-decoration:none">
+fyi</a>" (for your information);<BR>
+"<a href="#pos"
+ TITLE="Jump to the 'pos' variable in this document."
+ style="text-decoration:none">
+pos</a>" ("part of speech") and "
+<a href="#pov"
+ TITLE="Jump to the 'pov' variable in this document."
+ style="text-decoration:none">
+pov</a>" ("point of view"), and so on.<BR>
+The rationale here is to try to standardize not the mutational<BR>
+nature of Minds in the competition for survival of the fittest,<BR>
+but rather the coding of Minds with the best coding practices.<BR></P>
+<P>
+The webpage has been designed for ease of reference to particular<BR>
+variables from other webpages.  For instance, you may click on<BR>
+<a href="variable.html#pho">
+variable.html#pho</a> in order to see the indicated variable "
+ <a href="#pho"
+ TITLE="Jump to the 'pho' variable in this document."
+ style="text-decoration:none">
+pho</a>" --<BR>
+which happens to be the first variable that ought to be coded and<BR>
+the first variable that begins to handle data in the
+  <a href="Mind.html"
+ title="JavaScript AI Mind for Microsoft Internet Explorer"
+ style="text-decoration:none">
+AI Mind</a> as<BR>
+user input enters the software mindgrid as quasi-phonemes.<BR>
+A general mind-design principle is at work here -- of not changing<BR>
+things in midstream.  If the first variable to be coded and used<BR>
+will be the
+ <a href="#pho"
+ TITLE="Jump to the 'pho' variable in this document."
+ style="text-decoration:none">
+pho</a>(neme) variable, then we avoid using a superfluous<BR>
+variable that would have to be changed anyway to "
+<a href="#pho"
+ TITLE="Jump to the 'pho' variable in this document."
+ style="text-decoration:none">
+pho</a>" later on,<BR>
+and we make sure to use the first-occurring "
+<a href="#pho"
+ TITLE="Jump to the 'pho' variable in this document."
+ style="text-decoration:none">
+pho</a>" variable as the<BR>
+first-occurring variable in this general discussion of variables.<BR>
+The same care and consolidation are what makes the
+ <a href="http://books.iuniverse.com/viewgiftoc.asp?isbn=0595654371&page=1"
+ title="Hardbound format"
+ style="text-decoration:none;">
+AI4U</a>
+ <a href="http://search.barnesandnoble.com/bookSearch/isbnInquiry.asp?ISBN=0595654371"
+ target="_new"
+ title="Hardbound format from Barnes and Noble"
+ style="text-decoration:none;">
+textbook</a><BR>
+potentially so valuable for adoption as a third-world
+ <a href="http://www.iuniverse.com/bookstore/book_detail.asp?isbn=0595259227"
+ TITLE="paperback format"
+ style="text-decoration:none">
+AI text</a> or<BR>
+as an add-on supplement to the traditional (but so obsolescent)<BR>
+<a href="http://aima.cs.berkeley.edu/books.html"
+ TITLE="pre-Singularity"
+ style="text-decoration:none">
+textbooks</a> of artificial intelligence in the industrial countries --<BR>
+a high density of information about AI4U artificial intelligence.<BR>
+</P>
+
+<P><BR></P>
+
+<b>Standards proposed for variables in artificial intelligence:</b><br />
+<a href="http://mind.sourceforge.net/standard.html"
+ title="Robot AI Mind standards are completely voluntary.">
+http://mind.sourceforge.net/standard.html</a><br />
+<br />
+
+<a name="act"></a>
+<VAR>act</VAR> <b>( activation )</b> is used in <b>newConcept</b><BR>
+and in oldConcept to set the activation levels of concepts.<BR>
+It is used in JavaScript psiNode() and Instantiate to set<BR>
+the activation level of a concept in the Psi mindcore.<BR>
+The English enNode module uses <VAR>act</VAR> to set the<BR>
+activation-level of a word in the English lexicon.<BR>
+The audNode module uses <VAR>act</VAR> to set activation levels<BR>
+in the auditory Short Term Memory, and the Reify module<BR>
+uses <VAR>act</VAR> to flush the most active Psi concepts up<BR>
+into the semantic memory where Chomskyan syntax may generate<BR>
+a sentence of thought about the most active ideas in the mind.<BR>
+The nounPhrase and Predicate modules use <VAR>act</VAR> to find<BR>
+the most active English words in the English lexical array.<BR></P>
+
+<p>
+<a name="actbase"></a>
+<var>actbase</var> <b>( basic activation )</b> is used in <b>audRecog</b> as a <br />
+comparand value to compare the incremental activation on <br />
+a candidate for word-recognition against the highest activation already <br />
+found on any other candidate for auditory recognition. As each <br />
+candidate word in auditory memory is tested against the <var>actbase</var> <br >
+value and chances to have an activation even higher than <var>actbase</var>, <br />
+the psi-concept-number of the highest-activation candidate is transferred <br />
+to the <a href="#psibase">
+<var>psibase</var></a> variable as a kind of messenger that will hold onto <br />
+the psi-number of the undislodged winner of the audRecog <br />
+recognition contest. <br />
+</p>
+
+<P>
+<a name="aud"></a>
+<VAR>aud</VAR> <b>( "audition" )</b> in the enVocab, Speech and other modules<BR>
+is an associative tag leading to the typically most recent engram<BR>
+of a word stored in the Aud array of the auditory memory channel.<BR>
+Unlike <VAR>aud0 - aud5</VAR>, the bare-bones <VAR>aud</VAR> variable does not<BR>
+hold phonemic content itself, but merely points to the phonemes --<BR>
+and does a lot of other work at the same time.  The Speech module<BR>
+uses <VAR>aud</VAR> to find the onset of a word and then simply increments<BR>
+the value of <VAR>aud</VAR> to fetch each successive phoneme of a word.<BR>
+(Therefore <VAR>aud</VAR> may eventually replace the <VAR>onset</VAR> variable.)<BR>
+In transcripts of the tutorial JavaScript AI, <VAR>aud</VAR> in the final<BR>
+position of the English vocabulary (enVocab) data clearly shows<BR>
+the nearby <VAR>krt</VAR> point where an auditory engram string begins.<BR>
+The <VAR>aud</VAR> variable replaces the former recall-vector <VAR>rv</VAR>.<BTR></P>
+
+<P>
+The "aud" recall-vector is both a variable and an associative tag established in<BR>
+the Audition module where the onset-time variable "onset" of a word is transferred<BR>
+to the recall-vector "aud" for passage through Newconcept and Oldconcept<BR>
+into enVocab, where flags are attached to lexical items in the "En(glish)" array "en{".<BR>
+Each individual node on the long "fiber" (brain-analog) of a lexical item has<BR>
+its own unique time-point "aud" for a recall-vector over to a word or morpheme<BR>
+stored at that particular time in the auditory memory channel array "Aud".<BR>
+The recall-vector "aud" then is like an associative tag fiber that reaches<BR>
+into auditory memory and re-activates a word stored there as a series<BR>
+of phonemes.  Even if a thousand such recall-vectors were activated simultaneously,<BR>
+the thinking mind would simply hear a massive internal chorus of the word.<BR>
+Since the word is identical in almost all its engrams, there is nothing<BR>
+wrong with a massive re-activation along many recall-vectors "aud".<BR>
+However, in early implementations of the AI Mind software, one reactivation along<BR>
+an "aud" recall-vector is enough, because software is generally more reliable<BR>
+than human brain-mind "wetware," and because the early AI Minds are not engaged<BR>
+in mission-critical work where human lives or vast property are at stake.<BR>
+However, if you build an AI robot to do important work, you should<BR>
+take pains to parallelize the "aud" recall-vector algorithm.<BR></P>
+
+<P>
+The recall-vector "aud" is also used in the SPEECH module to initiate the<BR>
+spoken output of a series of stored sounds constituting a word or morpheme,<BR>
+until a flag is encountered indicating the termination of the string.<BR></P>
+
+<P>
+The recall-vector "aud" is so easy for AI coders to make use of, that it lends<BR>
+itself easily to the installation of special test and diagnostic routines<BR>
+such as code that tells what word will eventually be reached by various processes.<BR></P>
+
+<P>
+<a name="aud0"></a>
+<VAR>aud0</VAR>  <b>( auditory engram )</b> indicates the zeroeth position<BR>
+that holds the ASCII character in the flag-panel of a phonemic engram.</P>
+
+<P>
+<a name="auddata"></a>
+<VAR>auddata</VAR>  <b>( auditory data )</b> is a cumulative variable which the<BR>
+JavaScript Troubleshoot module uses to display a column of the<BR>
+flag-panels of the auditory engrams over a range of time-points<BR>
+in the <b>Aud</b> array of the auditory memory channel.<BR></P>
+
+<P>
+<a name="beg"></a>
+<VAR>beg</VAR> <b>( beginning )</b> is used in <b>audSTM (auditory Short Term Memory)</b><BR>
+as a flag that tells whether an ASCII character being stored is the beginning<BR>
+of a word in auditory memory.  Although the underlying algorithm must eventually<BR>
+be changed so that the Robot Mind may deal with subsets of words regardless<BR>
+of whether they are at the beginning of a stored word, nevertheless<BR>
+the variable "beg" has been useful to get the primitive AI program running.<BR>
+The <b>AUDITION module</b> sets the "beg" (beginning) flag before <b>audSTM</b><BR>
+stores the datum as either a "1" or a zero "0", and the <b>audRecog</b> module<BR>
+uses the "beg" flag not explicitly but rather hidden as a value found,<BR>
+and tested for, in its expected position in the flag-panel of an engram.<BR>
+If audRecog finds that a stored and matching character is a "beginning"<BR>
+item (i.e., "beg" = "1"), then audRecog initiates the string-effect<BR>
+process of pattern-recognition by immediately increasing the activation<BR>
+of the beginning item by a value of eight (or whatever the coder chooses).<BR>
+On the next pass-through of a subsequent comparand item, the string-effect<BR>
+process will pass activation down to the next-in-line character.  Temporarily<BR>
+now, the string-effect mechanism relies on detecting the beginning of a<BR>
+stored auditory engram, that is, a word, by means of the beginning-flag "beg".<BR>
+However, this mechanism is too simple for the more advanced recognitions that<BR>
+an AI ought to achieve, and so the beginning-flag "beg" may be replaced.<BR></P>
+
+<P>
+<a name="bulge"></a> <VAR>bulge</VAR>
+ <b>( fiber-node superactivation )</b> has its value set in the <b>Activate</b> module<BR>
+so as to achieve proportionate transfers of activation from nodes on one<BR>
+concept to "pre" and "seq" nodes in the same "zone" of time on a related concept.<BR></P>
+
+<P>
+<a name="c"></a>
+<VAR>c</VAR> <b>( "character code" )</b> is used in the Listen function<BR>
+of the JavaScript AI to hold an "event.keyCode".<BR></P>
+
+<P>
+<a name="caller"></a>
+<VAR>caller</VAR>  <b>( calling function )</b> is an optional variable used<BR>
+only in the JavaScript Tutorial AI if the programmer wishes to insert<BR>
+alert-boxes as temporary test-code to determine why and from where<BR>
+a module has been called.<BR></P>
+
+<P>
+<a name="cns"></a>
+<VAR>cns</VAR> <b>( central nervous system )</b> governs the size of the memory channel<BR>
+arrays: mindcore "Psi"; English lexicon "En"; and auditory memory "Aud".<BR>
+Using the variable "cns" relieves the AI programmer of any need to hunt down<BR>
+hard-coded values for the three same-size arrays, and permits the easy<BR>
+increase or decrease of the array-size simply by changing the "cns" value.<BR>
+It should be pointed out here that more sophisticated AI implementations<BR>
+may not demand that all three mind-arrays be of the same size, in which case<BR>
+a variable such as "cns" should no longer be used.<BR></P>
+
+<P>
+<a name="coda"></a>
+<VAR>coda</VAR>  <b>( tail-end in music )</b> is used in the Rejuvenate module<BR>
+to hold the value of the number of memory engrams that will<BR>
+be dropped from the oldest memory space if not called forward<BR>
+by thinking processes in the Robot Mind.  Because the value<BR>
+of "coda" determines how many engrams will be forgotten at<BR>
+the tail end of the mind, the same number of engram-spaces<BR>
+will be freed up for new memories at the front of the Mind.<BR>
+Since it may seem too disruptive to initiate rejuvenation<BR>
+after each "coda" quantity of engrams has been deposited,<BR>
+the Mind engineer or AI coder may take care to trigger the<BR>
+Rejuvenate module only after multiple "coda" quantities<BR>
+of new memory engrams have come into the Mind.<BR></P>
+
+<P>
+<a name="ctu"></a>
+<VAR>ctu</VAR> <b>( continuation-flag for "Aud" array phonemes )</b> is set by<BR>
+default to one (1) for <I>true</I> in the <b>LISTEN</b> module on the<BR>
+assumption that the string of incoming phonemes has not yet stopped<BR>
+and will therefore continue.  The <b>AUDITION</b> module changes the<BR>
+continuation value to zero (0) for <I>false</I> in the phonemic engram<BR>
+of the final character of a word that has been stored by passage<BR>
+through the <b>auditory Short Term Memory (audSTM)</b> module.<BR>
+The "ctu" value stored by audSTM as "1" or "0" in the "aud" array<BR>
+comes into play in the <b>audRecog</b> and <b>SPEECH</b> modules.<BR>
+In the audRecog module, the variable "ctu" is not explicitly stated<BR>
+but is hidden as a positional value of the "aud" array, and is tested<BR>
+for as a way of finding the end of a word stored in auditory memory.<BR>
+If the "ctu" flag, by no longer holding true at the end of a word,<BR>
+indicates that the end of a matching and stored word has been found,<BR>
+then the audRecog module seizes the ultimate-tag "psi" of the stored<BR>
+word and transfers its numeric value into the "psi" move-tag so that<BR>
+a new instance of the word may be stored in auditory memory with the<BR>
+correct ultimate-tag "psi" leading to a concept in the Psi mindcore.<BR>
+In the SPEECH module, the role of the continuation-flag "ctu" is simpler,<BR>
+and once again the "ctu" flag is hidden and is expressed only by the<BR>
+1/0 (true/false) value found in a test for a position of the "aud" array,<BR>
+so that speech output may stop if the continuation-flag "ctu", by<BR>
+changing in value from a "1" to a zero "0", indicates that the<BR>
+character or phoneme now being spoken in SPEECH is the last item<BR>
+that must be pronounced or displayed to "speak" the given word.<BR></P>
+
+<P>
+<a name="dialog"></a>
+<VAR>dialog</VAR> <b>( conversation )</b> is a variable in the JavaScript AI<BR>
+that gradually, character by character, builds up a printable report<BR>
+of a human-machine dialog that may be printed out in Transcript mode.<BR></P>
+
+<P>
+<a name="dobj_act"></a>
+<VAR>dobj_act</VAR>  <b>( direct object activation )</b> is used in the JavaScript AI<BR>
+to hold the instantaneous value of the activation of any concept<BR>
+chosen to be the direct object of a verb, so that the AI coder<BR>
+may inspect the internal mechanics of the spreading activation.<BR></P>
+
+<P>
+<a name="edge"></a>
+<VAR>edge</VAR>  <b>( start of a thought )</b> is a Rejuvenate flag that<BR>
+always begins with a <I>false</I> or zero value until the leading edge<BR>
+of a complete thought is found at the start of an auditory memory<BR>
+that is about to be transferred "coda" spaces backwards during<BR>
+the operation of the Rejuvenate module.  Then the value of the<BR>
+"edge" flag switches from zero to one.  The rationale for using the<BR>
+"edge" flag is that no incomplete thought should be preserved<BR>
+at the start of the rejuvenation process, because the normal<BR>
+processes of association and recall will not work well if<BR>
+one concept tries to make an associative connection with<BR>
+another concept that is no longer there as part of a memory.<BR>
+It should be noted that the use of "edge" to eliminate the<BR>
+surviving portions of an incomplete thought is perhaps wasteful<BR>
+of memory space, and so any expert coder may have an opportunity<BR>
+here to improve upon the Rejuvenate algorithm by tightening up<BR>
+the engram-transfer process so as not to need the "edge" flag.<BR></P>
+
+<P>
+<a name="endata"></a>
+<VAR>endata</VAR>  <b>( English lexical data )</b> is a cumulative variable<BR>
+that permits the JavaScript Troubleshoot module to display a column<BR>
+of the flag-panels of the engrams in the English <b>En</b> lexical array.<BR></P>
+
+<P>
+<a name="en3"></a>
+<VAR>en3</VAR> <b>( English position three )</b> is a variable for one of<BR>
+the positions in the flag-panel of a memory engram in the<BR>
+English <b>En</b> array of lexical items in the semantic memory.<BR>
+As needed, any flag may be identified as <I>en0 ... en5</I>.<BR>
+Since <I>en0</I> exists, "en3" is not the third item, but the fourth.<BR></P>
+
+<P>
+<a name="enx"></a>
+<VAR>enx</VAR> <b>( mindcore-to-English-lexicon activation-transfer )</b><BR>
+The psi "enx" number is a transfer-tag (xfer-tag) so that a<BR>
+psi concept may activate an English "nen" fiber.  In almost<BR>
+all cases, the numbers are the same, except that some pronouns<BR>
+such as "I/me" or "he/him" must obviously have two "enx" transfer-<BR>
+tags, depending on whether the pronoun is a subject or an object.<BR></P>
+
+<P>
+These tags are generally of a one-to-one nature, except when<BR>
+a concept must select between two forms to be expressed.<BR>
+In the "En(glish)" array, however, there is a one-to-many<BR>
+relationship between one lexical item "nen" and its many<BR>
+recall-vector "aud" points in the "Aud" array, because for<BR>
+each unitary word that we know in English (or any language),<BR>
+we have many different auditory memory-engrams "aud" for<BR>
+the many times when we heard or thought the word.<BR></P>
+
+<P>
+en nen correlates to a psi fiber, because all the Psi concepts,<BR>
+whether in the core reserve or among the newly learned words,<BR>
+are numbered sequentially as "psi" in the Robot AI Mind.<BR></P>
+
+<P>
+<a name="eot"></a>
+<VAR>eot</VAR> <b>( end-of-transmission )</b>
+ is a traditional computer acronym associated<BR>
+with the ASCII decimal value of four, but used here in the AI Mind software<BR>
+in the <b>Audition</b> module to hold onto the fact that the human user<BR>
+has entered -- perhaps prematurely -- a carriage return ("CR") with an ASCII value<BR>
+of thirteen ("13"). The <b>Audition</b> module uses this "eot" variable,<BR>
+when necessary, to reset the primitive parsing mechanism in early editions of the AI,<BR>
+so that the parsing count "par" may start over at one ("1") whenever the human user<BR>
+ends input with a carriage return. Therefore the "eot" variable is not very important<BR>
+at all and may be eliminated.<BR></P>
+
+<P>
+<a name="fex"></a>
+<VAR>fex</VAR> <b>( fiber-out )</b>  is the "fiber-out" tag-number of a<BR>
+Psi concept activation coming from deep "Psi" up into the "En" array.<BR></P>
+
+<P>
+In most cases, "fex" will  have the same numeric value as "nen",<BR>
+the n(umber) of the concept in the "En(glish)" lexicon array.<BR></P>
+
+<P>
+However, in the case of words such as "you" and "I" or "me" --<BR>
+which need to connect with different mindcore Psi concepts depending<BR>
+on their intended meaning -- "fex" (along with "fin") is a powerful<BR>
+routing mechanism used in the <b>Oldconcept</b> module<BR>
+to make sure that the right concepts are expressed by the right words<BR>
+(and <I>vice versa</I>) in accordance with the point-of-view ("pov") flag that<BR>
+keeps track of whether an auditory memory engram is internal or external.<BR></P>
+
+<P>
+The use of "fin" and "fex" for "pov" routing in the Artificial Mind is an<BR>
+original contribution both to AI and to the emergence of machine consciousness.<BR></P>
+
+<P>
+<a name="fin"></a>
+<VAR>fin</VAR> <b>( fiber-in )</b>
+ is "f(iber) in", or the number of a "Psi" concept-fiber<BR>
+that will be activated when a signal goes "in"(to) the mind<BR>
+from a word in "aud" to a "nen" concept in "En" and finally to a "fiber" in "Psi."<BR></P>
+<P>
+The "psi" fiber is tagged indirectly, by way of "fex", to English "nen" --<BR>
+because the same concept of, say, "self", may have to lead to "I" in<BR>
+one case and to "me" in another.  The ego-concept of self may end up<BR>
+having two "psi" fiber-nodes linked together, so that one may activate<BR>
+the word "I" and the other may activate "me".<BR></P>
+
+<P>
+<a name="fyi"></a>
+<VAR>fyi</VAR> <b>( For Your Information )</b> is a cumulative variable that<BR>
+holds a line of text to be quasi-spoken, that is, displayed<BR>
+on-screen by the Voice module that cooperates not only with<BR>
+the Speech module but also with any other function that needs<BR>
+to issue an advisory message to the human user of the program.<BR>
+The Voice module differentiates between an "fyi" to the user<BR>
+and true "output" from the Robot AI Mind as a thinking entity.<BR>
+In any JavaScript module, the AI coder may generate an "fyi"<BR>
+followed by a call to the Voice module to display the message.<BR></P>
+
+<P>
+<a name="hardcopy"></a>
+<VAR>hardcopy</VAR> ( for <b>hardcopy</b> print-outs ) is a flag in the<BR>
+JavaScript AI to indicate that the human user has clicked a<BR>
+[ ] Transcript checkbox to have the option of printing out a<BR>
+hardcopy record of the conversation between human and AI minds.<BR></P>
+
+<P>
+<a name="html"></a>
+<VAR>html</VAR> <b>( HyperText Markup Language )</b>
+ is a cumulative variable<BR>
+that may be used in JavaScript to build up a string of<BR>
+Web page data to be displayed in a program.  In the AI<BR>
+in JavaScript, the variables "output" and "outputplus"<BR>
+have gradually come to replace an "html" variable.<BR></P>
+
+<P>
+<a name="i"></a>
+<VAR>i</VAR> <b>( index )</b> is standard variable for cycling,
+<I>indexing</I> or looping<BR>
+through the mental architecture arrays of the Robot AI Mind.<BR>
+If the index letter <VAR>i</VAR> is busy keeping track of an outer loop, the<BR>
+next letter <VAR>j</VAR> may conveniently index a nested, inner loop.<BR></P>
+
+<P>
+<a name="img"></a>
+<VAR>img</VAR> <b>( image )</b> is already familiar as an HTML tag and<BR>
+is therefore suggested as a potential associative tag for<BR>
+reactivating features of an image stored in a <I>visRecog</I><BR>
+visual recognition module.<BR></P>
+
+<P>
+<a name="inbuffer"></a>
+<VAR>inbuffer</VAR> <b>( input buffer )</b>
+ is a cumulative variable that builds up<BR>
+a printable report of the entire line of keyboard input<BR>
+being entered by the human user conversing with the AI.<BR>
+As such, the "inbuffer" is definitely not a part of the<BR>
+AI algorithm, but is merely a convenience for use in the<BR>
+Transcript printing mode of the JavaScript Tutorial AI.<BR>
+The AI as such deals only atomistically with atomistic<BR>
+phonemes and does not process an entire string at once.<BR>
+A naive AI programmer may be tempted to make use of the<BR>
+string-manipulation features of a given programming language,<BR>
+but it is much more sophisticated and truer to the nature<BR>
+of neurons as found in the human brain, if the AI coder<BR>
+learns to process only one single datum at a time and not<BR>
+a string of data, no matter how great the temptation is.<BR></P>
+
+<P><a name="inert"></a>
+<VAR>inert</VAR> <b>( inactive )</b> is a counter which the LISTEN<BR>
+module may increment each time that there is no<BR>
+input from another mind into the Robot AI Mind.<BR>
+Then a higher module may call the EGO module<BR>
+to restart a train of thought in the AI, if<BR>
+things have become too inert.  There also needs<BR>
+to be code to keep from calling EGO if the ego<BR>
+is already engaged in a stream of thought, even<BR>
+if there happens to be no input from the outside.<BR></P>
+
+<p><a name="IQ"></a>
+<var>IQ</var> <b>( intelligence quotient )</b> is used inertly in Mind.Forth<br />
+as a stimulus for AI coders to consider implementing an<br />
+AI auto-test feature to measure the IQ of an AI Mind<br />
+as it matures over time. The
+ <a href="http://web.tickle.com/tests/uiq/?test=uiqogt"
+ title="Requires registration">
+Tickle IQ Test</a> affords an<br />
+opportunity to measure IQ.<br />
+
+<P><a name="j"></a>
+<VAR>j</VAR>
+ <b>( letter after "i" )</b> is a variable used in the JavaScript<BR>
+AI as a nested index when the regular index "i" is already<BR>
+keeping track of an outer loop, as in the audRecog module<BR>
+or in the flushVector module.  Since "j" may not work as<BR>
+an index in Forth, some other secondary index (e.g., <I>jrt</I><BR>
+is used in the Mind.Forth AI.<BR></P>
+
+<P><a name="jrt"></a>
+<VAR>jrt</VAR> <b>( junior time )</b> is used as an offset index in the<BR>
+Rejuvenate module, where memory engrams are being moved<BR>
+backwards from time "t" by an offset of quantity "coda"<BR>
+to an earlier and therefore junior time "jrt" so that by<BR>
+recycling its memories the Robot AI Mind may be immortal.<BR></P>
+
+<P>
+<a name="jux"></a>
+<VAR>jux</VAR> <b>( a JUXtaposed word )</b> is a quasi-synaptic flag or<BR>
+associative tag attached to lexical items in the Instantiate module<BR>
+for the purpose of letting the AI Mind keep track of nearby words or<BR>
+concepts during the parsing of any particular word in the input stream<BR>
+of natural language entering the artificial mind.  In Mind-1.1, the<BR>
+primitive Parser module holds onto each identified "psi" concept that<BR>
+will be the juxtaposed "jux" concept for the next incoming concept.<BR>
+Thus an incoming concept tagged at first merely with a "jux" flag<BR>
+may, after further processing, be identified more comprehensively<BR>
+with a "pre" or a "seq" flag indicating a perceived syntactic slot.<BR></P>
+
+<P>
+<a name="krt"></a>
+<VAR>krt</VAR> <b>( Knowledge Representation time )</b> is a replacement for<BR>
+the more literal time "<VAR>t</VAR>" variable, for the sake of brevity and for<BR>
+the sake of non-confusion when the Rejuvenate module changes the<BR>
+value of time with respect to the knowledge-representation (KR) of<BR>
+memories that have been moved backwards to make way for immortality.<BR></P>
+
+<P>
+<a name="len"></a>
+<VAR>len</VAR> <b>( length )</b>
+ is the length of a serial string of characters coming into the mind,<BR>
+and is incremented one-by-one in the  <b>AUDITION</b> module.<BR>
+The variable "len" is used in the AUDITION module to make sure<BR>
+that AUDITION is dealing with an actual word or morpheme of positive length<BR>
+and not with a mere blank space in the stream of auditory input.<BR></P>
+
+<P>
+<a name="life"></a>
+<VAR>life</VAR> <b>( non-death )</b> is a flag in the JavaScript AI Shutdown module<BR>
+that begins as <I>true</I> but changes to <I>false</I>
+ when a user clicks the HALT box.<BR></P>
+
+<P>
+<a name="meme"></a>
+<VAR>meme</VAR> <b>( from memetics )</b> is used in the Tutorial mode<BR>
+of the JavaScript AI to present messages one by one to the user.<BR></P>
+
+<P>
+<a name="midway"></a>
+<VAR>midway</VAR> <b>( mid-way in time )</b> is an extremely important variable in the<BR>
+Artificial Mind software.  Not only does "midway" help to limit searches that go from<BR>
+the present backwards to the dynamically calculated "midway" point, but "midway" also<BR>
+lies in reserve for use when the AI Mind will be modified so as to recycle memory space.<BR>
+AI programmers are free to calculate "midway" dynamically and not as an exact<BR>
+point halfway back in the lifetime of the alife organism, but rather as<BR>
+a loosely defined time that lies reasonably far enough back in the past<BR>
+to catch all recent instances of the thinking or remembering of common concepts.<BR>
+However, since the inquiring AI Mind may encounter an uncommon concept, care may<BR>
+be taken to code special modalities (perhaps based on "spy" levels) where<BR>
+the AI is free to enter into a "Deep Thought" mode by extending the earliness<BR>
+of the "midway" terminus <I>ad libitum</I> backwards even to the point of "birth".<BR>
+If there were no "midway" variable at all, the AI would always search back over<BR>
+its entire lifetime and thus grow slower and slower, fulfilling Marvin Minsky's<BR>
+prophecy (curse, actually) that these simple AI programs never scale up successfully.<BR>
+The "midway" variable is a hedge or a form of insurance to help the AI Mind to scale up<BR>
+and become a large AI system that does not bog down in its own supersaturation.<BR></P>
+
+<P>
+<a name="motjuste"></a>
+<VAR>motjuste</VAR> <b>(</b> French for <b>best word )</b>
+ is used in the syntactic modules of<BR>
+the subject-verb-object <b>SVO</b>, <b>Noun-Phrase</b> and <b>Predicate</b> to take<BR>
+hold of each "bon mot" that has been momentarily selected as the "mot juste"<BR>
+or best word to express what the Robot AI Mind is thinking in its search for<BR>
+all the parts of a sentence.  The variable "motjuste" is especially apt since it<BR>
+is a French expression that already means "the best word" that a mind needs.<BR>
+Therefore, "motjuste" is <I>le mot juste</I> for its intended purpose as a variable.<BR></P>
+
+<P>
+<a name="msg"></a>
+<VAR>msg</VAR>  <b>( message )</b> holds the identifying number of each "meme"<BR>
+or message to be displayed in the Tutorial mode of the JavaScript AI.<BR>
+The use of "msg" serendipitously allows any particular<BR>
+JavaScript module to "jump" the Tutorial display to a<BR>
+particular "msg" number where a cluster of topical memes<BR>
+may be presented with special relevance to the function.<BR>
+Thus when the human user clicks on Troubleshoot, immediately<BR>
+a sequence of messages about Troubleshoot mode may appear.<BR></P>
+
+<P>
+<a name="nen"></a>
+<VAR>nen</VAR> <b>( concept number in English )</b>
+ nen is the "n(umber of an) en(glish)" concept.<BR>
+Since the Artifical Mind may easily contain not just English but two or three<BR>
+or more natural human languages (e.g., for machine translation),
+ the variable "<VAR>nen</VAR>"<BR>
+is formed by a proposed convention of joining "n" for "number" and "en" for English;<BR>
+or "nfr" for French; or "njp" for Japanese; or "n" plus any one of dozens of<BR>
+other two-letter codes for names of languages as found online at the<BR>
+<a href="http://palimpsest.stanford.edu/lex/iso639.html"
+ TITLE="ISO = International Standards Organization">
+http://palimpsest.stanford.edu/lex/iso639.html</a> website:<BR>
+<I>ISO 639:1988 Extract: Codes for names of language</I>.<BR></P>
+
+<P>
+Any recognized word goes to its mindcore Psi concept and to<BR>
+its numeric "nen" English node, and any node on the "nen" concept<BR>
+will activate a recall-vector "aud" at a particular time "t".<BR></P>
+
+<P>
+<a name="nlt"></a>
+<VAR>nlt</VAR>  <b>( not-later-than )</b> is used in <b>AUDITION</b> to mark<BR>
+the time point just before a statement of human input comes in, so that<BR>
+the <b>ACTIVATE</b> module may discriminate by giving older engrams<BR>
+a higher activation than fresh input.  The main purpose of the <VAR>nlt</VAR> variable<BR>
+is to isolate current input from all previous input/output.<BR>
+The <VAR>nlt</VAR> variable also helps to simulate massive parallelism.<BR></P>
+
+<P>
+<a name="nonce"></a>
+<VAR>nonce</VAR>  <b>( about now )</b> is set to a recent value in the Security<BR>
+module so that the Troubleshoot module of the JavaScript AI<BR>
+may display not the entire lifetime of memory data, but<BR>
+only recent data.  By choosing to use or not use "nonce"<BR>
+the AI coder has the option of seeing either all available<BR>
+data or only the most recent data.  If an AI program has<BR>
+an inherently short lifespan, it may not matter much<BR>
+whether the programmer uses "nonce" or the whole lifespan.<BR>
+The coder certainly has the option of disabling "nonce"<BR>
+during episodes of serious debugging and of then enabling<BR>
+"nonce" in AI releases so that users see a modicum of data.<BR></P>
+
+<P>
+<a name="onset"></a>
+<VAR>onset</VAR> <b>( of a word )</b> is assigned in <b>AUDITION</b>
+ as the time immediately<BR>
+after a blank-time "spt", when a word of auditory input is about to begin,<BR>
+that is, have its "onset".  If a word does not begin, then the value of "onset"<BR>
+is simply left alone and not used but rather updated over and over until<BR>
+the time comes when a word of input actually does begin and "onset" is used.<BR>
+The <b>AUDITION</b> module uses the "onset" time-point to be the<BR>
+recall-vector "aud" by means of which concepts in the deeper areas of the mind<BR>
+control an auditory engram of a word by re-activating the word at its "onset".<BR>
+In the auditory memory channel array "Aud" a word stretches from its onset<BR>
+to its ultimate phoneme as a string of sounds, characters, or phonemes.<BR>
+The variable "onset" is a kind of intervariable that holds a time value just<BR>
+long enough to insert the value into the "aud" slot that is carried into <BR>
+<b>enVocab</b> and stored as one of perhaps many recallable instances of a lexical item.<BR>
+The fact that "onset" becomes so many recall-vectors ("aud") at so many nodes on<BR>
+a lexical concept-fiber demonstrates how massively parallel the AI is designed to be.<BR></P>
+
+<P>
+<a name="opt"></a>
+<VAR>opt</VAR>
+ <b>( option )</b> is used in <b>Noun-Phrase</b> and <b>Predicate</b>
+ to keep track of which<BR>
+part-of-speech ("pos") grammar category the syntactic superstructure<BR>
+<b>English</b> (or any other natural language) is trying to flush out from<BR>
+the conceptual arrays. The "opt" variable does nothing tricky or<BR>
+complicated; it may become obsolete if its value can be tested for<BR>
+directly, and may then be discarded.<BR></P>
+
+<P>
+<a name="output"></a>
+<VAR>output</VAR>  <b>( of the Mind )</b> is a cumulative variable used in<BR>
+the Speech and Voice modules of the JavaScript AI<BR>
+to present the thoughts of the Robot AI Mind.<BR>
+AI coders should resist any temptation to put<BR>
+false or cutesie messages into the "output" stream.<BR>
+The Robot AI Mind is a person and not a chatterbot.<BR>
+Programmers should use the <VAR>fyi</VAR> variable and not<BR>
+the "output" variable to display advisory messages.<BR></P>
+
+<P>
+<a name="par"></a>
+<VAR>par</VAR>
+ <b>( parse )</b> is assumed to be "1" at the start of a sentence of input.<BR>
+The subroutine modules NEWCONCEPT and OLDCONCEPT each<BR>
+advance <VAR>par</VAR> by one ("1") so that <VAR>par</VAR> cycles "1, 2, 3..."<BR>
+as a sentence of up to three words comes in.  If the human input is cut short<BR>
+with a CR-13 carriage return at fewer than three words, the AUDITION<BR>
+module waits until program flow returns from NEWCONCEPT or<BR>
+OLDCONCEPT, then resets <VAR>par</VAR> to "1".<BR></P>
+
+<P><a name="pho"></a>
+<VAR>pho</VAR>
+ <b>( phoneme )</b> is the Listen/Audition input variable that carries a<BR>
+quasi-phoneme from an input sensor -- ASCII keyboard at present,<BR>
+acoustic microphone in future -- into the audSTM memory module and<BR>
+the audRecog comparator module, where the AI recognizes a string<BR>
+of pho(nemes) -- as a word at present, as a subword morpheme later.<BR>
+It is the province of speech and signal-processing technology<BR>
+to transcend ASCII keyboard quasi-phonetic input into natural<BR>
+speech recognition by upgrading the implementation of the<BR>
+pho(neme) variable that not only stores auditory engrams<BR>
+but outputs engrams from the auditory memory channel to the<BR>
+Speech module, then via the reEntry process back again to the<BR>
+Audition input module.  It is important for programmers and AI<BR>
+coders to note that the AI Mind never matches an entire string<BR>
+simultaneously, but only one phoneme "pho" at a time.<BR>
+It may be tempting to use the powerful string-matching techniques<BR>
+of a given programming language, but to do so would defeat the goal<BR>
+of modeling the AI after a natural, neuronal brain-mind that<BR>
+breaks all knowledge and memory down atomically into smallest parts.<BR>
+There is greater power in matching individual phonemes "pho" than in<BR>
+matching an entire word as an unwieldy, cumbersome string of sounds.<BR>
+The sounds remain in the self-perceiving auditory memory channel and<BR>
+the Think module manipulates words without "de-channeling" them.<BR></P>
+
+<P>
+<a name="pos"></a>
+<VAR>pos</VAR>  <b>( part-of-speech )</b> categories in the AI source code:<BR>
+1=adj 2=adv 3=conj 4=interj 5=noun 6=prep 7=pron 8=verb.<BR>
+Early versions of the Artificial Mind use only three-word sentences<BR>
+for input and output, and therefore the only grammar categories being<BR>
+used are number five (5) for nouns (and, temporarily, pronouns)<BR>
+and number eight (8) for verbs -- all for the sake of simplicity<BR>
+and for the "proof-of-concept" of the AI design. See also<BR>
+<a href="http://www.ifi.unizh.ch/ailab/aiwiki/aiw.cgi/PartOfSpeech">
+http://www.ifi.unizh.ch/ailab/aiwiki/aiw.cgi/PartOfSpeech</a>.<br />
+</P>
+
+The part of speech of a word of input is determined by<BR>
+rudimentary parsing in the <b>Oldconcept</b> or <b>Newconcept</b><BR>
+module and is recorded in the English <b>enVocab</b> module.<BR>
+The primitive AI uses only two part-of-speech ("pos") grammar categories:<BR>
+five ("5") for nouns and (temporarily) pronouns; and eight ("8") for verbs.<BR>
+The reason why the enVocab module records the grammar category "pos"<BR>
+of lexical items in the lexical array "en" (or "fr" for French or "de" for German)<BR>
+is that the <b>Noun-Phrase</b> and <b>Predicate</b> modules need "pos"<BR>
+as a criterion for flushing out the most active nouns (plus pronouns)<BR>
+and verbs for inclusion in a sentence of thought.  Noun-Phrase and<BR>
+Predicate do not use "pos" explicitly, but hidden as a positional flag<BR>
+in the English "En" array of nodes governing auditory memory engrams.<BR></P>
+
+<P>
+<a name="pov"></a>
+<VAR>pov</VAR> <b>( point-of-view )</b> is a marker in the audSTM (Short Term Memory)</a><BR>
+as to whether a stored word came from the mind itself or from the outside world.<BR>
+The AUDITION module sets the source "pov" as either a pound sign (ASCII 35 #)<BR>
+for "internal" or as an asterisk (ASCII 42 *) for an external origin.<BR>
+In the AI stream of consciousness, most thoughts will show an internal # sign<BR>
+which looks anyway like the up-and-down concept fibers of the mindgrid<BR>
+(as described in the  <b><I>Brain-Mind: Know Thyself!</I></b> document)<BR>
+with orthogonal associative tags flowing left and right to integrate the grid.<BR>
+The asterisks for <b>external (*)</b> input already suggest by common usage that<BR>
+something <I>external</I> to the stated item has a connection with the item,<BR>
+as in fact the external agent making the input may be associated with the input.<BR>
+In the <b>OLDCONCEPT</b> module, the "pov" flag<BR>
+is used to route the "fex" or "fin" branching of association from a word being<BR>
+stored in the auditory memory channel, so that the proper deep mindcore concept<BR>
+will be tagged associatively to the word in auditory memory.  With personal<BR>
+pronouns such as "you" and "I" or "me", it is very important that the word<BR>
+be associated with the proper concept of self (internal) or other (external).<BR>
+Thus the "pov" flag may have a bearing on self-awareness and consciousness.<BR></P>
+
+<P>
+<a name="pre"></a>
+<VAR>pre</VAR> <b>( previous )</b>
+ "pre" in Mind.Forth "psi" (but perhaps "prev" in Mind.VB)<BR>
+is the "pre(vious)" concept -- if any -- with which a concept in a<BR>
+sentence is associated, starting in OLDCONCEPT or NEWCONCEPT.<BR>
+Verbs often have both "pre(v)" and sub"seq"uent -- a "pre(v)"<BR>
+subject and a sub"seq"uent object. The primitive parsing<BR>
+mechanism of the Mind program automatically assigns the "pre(v)"<BR>
+number to whatever the just-past concept was in a three-word sentence.<BR></P>
+
+<P>
+The psi "pre" and psi subSEQuent tags are links to "psi" or "fib",<BR>
+depending on which string of letters the programmer uses for the<BR>
+variable holding the value of a numbered psi concept fiber.<BR>
+The actual linking -- or transfer of activations -- takes place<BR>
+in the Spreadact module (subroutine), where a concept passes<BR>
+some of its activation backwards to any available "pre" concept<BR>
+and some forwards to any available subSEQuent concept -- identified<BR>
+by its "psi" fiber number.<BR></P>
+
+<P>
+<a name="prevg"></a>
+<VAR>prevg</VAR> <b>( previous grammar category )</b>
+ is used in AUDITION as a rather feeble<BR>
+(nerdspeak "lame") mechanism to reset the equally primitive parsing system<BR>
+of the AI as if the last, or "previous grammar" category encountered by<BR>
+the parser was the third and final word in a three-word sentence of input.<BR>
+If "prevg" continues to be overridden by the variable "par" in the NEWCONCEPT</a><BR>
+and OLDCONCEPT modules, then the "prevg" variable will be obsolete.<BR></P>
+
+<p>
+<a name="psi"></a>
+<var>psi</var>  <b>( from Greek letter "psi" )</b>
+ is a multi-purpose tag.<br />
+The ultimate-tag variable "psi" is an integer number stored with<br />
+any phonemic word in the auditory memory array "Aud" and serving<br />
+to associate or link the "ultimate" phoneme of each stored word<br />
+over to the concept of the word in the lexical array "En(glish)"<br />
+and in the mindcore "Psi" array.<br /></p>
+
+<p>
+The "psi" concepts are like long neuronal fibers, with up to<br />
+ten thousand associative nodes along the length of fiber.<br />
+The Psi concepts are so deep that they are <i>below</i> language.<br />
+They are not words, but they may activate word-control fibers<br />
+in the "En(glish)" array and, thereafter, words in the "Aud" array.<br /></p>
+
+<p>
+When one
+ <a href="m4thuser.html#operation"
+ title="User Manual">
+runs Mind.Forth</a>, one may
+ <a href="m4thuser.html#shutdown"
+ title="User Manual">
+finish a session</a> by typing in:<br />
+<b>.aud</b> [RETURN] in order to see the ultimate, or final, tag "psi"<br />
+at the end of each word-engram.<br /></p>
+
+<p>
+The numeric tags are a way of simulating an associative nerve fiber.<br />
+The auditory ultimate-tag "psi" goes only inwards to the<br />
+"Psi" and "En" arrays, not vice-versa.  The "En" array<br />
+uses the recall-vector "aud" to go in the other direction,<br />
+that is, from "En" to a word stored in "Aud".  This fact<br />
+is because a word is recognized by its ultimate sound,<br />
+but a word in auditory memory is reactivated by means of<br />
+its onset location.<br /></p>
+
+<p>
+In the <b>audRecog</b> module, the numeric value of the ultimate psi-tag<br />
+of any recognized input-word is transferred to the same variable "psi"<br />
+so that the tag may be updated from an old engram of the word to<br />
+the newest, freshest engram in the stream of consciousness.<br /></p>
+
+<P>
+<a name="psi0"></a>
+<VAR>psi0</VAR>  <b>( position zero in Psi flag-panel )</b> holds the actual<BR>
+concept number of a concept in the mindcore Psi of the Robot AI Mind.<BR></P>
+
+<p>
+<a name="psibase"></a>
+<var>psibase</var>  <b>( basic psi )</b>
+ in audRecog holds onto the psi concept number <br />
+of any candidate word found to have an associative activation higher <br />
+than the runner-up activation being held as an
+ <a href="#actbase">
+<var>actbase</var></a> test-value <br />
+from a competing candidate for auditory recognition of a word being <br />
+heard externally or remembered internally. As any candidate for <br />
+recognition takes first place over a runner-up with lower activation, <br />
+the psi number of the winning candidate goes into the <var>psibase</var> variable, <br />
+and the activation-value of the <var>psibase</var> candidate goes into the
+ <a href="#actbase">
+<var>actbase</var></a> <br />
+variable as the new test-value against which other candidates will be tested. <br />
+At the end of its sweep through the auditory memory channel, audRecog <br />
+reports that it has recognized the word whose psi-concept-number has not <br />
+been dislodged by other candidates and is still occupying the
+ <var>psibase</var> variable. <br />
+The <a href="#actbase"><var>actbase</var></a>
+ serves to test activations and <var>psibase</var> is like the envelope, <br />
+please, which contains the name (concept-number) of the winning candidate. <br />
+</p>
+
+<P>
+<a name="psidata"></a>
+<VAR>psidata</VAR>  <b>( Psi mindcore data )</b> is a cumulative variable<BR>
+that permits the JavaScript Troubleshoot module to display a column<BR>
+of the flag-panels of the engrams in the <b>Psi</b> mindcore array.<BR></P>
+
+<P>
+<a name="quiet"></a>
+<VAR>quiet</VAR>  <b>( absence of auditory input )</b> is a status flag<BR>
+that lets the JavaScript AI distinguish between "quiet" times when<BR>
+it is safe to think, and "noisy" or "unquiet" times when a human<BR>
+user is entering input into the Listen/Audition pair of modules.<BR>
+In the event-driven JS AI, where any keypress by a human user<BR>
+commands the immediate attention of the AI Mind, it is important<BR>
+for the software to not call its own Think module during user<BR>
+input but rather to deal with the completed thought of the human.<BR>
+In Mind.Forth, there may be a role for the <VAR>quiet</VAR> flag to<BR>
+distinguish between human mind entry and robot mind reentry,<BR>
+but the same outcome may be obtained if human entry of input<BR>
+goes into the Listen module, while robot reentry of AI output<BR>
+bypasses the Listen module and goes directly into Audition.<BR>
+Creative coders may try such status flags as <VAR>attn</VAR>, <VAR>thrall</VAR>, etc.<BR>
+</P>
+
+
+<p>
+<a name="residuum"></a>
+<var>residuum</var> <b>( residual activation )</b> in the psiDamp module <br />
+is the amount of activation left on a subverbal psi concept <br />
+after a word for the concept has briefly held the top spot <br />
+in conceptual activation for a thought being generated. <br />
+In the
+ <a href="http://www.mail-archive.com/agi@v2.listbox.com/msg02527.html"
+ title="AGI Mail List archive of description on 20 September 2005"
+ style="text-decoration:none;">
+Moving Wave Algorithm</a>, only one concept at a time <br />
+"rides the wave" of conceptual activation before being <br />
+psi-damped down to a subconscious level of activation. <br />
+Under the action of the psiDecay module, the residual <br />
+activation on a concept gradually decays down to zero, <br />
+but does not fall immediately to zero because the concept <br />
+may have an associative role to play in the current chain <br />
+of thought. The <var>residuum</var> variable plays an inportant role <br />
+in the rejection of verbs in verbPhrase with too low an <br />
+activation for a valid thought to be generated. If the AI Mind <br />
+has just learned a new noun as the object of a verb but not <br />
+as the subject of a verb, then the AI can not validly make <br />
+any statements with the new noun as a subject. The verbPhrase <br />
+module, trying to find a verb after thinking of the noun, <br />
+is designed to reject all verbs below a certain level of <br />
+insufficient activation and to abandon the incipient thought <br />
+in favor of a "detour" back up to a higher level of thought, <br />
+so that the Think module may detour into a new direction. <br />
+If the "residuum" variable in psiDamp is set too high, <br />
+some verbs not really valid for a given subject-noun may <br />
+fail to trigger the "detour" test and may cause the AI Mind <br />
+to generate false, invalid statements of subject nouns paired <br />
+with the wrong verbs. Therefore <var>residuum</var> is an important variable.<br />
+</p>
+
+<P>
+<a name="rjc"></a>
+<VAR>rjc</VAR>  <b>( rejuvenation counter )</b> in the Rejuvenate module<BR>
+keeps track of how many times the Robot AI Mind has<BR>
+recycled its memory space in order to live forever.<BR>
+The variable "rjc" is not a serious part of the AI<BR>
+algorithm and would actually cause problems for an<BR>
+AI trying to achieve serious longevity, because the<BR>
+value of "rjc" would eventually grow too large to hold.<BR>
+Not the quantitative but the memetic value of "rjc"<BR>
+is that it makes the AI more interesting to coders<BR>
+who realize what is at stake if they code an AI Mind.<BR></P>
+
+<P>
+<a name="rsvp"></a>
+<VAR>rsvp</VAR>
+ <b>( <I>Respondez, S'il Vous Plait</I> )</b>
+ is a counting value used<BR>
+in both Mind.Forth and the JavaScript AI for the specific purpose<BR>
+of slowing the artificial mind down enough to wait patiently for<BR>
+human user input and to keep the thoughts of the AI from racing<BR>
+off into the future when a (relatively) slow human being is trying<BR>
+to communicate with a Mind that is evolving into a superfast AI.<BR>
+In Mind.Forth, the adjustable value of <VAR>rsvp</VAR> serves to quantify a<BR>
+waiting period during which the Listen module <I>listens</I> for input.<BR>
+In the JS AI, <VAR>rsvp</VAR> is the likewise adjustable wait in milliseconds<BR>
+before the main aLife module calls itself again as a way of looping.<BR>
+Because the JavaScript AI is always presenting an HTML Web page<BR>
+to the human user, things such as FYI (q.v.) messages "settle down"<BR>
+better if what would otherwise be looping in a more traditional AI<BR>
+language proceeds as discrete page-display moments in the JS AI.<BR>
+The value of <VAR>rsvp</VAR> is kept adjustable in the AI Mind implementations<BR>
+so that the AI itself will have some leeway in determining how long<BR>
+to wait for user input if the input has been lacking for many cycles.<BR>
+</P>
+
+<P>
+<a name="seq"></a>
+<VAR>seq</VAR>  <b>( subSEQuent )</b> "seq" in Mind.Forth "psi"<BR>
+(but perhaps sub"seq"uent in Mind.VB) is the following or subsequent concept --<BR>
+if any -- with which a concept in a sentence is associated, as found by parsing.<BR></P>
+
+<p>
+<a name="spike"></a>
+<var>spike</var> in Mind.Forth holds the value of activation passing <br />
+from one concept to another during spreading activation. <br /></p>
+
+<P>
+<a name="spt"></a>
+<VAR>spt</VAR> <b>[ SPACE t(ime) as in ASCII "32" for SPACE-BAR ]</b>,<BR>
+used in the <b>audRecog</b> comparator module and elsewhere, is constantly<BR>
+being reset by various modules such as Security when there is no auditory<BR>
+input coming in.  The audRecog comparator uses <VAR>spt</VAR> as the starting<BR>
+point for searches which go backwards in time towards the "midway" (q.v.)<BR>
+point to find words in auditory memory which match, character-by-character<BR>
+or phoneme-by-phoneme, a word of input coming into the mind through<BR>
+the Listen/Audition modules. By the presence or absence of auditory<BR>
+input, it is not hard to determine and constantly update the value of <VAR>spt</VAR>,<BR>
+a demarcation-variable that lets the AI software distinguish words of input<BR>
+from surrounding silence.<BR></P>
+
+<P>
+<a name="subj_act"></a>
+<VAR>subj_act</VAR> <b>( subject activation )</b> is used in the JavaScript AI<BR>
+to hold the instantaneous value of the activation of any concept<BR>
+chosen to be the subject of a verb, so that the AI coder<BR>
+may inspect the mechanics of the spreading activation.<BR></P>
+
+<P>
+<a name="t"></a>
+<VAR>t</VAR> <b>( time )</b>
+ is incremented during Audition, where individual phonemes "pho"<BR>
+must be stamped with a particular time "t" serving as a recall-vector "aud".<BR>
+In early AI implementations it is remarkable that time "t" is not really a<BR>
+system-wide internal clock of the AI but is peculiar to the Audition sense.<BR>
+Some programmers may object to indexing various arrays on time "t",<BR>
+and so they are free to work out (and please promulgate) a better solution.<BR>
+Also please explain and thoroughly document what is replacing time "t".<BR>
+Usenet news:comp.protocols.time.ntp covers the network time protocol.<BR>
+Values of real time may be gotten from the World Time Server (q.v.).<BR>
+An attempt has been made to have a cluster of time-variables such<BR>
+as <VAR>jrt</VAR>, <VAR>krt</VAR>, and <VAR>spt</VAR>
+ ending in "t" for easy identification as <I>times</I>.<BR>
+Time acronyms such as "GMT" for "Greenwich Mean Time" and<BR>
+the other worldwide time-zone identifiers should not be used<BR>
+in any species of the Robot AI Mind, unless the AI coder<BR>
+deliberately wants to identify a particular time zone.<BR></P>
+
+<P>
+<a name="tov"></a>
+<VAR>tov</VAR> <b>( time-of-voice for use with .echo )</b>
+ is declared in the ENGLISH module<BR>
+and is a marker for the time at which the AI Mind last began to say something,<BR>
+so that the human user may see or hear what was said even if the words<BR>
+went by in a scrolling blur on the screen of a modern super-fast computer.<BR></P>
+
+<P>
+<a name="trouble"></a>
+<VAR>trouble</VAR>  <b>( for troubleshooting )</b> is a flag in the JavaScript AI<BR>
+to indicate that the program is in Troubleshoot mode.<BR></P>
+
+<P>
+<a name="tult"></a>
+<VAR>tult</VAR>  <b>( time-ultimate )</b> in the AUDITION module is a time-point<BR>
+just one moment before the currently blank time "spt" at which Audition<BR>
+does its operation.  Using "tult" is a way of avoiding the<BR>
+backwards passage of time and of keeping the time variable "t" safe<BR>
+as a global time variable that always moves only forward.<BR>
+Since one purpose of AUDITION is to deal with the immediately<BR>
+previous moment -- when human user input to the AI has just ceased --<BR>
+the "tult" variable is a convenient way of keeping track of that<BR>
+immediately previous moment.<BR></P>
+
+<P>
+<a name="tutor"></a>
+<VAR>tutor</VAR>  <b>( tutorial )</b> is a flag in the JavaScript AI<BR>
+to indicate that the program is in Tutorial mode.<BR></P>
+
+<P>
+<a name="unk"></a>
+<VAR>unk</VAR> <b>( "unknown" )</b>
+ is a general-purpose variable for anything unknown<BR>
+before an operation proceeds in the AI Mind software.  The variable "unk"<BR>
+is used mainly in the AUDITION or LISTEN modules to hold momentarily whatever<BR>
+the human user enters or the AI itself re-enters into the input sensorium.<BR>
+The "unk" variable is also cavalierly used in other modules such as NOUN-PHRASE.<BR>
+As long as AI coders zero out or blank out any value riding around on the "unk" horse,<BR>
+they may cavalierly use "unk" over and over again for any purpose.<BR></P>
+
+<P>
+<a name="uract"></a>
+<VAR>uract</VAR>  <b>( German "ur" for "old" )</b> preserves the old "act".<BR></P>
+
+<P>
+<a name="urpre"></a>
+<VAR>urpre</VAR>  <b>( German "ur" for "old" )</b> preserves the old "pre".<BR></P>
+
+<P>
+<a name="urpsi"></a>
+<VAR>urpsi</VAR>  <b>( German "ur" for "old" )</b> preserves the old "psi".<BR></P>
+
+<P>
+<a name="userline"></a>
+<VAR>userline</VAR>  <b>( line of user input )</b> is a holding variable that<BR>
+carries the original contents of "inbuffer" from the CR<BR>
+carriage-return module into the Transcribe module of the<BR>
+JavaScript AI, for hardcopy print-outs of session transcripts.<BR></P>
+
+<P>
+<a name="vault"></a>
+<VAR>vault</VAR>  <b>( for safekeeping memories )</b> holds the size of<BR>
+the English enBoot bootstrap sequence as a number of<BR>
+consecutive engrams, so that the Rejuvenate module may<BR>
+avoid overwritng the bootstrap or losing track of its<BR>
+concepts when an associative tag points into the "vault."<BR>
+The use of "vault" is based on the idea that one variable<BR>
+is easier to keep track of than the specific numeric values<BR>
+that might otherwise have to be plugged into the code<BR>
+at multiple points.  Since "vault" is set automatically<BR>
+at the end of enBoot, the AI coder does not have to worry<BR>
+about what might be the best value to use for the "vault."<BR></P>
+
+<P>
+<a name="verb_act"></a>
+<VAR>verb_act</VAR>  <b>( activation of verb )</b> is used in the JavaScript AI<BR>
+to hold the instantaneous value of the activation of any concept<BR>
+selected to be the verb in a sentence, so that the AI coder<BR>
+may inspect the mechanics of the spreading activation.<BR></P>
+
+<P>
+<a name="zone"></a>
+<var>zone</var>  <b>( time-zone )</b> -- is taken from the time Index "I" of searches<BR>
+in the ACTIVATE module</a> and is used in the SPREADACT module</a> for the start<BR>
+of a backwards search for any nearby "pre" node, and for the start<BR>
+of a forwards search for any nearby "seq" node.<BR></P>
+
+<p><br /></p>
+
+<br />
+Last updated: 18 August 2008 <br />
+<a href="#top"
+ title="Click here or use the browser scroll-bar."
+ style="text-decoration:none;">
+Return to top</a>; or to the <br />
+ <a href="http://mind.sourceforge.net/sitemap.html"
+ title="list of files"
+ style="text-decoration:none;">
+sitemap</a> page. <br />
+<br />
+<a href="http://www.iuniverse.com/bookstore/book_detail.asp?isbn=0595259227"
+ title="Information about the AI4U textbook of artificial intelligence">
+<img src="http://farm1.static.flickr.com/51/179758367_f283f0d6e0_s.jpg"></a> <br />
+
+<!--WEBBOT bot="HTMLMarkup" startspan alt="Site Meter" -->
+<script type="text/javascript" language="JavaScript">var site="s13ai4udex"</script>
+<script type="text/javascript" language="JavaScript1.2" src="http://s13.sitemeter.com/js/counter.js?site=s13ai4udex">
+</script>
+<noscript>
+<a href="http://s13.sitemeter.com/stats.asp?site=s13ai4udex" target="_top">
+<img src="http://s13.sitemeter.com/meter.asp?site=s13ai4udex" alt="Site Meter" border=0></a>
+</noscript>
+<!-- Copyright (c)2002 Site Meter -->
+<!--WEBBOT bot="HTMLMarkup" Endspan --><br />
+
+<a href="http://sourceforge.net">
+<img src="http://sourceforge.net/sflogo.php?group_id=31619"
+ width="88" height="31" border="0" alt="SourceForge Logo"></a> <br />
+</body>
+</html>

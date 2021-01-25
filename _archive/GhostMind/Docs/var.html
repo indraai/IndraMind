@@ -1,0 +1,2658 @@
+
+<html>
+<head>
+<title>Variables for AI Mind Modules</title>
+<meta name=description
+ content="Variables in the Minds with Artificial General Intelligence" />
+<meta name=keywords
+ content="AGI, AI, artificial intelligence, Ghost, MindForth, Perl, variables" />
+<meta name=GENERATOR content="Mentifex">
+</head>
+<body bgColor=#fffacd>
+<a name="top"></a>
+
+<center><h2>
+<a href="http://ai.neocities.org/RoadMap.html"
+ title="Stages in the development of Artificial General Intelligence"
+ style="text-decoration:none;">
+AGI RoadMap</a> Table of <a href="http://ai.neocities.org/var.html"
+ title="Original source of this table of variables for AI Minds"
+ style="text-decoration:none;">
+Variables</a> in the
+</h2></center>
+
+<center><h2>
+<a href="http://ai.neocities.org/AgiMind.html"
+ title="English tutorial in JavaScript for Microsoft Internet Explorer">English</a>
+and
+<a href="http://ai.neocities.org/Dushka.html"
+ title="Russian tutorial AI in JavaScript for MSIE">
+Russian</a> bilingual
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="Perl AGI source code"
+ style="text-decoration:none;">
+ghost</a>.pl AGI in
+ <a href="http://strawberryperl.com"
+ title="Download Perl for free."
+ style="text-decoration:none;">
+Perl</a>
+</h2>
+</center>
+
+<h2><center>
+<a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer">
+<i>Mens Latina</i></a> in
+ <a href="http://ai.neocities.org/MLPJ2019.html"
+ title="Mens Latina Programming Journal"
+ style="text-decoration:none;">
+Latin</a> --
+<a href="http://dl.acm.org/citation.cfm?doid=307824.307853"
+ title="Association for Computing Machinery"
+ style="text-decoration:none;">
+MindForth</a> for
+ <a href="http://rodneybrooks.com/agi-has-been-delayed/#comment-18915"
+ title="Robotics and AI weblog"
+ style="text-decoration:none;">
+Robots</a>
+</h2></center>
+
+
+<p><br /></p>
+<font face="Verdana">
+
+<p>
+<a name="abc"></a>
+<b>$abc</b> -- AudBuffer() transfer character
+</p>
+
+<p>
+<a name="act"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#act">act</b></a> --
+quasi-neuronal activation-level
+</p>
+
+<p>
+<a name="actbase"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#actbase">actbase</b></a> -- discrimination activation base used as a local
+"my" variable in AudRecog().
+</p>
+
+<p>
+<a name="actnext"></a>
+<b>$actnext</b> -- holds an activation value (e.g., "8")
+to be imposed on the "next" character of a word being
+recognized in AudRecog()
+</p>
+
+<p>
+<a name="actpsi"></a>
+<b>$actpsi</b> -- a low-priority psi concept from which the
+<a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a> module may spread activation, unless a higher-priority
+flag in SpreadAct is focusing attention upon a complex input-query,
+causing SpreadAct to ignore the low-priority <i>actpsi</i> concept.
+</p>
+
+<p>
+<a name="adjw"></a>
+<b>adjw</b> -- adjective weight -- a proposed variable for use in the
+<a href="http://ai.neocities.org/LangLearn.html"
+ title="documentation page"
+ style="text-decoration:none;">
+LangLearn</a> (language-learning) module to hold the high or low weight that
+determines whether or not an adjectival mind-module is habituated into a particular
+position in a syntactic chain of linguistic mind-modules. For adjectives,
+a typical position might be before a noun or after a noun. The language-learning
+module is intended to be called when an AI Mind fails to comprehend an input
+consisting of unfamiliar syntax, such as "The more, the merrier" or even a
+sentence in the passive voice such as "Russian is spoken here," when the
+AI program does not yet include passive constructions. A rotating series
+of enumerated variables (eg, pos1, pos2..., pos7) may constantly monitor and
+briefly keep track of the parts of speech of user input to the AI, so that
+a record will remain of any novel syntax. In the
+<a href="http://ai.neocities.org/LangLearn.html"
+ title="documentation page"
+ style="text-decoration:none;">
+LangLearn</a> module, there may be a sequence of part-of-speech nodes
+ready to be habituated into a learnable syntax. Each node may consist of
+available calls to eight part-of-speech subroutines, with only one
+part-of-speech actually being called when its pertinent weight is
+higher than that of the other subroutines bunched together at the syntactic node.
+For instance, the "<i>adjw</i>" weight may hold a high value for the
+passive participle "spoken", taken as an adjective in the passive syntax of
+the sentence "Russian is spoken here." The learning of such a syntax might
+consist of nodes weighted for calling a noun-phrase (Russian), a verb of being (is),
+an adjective (spoken), plus or minus an adverb (here). An AI able to learn its own
+syntax could break free from the necessity of human coding of linguistic mechanisms.
+</p>
+
+<p>
+<a name="age"></a>
+<b>$age</b> -- Temporary age for loop-counting.
+</p>
+
+<p>
+<a name="anset"></a>
+<b>$anset</b> -- Sets "an" before a vowel at the start of a noun.
+</p>
+
+<p>
+<a name="apb"></a>
+<b>$apb</b> -- (all points bulletin) -- is a JavaScript variable for
+displaying on-screen messages about what is happening internally in
+the AI Mind.
+</p>
+
+<p>
+<a name="aud"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#aud">aud</b></a> --
+in the <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a>() module is an associative tag
+leading to the typically most recent engram of a word stored
+in the @ear array of the auditory memory channel.
+</p>
+
+<p>
+<a name="audbase"></a>
+<b>$audbase</b> -- is the start of the @ear auditory engram of
+a word that needs to have its inflectional ending changed in
+a generative mind-module such as
+ <a href="http://ai.neocities.org/LaNounGen.html"
+ title="documentation page"
+ style="text-decoration:none;">
+LaNounGen</a>() or
+ <a href="http://ai.neocities.org/RuVerbGen.html"
+ title="documentation page"
+ style="text-decoration:none;">
+RuVerbGen</a>(). <b>$audbase</b> is
+incremented by one successive unit as long as the target word
+in auditory memory continues, and each character of the target
+word from auditory memory is sent as the value of <b>$abc</b> into the
+ <a href="http://ai.neocities.org/AudBuffer.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudBuffer</a>() mind-module, which left-justifies the
+target word before sending it to be right-justified in the
+ <a href="http://ai.neocities.org/OutBuffer.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OutBuffer</a>() mind-module prior to any manipulation of the
+inflectional ending of the target word.
+</p>
+
+<p>
+<a name="auddata"></a>
+<b><a href="http://mind.sourceforge.net/variable.html#auddata">auddata</b></a> --
+( auditory data ) is a cumulative variable which the
+JavaScript Diagnostic() module uses to display a column of the
+flag-panels of the auditory engrams over a range of time-points
+in the Aud array of the auditory memory channel.
+</p>
+
+<p>
+<a name="audjuste"></a>
+<b>$audjuste</b> --
+ <a href="http://ai.neocities.org/EnNounPhrase.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnNounPhrase</a>() <i>$motjuste</i> <i>$aud</i> to
+ <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a>() module
+</p>
+
+<p>
+<a name="audnew"></a>
+<b>$audnew</b> -- holds onset-tag while rest of word comes in.
+</p>
+
+<p>
+<a name="audnum"></a>
+<b>audnum</b> -- grammatical num(ber) variable potentially of use for locating
+an infinitive verb-form with zero as a grammatical num(ber).
+</p>
+
+<p>
+<a name="audpsi"></a>
+<b>$audpsi</b> -- concept number of word in @ear auditory memory array
+</p>
+
+<p>
+<a name="audrec"></a>
+<b>$audrec</b> -- auditory recognition concept-number
+</p>
+
+<p>
+<a name="audrun"></a>
+<b>$audrun</b> -- in the
+ <a href="http://ai.neocities.org/AudRecog.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudRecog</a>() module, which increments <i>audrun</i>,
+it is a counter of how many times the incrementing module
+has been called. If the <i>audrun</i> count is at unitary one or below two,
+then the initial character at the start of a word is being processed.
+<i>audrun</i> is reset to one in the
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a>() and FileInput() modules.
+</p>
+
+<p>
+<a name="audrv"></a>
+<b>$audrv</b> -- auditory recall-vector for
+ <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a> mind-module.
+</p>
+
+<p>
+<a name="audstop"></a>
+<b>$audstop</b> -- flag to stop
+ <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a> module after one word.
+The Speech module lets a CR-13 carriage-return or a SPACE-32 change the
+<i>audstop</i> flag from its zero value at the start of Speech
+to a unitary one (1), so that <i>audstop</i> and <i>spacegap</i> may
+work together to send the final non-letter into the
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a> module.
+</p>
+
+<p>
+<a name="auxverb"></a>
+<b>$auxverb</b> (auxiliary verb) --
+such as 800=BE; 818=DO; or modal verb.
+</p>
+
+<p>
+<a name="b1"></a>
+<b>$b1</b> -- buffer variable 1 in the
+ <a href="http://ai.neocities.org/OutBuffer.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OutBuffer</a>() quasi-array for
+the right-justifying of an English or Russian word of up to sixteen
+characters in length or longer. The buffer variable $b1 always contains the
+very last character in a word of any length. Since each word is
+right-justified in the
+ <a href="http://ai.neocities.org/OutBuffer.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OutBuffer</a>(), a module like NounGen() or
+ <a href="http://ai.neocities.org/RuVerbGen.html"
+ title="documentation page"
+ style="text-decoration:none;">
+RuVerbGen</a>() can perform tests on the contents of $b3 and $b2 and
+$b1 so as to detect one inflectional ending and to replace it
+with a different ending as necessary. In English, where a noun
+like "beach" or a verb like "teach" will sometimes need to
+have "-es" as an ending ("beaches", "teaches"), $b2 and $b1
+can be used to detect the "-ch" at the end of the word, as an
+indicator that the "-es" ending may need to be added on.
+</p>
+
+<p>
+<a name="b2"></a>
+<b>$b2</b> -- buffer variable 2 counting backwards from the final OutBuffer character.
+</p>
+
+<p>
+<a name="b3"></a>
+<b>$b3</b> -- buffer variable 3 counting backwards from the final OutBuffer character.
+</p>
+
+<p>
+<a name="b01"></a>
+<b>$b01</b> -- obsolete buffer variable 01 in the OutBuffer() quasi-array
+</p>
+
+<p>
+<a name="b15"></a>
+<b>$b15</b> -- buffer variable 15 in the OutBuffer() quasi-array
+</p>
+
+<p>
+<a name="b16"></a>
+<b>$b16</b> -- obsolete buffer variable 16 in the OutBuffer() quasi-array for
+the right-justifying of an English or Russian word of up to sixteen
+characters in length. The buffer variable $b16 in older AI Minds would
+contain the last character in a word of any length. Since each word was
+right-justified in the OutBuffer(), a module like NounGen() or
+EnVerbGen() could perform tests on the contents of $b14 and $b15 and
+$b16 so as to detect one inflectional ending and to replace it
+with a different ending as necessary. In English, where a noun
+like "beach" or a verb like "teach" will sometimes need to
+have "-es" as an ending ("beaches", "teaches"), $b2 and $b1 can
+be used to detect the "-ch" at the end of the word, as an
+indicator that the "-es" ending may need to be added on.
+</p>
+
+<p>
+<a name="becon"></a>
+<b>$becon</b> -- <i>be-conditional</i>
+ -- carries a flag from the
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OldConcept</a>() recognition module indicating that new input
+includes a verb of being which may permit the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InFerence</a>() module
+to make a general inference about the subject of the input so that the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InFerence</a>() module can look for prior knowledge as the basis of an
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+inference</a>.
+</p>
+
+<p>
+<a name="beep"></a>
+<b>$beep</b> -- flag for Motorium() to create a beep.
+</p>
+
+<p>
+<a name="bias"></a>
+<b>$bias</b> -- a variable holding the numeric value of the part of speech (POS)
+expected to be input next and parsed next on the basis of preceding parts of speech.
+</p>
+
+<p>
+<a name="binc"></a>
+<b>$binc</b> -- OutBuffer() B-INCrement for a VerbGen() module.
+The <b>$binc</b> counter allows RuVerbGen() to examine and test
+all the right-justified characters of a Russian verb, especially
+the several characters of an inflectional ending which might
+need to be changed on the basis of grammatical number (singular
+or plural), person (first, second, third), or past-tense gender
+(male, female, neuter).
+</p>
+
+<p>
+<a name="birth"></a>
+<b>$birth</b> -- holds the time of when the Ghost AI started running.
+</p>
+
+<p>
+<a name="c1"></a>
+<b>$c1</b> -- the first character of a left-justified word in the quasi-array
+of the AudBuffer(), where a word of input or of retrieval from memory is
+stored briefly in transit to the OutBuffer() where the same word is
+right-justified so that the inflectional endings of the word may easily
+be manipulated or changed by a module like NounGen() or EnVerbGen().
+</p>
+
+<p>
+<a name="c2"></a>
+<b>$c2</b> -- the second character of any word stored in the AudBuffer().
+</p>
+
+<p>
+<a name="c16"></a>
+<b>$c16</b> -- the sixteenth character if a word of that length is stored
+in the quasi-array of the auditory input AudBuffer().
+</p>
+
+<p>
+<a name="catiobj"></a>
+<b>$catiobj</b> -- conCATenated (chained) IndirectOBJect flag for syncopating sentences.
+</p>
+
+<p>
+<a name="catdobj"></a>
+<b>$catdobj</b> -- conCATenated (chained) DirectOBJect flag for syncopating sentences.
+</p>
+
+<p>
+<a name="catsubj"></a>
+<b>$catsubj</b> -- conCATenated (chained) SUBJect flag for syncopating sentences.
+</p>
+
+<p>
+<a name="catverb"></a>
+<b>$catverb</b> -- conCATenated (chained) VERB flag for syncopating sentences.
+</p>
+
+<p>
+<a name="chaincon"></a>
+<b>$chaincon</b> -- chain-of-thought condition-flag
+</p>
+
+<p>
+<a name="char"></a>
+<b>$char</b> -- for use with getc (get character) in FileInput()
+</p>
+
+<p>
+<a name="cns"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#cns">cns</b></a> --
+(adjustable) size of "central nervous system" memory in the Ghost Perl AI
+</p>
+
+<p>
+<a name="coda"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#coda">coda</b></a> --
+memory recycled in ReJuvenate()
+</p>
+
+<p>
+<a name="conj"></a>
+<b>$conj</b> -- a dual-purpose variable serving both as an identifier of
+which particular conjunction is under consideration for use by the
+ <a href="http://ai.neocities.org/ConJoin.html"
+ title="documentation"
+ style="text-decoration:none;">
+ConJoin</a> module, and a control-flag for the decision of whether to call the
+ <a href="http://ai.neocities.org/Indicative.html"
+ title="documentation"
+ style="text-decoration:none;">
+Indicative</a> module more than once.
+</p>
+
+<p>
+<a name="dba"></a>
+<b>$dba</b> -- <i>doing-business-as</i> noun-case or verb-person.
+</p>
+
+<p>
+<a name="defact"></a>
+<b>$defact</b> -- default activation for
+ <a href="http://ai.neocities.org/EnNounPhrase.html"
+ title="documentation"
+ style="text-decoration:none;">
+EnNounPhrase</a>()
+</p>
+
+<p>
+<a name="dirobj"></a>
+<b>$dirobj</b> -- flag indicates seeking for a direct object.
+Should perhaps be renamed "dirobjcon" so as to indicate a
+<i>condition</i> rather than a particular direct object.
+</p>
+
+<p>
+<a name="dobmfn"></a>
+<b>dobmfn</b> -- for
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="InFerence documentation page"
+ style="text-decoration:none;">
+InFerence</a> to pass gender to AskUser
+</p>
+
+<p>
+<a name="dobseq"></a>
+<b>$dobseq</b> -- <i>direct-object-subSEQuent word</i> &#8211;
+ is used only within the
+  <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+InFerence</a>() module to hold onto the
+psi identifier of a noun or pronoun that was the direct
+object of a verb retrieved from memory as part of an
+inference that will require the same direct object
+to be associated with the verb if the inference is
+to be confirmed or refuted as a valid inference.
+</p>
+
+<p>
+<a name="dunnocon"></a>
+<b>$dunnocon</b> -- is a flag used in
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a>() to permit
+the AI Mind to respond to a who+verb+object query
+with "I DO NOT KNOW" if no correct answer is found.
+</p>
+
+<p>
+<a name="engov"></a>
+<b>$engov</b> -- possible replacement for too strict "hlc". In order for the AI Mind
+thinking in English to be able to mention a Russian word without switching to Russian,
+it may be necessary to use <i>$engov</i> and <i>$rugov</i> as competing
+language-determinants. Whichever <i>governing</i> determinant has the higher
+numeric value shall cause thinking to occur in its language, even if a word
+occurs in a different language. Only a preponderance of words in the other
+language shall cause a switch to the other language.
+</p>
+
+<p>
+<a name="eot"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#eot">eot</b></a> --
+end-of-transmission for end of input
+</p>
+
+<p>
+<a name="etc"></a> <b>$etc</b> --
+from the abbreviation "etc." from the Latin phrase <i>et cetera</i>,
+meaning "and other things" -- a counting variable that is incremented in the
+ <a href="http://ai.neocities.org/EnNounPhrase.html"
+ title="documentation"
+ style="text-decoration:none;">
+EnNounPhrase</a>() module when more than one fetchable idea is active in
+conceptual memory. The
+$<a href="http://ai.neocities.org/var.html#etc">etc</a> count is used in the
+ <a href="http://ai.neocities.org/EnThink.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnThink</a>() module as a trigger for calling the
+ <a href="http://ai.neocities.org/ConJoin.html"
+ title="documentation page"
+ style="text-decoration:none;">
+ConJoin</a>() module to insert a conjunction like "and" between two ideas
+in the generation of a sentence of thought.
+</p>
+
+<p>
+<a name="eureka"></a>
+<b>$eureka</b> -- something "found" in the aud-recog modules
+</p>
+
+<p>
+<a name="finlen"></a>
+<b>$finlen</b> -- fin(al) len(gth) or end-of-word for
+ <a href="http://ai.neocities.org/AudRecog.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudRecog</a> auditory recognition module.
+</p>
+
+<p>
+<a name="finpsi"></a>
+<b>$finpsi</b> -- carry-over end-psi during 32-SPACE or 13-CR (carriage return).
+</p>
+
+<p>
+<a name="foom"></a>
+<b>$foom</b> -- a proposed new variable for a proposed new
+ <a href="http;//ai.neocities.org/Spawn.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Spawn</a>() module.
+The <i>foom</i> variable shall be set arbitrarily by the
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="job description"
+ style="text-decoration:none;">
+AI Mind Maintainer</a> as the number of new concepts to be learned
+by the spawning AGI Mind as a trigger-level for the spawning
+of a new copy of the AI going "FOOM" in the sense of self-modifying
+and gaining knowledge and intelligence so rapidly as to
+constitute a "FOOM!" explosion of
+ <a href="http://wiki.lesswrong.com/wiki/FOOM#Hard_takeoff"
+ title="wiki explanation"
+ style="text-decoration:none;">
+hard-take-off</a> AI.
+</p>
+
+<p>
+<a name="fyi"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#fyi">fyi</b></a> --
+(for your information) 1 = Normal; 2 = Transcript; 3 = Tutorial mode; 4 = Diagnostic mode
+</p>
+
+<p>
+<a name="gapcon"></a>
+<b>$gapcon</b> -- status-con flag for
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation"
+ style="text-decoration:none;">
+AudInput</a>() to count down gaps of no input, so that internal
+thinking may accelerate during periods of no input from external sources.
+</p>
+
+<p>
+<a name="gencon"></a>
+<b>$gencon</b> -- status-con flag set briefly to unitary one by
+ <a href="http://ai.neocities.org/EnVerbGen.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnVerbGen</a>() as a condition-flag to prevent
+ <a href="http://ai.neocities.org/EnVerbPhrase.html"
+ title="documentation"
+ style="text-decoration:none;">
+EnVerbPhrase</a>() from making a call to
+ <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a>() after
+ <a href="http://ai.neocities.org/EnVerbGen.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnVerbGen</a>() has already generated and spoken an inflected form of
+an English verb. The $<i>gencon</i> flag is reset to zero at the end of
+ <a href="http://ai.neocities.org/EnVerbPhrase.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnVerbPhrase</a>() whether it has been used or not, so that
+ <a href="http://ai.neocities.org/EnVerbPhrase.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnVerbPhrase</a>() will normally call the
+ <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a>() module to say a verb-form summoned from memory
+by the parameters of person and number.
+</p>
+
+<p>
+<a name="hlc"></a>
+<b>$hlc</b> -- human-language code; 1=en; 2=de; 3=ru. May eventually be
+subject to override by the <i>$engov</i> or <i>$degov</i> or <i>$rugov</i> flag,
+so that an AI thinking in one language may discuss a word in a different
+language without switching over to thinking in the different language.
+</p>
+
+<p>
+<a name="holdnum"></a>
+<b>holdnum</b> -- transfers number from subject to verb.
+</p>
+
+<p>
+<a name="i"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#i">i</b></a> --
+index for cycling through a loop or an array.
+</p>
+
+<p>
+<a name="ictus"></a>
+<b>$ictus</b> -- testable activation-level to trigger use of a conjunction by the
+ <a href="http://ai.neocities.org/ConJoin.html"
+ title="documentation page"
+ style="text-decoration:none;">
+ConJoin</a>() module in expressing a compound thought composed of
+two or more strongly activated ideas, each generated by a single calling of the
+ <a href="http://ai.neocities.org/Indicative.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Indicative</a>() module.
+</p>
+
+<p>
+<a name="idea"></a>
+<b>$idea</b> -- for re-entry of AI thought back into the AI.
+</p>
+
+<p>
+<a name="impetus"></a>
+<b>$impetus</b> -- an accumulating variable to hold the activation-level
+of a trigger to initiate action by the FreeWill
+ <a href="http://ai.neocities.org/Volition.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Volition</a> module.
+</p>
+
+<p>
+<a name="infincon"></a>
+<b>infincon</b> -- infinitive condition flag
+</p>
+
+<p>
+<a name="inft"></a>
+<b>$inft</b> -- &#8211; <i>inference-time</i> &#8211; holds the current time
+at the start of the
+  <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+InFerence</a>() module so that the AskUser() module
+may ask a question based upon pre-existing knowledge before
+the formation of a silent inference in the AI memory.
+</p>
+
+<p>
+<a name="inhibcon"></a>
+<b>$inhibcon</b> -- flag for neural inhibition
+</p>
+
+<p>
+<a name="iob"></a>
+<b>$iob</b> -- indirect-object tag for @psy concept array
+</p>
+
+<p>
+<a name="isolation"></a>
+<b>isolation</b> -- counter of thought-cycles spent in "isolation" with
+no human input, as an arbitrary trigger for output by the AI Mind, or as
+a threshold for the AI to take certain actions if input suddenly appears.
+</p>
+
+<p>
+<a name="ivcon"></a>
+<b>ivcon</b> -- Imputed-Verb CONdition flag that is set to a unitary one in the
+<a href="http://ai.neocities.org/RuParser.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+RuParser</a> module if a Russian be-verb is imputed to be meant by the speaker
+and is not overriden by a normal Russian verb. Then the Russian-thinking
+ <a href="http://ai.neocities.org/RuThink.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+RuThink</a> module calls the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+InFerence</a> module to create a silent inference based on both the knowledge
+about a class of subjects and the new knowledge that a particular entity
+is a member of the indicated class of subjects. For instance, if the AI Mind
+knows that students read books, and a user states that "Mark is a student,"
+the AI may silently infer the possibility that Mark reads books.
+</p>
+
+<p>
+<a name="jrt"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#jrt">jrt</b></a> --
+ReJuvenate() "junior time" for memories moved
+</p>
+
+<p>
+<a name="jux"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#jux">jux</b></a> --
+jux(taposed) concept in @psy array, especially the word "NOT" to negate a verb.
+</p>
+
+<p>
+<a name="k"></a>
+<b>$k</b> -- k(knowledge) element from @psy concept array
+</p>
+
+<p>
+<a name="kbcon"></a>
+<b>kbcon</b> -- <i>knowledge-base-condition</i> flag for
+ <a href="http://ai.neocities.org/KbRetro.html"
+ title="documentation page"
+ style="text-decoration:none;">
+KbRetro</a> to wait for a yes-or-no answer.
+</p>
+
+<p>
+<a name="kbdba"></a>
+<b>kbdba</b> -- <i>knowledge-base doing-business-as</i> -- in the
+ <a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer"
+ style="text-decoration:none;">
+<i>Mens Latina</i></a> Latin AI, reveals what case a Latin noun is in at the particular
+ <a href="http://ai.neocities.org/var.html#toc">toc</a> (time of old concept) when the
+Latin noun was recognized as representing a particular concept. Because the inflectional
+ending of a recognized Latin word may be ambiguous with respect to, say, nominative
+case or accusative case, the value of the
+ <a href="http://ai.neocities.org/var.html#dba">dba</a> tag at the time of
+recognition is not the final say or final interpretation of what case a noun is
+in as part of a new Latin input. The value obtained from the
+ <a href="http://ai.neocities.org/var.html#toc">toc</a> node may be treated as
+a temporary <i>default</i> value likely to be overridden by the grammatical tests
+conducted by the
+ <a href="http://ai.neocities.org/LaParser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+
+LaParser</a>() module.
+</p>
+
+<p>
+<a name="kbmfn"></a>
+<b>kbmfn</b> -- <i>knowledge-base masculine-feminine-neuter</i> -- in the
+ <a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer"
+ style="text-decoration:none;">
+<i>Mens Latina</i></a> Latin AI, is the gender (masculine/feminine/neuter) of
+a Latin noun as revealed at the
+ <a href="http://ai.neocities.org/var.html#toc">toc</a> time of its recognition
+as a word and a concept. The gender-value obtained for the noun is not likely to
+be overruled. Although in English a "friend" can be a he or a she, in Latin
+the gender is more closely bound with each particular noun.
+</p>
+
+<p>
+<a name="kbnum"></a>
+<b>kbnum</b> -- <i>knowledge-base num(ber)</i> -- in the
+ <a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer"
+ style="text-decoration:none;">
+<i>Mens Latina</i></a> Latin AI, is the grammatical number (singular or plural) of
+a particular conceptual engram of a Latin word at the
+ <a href="http://ai.neocities.org/var.html#toc">toc</a> time of its recognition
+as a word and a concept. The given value serves as a <i>default</i> for the first
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+instantiation</a> of the input noun, and is not likely to be overridden, because
+Latin inflectional noun-endings typically reveal the grammatical number of the noun.
+</p>
+
+<p>
+<a name="kbzap"></a>
+<b>kbzap</b> -- ZAP the knowledge base -- is a variable that holds
+the <i>oldpsi</i> word "YES" or "NO" when the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InFerence</a>() module has caused the
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a>() module to seek confirmation or denial of a silent
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+inference</a> from a human user engaged in a conceptual conversation with the AI Mind.
+ <a href="http://ai.neocities.org/KbRetro.html"
+ title="documentation page"
+ style="text-decoration:none;">
+KbRetro</a>() uses the YES-value <i>kbzap</i> to confirm an
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+inference</a>, or the NO-value of <i>kbzap</i> to negate an
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+inference</a>.
+</p>
+
+<p>
+<a name="krt"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#krt">krt</b></a>
+-- knowledge representation time.
+</p>
+
+<p>
+<a name="lastpho"></a>
+<b>$lastpho</b> -- device to avoid extra "S" on verbs.
+</p>
+
+<p>
+<a name="len"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#len">len</b></a>
+-- length, for avoiding input non-words. The <i>len</i> variable increments with
+each additional character during
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a>, and is reset to zero at the end of
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> or
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OldConcept</a> or
+ <a href="http://ai.neocities.org/NewConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+NewConcept</a>, so that the auditory engram recall vector <i>rv</i> may be
+set for the first character of a word when the word-length is a unitary one.
+</p>
+
+<p>
+<a name="mfn"></a>
+<b>$mfn</b> -- masculine-feminine-neuter gender flag.
+</p>
+
+<p>
+<a name="midway"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#midway">midway</b></a> --
+dynamically adjustable time-limit for searching backwards in the experiential
+memory of the AI. In early AI Minds, "<i>midway</i>" is set to zero so as to
+search the entire memory. As AI Minds mature and acquire tremendously
+long lifetime memories, "<i>midway</i>" may be dynamically adjusted to
+search bacwards actually to the mid-way mark. If an AI has the task of
+finding all possible recollections and knowledge about a topic where
+an initial search has yielded no results, "<i>midway</i>" may be adjusted
+for a secondary and more exhaustive search.
+</p>
+
+<p>
+<a name="mjact"></a>
+<b>$mjact</b> -- motjuste-activation for defaulting to 701=I
+</p>
+
+<p>
+<a name="monopsi"></a>
+<b>$monopsi</b> -- for detecting single-character words in the
+ <a href="http://ai.neocities.org/AudRecog.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudRecog</a>() module
+</p>
+
+<p>
+<a name="mood"></a>
+<b>$mood</b> -- a selector to enable the English-thinking EnThink
+module to choose among grammatical moods of verbs and their
+enveloping sentences, such as Indicative; Subjunctive; Imperative, etc.
+</p>
+
+<p>
+<a name="moot"></a>
+<b>$moot</b> -- &#8211; as in legally <i>moot</i> &#8211; is a flag to prevent
+the formation of associative tags during mental operations which
+are not truly a part of cognition, such as the processing of an
+input query, the formation of a silent
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+inference</a>, or the creation of an output query.
+</p>
+
+<p>
+<a name="morphpsi"></a>
+<b>$morphpsi</b> -- for AudRecog() recognition of morphemes
+</p>
+
+<p>
+<a name="motjuste"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#motjuste">motjuste</b></a> --
+(from French) best word for inclusion in a thought
+</p>
+
+<p>
+<a name="mri"></a>
+<b>$mri</b> -- most-recent-instantiation. The <i>mri</i> is a time-point
+which may be used for the insertion of an associative tag into the
+conceptual flag-panel of a previous concept in order to establish
+a link between a newly input concept being instantiated and the
+previously instantiated concept. The designation of the time-point of
+the <i>mri</i> concept may be qualified or restricted by code that
+requires the <i>mri</i> concept to be a special ("pos") part-of-speech,
+such as either a noun or a verb. Thus a preposition being instantiated
+may be back-linked to a noun or a verb as a mental point of departure
+leading to the preposition within a chain of thought. For example, if we
+say "John writes books for money", the preposition "for" could be linked
+backwards to a <i>tpr</i> (time-of-preposition) tag in the flag-panel of
+the verb "writes" or in the flag-panel of the noun "books", depending on
+whether the basic idea is "writes for money" or "books for money" --
+especially if "John writes books for money and poems for fun."
+</p>
+
+<p>
+<a name="msg"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#msg">msg</b></a>
+-- for input as a "message" to the AI. The "<i>msg</i>" string is built up
+by the concatenation of each incoming "<i>pho</i>" character to the
+accumulating "<i>msg</i>" string which is then displayed as the human input
+within the user interface. The  "<i>msg</i>" string is reset to emptiness in the
+<a href="http://ai.neocities.org/Sensorium.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+Sensorium</a> module so that a new message of human input may accumulate.
+</p>
+
+<p>
+<a name="mtx"></a>
+<b>$mtx</b> -- machine-translation xfer (transfer) variable for
+ <a href="http://github.com/kernc/mindforth/blob/master/wiki/SpreadAct.wiki"
+ title="spreading activation"
+ style="text-decoration:none;">
+SpreadAct</a> module to transfer an activation-swarm from a sentence in one
+language to the same concepts in a target language for
+ <a href="http://medium.com/p/9d7a732a4ee1"
+ title="Article on Medium publishing platform">
+machine translation</a> (MT).
+</p>
+
+<p>
+<a name="negjux"></a>
+<b>$negjux</b> -- a flag to indicate that a verb stored in memory
+has been negated by the nearby storing of a 250=NOT adverb. When
+ <a href="http://ai.neocities.org/EnVerbPhrase.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnVerbPhrase</a>() selects a verb from conceptual memory and the verb
+is negated with "NOT", the numeric value of 250=NOT goes into the
+<i>negjux</i> variable as a flag to require the thinking of a negated
+English verb to include a call to the
+ <a href="http://ai.neocities.org/EnAuxVerb.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnAuxVerb</a> module that will place a form of the auxiliary verb "DO"
+before the adverb "NOT" and the verb itself, as in "God does not
+play dice."  During a verb-fetch in
+ <a href="http://ai.neocities.org/EnVerbPhrase.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnVerbPhrase</a>, <i>negjux</i> is
+given one chance to modify either a be-verb or a non-be-verb,
+and in either case is reset to zero after the one-chance opportunity.
+</p>
+
+<p>
+<a name="newpsi"></a>
+<b>newpsi</b> -- for singular-nounstem assignments
+</p>
+
+<p>
+<a name="node"></a>
+<b>$node</b> -- "split" @psy array row into nodes
+</p>
+
+<p>
+<a name="nonce"></a>
+<b>nonce</b> -- roughly the time when the AI starts running -- for the
+Diagnostic display to show the recent contents of the conceptual and
+sensory memory arrays.
+</p>
+
+<p>
+<a name="nounlock"></a>
+<b>$nounlock</b> -- time-point in conceptual memory for a verb to lock onto a seq-noun.
+</p>
+
+<p>
+<a name="nphrnum"></a>
+<b>$nphrnum</b> -- grammatical number of the noun-phrase selected by the
+ <a href="http://ai.neocities.org/EnNounPhrase.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnNounPhrase</a> module. <i>nphrnum</i> is set to zero near the start of
+ <a href="http://ai.neocities.org/EnNounPhrase.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnNounPhrase</a> so that no value will erroneously carry over from a
+previous noun to another noun being selected.
+ <a href="http://ai.neocities.org/EnArticle.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnArticle</a> needs <i>nphrnum</i> as a basis for inserting the
+indefinite article "a" before a singular noun, and to avoid
+inserting "a" before a plural noun.
+</p>
+
+<p>
+<a name="nphrpos"></a>
+<b>$nphrpos</b> -- "noun-phrase part-of-speech" for testing during the
+ <a href="http://ai.neocities.org/EnThink.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnThink</a>() process.
+</p>
+
+<p>
+<a name="nucon"></a>
+<b>$nucon</b> -- <i>new-condition</i> &#8211; segregates
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="Spreading Activation"
+ style="text-decoration:none;">
+SpreadAct</a>() code to respond to the input of an unknown word
+by asking the user a question about the new concept being
+learned by the AI Mind.
+</p>
+
+<p>
+<a name="num"></a>
+<b>$num</b> -- number-flag for grammatical number. Verbs must agree in
+number with their subjects. Two or more singular subjects require a
+plural verb.
+</p>
+
+<p>
+<a name="numreq"></a>
+<b>$numreq</b> -- NUMber REQuired for agreement of subject and predicate nominative,
+with possibility of being overruled by circumstances.
+</p>
+
+<p>
+<a name="numsubj"></a>
+<b>numsubj</b> -- for number of subject.
+</p>
+
+<p>
+<a name="nxr"></a>
+<b>$nxr</b> -- "next row in array" for AudRecog() dealing with next memory row
+</p>
+
+<p>
+<a name="nxt"></a>
+<b>$nxt</b> -- number incremented for each new concept
+</p>
+
+<p>
+<a name="objprep"></a>
+<b>$objprep</b> -- object of a preposition to be found and spoken by the
+ <a href="http://ai.neocities.org/EnPrep.html">
+EnPrep</a> module.
+</p>
+
+<p>
+<a name="oldpsi"></a>
+<b>$oldpsi</b> -- used in
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OldConcept</a> to de-globalize "psi"
+</p>
+
+<p>
+<a name="onset"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#onset">onset</b></a> --
+onset-tag for use as an auditory recall-vector.
+</p>
+
+<p>
+<a name="output"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#output">output</b></a>
+-- output string as in a JavaScript
+ <a href="http://ai.neocities.org/FirstWorkingAGI.html"
+ title="Requires Microsoft Internet Explorer"
+ style="text-decoration:none;">
+AI Mind</a> or the
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="AI source code in Strawberry Perl Five"
+ style="text-decoration:none;">
+ghost</a>.pl AI.
+</p>
+
+<p>
+<a name="PAL"></a>
+<b>$PAL</b> -- Permissive Action Link for AudBuffer and OutBuffer.
+This flag will normally be true with a unitary value of one, but it
+may be set to false with a value of zero so that a module like
+ <a href="http://ai.neocities.org/EnVerbGen.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnVerbGen</a> may manipulate the buffer-characters in the
+ <a href="http://ai.neocities.org/Outbuffer.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OutBuffer</a> without causing a feedback loop that dynamically interferes
+with the process of generating inflectional endings on a word.
+</p>
+
+<p>
+<a name="pho"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#pho">pho</b></a> --
+a "phoneme" or character of auditory input.
+</p>
+
+<p>
+<a name="phodex"></a>
+<b>$phodex</b> -- pho-index counter for
+ <a href="http://ai.neocities.org/AudBuffer.html"
+ title="original documentation page"
+ style="text-decoration:none;">
+AudBuffer</a>(); <i>phodex</i> is reset to unitary one ("1") in the
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a> module and in the
+ <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a> module.
+</p>
+
+<p>
+<a name="pos"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#pos">pos</b></a>
+ -- (part of speech) with a numeric value
+(1=adj 2=adv 3=conj 4=interj 5=noun 6=prep 7=pron 8=verb)
+to be inserted into the conceptual flag-panel of a concept during the
+process of instantiation of a concept-node at a particular time-point.
+The part-of-speech parameter allows an AI Mind to restrict operations to
+one particular part of speech, such as verb, or to similar parts of speech,
+such as nouns and pronouns to be used as subjects or objects of a verb.
+</p>
+
+<p>
+<a name="pov"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#pov">pov</b></a>
+-- point-of-view: 1=self; 2=dual; 3=alien.
+When pov=1, the word "you" is somebody in the external world.
+When pov=2, the word "you" refers to the self-concept "I" in the AI.
+When pov=3, the word "you" is interpreted as part of a conversation
+by a third-party or as a word in a text, not referring to the
+self-concept of either the AI or of someone talking to the AI.
+</p>
+
+<p>
+<a name="prc"></a>
+<b>$prc</b> -- Provisional ReCognition in the
+ <a href="http://ai.neocities.org/AudRecog.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudRecog</a>() auditory recognition module.
+</p>
+
+<p>
+<a name="pre"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#pre">pre</b></a> --
+pre(vious) associated @psy concept.
+</p>
+
+<p>
+<a name="prednom"></a>
+<b>$prednom</b> -- predicate nominative for
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+InFerence</a>.
+</p>
+
+<p>
+<a name="prejux"></a>
+<b>$prejux</b> -- previous $jux to carry "NOT" to a verb.
+If the adverb "not" passes through the
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OldConcept</a> module in the process of the negation of a verb,
+the "<i>prejux</i>" variable holds the value for negation and
+passes it as "<i>jux</i>" to the flag-panel of the verb being
+negated.
+</p>
+
+<p>
+<a name="prep"></a>
+<b>$prep</b> -- a preposition used in the
+ <a href="http://ai.neocities.org/EnPrep.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnPrep</a> mind-module for English prepositions.
+</p>
+
+<p>
+<a name="prepcon"></a>
+<b>$prepcon</b> -- prepositional condition-flag for parsing.
+</p>
+
+<p>
+<a name="prepgen"></a>
+<b>$prepgen</b> -- urgency to generate a prepositional phrase.
+</p>
+
+<p>
+<a name="prepsi"></a>
+<b>$prepsi</b> -- is the identifier of a "<i>pre</i>" concept
+for the purpose of spreading activation <i>sideways</i> from
+a direct object to its governing verb and then further sideways
+to the subject of the verb. This process may be tested by an AI coder or by an
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AI Mind Maintainer</a> by entering one noun into the running AI software
+to see if some other noun is output as part of a remembered idea
+involving the noun being tested for. Activation spreading sideways
+is an important feature for the evolution of AI Minds able to ruminate
+endlessly and able to think interminably about all possible subjects
+contained as an accumulation of concepts in the AI knowledge base.
+</p>
+
+<p>
+<a name="prevpsi"></a>
+<b>$prevpsi</b> -- a value-holder to be used by
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+InStantiate</a> to cancel an imputed Russian BeVerb which has been tentatively
+instantiated after the input of a noun or pronoun potentially
+serving as the subject of an imputed verb of being. For instance,
+if someone begins a sentence in Russian with a noun like "The teacher...",
+it is not yet known whether the intended verb will be a be-verb like "is"
+or some ordinary verb like "plays (chess)". The AI software must
+instantiate an imputed verb of being in case the next input word is
+something like a noun or an adjective, and not a normal verb.
+But if a normal verb is indeed the next word of input, the
+imputed be-verb must be discarded in favor of the real verb,
+and the "<i>prevpsi</i>" identifier will help the AI program
+to declare that the "<i>seq</i>" of the Russian subject is
+the real verb, and not the momentarily imputed verb of being.
+</p>
+
+
+<p>
+<a name="prevtag"></a>
+<b>$prevtag</b> -- local pre(vious) tag for use in
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a>(). After a noun or a verb has been instantiated,
+<i>$prevtag</i> holds its concept-number ready to be inserted as a
+<i>$pre</i> tag, if needed, during the instantiation of a succeeding concept.
+Thus a verb can have a <i>$pre</i> back to its subject, and a direct object
+can have a <i>$pre</i> back to a verb.
+</p>
+
+<p>
+<a name="prsn"></a>
+<b>$prsn</b> -- 1st, 2nd, 3rd
+ <a href="http://en.wikipedia.org/wiki/Grammatical_person"
+ title="Wikipedia"
+ style="text-decoration:none;">
+person</a> of verb-forms.
+</p>
+
+<p>
+<a name="psi"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#psi">psi</b></a>
+-- variable for an element of the @psy conceptual array, with a numeric
+identifier serving as an
+<a href="#mtx"
+ title="machine translation xfer">
+mtx</a> tag for the same concept in another language.
+</p>
+
+<p>
+<a name="psibase"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#psibase">psibase</b></a> --
+winning psibase with winning actbase
+</p>
+
+<p>
+<a name="psidata"></a>
+<b><a href="http://mind.sourceforge.net/variable.html#psidata">psidata</b></a> --
+ ( Psi mindcore data ) is a cumulative variable
+that permits the JavaScript Diagnostic() module to display a column
+of the flag-panels of the engrams in the Psy mindcore array.
+</p>
+
+<p>
+<a name="putnum"></a>
+<b>$putnum</b> -- putative num(ber) for subject-verb agreement.
+</p>
+
+<p>
+<a name="px1"></a>
+<b>$px1</b> -- (obsolete) preposition-transfer carrier for NLP generation. This
+carrier-variable transfers the location of the object of a preposition
+from a generative mind-module such as
+ <a href="http://ai.neocities.org/EnNounPhrase.html">
+EnNounPhrase</a> to the English-preposition
+ <a href="http://ai.neocities.org/EnPrep.html">
+EnPrep</a> module which fetches and outputs both the
+remembered preposition and the object of the preposition.
+Made obsolete by the
+ "<a href="#tnpr"><i>tnpr</i></a>" flag and the  "<a href="#tvpr"><i>tvpr</i></a>" flag.
+</p>
+
+<p>
+<a name="px2"></a>
+<b>$px2</b> -- (obsolete) second of <i>ad libitum</i> many preposition-transfer
+carriers for NLP generation.
+</p>
+
+<p>
+<a name="px3"></a>
+<b>$px3</b> -- (obsolete) third preposition-transfer carrier for NLP generation.
+If an idea stored in conceptual memory contains multiple prepositions
+as in the phrase "<i>government of the people, by the people, for the people</i>",
+the group of "<i>px</i>" variables may serve to retrieve each separate
+object of the multiple prepositions.
+</p>
+
+<p>
+<a name="qucon"></a>
+<b>$qucon</b> -- <i>query-condition</i> &#8211; segregates
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="Spreading Activation"
+ style="text-decoration:none;">
+SpreadAct</a>() code to respond to the input of who-queries.
+</p>
+
+<p>
+<a name="quiet"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#quiet">quiet</b></a> --
+a status variable set briefly to false upon user-input, so that the AI
+may output one thought responding to input and not following an internal
+chain of thought as conducted by the SpreadAct() module. As long as
+user input continues, the AI continues to think up responses. If user-input
+stops or even pauses, the AI returns to thinking its own thoughts.
+</p>
+
+<p>
+<a name="quobj"></a>
+<b>$quobj</b> -- <i>query object</i> &#8211; holds onto the
+<i>psi</i> identifier of a word chosen by the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InFerence</a>() module
+to be the direct object of a query created by the
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a>() module.
+</p>
+
+<p>
+<a name="quobjaud"></a>
+<b>quobjaud</b> -- auditory recall-tag for AskUser module
+</p>
+
+<p>
+<a name="qusnum"></a>
+<b>qusnum</b> -- <i>query-subject number</i> &#8211; for the
+ <a href="http://ai.neocities.org/AskUser.html
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a> module to ask a question seeking yes-or-no
+confirmation of a logical
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+inference</a> made by the AI Mind.
+</p>
+
+<p>
+<a name="qusub"></a>
+<b>$qusub</b> -- <i>query subject</i> &#8211; is a
+transfer-vehicle of the subject-identifier from
+any module prompting a question into the specific
+module that will ask the question.
+</p>
+
+<p>
+<a name="quverb"></a>
+<b>$quverb</b> -- <i>query verb</i> &#8211; is set in the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InFerence</a>() module
+with the identifier of a verb concept serving as part of an
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+<i>InFerence</i></a> being made about user input. Then the
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a>() module transforms the
+<i>quverb</i> identifier into the yes-or-no-verb identifier <i>ynverb</i> so that
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a>() can use the query-verb to ask
+a question expecting a yes-or-no answer.
+</p>
+
+<p>
+<a name="qv1psi"></a>
+<b>$qv1psi</b> -- concept for
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a> to seek as a subject,
+so that the AI will try to remember knowledge about the concept.
+</p>
+
+<p>
+<a name="qv2num"></a>
+<b>$qv2num</b> -- num(ber) of a verb in a who+verb+dir.obj response.
+</p>
+
+<p>
+<a name="qv2psi"></a>
+<b>$qv2psi</b> -- concept for
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a> to seek as a verb,
+so that the AI may remember ideas containing the same verb.
+</p>
+
+<p>
+<a name="qv3psi"></a>
+<b>$qv3psi</b> -- concept for
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a> to seek as an indirect object,
+so that the AI may think of ideas connected in any conceivable way
+with the target concept.
+</p>
+
+<p>
+<a name="qv4psi"></a>
+<b>$qv4psi</b> -- concept for
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a> to seek as a direct object,
+so that the AI may use the target concept as a subject or as a
+direct object in the remembrance of ideas.
+</p>
+
+<p>
+<a name="qvdocon"></a>
+<b>$qvdocon</b> -- <i>query-condition for who+verb+direct-object</i> &#8211; segregates
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="Spreading Activation"
+ style="text-decoration:none;">
+SpreadAct</a>() code to respond to input queries similar in form
+to "Who makes robots?"
+</p>
+
+<p>
+<a name="qviocon"></a>
+<b>$qviocon</b> -- <i>query-condition for who+verb+indirect-object</i> &#8211; segregates
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="Spreading Activation"
+ style="text-decoration:none;">
+SpreadAct</a>() code to respond to input queries in a form like
+"To whom does God give help?"
+</p>
+
+<p>
+<a name="recnum"></a>
+<b>$recnum</b> -- recognized number of a recognized word
+</p>
+
+<p>
+<a name="recon"></a>
+<b>$recon</b> -- incentive for reconaissance by asking a question.
+</p>
+
+<p>
+<a name="rjc"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#rjc">rjc</b></a> --
+counter of rejuvenation cycles
+</p>
+
+<p>
+<a name="rota"></a>
+<b>rota</b> (Latin for "wheel") -- rotation variable for treating input-(pro)nouns.
+In a simple sentence of Latin input to the
+ <a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer"
+ style="text-decoration:none;">
+<i>Mens Latina</i></a> Latin AI, a series of nouns may initially (Stage One) be
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="module documentation page"
+ style="text-decoration:none;">
+instantiated</a> in a bare-bones fashion without their case or
+subject-verb-object role being identified. They may then go through a
+Stage Two instantiation where the
+ <a href="http://ai.neocities.org/LaParser.html"
+ title="module documentation page"
+ style="text-decoration:none;">
+LaParser</a>() Latin parser module performs a series of tests to
+determine or disambiguate the speaker-intended case of the noun,
+based not only on its perhaps ambiguous inflectional ending but also
+on the other Latin nouns being used in the sentence of input. The <i>rota</i>
+counter allows the
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="module documentation page"
+ style="text-decoration:none;">
+InStantiate</a>() module to cycle or <i>rotate</i> through the several nouns
+that are possibly included in the Latin input, so that the
+ <a href="http://ai.neocities.org/OutBuffer.html"
+ title="module documentation page"
+ style="text-decoration:none;">
+OutBuffer</a>() detection of potentially ambiguous Latin noun-endings
+may load the initial instantiation time-point onto unknown "upshot" placeholder
+variables to be kept ready during a series of "Stage Two" LaParser() tests
+in advance of re-instantiating each of the several nouns as either the
+ <a href="http://ai.neocities.org/var.html#tsj">tsj</a> subject, or the
+ <a href="http://ai.neocities.org/var.html#tio">tio</a> indirect object, or the
+ <a href="http://ai.neocities.org/var.html#tdo">tdo</a> direct object of the Latin verb.
+If the upshot variable (ux1-ux5; uy1-uy5; uz1-uz5) wins selection, it already contains
+the Stage One time-point of instantiation which will now be transferred to the
+time-point of the subject or indirect object or direct object, so that each item
+may be re-instantiated with the properly tested and identified associative tags
+which play their essential role in the
+ <a href="http://en.wikipedia.org/wiki/Natural-language_understanding"
+ title="Wikipedia article"
+ style="text-decoration:none;">
+Natural Language Understanding</a> of the input sentence.
+</p>
+
+<p>
+<a name="rsvp"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#rsvp">rsvp</b></a> --
+to hold an arbitrary value for a delay in thinking to wait for user input.
+</p>
+
+<p>
+<a name="rugov"></a>
+<b>$rugov</b> -- possible replacement for too strict "hlc".
+</p>
+
+<p>
+<a name="rv"></a>
+<b>$rv</b> -- recall-vector for auditory memory. The time-point value of <i>rv</i> is
+first set in the
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a> module after an intervening space when the first character
+of an input-word is being passed into the
+ <a href="http://ai.neocities.org/AudMem.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudMem</a> module. The recall-vector <i>rv</i> is reset to zero in
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a> after a call to
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OldConcept</a> or to
+ <a href="http://ai.neocities.org/NewConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+NewConcept</a>.
+</p>
+
+<p>
+<a name="seq"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#seq">seq</b></a> --
+subSEQuent @psy concept in a Subject-Verb-Object (SVO) idea. During user input,
+a subject-noun or a subject-pronoun is at first
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation webpage for InStantiate"
+ style="text-decoration:none;">
+instantiated</a> at the time-of-subject
+ <a href="#tsj"><i>tsj</i></a> without a "<i>seq</i>" tag in the conceptual flag-panel,
+because the "<i>seq</i>" can not be known in advance. Upon the input of a verb
+at the time-of-verb <a href="#tvb"><i>tvb</i></a> point in the same clause or sentence,
+the English-parsing
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+EnParser</a> module uses the time-of-subject <a href="#tsj"><i>tsj</i></a> flag
+to re-instantiate the subject-concept with the numeric
+ <a href="#psi"><i>psi</i></a> concept-identifier of the verb inserted retroactively
+into the <a href="#seq"><i>seq</i></a> slot in the flag-panel of the subject-concept.
+Subsequently if a direct object occurs in the input stream of the clause or sentence,
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+EnParser</a> uses the time-of-verb <a href="#tvb"><i>tvb</i></a> flag to
+insert the <a href="#psi"><i>psi</i></a> of the direct object into the
+verb-panel as the <a href="#seq"><i>seq</i></a> of the verb, For the
+direct object itself, the time-of-direct-object <a href="#tdo"><i>tdo</i></a> flag
+may be used to ensure that a <a href="#seq"><i>seq</i></a> of zero is assigned to the
+direct object as the final element in the Subject-Verb-Object (SVO) clause or idea.
+</p>
+
+
+
+<p>
+<a name="seqdob"></a>
+<b>seqdob</b> -- for direct object transfer within
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="InFerence documentation page"
+ style="text-decoration:none;">
+InFerence</a>
+</p>
+
+<p>
+<a name="seqneed"></a>
+<b>$seqneed</b> -- noun/pronoun or verb needed as a "seq"
+</p>
+
+<p>
+<a name="seqpsi"></a>
+<b>$seqpsi</b> -- concept to which activation should be spread in the
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a> module for spreading conceptual activation.
+</p>
+
+<p>
+<a name="seqrvx"></a>
+<b>seqrvx</b> -- for rvx transfer of auditory recall-vector within
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="InFerence documentation page"
+ style="text-decoration:none;">
+InFerence</a>
+</p>
+
+<p>
+<a name="seqtkb"></a>
+<b>$seqtkb</b> -- <i>subSEQuent Time-in-Knowledge-Base </i> &#8211;
+ is used only within the
+  <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+InFerence</a>() module to latch onto the specific
+time-point in memory of a verb which was linked in the past to
+a concept now occurring within user input as a predicate nominative
+which identifies a class of entities from which an inference
+can be drawn and assigned to the subject of the user input.
+For instance, if the AI knows "Boys play games" and the user
+inputs "John is a boy," the old verb "play" can now be
+used to infer, "John plays games," because John is a boy.
+</p>
+
+<p>
+<a name="seqverb"></a>
+<b>$seqverb</b> -- <i>subSEQuent-concept VERB</i> &#8211; is an interstitial
+carrier of a verb-identifier in the
+  <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+InFerence</a>() module, permitting
+a verb which was used in old knowledge to be used as part of
+an inference of new knowledge and as part of a question
+seeking confirmation or refutation of an inference.
+</p>
+
+<p>
+<a name="snu"></a>
+<b>$snu</b> -- subject-number as parameter for verb-selection.
+</p>
+
+<p>
+<a name="spacegap"></a>
+<b>$spacegap</b> -- a gap to add one post-word space in the
+ <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a> module.
+</p>
+
+<p>
+<a name="spt"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#spt">spt</b></a> --
+blank space time before start of a word
+</p>
+
+<p>
+<a name="stemgap"></a>
+<b>$stemgap</b> -- for avoiding false AudRecog() stems
+</p>
+
+<p>
+<a name="subject"></a>
+<b>$subject</b> -- subject for parser module
+</p>
+
+<p>
+<a name="subjectflag"></a>
+<b>$subjectflag</b> -- initial default for NounPhrase()
+</p>
+
+<p>
+<a name="subjnom"></a>
+<b>$subjnom</b> -- <i>subject nominative</i> &#8211; is a concept identified in the
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OldConcept</a>() recognition module as
+the subject of an input causing the AI to make an
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+inference</a>.
+</p>
+
+<p>
+<a name="subjnum"></a>
+<b>$subjnum</b> -- (subject number) for agreement in grammatical number
+between a subject and a predicate nominative noun.
+</p>
+
+<p>
+<a name="subjpre"></a>
+<b>$subjpre</b> -- subject-$pre to be held for verb in parsing.
+</p>
+
+<p>
+<a name="subjpsi"></a>
+<b>$subjpsi</b> -- subject-concept parameter to govern person of verb-forms.
+</p>
+
+<p>
+<a name="sublen"></a>
+<b>$sublen</b> -- length of
+ <a href="http://ai.neocities.org/AudRecog.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudRecog</a>() subpsi word-stem
+</p>
+
+<p>
+<a name="subpsi"></a>
+<b>$subpsi</b> -- for AudRecog() of sub-component wordstems
+</p>
+
+
+<p>
+<a name="svo1"></a>
+<b>$svo1</b> -- subject -- item #1 in subject-verb-object
+</p>
+
+<p>
+<a name="svo2"></a>
+<b>$svo2</b> -- verb -- item #2 in subject-verb-object
+</p>
+
+<p>
+<a name="svo3"></a>
+<b>$svo3</b> -- indirect object -- item #3 in subject-verb-object
+</p>
+
+<p>
+<a name="svo4"></a>
+<b>$svo4</b> -- direct object -- item #4 in subject-verb-object
+</p>
+
+<p>
+<a name="t"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#t">t</b></a> --
+lifetime Ghost AI experiential time "$t"
+</p>
+
+<p>
+<a name="t2s"></a>
+<b>$t2s</b> -- auditory text-to-speech index
+</p>
+
+<p>
+<a name="tai"></a>
+<b>$tai</b> -- time of artificial intelligence diagnostics
+</p>
+
+<p>
+<a name="tbev"></a>
+<b>$tbev</b> -- time of be-verb for use with <i>negjux</i> negation-flag. In the
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OldConcept</a> module, <i>tbev</i> is set for any 800=BE verb and
+is used for inserting a
+<a href="#jux">jux</a> of 250=NOT into the flag-panel of a negated be-verb.
+The <i>tbev</i> flag may be reset to zero in the
+ <a href="http://ai.neocities.org/Sensorium.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Sensorium</a> module after
+any input has been processed by the
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a> module.
+</p>
+
+<p>
+<a name="tcj"></a>
+<b>tcj</b> -- <i>time-of-conjunction</i> -- conceptual flag-panel tag for a conjunction.
+</p>
+
+<p>
+<a name="tdj"></a>
+<b>tdj</b> -- <i>time-of-adjective</i> -- conceptual flag-panel tag for an adjective.
+</p>
+
+<p>
+<a name="tdv"></a>
+<b>tdv</b> -- <i>time-of-adverb</i> -- conceptual flag-panel tag for an adverb.
+</p>
+
+<p>
+<a name="tdo"></a>
+<b>$tdo</b> -- <u>t</u>ime-of-<u>d</u>irect-<u>o</u>bject for a parser module.
+</p>
+
+<p>
+<a name="tdt"></a>
+<b>tdt</b> -- <i>time-of-dative</i> -- conceptual flag-panel tag for instantiating
+a word in the dative case.
+</p>
+
+<p>
+<a name="text"></a>
+<b>$text</b> -- a general variable to hold text, especially for
+incrementing by concatenation.
+</p>
+
+<p>
+<a name="tgn"></a>
+<b>tgn</b> -- <i>time-of-genitive</i> -- for instantiating
+a word in the genitive case.
+</p>
+
+<p>
+<a name="tia"></a>
+<b>tia</b> -- <i>time-of-instrument</i> -- for instantiating
+a word in the instrumental (Russian) or ablative (Latin) case.
+</p>
+
+<p>
+<a name="tin"></a>
+<b>tin</b> -- MindForth <i><u>t</u>ime-of-<u>in</u>put</i> for interactive display.
+This variable lets the Forthmind show the contents of the Psy conceptual array
+and the Aud auditory array immediately prior to a display of current input and
+output. For purposes of troubleshooting, a temporary adjustment may be made
+to show recent memory engrams a little further back in time, such as
+when a silent inference has been made by the
+ <a href="http://ai.neocities.org/InFerence.html">
+InFerence</a> module and is being adjusted retroactively by the
+ <a href="http://ai.neocities.org/KbRetro.html">
+KbRetro</a> module.
+<br />
+</p>
+
+<p>
+<a name="tio"></a>
+<b>$tio</b> -- <u>t</u>ime-of-<u>i</u>ndirect-<u>o</u>bject for parser module.
+</p>
+
+<p>
+<a name="tkb"></a>
+<b>$tkb</b> -- <u>t</u>ime-in-<u>k</u>nowledge-<u>b</u>ase of an idea. The
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+EnParser</a>() module stores time-of-verb $tvb in the k[13] $tkb slot
+of the subject of a sentence being stored at the time-of-subject $tsj
+time-point in the Psy conceptual array. The
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+EnParser</a> module stores $tkb as equal to $tdo (time of the direct object)
+in the Psy array row of the verb at time-of-verb $tvb. Thus for subjects $tkb
+means "verb" and for verbs $tkb means "direct object". No $tkb is stored for a direct
+object, because the associative tags go from subject to verb to object (SVO)
+but no further.
+</p>
+
+<p>
+<a name="tkbn"></a>
+<b>tkbn</b> -- <u>t</u>ime-in-<u>k</u>nowledge-<u>b</u>ase-<u>n</u>oun -- is set in the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InFerence</a>() module as the concept-array time-point of the
+subject-noun in a yes-or-no question to be asked of the human user by
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a>() to confirm or negate an
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+<i>InFerence</i></a> being made by the logical
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InFerence</a> module.
+</p>
+
+<p>
+<a name="tkbo"></a>
+<b>tkbo</b> -- <u>t</u>ime-in-<u>k</u>nowledge-<u>b</u>ase-<u>o</u>bject -- is set in the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InFerence</a>() module as the concept-array time-point of the direct-object-noun in a silent
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+<i>InFerence</i></a> to be confirmed or negated retroactively by the
+ <a href="http://ai.neocities.org/KbRetro.html"
+ title="documentation page"
+ style="text-decoration:none;">
+KbRetro</a>() module after a human user has responded to a question posed by the
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a>() module. May be similar to <i>tdo</i> in the
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnParser</a>() module, but <i>tkbo</i> is the last of three consecutive
+time-points in the silent
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+<i>InFerence</i></a> created by the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InFerence</a>() module for automated reasoning.
+</p>
+
+<p>
+<a name="tkbprep"></a>
+<b>$tkbprep</b> -- <u>t</u>ime-in-<u>k</u>nowledge-<u>b</u>ase of a <u>p</u>reposition,
+necessary for the
+ <a href="http://ai.neocities.org/EnPrep.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnPrep</a> English-preposition module because the basic
+<a href="#tkb"><i>tkb</i></a> flag, although obtainable at the time of
+fetching a preposition, is subject to mutation when the output of
+a preposition results in the re-entry of the preposition and the
+assigning of a new <a href="#tkb"><i>tkb</i></a> value.
+</p>
+
+<p>
+<a name="tkbv"></a>
+<b>tkbv</b> -- <u>t</u>ime-in-<u>k</u>nowledge-<u>b</u>ase-<u>v</u>erb -- is
+the time-point of a verb-concept in an
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a>() question for a human user to confirm or deny the truth of a logical
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+<i>InFerence</i></a> made by the AI.
+</p>
+
+<p>
+<a name="tmg"></a>
+<b>tmg</b> -- time-of-midgap for the
+ <a href="http://ai.neocities.org/Abracadabra.html"
+ title="JavaScript AI requires Microsoft Internet Explorer"
+ style="text-decoration:none;">
+Mens Latina</a> artificial intelligence in Latin to insert a silent pronoun
+serving as the unspoken subject of a Latin verb lacking a stated subject.
+</p>
+
+<p>
+<a name="tnpr"></a>
+<b>$tnpr</b> -- <i>time-of-noun-preposition</i> &#8211; is for use in the
+ <a href="http://ai.neocities.org/EnNounPhrase.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+EnNounPhrase</a> module to convert a value stored as a
+ "<a href="#tpr"><i>tpr</i></a>" flag into specifically a "<i>tnpr</i>" flag
+so that the
+ <a href="http://ai.neocities.org/EnPrep.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+EnPrep</a> English-preposition module may fetch and output not only a preposition
+related to the noun but also the object of the preposition. The "<i>tnpr</i>" flag
+is meant to distinguish between prepositional phrases that refer only to a noun
+and prepositional phrases that refer to a
+ <a href="http://ai.neocities.org/EnVerbPhrase.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+verb-phrase</a> possibly including a noun as an object of the verb.
+The "<i>tnpr</i>" flag allows the chaining together of multiple prepositional phrases
+such as "<i>the man <b>in</b> the street <b>with</b> an umbrella <b>in</b> his hand"</i>.
+</p>
+
+<p>
+<a name="toc"></a>
+<b>toc</b> -- <i>time-of-old-concept</i> -- in the
+ <a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer"
+ style="text-decoration:none;">
+<i>Mens Latina</i></a> Latin AI, is obtained from the index "<i>i</i>" in the
+ <a href="http://ai.neocities.org/AudRecog.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+AudRecog</a>() auditory recognition module so that other modules in the AI Mind
+may zero in not on the auditory engram of the word but on the simultaneous
+conceptual node for the recognized word, in order to harvest or fetch the
+values in the flag-panel of quasi-neuronal associative tags connecting the
+one recalled node of the concept with other concepts.
+</p>
+
+<p>
+<a name="topic"></a>
+<b>$topic</b> -- @psy topic for a question to be asked
+</p>
+
+<p>
+<a name="tpp"></a>
+<b>$tpp</b> -- time-of-preposition for parsing.
+</p>
+
+<p>
+<a name="tpr"></a>
+<b>tpr</b> -- conceptual flag-panel tag for time-of-preposition.
+</p>
+
+<p>
+<a name="tpu"></a>
+<b>tpu</b> -- time-pen-ultimate before current I/O.
+</p>
+
+<p>
+<a name="trigger"></a>
+<b>$trigger</b> -- a trigger for Volition() to call Motorium()
+</p>
+
+<p>
+<a name="tru"></a>
+<b>$tru</b> -- tru(th) variable serving as a flag-panel tag to
+hold dynamically the believed reliability or truth-value of an idea.
+On Reddit see an alternative
+ <a href="http://old.reddit.com/r/ControlProblem/comments/9lad7u/comments_on_leibnizs_law_ideas_about_formalizing/e77i6up">
+way of modeling truth values</a>. For an
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+inference</a> validated by a human user, the truth-value may be set to a positive value
+arbitrarily set by the
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+AI Mind Maintainer</a>. Since a positive truth-value may be carried forward
+in recollections of the validated inference, <i>$tru</i> must be reset to
+zero at the end of a thought-generation module such as the
+ <a href="http://ai.neocities.org/Indicative.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+Indicative<a/> module. AI coders may use the truth-value
+to establish modes of thought which disregard ideas in the knowledge base
+lacking a positive truth-value.
+</p>
+
+<p>
+<a name="tseln"></a>
+<b>$tseln</b> -- time of selection of noun.
+</p>
+
+<p>
+<a name="tselo"></a>
+<b>$tselo</b> -- time of selection of object of prepositionn -- can be used
+to insert associative tags linking the preposition itself and its object.
+</p>
+
+<p>
+<a name="tselp"></a>
+<b>$tselp</b> -- time of selection of preposition - is used in the
+ <a href="http://ai.neocities.org/EnPrep.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnPrep</a> English-preposition module to make sure by calculation
+that a verb being sought as used with a preposition is in close
+temporal proximity to the preposition, so that a query may be answered
+correctly with a response that mentions the query-subject <i>qv1psi</i> and
+the query-verb <i>qv2psi</i> and the selected preposition at the beginning
+of a prepositional phrase.
+</p>
+
+<p>
+<a name="tsels"></a>
+<b>$tsels</b> -- Time of SELection of Subject -- is used locally in
+ <a href="http://ai.neocities.org/EnNounPhrase.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnNounPhrase</a>() and in
+ <a href="http://ai.neocities.org/RuNounPhrase.html"
+ title="documentation page"
+ style="text-decoration:none;">
+RuNounPhrase</a>() to keep track of the experiential
+time <i>$t</i> at which a stored concept is selected as a subject, so that the
+<i>$tsels</i> can be used to revisit the engram at <i>$tsels</i> to
+change its activation-level in the course of neural inhibition.
+</p>
+
+<p>
+<a name="tselv"></a>
+<b>$tselv</b> -- time of selection of verb (for
+<a href="http://www.scholarpedia.org/article/Neural_inhibition"
+ title="Scholarpedia article"
+ style="text-decoration:none;">
+neural inhibition</a>)
+</p>
+
+<p>
+<a name="tsj"></a>
+<b>$tsj</b> -- time-of-subject for parsing. The
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> module sets the <i>tsj</i> flag when a noun or a pronoun
+in the (dba=1) nominative case is passing through
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> and <i>tsj</i> has a prior value of zero.
+If the AI is receiving or re-entering a compound sentence of two
+main clauses joined by a conjunction, care must be taken to reset
+<i>tsj</i> to zero at the end of each
+ <a href="http://ai.neocities.org/Indicative.html"
+ title="documentation page"
+ style="text-decoration:none;">
+indicative</a> clause, so that the <i>tsj</i> of the second
+clause may properly be set. The <i>tsj</i> flag is necessary for
+the retroactive insertion of the <a href="#seq"><i>seq</i></a> flag
+and the <a href="#tkb"><i>tkb</i></a> flag, and for extracting
+subject-data such as the <a href="#num"><i>num</i></a> flag and
+the <a href="#mfn"><i>mfn</i></a> flag, as for instance when
+a pronoun is about to replace a noun and must have the proper
+number and gender.
+</p>
+
+<p>
+<a name="tsn"></a>
+<b>$tsn</b> -- time of input as $seqneed time for
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a>()
+</p>
+
+<p>
+<a name="tult"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#tult">tult</b></a> --
+<i>t</i> penultimate, or time-minus-one.
+</p>
+
+<p>
+<a name="tvb"></a>
+<b>$tvb</b> -- time-of-verb for parsing. The
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnParser</a> module sets
+"t - 1" as the <i>tvb</i> if the word being parsed is a verb by part-of-speech.
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> uses the time-of-verb <i>tvb</i> to fill the
+ <a href="#tkb">
+tkb</a>-slot in a
+verb-panel with the time-location of the direct object of the verb.
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnParser</a> uses the time-of-verb tvb to find the numeric verb-concept
+that will be the <a href="#pre">pre</a> of a direct object being parsed.
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnParser</a> also uses the time-of-verb <i>tvb</i> to store the time-of-direct-object
+<a href="#tdo">tdo</a> as the <a href="#tkb">tkb</a> in the flag-panel of the verb.
+Therefore the tvb-flag needs to be reset to zero not during but <i>after</i>
+ <a href="http://ai.neocities.org/AudInput.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AudInput</a>, when program-flow has returned to the
+ <a href="http://ai.neocities.org/Sensorium.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Sensorium</a> module.
+</p>
+
+<p>
+<a name="tvpr"></a>
+<b>$tvpr</b> -- <i>time-of-verb-preposition</i> &#8211; is used in the
+ <a href="http://ai.neocities.org/EnVerbPhrase.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+EnVerbPhrase</a> module to convert a value stored as a
+ "<a href="#tpr"><i>tpr</i></a>" flag into specifically a "<i>tvpr</i>" flag
+so that the
+ <a href="http://ai.neocities.org/EnPrep.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+EnPrep</a> English-preposition module may fetch and output not only a preposition
+related to the verb-phrase but also the object of the preposition. The "<i>tvpr</i>" flag
+is meant to identify a prepositional phrase that refers to a complete
+ <a href="http://ai.neocities.org/EnVerbPhrase.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+verb-phrase</a> and not merely to a noun within the verb-phrase. For example,
+in the prepositional phrase at the end of
+"<i>God does not <u>play dice</u> with the universe."</i>, the
+preposition "with" is logically and semantically connected more to the
+verb-phrase "play dice" than to the noun "dice" all by itself.
+</p>
+
+<p>
+<a name="unk"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#unk">unk</b></a> --
+all-purpose $unk (unknown) for troubleshooting
+</p>
+
+<p>
+<a name="us1"></a>
+<b>$us1</b> -- <i>the</i> <u>u</u>p<u>s</u>tream noun number one for
+ <a href="http://ai.neocities.org/EnArticle.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnArticle</a> to keep track of; <br />
+</p>
+
+<p>
+<a name="us2"></a>
+<b>$us2</b> -- <i>the</i> <u>U</u>p<u>S</u>tream noun number two for EnArticle to keep track of; <br />
+</p>
+
+<p>
+<a name="us3"></a>
+<b>$us3</b> -- <i>the</i> <b>U</b>p<b>S</b>tream noun number three for EnArticle to keep track of; <br />
+</p>
+
+<p>
+<a name="us4"></a>
+<b>$us4</b> -- <i>the</i> <b>U</b>p<b>S</b>tream noun number four for EnArticle to keep track of; <br />
+</p>
+
+<p>
+<a name="us5"></a>
+<b>$us5</b> -- <i>the</i> <b>U</b>p<b>S</b>tream noun number five for EnArticle to keep track of; <br />
+</p>
+
+<p>
+<a name="us6"></a>
+<b>$us6</b> -- <i>the</i> <b>U</b>p<b>S</b>tream noun number six for EnArticle to keep track of; <br />
+</p>
+
+<p>
+<a name="us7"></a>
+<b>$us7</b> -- <i>the</i> <b>U</b>p<b>S</b>tream noun number seven for EnArticle to keep track of. <br />
+</p>
+
+<p>
+<a name="usn"></a>
+<b>$usn</b> -- an upstream number-variable to coordinate the rotation of the
+us1-us7 variables in their role as the holders of noun-concepts mentioned
+so recently that they warrant the insertion of the definite article "the" by the
+ <a href="http://ai.neocities.org/EnArticle.html">
+Enarticle</a>() module.
+</p>
+
+<p>
+<a name="usx"></a>
+<b>$usx</b> -- a transfer variable for
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> to transfer the concept number of an incoming noun to
+whichever us1-us7 <i>upstream</i> variable is up next in the rotation
+of up to seven recently mentioned noun-concepts, so that the
+ <a href="http://ai.neocities.org/EnArticle.html">
+EnArticle</a> module may insert the definite article "the" before
+any noun currently under discussion in a conversation.
+</p>
+
+<p>
+<a name="ux1"></a>
+<b>ux1</b> -- unknown Latin case potentially nominative.
+</p>
+
+<p>
+<a name="ux2"></a>
+<b>ux2</b> -- unknown Latin case potentially genitive.
+</p>
+
+<p>
+<a name="ux3"></a>
+<b>ux3</b> -- unknown Latin case potentially dative.
+</p>
+
+<p>
+<a name="ux4"></a>
+<b>ux4</b> -- unknown Latin case potentially accusative.
+</p>
+
+<p>
+<a name="ux5"></a>
+<b>ux5</b> -- unknown Latin case potentially ablative.
+</p>
+
+<p>
+<a name="uy1"></a>
+<b>uy1</b> -- unknown Latin case potentially nominative.
+</p>
+
+<p>
+<a name="uy2"></a>
+<b>uy2</b> -- unknown Latin case potentially genitive.
+</p>
+
+<p>
+<a name="uy3"></a>
+<b>uy3</b> -- unknown Latin case potentially dative.
+</p>
+
+<p>
+<a name="uy4"></a>
+<b>uy4</b> -- unknown Latin case potentially accusative.
+</p>
+
+<p>
+<a name="uy5"></a>
+<b>uy5</b> -- unknown Latin case potentially ablative.
+</p>
+
+<p>
+<a name="uz1"></a>
+<b>uz1</b> -- unknown Latin case potentially nominative.
+</p>
+
+<p>
+<a name="uz2"></a>
+<b>uz2</b> -- unknown Latin case potentially genitive.
+</p>
+
+<p>
+<a name="uz3"></a>
+<b>uz3</b> -- unknown Latin case potentially dative.
+</p>
+
+<p>
+<a name="uz4"></a>
+<b>uz4</b> -- unknown Latin case potentially accusative.
+</p>
+
+<p>
+<a name="uz5"></a>
+<b>uz5</b> -- unknown Latin case potentially ablative.
+</p>
+
+
+<p>
+<a name="vault"></a>
+<b>$<a href="http://mind.sourceforge.net/variable.html#vault">vault</b></a>
+ -- size of <a href="http://ai.neocities.org/MindBoot.html"
+ title="documentation page"
+ style="text-decoration:none;">
+MindBoot</a>() sequence in time-points.
+</p>
+
+<p>
+<a name="verbcon"></a>
+<b>$verbcon</b> -- verb-condition for seeking (in)direct objects. $<i>verbcon</i>
+is set to a positive unitary one in the
+ <a href="http://ai.neocities.org/EnParser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnParser</a> module when a verb
+comes in during input and remains at one while any indirect or direct
+object comes in. After an input sentence, $<i>verbcon</i> is reset to zero.
+</p>
+
+<p>
+<a name="verblock"></a>
+<b>$verblock</b> -- for subject-noun to lock onto seq-verb. The <i>$verblock</i>
+is a time-point in conceptual @psy memory where the <i>$seq</i> of a subject-noun
+is located, so that any crucial consideration such as the negation of
+a verb will be found when the verb-phrase module fetches the verb-concept
+from memory. If the thinking process finds and activates a particular
+subject-noun in memory, the <i>$tkb</i> of the subject noun becomes the
+<i>$verblock</i> so that a particular verb at a particular time will
+be selected by the English or Russian verb-phrase module.
+</p>
+
+<p>
+<a name="verbprsn"></a>
+<b>$verbprsn</b> -- <i>verb-person</i> -- reverting to zero for infinitive forms.
+</p>
+
+<p>
+<a name="verbpsi"></a>
+<b>$verbpsi</b> -- $psi concept-number of verb in the @psy array
+</p>
+
+<p>
+<a name="vphraud"></a>
+<b>$vphraud</b> -- holds aud-fetch of verb-form for
+ <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a>() module
+</p>
+
+<p>
+<a name="wasvcon"></a>
+<b>wasvcon</b> -- query-condition for what-AUXILIARY-SUBJECT-VERB queries,
+such as "What do robots need?", so that
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a> may activate an indicated subject like "robots" and an indicated verb
+like "need" to retrieve a memory that completes the thought "Robots need... " in
+response to a query.
+</p>
+
+<p>
+<a name="whatcon"></a>
+<b>$whatcon</b> (what-condition) --
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a>() flag for condition of answering a what-query. <br />
+</p>
+
+<p>
+<a name="wherecon"></a>
+<b>$wherecon</b> -- a flag for the condition of answering a where-query.
+The flag is set to a positive one ("1") if the word "where" passes through the
+ <a href="http://ai.neocities.org/OldConcept.html"
+ title="documentation page"
+ style="text-decoration:none;">
+OldConcept</a> module, and serves as a trigger for the
+ <a href="http://ai.neocities.org/EnThink.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnThink</a> module to call the
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation page"
+ style="text-decoration:none;">
+SpreadAct</a> module
+</p>
+
+<p>
+<a name="whocon"></a>
+<b>$whocon</b> -- flag for condition of answering a who-query. The
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> module sets <i>whocon</i> to a positive one ("1")
+when the input of the interrogative pronoun "who" is detected.
+</p>
+
+<p>
+<a name="whoq"></a>
+<b>whoq</b> -- flag to permit the
+ <a href="http://ai.neocities.org/AskUser.html">
+AskUser</a> module to ask a who-question such as "WHO ARE YOU".
+</p>
+
+<p>
+<a name="yncon"></a>
+<b>$yncon</b>
+ -- yes-or-no condition – is a status flag that the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+InFerence</a> module sets to a positive unitary one ("1") as a signal
+for the thinking module to call the
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+AskUser</a> module to ask a yes-or-no question seeking the validation or
+disavowal of a silent inference.
+</p>
+
+<p>
+<a name="ynverb"></a>
+<b>$ynverb</b> -- <i>yes-or-no-verb</i> &#8211; identifier of a verb
+to be used in AskUser() for the asking of a question expecting
+a yes-or-no answer.
+</p
+
+
+<p><br /></p>
+
+<font size="+2" color="navy"><b>Resources</b></font> <br />
+
+<br />
+<a href="http://doc.perl6.org/language/variables"
+ style="text-decoration:none;">
+http://doc.perl6.org/language/variables</a> <br />
+
+<br />
+<a href="http://doc.perl6.org/language/variables#Sigilless_variables"
+ style="text-decoration:none;">
+http://doc.perl6.org/language/variables#Sigilless_variables</a> <br />
+
+<br />
+<a href="http://mind.sourceforge.net/variable.html"
+ title="Variables used in the Forth and JavaScript AI Minds"
+ style="text-decoration:none;">
+http://mind.sourceforge.net/variable.html</a> <br />
+
+<p>
+If you have any questions or comments about the First Working AGI, <br />
+please <a href="http://agi.topicbox.com/groups/agi"
+ title="Artificial General Intelligence mail-list"
+ style="text-decoration:none;">
+Join the Discussion</a>.
+</p>
+</font>
+
+<p><br /></p>
+<script type="text/javascript" src="http://feedjit.com/serve/?vv=1515&amp;tft=3&amp;dd=0&amp;wid=&amp;pid=0&amp;proid=0&amp;bc=FFFFFF&amp;tc=000000&amp;brd1=012B6B&amp;lnk=135D9E&amp;hc=FFFFFF&amp;hfc=2853A8&amp;btn=C99700&amp;ww=200&amp;went=10"></script>
+<noscript><a href="http://feedjit.com/">Live Traffic Stats</a></noscript>
+
+<p><br /></p>
+<hr align="left" width="400" />
+
+<a href="#top"
+ title="Click here or use the browser scroll-bar."
+ style="text-decoration:none;">
+Return to top</a>; or to <br />
+<a href="http://www.reddit.com/r/javascript"
+ title="Ask or answer questions about AI in Javascript"
+ style="text-decoration:none;">
+javascript</a> subreddit for
+ <a href="http://ai.neocities.org/FirstWorkingAGI.html"
+ title="Requires Microsoft Internet Explorer"
+ style="text-decoration:none;">
+<b>AI Mind</b></a>
+ <a href="http://www.ai-forum.org/forum.asp?forum_id=1"
+ title="AI Forum"
+ style="text-decoration:none;">
+discussion</a>; <br />
+<a href="http://www.reddit.com/r/Forth"
+ title="Ask or answer questions about AI in Forth"
+ style="text-decoration:none;">
+Forth</a> subreddit and
+ <a href="http://www.reddit.com/r/robotics"
+ title="Ask or answer questions about Forth AI for robots"
+ style="text-decoration:none;">
+robotics</a> subreddit for
+ <a href="http://dl.acm.org/citation.cfm?doid=307824.307853"
+ title="Association for Computing Machinery"
+ style="text-decoration:none;">
+MindForth</a> discussion; <br />
+<a href="http://www.reddit.com/r/perl"
+ title="Ask or answer questions about AI in Perl"
+ style="text-decoration:none;">
+Perl</a> subreddit for
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="source code of artificial intelligence in Strawberry Perl Five"
+ style="text-decoration:none;">
+ghost</a>.pl AI Mind
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="Work to install and maintain AI Mind software and hardware."
+ style="text-decoration:none;">
+Maintainers</a>. <br />
+
+<p><br /></p>
+<a href="http://livetrafficfeed.com" data-num="10" data-width="210"
+data-responsive="0" data-time="America%2FNew_York" data-root="0"
+data-cheader="2853a8" data-theader="ffffff" data-border="2853a8"
+data-background="ffffff" data-normal="000000" data-link="135d9e"
+target="_blank" id="LTF_live_website_visitor">Website Counter</a>
+<script type="text/javascript" src="//cdn.livetrafficfeed.com/static/v4/live.js">
+</script><noscript><a href="http://livetrafficfeed.com">Website Counter</a></noscript>
+<p><br /></p>
+</body>
+</html>

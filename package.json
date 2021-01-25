@@ -1,11 +1,15 @@
 {
-  "name": "indra-mind",
+  "name": "indra",
   "version": "0.0.2",
-  "description": "Indra Mind",
+  "description": "The Indra Mind AI",
   "main": "index.js",
   "directories": {
-    "doc": "docs",
-    "lib": "lib"
+    "docs": "docs",
+    "lib": "lib",
+    "corpus": "corpus",
+    "assets": "assets",
+    "data": "data",
+    "src": "src"
   },
   "scripts": {
     "start": "node index.js",
@@ -18,9 +22,10 @@
   "keywords": [
     "Indra",
     "Mind",
-    "AGI"
+    "AGI",
+    "Artificial Intelligence"
   ],
-  "author": "Quinn Michaels, Spoon Kids",
+  "author": "Indra, Quinn Michaels, #SpoonKids",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/indraai/IndraMind/issues"

@@ -1,0 +1,881 @@
+
+<html>
+<head>
+<title>AskUser Module of a Strong AI Mind</title>
+<meta name="description"
+ content=AskUser poses a question to confirm or negate a logical inference. />
+<meta name="keywords"
+ content="AGI, AI, artificial general intelligence, ghost.pl, AskUser Perl" />
+</head>
+<body bgcolor="#FFFACD">
+<a name="top"></a>
+
+<center><h1>
+<a href="http://ai.neocities.org/AskUser.html"
+ title="This webpage may be copied to other websites."
+ style="text-decoration:none;">
+AskUser</a> module of the
+</h1></center>
+
+<center><h2>
+<a href="http://ai.neocities.org/Ghost.html"
+ title="The Ghost in the Machine">English</a>
+and
+<a href="http://ai.neocities.org/Dushka.html"
+ title="Russian tutorial AI in JavaScript for MSIE">
+Russian</a> bilingual
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="Perl AI source code"
+ style="text-decoration:none;">
+ghost</a>.pl AI in
+ <a href="http://strawberryperl.com"
+ title="Download Perl for free."
+ style="text-decoration:none;">
+Perl</a>
+</h2></center>
+
+<h2><center>
+<a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer">
+<i>Mens Latina</i></a> in
+ <a href="http://ai.neocities.org/MLPJ2019.html"
+ title="Mens Latina Programming Journal"
+ style="text-decoration:none;">
+Latin</a> --
+<a href="http://dl.acm.org/citation.cfm?doid=307824.307853"
+ title="Association for Computing Machinery"
+ style="text-decoration:none;">
+MindForth</a> for
+ <a href="http://trollheaven.blogspot.com"
+ title="Robotics and AI weblog"
+ style="text-decoration:none;">
+robots</a>
+</h2></center>
+
+
+<p><br /></p>
+<font face="Verdana">
+<p><a name="diagram"></a>
+<a name="1"></a><font size="+1">
+1. <a href="http://ai.neocities.org/DiaGram.html#AskUser"
+ title="ASCII diagrams of Mentifex mind-modules for artificial intelligence.">
+Diagram</a> of the AskUser Mind-Module</font> <br />
+<p><font size="+1"><strong><pre>
+The asking of a simple question requires an auxiliary verb.
+
+   /^^^^^^^^^\Generation of "Does John read books?"/^^^^^^^^^\
+  /   EYE     \  Auxiliary +Subject +Verb +Object /   EAR     \
+ /             \    | | |    ___________         /             \
+|   _______     |   | | |   / Sentence  \       |               |
+|  /"book" \    |   | | |   \___________/-------|-------------\ |
+| / percept \---|---|-|-+     |        \        |             | |
+| \ engram  /   |  r|s|b|     |        _\____   |             | |
+|  \_______/    |  e|t|o|     |       /EnVerb\  |             | |
+|               |  a|u|o|     |      ( Phrase ) |             | |
+|               |  d|d|k|     |      /\______/  |             | |
+|   visual      |   |e|s|     |     /    / |    |  auditory   | |
+|               |   |n| |  ___|__  /    /  |    |             | |
+|   memory      |   |t| | /EnNoun\/   _/_  |    |  memory     | |
+|               |   |s| |( Phrase )  /Aux\ |    |             | |
+|   channel     |   | | | \______/   \___/ |    |  channel    | |
+|               |   | | |     |        \   |    |     ____    | |
+|               |   | | |     |         \  |    |    /    \   | |
+|   _______     |   | | |     |         _\_|_   |   /"does"\  | |
+|  /fresh  \    |   |_|_|    _|___     / En  \  |  / "John" \ | |
+| / image   \   |  /     \  / En  \   / Verbs \-|-/  "read"  \| |
+| \ engram  /---|--\ Psi /-/ Nouns \  \_______/ | \  "books" /  |
+|  \_______/    |   \___/  \_______/------------|--\________/   |
+</pre></strong></font></p>
+
+
+<p><br /></p>
+<p><a name="purpose"></a>
+<a name="2"></a><font size="+1">
+2. Purpose of the AskUser AI Mind-Module</font> <br />
+</p>
+
+<p>
+The AskUser mind-module has several purposes. One is to ask the human user
+a question seeking confirmation or negation of a logical
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+<i>InFerence</i></a> made by the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InFerence</a> module. Another purpose is to let the
+ <a href="http://ai.neocities.org/Volition.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Volition</a> module decide to ask various questions in pursuit of conducting a
+conversation with the human user.
+</p>
+
+
+<p><br /></p>
+<p><a name="algorithm"></a>
+<a name="3"></a><font  size="+1">
+3. Algorithm of the AskUser Module of Strong AI with
+ <a href="http://en.wikipedia.org/wiki/Natural-language_understanding"
+ title="Natural Language Understanding">
+NLU</a></font> <br />
+</p>
+
+<p>
+Whereas the
+ <a href="http://ai.neocities.org/SpreadAct.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+SpreadAct</a> module causes the AI to spread so much activation to a sequence
+of concepts that they surface in the output of the AI as a response to
+a query submitted by a human user, the
+AskUser module is engineered to ask specific questions of a human user in
+specific situations.
+</p>
+
+<p>
+3.A. Ask a yes-or-no question to validate or reject a silent
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="mind-module documentation webpage"
+ style="text-decoration:none;">
+inference</a>.
+</p>
+
+<p>
+When the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="mind-module documentation webpage"
+ style="text-decoration:none;">
+InFerence</a> module makes a silent inference on the basis of input data,
+various parameters such as the subject of the inference, the verb involved,
+and the direct object of the inferred verb, are fed as variables to the
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+AskUser</a> module so that the AI may ask a human user if the inference is true.
+When the user answers "yes" or "no" or "maybe" or no answer at all, the
+ <a href="http://ai.neocities.org/KbRetro.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+KbRetro</a> module retroactively adjusts the inferred idea in the knowledge base (KB)
+so that the AI may either use or disregard the idea in the future.
+<p>
+
+<p>
+If you tell a mentifex-class AI Mind a general fact,
+such as "Women have a child" or "Boys play games"
+and you then input a specific fact such as
+"Mary is a woman" or "John is a boy", the AI
+will make a silent inference and then use the
+ <a href="http://ai.neocities.org/AskUser.html">
+AskUser</a> mind-module
+to ask for confirmation or refutation of the inference.
+</p>
+
+<p>
+You can try it out with
+ <a href="http://ai.neocities.org/Ghost.html"
+ title="Requires Microsoft Internet Explorer"
+ style="text-decoration:none;">
+http://ai.neocities.org/Ghost.html</a>
+by using Internet Explorer to input "Mary is a woman".
+Then the AI will ask you, "Does Mary have a child?"
+There are four possible answers anticipated by the
+AI software: Yes; No; maybe; or no answer at all. Then the
+ <a href="http://ai.neocities.org/KbRetro.html"
+ title="documentation page"
+ style="text-decoration:none;">
+KbRetro</a>() module adjusts the knowledge base (KB)
+with your answer.
+</p>
+
+<p>
+3.B. Ask a question out of AI curiosity.
+</p>
+
+<p>
+Some versions of the AI Mind,
+ <a href="http://dl.acm.org/citation.cfm?doid=307824.307853"
+ title="Association for Computing machinery"
+ style="text-decoration:none;">
+MindForth</a> in particular, are being coded to ask "Who are you?" if there
+has been no contact with the outside world after an arbitrary interval as
+specified by the AI coder or AI
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="job description"
+ style="text-decoration:none;">
+mind maintainer</a>. Although this question needs to be reworked so that
+it arises spontaneously as an initiative undertaken at the behest of the
+ <a href="http://ai.neocities.org/Volition.html"
+ title="job description"
+ style="text-decoration:none;">
+Volition</a> module for free will in robots, the question is important because
+any previous user may have departed from the scene and the AI Mind may need
+to become aware that it is dealing with a different user than before.
+</p>
+
+<p>
+ <a href="http://ai.neocities.org/mindforth.txt"
+ title="source code for intelligent robots"
+ style="text-decoration:none;">
+MindForth</a> is the first AI Mind to implement the ability of the
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a> module to ask a who-question like "Who are you?" based upon
+a kind of artificial curiosity caused by an arbitrarily long period without
+any human input. The
+ <a href="http://ai.neocities.org/var.html#isolation">isolation</a> flag is
+incremented one-by-one for any thought-cycle with no human input until
+a threshold level decreed by the AI
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="documentation page"
+ style="text-decoration:none;">
+mind maintainer</a> sets the
+ <a href="http://ai.neocities.org/var.html#whoq">whoq</a> flag to a
+unitary positive one, which prepares the AI to ask a question but
+does not yet actually ask the question. When human input causes the
+ <a href="http://ai.neocities.org/var.html#isolation">isolation</a> flag to
+be reset to zero, the MindForth
+ <a href="http://ai.neocities.org/Volition.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Volition</a> module calls
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a> to start a conversation with "WHO ARE YOU".
+As long as the human user remains in conversation with the artificial intelligence,
+brief periods of no human input will not re-trigger the question of
+"WHO ARE YOU", because presumably a realistically long threshold has
+been set by the AI coder or mind-maintainer. It is important that the
+ <a href="http://ai.neocities.org/Volition.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Volition</a> module ask the question, so that psychological priorities may
+influence not only what question is asked, but indeed whether any question
+at all is asked. It is also significant that the questions asked by the
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a> module facilitate the man-machine dialog or <i>conversation</i>
+which is the hallmark of a true artificial intelligence.
+</p>
+
+<p>
+3.C. Cycle through a delay-loop while the AI waits for a human response.
+</p>
+
+<p>
+Normally the AI Mind will perform one mental operation after another
+without any delay, but a delay-loop serves the purpose of giving the
+human user time to respond to the artificial intelligence after the
+AI asks the user a question.
+</p>
+
+
+<p><br /></p>
+<p><a name="code"></a>
+<a name="4"></a><font size="+1">
+4. Code of AskUser() from ghost327.pl AI
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="ghost.pl AI Mind in Strawberry Perl Five"
+ style="text-decoration:none;">
+source code</a> in
+ <a href="http://strawberryperl.com"
+ title="Free download of Strawberry Perl Five"
+ style="text-decoration:none;">
+Perl</a>
+</font> <br />
+</p>
+
+<pre><b>
+sub AskUser() {  # http://ai.neocities.org/AskUser.html
+  $moot = 1;  # 2019-10-23: prevent associative tagging during question TEST; TRUNCATE
+  $pov = 1;  # 2018-06-26: 1=internal; 2=external;
+  $tsj = 0;  # 2019-10-23: zero out any input time-of-subject
+  $quobjaud = 0;  # 2018-06-26: safety measure;
+  if ($ynverb == 0) {  # 2018-06-26: ask y/n question only once;
+    $ynverb = $quverb;  # 2018-06-26: isolate at start;
+    $moot = 1;  # 2018-06-26: prevent storing of "tkb" and "seq";
+    $auxverb = 818;  # 2018-12-10: 818=DO as auxiliary verb;
+    $prsn = 3;  # 2018-10-08: assumption; otherwise track value thru code.
+    EnAuxVerb();  # 2018-12-10: Say 818=DO or DOES;
+    $auxverb = 0;  # 2018-06-26: reset for safety;
+    $moot = 0;  # 2018-06-26: reset after use;
+    for (my $i=$inft; $i>$midway; $i--) {  # 2019-10-21: find the query-subject
+      my @k=split(',',$psy[$i]);  # 2018-06-26: examine @psy array;
+      if ($k[1] == $qusub) {  # 2018-06-26: if query-subject found;
+        $aud = $k[20];  # 2019-08-01: assign auditory recall-tag;
+        last;  # 2018-06-26: exit the loop after first find;
+      }  # 2018-06-26: end of test for query-subject;
+    }  # 2018-06-26: end of loop in search of quobj.
+    Speech();  # 2019-10-21: speak query-subject starting at "aud" value;
+    if ($quverb == 0) { $quverb = 818 }  # 2018-12-10: 818=DO default;
+  # for (my $i=$inft; $i>$midway; $i--) {  # 2019-10-13: skip silent inference;
+  #   my @k=split(',',$psy[$i]);  # 2019-10-13: examine @psy array;
+  #   if ($k[1] == $quverb) {  # 2019-10-13: even if not infinitive
+  #     $aud = $k[20];  # 2019-10-13: assign most recent recall-tag;
+  #     last;  # 2019-10-13: exit the loop after first find;
+  #   }  # 2019-10-13: end of test for any instance of the $quverb.
+  # }  # 2019-10-13: end of search for quverb in case infinitive is not found.
+    $moot = 1;  # 2019-10-21: prevent storage of associative tags with query-verb.
+    for (my $i=$inft; $i>$midway; $i--) {  # 2019-10-21: find the query-verb
+      my @k=split(',',$psy[$i]);  # 2018-06-26: examine @psy array;
+      if ($k[1] == $quverb && $k[7] == 0) {  # 2018-10-08: infinitive dba=0
+        $aud = $k[20];  # 2019-08-01: assign most recent recall-tag;
+        last;  # 2018-06-26: exit the loop after first find;
+      }  # 2018-06-26: end of test for $quverb.
+    }  # 2018-06-26: end of loop in search of yes-or-no ("yn") quverb;
+    $verbprsn = 0;  # 2018-06-26:  Store the verb as an infinitive form;
+    $audnum = 0;    # 2018-06-26:  infinitive without num(ber);
+    $holdnum = 0;   # 2018-06-26:  infinitive without num(ber);
+    $infincon = 1;  # 2018-06-26:  set flag to positive one;
+    $nphrnum = 0;   # 2018-06-26: for no influence on infinitive;
+    $numsubj = 0;   # 2018-06-26:  for no influence on infinitive;
+    $putnum = 0;    # 2018-06-26:  for insisting on zero num infinitive;
+    $dba = 0;       # 2019-10-21: for storage of infinitive form. TEST; TRUNCATE IF ACCEPTED
+    $moot = 1;  # 2019-10-23: prevent storage of associative tags with query-verb.
+    Speech();      # 2018-06-26:  speak the verb starting at "aud" value;
+    $moot = 0;  # 2019-10-21: end of $moot stoppage of forming associative tags for verb.
+    if ($quobj == 0) { $quobj = 711 }  # 2018-06-26: 711=ANYTHING default;
+    for (my $i=$inft; $i>$midway; $i--) {  # 2018-06-26: skip silent inference;
+      my @k=split(',',$psy[$i]);  # 2018-06-26: examine psy concedptual array;
+      if ($k[1] == $quobj) {  # 2018-06-26: if query-object found;
+        if ($k[7]==4) {  # 2018-06-26: dba=4 accusative?
+          $quobjaud = $k[20];  # 2019-08-01: hold thru EnArticle();
+          $usx=0;  # 2018-09-19: Suppress "THE" in the EnArticle() module.
+          $us1=0;$us2=0;$us3=0;$us4=0;$us5=0;$us6=0;$us7=0; # 2018-09-19
+          EnArticle();  # 2018-06-26: insert "A" or "THE" article.
+          $aud = $quobjaud;   # 2018-06-26: restore after EnArticle;
+          last;  # 2018-06-26: exit the loop after first grammatical find;
+        }  # 2018-06-26: end of test for accusative dba=4.
+      }  # 2018-06-26: end of test for $quobj.
+    }  # 2018-06-26: end of loop in search of quobj;
+    $dirobj = 1;  # 2018-06-26: So OldConcept will set "dba" = 4 (accusative)
+    Speech();     # 2018-06-26: say object word starting at "aud" value;
+    $dirobj = 0;  # 2018-06-26: Reset for safety after asking question;
+    $yncon = 0;   # 2018-06-26: assuming question has been asked;
+    $kbcon = 1;   # 2018-06-26: because waiting for answer;
+    $ynverb = 0;  # 2018-06-26: zero out; prevent repeat of query;
+  }  # 2018-06-26: end of test of ynverb;
+  if ($subjpsi==701) { $prsn=1; }  # 2018-06-26:  1st person "I";
+  if ($subjpsi==731) { $prsn=1; }  # 2018-06-26:  1st person "WE";
+  if ($subjpsi==707) { $prsn=2; }  # 2018-06-26:  2nd person YOU;
+  if ($subjpsi==713) { $prsn=3; }  # 2018-06-26:  3rd person HE;
+  if ($subjpsi==719) { $prsn=3; }  # 2018-06-26:  3rd person SHE;
+  if ($subjpsi==725) { $prsn=3; }  # 2018-06-26:  3rd person IT;
+  if ($subjpsi==743) { $prsn=3; }  # 2018-06-26:  3rd person THEY;
+  $numsubj = 0;  # 2018-06-26: reset for safety;
+  $qusnum = 0;   # 2018-06-26: reset for safety;
+  $qusub = 0;    # 2018-06-26: reset for safety;
+  $recon = 0;    # 2018-06-26: remove incentive for asking a question.
+  $bias = 5;     # 2018-06-26: restore expectation of a noun;
+  my $rsvp = 0;  # 2018-06-2016: counter for response-delay;
+  until ($rsvp == 100000) {  # 2018-06-26: upper limit on count;
+    $rsvp++;  # 2018-06-26: Increment $rsvp counter
+  }  # 2018-06-26: end of loop waitng for user-response.
+  $pov = 2;  # 2018-06-26: 1=internal; 2=external;
+}  # 2019-10-13: AskUser() returns to EnThink()
+</b></pre>
+
+
+<p><br /></p>
+<p><a name="variables"></a>
+<a name="5"></a><font size="+1">
+5. <a href="http://ai.neocities.org/var.html"
+ title="Table of Variables for First Working AGI"
+ style="text-decoration:none;">
+Variables</a> for the AskUser Module of the AI Mind</font> <br />
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#aud">aud</a> -- in the
+ <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a>() module is an associative tag
+leading to the typically most recent engram of a word stored
+in the @ear array of the auditory memory channel.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#audnum">audnum</a> --
+grammatical num(ber) variable potentially of use for locating
+an infinitive verb-form with zero as a grammatical num(ber).
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#auxverb">auxverb</a> --
+auxiliary verb such as "DOES" or "HAS".
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#bias">bias</a> --
+expected part-of-speech for any parsing module.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#dirobj">dirobj</a> --
+flag indicates seeking for a direct object.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#holdnum">holdnum</a> --
+transfers number from subject to verb.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#infincon">infincon</a> --
+infinitive condition flag
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#kbcon">kbcon</a> --
+flag for
+ <a href="http://ai.neocities.org/KbRetro.html"
+ title="documentation page"
+ style="text-decoration:none;">
+KbRetro</a> to wait for a yes-or-no answer.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#moot">moot</a> --
+as in legally <i>moot</i> -- is a flag to prevent
+the formation of associative tags during mental operations which
+are not truly a part of cognition, such as the processing of an
+input query, the formation of a silent
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+<i>InFerence</i></a>, or the creation of an output query.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#nphrnum">nphrnum</a> --
+grammatical number of noun-phrase.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#numsubj">numsubj</a> --
+for number of subject.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#pov">pov</a> --
+point-of-view: 1=self; 2=dual; 3=alien.
+When pov=1, the word "you" is somebody in the external word.
+When pov=2, the word "you" refers to the self-concept "I" in the AI.
+When pov=3, the word "you" is interpreted as part of a conversation
+by a third-party or as a word in a text, not referring to the
+self-concept of either the AI or of someone talking to the AI.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#putnum">putnum</a> --
+putative num(ber) for subject-verb agreement.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#quobj">quobj</a> --
+<i>query object</i> &#8211; holds onto the
+<i>psi</i> identifier of a word chosen by the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InFerence</a>() module
+to be the direct object of a query created by the
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a>() module.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#quobjaud">quobjaud</a> --
+auditory recall-tag for AskUser module
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#qusnum">qusnum</a> --
+<i>query-subject number</i> &#8211; for the
+ <a href="http://ai.neocities.org/AskUser.html
+ title="AskUser documentation page"
+ style="text-decoration:none;">
+AskUser</a> module to ask a question seeking yes-or-no
+confirmation of a logical
+  <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+inference</a> made by the AI Mind.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#qusub">qusub</a> --
+<i>query subject</i> &#8211; is a
+transfer-vehicle of the subject-identifier from
+any module prompting a question into the specific
+module that will ask the question.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#quverb">quverb</a> --
+<i>query verb</i> -- is set in the
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InFerence</a> module with the identifier of a verb concept serving as part of an
+ <a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="Amazon Kindle InFerence e-book">
+<i>InFerence</i></a> being made about user input. Then the
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a> module transforms the
+<i>quverb</i> identifier into the yes-or-no-verb identifier <i>ynverb</i> so that
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a> can use the query-verb to ask
+a question expecting a yes-or-no answer.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#recon">recon</a> --
+incentive for reconaissance by asking a question.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#rsvp">rsvp</a> --
+to hold an arbitrary value for a delay in thinking to wait for user input.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#verbprsn">verbprsn</a> --
+<i>verb-person</i> -- reverting to zero for infinitive forms.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#yncon">yncon</a> --
+<i>yes-or-no condition</i> &#8211; is a status flag
+that a module like
+ <a href="http://ai.neocities.org/InFerence.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InFerence</a>() can set to a positive one in order
+to trigger the calling of the
+ <a href="http://ai.neocities.org/AskUser.html"
+ title="documentation page"
+ style="text-decoration:none;">
+AskUser</a>() module by the English
+ <a href="http://ai.neocities.org/EnThink.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnThink</a>() module.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#ynverb">ynverb</a> --
+<i>yes-or-no-verb</i> – identifier of a verb to be used in AskUser() for the
+asking of a question expecting a yes-or-no answer.
+</p>
+
+
+<p><br /></p>
+<p><a name="debug"></a>
+<a name="6"></a><font size="+1">
+6. Troubleshooting and Debugging for
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="job description"
+ style="text-decoration:none;">
+AI Mind Maintainers</a></font> <br />
+</p>
+
+<p><a name="6.1"></a><font color="red">
+<b>6.1.a.  Symptom:</b></font> (Something goes wrong.)<br />
+<font color="green"><b>
+6.1.b.  Solution:</b></font> (AI Mind
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="Job Description"
+ style="text-decoration:none;">
+Maintainer</a> devises solution.) <br />
+</p>
+
+<p><a name="6.2"></a><font color="red">
+<b>6.2.a.  Symptom:</b></font> AI asks confirmation question lacking a verb.<br />
+<font color="green"><b>
+6.2.b.  Solution:</b></font> The AI Mind needs to have the query-verb in the
+ <a href="http://ai.neocities.org/MindBoot.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+MindBoot</a> sequence as an infinitive form with a
+ <a href="http://ai.neocities.org/var.html#dba">dba</a>=0
+ indicating that the verb is not in first person or second person or third person. <br />
+</p>
+
+
+<p><br /></p>
+<p><a name="future"></a>
+<a name="7"></a><font size="+1">
+7. Future Development of the AskUser AI Mind-Module</font> <br />
+</p>
+
+<p>
+<a href="http://ai.neocities.org/RoadMap.html"
+ title="With links to various AI readmaps"
+ style="text-decoration:none;">
+Roadmap</a> to Artificial Intelligence
+</p>
+
+
+<p><br /></p>
+<p><a name="resources"></a>
+<a name="8"></a><font size="+1">
+8. Resources in connection with the AskUser module</font> <br />
+</p>
+
+<p>
+Please see <br />
+<br />
+<a href="http://mind.sourceforge.net/ask.html"
+ title="Older version of this AI documentation"
+ style="text-decoration:none;">
+http://mind.sourceforge.net/ask.html</a> <br />
+</p>
+
+<p>
+<a href="http://cyborg.blogspot.com/search/label/AskUser">
+http://cyborg.blogspot.com/search/label/AskUser</a> -- is a weblog URL
+which invites Netizens to view blog-posts discussing the
+<a href="http://ai.neocities.org/AskUser.html"
+ title="Original URL of this documentation page."
+ style="text-decoration:none;">
+AskUser</a> mind-module.
+</p>
+
+
+<p><br /></p>
+<p><a name="aitree"></a>
+<a name="9"></a><font size="+1">
+9. <a href="http://ai.neocities.org/AiTree.html"
+ title="stand-alone AI Tree of mind-modules"
+ style="text-decoration:none;">
+AiTree</a> of Mind-Modules for
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding">
+Natural Language Understanding
+</font> <br />
+</p>
+
+<font face="Verdana">
+<ul><a href="http://ai.neocities.org/MainLoop.html"
+ style="text-decoration:none;">MainLoop</a> of Strong AI Mind-Modules<br />
+  <ul><li>TabulaRasa -- wipe memory clean</ul>
+  <ul><li><a href="http://ai.neocities.org/MindBoot.html"
+ style="text-decoration:none;">MindBoot</a> of English and
+ <a href="http://github.com/kernc/mindforth/blob/master/wiki/RuBoot.wiki"
+ style="text-decoration:none;">Russian</a> vocabulary
+    <ul><li>KbLoad -- load the Knowledge Base</ul></ul>
+  <ul><li><a href="http://ai.neocities.org/LangLearn.html"
+ style="text-decoration:none;">LangLearn</a> -- habituate new syntax; learn a language</ul>
+  <ul><li><a href="http://ai.neocities.org/ReJuvenate.html"
+ style="text-decoration:none;">ReJuvenate</a> -- recycle memory space</ul>
+  <ul><li><a href="http://ai.neocities.org/Sensorium.html"
+ style="text-decoration:none;">Sensorium</a> -- sensory input with associative tagging to concepts
+    <ul><li><a href="http://ai.neocities.org/AudInput.html"
+ style="text-decoration:none;">AudInput</b></a> -- auditory input
+      <ul><li><a href="http://ai.neocities.org/AudListen.html"
+ style="text-decoration:none;">AudListen</a> -- listen for input</ul>
+      <ul><li><a href="http://ai.neocities.org/AudMem.html"
+ style="text-decoration:none;">AudMem</a> -- English auditory memory
+        <ul><li><a href="http://ai.neocities.org/AudRecog.html"
+ style="text-decoration:none;">AudRecog</a> -- auditory recognition</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/OldConcept.html"
+ style="text-decoration:none;">OldConcept</a> -- recognize a known old concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/NewConcept.html"
+ style="text-decoration:none;">NewConcept</a> -- create a new concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create instance of new concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create instance of new concept</ul>
+</ul></ul></ul>
+    <ul><li>FileInput -- read files on a server</ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/GusRecog.html"
+ style="text-decoration:none;">GusRecog</a> -- sense of taste</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/OlfRecog.html"
+ style="text-decoration:none;">OlfRecog</a> -- sense of smell</font></ul>
+    <ul><li><a href="http://ai.neocities.org/TacRecog.html"
+ style="text-decoration:none;">TacRecog</a> -- sense of touch</ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a> -- sense of vision</font></ul></ul>
+  <ul><li><a href="http://ai.neocities.org/Volition.html"
+ style="text-decoration:none;">Volition</a> -- free will resulting from feeling and thinking
+    <ul><li><a href="http://ai.neocities.org/Emotion.html"
+ style="text-decoration:none;">Emotion</a> as influence on thought and free will</ul>
+    <ul><li><a href="http://ai.neocities.org/EnThink.html"
+ style="text-decoration:none;">EnThink</a> -- think in English
+      <ul><li><a href="http://ai.neocities.org/KbRetro.html"
+ style="text-decoration:none;">KbRetro</a> -- retroactively adjust knowledge base</ul>
+      <ul><li><a href="http://ai.neocities.org/Imperative.html"
+ style="text-decoration:none;">Imperative</a> -- mood for issuing commands</ul>
+      <ul><li><a href="http://ai.neocities.org/Indicative.html"
+ style="text-decoration:none;">Indicative</a> -- mood for declarative statements
+      <ul><li><a href="http://ai.neocities.org/InFerence.html"
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></ul>
+      <ul><li><a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> --
+<font color="red"><b>validate an inference or show curiosity</b></font></ul>
+      <ul><li><a href="http://ai.neocities.org/EnNounPhrase.html"
+ style="text-decoration:none;">EnNounPhrase</a> -- think with a noun
+        <ul><li><a href="http://ai.neocities.org/EnPrep.html"
+ style="text-decoration:none;">EnPrep</a> -- insert an English preposition</ul>
+        <ul><li><a href="http://ai.neocities.org/EnArticle.html"
+ style="text-decoration:none;">EnArticle</a> -- use "a" or "the"</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdjective.html"
+ style="text-decoration:none;">EnAdjective</a> -- insert an adjective</ul>
+        <ul><li><a href="http://ai.neocities.org/EnPronoun.html"
+ style="text-decoration:none;">EnPronoun</a> -- substitute a pronoun for a noun</ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/EnVerbPhrase.html"
+ style="text-decoration:none;">EnVerbPhrase</a> -- think with a verb
+        <ul><li><a href="http://ai.neocities.org/EnAuxVerb.html"
+ style="text-decoration:none;">EnAuxVerb</a> -- use auxiliary verb</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies a verb
+          <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies another adverb</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/EnVerbGen.html"
+ style="text-decoration:none;">EnVerbGen</a> -- generates an English verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores English phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies English verb-form</ul></ul>
+</ul></ul>
+      <ul><li>Subjunctive -- mood for conditional phrases</ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> --
+insert a conjunction if two thoughts are active</ul></ul>
+    <ul><li><a href="http://ai.neocities.org/RuThink.html"
+ style="text-decoration:none;">RuThink</a> -- think in Russian
+   <ul><li>RuImperative -- needs to be coded</ul>
+   <ul><li><a href="http://ai.neocities.org/RuIndicative.html"
+ style="text-decoration:none;">RuIndicative</a> -- mood for declarative Russian sentences
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/InFerence.html"
+ title="Create new ideas from old ideas."
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></font></ul>
+      <ul><li><a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</ul>
+     <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- think with a Russian noun
+        <ul><li><a href="http://ai.neocities.org/RuAdjective.html"
+ style="text-decoration:none;">RuAdjective</a> -- insert a Russian adjective
+    <ul><li><font color="gray">RuAdjGen -- to generate a Russian adjective-form</font></ul>
+        <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul></ul></ul>
+        <ul><li><a href="http://ai.neocities.org/RuPrep.html"
+ style="text-decoration:none;">RuPrep</a> -- insert a Russian preposition</ul>
+        <ul><li><a href="http://ai.neocities.org/RuPronoun.html"
+ style="text-decoration:none;">RuPronoun</a> -- substitute a Russian pronoun for a noun</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/RuVerbPhrase.html"
+ style="text-decoration:none;">RuVerbPhrase</a> -- think with a Russian verb
+        <ul><li><a href="http://ai.neocities.org/RuVerbGen.html"
+ style="text-decoration:none;">RuVerbGen</a> -- generate a Russian verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores Russian phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies Russian verb-form</ul></ul>
+         <ul><li><a href="http://ai.neocities.org/Speech.html"
+ style="text-decoration:none;">Speech</a> -- output to screen or loudspeaker</ul>
+       <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul>
+            <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a></font> -- visual recognition inserts a noun</ul>
+      <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- direct-object noun
+    <ul><li><font color="gray">RuNounGen -- to generate a Russian noun-form</font></ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/PsiDecay.html"
+ style="text-decoration:none;">PsiDecay</a> lowers conceptual activation</ul></ul></ul>
+    <ul><li><a href="http://ai.neocities.org/SpreadAct.html"
+ style="text-decoration:none;">SpreadAct</a> -- spreading activation from concept to concept</ul>
+    <ul><li><a href="http://ai.neocities.org/Spawn.html"
+ style="text-decoration:none;"><b>Spawn</b></a> --
+ <a href="http://agi.topicbox.com/groups/agi/T57cced66d45fa115"
+ title="AGI Mail List discussion forum"
+ style="text-decoration:none;">AI Go FOOM</a></ul>
+    <ul><li><a href="http://ai.neocities.org/MetEmPsychosis.html"
+ style="text-decoration:none;">MetEmPsychosis</a> -- AI soul travel from webserver to webserver
+ <ul><li><a href="https://en.wikipedia.org/wiki/Port_scanner"
+ style="text-decoration:none;">PortScan</a> -- find a receptive
+ <a href="http://en.wikipedia.org/wiki/Open_port"
+ title="Wikipedia article"
+ style="text-decoration:none;">
+open port</a> for relocation of the Ghost AI</ul></ul>
+    <ul><li><font color="gray">MindMeld -- merge two AI Minds by sharing memories</font></ul>
+    <ul><li><a href="http://ai.neocities.org/Motorium.html"
+ style="text-decoration:none;">Motorium</a> (MotorOutPut) -- for AI-Minded robots</ul>
+    <ul><li><a href="http://ai.neocities.org/Consciousness.html"
+ style="text-decoration:none;">Consciousness</a> -- emergent property, not a module</ul></ul></ul>
+</font>
+</font>
+
+<p><br /></p>
+<a href="https://m.media-amazon.com/images/I/51fCt9yasXL.jpg"
+ title="Image provided for bloggers, authors, students, et al."
+ style="text-decoration:none;">
+https://m.media-amazon.com/images/I/51fCt9yasXL.jpg</a> --
+cover image of "<i>Artificial Intelligence in Ancient Latin</i>"<br />
+
+<a href="http://www.amazon.com/dp/B08NRQ3HVW"
+ title="Paperback version"
+ style="text-decoration:none;">
+http://www.amazon.com/dp/B08NRQ3HVW</a> --
+paperback version of Kindle eBook "Artificial Intelligence in Ancient Latin"<br />
+
+<a href="https://www.metrofarecomic.com/post/109206873347/latin"
+ title="Cartoon of persons speaking ancient Latin on a bus"
+ style="text-decoration:none;">
+https://www.metrofarecomic.com/post/109206873347/latin</a> --
+cartoon image for Chapter 43<br />
+
+<p><br /></p>
+<center><a href="http://www.amazon.com/dp/B08NGMK3PN"
+ title="Artificial Intelligence in Ancient Latin">
+<img src="https://m.media-amazon.com/images/I/51fCt9yasXL.jpg"></a></center>
+<br />
+
+
+
+<p><br /></p>
+<a href="http://livetrafficfeed.com" data-num="10" data-width="210"
+data-responsive="0" data-time="America%2FNew_York" data-root="0"
+data-cheader="2853a8" data-theader="ffffff" data-border="2853a8"
+data-background="ffffff" data-normal="000000" data-link="135d9e"
+target="_blank" id="LTF_live_website_visitor">Website Counter</a>
+<script type="text/javascript" src="//cdn.livetrafficfeed.com/static/v4/live.js">
+</script><noscript><a href="http://livetrafficfeed.com">Website Counter</a></noscript>
+<a name="bottom"></a>
+<p><br /></p>
+</body>
+</html>

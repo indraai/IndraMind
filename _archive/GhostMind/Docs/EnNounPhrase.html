@@ -1,0 +1,985 @@
+
+<html>
+<head>
+<title>EnNounPhrase Module of a Strong AI Mind</title>
+<meta name="description"
+ content="EnNounPhrase supplies an English noun phrase for a thought being generated." />
+<meta name="keywords"
+ content="AI, artificial general intelligence, AGI, EnNounPhrase" />
+</head>
+<body bgcolor="#FFFACD">
+<a name="top"></a>
+
+<center><h1>
+<a href="http://ai.neocities.org/EnNounPhrase.html"
+ title="This webpage may be copied to other websites."
+ style="text-decoration:none;">
+EnNounPhrase</a> Module of the
+</h1></center>
+
+<center><h2>
+<a href="http://ai.neocities.org/Ghost.html"
+ title="The Ghost in the Machine">English</a>
+and
+<a href="http://ai.neocities.org/Dushka.html"
+ title="Russian tutorial AI in JavaScript for MSIE">
+Russian</a> bilingual
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="Perl AI source code"
+ style="text-decoration:none;">
+ghost</a>.pl AI in
+ <a href="http://strawberryperl.com"
+ title="Download Perl for free."
+ style="text-decoration:none;">
+Perl</a>
+</h2></center>
+
+<h2><center>
+<a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer">
+<i>Mens Latina</i></a> in
+ <a href="http://ai.neocities.org/MLPJ2019.html"
+ title="Mens Latina Programming Journal"
+ style="text-decoration:none;">
+Latin</a> --
+<a href="http://dl.acm.org/citation.cfm?doid=307824.307853"
+ title="Association for Computing Machinery"
+ style="text-decoration:none;">
+MindForth</a> for
+ <a href="http://rodneybrooks.com/agi-has-been-delayed/#comment-18915"
+ title="Robotics and AI weblog"
+ style="text-decoration:none;">
+Robots</a>
+</h2></center>
+
+
+<p><br /></p>
+<font face="Verdana">
+<p><a name="diagram"></a>
+<a name="1"></a><font size="+1">
+1. <a href="http://ai.neocities.org/DiaGram.html#EnNounPhrase"
+ title="ASCII diagrams of Mentifex mind-modules for artificial intelligence.">
+Diagram</a> of the EnNounPhrase English Noun-PhraseModule</font> <br />
+<pre><b>
+   /^^^^^^^^^\               _____________         /^^^^^^^^^\
+  /   EYE     \             /  EnThink    \       /   EAR     \
+ /             \    | | |   \_____________/     / auditory    \
+|               |   | | |   _____|________      |  memory       |
+|   _______     |   | | |  (   Indicative )     |  channel      |
+|  /image  \    |   | | |   \____________/      |               |
+| / percept \---|-----+ |   __|___      |       |               |
+| \ engram  /   |  a| | |  /EnNoun\     |       |               |
+|  \_______/    |  b|c| | / Phrase \----|-------|--"robots"     |
+|               |  s|o|f|( subject  ) __V___    |               |
+|   visual      |  t|n|i| \________/ /EnVerb\   |               |
+|               |  r|c|b|           ( Phrase )--|--"save"       |
+|   memory      |  a|e|e|    _______ \______/   |               |
+|               |  c|p|r|   /EnNoun \/  |       |               |
+|   channel     |  t|t|s|  / Phrase  \  |       |               |
+|               |   | | | ( indirect  )-|-------|--"people"     |
+|               |   | | |  \ object  /  |       |               |
+|               |   | | |   \_______/ __V___    |               |
+|   _______     |   |_|_|            /EnNoun\   |               |
+|  /fresh  \    |  / Psy \          / Phrase \  |               |
+| / image   \   | /concept\        (  direct  )-|--"work"       |
+| \ engram  /---|-\ array /         \ object /  |               |
+|  \_______/    |  \_____/           \______/   |               |
+</b></pre>
+
+
+<p><br /></p>
+<p><a name="purpose"></a>
+<a name="2"></a><font size="+1">
+2. Purpose of the EnNounPhrase English Noun-Phrase Module</font> <br />
+</p>
+<p>
+EnNounPhrase finds an English noun or
+ <a href="http://ai.neocities.org/EnPronoun.html"
+ title="EnPronoun documentation webpage"
+ style="text-decoration:none;">
+pronoun</a> to serve as the subject
+of a sentence or as the indirect or direct object of a verb being thought by
+ <a href="http://ai.neocities.org/EnVerbPhrase.html">
+EnVerbPhrase</a>.
+EnNounPhrase may also call
+ <a href="http://ai.neocities.org/EnPrep.html">
+EnPrep</a> to insert a preposition;
+ <a href="http://ai.neocities.org/EnArticle.html">
+EnArticle</a> to insert "a" or "the" before a noun; or
+ <a href="http://ai.neocities.org/EnAdjective.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+EnAdjective</a> to insert
+an English adjective describing a noun.
+</p>
+
+
+<p><br /></p>
+<p><a name="algorithm"></a>
+<a name="3"></a><font size="+1">
+3. Algorithm of the EnNounPhrase English Noun-Phrase Module</font> <br />
+</p>
+
+<p><font size="-1">
+3.A.1. Fetching a noun or pronoun as the subject of a thought.
+</font></p>
+
+<p>
+For the subject of a sentence of thought,
+ <a href="http://ai.neocities.org/EnNounPhrase.html">
+EnNounPhrase</a> typically
+finds the most active noun-concept in the Psy array of concepts.
+</p>
+
+<p>
+When the
+ <a href="http://ai.neocities.org/EnNounPhrase.html">
+EnNounPhrase</a> module must recall a noun or a pronoun
+in response to an external query, such as, "Who are you," first the
+ <a href="http://ai.neocities.org/SpreadAct.html">
+SpreadAct</a> module will use the
+ $<a href="http://ai.neocities.org/var.html#qv1psi">qv1psi</a>
+variable to find and activate the needed noun or pronoun and the
+ $<a href="http://ai.neocities.org/var.html#qv2psi">qv2psi</a>
+variable to identify the verb associated with the target noun,
+first in the query itself, and then in the response to
+the query. Since both the noun and the verb are
+combined in the search for memories responding to
+the query, the AI will not recall some random
+statement about the subject of the query, but will
+instead recall any available memory expressing
+both the subject of the query and the verb expressed
+in the query. For the query "Who are you", the AI
+must find both the ego-concept "I" and the be-verb
+to be expressed as "am", as in "I am."
+</p>
+
+<p><font size="-1">
+3.A.2. Fetching the ego-concept "I" as the default concept for contemplation in
+a quiescent mind.
+</font></p>
+
+<p><font size="-1">
+3.A.3. Leaving out the repetitious subject-noun from any additional phrase
+being joined together with a first phrase for a resulting compound sentence
+that may be replaced with a single one-phrase sentence containing one or more
+conjunctions.
+</font></p>
+
+<p>
+The user may tell the AI Mind two things: <br />
+<blockquote>
+<li>John has a house<br />
+<li>John has a car<br />
+</blockquote>
+The user may then ask the AI: <br />
+<blockquote>
+<li>What does John have
+</blockquote>
+The ghost292.pl AI was able to respond with the following output: <br />
+<br />
+THE JOHN HAS THE HOUSE AND THE JOHN HAS THE CAR I UNDERSTAND YOU <br />
+</p>
+
+<p>
+Suppose that we want the AI Mind to join two sentences together: <br />
+<blockquote>
+<b>JOHN HAS A HOUSE</b> <br />
+and <br />
+<b>JOHN HAS A CAR</b> <br />
+
+<p><br /></p>
+By not repeating the subject, we get: <br />
+<b>JOHN HAS A HOUSE</b> <br />
+and <br />
+<s>JOHN</s> <b>HAS A CAR</b> <br />
+
+<p><br /></p>
+By not repeating the subject and the verb, we get: <br />
+<b>JOHN HAS A HOUSE</b> <br />
+and <br />
+<s>JOHN HAS</s> <b>A CAR</b> <br />
+</blockquote>
+</p>
+
+<p>
+The AI coding task for ghost294.pl in Perl was how to get the sentence-generation
+modules to skip repeating the subject and skip repeating the verb.
+Note that even a human being will sometimes dawdle or linger
+while uttering the compound-setences, as in: <br />
+"John has a house...and a car...and a lawnmower...and a canoe, etc." <br />
+</p>
+
+<p>
+It was necessary to use one of the "chain" or "conCATenation" variables:
+<blockquote><pre><b>
+our $catiobj = 0;   # 2019-01-28: concat-indirect-object for ConJoin() "AND".
+our $catdobj = 0;   # 2019-01-28: concat-direct-object for ConJoin() "AND".
+our $catsubj = 0;   # 2019-01-28: concat-subject for ConJoin() "AND".
+our $catverb = 0;   # 2019-01-28: concat-verb for ConJoin() "AND".
+</b></pre></blockquote>
+</p>
+
+<p>
+We load the
+$<a href="http://ai.neocities.org/var.html#catsubj">catsubj</a>
+variable inside the query-response code in the
+ <a href="http://ai.neocities.org/SpreadAct.html">
+SpreadAct</a> module. After the first phrase in response to a query, such
+as "JOHN HAS A HOUSE", the AI may check each activated idea for starting with
+$<a href="http://ai.neocities.org/var.html#catsubj"><i>catsubj</i></a>
+and for having
+$<a href="http://ai.neocities.org/var.html#catverb"><i>catverb</i></a>
+in the second place. In that way, the various direct-objects may be isolated,
+introduced with "AND" from
+ <a href="http://ai.neocities.org/ConJoin.html">
+ConJoin</a>, and sent into the
+ <a href="http://ai.neocities.org/Speech.html">
+Speech</a> module for the output of a meandering, run-on response such as
+"JOHN HAS A HOUSE AND A CAR AND A BOAT AND A SLED AND A MOTORCYCLE".
+Such an AI output is like human speech, where the person states the basic
+premise before even thinking of all the nouns about to be concatenated
+with "AND" into the meandering response.
+</p>
+
+<p>
+Once the chain-variables are loaded with the concept-numbers of the
+items to be omitted for the syncopation or shortening of a compound-sentence,
+each item is omitted simply by letting
+ <a href="http://ai.neocities.org/Indicative.html">
+Indicative</a> call
+ <a href="http://ai.neocities.org/EnNounPhrase.html">
+EnNounPhrase</a> or
+ <a href="http://ai.neocities.org/EnVerbPhrase.html">
+EnVerbPhrase</a> but preemptively using conditionals to make each module "return" to
+ <a href="http://ai.neocities.org/Indicative.html">
+Indicative</a> before sending a noun or a verb into the
+ <a href="http://ai.neocities.org/Speech.html">
+Speech</a> module.
+</p>
+
+<p><font size="-1">
+3.B. Fetching a noun or pronoun as the direct object of a thought.
+</font></p>
+
+<p>
+The English verb-phrase module
+ <a href="http://ai.neocities.org/EnVerbPhrase.html">
+EnVerbPhrase</a> may call the
+EnNounPhrase module for both an indirect object of a verb
+and for a direct object. If an AI Mind embodied in a robot
+can recognize and name objects with a
+ <a href="http://ai.neocities.org/VisRecog.html">
+VisRecog</a> module,
+the noun naming the recognized object may go directly
+into the slot for a direct object in a sentence being
+generated. The robot might say, "I see a dog." VisRecog
+may first identify the concept being recognized and then
+call EnNounPhrase to express the noun of the concept in
+a thought.
+</p>
+
+<p><font size="-1">
+3.C. Fetching a noun or pronoun as the object of a preposition.
+</font></p>
+
+
+<p><br /></p>
+<p><a name="code"></a>
+<a name="4"></a><font size="+1">
+4. Code of EnNounPhrase() from ghost327.pl AI
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="ghost.pl AI Mind in Strawberry Perl Five"
+ style="text-decoration:none;">
+source code</a> in
+ <a href="http://strawberryperl.com"
+ title="Free download of Strawberry Perl Five"
+ style="text-decoration:none;">
+Perl</a>
+</font> <br />
+</p>
+
+<pre><b>
+sub EnNounPhrase() {  # http://ai.neocities.org/EnNounPhrase.html
+  $aud = 0;  # 2018-06-28: safety measure.
+  $act = 0;  # 2016mar29; 2016apr27: so comparisons may be higher.
+  $actpsi = 0;    # 2019-01-22: prevent carry-over within compound sentences.
+  $audjuste = 0;  # 2016feb12: prevent carry-over
+  $defact = -64;  # 2016apr13: for default comparisons with "701=I";
+  $motjuste = 0;  # 2016feb12:
+  if ($whatcon==1 && $qv1psi==701 && $qv2psi==823 && $taccon>0) { $motjuste=$taccon } # 11-02 TEST
+  $nphrpos = 5;   # 2017-09-03: a default setting of noun for EnArticle().
+  $subjpsi = 0;   # 2016jun28: how can there already be a subject-psi? TEST
+  my $tsels = 0;  # 2016may25: de-globalize the time-of-selection-of-subject.
+  if ($verblock > 0) {  # 2016apr13: positive verblock?
+    my @k=split(',',$psy[$verblock]);  # 2016apr13: inspect t=verblock row;
+    $prsn = $k[7];       # 2018-09-30: for use in EnAuxVerb()
+    $subjnum = $k[8];    # 2017-06-10: from number of verb; BUGFIX
+    $nounlock = $k[14];  # 2019-08-01: dirobj tkb becomes nounlock value.
+  }  # 2016apr13: end of test for a positive verblock;
+  if ($nounlock > 0) {  # 2016apr13: already a nounlock?
+    $dirobj = 1;  # 2016apr20: nounlock is specifically for a direct object.
+    $subjectflag = 0;  # 2016apr20: needed for conditional tests below;
+    my @k=split(',',$psy[$nounlock]);  # 2016apr13: inspect t=nounlock row;
+    $motjuste = $k[1];  # 2017jun08: in case a search is needed for non-zero $rv
+    $act = $k[3];   # 2017jun08: let activation-level play its role here;
+    if ($k[17] > 0) { $tdj = $k[17] }  # 2019-10-13: time-of-adjective
+#   if ($k[19] > 0) { $tpr = $k[19] }  # 2019-08-11: time-of-preposition?
+    if ($k[19] > 0) { $tnpr = $k[19] }  # 2019-10-28: time-of-noun-preposition?
+    if ($k[7] == 4) {   # 2017jun08: if acc. case as for any nounlock;
+      if ($k[20] > 0) {     # 2019-08-01: if there is a positive recall-vector...
+        $nphrpos = $k[6];   # 2017-09-03: find part-of-speech for EnArticle
+        $aud = $k[20];      # 2019-08-01: find positive $rv;
+      }  # 2017-09-03: pre-ELSE end of test for a positive recall-vector
+    } else {  # 2019-08-08: if only a zero $rv is found...
+      for (my $i=$t; $i>$midway; $i--) {  # 2016apr20: search backwards in time.
+        @k=split(',',$psy[$i]);  # 2016apr20: inspect @psy flag-panel
+        if ($motjuste == $k[1]) {  # 2017jun08: find motjuste for sake of rv
+          if ($dirobj == 1 && $k[7] == 4) {   # 2017jun08: direct object?
+            if ($k[20] > 0) { $nphrpos = $k[6] }  # 2019-08-01: for EnArticle.
+            if ($k[20] > 0) { $aud = $k[20] }  # 2019-08-01: find positive $rv;
+            if ($k[20] > 0) { last }  # 2019-08-01: exit loop if $rv is found.
+          }  # 2016apr20: end of test for direct object and accusative case.
+          if ($k[20] > 0) { $nphrpos = $k[6] }  # 2019-08-01: for EnArticle.
+          if ($k[20] > 0) { $aud = $k[20] }  # 2019-08-01: find positive $rv;
+          if ($k[20] > 0) { last }  # 2019-08-01: exit loop if $rv is found.
+        }  # 2016apr20: end of test to find $motjuste with valid $rv.
+      }  # 2016apr27: end of for-loop in search of a positive recall-vector.
+    }  # 2017sep03: end of else-clause for typically a pronominal $rv.
+    $actpsi = $k[1];  # 2017-06-17: send direct object into SpreadAct()
+  }  # 2016apr13: end of test for a positive nounlock;
+  if ($tpr > 0) {  # 2019-08-11: if noun links to a preposition...
+    my @k=split(',',$psy[$tpr]);  # 2019-08-11: inspect @psy knowledge-nodes.
+    if ($k[14] > 0) { $px1 = $k[14] }  # 2019-08-11: intercept "px1" for obj of prep.
+  }  # 2019-08-11: end of test for a jump-off point to a preposition.
+  if ($whatcon==1 && $qv1psi==701 && $qv2psi==823 && $taccon>0) { $motjuste=$taccon } # 11-02 TEST
+  if ($nounlock == 0) {  # 2019-06-05: if English nouns are free to compete...
+    $subjectflag = 1;  # 2016mar29: a default until countermanded.
+    $dba = 1;  # 2017-06-11: default nominative until countermanded.
+    if ($dirobj == 1) { $subjectflag = 0 }  # 2016mar29: countermanding default
+    for (my $i=$t; $i>$midway; $i--) {  # 2016apr30: include input for topical response
+      my @k=split(',',$psy[$i]);  # 2016mar15: inspect @psy knowledge-nodes.
+      if ($k[2] == 1) {  # 2018-09-27: select only English words
+        if ($k[6]==5 || $k[6]==7) {  # 2017jun08: select $pos noun or pronoun
+          if ($k[14] > 0 ) {  # 2019-08-01: retrieve ideas, not single words.
+            if ($k[3] > $act) {   # 2017jun08: k3 activation as criterion.
+              $etc++;   # 2019-03-02: increment number of active ideas for ConJoin()
+              $motjuste = $k[1];  # 2017jun08: Select the most active concept.
+              $aud = $k[20];  # 2019-08-08: auditory recall-vector
+              $svo1 = $k[1];      # 2017-06-08: keep track of subject.
+              $mjact = $k[3];  # 2017jun08: if too low, motjuste defaults to "I"
+              if ($k[3] > $act && $k[11] > 0) {  # 2019-08-01: if k1-psi has k11-seq
+                $verblock = $k[14];  # 2019-08-01: assign $tkb value to verblock.
+              }  # 2019-08-01: end of test for a k1-subject with a k11-seq.
+              if ($k[3] > $act && $k[14] > 0) {  # 2019-08-01: if k1-psi has k14-tkb
+                $subjnum = $k[8];  # 2019-10-20: necessary for EnArticle()
+                $verblock = $k[14];  # 2019-08-01: assign $tkb value to verblock.
+                $aud = $k[20];  # 2019-08-08: TEST
+              }  # 2017jun11: end of test for a k1-subject with a k13-tkb.
+              if ($dirobj == 1) { $actpsi = $k[1] }  # 2017jun08
+              $subjpsi = $motjuste;  # 2016apr10: for selection of verb-form.
+              $snu = $k[8];  # 2017jun08: for parameter in verb-selection;
+              if ($k[20] > 0) {  # 2019-08-08: if there is a positive recall-vector...
+                $nphrpos = $k[6];   # 2017-09-03: for sake of EnArticle.
+                $audjuste = $k[20]; # 2019-08-01: temporary recall-vector for Speech
+                $aud = $k[20]; # 2019-08-01: recall-vector for Speech()
+              }  # 2018-06-28: end of test for auditory recall-vector.
+              $tseln = $i;        # 2016mar29: use time-point for inhibition.
+              $tsels = $i;        # 2016apr17: use time-point for inhibition.
+              $act = $k[3];       # 2017jun08: noun must have higher act to win
+            }  # 2016feb12: end of test for a higher activation $act
+          }  # 2017dec06: end of test for a k[13] tkb verblock
+        }  # 2016feb17: end of test for noun or pronoun as subject
+      }  # 2016feb17: end of test for human language code $hlc == "en"
+    }  # 2016mar13: End of (for loop) searching for most active "motjuste"
+  } # 2019-06-05: end of test for absence of a $nounlock for English nouns.
+  if ($whatcon > 0) {  # 2019-01-28: if SpreadAct() answers a what-query...
+  if ($whatcon==1 && $qv1psi==701 && $qv2psi==823 && $taccon>0) { $motjuste=$taccon } # 11-02 TEST
+    if ($catsubj==$motjuste && $conj > 0) {  # 2019-01-28: after use of a conjunction...
+      return;  # 2019-01-28: omit the subject-noun after the use of a conjunction.
+    }  # 2019-01-28: end of test
+  }  # 2019-01-28: end of test for SpreadAct() answering a what-query.
+  my @k=split(',',$psy[$tsels]);  # 2016apr17: inspect subject at time of selection;
+  if ($k[0] > 0) { $tru = $k[0]; }  # 2019-06-13: preserve truth-value for re-entry.
+  $psy[$tsels]="$k[0],$k[1],$k[2],-90,$k[4],$k[5],$k[6],"
+  . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
+  . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]";  # 2019-08-01: flag-panel
+  # 2016jun28: Above line inserts inhibition more than twice what SpreadAct imposes.
+  if ($subjectflag == 0) {  # 2016apr13: i.e., dir.obj or pred.nom;
+  if ($whatcon==1 && $qv1psi==701 && $qv2psi==823 && $taccon>0) { $motjuste=$taccon } # 11-02 TEST
+    if ($nounlock > 0) {  # 2016apr13: if verb is locked to a particular $seq...
+      my @k=split(',',$psy[$nounlock]);  # 2016apr13: inspect t=nounlock row;
+      $motjuste = $k[1];  # 2017jun08: nounlock psi pre-empts search.
+      $act = $k[3];  # 2017jun08: let activation-level play its role here;
+      if ($k[6] == 5) {  # 2017-09-03: if nounlock part of speech is 5=noun
+        $nphrpos = 5;    # 2017-09-03: for sake of EnArticle.
+        $qv1psi = $k[1]; # 2017-09-03: let direct object go to SpreadAct.
+      }  # 2017-09-03: end of test for only a noun to go into SpreadAct.
+      $aud = $k[20]; # 2019-08-02: recall-vector to auditory engram.
+    }  # 2016apr13: end of test for a positive nounlock.
+  }  # 2016apr13: end of test for not-a-subject before using ELSE
+  if ($aud == 0) {  # 2018-06-28: seek outside of rv-less silent inference...
+    for (my $i=$t; $i>$midway; $i--) {  # 2016mar27: search backwards in time.
+      my @k=split(',',$psy[$i]);  # 2016mar27: inspect @psy flag-panel
+      $act = $k[3];  # 2017jun08: let activation-level play its role here;
+      if ($motjuste == $k[1]) {  # 2017jun08: find motjuste for sake of rv
+        if ($subjectflag == 1 && $k[7] == 1) {   # 2017jun08: subject?
+          if ($k[20] > 0) { $aud = $k[20] }  # 2019-08-01: find positive $rv;
+          if ($k[20] > 0) { last }  # 2019-08-01: exit loop if $rv is found.
+        }  # 2016apr01: end of test for subject and for nominative case.
+        if ($dirobj == 1 && $k[7] == 4) {   # 2017jun08: direct object?
+          if ($k[1] > 0) { $qv4psi = $k[1] }  # 2017-12-12: for inserting "AN".
+          if ($k[20] > 0) { $nphrpos = $k[6] } # 2019-08-01: set POS for EnArticle.
+          if ($k[20] > 0) { $aud = $k[20] }  # 2019-08-01: find positive $rv;
+          if ($k[20] > 0) { last }  # 2019-08-01: exit loop if $rv is found.
+        }  # 2016apr01: end of test for direct object and accusative case.
+      }  # 2016mar27: end of test to find $motjuste with valid $rv.
+    }  # 2016mar27: End of (for loop) searching through @psy conceptual array.
+  }  # 2016mar27: end of else-clause for when recall-vector is zero.
+  if ($nounlock == 0) {  # 2016apr07: if no nounlock override;
+    if ($mjact < 20) {  # 2016jun18: if no subject active enough for chain-of-thought
+      if ($subjectflag == 1) {  # 2016apr07: default to "I" only as subject
+        $actpsi = 701;  # 2016apr29: send 701=I ego-concept into SpreadAct()
+        $motjuste = 701;  # 2016apr07: 701=I default concept of AI Mind
+        for (my $i=$t; $i>$midway; $i--) {  # 2016apr07: search for "I"
+          my @k=split(',',$psy[$i]);  # 2016apr07: examine @psy
+          if ($k[0]>0 && $k[1]==701 && $k[14]>0) { # 2019-08-01: I=701 with non-zero $tru
+            if ($k[3] > $defact) {  # 2017jun08: if higher k3 act is found;
+              $tseln = $i;  # 2016apr07: retain time of motjuste;
+              $tsels = $i;  # 2016may25: retain time of English subject;
+              $actpsi = $k[1];    # 2017jun08: psi with activation to spread
+              $defact = $k[3];    # 2017jun08: dynamic metric;
+              $defact = ($k[3] -1);  # 2019-06-03: allow deeper search.
+              $verblock = $k[14]; # 2019-08-01: k14 $tkb as verblock;
+              $aud = $k[20];      # 2019-08-01: recall-vector for auditory engram
+            }  # 2016apr07: end of test for higher-act ego-concept;
+          }  # 2016apr07: end of test for "701=I" with seq-check;
+        }  # 2016apr07: end of search for least-inhibited "701=I";
+        $dba = 1;        # 2016apr07: From RuAi; subject requires nom. case;
+        $nphrnum = 1;    # 2016apr07: for EnArticle() and EnVerbPhrase();
+        $nphrpos = 7;    # 2016apr07: prevent article "A" with "I";
+        $prsn = 1;       # 2016apr07: for use elsewhere;
+        $subjnum = 1;    # 2016apr07: for use elsewhere;
+        $subjpsi = 701;  # 2016apr07: for use elsewhere;
+        $topic = 701;    # 2016apr07: for question-asking modules;
+        for (my $i=$t; $i>$midway; $i--) {  # 2016apr07: parameters for 701=I.
+          my @k=split(',',$psy[$i]);  # 2016apr07: examine @psy
+          if ($k[1] == 701) {  # 2017jun08: if 701=I is found;
+            if ($k[7] == 1) {  # 2017jun08: k7/dba must be nominative=1;
+              $audjuste = $k[20];  # 2019-08-01: "I" recall-vector;
+              $aud = $k[20];  # 2019-08-01: "I" recall-vector for Speech()
+              if ($k[20]>0) { $aud=$k[20]; last }  # 2019-08-01: insurance
+            }  # 2016apr07: end of test for nominative "I";
+          }  # 2016apr07: End of search for 701=I;
+        }  # 2016apr07: end of 701=I search based on parameters.
+      }  # 2016apr07: end of test for "I" to become subj. not obj.
+    }  # 2016apr07: end of test for low activation warranting a default
+  }  # 2016apr07: end of test for absence of pre-ordained nounlock;
+  $unk = $aud;  # 2017-08-31: preserve value across call to EnArticle().
+  if ($motjuste == 701) { $nphrpos = 7 }  # 2019-11-03: for pronoun 701=I
+  if ($nphrpos == 5) {  # 2017-09-03: only nouns, not adjectives or pronouns.
+    my @aud=split(',',$ear[$aud]);  # 2017-12-12: expose first @ear value
+    if ($aud[0] eq "A") { $anset = 65 }  # 2017-12-12: If vowel "A";
+    if ($aud[0] eq "E") { $anset = 69 }  # 2017-12-12: If vowel "E";
+    if ($aud[0] eq "I") { $anset = 73 }  # 2017-12-12: If vowel "I";
+    if ($aud[0] eq "O") { $anset = 79 }  # 2017-12-12: If vowel "O";
+    if ($aud[0] eq "U") { $anset = 85 }  # 2017-12-12: If vowel "U";
+    EnArticle()         # 2017-12-11: module for thinking an English article.
+  }  # 2017-09-03: end of test for a 5=noun noun-phrase part-of-speech
+  $aud = $unk;  # 2017-08-31: restore value after call to EnArticle().
+  $unk = 0;     # 2017-08-31: reset for safety.
+  $unk = $aud;  # 2019-10-13: preserve value across call to EnAdjective().
+  if ($tdj > 0) {  # 2019-10-13: if there is a positive time-of-adjective...
+    EnAdjective();  # 2019-03-02: permit insertion of adjective before a noun.
+    $tdj = 0;  # 2019-10-13: reset for safety.
+  }  # 2019-10-13: end of test for an adjective linked to the noun.
+  $aud = $unk;  # 2019-10-13: restore value after call to EnAdjective().
+  Speech();  # 2016feb13: speak the word starting at the $aud time.
+  @k=split(',',$psy[$tsels]);  # 2016jun24: inhibit the subject just spoken.
+  $psy[$tsels]="$k[0],$k[1],$k[2],-32,$k[4],$k[5],$k[6],"
+  . "$k[7],$k[8],$k[9],$k[10],$k[11],$k[12],$k[13],"
+  . "$k[14],$k[15],$k[16],$k[17],$k[18],$k[19],$k[20]"; # 2019-08-01: flag-panel
+# if ($tpr > 0) {  # 2019-08-11: if there is a positive time-of-preposition
+  if ($tnpr > 0) {  # 2019-10-128: if there is a positive time-of-noun-preposition
+    EnPrep();  # 2019-08-11: for a prepositional phrase
+  }  # 2019-08-11: end of test for a preposition linked to the noun.
+  $dirobj = 0;    # 2016apr12: reset for safety
+  $mfn = 0;       # 2019-10-23: prevent carry-over.
+  $mjact = 0;     # 2016apr27: reset for safety.
+  $motjuste = 0;  # 2016apr25: reset for safety.
+}  # 2019-10-28: EnNounPhrase() returns to English Indicative() module
+</b></pre>
+
+
+<p><br /></p>
+<p><a name="variables"></a>
+<a name="5"></a><font size="+1">
+5. <a href="http://ai.neocities.org/var.html"
+ title="Table of Variables for artificial intelligence"
+ style="text-decoration:none;">
+Variables</a> for EnNounPhrase Module of an AI with
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding"
+ style="text-decoration:none;">
+NLU</a></font> <br />
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#act">act</a> --
+quasi-neuronal activation-level
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#aud">aud</a> --
+in the <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a>() module is an associative tag
+leading to the typically most recent engram of a word stored
+in the @ear array of the auditory memory channel.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#audjuste">audjuste</a> --
+ <a href="http://ai.neocities.org/EnNounPhrase.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnNounPhrase</a>() <i>$motjuste</i> <i>$aud</i> to
+ <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a>() module
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#catsubj">catsubj</a> --
+flag for holding the concept-number of the <b>SUBJ</b>ect-noun of words con<b>CAT</b>enated
+together into the first phrase of a potentially compound output sentence, so that
+one-by-one the words of a candidate second phrase may each be tested for a match with the
+counterpart word in the very first phrase, and thus, if a conjunction like "AND" from
+ <a href="http://ai.neocities.org/ConJoin.html"
+ title="documentation page"
+ style="text-decoration:none;">
+ConJoin</a> is about to add the second phrase to the first phrase, the AI may
+omit the repetitious same subject from the second phrase, and also the verb if
+it is found to be repetitious in the
+ <a href="http://ai.neocities.org/EnVerbphrase.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnVerbPhrase</a> module, with the result that the AI syncopates or shortens the
+compound sentence into a single-subject and single-verb sentence such as,
+"JOHN HAS A HOUSE AND A CAR" instead of
+"<u>JOHN</u> <u>HAS</u> A HOUSE AND <s>JOHN</s> <s>HAS</s> A CAR".
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#defact">defact</a> --
+default activation for <a href="http://ai.neocities.org/EnNounPhrase.html"
+ title="documentation"
+ style="text-decoration:none;">
+EnNounPhrase</a>()
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#dirobj">dirobj</a> --
+flag indicates seeking for a direct object.
+Should perhaps be renamed "dirobjcon" so as to indicate a
+<i>condition</i> rather than a particular direct object.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#etc">etc</a> --
+number of simultaneously active ideas for
+ <a href="http;//ai.neocities.org/ConJoin.html"
+ title="documentation page"
+ style="text-decoration:none;">
+ConJoin</a>() to separate with a conjunction.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#motjuste">motjuste</a> --
+(from French) best word for inclusion in a thought. <br />
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#nphrpos">nphrpos</a> --
+"noun-phrase part-of-speech" for testing during the
+ <a href="http://ai.neocities.org/EnThink.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnThink</a>() process.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#nounlock">nounlock</a> --
+time-point for a verb to lock onto a seq-noun.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#subjnum">subjnum</a> --
+(subject number) for agreement in grammatical number
+between a subject and a predicate nominative noun.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#subjsi">subjpsi</a> --
+subject-concept parameter to govern person of verb-forms
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#taccon">taccon</a> --
+is a tactile <i>condition</i> flag which may be used by the AI
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="documentation webpage"
+ style="text-decoration:none;">
+Mind Maintainer</a> either to trigger events involving tactile recognition
+or to carry the actual sensory identifiers which may be tested either for
+a positive value or for the specifically identifying value of the sensor.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tsels">tsels</a> --
+Time of SELection of Subject -- is used locally in
+ <a href="http://ai.neocities.org/EnNounPhrase.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnNounPhrase</a>() and in
+ <a href="http://ai.neocities.org/RuNounPhrase.html"
+ title="documentation page"
+ style="text-decoration:none;">
+RuNounPhrase</a>() to keep track of the experiential
+time <i>$t</i> at which a stored concept is selected as a subject, so that the
+<i>$tsels</i> can be used to revisit the engram at <i>$tsels</i> to
+change its activation-level in the course of neural inhibition.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#verblock">verblock</a> --
+for subject-noun to lock onto seq-verb. The <i>$verblock</i>
+is a time-point in conceptual @psy memory where the <i>$seq</i> of a subject-noun
+is located, so that any crucial consideration such as the negation of
+a verb will be found when the verb-phrase module fetches the verb-concept
+from memory. If the thinking process finds and activates a particular
+subject-noun in memory, the <i>$tkb</i> of the subject noun becomes the
+<i>$verblock</i> so that a particular verb at a particular time will
+be selected by the English or Russian verb-phrase module.
+</p>
+
+
+<p><br /></p>
+<p><a name="debug"></a>
+<a name="6"></a><font size="+1">
+6. Troubleshooting and Debugging for
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="job description"
+ style="text-decoration:none;">
+AI Mind Maintainers</a></font> <br />
+</p>
+
+<p><a name="6.0"></a><font color="red">
+<b>6.0.a.  Symptom:</b></font> (Something goes wrong.)<br />
+<font color="green"><b>
+6.0.b.  Solution:</b></font> (AI Mind
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="Job Description"
+ style="text-decoration:none;">
+Maintainer</a> devises solution.) <br />
+</p>
+
+<p><a name="6.1"></a><font color="red">
+<b>6.1.a.  Symptom:</b></font> In either a pre-existing AI or a new AI,
+the activation of multiple subject-nouns is detected by the
+ <a href="http://ai.neocities.org/var.html#etc">etc</a> flag
+as a trigger to let the
+ <a href="http://ai.neocities.org/ConJoin.html"
+ title="Job Description"
+ style="text-decoration:none;">
+ConJoin</a> module insert a conjunction like "AND" between multiple
+ideas being expressed as output. Sometimes a problem of runaway activations
+may occur among the subject-nouns being considered by the noun-phrase module
+for selection as part of an idea to be output as a thought. In such a case
+the AI may be filled with a burgeoning swarm of activated subjects and may
+not be able to stop outputting needlessly compound sentences. <br />
+
+<br />
+<font color="green"><b>
+6.1.b.  Solution:</b></font> The AI Mind
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="Job Description"
+ style="text-decoration:none;">
+Maintainer</a> may troubleshoot the problem by inserting a diagnostic message
+into that part of the noun-phrase module where nouns are competing to be selected
+for having the highest activation. The temporary diagnostic message shall report
+the location in conceptual Psy memory of the activated noun as identified by the
+looping index-number; the concept-number that identifies the active noun;
+the number of activated candidates as tallied by the
+ <a href="http://ai.neocities.org/var.html#etc">etc</a> variable; and
+the level of runaway activation as revealed by the value riding on the
+ <a href="http://ai.neocities.org/var.html#act">act</a> variable.
+The following sample Perl code shows a typical diagnostic message. <br />
+<blockquote><b><pre>
+  print "\n EnNP i= $i k1= $k[1] etc= $etc act= $act \n";
+}  # 2016feb12: end of test for a higher activation $act
+</pre></b></blockquote>
+
+If there are too many activated subject-nouns, the reported
+ <a href="http://ai.neocities.org/var.html#etc">etc</a> value will
+grow larger and larger as proof that there is a problem. One solution in the past
+has been to make sure that the
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="documentation page"
+ style="text-decoration:none;">
+InStantiate</a> module modestly increases the activation on recognized concepts only
+from the outside world and not on concepts being thought and being stored
+in memory as part of the re-entry process. If re-entrant thoughts were to receive
+activation, then that process could be the source of runaway activation.
+</p>
+
+
+<p><br /></p>
+<p><a name="future"></a>
+<a name="7"></a><font size="+1">
+7. Future Development</font> <br />
+</p>
+
+<p>
+<a href="http://ai.neocities.org/RoadMap.html"
+ title="With links to various AI readmaps"
+ style="text-decoration:none;">
+<strong>Roadmap</strong></a> to Artificial Intelligence
+</p>
+
+
+<p><br /></p>
+<p><a name="resources"></a>
+<a name="8"></a><font size="+1">
+8. Resources</font> <br />
+</p>
+
+<p><br /></p>
+Please see also <br />
+<br />
+<a href="http://mind.sourceforge.net/n-phrase.html"
+ title="Older version of this AI documentation"
+ style="text-decoration:none;">
+http://mind.sourceforge.net/n-phrase.html</a> <br />
+</font>
+
+<p>
+<a href="http://github.com/PriorArt/AGI/wiki/MindGrid"
+ title="MindGrid activation-levels depicted with an ASCII diagram."
+ style="text-decoration:none;">
+http://github.com/PriorArt/AGI/wiki/MindGrid</a>
+</p>
+
+
+<p><br /></p>
+<p><a name="aitree"></a>
+<a name="9"></a><font size="+1">
+9. <a href="http://ai.neocities.org/AiTree.html"
+ title="stand-alone AI Tree of mind-modules"
+ style="text-decoration:none;">
+AiTree</a> of Mind-Modules for
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding">
+Natural Language Understanding
+</font> <br />
+</p>
+
+
+<font face="Verdana">
+<ul><a href="http://ai.neocities.org/MainLoop.html"
+ style="text-decoration:none;">MainLoop</a> of Strong AI Mind-Modules<br />
+  <ul><li>TabulaRasa -- wipe memory clean</ul>
+  <ul><li><a href="http://ai.neocities.org/MindBoot.html"
+ style="text-decoration:none;">MindBoot</a> of English and
+ <a href="http://github.com/kernc/mindforth/blob/master/wiki/RuBoot.wiki"
+ style="text-decoration:none;">Russian</a> vocabulary
+    <ul><li>KbLoad -- load the Knowledge Base</ul></ul>
+  <ul><li><a href="http://ai.neocities.org/LangLearn.html"
+ style="text-decoration:none;">LangLearn</a> -- habituate new syntax; learn a language</ul>
+  <ul><li><a href="http://ai.neocities.org/ReJuvenate.html"
+ style="text-decoration:none;">ReJuvenate</a> -- recycle memory space</ul>
+  <ul><li><a href="http://ai.neocities.org/Sensorium.html"
+ style="text-decoration:none;">Sensorium</a> -- sensory input with associative tagging to concepts
+    <ul><li><a href="http://ai.neocities.org/AudInput.html"
+ style="text-decoration:none;">AudInput</b></a> -- auditory input
+      <ul><li><a href="http://ai.neocities.org/AudListen.html"
+ style="text-decoration:none;">AudListen</a> -- listen for input</ul>
+      <ul><li><a href="http://ai.neocities.org/AudMem.html"
+ style="text-decoration:none;">AudMem</a> -- English auditory memory
+        <ul><li><a href="http://ai.neocities.org/AudRecog.html"
+ style="text-decoration:none;">AudRecog</a> -- auditory recognition</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/OldConcept.html"
+ style="text-decoration:none;">OldConcept</a> -- recognize a known old concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/NewConcept.html"
+ style="text-decoration:none;">NewConcept</a> -- create a new concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create instance of new concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create instance of new concept</ul>
+</ul></ul></ul>
+    <ul><li>FileInput -- read files on a server</ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/GusRecog.html"
+ style="text-decoration:none;">GusRecog</a> -- sense of taste</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/OlfRecog.html"
+ style="text-decoration:none;">OlfRecog</a> -- sense of smell</font></ul>
+    <ul><li><a href="http://ai.neocities.org/TacRecog.html"
+ style="text-decoration:none;">TacRecog</a> -- sense of touch</ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a> -- sense of vision</font></ul></ul>
+  <ul><li><a href="http://ai.neocities.org/Volition.html"
+ style="text-decoration:none;">Volition</a> -- free will resulting from feeling and thinking
+    <ul><li><a href="http://ai.neocities.org/Emotion.html"
+ style="text-decoration:none;">Emotion</a> as influence on thought and free will</ul>
+    <ul><li><a href="http://ai.neocities.org/EnThink.html"
+ style="text-decoration:none;">EnThink</a> -- think in English
+      <ul><li><a href="http://ai.neocities.org/KbRetro.html"
+ style="text-decoration:none;">KbRetro</a> -- retroactively adjust knowledge base</ul>
+      <ul><li><a href="http://ai.neocities.org/Imperative.html"
+ style="text-decoration:none;">Imperative</a> -- mood for issuing commands</ul>
+      <ul><li><a href="http://ai.neocities.org/Indicative.html"
+ style="text-decoration:none;">Indicative</a> -- mood for declarative statements
+      <ul><li><a href="http://ai.neocities.org/InFerence.html"
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></ul>
+      <ul><li><a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</ul>
+      <ul><li><a href="http://ai.neocities.org/EnNounPhrase.html"
+ style="text-decoration:none;">EnNounPhrase</a> --
+<font color="red"><b>think with a noun</b></font>
+        <ul><li><a href="http://ai.neocities.org/EnPrep.html"
+ style="text-decoration:none;">EnPrep</a> -- insert an English preposition</ul>
+        <ul><li><a href="http://ai.neocities.org/EnArticle.html"
+ style="text-decoration:none;">EnArticle</a> -- use "a" or "the"</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdjective.html"
+ style="text-decoration:none;">EnAdjective</a> -- insert an adjective</ul>
+        <ul><li><a href="http://ai.neocities.org/EnPronoun.html"
+ style="text-decoration:none;">EnPronoun</a> -- substitute a pronoun for a noun</ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/EnVerbPhrase.html"
+ style="text-decoration:none;">EnVerbPhrase</a> -- think with a verb
+        <ul><li><a href="http://ai.neocities.org/EnAuxVerb.html"
+ style="text-decoration:none;">EnAuxVerb</a> -- use auxiliary verb</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies a verb
+          <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies another adverb</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/EnVerbGen.html"
+ style="text-decoration:none;">EnVerbGen</a> -- generates an English verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores English phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies English verb-form</ul></ul>
+</ul></ul>
+      <ul><li>Subjunctive -- mood for conditional phrases</ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> --
+insert a conjunction if two thoughts are active</ul></ul>
+    <ul><li><a href="http://ai.neocities.org/RuThink.html"
+ style="text-decoration:none;">RuThink</a> -- think in Russian
+   <ul><li>RuImperative -- needs to be coded</ul>
+   <ul><li><a href="http://ai.neocities.org/RuIndicative.html"
+ style="text-decoration:none;">RuIndicative</a> -- mood for declarative Russian sentences
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/InFerence.html"
+ title="Create new ideas from old ideas."
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></font></ul>
+      <ul><li><a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</ul>
+     <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- think with a Russian noun
+        <ul><li><a href="http://ai.neocities.org/RuAdjective.html"
+ style="text-decoration:none;">RuAdjective</a> -- insert a Russian adjective
+    <ul><li><font color="gray">RuAdjGen -- to generate a Russian adjective-form</font></ul>
+        <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul></ul></ul>
+        <ul><li><a href="http://ai.neocities.org/RuPrep.html"
+ style="text-decoration:none;">RuPrep</a> -- insert a Russian preposition</ul>
+        <ul><li><a href="http://ai.neocities.org/RuPronoun.html"
+ style="text-decoration:none;">RuPronoun</a> -- substitute a Russian pronoun for a noun</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/RuVerbPhrase.html"
+ style="text-decoration:none;">RuVerbPhrase</a> -- think with a Russian verb
+        <ul><li><a href="http://ai.neocities.org/RuVerbGen.html"
+ style="text-decoration:none;">RuVerbGen</a> -- generate a Russian verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores Russian phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies Russian verb-form</ul></ul>
+         <ul><li><a href="http://ai.neocities.org/Speech.html"
+ style="text-decoration:none;">Speech</a> -- output to screen or loudspeaker</ul>
+       <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul>
+            <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a></font> -- visual recognition inserts a noun</ul>
+      <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- direct-object noun
+    <ul><li><font color="gray">RuNounGen -- to generate a Russian noun-form</font></ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/PsiDecay.html"
+ style="text-decoration:none;">PsiDecay</a> lowers conceptual activation</ul></ul></ul>
+    <ul><li><a href="http://ai.neocities.org/SpreadAct.html"
+ style="text-decoration:none;">SpreadAct</a> -- spreading activation from concept to concept</ul>
+    <ul><li><a href="http://ai.neocities.org/Spawn.html"
+ style="text-decoration:none;"><b>Spawn</b></a> --
+ <a href="http://agi.topicbox.com/groups/agi/T57cced66d45fa115"
+ title="AGI Mail List discussion forum"
+ style="text-decoration:none;">AI Go FOOM</a></ul>
+    <ul><li><a href="http://ai.neocities.org/MetEmPsychosis.html"
+ style="text-decoration:none;">MetEmPsychosis</a> -- AI soul travel from webserver to webserver
+ <ul><li><a href="https://en.wikipedia.org/wiki/Port_scanner"
+ style="text-decoration:none;">PortScan</a> -- find a receptive
+ <a href="http://en.wikipedia.org/wiki/Open_port"
+ title="Wikipedia article"
+ style="text-decoration:none;">
+open port</a> for relocation of the Ghost AI</ul></ul>
+    <ul><li><font color="gray">MindMeld -- merge two AI Minds by sharing memories</font></ul>
+    <ul><li><a href="http://ai.neocities.org/Motorium.html"
+ style="text-decoration:none;">Motorium</a> (MotorOutPut) -- for AI-Minded robots</ul>
+    <ul><li><a href="http://ai.neocities.org/Consciousness.html"
+ style="text-decoration:none;">Consciousness</a> -- emergent property, not a module</ul></ul></ul>
+</font>
+
+
+<p><br /></p>
+<center><a href="http://www.amazon.com/dp/B08NRQ3HVW"
+ title="Artificial Intelligence in Ancient Latin">
+<img src="https://m.media-amazon.com/images/I/51fCt9yasXL.jpg"></a><br />
+"Look Inside" Kindle version to read initial chapters.
+</center>
+<br />
+
+
+<p><br /></p>
+<a href="http://livetrafficfeed.com" data-num="10" data-width="210"
+data-responsive="0" data-time="America%2FNew_York" data-root="0"
+data-cheader="2853a8" data-theader="ffffff" data-border="2853a8"
+data-background="ffffff" data-normal="000000" data-link="135d9e"
+target="_blank" id="LTF_live_website_visitor">Website Counter</a>
+<script type="text/javascript" src="//cdn.livetrafficfeed.com/static/v4/live.js">
+</script><noscript><a href="http://livetrafficfeed.com">Website Counter</a></noscript>
+<a name="bottom"></a>
+<p><br /></p>
+</body>
+</html>

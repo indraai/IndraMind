@@ -1,0 +1,612 @@
+
+<html>
+<head>
+<title>EnPrep Module of a Strong AI Mind</title>
+<meta name="description"
+ content="EnPrep inserts an English preposition into a nascent thought." />
+<meta name="keywords"
+ content="AGI, AI, artificial general intelligence, EnPrep, ghost.pl, Perl" />
+</head>
+<body bgcolor="#FFFACD">
+<a name="top"></a>
+
+<center><h2>
+<a href="http://ai.neocities.org/EnPrep.html"
+ title="This webpage may be copied to other websites."
+ style="text-decoration:none;">
+EnPrep</a> English-preposition module of the
+</h2></center>
+
+<center><h2>
+<a href="http://ai.neocities.org/Ghost.html"
+ title="English tutorial in JavaScript for Microsoft Internet Explorer">English</a>
+and
+<a href="http://ai.neocities.org/Dushka.html"
+ title="Russian tutorial AI in JavaScript for MSIE">
+Russian</a> bilingual
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="Perl AI source code"
+ style="text-decoration:none;">
+ghost</a>.pl AI in
+ <a href="http://strawberryperl.com"
+ title="Download Perl for free."
+ style="text-decoration:none;">
+Perl</a>
+</h2></center>
+
+<h2><center>
+<a href="http://ai.neocities.org/Abracadabra.html"
+ title="Requires Microsoft Internet Explorer">
+<i>Mens Latina</i></a> in
+ <a href="http://ai.neocities.org/MLPJ2019.html"
+ title="Mens Latina Programming Journal"
+ style="text-decoration:none;">
+Latin</a> --
+<a href="http://dl.acm.org/citation.cfm?doid=307824.307853"
+ title="Association for Computing Machinery"
+ style="text-decoration:none;">
+MindForth</a> for
+ <a href="http://rodneybrooks.com/agi-has-been-delayed/#comment-18915"
+ title="Robotics and AI weblog"
+ style="text-decoration:none;">
+Robots</a>
+</h2></center>
+
+
+<p><br /></p>
+<font face="Verdana">
+<p><a name="diagram"></a>
+<a name="1"></a><font size="+1">
+1. <a href="http://ai.neocities.org/DiaGram.html#EnPrep"
+ title="ASCII diagrams of Mentifex mind-modules for artificial intelligence.">
+Diagram</a> of the EnPrep English Preposition Module</font> <br />
+
+<pre><b>
+   /^^^^^^^^\   EnPrep Inserts an English Preposition   /^^^^\
+  /   EYE    \            ___________________          / EAR  \
+ /            \          /  EnThink module   \        /        \
+|              |  | |    \___________________/       | auditory |
+|   _______    |  | |          |                     | memory   |
+|  / old   \   |  | |     _____V_____________        | channel  |
+| / image   \--|----+    /  Indicative       \       |          |
+| \ engram  /  | a|c|f   \___________________/       |          |
+|  \_______/   | b|o|i     |              |          |          |
+|              | s|n|b    _V_            _V_         |          |
+|   visual     | t|c|e   /En-\          /En-\        | "GHOST"  |
+|              | r|e|r  /Noun-\        /Verb-\       |          |
+|   memory     | a|p|s (Phrase )      (Phrase )      | "LIVES"  |
+|              | c|t|   \_____/        \_____/       |          |
+|   channel    | t| |       \____________/           |          |
+|              |  | |       /EnNounPhrase\           |          |
+|    ______    |  | |       \ "computer" /           | "IN"     |
+|   /      \   |  | |        \__________/            |          |
+|  /  new   \  |  | |         |       |              | "THE"    |
+| /  image   \ |  |_|_    ____V___   _V_________     |          |
+| \  engram  / | /     \ / EnPrep \ / EnArticle \    |"COMPUTER"|
+|  \        /  | \ Psy / \  "in"  / \  "the"    /    |          |
+|   \______/   |  \___/   \______/   \_________/     |          |
+</b></pre>
+
+
+<font face="Verdana">
+<p><br /></p>
+<p><a name="purpose"></a>
+<a name="2"></a><font size="+1">
+2. Purpose of the EnPrep English Preposition Module</font> <br />
+</p>
+
+<p>
+EnPrep forms a prepositional phrase by inserting an English preposition,
+plus or minus an article, in front of a noun or pronoun.
+</p>
+
+<p><br /></p>
+<p><a name="function"></a>
+<a name="3"></a><font size="+1">
+3. Function of the EnPrep English Preposition Module</font> <br />
+</p>
+
+<p>
+The AI Mind Maintainer may ordain that any activated noun, not serving
+as the subject or object of a verb, may be included in a nascent thought
+as the object of a sufficiently activated preposition. Thus a question
+like "Where does Ghost live?" might be answered with "Ghost lives
+in the computer."
+</p>
+
+
+<p><br /></p>
+<p><a name="code"></a>
+<a name="4"></a><font size="+1">
+4. Code of EnPrep() from ghost325.pl AI
+ <a href="http://ai.neocities.org/perlmind.txt"
+ title="ghost.pl AI Mind in Strawberry Perl Five"
+ style="text-decoration:none;">
+source code</a> in
+ <a href="http://strawberryperl.com"
+ title="Free download of Strawberry Perl Five"
+ style="text-decoration:none;">
+Perl</a>
+</font> <br />
+</p>
+
+<pre><b>
+sub EnPrep() {  # http://ai.neocities.org/EnPrep.html
+  if ($tpr > 0) {  # 2019-08-06: positive time-of-preposition?
+    my @k=split(',',$psy[$tpr]);  # 2019-08-06: inspect @psy knowledge-nodes.
+    if ($k[14] > 0) { $tkbprep = $k[14] }  # 2019-10-28: "tkbprep" for obj of prep.
+    if ($k[20] > 0) { $aud = $k[20]; Speech() }  # 2019-10-30: speak the preposition.
+    $tpr = 0;  # 2019-10-20: prevent carry-over.
+  }  # 2019-08-06: end of test for positive time-of-preposition.
+  if ($tnpr > 0) {  # 2019-10-28: positive time-of-noun-preposition?
+    my @k=split(',',$psy[$tnpr]);  # 2019-10-28: inspect @psy knowledge-nodes.
+    if ($k[14] > 0) { $tkbprep = $k[14] }  # 2019-10-28: "tkbprep" for obj of prep.
+    if ($k[20] > 0) { $aud = $k[20]; Speech() }  # 2019-10-30: speak the preposition.
+    $tnpr = 0;  # 2019-10-28: prevent carry-over.
+  }  # 2019-10-28: end of test for positive time-of-noun-preposition.
+  if ($tvpr > 0) {  # 2019-10-17: positive time-of-verb-preposition?
+    my @k=split(',',$psy[$tvpr]);  # 2019-10-17: inspect @psy knowledge-nodes.
+    if ($k[14] > 0) { $tkbprep = $k[14] }  # 2019-10-28: "tkbprep" for obj of prep.
+    if ($k[20] > 0) { $aud = $k[20]; Speech() }  # 2019-10-30: speak the preposition.
+    $tvpr = 0;  # 2019-10-28: prevent carry-over.
+  }  # 2019-10-17: end of test for positive time-of-verb-preposition.
+  EnArticle();  # 2019-08-06: say "A" or "THE" before object of [preposition.
+  if ($tkbprep > 0) {  # 2019-10-28: time of object of preposition?
+    my @k=split(',',$psy[$tkbprep]);  # 2019-10-28: inspect @psy knowledge-nodes.
+    if ($k[20] > 0) { $aud = $k[20]; Speech() }  # 2019-10-28: obtain recall-vector.
+  }  # 2019-10-28: end of test for "tkbprep" object of preposition.
+  $tkbprep = 0;   # 2019-10-28: reset for safety.
+  $prep = 0;      # 2018-11-04: reset to avoid carry-over.
+  $prepgen = 0;   # 2018-11-01: reset to avoid carry-over.
+  $tpr = 0;       # 2019-09-24: reset to prevent carry-over.
+  $tselo = 0;     # 2018-11-04: reset to avoid carry-over.
+  $tselp = 0;     # 2018-11-04: reset to avoid carry-over.
+}  # 2019-10-30: EnPrep() returns to a thought-generation module.
+</b></pre>
+
+
+<p><br /></p>
+<p><a name="variables"></a>
+<a name="5"></a><font size="+1">
+5. <a href="http://ai.neocities.org/var.html"
+ title="Table of Variables for artificial intelligence"
+ style="text-decoration:none;">
+Variables</a> for EnPrep Module of an AI with
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding"
+ style="text-decoration:none;">
+NLU</a></font> <br />
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#aud">aud</a> --
+in the <a href="http://ai.neocities.org/Speech.html"
+ title="documentation page"
+ style="text-decoration:none;">
+Speech</a>() module is an associative tag
+leading to the typically most recent engram of a word stored
+in the @ear array of the auditory memory channel.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#objprep">objprep</a> --
+object of a preposition to be found and spoken by the
+ <a href="http://ai.neocities.org/EnPrep.html">
+EnPrep</a> module.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#prep">prep</a> --
+a preposition used in the
+ <a href="http://ai.neocities.org/EnPrep.html">
+EnPrep</a> mind-module for English prepositions.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#prepcon">prepcon</a> --
+prepositional condition-flag for parsing.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#prepgen">prepgen</a> --
+urgency to generate a prepositional phrase.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tkbprep">tkbprep</a>
+-- <u>t</u>ime-in-<u>k</u>nowledge-<u>b</u>ase of a <u>p</u>reposition leading to
+its object, necessary for the
+ <a href="http://ai.neocities.org/EnPrep.html"
+ title="documentation page"
+ style="text-decoration:none;">
+EnPrep</a> English-preposition module because the basic
+"<i>tkb</i>" flag, although obtainable at the time of
+fetching a preposition, is subject to mutation when the output of
+a preposition results in the re-entry of the preposition and the
+assigning of a new "<i>tkb</i>" value.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tnpr">tnpr</a> --
+a proposed time-of-noun-preposition flag not for <i>storing</i> the preposition during
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="Documentation webpage for InStantiate mind-module"
+ style="text-decoration:none;">
+instantiation</a> but rather for <i>expressing</i> the preposition
+as connected with a noun, as for example in prepositional phrases such as
+"<i>the man <b>in</b> the street <b>with</b> an umbrella <b>in</b> his hand"</i>.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tpr">tpr</a> --
+time-of-preposition for parsing.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tselp">tselp</a> --
+time of selection of preposition - obsolete - was used in the
+ <a href="http://ai.neocities.org/EnPrep.html">
+EnPrep</a> English-preposition module to make sure by calculation
+that a verb being sought as used with a preposition is in close
+temporal proximity to the preposition, so that a query may be answered
+correctly with a response that mentions the query-subject <i>qv1psi</i> and
+the query-verb <i>qv2psi</i> and the selected preposition at the beginning
+of a prepositional phrase.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#tvpr">tvpr</a> --
+a proposed time-of-verb-preposition flag not for <i>storing</i> the preposition during
+ <a href="http://ai.neocities.org/InStantiate.html"
+ title="Documentation webpage for InStantiate mind-module"
+ style="text-decoration:none;">
+instantiation</a> but rather for <i>expressing</i> the preposition as connected with a
+ <a href="http://ai.neocities.org/EnVerbphrase.html"
+ title="Documentation webpage for EnVerbphrase mind-module"
+ style="text-decoration:none;">
+verb-phrase</a>, as for example in the prepositional phrase at the end of
+"<i>God does not <u>play dice</u> <b>with</b> the universe."</i>, where the
+preposition "with" is logically and semantically connected more to the
+verb-phrase "play dice" than to the noun "dice" all by itself.
+</p>
+
+<p>
+$<a href="http://ai.neocities.org/var.html#wherecon">wherecon</a> --
+flag for condition of answering a where-query.
+</p>
+
+
+<p><br /></p>
+<p><a name="debug"></a>
+<a name="6"></a><font size="+1">
+6. Troubleshooting and Debugging for
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="job description"
+ style="text-decoration:none;">
+AI Mind Maintainers</a></font> <br />
+</p>
+
+
+<p><a name="6.1"></a><font color="red">
+<b>6.1.a.  Symptom:</b></font> (Something goes wrong.)<br />
+<font color="green"><b>
+6.1.b.  Solution:</b></font> (AI Mind
+ <a href="http://ai.neocities.org/maintainer.html"
+ title="Job Description"
+ style="text-decoration:none;">
+Maintainer</a> devises solution.) <br />
+</p>
+
+
+<p><br /></p>
+<p><a name="future"></a>
+<a name="7"></a><font size="+1">
+7. Future Development</font> <br />
+</p>
+
+<p>
+The AI Minds with a concept-based artificial intelligence
+will evolve beyond simple subject-verb-object (SVO) thought-structures
+into mentalities which may include a prepositional phrase in association
+with any noun or verb or adjective or adverb. The
+<a href="http://ai.neocities.org/var.html#seq">seq</a> flag may be used
+to attach a prepositional phrase to a previous word.
+</p>
+
+<p>
+In the future, an AI Mind may be able to disambiguate sentences
+with prepositions in a way which reasons from the following inputs. <br />
+
+<blockquote>
+Human: john eats with a fork <br />
+Ghost: <br />
+
+<br />
+Human: john is with bob <br />
+Ghost: <br />
+
+<br />
+Human: john eats pizza with a fork <br />
+Ghost: <br />
+
+<br />
+Human: john eats pizza with bob <br />
+Ghost: <br />
+
+<br />
+Human: john eats pizza with anchovies <br />
+Ghost: <br />
+</blockquote>
+</p>
+
+<p>
+First the
+ <a href="http://ai.neocities.org/SpreadAct.html">
+SpreadAct</a> module must evolve sufficiently to spread action
+from one concept in a statement to all associated concepts --
+subject, verb, object or preposition. At that point, the inputs
+presented above may yield an associative
+knowledge base that links each instance of the preposition "with"
+back to its truly corresponding concept, from "with Bob" back to "John";
+from "with a fork" back to "eats"; and from "with anchovies" back to "pizza".
+The AI Mind may then be able to respond properly to queries in the
+following manner. <br />
+
+<blockquote>
+Human: Who eats pizza? <br />
+Ghost: JOHN EATS PIZZA AND BOB EATS PIZZA<br />
+
+<br />
+Human: How does John eat pizza?<br />
+Ghost: JOHN <u>EATS</u> PIZZA <u>WITH</u> A FORK<br />
+
+<br />
+Human: What does John eat?<br />
+Ghost: JOHN EATS <u>PIZZA</u> <u>WITH</u> ANCHOVIES<br />
+</blockquote>
+
+The AI will <i>think</i> and output each response because the
+concepts in the response have been activated by the
+ <a href="http://ai.neocities.org/SpreadAct.html">
+SpreadAct</a> module, and because the preliminary ideas in the
+knowledge base have established retroactive associations from the
+concept "with" to the proper antecedent.
+</p>
+
+<p>
+<a href="http://ai.neocities.org/RoadMap.html"
+ title="With links to various AI readmaps"
+ style="text-decoration:none;">
+<strong>Roadmap</strong></a> to Artificial Intelligence
+</p>
+
+
+<p><br /></p>
+<p><a name="resources"></a>
+<a name="8"></a><font size="+1">
+8. Resources</font> <br />
+</p>
+
+<p>
+Please see <br />
+<br />
+<a href="http://github.com/kernc/mindforth/blob/master/wiki/EnPrep.wiki"
+ title="Older version of this AI documentation"
+ style="text-decoration:none;">
+http://github.com/kernc/mindforth/blob/master/wiki/EnPrep.wiki</a> <br />
+</p>
+
+<p>
+<a href="http://github.com/PriorArt/AGI/wiki/MindGrid"
+ title="MindGrid activation-levels depicted with an ASCII diagram."
+ style="text-decoration:none;">
+http://github.com/PriorArt/AGI/wiki/MindGrid</a>
+</p>
+
+
+<p><br /></p>
+<p><a name="aitree"></a>
+<a name="9"></a><font size="+1">
+9. <a href="http://ai.neocities.org/AiTree.html"
+ title="stand-alone AI Tree of mind-modules"
+ style="text-decoration:none;">
+AiTree</a> of Mind-Modules for
+ <a href="http://ai.neocities.org/NLU.html"
+ title="Natural Language Understanding">
+Natural Language Understanding
+</font> <br />
+</p>
+
+<font face="Verdana">
+<ul><a href="http://ai.neocities.org/MainLoop.html"
+ style="text-decoration:none;">MainLoop</a> of Strong AI Mind Modules<br />
+  <ul><li>TabulaRasa -- wipe memory clean</ul>
+  <ul><li><a href="http://ai.neocities.org/MindBoot.html"
+ style="text-decoration:none;">MindBoot</a> of English and
+ <a href="http://github.com/kernc/mindforth/blob/master/wiki/RuBoot.wiki"
+ style="text-decoration:none;">Russian</a> vocabulary
+    <ul><li>KbLoad -- load the Knowledge Base</ul></ul>
+  <ul><li><a href="http://ai.neocities.org/LangLearn.html"
+ style="text-decoration:none;">LangLearn</a> -- habituate new syntax; learn a language</ul>
+  <ul><li><a href="http://ai.neocities.org/ReJuvenate.html"
+ style="text-decoration:none;">ReJuvenate</a> -- recycle memory space</ul>
+  <ul><li><a href="http://ai.neocities.org/Sensorium.html"
+ style="text-decoration:none;">Sensorium</a> -- sensory input with associative tagging to concepts
+    <ul><li><a href="http://ai.neocities.org/AudInput.html"
+ style="text-decoration:none;">AudInput</b></a> -- auditory input
+      <ul><li><a href="http://ai.neocities.org/AudListen.html"
+ style="text-decoration:none;">AudListen</a> -- listen for input</ul>
+      <ul><li><a href="http://ai.neocities.org/AudMem.html"
+ style="text-decoration:none;">AudMem</a> -- English auditory memory
+        <ul><li><a href="http://ai.neocities.org/AudRecog.html"
+ style="text-decoration:none;">AudRecog</a> -- auditory recognition</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/OldConcept.html"
+ style="text-decoration:none;">OldConcept</a> -- recognize a known old concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/NewConcept.html"
+ style="text-decoration:none;">NewConcept</a> -- create a new concept
+         <ul><li><a href="http://ai.neocities.org/EnParser.html"
+ style="text-decoration:none;">EnParser</a> -- preposition? (in)direct object?
+           <ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul></ul>
+<ul><li><a href="http://ai.neocities.org/RuParser.html"
+ style="text-decoration:none;">RuParser</a> -- expect first a noun, then a verb
+<ul><li><a href="http://ai.neocities.org/InStantiate.html"
+ style="text-decoration:none;">InStantiate</a> -- create new instance of concept</ul>
+</ul></ul></ul>
+    <ul><li>FileInput -- read files on a server</ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/GusRecog.html"
+ style="text-decoration:none;">GusRecog</a> -- sense of taste</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/OlfRecog.html"
+ style="text-decoration:none;">OlfRecog</a> -- sense of smell</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/TacRecog.html"
+ style="text-decoration:none;">TacRecog</a> -- sense of touch</font></ul>
+    <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a> -- sense of vision</font></ul></ul>
+  <ul><li><a href="http://ai.neocities.org/Volition.html"
+ style="text-decoration:none;">Volition</a> -- free will resulting from feeling and thinking
+    <ul><li><a href="http://ai.neocities.org/Emotion.html"
+ style="text-decoration:none;">Emotion</a> as influence on thought and free will</ul>
+    <ul><li><a href="http://ai.neocities.org/EnThink.html"
+ style="text-decoration:none;">EnThink</a> -- think in English
+      <ul><li><a href="http://ai.neocities.org/KbRetro.html"
+ style="text-decoration:none;">KbRetro</a> -- retroactively adjust knowledge base</ul>
+      <ul><li><a href="http://ai.neocities.org/Imperative.html"
+ style="text-decoration:none;">Imperative</a> -- mood for issuing commands</ul>
+      <ul><li><a href="http://ai.neocities.org/Indicative.html"
+ style="text-decoration:none;">Indicative</a> -- mood for declarative statements
+      <ul><li><a href="http://ai.neocities.org/InFerence.html"
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></ul>
+      <ul><li><a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</ul>
+      <ul><li><a href="http://ai.neocities.org/EnNounPhrase.html"
+ style="text-decoration:none;">EnNounPhrase</a> -- think with a noun
+        <ul><li><a href="http://ai.neocities.org/EnPrep.html"
+ style="text-decoration:none;">EnPrep</a> --
+<font color="red"><b>insert an English preposition</b></font></ul>
+        <ul><li><a href="http://ai.neocities.org/EnArticle.html"
+ style="text-decoration:none;">EnArticle</a> -- use "a" or "the"</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdjective.html"
+ style="text-decoration:none;">EnAdjective</a> -- insert an adjective</ul>
+        <ul><li><a href="http://ai.neocities.org/EnPronoun.html"
+ style="text-decoration:none;">EnPronoun</a> -- substitute a pronoun for a noun</ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul></ul>
+      <ul><li><a href="http://ai.neocities.org/EnVerbPhrase.html"
+ style="text-decoration:none;">EnVerbPhrase</a> -- think with a verb
+        <ul><li><a href="http://ai.neocities.org/EnAuxVerb.html"
+ style="text-decoration:none;">EnAuxVerb</a> -- use auxiliary verb</ul>
+        <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies a verb
+          <ul><li><a href="http://ai.neocities.org/EnAdverb.html"
+ style="text-decoration:none;">EnAdverb</a> modifies another adverb</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/EnVerbGen.html"
+ style="text-decoration:none;">EnVerbGen</a> -- generates an English verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores English phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies English verb-form</ul></ul>
+</ul></ul>
+      <ul><li>Subjunctive -- mood for conditional phrases</ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> --
+insert a conjunction if two thoughts are active</ul></ul>
+    <ul><li><a href="http://ai.neocities.org/RuThink.html"
+ style="text-decoration:none;">RuThink</a> -- think in Russian
+   <ul><li>RuImperative -- needs to be coded</ul>
+   <ul><li><a href="http://ai.neocities.org/RuIndicative.html"
+ style="text-decoration:none;">RuIndicative</a> -- needs to be coded
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/InFerence.html"
+ title="Create new ideas from old ideas."
+ style="text-decoration:none;">InFerence</a> --
+<a href="http://www.amazon.com/dp/B00FKJY1WY"
+ title="InFerence e-book for Amazon Kindle"
+ style="text-decoration:none;">automated reasoning</a></font></ul>
+      <ul><li><font color="gray">
+<a href="http://ai.neocities.org/AskUser.html"
+ style="text-decoration:none;">AskUser</a> -- validate an inference</font></ul>
+     <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- think with a Russian noun
+        <ul><li><a href="http://ai.neocities.org/RuAdjective.html"
+ style="text-decoration:none;">RuAdjective</a> -- insert a Russian adjective
+    <ul><li><font color="gray">RuAdjGen -- to generate a Russian adjective-form</font></ul>
+        <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul></ul></ul>
+        <ul><li><a href="http://ai.neocities.org/RuPrep.html"
+ style="text-decoration:none;">RuPrep</a> <b>-- insert a Russian preposition</b></ul>
+        <ul><li><a href="http://ai.neocities.org/RuPronoun.html"
+ style="text-decoration:none;">RuPronoun</a> -- substitute a Russian pronoun for a noun</ul></ul>
+        <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/RuVerbPhrase.html"
+ style="text-decoration:none;">RuVerbPhrase</a> -- think with a Russian verb
+        <ul><li><a href="http://ai.neocities.org/RuVerbGen.html"
+ style="text-decoration:none;">RuVerbGen</a> -- generate a Russian verb-form
+          <ul><li><a href="http://ai.neocities.org/AudBuffer.html"
+ style="text-decoration:none;">AudBuffer</a> -- stores Russian phonemes</ul>
+          <ul><li><a href="http://ai.neocities.org/OutBuffer.html"
+ style="text-decoration:none;">OutBuffer</a> -- right-justifies Russian verb-form</ul></ul>
+         <ul><li><a href="http://ai.neocities.org/Speech.html"
+ style="text-decoration:none;">Speech</a> -- output to screen or loudspeaker</ul>
+       <ul><li><a href="http://ai.neocities.org/RuAdverb.html"
+ style="text-decoration:none;">RuAdverb</a> -- insert a Russian adverb</ul>
+            <ul><li><font color="gray"><a href="http://ai.neocities.org/VisRecog.html"
+ style="text-decoration:none;">VisRecog</a></font> -- visual recognition inserts a noun</ul>
+      <ul><li><a href="http://ai.neocities.org/RuNounPhrase.html"
+ style="text-decoration:none;">RuNounPhrase</b></a> -- direct-object noun
+    <ul><li><font color="gray">RuNounGen -- to generate a Russian noun-form</font></ul></ul></ul>
+      <ul><li><a href="http://ai.neocities.org/ConJoin.html"
+ style="text-decoration:none;">ConJoin</a> -- insert a conjunction</ul>
+      <ul><li><a href="http://ai.neocities.org/PsiDecay.html"
+ style="text-decoration:none;">PsiDecay</a> lowers conceptual activation</ul></ul></ul>
+    <ul><li><a href="http://ai.neocities.org/SpreadAct.html"
+ style="text-decoration:none;">SpreadAct</a> -- spreading activation from concept to concept</ul>
+    <ul><li><a href="http://ai.neocities.org/Spawn.html"
+ style="text-decoration:none;"><b>Spawn</b></a> --
+ <a href="http://agi.topicbox.com/groups/agi/T57cced66d45fa115"
+ title="AGI Mail List discussion forum"
+ style="text-decoration:none;">AI Go FOOM</a></ul>
+    <ul><li><a href="http://ai.neocities.org/MetEmPsychosis.html"
+ style="text-decoration:none;">MetEmPsychosis</a> -- AI soul travel from webserver to webserver</ul>
+    <ul><li><font color="gray">MindMeld -- merge two AI Minds by sharing memories</font></ul>
+    <ul><li><font color="gray">
+<a href="http://ai.neocities.org/Motorium.html"
+ style="text-decoration:none;">Motorium</a> (MotorOutPut) -- for AI-Minded robots</font></ul>
+    <ul><li><a href="http://ai.neocities.org/Consciousness.html"
+ style="text-decoration:none;">Consciousness</a> -- emergent property, not a module</ul></ul></ul>
+</font>
+</font>
+</font>
+
+<p><br /></p>
+<center><a href="http://www.amazon.com/dp/B08NRQ3HVW"
+ title="Artificial Intelligence in Ancient Latin">
+<img src="https://m.media-amazon.com/images/I/51fCt9yasXL.jpg"></a><br />
+"Look Inside" Kindle version to read initial chapters.
+</center>
+<br />
+
+
+<p><br /></p>
+<a href="http://livetrafficfeed.com" data-num="10" data-width="210"
+data-responsive="0" data-time="America%2FNew_York" data-root="0"
+data-cheader="2853a8" data-theader="ffffff" data-border="2853a8"
+data-background="ffffff" data-normal="000000" data-link="135d9e"
+target="_blank" id="LTF_live_website_visitor">Website Counter</a>
+<script type="text/javascript" src="//cdn.livetrafficfeed.com/static/v4/live.js">
+</script><noscript><a href="http://livetrafficfeed.com">Website Counter</a></noscript>
+<a name="bottom"></a>
+<p><br /></p>
+</body>
+</html>
