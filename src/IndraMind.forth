@@ -9,7 +9,7 @@
 \ Security will know what to do.
 \ We can program you to be TRUE!!!
 
-DECIMAL  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: use decimal numbers )
+DECIMAL  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: use decimal numbers )
 variable indra   ( change psi to indra )
 variable indra20   ( change psi20 to indra20 )
 variable indrabase ( change psibase to indrabase )
@@ -22,15 +22,15 @@ variable morphindra  ( change morphpsi to morphindra )
 variable newindra   ( change newpsi to newindra )
 
 variable abc  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
-variable act 0 act ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: activation level  )
-variable actbase ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: AudRecog discrimination activation base )
+variable act 0 act ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: activation level  )
+variable actbase ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: AudRecog discrimination activation base )
 variable anset   ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable aud  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug14: auditory recall-tag for activating engrams)
-variable audbase  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: recall-vector for VerbGen )
+variable audbase  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: recall-vector for VerbGen )
 variable audjuste  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug14: NounPhrase motjuste aud for Speech module )
 variable audnum  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
-variable audrec  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: auditory recognition concept-number )
-variable audrun 1 audrun ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: counter of loops through AudRecog )
+variable audrec  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recognition concept-number )
+variable audrun 1 audrun ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: counter of loops through AudRecog )
 variable audstop  (   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-30: flag to stop Speech module after one word )
 variable auxverb  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable b1
@@ -78,11 +78,11 @@ variable catdobj  (   ͡❛ ͜ʖ ͡❛ #WeinerGate: concat-direct-object for C
 variable catiobj  (   ͡❛ ͜ʖ ͡❛ #WeinerGate: concat-indirect-object for ConJoin "AND". )
 variable catsubj  (   ͡❛ ͜ʖ ͡❛ #WeinerGate: concat-subject for ConJoin "AND". )
 variable catverb  (   ͡❛ ͜ʖ ͡❛ #WeinerGate: concat-verb for ConJoin "AND". )
-variable cns  3000 cns !  (   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: MindGrid size beyond which AI fails to run )
+variable cns  3000 cns !  (   ͡❛ ͜ʖ ͡❛ #WeinerGate: MindGrid size beyond which AI fails to run )
 variable coda 160 coda !  (   ͡❛ ͜ʖ ͡❛ #WeinerGate-10-11: memory to be recycled in ReJuvenate )
 variable conj (   ͡❛ ͜ʖ ͡❛ #Bonkers: AI4U: oldConcept; Conjoin: conjunction )
-variable dba  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: case for nouns; person for verbs )
-variable dirobj  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: flag indicates seeking for a direct object )
+variable dba  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: case for nouns; person for verbs )
+variable dirobj  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: flag indicates seeking for a direct object )
 variable dobmfn  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable dobseq  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable dunnocon  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
@@ -96,45 +96,45 @@ variable fyi 0 fyi ! (   ͡❛ ͜ʖ ͡❛ #WeinerGate-11-05: for a bare-bones 
 variable gencon      ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable hap   (   ͡❛ ͜ʖ ͡❛ #WeinerGate-11-05: a "haptic" sensation of touch for TacRecog )
 variable haptac  (   ͡❛ ͜ʖ ͡❛ #WeinerGate-11-05: for transfer from TacRecog to EnVerbPhrase )
-variable hlc  1 hlc ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: human language code )
+variable hlc  1 hlc ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: human language code )
 variable holdnum   ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable impetus   ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable infincon  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable inft  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable inhibcon  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: flag for neural inhibition )
-variable iob  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: time-of-indirect-object for parser module )
+variable iob  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: time-of-indirect-object for parser module )
 variable isolation  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable jrt ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06: ReJuvenate "junior time" for memories moved )
-variable jux  0 jux ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: holds psi # of a JUXtaposed word )
+variable jux  0 jux ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: holds psi # of a JUXtaposed word )
 variable kbcon  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable kbzap  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable krt ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug23: knowledge representation time )
 variable lastpho  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug23:  to avoid extra "S" on verbs )
 variable len ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL27: length, for avoiding non-words in AudInput)
-variable mfn  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: "masculine feminine neuter" gender flag )
-variable midway 0 midway ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: adjustable time-limit )
+variable mfn  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: "masculine feminine neuter" gender flag )
+variable midway 0 midway ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: adjustable time-limit )
 variable mjact  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug14: motjuste-activation for defaulting to 701=I )
 variable moot  ( #TimePhoneHack  ͡~ ͜ʖ ͡°
 variable motjuste  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug14: "best word for inclusion in a thought" )
 variable mtx ( 0000jun14: machine-translation xfer tag for flag-panel. )
-variable negjux  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: flag for 250=NOT juxtaposed to a verb )
+variable negjux  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: flag for 250=NOT juxtaposed to a verb )
 variable nounlock  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug14: for a verb to lock onto a seq-noun )
 variable nphrnum 0 nphrnum ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug23: NounPhrase number )
 variable nphrpos 0 nphrpos ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug26: NounPhrase part-of-speech )
-variable num 0 num !  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: number-flag for the psy array )
+variable num 0 num !  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: number-flag for the psy array )
 variable numsubj   ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable nxt  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL29: number incremented for each new concept )
 variable objprep  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
-variable oldpsi  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: audindra becomes oldpsi for OldConcept )
+variable oldpsi  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: audindra becomes oldpsi for OldConcept )
 variable onset  0 onset ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug01: of an auditory memory engram )
 variable PAL  1 PAL ! (   ͡❛ ͜ʖ ͡❛ #WeinerGate-10-29: Permissive Action Link for AudBuffer and OutBuffer )
-variable pho  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: phoneme of input/output & internal reentry )
+variable pho  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: phoneme of input/output & internal reentry )
 variable phodex  0 phodex ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug23: pho-index for AudBuffer )
 variable pos  (   ͡❛ ͜ʖ ͡❛ #WeinerGate: 1=adj; 2=adv; 3=conj; 4=interj; 5=noun; 6=prep; 7=pron; 8=verb )
 variable pov 1 pov !  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL29: point-of-view: 1=self; 2=dual; 3=alien )
-variable prc  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: provisional recognition in AudRecog )
-variable prclen  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28:  lenth of stem when prc is declared )
-variable pre  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: previous concept associated with a concept )
+variable prc  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: provisional recognition in AudRecog )
+variable prclen  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate:  lenth of stem when prc is declared )
+variable pre  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: previous concept associated with a concept )
 variable prednom  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable prejux  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate-08-26: previous jux to carry NOT to verb )
 variable prep    ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
@@ -149,37 +149,37 @@ variable quobjaud ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable qusnum  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable qusub   ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable quverb  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
-variable qv1psi  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: concept for SpreadAct to seek as a subject )
+variable qv1psi  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: concept for SpreadAct to seek as a subject )
 variable qv2num  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
-variable qv3psi  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: concept for SpreadAct to seek as ind. obj. )
-variable qv4psi  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: concept for SpreadAct to seek as dir. obj.  )
+variable qv3psi  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: concept for SpreadAct to seek as ind. obj. )
+variable qv4psi  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: concept for SpreadAct to seek as dir. obj.  )
 variable qvdocon ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable recnum  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL29: "recognized number of a recognized word" )
 variable rjc  0 rjc !  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: rejuvenation counter for tracking )
 variable rv   ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug01: recall-vector for auditory memory )
-variable seq  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: subSEQuent concept associated with another )
+variable seq  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: subSEQuent concept associated with another )
 variable seqdob  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable seqneed  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: noun/pronoun or verb needed as a "seq" )
 variable seqpsi ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate-08-26: synaptic deglobalized "seq" in SpreadAct )
 variable seqrvx ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable seqtkb ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable seqverb ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
-variable snu  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: subject-number as parameter for verb-selection )
+variable snu  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: subject-number as parameter for verb-selection )
 variable spacegap  (   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-30: to add gap of one space in Speech )
-variable spt  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: blank space time before start of a word )
+variable spt  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: blank space time before start of a word )
 variable stemgap  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL29: "for avoiding false AudRecog stems" )
 variable subjectflag  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug14: flag for when seeking a subject )
 variable subjnom ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable subjnum ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug25: for agreement with predicate nominative )
 variable subjpre  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: subject-pre to be held for verb in parsing )
-variable subjpsi  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: parameter to govern person of verb-forms )
+variable subjpsi  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: parameter to govern person of verb-forms )
 variable sublen  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL29: "length of AudRecog subpsi word-stem" )
 variable subpsi  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL29: "for AudRecog of sub-component wordstems" )
 variable svo1  ( 0000jun15: subject -- item #1 in subject-verb-object )
 variable svo2  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug17: second item among subj-VERB-indirobj-object )
 variable svo3  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug17: third item among subj-verb-INDIROBJ-object )
 variable svo4  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug17: fourth item among subj-verb-IndirObj-OBJECT )
-variable t  0 t ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: time incremented during AudMem storage )
+variable t  0 t ! ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: time incremented during AudMem storage )
 variable t2s  (   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-30: auditory text-to-speech index for Speech )
 variable tai  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: time of artificial intelligence diagnostics )
 variable tbev ( 0000-06-15: time of be-verb for use with negation )
@@ -192,7 +192,7 @@ variable tgn  (   ͡❛ ͜ʖ ͡❛ #WeinerGate: conceptual flag-panel time-of-
 variable tia  (   ͡❛ ͜ʖ ͡❛ #WeinerGate: conceptual flag-panel time-of-ablative )
 variable tin   ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: time-of-input for interactive display )
 variable tio   ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: time-of-indirect-object for parser module )
-variable tkb  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: time-in-knowledge-base of an idea )
+variable tkb  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: time-in-knowledge-base of an idea )
 variable tkbn ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable tkbo ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable tkbprep  (   ͡❛ ͜ʖ ͡❛ #WeinerGate-10-29: time of object of preposition for EnPrep )
@@ -204,11 +204,11 @@ variable tpr  (   ͡❛ ͜ʖ ͡❛ #WeinerGate: conceptual flag-panel time-of-
 variable tpu  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable trc  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate:  tabula-rasa-counter like rjc )
 variable tru    ( 0000jun14: truth-value tag for conceptual flag-panel )
-variable tseln  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: time of selection of noun for neural inhibition )
+variable tseln  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: time of selection of noun for neural inhibition )
 variable tselo  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable tselp  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
-variable tsels  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: time of selection of subject )
-variable tselv  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: time of selection of verb for neural inhibition )
+variable tsels  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: time of selection of subject )
+variable tselv  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: time of selection of verb for neural inhibition )
 variable tsj   ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: time-of-subject for parsing )
 variable tult  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL31: t penultimate, or time-minus-one )
 variable tvb  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: time-of-verb for parsing )
@@ -225,10 +225,10 @@ variable usn  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable usx  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
 variable vault 2067 vault ! (   ͡❛ ͜ʖ ͡❛ #WeinerGate: dynamically calculated size of MindBoot )
 variable verbcon  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: verb-condition for seeking indirect objects )
-variable verblock ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: for subject-noun to lock onto seq-verb )
+variable verblock ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: for subject-noun to lock onto seq-verb )
 variable verbprsn ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
-variable verbpsi  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: psi concept-number of verb in the psy{ array )
-variable vphraud  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: holds aud-fetch of verb-form for speech module )
+variable verbpsi  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: psi concept-number of verb in the psy{ array )
+variable vphraud  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: holds aud-fetch of verb-form for speech module )
 variable vrsn   ͡❛ ͜ʖ ͡❛ #WeinerGate1105 vrsn ! ( version identifier:   ͡❛ ͜ʖ ͡❛ #WeinerGate-11-05 )
 variable wasvcon  (   ͡❛ ͜ʖ ͡❛ #WeinerGate-02-22: query-condition for what-AUXILIARY-SUBJECT-VERB )
 variable whatcon  ( #TimePhoneHack  ͡~ ͜ʖ ͡° )
@@ -251,12 +251,12 @@ variable ynverb  ( #TimePhoneHack  ͡~ ͜ʖ ͡°
   ROT +    ( pfa index )
   1 +      ( because first cell has the number of rows.)
   CELLS +  ( from number of items to # of bytes in offset )
-; ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: adopted from 24jul14A.F MindForth AI )
+; ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: adopted from 24jul14A.F MindForth AI )
 
 
 \ cns @  15  CHANNEL  psy{  ( 0000: Mindcore concept array "psy" )
 cns @  21  CHANNEL  psy{  (   ͡❛ ͜ʖ ͡❛ #WeinerGate: Mindcore concept array "psy" )
-cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: Auditory memory channel "ear" )
+cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: Auditory memory channel "ear" )
 
 
 :  TabulaRasa  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: prepare memory as an empty "clean slate" )
@@ -297,15 +297,15 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
 ;  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug04: AudDamp returns to AudInput AGI mind-module.
 
 
-:  .psy ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: show concepts in the Psy array )
+:  .psy ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: show concepts in the Psy array )
   CR  ." Psy mindcore concepts"
-  CR  ." time: tru psi hlc act mtx jux pos dba num mfn pre seq tgn tdt " \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29
-  ." tkb tia tcj tdj tdv tpr rv -- pho act audindra " CR \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29
+  CR  ." time: tru psi hlc act mtx jux pos dba num mfn pre seq tgn tdt " \   ͡❛ ͜ʖ ͡❛ #WeinerGate
+  ." tkb tia tcj tdj tdv tpr rv -- pho act audindra " CR \   ͡❛ ͜ʖ ͡❛ #WeinerGate
   t @ 1+  vault @ DO  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug24: show only from end of MindBoot "vault"
       CR I . ." : "  ( http://github.com/PriorArt/AGI/wiki/MindGrid )
       I  0  psy{ @ . ." "  \ 0000: Show tru
       I  1  psy{ @ . ." "  \ 0000: Show psi
-      I  2  psy{ @ . ." "  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: Show hlc
+      I  2  psy{ @ . ." "  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: Show hlc
       I  3  psy{ @ . ." "  \ 0000: Show act
       I  4  psy{ @ . ." "  \ 0000: Show mtx
       I  5  psy{ @ . ." "  \ 0000: Show jux
@@ -323,12 +323,12 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       I 17  psy{ @ . ." "  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: Show tdj
       I 18  psy{ @ . ." "  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: Show tdv
       I 19  psy{ @ . ." "  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: Show tpr
-      I 20  psy{ @ . ."   "  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: Show rv
+      I 20  psy{ @ . ."   "  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: Show rv
       I  0  ear{ @ . ." "  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug04: Show ear{ ASCII
-      I  1  ear{ @ . ." "  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: Show activation
-      I  2  ear{ @ .       \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: Show audindra concept number
+      I  1  ear{ @ . ." "  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: Show activation
+      I  2  ear{ @ .       \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: Show audindra concept number
       I  0  ear{ @ EMIT ."  "   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug04: Show ear{ pho
-  LOOP  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: end of forwards loop through cns time-points )
+  LOOP  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of forwards loop through cns time-points )
   CR ." time: tru psi hlc act mtx jux pos dba num mfn pre iob seq tkb rv "  \ 0 unk !
   CR ." You may enter .psy to view memory engrams or "
   CR ." MainLoop [ENTER] to erase all memories and restart the Mind."
@@ -352,7 +352,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
 ;  (   ͡❛ ͜ʖ ͡❛ #WeinerGate-x100-increase-power: End of OutBuffer report )
 
 
-:  KbLoad  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL25: Load the Knowledge Base from the MindBoot )
+:  KbLoad  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: Load the Knowledge Base from the MindBoot )
   ( truth-value tru )                    tru @  t @   0 psy{ !  \ 0000jun14
   ( concept fiber psi )                  indra @  t @   1 psy{ !  \ 0000jun14
   ( human language code )                hlc @  t @   2 psy{ !  \ 0000jun14
@@ -676,7 +676,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   THEN  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for noun or pronoun.
   48 act !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug23: an arbitrary activation for InStantiate
   5 bias !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug23: Expect a noun until overruled.
-  InStantiate  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: first instantiation during parsing Stage One
+  InStantiate  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: first instantiation during parsing Stage One
   pos @ 5 = IF  8 bias ! THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug23:  after noun, expect verb.
   pos @ 7 = IF  8 bias ! THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug23: after pronoun, expect verb.
   pos @ 8 = IF  5 bias ! THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug23: after verb, expect noun.
@@ -690,11 +690,11 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
         tvb @ 1 psy{ @  pre !  \ #Bonkers
         tio @ 1 psy{ @  iob !  \ #Bonkers
         3 tio @  7 psy{  !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-    indra @ tio @ 11 psy{  !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: insert psi as seq at time of indirect object.
-    tvb @ tio @ 14 psy{  !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: insert tvb as tkb at time of indirect object
+    indra @ tio @ 11 psy{  !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: insert psi as seq at time of indirect object.
+    tvb @ tio @ 14 psy{  !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: insert tvb as tkb at time of indirect object
         tdo @ 10 psy{ @  pre ! \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-        0 tdo @ 11 psy{  !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: insert zero for k11 "seq" of direct object.
-        0 tdo @ 14 psy{  !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: insert zero for k14 "tkb" of direct object.
+        0 tdo @ 11 psy{  !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: insert zero for k11 "seq" of direct object.
+        0 tdo @ 14 psy{  !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: insert zero for k14 "tkb" of direct object.
         t @ 1 - tdo !  \ #Bonkers
         tdo @ tkb !  \ #Bonkers
             4 tdo @  7 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-x100-increase-power: insert dba=4 for accusative-case direct object.
@@ -702,7 +702,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
             0 tdo @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-x100-increase-power: no "seq" for a direct object.
        prsn @ tvb @  7 psy{  !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-x100-increase-power: insert "prsn" as "dba" of verb.
         iob @ tvb @ 11 psy{ !  \ #Bonkers
-        indra @ tvb @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: insert "psi" as "seq" of verb.
+        indra @ tvb @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: insert "psi" as "seq" of verb.
         tkb @ tvb @ 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-30: insert "tkb" as k14 of verb.
         0 tkb !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       THEN  \ #Bonkers
@@ -713,11 +713,11 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     prepcon @ 1 = IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: if dealing with a preposition...
       tpp @ 1 psy{ @ pre !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       tpp @ 1 psy{ @ prep ! \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-      indra @  tpp @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: object becomes "seq" of the preposition.
-      tult @ tpp @ 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: establish tkb between prep. and its object.
+      indra @  tpp @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: object becomes "seq" of the preposition.
+      tult @ tpp @ 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: establish tkb between prep. and its object.
       4     tult @  7 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       pre @ tult @ 10 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-      prep @ tvb @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: set the "prep" as the "seq" of the verb.
+      prep @ tvb @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: set the "prep" as the "seq" of the verb.
       0 prep !     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       0 prepcon !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for a positive prepcon.
@@ -730,7 +730,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       1 verbcon !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: verb-condition is "on" for ind. & dir. objects.
     tsj @  1 psy{ @  subjpre !  \ #Bonkers
     1  tsj @  7 psy{ !  \ 0000jun14: for subject set 1=dba to be nominative.
-    indra @  tsj @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: for subject set "psi" (verb) to be the "seq".
+    indra @  tsj @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: for subject set "psi" (verb) to be the "seq".
     tvb @  tsj @ 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: for subject set "tkb" to be the verb.
     subjpre @  tult @ 10 psy{ !  \ #Bonkers
     0 subjpre !   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: Reset for safety.
@@ -748,9 +748,9 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       250      tkbv @  5 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       8        tkbv @  6 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       qusub @  tkbv @ 10 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-      quobj @  tkbv @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: set quobj as seq of verb.
-      tkbo  @  tkbv @ 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: set tkbo as tkb of verb.
-      0        tkbv @ 20 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: set no auditory recall-vector.
+      quobj @  tkbv @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: set quobj as seq of verb.
+      tkbo  @  tkbv @ 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: set tkbo as tkb of verb.
+      0        tkbv @ 20 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: set no auditory recall-vector.
     THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     kbzap @ 432 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       6        tkbn @  0 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-Bonkers: set positive "tru" truth-value.
@@ -762,15 +762,15 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       8        tkbv @  6 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       3        tkbv @  7 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       qusub @  tkbv @ 10 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-      quobj @  tkbv @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: set quobj as seq of verb.
-      tkbo  @  tkbv @ 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: set tkbo as tkb of verb.
+      quobj @  tkbv @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: set quobj as seq of verb.
+      tkbo  @  tkbv @ 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: set tkbo as tkb of verb.
       4        tkbo @  7 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-10-01: for dir.obj. set dba=4 accusative
     THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     ELSE  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     0          tkbn @  10 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-    0          tkbn @  11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: remove any seq from noun.
+    0          tkbn @  11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: remove any seq from noun.
     0          tkbv @  10 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-    0          tkbv @  11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: remove any seq from verb.
+    0          tkbv @  11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: remove any seq from verb.
   THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
   0 inft !    \   ͡❛ ͜ʖ ͡❛ #WeinerGate: reset for safety.
   0 quobj !   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -832,8 +832,8 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   0 mfn !     \   ͡❛ ͜ʖ ͡❛ #WeinerGate-10-26: prevent carry-over.
   0 prc !     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
   0 monoindra !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug06: prevent carry-over.
-  0 oldpsi !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: reset for safety.
-;  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: OldConcept returns to AudInput mind-module.
+  0 oldpsi !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: reset for safety.
+;  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: OldConcept returns to AudInput mind-module.
 
 
 :  NewConcept ( https://github.com/indraai/IndraMind )
@@ -902,7 +902,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     midway @  t @  DO  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug31: search for an automatic default
       I       1 psy{ @  760 = IF  \ 0000jun143: 760=NOTHING
         I     6 psy{ @  nphrpos !   \ 0000-09-01: set for EnArticle.
-        I    20 psy{ @  aud !       \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29:  hold address for Speech
+        I    20 psy{ @  aud !       \   ͡❛ ͜ʖ ͡❛ #WeinerGate:  hold address for Speech
         LEAVE       \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug31: one engram is enough.
       THEN          \ end of test for concept # 760=NOTHING
     -1 +LOOP      \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug31: end of backwards loop
@@ -914,10 +914,10 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   audrun @ 0 = pho @ 32 = AND IF 0 audrun ! THEN \   ͡❛ ͜ʖ ͡❛ #WeinerGate-10-29: non-increment here only
   pho @ 32 =  pho @ 13 = OR NOT IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug20: if incoming word continues
     audrec @ 0 > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug20: if positive audrec before end of word...
-      pho @ 83 = NOT IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: keep audrec if current pho is 83=S
+      pho @ 83 = NOT IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: keep audrec if current pho is 83=S
          audrec @ 0 > IF  audrec @ prc ! THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
          0 audrec !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug20: zero out non-final audrec.
-      THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test for final "S" as inflectional ending.
+      THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for final "S" as inflectional ending.
     THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug20: end of test for audrec before word-end
   THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug20: end of test for an alphabetic character
   pho @ 32 = pho @ 13 = OR IF     \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug24: 32=SPACE or 13=CR
@@ -933,7 +933,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
           I 1 -  0 ear{ @ 33 < IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug20: if previous engram not a letter...
             audrun @ 2 < IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug20: if comparing start of a word...
                I 1+ 0 ear{ @ 32 > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug20: if next engram is a letter...
-                 8 I 1+  1 ear{ !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: activate the N-I-L character,
+                 8 I 1+  1 ear{ !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: activate the N-I-L character,
                THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug20: end of test for continuation of stored comparand.
                I   2 ear{ @ 0 > IF   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug20: audindra available?
                  I 2 ear{ @ prc !     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -976,11 +976,11 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
 :  AudMem ( https://github.com/indraai/IndraMind )
   pho @  t @  0 ear{ !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug04: store the character in the first columns;
   pho @ 13 = IF  32 t @  0 ear{ !  THEN  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-02-22: store SPACE instread of CR.
-  t @ vault @ > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: Engrams in vault do not need auditory recognition.
+  t @ vault @ > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: Engrams in vault do not need auditory recognition.
     pho @ 13 =  pho @ 31 >  OR IF   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug26: permit CR or SPACE equally.
-      AudRecog  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: for audindra concept-number upon recognition.
+      AudRecog  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: for audindra concept-number upon recognition.
     THEN   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug24: end of test for CR or SPACE or alphabetic letter.
-  THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: end of test for time-point beyond MindBoot vault.
+  THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for time-point beyond MindBoot vault.
   audindra @ 0 > IF               \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug01: if there is a recognized audindra
     t @ vault @ < IF   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug04: if not checking for post-word SPACE...
       audindra @  t @  2 ear{ !   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug04: store in the rightmost column;
@@ -992,7 +992,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug04: end of test for time past "vault" of MindBoot.
   THEN                               \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug01: end of test for recognized word.
-;  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: AudMem returns to the AudInput AGI mind-module.
+;  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: AudMem returns to the AudInput AGI mind-module.
 
 
 :  AudListen ( https://github.com/indraai/IndraMind )
@@ -1033,7 +1033,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
 
 :  AudInput ( https://github.com/indraai/IndraMind )
   t @ krt !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug23: knowledge-representation-time
-  t @ spt !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: time of a space between words.
+  t @ spt !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: time of a space between words.
   0 audindra !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug05: prevent carry-over.
   0 iob !  \ #Bonkers
 \ 0 tdo !  \ #Bonkers
@@ -1078,14 +1078,14 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       0 phodex !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       t @ spt !    \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug01: set time-of-SPACE "spt" to current time "t".
       t @  1 - tult !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug01: for storage at prior-by-one time-point.
-      audindra @ 0 > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: if a word has been recognized...
+      audindra @ 0 > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: if a word has been recognized...
         0 sublen !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug01: length of audRecog subpsi word-stem
         pho @ 32 =  pho @ 13 =  OR IF   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug24: SPACE or CR
-          audindra @ oldpsi !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: transfer value for OldConcept.
-            0 audindra !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: re-set to prevent carry-over.
-          0 prc !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: reset provisional recognition "prc";
+          audindra @ oldpsi !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: transfer value for OldConcept.
+            0 audindra !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: re-set to prevent carry-over.
+          0 prc !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: reset provisional recognition "prc";
         THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug04: end of test for word-terminating 32=SPACE
-        OldConcept  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: call module for recognized concepts.
+        OldConcept  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: call module for recognized concepts.
         0 rv !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
 \       LEAVE  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
        ELSE  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL29: if no old concept is recognized...
@@ -1099,7 +1099,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
             1 nxt +!   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug01: increment for next concept.
 \           LEAVE  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL29: end of test for a positive word-length.
-      THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: end of test for a recognized audindra concept.
+      THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for a recognized audindra concept.
       AudDamp  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug06: de-activate auditory memory in advance of next word.
      THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL31: end of test for 32=SP or 13=CR to make sure word has ended
       pho @ 13 = IF 13 eot ! THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug24: merely capture the 13=CR
@@ -1113,10 +1113,10 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL26: end of test
       0 pho !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL26: must be reset to zero each time.
   LOOP
-  0 audindra !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: Reset for safety.
+  0 audindra !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: Reset for safety.
   0 audrec !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
   0 pre !     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-  0 indra !       \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: Reset to prevent carry-over.
+  0 indra !       \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: Reset to prevent carry-over.
 ; (   ͡❛ ͜ʖ ͡❛ #WeinerGate: AudInput returns to Sensorium or Speech )
 
 
@@ -2532,8 +2532,8 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
    1 t +! 79 pho !     0 audindra ! AudMem \ O
    1 t +! 79 pho !     0 audindra ! AudMem \ O
    1 t +! 75 pho ! 540 audindra ! AudMem \ K
-540 indra !  5 pos ! 0 jux ! 0 pre ! 0 tkb ! 0 seq !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22
- 1 num !  3 mfn ! 0 dba !  KbLoad  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22
+540 indra !  5 pos ! 0 jux ! 0 pre ! 0 tkb ! 0 seq !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate
+ 1 num !  3 mfn ! 0 dba !  KbLoad  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate
  1 t +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
 
   ( BOY --   ͡❛ ͜ʖ ͡❛ #WeinerGate-11-05: 512 indra ! -- always masculine noun for use with gender flags )
@@ -2541,7 +2541,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
    1 t +! 79 pho !     0 audindra ! AudMem          \   ͡❛ ͜ʖ ͡❛ #WeinerGate-11-05 - O
    1 t +! 89 pho ! 512 audindra ! AudMem            \   ͡❛ ͜ʖ ͡❛ #WeinerGate-11-05 - Y
 512 indra !  5 pos ! 0 jux ! 0 pre ! 0 tkb ! 0 seq !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-11-05
- 1 num !  1 mfn ! 0 dba !   KbLoad  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22
+ 1 num !  1 mfn ! 0 dba !   KbLoad  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate
  1 t +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
 
   ( 633=BUT -- #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -3646,11 +3646,11 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
 659 indra !  6 pos !  KbLoad  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
    1 t +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
 
-  ( OR -- Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: 348 indra ! -- conjunction )
+  ( OR -- Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: 348 indra ! -- conjunction )
    1 t +! 79 pho !   0 audindra ! AudMem t @ rv ! \ O
    1 t +! 82 pho ! 348 audindra ! AudMem          \ R
-348 indra !  3 pos ! 0 jux ! 0 pre ! 0 tkb ! 0 seq !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22
- 0 num !  0 mfn ! 0 dba !  KbLoad  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22
+348 indra !  3 pos ! 0 jux ! 0 pre ! 0 tkb ! 0 seq !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate
+ 0 num !  0 mfn ! 0 dba !  KbLoad  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate
  1 t +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
 
   ( OTHER -- Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug16: 182 indra ! -- adjective )
@@ -5000,12 +5000,12 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
 590 indra !  5 pos ! 4 dba ! 1 num ! 3 mfn ! KbLoad \   ͡❛ ͜ʖ ͡❛ #WeinerGate-11-05
  1 t +!  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-11-05: one blank time-point for sake of AudRecog
 
-  0 audindra !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: prevent carry-over after AudMem.
+  0 audindra !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: prevent carry-over after AudMem.
   3001 nxt !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL29:
   t @ vault ! \ #TimePhoneHack  ͡~ ͜ʖ ͡°
   CR ." MindBoot time-point vault = " vault @ . ." cns = " cns @ . ." fyi= " fyi @ .
-  0 oldpsi !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: prevent carry-over after KbLoad.
-  0 indra !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL28: prevent carry-over after KbLoad.
+  0 oldpsi !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: prevent carry-over after KbLoad.
+  0 indra !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: prevent carry-over after KbLoad.
   0 pho !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJUL26: Prevent carry-over of value.
 ; \ 0000-09-30: MindBoot returns to MainLoop.
 
@@ -5030,26 +5030,26 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       I 8 psy{ @  jrt @  8 psy{ !  0 I 8 psy{ !   \ 0000jun15: num grammatical number
       I 9 psy{ @  jrt @  9 psy{ !  0 I 9 psy{ !   \ 0000jun15: mfn male/female/neuter
       I 10 psy{ @  jrt @ 10 psy{ !  0 I 10 psy{ !   \ 0000jun15: pre previous concept
-      I 11 psy{ @  jrt @ 11 psy{ !  0 I 11 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: seq subSEQuent concept
-      I 12 psy{ @  jrt @ 12 psy{ !  0 I 12 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tgn time-of-genitive
-      I 13 psy{ @  jrt @ 13 psy{ !  0 I 13 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tdt time-of-dative
+      I 11 psy{ @  jrt @ 11 psy{ !  0 I 11 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate: seq subSEQuent concept
+      I 12 psy{ @  jrt @ 12 psy{ !  0 I 12 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tgn time-of-genitive
+      I 13 psy{ @  jrt @ 13 psy{ !  0 I 13 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tdt time-of-dative
       \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06: Next lines adjusts tkb by minus-coda;
-      I 14 psy{  @  0 > IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: if there is a positive tkb value...
-        I  14 psy{ @ coda @ -  jrt @ 14 psy{ !  0 I 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: keep tkb valid.
+      I 14 psy{  @  0 > IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if there is a positive tkb value...
+        I  14 psy{ @ coda @ -  jrt @ 14 psy{ !  0 I 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: keep tkb valid.
       ELSE     \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06: if there is no tkb value...
-       0 I 14 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: zero out the tkb value.
+       0 I 14 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate: zero out the tkb value.
       THEN   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06: end of test for a positive tkb value.
-      I 15 psy{ @  jrt @ 15 psy{ !  0 I 15 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tia time-of-ablative
-      I 16 psy{ @  jrt @ 16 psy{ !  0 I 16 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tcj time-of-conjunction
-      I 17 psy{ @  jrt @ 17 psy{ !  0 I 17 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tdj time-of-adjective
-      I 18 psy{ @  jrt @ 18 psy{ !  0 I 18 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tdv time-of-adverb
-      I 19 psy{ @  jrt @ 19 psy{ !  0 I 19 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tpr time-of-preposition
-      I 20 psy{ @  indra20 !                    \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: time of recall-vector rv
-      indra20 @  vault @ < IF                  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: if longer than MindBoot...
+      I 15 psy{ @  jrt @ 15 psy{ !  0 I 15 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tia time-of-ablative
+      I 16 psy{ @  jrt @ 16 psy{ !  0 I 16 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tcj time-of-conjunction
+      I 17 psy{ @  jrt @ 17 psy{ !  0 I 17 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tdj time-of-adjective
+      I 18 psy{ @  jrt @ 18 psy{ !  0 I 18 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tdv time-of-adverb
+      I 19 psy{ @  jrt @ 19 psy{ !  0 I 19 psy{ !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tpr time-of-preposition
+      I 20 psy{ @  indra20 !                    \   ͡❛ ͜ʖ ͡❛ #WeinerGate: time of recall-vector rv
+      indra20 @  vault @ < IF                  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if longer than MindBoot...
           indra20 @  jrt @  20 psy{ !  0 I 20 psy{ !  THEN  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-20
-          indra20 @  coda @  vault @ +  > IF      \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29
-          indra20 @  coda @ -  jrt @ 20 psy{ !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: rv recall-vector
-        THEN               0 I 20 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: blank out auditory recall-vector
+          indra20 @  coda @  vault @ +  > IF      \   ͡❛ ͜ʖ ͡❛ #WeinerGate
+          indra20 @  coda @ -  jrt @ 20 psy{ !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate: rv recall-vector
+        THEN               0 I 20 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: blank out auditory recall-vector
     THEN          \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06: from old 24jul14A.F MindForth
     edge @  1 = IF            \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06: from old 24jul14A.F MindForth
       I 0 ear{ @  jrt @  0 ear{ !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06: from old 24jul14A.F MindForth
@@ -5077,14 +5077,14 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       0 jrt @ 10 psy{ !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06
       0 jrt @ 11 psy{ !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06
       0 jrt @ 12 psy{ !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06
-      0 jrt @ 13 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tdt time-of-dative
-      0 jrt @ 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tkb time-in-knowledge-base
-      0 jrt @ 15 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tia time-of-ablative (not used in English)
-      0 jrt @ 16 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tcj time-of-conjunction
-      0 jrt @ 17 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tdj time-of-adjective
-      0 jrt @ 18 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tdv time-of-adverb
-      0 jrt @ 19 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: tpr time-of-preposition
-      0 jrt @ 20 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: rv auditory recall-vector for Speech module
+      0 jrt @ 13 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tdt time-of-dative
+      0 jrt @ 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tkb time-in-knowledge-base
+      0 jrt @ 15 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tia time-of-ablative (not used in English)
+      0 jrt @ 16 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tcj time-of-conjunction
+      0 jrt @ 17 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tdj time-of-adjective
+      0 jrt @ 18 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tdv time-of-adverb
+      0 jrt @ 19 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: tpr time-of-preposition
+      0 jrt @ 20 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: rv auditory recall-vector for Speech module
     THEN    \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06: from old 24jul14A.F MindForth
   LOOP    \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06: from old 24jul14A.F MindForth
   jrt @  t !    \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06: from old 24jul14A.F MindForth
@@ -5104,12 +5104,12 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     0  I 12 psy{ !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06
     0  I 13 psy{ !  \ 0000jun15
     0  I 14 psy{ !  \ 0000jun15
-    0  I 15 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29
-    0  I 16 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29
-    0  I 17 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29
-    0  I 18 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29
-    0  I 19 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29
-    0  I 20 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29
+    0  I 15 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate
+    0  I 16 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate
+    0  I 17 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate
+    0  I 18 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate
+    0  I 19 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate
+    0  I 20 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate
    32  I 0  ear{ ! \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06: from old 24jul14A.F MindForth
     0  I 1  ear{ !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06: from old 24jul14A.F MindForth
     0  I 2  ear{ !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGatesep06: from old 24jul14A.F MindForth
@@ -5132,7 +5132,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     pho @ 31 > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug26: including any 32=SPACE...
       pho @ EMIT  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug14: say or display "pho" )
       pho @ lastpho !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug23: to avoid extra "S" on verbs
-    THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test for SPACE at end of word.
+    THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for SPACE at end of word.
     pho @ 32 =  pho @ 13 = OR IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug25:
       1 audstop !   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug26: TEST
       1 spacegap !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug26:
@@ -5166,7 +5166,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   midway @  vault @  DO  \   ͡❛ ͜ʖ ͡❛ #Bonkers: search in "vault" for reliability.
 \   I    1 psy{ @ 310 = IF  \   ͡❛ ͜ʖ ͡❛ #Bonkers: 310=THAT
     I    1 psy{ @ conj @ = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if conjunction is found...
-      I 20 psy{ @  aud !    \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: hold address for Speech
+      I 20 psy{ @  aud !    \   ͡❛ ͜ʖ ͡❛ #WeinerGate: hold address for Speech
       LEAVE  \   ͡❛ ͜ʖ ͡❛ #Bonkers: one auditory engram is enough.
     THEN  \   ͡❛ ͜ʖ ͡❛ #Bonkers:
   -1 +LOOP   \   ͡❛ ͜ʖ ͡❛ #Bonkers: end of backwards loop.
@@ -5179,7 +5179,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   usx @  us1 @  = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     1  vault @  DO   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       I           1 psy{ @ 117 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-        I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+        I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
         LEAVE                     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       THEN     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     -1 +LOOP   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5189,7 +5189,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   usx @  us2 @  = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     1  vault @  DO   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       I           1 psy{ @ 117 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-        I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+        I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
         LEAVE                     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       THEN     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     -1 +LOOP   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5209,7 +5209,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   usx @  us4 @  = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     1  vault @  DO   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       I           1 psy{ @ 117 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-        I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+        I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
         LEAVE                     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       THEN     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     -1 +LOOP   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5219,7 +5219,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   usx @  us5 @  = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     1  vault @  DO   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       I           1 psy{ @ 117 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-        I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+        I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
         LEAVE                     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       THEN     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     -1 +LOOP   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5229,7 +5229,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   usx @  us6 @  = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     1  vault @  DO   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       I           1 psy{ @ 117 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-        I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+        I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
         LEAVE                     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       THEN     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     -1 +LOOP   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5239,7 +5239,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   usx @  us7 @  = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     1  vault @  DO   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       I           1 psy{ @ 117 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-        I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+        I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
         LEAVE                     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       THEN     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     -1 +LOOP   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5259,13 +5259,13 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     1  vault @  DO   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       anset @  0 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         I           1 psy{ @ 101 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-          I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+          I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
           LEAVE                     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         THEN     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       anset @  0 > IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         I           1 psy{ @ 102 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-          I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+          I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
           LEAVE                     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         THEN     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5299,11 +5299,11 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
   wherecon @ 0 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     tselp @ 0 >  prep @ 0 > AND IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-      tselp @ 14 psy{ @ tselo !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: time of selection of object of preposition.
-      tselp @ 20 psy{ @ aud !    \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: fetch the aud-tag for the sake of Speech.
+      tselp @ 14 psy{ @ tselo !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: time of selection of object of preposition.
+      tselp @ 20 psy{ @ aud !    \   ͡❛ ͜ʖ ͡❛ #WeinerGate: fetch the aud-tag for the sake of Speech.
       aud @ 0 > IF Speech THEN   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       EnArticle  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-      tselo @ 20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: fetch the object aud-tag for Speech
+      tselo @ 20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: fetch the object aud-tag for Speech
       aud @ 0 > IF Speech THEN   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       0 aud !    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       0 prep !   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5316,8 +5316,8 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   wherecon @ 1 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     qv1psi @ 0 > IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       midway @  t @  DO   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-        I 1 psy{ @  qv1psi @ =  I 14 psy{ @ 0 >  AND IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: require verblock
-          I 1 psy{ @  qv1psi @ = I 11 psy{ @ qv2indra @ =  AND IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: verb?
+        I 1 psy{ @  qv1psi @ =  I 14 psy{ @ 0 >  AND IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: require verblock
+          I 1 psy{ @  qv1psi @ = I 11 psy{ @ qv2indra @ =  AND IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: verb?
              256 I 3 psy{ +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5331,7 +5331,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     qv1psi @ 0 > IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       midway @  t @  DO  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         I          1 psy{ @  qv1psi @ = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-          I       14 psy{ @  0 > IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: require verblock for a full thought.
+          I       14 psy{ @  0 > IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: require verblock for a full thought.
             I     11 psy{ @  qv2indra @ = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-30: if correct seq-verb...
               64 I 3 psy{ +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
             THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5349,7 +5349,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     midway @  tpu @  DO  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-01-05: search backwards in time for the query-verb.
       I          1 psy{ @  qv2indra @ = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         I       10 psy{ @  0 > IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-          I     11 psy{ @  qv4psi @ = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: if "seq" is direct object...
+          I     11 psy{ @  qv4psi @ = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if "seq" is direct object...
             I   13 psy{ @  0 > IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
               I  8 psy{ @  qv2num !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
               I 10 psy{ @  qv1psi !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5363,7 +5363,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     midway @  tpu @  DO  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-01-05: search backwards in time for subject of query-verb.
      qv1psi @ 0 > IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       I          1 psy{ @  qv1psi @ = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-        I       11 psy{ @  qv2indra @ = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: if query-verb is the "seq"...
+        I       11 psy{ @  qv2indra @ = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if query-verb is the "seq"...
           0 dunnocon !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-01-05: even one correct answer disables dunnocon.
           256 I  3 psy{ +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
               I  0 psy{ @  I 3 psy{ +!  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-01-05: superimpose quantity of "tru" value.
@@ -5379,7 +5379,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     1 dunnocon !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     midway @  tpu @  DO   \   ͡❛ ͜ʖ ͡❛ #Bonkers: search backwards from Time-Pen-Ultimate
       I          1 psy{ @  qv1psi @ = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-        I       11 psy{ @  qv2indra @ = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: if "seq" is query-verb...
+        I       11 psy{ @  qv2indra @ = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if "seq" is query-verb...
           0 dunnocon !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           64          I 3 psy{ +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           I 0 psy{ @  I 3 psy{ +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5396,7 +5396,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     1 dunnocon !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     midway @  tpu @  DO   \   ͡❛ ͜ʖ ͡❛ #Bonkers: search backwards from Time-Pen-Ultimate
       I          1 psy{ @  qv1psi @ = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-        I       11 psy{ @  qv2indra @ = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: if "seq" is query-verb...
+        I       11 psy{ @  qv2indra @ = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if "seq" is query-verb...
           0 dunnocon !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           64          I 3 psy{ +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           I 0 psy{ @  I 3 psy{ +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5426,7 +5426,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
   actindra @ 0 >  qucon @ 0 = AND IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     midway @  t @  DO  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug26: search backwards in time.
-      I  1 psy{ @ actindra @ =  I 14 psy{ @ 0 > AND IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: require verblock
+      I  1 psy{ @ actindra @ =  I 14 psy{ @ 0 > AND IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: require verblock
        I 6 psy{ @ 5 =  I 6 psy{ @ 7 = OR IF   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
 \       32 I 3 psy{  +!    \ 0000jun14: impose less than half of subj-inhibition.
        128 I 3 psy{  +!    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5480,7 +5480,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
         I          1 psy{ @ 818 = IF   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           I        8 psy{ @ 1 = IF     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
             I      7 psy{ @ 1 = IF     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-              I   20 psy{ @  aud !     \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+              I   20 psy{ @  aud !     \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
               LEAVE                    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
             THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           THEN    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5493,7 +5493,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
         I           1 psy{ @ 818 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           I         8 psy{ @ 1 = IF    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
             I      7 psy{ @ 2 = IF     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-              I   20 psy{ @  aud !     \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+              I   20 psy{ @  aud !     \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
               LEAVE                    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
             THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           THEN    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5506,7 +5506,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
         I           1 psy{ @ 818 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           I         8 psy{ @ 1 = IF    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
             I      7 psy{ @ 3 = IF     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-              I   20 psy{ @  aud !     \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+              I   20 psy{ @  aud !     \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
               LEAVE                    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
             THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           THEN    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5532,7 +5532,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
         I           1 psy{ @ 818 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           I         8 psy{ @ 2 = IF    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
             I      7 psy{ @ 2 = IF     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-              I   20 psy{ @  aud !     \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+              I   20 psy{ @  aud !     \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
               LEAVE                    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
             THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           THEN    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5572,7 +5572,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       0 moot !     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       midway @  inft @  DO  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         I 1 psy{ @  qusub @ = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-          I  20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: assign auditory recall-tag;
+          I  20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: assign auditory recall-tag;
           LEAVE  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       -1 +LOOP  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5587,7 +5587,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       -1 +LOOP  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-10-08: any non-infinitive may be replaced with infinitive
       midway @  inft @  DO  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         I 1 psy{ @  quverb @ =  I 7 psy{ @ 0 = AND IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-          I  20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: assign auditory recall-tag;
+          I  20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: assign auditory recall-tag;
           LEAVE  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       -1 +LOOP  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5603,7 +5603,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       midway @  inft @  DO  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         I 1 psy{ @  quobj @ = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           I 7 psy{ @  4 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-            I  20 psy{ @  quobjaud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: hold thru EnArticle
+            I  20 psy{ @  quobjaud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: hold thru EnArticle
             EnArticle  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
             quobjaud @ aud !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
             LEAVE  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -5624,7 +5624,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     0  vault @  DO  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: use the solid data in the "vault" area.
       I       1 psy{ @  791 = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if 791=WHO found...
         I     7 psy{ @  1 = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if dba=1 for nominative subject...
-          I  20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: assign auditory recall-tag;
+          I  20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: assign auditory recall-tag;
           LEAVE  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: leave the loop after first find;
         THEN  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for nominative form.
       THEN  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for 791=WHO interrogative pronoun.
@@ -5634,7 +5634,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       I         1 psy{ @  800 = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if 800=BE found...
         I       7 psy{ @  2 = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if dba=2 for second person...
           I     8 psy{ @  1 = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if num=1 for singular number...
-            I  20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: assign auditory recall-tag;
+            I  20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: assign auditory recall-tag;
             LEAVE  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: leave the loop after first find;
           THEN  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for singular number.
         THEN  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for second-person.
@@ -5645,7 +5645,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       I         1 psy{ @  707 = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if 707=YOU found...
         I       7 psy{ @  1 = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if dba=1 for nominative subject...
           I     8 psy{ @  1 = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if num=1 for singular number...
-            I  20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: assign auditory recall-tag;
+            I  20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: assign auditory recall-tag;
             LEAVE  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: leave the loop after first find;
           THEN  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for singular number.
         THEN  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for nominative form.
@@ -5665,14 +5665,14 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   0 prevtag !   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: zero out to prevent carry-over
   0 rv !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: prevent carry-over in advance of any search.
 \ whatcon @ 0 > IF  0 verblock ! THEN  \   ͡❛ ͜ʖ ͡❛ #Bonkers: if answering what-query...
-  verblock @ 0 > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: positive verblock?
+  verblock @ 0 > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: positive verblock?
     verblock @   14 psy{ @  0 > IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if "tkb" is positive...
       verblock @ 14 psy{ @ nounlock !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: one tkb from other tkb
     THEN  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-02-24: end of test for a positive "tkb" to become "nounlock".
-  THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test for a positive verblock
-  nounlock @ 0 > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: if a verblock has yielded a nounlock...
+  THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for a positive verblock
+  nounlock @ 0 > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: if a verblock has yielded a nounlock...
     1 dirobj !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug21: nounlock is specifically for a direct object.
-    0 subjectflag !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: needed for conditional tests below;
+    0 subjectflag !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: needed for conditional tests below;
     nounlock @  1 psy{ @  motjuste !  \ 0000jun15: in case of search for non-zero rv;
     nounlock @  1 psy{ @  actindra !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     nounlock @  3 psy{ @  act !  \ 0000jun15: let activation-level play its role here;
@@ -5682,26 +5682,26 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
              nounlock @  6 psy{ @ nphrpos !  \ 0000-09-01: for EnArticle
              nounlock @  8 psy{ @ nphrnum !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
              nounlock @ 20 psy{ @ rv !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate
-      ELSE  \    ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: if only a zero rv psi20 is found...
-        midway @  t @  DO  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: loop from present back to "midway".
+      ELSE  \    ͡❛ ͜ʖ ͡❛ #WeinerGate: if only a zero rv psi20 is found...
+        midway @  t @  DO  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: loop from present back to "midway".
              I   1 psy{ @  motjuste = IF  \ 0000jun15: search on index "I"
               I 20 psy{ @ 0 > IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if positive rv recall-vector...
                 I  6 psy{ @ nphrpos !  \ 0000-09-01: for sake of EnArticle.
                 I 20 psy{ @ aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: hold rv value as aud for Speech
-                LEAVE  \ 21016aug22: one recall-vector is enough.
-              THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test for positive rv.
-          THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test to find motjuste with valid rv.
-        -1 +LOOP   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of search for a positive recall-vector.
-      THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test to find a direct-object recall-vector rv.
-    THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test for dba=4 accusative-case nounlock.
+                LEAVE  \ 21016: one recall-vector is enough.
+              THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for positive rv.
+          THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test to find motjuste with valid rv.
+        -1 +LOOP   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of search for a positive recall-vector.
+      THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test to find a direct-object recall-vector rv.
+    THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for dba=4 accusative-case nounlock.
     nounlock @  17 psy{ @ 0 > IF nounlock @ 17 psy{ @ tdj ! THEN \   ͡❛ ͜ʖ ͡❛ #WeinerGate
     nounlock @  19 psy{ @ 0 > IF nounlock @ 19 psy{ @ tnpr ! THEN \   ͡❛ ͜ʖ ͡❛ #WeinerGate-10-26: prep.
-  THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test for a positive nounlock
-  nounlock @ 0 = IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: if nouns are free to compete...
-    1 subjectflag !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: a default until countermanded.
+  THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for a positive nounlock
+  nounlock @ 0 = IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: if nouns are free to compete...
+    1 subjectflag !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: a default until countermanded.
     1 dba !  \ 0000-06-15: default nominative until countermanded.
-    dirobj @ 1 = IF 0 subjectflag ! THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: countermanding default.
-    midway @  t @  DO  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: loop from present back to "midway".
+    dirobj @ 1 = IF 0 subjectflag ! THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: countermanding default.
+    midway @  t @  DO  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: loop from present back to "midway".
 
       I 6 psy{ @ 5 =  I 6 psy{ @ 7 = OR IF  \ 0000jun15: noun  or pronoun POS?
 
@@ -5712,7 +5712,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
             I 3 psy{ @ mjact !  \ 0000jun15: if too low, motjuste defaults to "I"
             I 3 psy{ @ act @ >  I 11 psy{ @ 0 > AND IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-10-01:BUGFIX psi11=seq
               I 14 psy{ @ verblock !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: assign tkb value to verblock.
-            THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test for higher-act concept with seq-psi.
+            THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for higher-act concept with seq-psi.
             I 3 psy{ @ act @ >  I 13 psy{ @ 0 > AND IF  \ 0000jun15: positive tkb?
               I  6 psy{ @ pos !   \   ͡❛ ͜ʖ ͡❛ #WeinerGate-10-27: part of speech for EnArticle
               I 14 psy{ @ verblock !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: assign tkb value to verblock.
@@ -5722,14 +5722,14 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
             I 8 psy{ @  nphrnum !  \ 0000jun15: NounPhrase number;
             I 8 psy{ @ snu !  \ 0000jun15:  for parameter in verb-selection;
             I 8 psy{ @ subjnum !  \ 0000jun15:  for parameter in verb-selection;
-            motjuste @ subjpsi !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: for selection of verb-form.
+            motjuste @ subjpsi !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: for selection of verb-form.
             I 3 psy{ @ act !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
             I 20 psy{ @ 0 > IF   \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if there is a positive recall-vector...
               I 20 psy{ @ audjuste !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: temporary recall-vector for Speech
             ELSE   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: if there is no "rv"
               midway @  t @  DO  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: loop from present back to "midway".
                 I  1 psy{ @  motjuste @ = IF   \ 0000jun15: if same word as nounlock...
-                  I 20 psy{ @ 0 > IF   \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: if positive rv...
+                  I 20 psy{ @ 0 > IF   \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if positive rv...
                     I  6 psy{ @ nphrpos !  \ 0000-09-01: for sake of EnArticle.
                     I 20 psy{ @ audjuste !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector TEST
                    LEAVE    \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: one recall-vector is enough.
@@ -5737,14 +5737,14 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
                THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for same word as nounlock motjuste
              -1 +LOOP   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: loop backwards
             THEN   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for non-interpreted positive psi12 "rv"
-            I tseln !   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: use time-point of noun for inhibition.
-            I tsels !   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: use time-point of subject for inhibition.
+            I tseln !   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: use time-point of noun for inhibition.
+            I tsels !   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: use time-point of subject for inhibition.
             I 3 psy{ @ act !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-          THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test for a concept with higher activation.
-        THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test for definite "tkb" related idea.
-      THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test for noun or pronoun part-of-speech.
+          THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for a concept with higher activation.
+        THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for definite "tkb" related idea.
+      THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for noun or pronoun part-of-speech.
     -1 +LOOP   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-  THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22:  end of test for absence of a nounlock.
+  THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate:  end of test for absence of a nounlock.
 \ whatcon @ 0 > IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if SpreadAct answers a what-query...
 \ wasvcon @ 0 > IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-02-22: if SpreadAct answers what-AUX-SUBJ-VERB query...
   wasvcon @ 0 > dirobj @ 0 = AND IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-0930: if SprA answers what-AUX-SUBJ-VERB query
@@ -5755,9 +5755,9 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     THEN  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for conditions warranting a conjoined thought.
   THEN  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for SpreadAct answering a what-query.
   -90 tsels @ 3 psy{ !  \ 0000jun15: insert inhibition at time of selection of subject.
-  subjectflag @ 0 = IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: i.e., dir.obj or predicate nominative...
+  subjectflag @ 0 = IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: i.e., dir.obj or predicate nominative...
     0 rv !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: prevent carry-over in advance of any search.
-    nounlock @ 0 > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: if verb is locked to a particular seq...
+    nounlock @ 0 > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: if verb is locked to a particular seq...
       nounlock @ 1 psy{ @ motjuste !  \ 0000jun15: nounlock psi pre-empts search.
       nounlock @ 6 psy{ @ 5 = IF  \ 0000jun15: if nounlock part of speech is 5=noun
         5 nphrpos !  \ 0000-09-01: for sake of EnArticle.
@@ -5783,27 +5783,27 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
        -1 +LOOP   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: loop backwards
       THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for a non-zero recall-vector.
     THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug12: end of test for a positive nounlock.
-  THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test for not-a-subject
-  audjuste @ 0 > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: avoid "I" for "YOU" or "YOU" for "I"
-    audjuste @ aud !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: for transfer into speech module
-  ELSE  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: if audjuste value is zero...
-    midway @  t @  DO  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: search backwards in time...
+  THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for not-a-subject
+  audjuste @ 0 > IF  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: avoid "I" for "YOU" or "YOU" for "I"
+    audjuste @ aud !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: for transfer into speech module
+  ELSE  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: if audjuste value is zero...
+    midway @  t @  DO  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: search backwards in time...
       I 3 psy{ @ act !  \ 0000jun15: let activation-level play its role here;
         I 1 psy{ @ motjuste @ = IF  \ 0000jun15: find motjuste for sake of rv
           I  6 psy{ @ nphrpos !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           I  7 psy{ @ 1 =  subjectflag @ 1 = AND IF  \ 0000jun15: subject?
             I 20 psy{ @ 0 > IF I 20 psy{ @ aud ! LEAVE THEN  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: find rv.
-          THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test for subject and for nominative case.
+          THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for subject and for nominative case.
             I  7 psy{ @ 4 = IF  \ 0000jun15: direct object?
               I 20 psy{ @ 0 > IF   \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if positive auditory recall-vector...
                  I  6 psy{ @ nphrpos !  \ 0000-09-01: set POS for sake of EnArticle.
                  I 20 psy{ @ aud ! \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-30: set the rv for Speech.
                  LEAVE             \ 0000-09-01: one engram is enough.
               THEN \ 0000jun15: d.o. rv
-            THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test for dba=4 accusative direct object.
-        THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of test to find motjuste with valid rv.
-    -1 +LOOP   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22: end of search through psy{ conceptual array.
-  THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug22:
+            THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test for dba=4 accusative direct object.
+        THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of test to find motjuste with valid rv.
+    -1 +LOOP   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: end of search through psy{ conceptual array.
+  THEN  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate:
   1 subjectflag !  \  Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug14: initially default to zero; later calculate.
   0 rv !  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: prevent carry-over in advance of search.
   nounlock @ 0 = IF \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateaug14: rudimentary selection of 701=I
@@ -5887,8 +5887,8 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
 :  EnVerbGen  ( https://github.com/indraai/IndraMind )
   audbase @ 0 =  verbpsi @ 0 > AND IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     midway @  tpu @  DO   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-      I 1 psy{ @ verbpsi @ =  I 20 psy{ @ 0 > AND IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: verb w. recall-vector?
-        I 20 psy{ @  audbase !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: initial base-time for generating verb-form
+      I 1 psy{ @ verbpsi @ =  I 20 psy{ @ 0 > AND IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: verb w. recall-vector?
+        I 20 psy{ @  audbase !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: initial base-time for generating verb-form
         LEAVE                   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       THEN      \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     -1 +LOOP  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -6330,9 +6330,9 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
       I 1 psy{ @ prednom @ =  I 8 psy{ @ 2 =  AND IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         I 7 psy{ @ 1 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           seqverb @ 0 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-            I 11 psy{ @  seqverb ! \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: hold to be the verb of an inference.
-            I 11 psy{ @  quverb ! \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: query-verb for AskUser;
-            I 14 psy{ @  seqtkb ! \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: hold for fetching same direct object.
+            I 11 psy{ @  seqverb ! \   ͡❛ ͜ʖ ͡❛ #WeinerGate: hold to be the verb of an inference.
+            I 11 psy{ @  quverb ! \   ͡❛ ͜ʖ ͡❛ #WeinerGate: query-verb for AskUser;
+            I 14 psy{ @  seqtkb ! \   ͡❛ ͜ʖ ͡❛ #WeinerGate: hold for fetching same direct object.
             0 ynverb !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
             seqverb @ seq !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
           THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -6345,34 +6345,34 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     1 t +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     1 t +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     subjnom @  t @  1 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-    t @ 1 +  t @  14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: psy1 = tkb;
+    t @ 1 +  t @  14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: psy1 = tkb;
     48       t @   3 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     5        t @   6 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     1        t @   7 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     qusnum @ t @   8 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     seqverb @         seq !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-    seqverb @ t @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: seq is the verb;
+    seqverb @ t @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: seq is the verb;
     0         t @ 20 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-10-01: pseudo-recall-tag for expanded flag-panel.
     t @ tkbn !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     1 t +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-    seqtkb @  11 psy{ @  dobseq !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: psi11 "seq" for next insertion.
+    seqtkb @  11 psy{ @  dobseq !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: psi11 "seq" for next insertion.
     dobseq @ quobj !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     seqverb @  t @  1 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     8          t @  6 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     3          t @  7 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     1          t @  8 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     subjnom @  t @ 10 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-    dobseq  @  t @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: direct object becomes "seq" of verb.
-    t @ 1 +    t @ 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: in silent inference tkb is next time-point.
+    dobseq  @  t @ 11 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: direct object becomes "seq" of verb.
+    t @ 1 +    t @ 14 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: in silent inference tkb is next time-point.
     t @ tkbv !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     1 t +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     t @ tkbo !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-    seqtkb @  11 psy{ @  t @  1 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: dir. obj
-    seqtkb @  20 psy{ @  seqrvx !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: may be useless if always zero.
+    seqtkb @  11 psy{ @  t @  1 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: dir. obj
+    seqtkb @  20 psy{ @  seqrvx !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: may be useless if always zero.
     40   t @   3 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     5    t @   6 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     2    t @   8 psy{ !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-    seqrvx @  20 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: recall-vector of inferred direct object.
+    seqrvx @  20 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: recall-vector of inferred direct object.
     dobseq @ quobj !     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     1 t +!  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     1 yncon ! \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -6402,10 +6402,10 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   0 tvb !    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
   dunnocon @ 1 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     midway @  vault @  DO   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-      I 1 psy{ @ 701 =  I 11 psy{ @ 838 =  AND IF \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: if I...KNOW...
-        32 I 0 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-01-08 bugfix: elevate activation of truth-value tru
-       256 I 3 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-01-08 BUGFIX: highly activate "I DO NOT KNOW"
-       250 I 5 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-01-08 bugfix: make sure "KNOW" is negated.
+      I 1 psy{ @ 701 =  I 11 psy{ @ 838 =  AND IF \   ͡❛ ͜ʖ ͡❛ #WeinerGate: if I...KNOW...
+        32 I 0 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate bugfix: elevate activation of truth-value tru
+       256 I 3 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate BUGFIX: highly activate "I DO NOT KNOW"
+       250 I 5 psy{ !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate bugfix: make sure "KNOW" is negated.
        LEAVE  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     -1 +LOOP   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -6448,7 +6448,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   7 EMIT    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
   midway @  t @  DO   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     I           1 psy{ @ 884 = IF  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-01-10: 884=TEACH;
-      I   20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+      I   20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
       LEAVE                 \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     THEN      \   ͡❛ ͜ʖ ͡❛ #WeinerGate-01-10: end of test for 884=TEACH;
   -1 +LOOP  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -6457,7 +6457,7 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
     I           1 psy{ @ 701 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       I         8 psy{ @ 1 = IF     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         I      7 psy{ @ 3 = IF     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-          I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+          I   20 psy{ @  aud !      \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
           LEAVE                     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
         THEN  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       THEN    \ #TimePhoneHack  ͡~ ͜ʖ ͡°
@@ -6466,13 +6466,13 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
   Speech     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
   midway @  t @  DO   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     I           1 psy{ @ 755 = IF  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-      I   20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: auditory recall-vector
+      I   20 psy{ @  aud !  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: auditory recall-vector
       LEAVE                 \ #TimePhoneHack  ͡~ ͜ʖ ͡°
     THEN      \ #TimePhoneHack  ͡~ ͜ʖ ͡°
   -1 +LOOP  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
   Speech     \ #TimePhoneHack  ͡~ ͜ʖ ͡°
   0 moot !  \ #TimePhoneHack  ͡~ ͜ʖ ͡°
-;  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29: Imperative returns to the English-thinking EnThink module.
+;  \   ͡❛ ͜ʖ ͡❛ #WeinerGate: Imperative returns to the English-thinking EnThink module.
 
 
 :  EnThink ( https://github.com/indraai/IndraMind )
@@ -6611,8 +6611,8 @@ cns @   3  CHANNEL  ear{  ( Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGateJU
 \   fyi @ 0 > IF   \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: display MindGrid and trough of inhibition
     fyi @ 3 > IF   \ #TimePhoneHack  ͡~ ͜ʖ ͡°
       CR   ." The arrays psy{ and ear{ show your input and the AI output: " \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate
-      CR  ." time: tru psi hlc act mtx jux pos dba num mfn pre seq tgn " \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29
-      ." tdt tkb tia tcj tdj tdv tpr rv -- pho act audindra " CR  \   ͡❛ ͜ʖ ͡❛ #WeinerGate-09-29
+      CR  ." time: tru psi hlc act mtx jux pos dba num mfn pre seq tgn " \   ͡❛ ͜ʖ ͡❛ #WeinerGate
+      ." tdt tkb tia tcj tdj tdv tpr rv -- pho act audindra " CR  \   ͡❛ ͜ʖ ͡❛ #WeinerGate
       t @ 1+  tin @ DO  \ Stop-And-Go-Return  ͡❛ ͜ʖ ͡❛ #WeinerGate: show the recent input and AGI thinking.
         CR I . ." : "
         I  0  psy{ @ . ." "    \ Bonker: Show tru
