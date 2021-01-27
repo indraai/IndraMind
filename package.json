@@ -1,6 +1,7 @@
 {
   "name": "indra",
   "version": "0.0.3",
+  "port": 9393,
   "description": "The Indra Mind AI",
   "main": "index.js",
   "directories": {
@@ -32,6 +33,8 @@
   },
   "homepage": "https://github.com/indraai/IndraMind#readme",
   "dependencies": {
+    "@indra.ai/svarga": "^0.3.19",
+    "chalk": "^4.1.0",
     "fastify": "^3.9.2",
     "fastify-static": "^3.3.1"
   }

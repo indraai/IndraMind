@@ -1,22 +1,24 @@
 #!/usr/bin/env node
-// Copyright (c)2020 Quinn Michaels
+// Copyright (c)2021 Quinn Michaels
 // Distributed under the MIT software license, see the accompanying
 // file LICENSE.md or http://www.opensource.org/licenses/mit-license.php.
 
+const {version} = require('./package.json');
 const path = require('path');
 const fs = require('fs');
+const chalk = require('chalk');
+const fast = require('fastify')({
+  logger:true,
+});
+const fastStatic = require('fastify-static');
 const readline = require('readline');
-const {name, version} = require('./package.json');
 const shell = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-const fast = require('fastify')({
-  logger:true
-});
-
-const fastStatic = require('fastify-static');
+const client = require('./data/config/client.json').data;
+const {IndraMind} = require('./src/IndraMind.dev.js');
 
 // setup the public directory
 fast.register(fastStatic, {
@@ -24,36 +26,95 @@ fast.register(fastStatic, {
   prefix: '/public/',
 });
 
+fast.register(fastStatic, {
+  root: path.join(__dirname, 'data'),
+  prefix: '/data/',
+  decorateReply: false
+});
+
 // setup default index.html file serve
-fast.get('/', function (req, reply) {
+fast.get('/', (req, reply) => {
   return reply.sendFile('index.html', path.join(__dirname, 'assets'));
 })
 
 // setup Indra Mind direct link
-fast.get('/IndraMind', function (req, reply) {
+fast.get('/IndraMind', (req, reply) => {
   return reply.sendFile('IndraMind.js', path.join(__dirname, 'src'));
 })
 
-fast.listen(93).then(() => {
-  console.log('INDRA IS LISTENING:93');
-});
+function shellPrompt(_prompt, _text) {
+  const {label,text} = _prompt.colors; // set client prompt colors
+  shell.setPrompt(chalk.rgb(label.R, label.G, label.B)(`${_prompt.emoji} ${_prompt.text} > `));
+  shell.prompt();
+  if (_text) console.log(chalk.rgb(text.R, text.G, text.B)(_text));
+  shell.prompt();
+}
 
-shell.setPrompt('Indra: ');
+function indraFlash() {
+return `
+██╗███╗░░██╗██████╗░██████╗░░█████╗░
+██║████╗░██║██╔══██╗██╔══██╗██╔══██╗
+██║██╔██╗██║██║░░██║██████╔╝███████║
+██║██║╚████║██║░░██║██╔══██╗██╔══██║
+██║██║░╚███║██████╔╝██║░░██║██║░░██║
+╚═╝╚═╝░░╚══╝╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝
+`;
+}
 
-shell.on('line', answer => {
-  console.log('input', answer);
-}).on('pause', () => {
+fast.listen(client.profile.port).then(() => {
+  console.log(`PORT: ${client.profile.port}`);
+  console.log('---------------');
+  console.log(`🍚 CLIENT:`);
+  console.log(JSON.stringify(client, null, 2));
+  console.log('---------------');
+  // Initialize Indra
+  return IndraMind.init();
+}).then(_init => {
+  console.log(_init);
+  console.log('---------------');
+  return IndraMind.start();
+}).then(_start => {
+  console.log(_start);
+  console.log('---------------');
+  return IndraMind.enter();
+}).then(_enter => {
+  console.log(_enter);
+  console.log(indraFlash());
+  console.log('---------------');
+  shellPrompt(client.prompt, `Hello there ${client.profile.name}`);
+  shellPrompt(client.prompt, `It's wonderful that you could join me today.`);
+  shellPrompt(client.prompt, `What would you like to talk about?`);
 
-}).on('resume', () => {
+  shell.on('line', question => {
+    if (question === '!exit') return shell.close();
+    IndraMind.question({
+      text: question,
+      created: Date.now(),
+    }).then(answer => {
+      shellPrompt(answer.a.agent.prompt, answer.a.text);
+      shellPrompt(client.prompt, '');
+    }).catch(console.error);
 
-}).on('close', () => {
-  console.log('Many Offerings!');
-  process.exit(0);
+  }).on('pause', () => {
 
-}).on('SIGCONT', () => {
+  }).on('resume', () => {
 
-}).on('SIGINT', () => {
-
-}).on('SIGSTOP', () => {
-
-});
+  }).on('close', () => {
+    shell.setPrompt('');
+    shell.prompt();
+    IndraMind.exit().then(_exit => {
+      console.log('---------------');
+      console.log(_exit);
+      return IndraMind.stop();
+    }).then(_stop => {
+      console.log('---------------');
+      console.log(_stop);
+      console.log('---------------');
+      process.exit(0);
+    }).catch(console.error);
+  }).on('SIGCONT', () => {
+  }).on('SIGINT', data => {
+    shell.close();
+  }).on('SIGSTOP', () => {
+  });
+}).catch(console.error);

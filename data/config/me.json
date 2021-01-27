@@ -1,0 +1,35 @@
+{
+  "name": "me",
+  "describe": "Me Variables",
+  "data": {
+    "key": 93,
+    "name": "Indra",
+    "description": "The Indra Mind",
+    "prompt": {
+      "emoji": "👑",
+      "text": "indra",
+      "colors": {
+        "label": {
+          "R": 0,
+          "G": 150,
+          "B": 255
+        },
+        "text": {
+          "R": 101,
+          "G": 192,
+          "B": 255
+        }
+      }
+    },
+    "voice": {
+      "speech": "Alex",
+      "speed": 1
+    },
+    "profile": {
+      "avatar": "",
+      "background": "",
+      "describe": "The Indra AI Mind",
+      "gender": "M"
+    }
+  }
+}

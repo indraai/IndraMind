@@ -1,0 +1,44 @@
+{
+  "title": "Client File",
+  "describe": "The profile of the Client User",
+  "data": {
+    "key": 9300,
+    "name": "Max",
+    "describe": "Max the Drone Wizard",
+    "prompt": {
+      "emoji": "👽",
+      "text": "Max",
+      "colors": {
+        "label": {
+          "R": 0,
+          "G": 58,
+          "B": 144
+        },
+        "text": {
+          "R": 0,
+          "G": 101,
+          "B": 253
+        }
+      }
+    },
+    "profile": {
+      "name": "Max",
+      "describe": "You need some Super Drones I'm your guy.",
+      "avatar": "",
+      "background": "",
+      "gender": "Cool",
+      "port": 9393,
+      "lang": "en"
+    },
+    "services": {},
+    "modules": [
+      "Creativity",
+      "Imagination",
+      "Awareness",
+      "Sensorium",
+      "Volition",
+      "Voice",
+      "Think"
+    ]
+  }
+}
