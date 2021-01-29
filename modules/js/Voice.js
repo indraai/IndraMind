@@ -1,5 +1,6 @@
 class Voice {
   constructor(client) {
+    console.log('🎙  LOAD: Voice');
     this.client = client;
   }
   Process(state) {
@@ -9,4 +10,4 @@ class Voice {
   }
 };
 
-module.expots = Voice;
+module.exports = Voice;

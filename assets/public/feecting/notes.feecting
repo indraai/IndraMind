@@ -11,6 +11,11 @@ prep = preposition
 tdo = timeDirect
 tkb = timeKnowledge
 rjc = cycles
+dob = birth
+
+pho = phoneme
+audpsi = audconcept
+psi = concept
 
 // old mind
 changes "psi" variables to "indra" variables
@@ -20,6 +25,7 @@ variable psibase = variable indrabase
 variable actpsi = variable actindra
 variable qv2psi = variable qv2indra
 variable prepsi = variable preindra
-variable audpsi = variable audindra
+variable audpsi = variable audindra // change to audConcept
+
 variable monopsi = variable monoindra
 variable newpsi = variable newindra

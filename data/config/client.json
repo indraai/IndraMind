@@ -32,13 +32,13 @@
     },
     "services": {},
     "modules": [
+      "Voice",
+      "Think",
       "Creativity",
       "Imagination",
       "Awareness",
       "Sensorium",
-      "Volition",
-      "Voice",
-      "Think"
+      "Volition"
     ]
   }
 }

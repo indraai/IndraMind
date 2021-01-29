@@ -70,12 +70,11 @@ fast.listen(client.profile.port).then(() => {
   // Initialize Indra
   return IndraMind.init();
 }).then(_init => {
-  console.log(_init);
   console.log('---------------');
+  console.log(_init);
   return IndraMind.start();
 }).then(_start => {
   console.log(_start);
-  console.log('---------------');
   return IndraMind.enter();
 }).then(_enter => {
   console.log(_enter);
@@ -107,7 +106,6 @@ fast.listen(client.profile.port).then(() => {
       console.log(_exit);
       return IndraMind.stop();
     }).then(_stop => {
-      console.log('---------------');
       console.log(_stop);
       console.log('---------------');
       process.exit(0);

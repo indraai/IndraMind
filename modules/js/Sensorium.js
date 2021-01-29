@@ -1,5 +1,6 @@
-class Sensorium {  // http://ai.neocities.org/Sensorium.html
+class Sensorium {
   constructor(client) {
+    console.log('🥲  LOAD: Sensorium');
     this.client = client;
   }
   Process() {
@@ -9,5 +10,4 @@ class Sensorium {  // http://ai.neocities.org/Sensorium.html
     ]);
   }
 }
-
 module.exports = Sensorium;
