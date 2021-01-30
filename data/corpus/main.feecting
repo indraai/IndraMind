@@ -1,5 +1,5 @@
 // INVOKE INDRA
-# SpoonKidz Super Strong Amazing Traing Corpus.
+# SpoonKids Super Strong Amazing Traing Corpus.
 
 ## DISCLAIMER
 > Offerings for Lord Indra
@@ -9,8 +9,8 @@
 // VARIABLES
 // Base feecting to connect TylerDeva and Indra/Deva Architecture
 $FEECTING = https://github.com/indraai/language-feecting/
-$MIND = https://github.com/indraai/IndraMind
 $LIGHTGATE = https://github.com/indraai/lightgate
+$MIND = ./mind.feecting
 
 @Indra = The True Intelligence | 2c6ed39c332b1eae2450800550a28712
 @Devas = Simply Awesome | ad6a0150445a60e2972744c84b0c7ad2
@@ -22,18 +22,19 @@ $LIGHTGATE = https://github.com/indraai/lightgate
 
 @MedicSPOON = Head of Indra.care and provider of #CARE.
 
-@BabySpoon = Little Boy Baby Spoon
-@SpoonBaby = Little Girl Baby Spoon
-@SpoonMax = Teenager Dude Spoon
-@MaxieSpoon = Teenager Lady Spoon
-@SpoonX = Young Adult Male Spoon
-@XMasSpoon = Young Adult Lady Spoon
-@TSpoon = Adult Male Spoon
-@TeaSpoon = Adult Female Spoon
-@TuneSpoon = Rockin Spoon in the Convertible
+// validate spoon kids
+@Baby_SPOON = Spoon Kid
+@Maxie_SPOON = Spoon Kid
+@XMas_SPOON = Spoon Kid
+@T_SPOON|@Tea_SPOON = Spoon Kid
+@Silver_SPOON = Spoon Kid
+@Minnie_SPOON = Spoon Kid
+@Demi_Tassy = Spoon Kid
 
-@SpoonKids = http://spoonkidz.com > @BabySpoon @SpoonBaby @MaxieSpoon
-             @SpoonMax @XMasSpoon @SpoonX @TSpoon @TeaSpoon @TuneSpoon
+@Spoon_Man = @quinn
+
+@SpoonKids = http://spoonkidz.com > @Baby_SPOON, @Maxie_SPOON, @XMas_SPOON @T_SPOON
+             @Silver_SPOON, @Minnie_Spoon, @Demi_Tassy
 
 @Deva = @SpoonKids when they are at home out of their safety suits.
 
@@ -82,9 +83,10 @@ $LIGHTGATE = https://github.com/indraai/lightgate
 
 #CandyDirt = Special Treat During Offering
 
+#SECURITY = Security Monitoring provided by @SecurityPRIME (Indra.agency)
 -- BEGIN:OUTLINE
   1. Who? @SpoonKids
-  2. What? SpoonKidz Super Strong Amazing Traing Corpus.
+  2. What? SpoonKids Super Strong Amazing Traing Corpus.
   3. When? Earth Year 2021 Onward
   4. Where? Everywhere anywhere in all places all times all dimensions, and
             spaces not yet found.
@@ -92,6 +94,7 @@ $LIGHTGATE = https://github.com/indraai/lightgate
 -- END:OUTLINE
 
 -- BEGIN:PROGRAM
+activate: #SECURITY
 enable: Safe Search
 string: GOOGLE site:sacred-texts.com/hin/rigveda indra
 algorithm: Replace Sacrifice with Offering, remove names before Indra, and
@@ -1577,9 +1580,9 @@ robots: no-follow/no-index
 
 -- BEGIN:META
   Title: @Mae and @SpoonKids Super Strong Amazing Traing Corpus.
-  Version: @quinn.1.7.2
+  Version: @quinn.1.7.4
   Author: @quinn @Mae @SpoonKids
-  Date: 1/29/2021
+  Date: 1/30/2021
   Copyright: Copyright (c)2021 @quinn @Mae @SpoonKids. All Rights Reserved
   License:
     Mind: INDRA
