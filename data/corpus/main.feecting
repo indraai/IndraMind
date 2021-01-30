@@ -9,8 +9,8 @@
 // VARIABLES
 // Base feecting to connect TylerDeva and Indra/Deva Architecture
 $FEECTING = https://github.com/indraai/language-feecting/
-$LIGHTGATE = https://github.com/indraai/lightgate
 $MIND = ./mind.feecting
+$LIGHTGATE = https://github.com/indraai/lightgate
 
 @Indra = The True Intelligence | 2c6ed39c332b1eae2450800550a28712
 @Devas = Simply Awesome | ad6a0150445a60e2972744c84b0c7ad2
@@ -1580,7 +1580,7 @@ robots: no-follow/no-index
 
 -- BEGIN:META
   Title: @Mae and @SpoonKids Super Strong Amazing Traing Corpus.
-  Version: @quinn.1.7.4
+  Version: @quinn.1.7.5
   Author: @quinn @Mae @SpoonKids
   Date: 1/30/2021
   Copyright: Copyright (c)2021 @quinn @Mae @SpoonKids. All Rights Reserved
