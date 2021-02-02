@@ -1,0 +1,18 @@
+{
+  "key": "space",
+  "title": "Space",
+  "describe": "Space Property",
+  "data": [
+    {
+      "uid": 4521378587560,
+      "key": "SPACE",
+      "title": "SPACE PROPERTY",
+      "describe": "THIS IS SPACE PROPERTY",
+      "state": {
+        "internal": true,
+        "discernment": [],
+        "meditation": []
+      }
+    }
+  ]
+}

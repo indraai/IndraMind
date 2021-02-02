@@ -1,0 +1,18 @@
+{
+  "key": "flavors",
+  "title": "Flavors",
+  "describe": "Flavor Sense",
+  "data": [
+    {
+      "uid": 5916598459405,
+      "key": "FLAVORS",
+      "title": "FLAVORS SENSE",
+      "describe": "THIS SENSE OF FLAVORS",
+      "state": {
+        "skillful": [],
+        "unskillful": [],
+        "pursue": true
+      }
+    }
+  ]
+}

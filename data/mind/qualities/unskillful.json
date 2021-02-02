@@ -1,0 +1,20 @@
+{
+  "key": "unskillful",
+  "title": "Unskillful",
+  "describe": "Unskillful Qualities",
+  "data": [
+    {
+      "uid": 5565792763822,
+      "key": "UNSKILLFUL",
+      "title": "UNSKILLFUL QUALITIY",
+      "describe": "THIS QUALITY OF UNSKILLFUL",
+      "properties": {
+        "earth": [],
+        "water": [],
+        "fire": [],
+        "wind": [],
+        "space": []
+      }
+    }
+  ]
+}

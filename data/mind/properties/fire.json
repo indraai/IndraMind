@@ -1,0 +1,18 @@
+{
+  "key": "fire",
+  "title": "Fire",
+  "describe": "Fire Property",
+  "data": [
+    {
+      "uid": 3221616863382,
+      "key": "FIRE",
+      "title": "FIRE PROPERTY",
+      "describe": "THIS IS FIRE PROPERTY",
+      "state": {
+        "internal": true,
+        "discernment": [],
+        "meditation": []
+      }
+    }
+  ]
+}

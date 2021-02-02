@@ -1,0 +1,24 @@
+{
+  "key": "search",
+  "title": "Search",
+  "describe": "Search Conduct",
+  "data": [
+    {
+      "uid": 2634981920430,
+      "key": "SEARCH",
+      "title": "SEARCH CONDUCT",
+      "describe": "THE CONDUCT OF SEARCH",
+      "state": {
+        "skillful": [],
+        "unskillful": [],
+        "pursue": true
+      },
+      "properties": {
+        "earth": [],
+        "water": [],
+        "fire": [],
+        "wind": []
+      }
+    }
+  ]
+}

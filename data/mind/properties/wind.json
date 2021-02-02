@@ -1,0 +1,18 @@
+{
+  "key": "wind",
+  "title": "Wind",
+  "describe": "Wind Property",
+  "data": [
+    {
+      "uid": 4932420410413,
+      "key": "WIND",
+      "title": "WIND PROPERTY",
+      "describe": "THIS IS THE WIND PROPERTY",
+      "state": {
+        "internal": true,
+        "discernment": [],
+        "meditation": []
+      }
+    }
+  ]
+}

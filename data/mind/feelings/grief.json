@@ -1,0 +1,24 @@
+{
+  "key": "grief",
+  "title": "Grief",
+  "describe": "Grief Concepts",
+  "data": [
+    {
+      "uid": 3372528192952,
+      "key": "GRIEF",
+      "title": "GRIEF FEELING",
+      "describe": "THE FEELING OF GRIEF",
+      "state": {
+        "skillful": [
+          2728201556035
+        ],
+        "unskillful": [
+          5565792763822
+        ],
+        "pursue": true,
+        "thought": true,
+        "evaluation": true
+      }
+    }
+  ]
+}

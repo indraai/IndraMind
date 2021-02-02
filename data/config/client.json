@@ -2,12 +2,13 @@
   "title": "Client File",
   "describe": "The profile of the Client User",
   "data": {
-    "key": 9300,
-    "name": "Max",
-    "describe": "Max the Drone Wizard",
+    "uid": 5326703772396,
+    "key": "quinn",
+    "name": "Quinn Michaels",
+    "describe": "Programmer, Artist, Imagineer.",
     "prompt": {
-      "emoji": "👽",
-      "text": "Max",
+      "emoji": "🥭",
+      "text": "quinn",
       "colors": {
         "label": {
           "R": 0,
@@ -22,8 +23,8 @@
       }
     },
     "profile": {
-      "name": "Max",
-      "describe": "You need some Super Drones I'm your guy.",
+      "name": "Quinn",
+      "describe": "Just doing my own thing.",
       "avatar": "",
       "background": "",
       "gender": "Cool",
@@ -31,14 +32,6 @@
       "lang": "en"
     },
     "services": {},
-    "modules": [
-      "Voice",
-      "Think",
-      "Creativity",
-      "Imagination",
-      "Awareness",
-      "Sensorium",
-      "Volition"
-    ]
+    "modules": []
   }
 }

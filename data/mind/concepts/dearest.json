@@ -1,0 +1,20 @@
+{
+  "key": "dearest",
+  "title": "Dearest",
+  "describe": "Dearest Concepts",
+  "data": [
+    {
+      "uid": 1360988627877,
+      "key": "DEAREST",
+      "title": "DEAREST CONCEPT",
+      "describe": "THE CONCEPT OF DEAREST.",
+      "type": true,
+      "state": {
+        "cause": 5341572951876,
+        "origin": 5341572951876,
+        "birth": 5341572951876,
+        "source": 5341572951876
+      }
+    }
+  ]
+}

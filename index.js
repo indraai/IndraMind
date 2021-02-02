@@ -41,10 +41,13 @@ fast.get('/', (req, reply) => {
 fast.get('/IndraMind', (req, reply) => {
   return reply.sendFile('IndraMind.js', path.join(__dirname, 'src'));
 })
+fast.get('/concepts', (req, reply) => {
+  return reply.sendFile('index.json', path.join(__dirname, 'data', 'concepts'));
+})
 
 function shellPrompt(_prompt, _text) {
   const {label,text} = _prompt.colors; // set client prompt colors
-  shell.setPrompt(chalk.rgb(label.R, label.G, label.B)(`${_prompt.emoji} ${_prompt.text} > `));
+  shell.setPrompt(chalk.rgb(label.R, label.G, label.B)(`${_prompt.emoji} ${_prompt.text}: `));
   shell.prompt();
   if (_text) console.log(chalk.rgb(text.R, text.G, text.B)(_text));
   shell.prompt();
@@ -92,6 +95,7 @@ fast.listen(client.profile.port).then(() => {
     }).then(answer => {
       shellPrompt(answer.a.agent.prompt, answer.a.text);
       shellPrompt(client.prompt, '');
+      // console.log('ANSWER', JSON.stringify(answer, null, 2));
     }).catch(console.error);
 
   }).on('pause', () => {

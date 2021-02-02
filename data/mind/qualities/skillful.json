@@ -1,0 +1,20 @@
+{
+  "key": "skillful",
+  "title": "Skullful",
+  "describe": "Skillful Qualities",
+  "data": [
+    {
+      "uid": 2728201556035,
+      "key": "SKILLFUL",
+      "title": "SKILLFUL QUALITY",
+      "describe": "THE QUALITY OF SKILLFUL",
+      "properties": {
+        "earth": [],
+        "water": [],
+        "fire": [],
+        "wind": [],
+        "space": []
+      }
+    }
+  ]
+}

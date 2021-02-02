@@ -1,0 +1,18 @@
+{
+  "key": "water",
+  "title": "Water",
+  "describe": "Water Property",
+  "data": [
+    {
+      "uid": 3345522207756,
+      "key": "WATER",
+      "title": "WATER PROPERTY",
+      "describe": "THIS IS THE WATER PROPERTY",
+      "state": {
+        "internal": true,
+        "discernment": [],
+        "meditation": []
+      }
+    }
+  ]
+}

@@ -4,8 +4,9 @@ const Svarga = require('@indra.ai/svarga');
 const fs = require('fs');
 const path = require('path');
 const {vars, me, client} = require('../data/config');
-const modules = require('../modules');
+const {Modules, Security, Mind} = require('../modules');
 const lang = require('../data/lang');
+
 const IndraMind = new Svarga({
   agent: {
     key: me.key,
@@ -21,10 +22,10 @@ const IndraMind = new Svarga({
       return input.trim();
     }
   },
-  vars,
+  vars: {},
   listeners: {},
   deva: {},
-  modules,
+  modules: {},
   func: {
     _setVars(v) {
       for (var [key,value] of iterable) {
@@ -37,76 +38,65 @@ const IndraMind = new Svarga({
       return _file;
     },
     Boot() {
-      this.security = new this.modules.Security({
+      this.vars.birth = Date.now();
+
+      this.security = new Security({
         client,
         state: this.vars,
       });
-      this.modules.Mind = new modules.Mind({
+      this.modules.Mind = new Mind({
         client,
         lang: lang[client.profile.lang],
-      });
-      this.vars.birth = this.modules.Mind.birth;
-
-      this.modules.Psychology = new modules.Psychology({
-        client,
-        blocks: this.vars.blocks,
-      });
-      this.modules.Auditory = new modules.Auditory({
-        client,
-        blocks: this.vars.blocks,
+        birth: this.vars.birth,
+        state: this.vars,
+        security: this.security,
       });
       // load modules
       this.client.modules.forEach(mod => {
-        this.modules[mod] = new modules[mod](this.client);
+        this.modules[mod] = new Modules[mod](this.client);
       });
-
-      let i = this.vars.cns;
-      while (i--) {
-        this.modules.Psychology.blocks[i] = new modules.Node({
-          tru: ' ',
-          psi: ' ',
-          hlc: ' ',
-          act: ' ',
-          mtx: ' ',
-          jux: ' ',
-          pos: ' ',
-          dba: ' ',
-          num: ' ',
-          mfn: ' ',
-          pre: ' ',
-          iob: ' ',
-          seq: ' ',
-          tkb: ' ',
-          rv: ' ',
-          psyExam: ' ',
-        });
-        this.modules.Auditory.blocks[i] = new modules.Node({
-          pho: " ",
-          act: 0,
-          audpsi: " ",
-          AudExam: " ",
-        });
-      }
-
+      // let i = this.vars.blocks;
+      // while (i--) {
+      //   this.modules.Psychology[i] = new modules.Node({});
+      //   this.modules.Auditory[i] = new modules.Node({});
+      // }
     },
-    Thinking() {
-      this.vars.thinking++;
-      this.security.Check(this.vars).then(secCheck => {
-        if (!secCheck) return false;
-        this.vars.timePen = this.vars.time;
-        return this.modules.Sensorium.Process(this.vars);
-      }).then(senseit => {
-        this.func._setVars(senseit);
-        return this.modules.Volition.Process(this.vars);
-      }).then(volit => {
-        this.func._setVars(volit);
-        return this.modules.Voice.Process(this.vars);
-      }).then(voiceit => {
-        this.func._setVars(voiceit);
-      }).catch(console.error);
+
+    question(packet) {
+      return new Promise((resolve, reject) => {
+        if (!packet.id) return reject('NO PACKET ID');
+        this.modules.Mind.Question(packet.q.text).then(answer => {
+          console.log(JSON.stringify(answer, null, 2));
+          return resolve({text: 'answer', data: answer});
+        }).catch(reject);
+      });
+    },
+    conduct(type, packet) {
+      return Promise.resolve({text: `CONDUCT: ${type}`});
+    },
+    meditation(packet) {
+      return Promise.resolve({text: `MEDITATION`})
     },
   },
   methods: {
+    question(packet) {
+      return this.func.question(packet);
+    },
+    body(packet) {
+      return this.func.conduct('body', packet);
+    },
+    verbal(packet) {
+      return this.func.conduct('verbal', packet);
+    },
+    search(packet) {
+      return this.func.conduct('search', packet);
+    },
+    meditation(packet) {
+      return this.func.meditation(packet);
+    },
+    uid() {
+      return Promise.resolve({text:this.uid()});
+    },
     save() {
       return Promise.resolve({text:this.func.SaveState()});
     },
@@ -130,6 +120,7 @@ const IndraMind = new Svarga({
   },
   onInit() {
     this.client = client;
+    this.vars = vars;
     this.func.Boot();
     return Promise.resolve(`🥛 INIT: ${this.agent.name}`)
   },

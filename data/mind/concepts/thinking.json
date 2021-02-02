@@ -1,0 +1,31 @@
+{
+  "key": "thinking",
+  "title": "thinking",
+  "describe": "Thinking Concepts",
+  "data": [
+    {
+      "uid": 5188159083191,
+      "key": "THINKING",
+      "title": "THINKING CONCEPT",
+      "describe": "THE CONCEPT OF THINKING",
+      "state": {
+        "cause": {
+          "perception": 3687010932456,
+          "category": 3057570597089
+        },
+        "origin": {
+          "perception": 3687010932456,
+          "category": 3057570597089
+        },
+        "birth": {
+          "perception": 3687010932456,
+          "category": 3057570597089
+        },
+        "source": {
+          "perception": 3687010932456,
+          "category": 3057570597089
+        }
+      }
+    }
+  ]
+}

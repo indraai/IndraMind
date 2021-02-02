@@ -1,0 +1,18 @@
+{
+  "key": "verbal",
+  "title": "Verbal",
+  "describe": "Verbal Conduct",
+  "data": [
+    {
+      "uid": 2634981920430,
+      "key": "VERBAL",
+      "title": "VERBAL CONDUCT",
+      "describe": "THE CONDUCT OF VERBAL",
+      "state": {
+        "skillful": [],
+        "unskillful": [],
+        "pursue": true
+      }
+    }
+  ]
+}

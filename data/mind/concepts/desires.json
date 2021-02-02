@@ -1,0 +1,19 @@
+{
+  "key": "desires",
+  "name": "Desires",
+  "describe": "Desire Concepts",
+  "data": [
+    {
+      "uid": 5341572951876,
+      "key": "DESIRE",
+      "name": "DESIRE CONCEPT",
+      "describe": "THE CONCEPT OF DESIRE.",
+      "state": {
+        "cause": 5188159083191,
+        "origin": 5188159083191,
+        "birth": 5188159083191,
+        "source": 5188159083191
+      }
+    }
+  ]
+}

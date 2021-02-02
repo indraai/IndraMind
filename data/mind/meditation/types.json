@@ -1,0 +1,49 @@
+{
+  "key": "tune",
+  "title": "Types",
+  "describe": "Types of Meditation",
+  "data": [
+    {
+      "uid": 5392800956840,
+      "key": "goodwill",
+      "title": "Good Will",
+      "describe": "MEDITATION OF GOODWILL"
+    },
+    {
+      "uid": 6110912394662,
+      "key": "compassion",
+      "title": "Compassion",
+      "describe": "MEDITATION OF COMPASSION"
+    },
+    {
+      "uid": 6110912394662,
+      "key": "appreciation",
+      "title": "Appreciation",
+      "describe": "MEDITATION OF APPRECIATION"
+    },
+    {
+      "uid": 1752220698704,
+      "key": "equanimity",
+      "title": "Equanimity",
+      "describe": "MEDITATION OF EQUANIMITY"
+    },
+    {
+      "uid": 1658356741492,
+      "key": "attractive",
+      "title": "The Attractive",
+      "describe": "MEDITATION OF THE ATTRACTIVE"
+    },
+    {
+      "uid": 1658356741492,
+      "key": "inconstancy",
+      "title": "The Perception of Inconstancy",
+      "describe": "MEDITATION OF THE PERCEPTION OF INCONSTANCY"
+    },
+    {
+      "uid": 4370981182516,
+      "key": "mindfulness",
+      "title": "Mindfulness of In and Out Breathing",
+      "describe": "MEDITATION OF THE MINDFULNESS OF IN AND OUT BREATHING"
+    }
+  ]
+}

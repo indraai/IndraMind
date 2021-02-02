@@ -1,0 +1,18 @@
+{
+  "key": "body",
+  "title": "Body",
+  "describe": "Body Conduct",
+  "data": [
+    {
+      "uid": 5169316154963,
+      "key": "BODY",
+      "title": "BODY CONDUCT",
+      "describe": "THE CONDUCT OF BODY.",
+      "state": {
+        "skillful": [],
+        "unskillful": [],
+        "pursue": true
+      }
+    }
+  ]
+}

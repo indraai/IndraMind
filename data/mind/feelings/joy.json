@@ -1,0 +1,24 @@
+{
+  "key": "joy",
+  "title": "Joy",
+  "describe": "Joy Feelings",
+  "data": [
+    {
+      "uid": 5169316154963,
+      "key": "JOY",
+      "title": "JOY FEELING",
+      "describe": "THE FEELING OF JOY",
+      "state": {
+        "skillful": [
+          2728201556035
+        ],
+        "unskillful": [
+          5565792763822
+        ],
+        "pursue": true,
+        "thought": true,
+        "evaluation": true
+      }
+    }
+  ]
+}

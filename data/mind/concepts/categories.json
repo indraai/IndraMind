@@ -1,0 +1,18 @@
+{
+  "key": "categories",
+  "title": "Categories",
+  "describe": "Category Concepts",
+  "data": [
+    {
+      "uid": 3057570597089,
+      "key": "CATEGORY",
+      "title": "CATEGORY CONCEPT",
+      "describe": "THE CONCEPT OF CATEGORIES.",
+      "state": {
+        "joy": 5169316154963,
+        "grief": 3372528192952,
+        "equanimity": 5372602089984
+      }
+    }
+  ]
+}
