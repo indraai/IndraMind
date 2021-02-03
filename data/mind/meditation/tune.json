@@ -1,12 +1,12 @@
 {
   "key": "tune",
-  "title": "Tune",
+  "name": "Tune",
   "describe": "Tune Meditation",
   "data": [
     {
       "uid": 4376884743242,
       "key": "EARTH-TUNE",
-      "title": "TUNE MEDITATION WITH EARTH",
+      "name": "TUNE MEDITATION WITH EARTH",
       "describe": "EARTH PROPERTY MEDITATION TUNING",
       "state": {
         "property": 1783585197498,
@@ -44,7 +44,7 @@
     {
       "uid": 4432711871688,
       "key": "WATER-TUNE",
-      "title": "TUNE MEDITATION WITH WATER",
+      "name": "TUNE MEDITATION WITH WATER",
       "describe": "WATER PROPERTY MEDITATION TUNING",
       "state": {
         "property": 3345522207756,
@@ -80,7 +80,7 @@
     {
       "uid": 2823580600826,
       "key": "FIRE-TUNE",
-      "title": "TUNE MEDITATION WITH FIRE",
+      "name": "TUNE MEDITATION WITH FIRE",
       "describe": "FIRE PROPERTY MEDITATION TUNING",
       "state": {
         "property": 3221616863382,
@@ -116,7 +116,7 @@
     {
       "uid": 2823580600826,
       "key": "WIND-TUNE",
-      "title": "TUNE MEDITATION WITH WIND",
+      "name": "TUNE MEDITATION WITH WIND",
       "describe": "WIND PROPERTY MEDITATION TUNING",
       "state": {
         "property": 4932420410413,
@@ -152,7 +152,7 @@
     {
       "uid": 3318112976631,
       "key": "SPACE-TUNE",
-      "title": "TUNE MEDITATION WITH SPACE",
+      "name": "TUNE MEDITATION WITH SPACE",
       "describe": "SPACE PROPERTY MEDITATION TUNING",
       "state": {
         "property": 4521378587560,

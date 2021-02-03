@@ -1,0 +1,10 @@
+{
+  "key": "meditation",
+  "name": "Meditation Model",
+  "describe": "Meditation Data Model",
+  "paths": {
+    "practice": "/mind/meditation/practice",
+    "tune": "/mind/meditation/tune",
+    "types": "/mind/meditation/types"
+  }
+}

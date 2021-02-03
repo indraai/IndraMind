@@ -18,7 +18,6 @@ function setThinking(_uid) {
 
 class Thinking {
   constructor(uid) {
-    console.log('    THINKING: ', uid);
     this.THINKING = setThinking(uid);
   }
 }

@@ -1,0 +1,12 @@
+{
+  "key": "properties",
+  "name": "Properties Model",
+  "describe": "Properties Data Model",
+  "paths": {
+    "earth": "/mind/properties/earth",
+    "fire": "/mind/properties/fire",
+    "space": "/mind/properties/space",
+    "water": "/mind/properties/water",
+    "wind": "/mind/properties/wind"
+  }
+}

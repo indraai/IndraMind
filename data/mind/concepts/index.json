@@ -1,0 +1,12 @@
+{
+  "key": "concepts",
+  "name": "Concepts Model",
+  "describe": "Concepts Data Model",
+  "paths": {
+    "categories": "/mind/concepts/categories",
+    "dearest": "/mind/concepts/dearest",
+    "desires": "/mind/concepts/desires",
+    "perceptions": "/mind/concepts/perceptions",
+    "thinking": "/mind/concepts/thinking"
+  }
+}

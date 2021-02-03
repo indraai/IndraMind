@@ -7,7 +7,6 @@ function setJoy(_uid) {
 
 class Joy {
   constructor(uid) {
-    console.log('        JOY: ', uid);
     this.JOY = setJoy(uid);
   }
 }

@@ -1,12 +1,12 @@
 {
   "key": "grief",
-  "title": "Grief",
+  "name": "Grief",
   "describe": "Grief Concepts",
   "data": [
     {
       "uid": 3372528192952,
       "key": "GRIEF",
-      "title": "GRIEF FEELING",
+      "name": "GRIEF FEELING",
       "describe": "THE FEELING OF GRIEF",
       "state": {
         "skillful": [

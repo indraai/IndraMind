@@ -1,12 +1,12 @@
 {
   "key": "water",
-  "title": "Water",
+  "name": "Water",
   "describe": "Water Property",
   "data": [
     {
       "uid": 3345522207756,
       "key": "WATER",
-      "title": "WATER PROPERTY",
+      "name": "WATER PROPERTY",
       "describe": "THIS IS THE WATER PROPERTY",
       "state": {
         "internal": true,

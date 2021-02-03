@@ -7,7 +7,6 @@ function setPractice(_uid) {
 
 class Practice {
   constructor(uid) {
-    console.log('            PRACTICE: ', uid);
     this.PRACTICE = setPractice(uid);
   }
 }

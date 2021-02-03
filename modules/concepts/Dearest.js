@@ -19,6 +19,18 @@ class Dearest {
     this.input = input;
     this.DEAREST = setDearest(input);
   }
+  get Birth() {
+    return this.DEAREST.birth;
+  }
+  get Cause() {
+    return this.DEAREST.cause;
+  }
+  get Origin() {
+    return this.DEAREST.origin;
+  }
+  get Source() {
+    return this.DEAREST.source;
+  }
 }
 
 module.exports = Dearest;

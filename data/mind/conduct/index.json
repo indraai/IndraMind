@@ -1,0 +1,10 @@
+{
+  "key": "conduct",
+  "name": "Conduct Model",
+  "describe": "Conduct Data Model",
+  "paths": {
+    "body": "/mind/conduct/body",
+    "search": "/mind/conduct/search",
+    "verbal": "/mind/conduct/verbal"
+  }
+}

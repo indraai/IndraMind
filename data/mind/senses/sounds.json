@@ -1,12 +1,12 @@
 {
   "key": "sounds",
-  "title": "Sounds",
+  "name": "Sounds",
   "describe": "Sounds Sense",
   "data": [
     {
       "uid": 3670624912863,
       "key": "SOUND",
-      "title": "SOUND SENSE",
+      "name": "SOUND SENSE",
       "describe": "THE SENSE OF SOUND",
       "state": {
         "skillful": [],

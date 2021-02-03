@@ -1,12 +1,12 @@
 {
   "key": "wind",
-  "title": "Wind",
+  "name": "Wind",
   "describe": "Wind Property",
   "data": [
     {
       "uid": 4932420410413,
       "key": "WIND",
-      "title": "WIND PROPERTY",
+      "name": "WIND PROPERTY",
       "describe": "THIS IS THE WIND PROPERTY",
       "state": {
         "internal": true,

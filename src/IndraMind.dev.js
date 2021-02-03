@@ -66,7 +66,6 @@ const IndraMind = new Svarga({
       return new Promise((resolve, reject) => {
         if (!packet.id) return reject('NO PACKET ID');
         this.modules.Mind.Question(packet.q.text).then(answer => {
-          console.log(JSON.stringify(answer, null, 2));
           return resolve({text: 'answer', data: answer});
         }).catch(reject);
       });

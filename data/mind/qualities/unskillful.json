@@ -1,12 +1,12 @@
 {
   "key": "unskillful",
-  "title": "Unskillful",
+  "name": "Unskillful",
   "describe": "Unskillful Qualities",
   "data": [
     {
       "uid": 5565792763822,
       "key": "UNSKILLFUL",
-      "title": "UNSKILLFUL QUALITIY",
+      "name": "UNSKILLFUL QUALITIY",
       "describe": "THIS QUALITY OF UNSKILLFUL",
       "properties": {
         "earth": [],

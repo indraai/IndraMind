@@ -1,0 +1,12 @@
+{
+  "key": "data",
+  "title": "Model",
+  "describe": "Data Model",
+  "paths": {
+    "config": "/data/config",
+    "corpus": "/data/corpus",
+    "lang": "/data/lang",
+    "mind": "/data/mind",
+    "state": "/data/state"
+  }
+}

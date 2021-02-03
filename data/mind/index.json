@@ -1,0 +1,14 @@
+{
+  "key": "mind",
+  "name": "Mind Model",
+  "describe": "Mind Data Model",
+  "paths": {
+    "concepts": "/mind/concepts",
+    "conduct": "/mind/conduct",
+    "feelings": "/mind/feelings",
+    "meditation": "/mind/meditation",
+    "properties": "/mind/properties",
+    "qualities": "/mind/qualities",
+    "senses": "/mind/senses"
+  }
+}

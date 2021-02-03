@@ -1,33 +1,27 @@
-
+<!DOCTYPE html>
 <html>
 <head>
-<title>Ghost Strong AI Guaranteed to Think with MSIE</title>
+<title>Indra Mind</title>
 <meta name="description" content="Indra AI demonstrates Natural Language Understanding (NLU)." />
 <meta name="keywords" content="AGI, AiMind, AI Mind Maintainer, artificial intelligence, javascript, MSIE, natural language understanding, NLU, prior art, spreading activation, strong AI" />
 
-  <!-- include IndraMind.js -->
-  <script type="text/javascript" src="/IndraMind"></script>
+  <script type="text/javascript" src="/public/js/cash.min.js"></script>
+  <script type="text/javascript" src="/public/js/axios.min.js"></script>
   <link rel="stylesheet" href="/public/css/main.css" />
-
 </head>
-<!--*********AI code is above; visible Mind is below**********-->
-
-<body bgcolor="white" onKeyUp="if(event.keyCode==9) Tab();" onLoad="MindBoot()">
+<body bgcolor="white">
 
 <a name="top"></a>
 
-<main>
+<header>
   <h1>#IndraMind</h1>
-  <form name="modes">
-    <input type="checkbox" name="cb1" onClick="Transcript()" checked> Transcript
-    <input type="checkbox" name="cb2" onClick="Tutorial();"> Tutorial
-    <input type="checkbox" name="cb3" onClick="HCI();"> Diagnostic
-    <input type="checkbox" name="cb4" onClick="Shutdown();">
-    <font color="fuchsia"><b>HALT</b></font>
-  </form>
-  <form id="question" onSubmit="if (this.submitted) return true; else {CR(); return false;};">
-    <h2>Ask Indra</h2>
-    <input type="text" name="ear" value="" size="80" onKeyDown="AudListen()" autocomplete="off">
+</header>
+<main>
+  <form id="question" name="question">
+    <div class="qBox">
+      <h2>Ask Indra</h2>
+      <input type="text" name="question" value="" autocomplete="off">
+    </div>
   </form>
 
   <div id="mouth">Waiting...</div>
@@ -38,31 +32,26 @@
 </main>
 <footer>
   <div>Offer to install the Indra AI, and to be an IndraAI Mind Cadet</div>
-  <div>Copyright 2021 &copy; Indra.ai, Quinn Michaels, SpoonKids</div>
+  <div>Copyright 2021 &copy; Indra.ai, Quinn Michaels</div>
 </footer>
 
-<!-- The Diagnostic columns are present but invisible. -->
 <div id="psicolumn"></div>
 
 <div id="audcolumn"></div>
 
-<div id="cosmos">
-<!-- <font color="navy"><strong><pre>
-   Subject associates to verb.   Verb associates to object.    Object free-associates.
-  |--------------------------|  |--------------------------|  |----------------------|
-  | CATS associates to CHASE |  | EAT associates to  BUGS  |  | FISH activates CATCH |
-  | CATS associates to LOVE  |  | EAT associates to +FISH  |  | FISH activates LIKE  |
-  | CATS associates to HATE  |  | EAT associates to  BIRDS |  | FISH activates EAT   |
-  | CATS associates to EAT   |   --------------------------   | FISH activates CHASE |
-  | CATS associates to NEED  |                                | FISH activates AVOID |
-   --------------------------                                   ---------------------
+<div id="cosmos"></div>
 
-</pre></strong></font>
--->
-</div>
-
+<script>
+  $('#question').on('submit', e => {
+    e.preventDefault();
+    console.log('ASKING QUESTION')
+    axios.post('/question', {
+      text: $('#question input').val(),
+      created: Date.now(),
+    }).then(answer => {
+      console.log('ANSWER: ', answer.data)
+    }).catch(console.error);
+  });
+</script>
 </body>
-<!-- Change Log comments of the HTML variety:
-Mon. "11jan2020" Indra Takeover
-(end of HTML Change Log comments) -->
 </html>

@@ -1,0 +1,10 @@
+{
+  "key": "feelings",
+  "name": "Feelings Model",
+  "describe": "Feelings Data Model",
+  "paths": {
+    "equanimity": "/mind/feelings/equanimity",
+    "grief": "/mind/feelings/grief",
+    "joy": "/mind/feelings/joy"
+  }
+}

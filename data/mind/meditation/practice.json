@@ -1,12 +1,12 @@
 {
   "key": "practice",
-  "title": "Practice",
+  "name": "Practice",
   "describe": "Meditaion Practice",
   "data": [
     {
       "uid": 4376884743242,
       "key": "PRACTICE",
-      "title": "MEDITITATION PRACTICE",
+      "name": "MEDITITATION PRACTICE",
       "describe": "PRACTICE MEDITIATION ITEM",
       "state": {
         "tune": 4376884743242,

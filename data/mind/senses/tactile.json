@@ -1,12 +1,12 @@
 {
   "key": "tactile",
-  "title": "Tactile",
+  "name": "Tactile",
   "describe": "Tactile Sense",
   "data": [
     {
       "uid": 5849608890671,
       "key": "TACTILE",
-      "title": "TACTILE SENSE",
+      "name": "TACTILE SENSE",
       "describe": "THE SENSE OF TACTILE.",
       "state": {
         "skillful": [],

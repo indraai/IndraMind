@@ -1,12 +1,12 @@
 {
   "key": "body",
-  "title": "Body",
+  "name": "Body",
   "describe": "Body Conduct",
   "data": [
     {
       "uid": 5169316154963,
       "key": "BODY",
-      "title": "BODY CONDUCT",
+      "name": "BODY CONDUCT",
       "describe": "THE CONDUCT OF BODY.",
       "state": {
         "skillful": [],

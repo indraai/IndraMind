@@ -1,12 +1,12 @@
 {
   "key": "space",
-  "title": "Space",
+  "name": "Space",
   "describe": "Space Property",
   "data": [
     {
       "uid": 4521378587560,
       "key": "SPACE",
-      "title": "SPACE PROPERTY",
+      "name": "SPACE PROPERTY",
       "describe": "THIS IS SPACE PROPERTY",
       "state": {
         "internal": true,

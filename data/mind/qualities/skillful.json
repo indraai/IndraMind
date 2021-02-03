@@ -1,19 +1,19 @@
 {
   "key": "skillful",
-  "title": "Skullful",
+  "name": "Skullful",
   "describe": "Skillful Qualities",
   "data": [
     {
       "uid": 2728201556035,
       "key": "SKILLFUL",
-      "title": "SKILLFUL QUALITY",
+      "name": "SKILLFUL QUALITY",
       "describe": "THE QUALITY OF SKILLFUL",
       "properties": {
-        "earth": [],
-        "water": [],
-        "fire": [],
-        "wind": [],
-        "space": []
+        "earth": [1783585197498],
+        "fire": [3221616863382],
+        "space": [4521378587560],
+        "water": [3345522207756],
+        "wind": [4932420410413]
       }
     }
   ]

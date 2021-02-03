@@ -1,12 +1,12 @@
 {
   "key": "aromas",
-  "title": "Aromas",
+  "name": "Aromas",
   "describe": "Aroma Sense",
   "data": [
     {
       "uid": 2590385416190,
       "key": "AROMA",
-      "title": "AROMA SENSE",
+      "name": "AROMA SENSE",
       "describe": "THE SENSE AROMA",
       "state": {
         "skillful": [],

@@ -1,0 +1,10 @@
+{
+  "key": "config",
+  "title": "Configuration",
+  "describe": "Configuration Model",
+  "paths": {
+    "client": "/data/config/client",
+    "me": "/data/config/me",
+    "vars": "/data/config/vars"
+  }
+}

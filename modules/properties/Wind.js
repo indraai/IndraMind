@@ -7,7 +7,6 @@ function setWind(_id) {
 
 class Wind {
   constructor(id) {
-    console.log('            WIND: ', id);
     this.WIND = setWind(id);
   }
 }

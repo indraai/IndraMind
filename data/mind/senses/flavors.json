@@ -1,12 +1,12 @@
 {
   "key": "flavors",
-  "title": "Flavors",
+  "name": "Flavors",
   "describe": "Flavor Sense",
   "data": [
     {
       "uid": 5916598459405,
       "key": "FLAVORS",
-      "title": "FLAVORS SENSE",
+      "name": "FLAVORS SENSE",
       "describe": "THIS SENSE OF FLAVORS",
       "state": {
         "skillful": [],

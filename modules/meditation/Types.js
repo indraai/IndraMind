@@ -7,7 +7,6 @@ function setTypes(_uid) {
 
 class Types {
   constructor(uid) {
-    console.log('            TYPES: ', uid);
     this.TYPES = setTypes(uid);
   }
 }

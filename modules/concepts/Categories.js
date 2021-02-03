@@ -15,8 +15,7 @@ function setCategories(_uid) {
 
 class Categories {
   constructor(uid) {
-    console.log('      CATEGORY: ', uid);
-    this.PERCEPTION = setCategories(uid);
+    this.CATEGORY = setCategories(uid);
   }
 }
 

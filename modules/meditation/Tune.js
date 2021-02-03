@@ -7,7 +7,6 @@ function setTune(_uid) {
 
 class Tune {
   constructor(uid) {
-    console.log('            TUNE: ', uid);
     this.TUNE = setTune(uid);
   }
 }

@@ -7,7 +7,6 @@ function setSearch(_uid) {
 
 class Search {
   constructor(uid) {
-    console.log('            SEARCH: ', uid);
     this.SEARCH = setSearch(uid);
   }
 }

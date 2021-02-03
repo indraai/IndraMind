@@ -7,7 +7,6 @@ function setBody(_uid) {
 
 class Body {
   constructor(uid) {
-    console.log('            BODY: ', uid);
     this.BODY = setBody(uid);
   }
 }

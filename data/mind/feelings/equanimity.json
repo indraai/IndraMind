@@ -1,12 +1,12 @@
 {
   "key": "equanimity",
-  "title": "Equanimity",
+  "name": "Equanimity",
   "describe": "Equanimity Concepts",
   "data": [
     {
       "uid": 5372602089984,
       "key": "EQUANIMITY",
-      "title": "EQUANIMITY FEELING",
+      "name": "EQUANIMITY FEELING",
       "describe": "THE FEELING OF EQUANIMITY",
       "state": {
         "skillful": [

@@ -15,8 +15,7 @@ function setDesires(_uid) {
 
 class Desires {
   constructor(uid) {
-    console.log('  DESIRES: ', uid);
-    this.DESIRES = setDesires(uid);
+    this.DESIRE = setDesires(uid);
   }
 }
 

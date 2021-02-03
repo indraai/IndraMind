@@ -1,0 +1,9 @@
+{
+  "key": "qualities",
+  "name": "Qualities Model",
+  "describe": "Qualities Data Model",
+  "paths": {
+    "skillful": "/mind/qualities/skillful",
+    "unskillful": "/mind/qualities/unskillful"
+  }
+}

@@ -7,7 +7,6 @@ function setVerbal(_uid) {
 
 class Verbal {
   constructor(uid) {
-    console.log('            VERBAL: ', uid);
     this.VERBAL = setVerbal(uid);
   }
 }

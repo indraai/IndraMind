@@ -7,8 +7,7 @@ function setGrief(_uid) {
 
 class Grief {
   constructor(uid) {
-    console.log('        GRIEF: ', uid);
-    this.JOY = setGrief(uid);
+    this.GRIEF = setGrief(uid);
   }
 }
 

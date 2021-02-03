@@ -7,7 +7,6 @@ function setSpace(_id) {
 
 class Space {
   constructor(id) {
-    console.log('            SPACE: ', id);
     this.SPACE = setSpace(id);
   }
 }

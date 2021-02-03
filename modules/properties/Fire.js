@@ -7,7 +7,6 @@ function setFire(_id) {
 
 class Fire {
   constructor(id) {
-    console.log('            FIRE: ', id);
     this.FIRE = setFire(id);
   }
 }

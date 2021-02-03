@@ -7,7 +7,6 @@ function setEarth(_id) {
 
 class Earth {
   constructor(id) {
-    console.log('            EARTH: ', id);
     this.EARTH = setEarth(id);
   }
 }

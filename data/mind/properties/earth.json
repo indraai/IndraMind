@@ -1,12 +1,12 @@
 {
   "key": "earth",
-  "title": "Earth",
+  "name": "Earth",
   "describe": "Earth Property",
   "data": [
     {
       "uid": 1783585197498,
       "key": "EARTH 0",
-      "title": "EARTH KEY 0",
+      "name": "EARTH KEY 0",
       "describe": "THIS IS EARTH KEY 0",
       "state": {
         "internal": true,

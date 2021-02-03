@@ -1,12 +1,12 @@
 {
   "key": "ideas",
-  "title": "Ideas",
+  "name": "Ideas",
   "describe": "Ideas Sense",
   "data": [
     {
       "uid": 6393983142624,
       "key": "IDEA",
-      "title": "IDEA SENSE",
+      "name": "IDEA SENSE",
       "describe": "THE SENSE OF IDEAS",
       "state": {
         "skillful": [],

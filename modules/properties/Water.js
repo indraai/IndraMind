@@ -7,7 +7,6 @@ function setWater(_id) {
 
 class Water {
   constructor(id) {
-    console.log('            WATER: ', id);
     this.WATER = setWater(id);
   }
 }

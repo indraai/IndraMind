@@ -14,7 +14,6 @@ function setPerceptions(_uid) {
 }
 class Perceptions {
   constructor(uid) {
-    console.log('      PERCEPTION: ', uid);
     this.PERCEPTION = setPerceptions(uid);
   }
 }

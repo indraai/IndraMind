@@ -1,0 +1,12 @@
+{
+  "key": "senses",
+  "name": "Senses Model",
+  "describe": "Senses Data Model",
+  "paths": {
+    "aromas": "/mind/senses/aromas",
+    "flavors": "/mind/senses/flavors",
+    "ideas": "/mind/senses/ideas",
+    "sounds": "/mind/senses/sounds",
+    "tactile": "/mind/senses/tactile"
+  }
+}

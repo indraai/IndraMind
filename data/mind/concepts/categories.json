@@ -1,12 +1,12 @@
 {
   "key": "categories",
-  "title": "Categories",
+  "name": "Categories",
   "describe": "Category Concepts",
   "data": [
     {
       "uid": 3057570597089,
       "key": "CATEGORY",
-      "title": "CATEGORY CONCEPT",
+      "name": "CATEGORY CONCEPT",
       "describe": "THE CONCEPT OF CATEGORIES.",
       "state": {
         "joy": 5169316154963,

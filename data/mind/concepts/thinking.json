@@ -1,12 +1,12 @@
 {
   "key": "thinking",
-  "title": "thinking",
+  "name": "thinking",
   "describe": "Thinking Concepts",
   "data": [
     {
       "uid": 5188159083191,
       "key": "THINKING",
-      "title": "THINKING CONCEPT",
+      "name": "THINKING CONCEPT",
       "describe": "THE CONCEPT OF THINKING",
       "state": {
         "cause": {

@@ -1,12 +1,12 @@
 {
   "key": "fire",
-  "title": "Fire",
+  "name": "Fire",
   "describe": "Fire Property",
   "data": [
     {
       "uid": 3221616863382,
       "key": "FIRE",
-      "title": "FIRE PROPERTY",
+      "name": "FIRE PROPERTY",
       "describe": "THIS IS FIRE PROPERTY",
       "state": {
         "internal": true,

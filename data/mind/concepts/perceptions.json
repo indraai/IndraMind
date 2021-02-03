@@ -1,12 +1,12 @@
 {
   "key": "perceptions",
-  "title": "Perceptions",
+  "name": "Perceptions",
   "describe": "Perception Concepts",
   "data": [
     {
       "uid": 3687010932456,
       "key": "PERCEPTION",
-      "title": "PERCEPTION CONCEPT",
+      "name": "PERCEPTION CONCEPT",
       "describe": "THE CONCEPT OF PERCEPTIONS.",
       "state": {
         "joy": 5169316154963,

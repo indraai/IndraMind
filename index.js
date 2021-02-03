@@ -8,7 +8,7 @@ const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
 const fast = require('fastify')({
-  logger:true,
+  logger:false,
 });
 const fastStatic = require('fastify-static');
 const readline = require('readline');
@@ -32,18 +32,57 @@ fast.register(fastStatic, {
   decorateReply: false
 });
 
-// setup default index.html file serve
-fast.get('/', (req, reply) => {
-  return reply.sendFile('index.html', path.join(__dirname, 'assets'));
-})
+// setup routes and handlers
+const handlers = {
+  default(req, reply) {
+    return reply.sendFile('index.html', path.join(__dirname, 'assets'));
+  },
+  mind(req, reply) {
+    let _path = '';
+    if (!req.params.section) _path = path.join(__dirname, 'data', 'mind');
+    else _path = path.join(__dirname, 'data', 'mind', req.params.section);
+    const mod = req.params.module ? req.params.module + '.json' : 'index.json';
+    console.log('DATA PATH', _path);
+    return reply.sendFile(mod, _path);
+  },
+  question(req, reply) {
+    return IndraMind.question({
+      text: req.body.text,
+      created: req.body.created,
+    });
+  }
+}
+const routes = [
+  {
+    method: 'GET',
+    url: '/',
+    handler: handlers.default,
+  },
+  {
+    method: 'GET',
+    url: '/mind',
+    handler: handlers.mind,
+  },
+  {
+    method: 'GET',
+    url: '/mind/:section',
+    handler: handlers.mind,
+  },
+  {
+    method: 'GET',
+    url: '/mind/:section/:module',
+    handler: handlers.mind,
+  },
+  {
+    method: 'POST',
+    url: '/question',
+    handler: handlers.question
+  }
+]
+routes.forEach(rt => {
+  fast.route(rt);
+});
 
-// setup Indra Mind direct link
-fast.get('/IndraMind', (req, reply) => {
-  return reply.sendFile('IndraMind.js', path.join(__dirname, 'src'));
-})
-fast.get('/concepts', (req, reply) => {
-  return reply.sendFile('index.json', path.join(__dirname, 'data', 'concepts'));
-})
 
 function shellPrompt(_prompt, _text) {
   const {label,text} = _prompt.colors; // set client prompt colors

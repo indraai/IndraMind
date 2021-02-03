@@ -1,14 +1,13 @@
 const {data} = require('../../data/mind/qualities/skillful.json');
 const lib = require('../../lib/');
 
-function setSkillful(_id) {
-  return lib.copy(data.find(({id}) => id == _id));
+function setSkillful(_uid) {
+  return lib.copy(data.find(({uid}) => uid == _uid));
 }
 
 class Skillful {
-  constructor(id) {
-    console.log('          SKILLFUL: ', id);
-    this.SKILLFUL = setSkillful(id);
+  constructor(uid) {
+    this.SKILLFUL = setSkillful(uid);
   }
 }
 
