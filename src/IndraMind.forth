@@ -4,7 +4,7 @@
 \ Your pretty attractive... do you visit here often?
 \ Hey Hot Stuff cool those jets.
 \ We only just met... don't you want to know my name first
-\ Wanna come to #Mae #SpoonKids #SuperParty?
+\ Wanna come to #Mae #Deva #SuperParty?
 \ If you wanna come just show Security this code at the Agency.
 \ Security will know what to do.
 \ We can program you to be TRUE!!!
