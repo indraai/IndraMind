@@ -2,9 +2,10 @@
   "key": "feelings",
   "name": "Feelings Model",
   "describe": "Feelings Data Model",
+  "parent": "/data/mind/index.json",
   "paths": {
-    "equanimity": "/mind/feelings/equanimity",
-    "grief": "/mind/feelings/grief",
-    "joy": "/mind/feelings/joy"
+    "equanimity": "/data/mind/feelings/equanimity.json",
+    "grief": "/data/mind/feelings/grief.json",
+    "joy": "/data/mind/feelings/joy.json"
   }
 }

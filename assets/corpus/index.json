@@ -1,0 +1,10 @@
+{
+  "key": "corpus",
+  "title": "Corpus",
+  "describe": "Indra Corpus",
+  "parent": "/data/index.json",
+  "paths": {
+    "main": "/data/corpus/main.feecting",
+    "mind": "/data/corpus/mind.feecting"
+  }
+}

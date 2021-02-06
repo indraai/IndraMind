@@ -1,0 +1,54 @@
+{
+  "lang": "es",
+  "describe": "The Spanish Language Model",
+  "model": [
+    {
+      "word": "I",
+      "define": "Referring to Yourself",
+      "map": [
+        {
+          "pho": "I",
+          "audpsi": 701
+        }
+      ],
+      "state": {
+        "tru": 8,
+        "psi": 701,
+        "pos": 7,
+        "dba": 1,
+        "num": 1,
+        "mfn": 0,
+        "pre": 0,
+        "seq": 800,
+        "tkb": 26,
+        "rv": 23
+      }
+    },
+    {
+      "word": "AM",
+      "define": "Reffering to action AM.",
+      "map": [
+        {
+          "pho": "A",
+          "audpsi": 0
+        },
+        {
+          "pho": "M",
+          "audpsi": 800
+        }
+      ],
+      "state": {
+        "tru": 8,
+        "psi": 701,
+        "pos": 7,
+        "dba": 1,
+        "num": 1,
+        "mfn": 0,
+        "pre": 0,
+        "seq": 800,
+        "tkb": 26,
+        "rv": 23
+      }
+    }
+  ]
+}

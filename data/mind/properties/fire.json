@@ -2,6 +2,7 @@
   "key": "fire",
   "name": "Fire",
   "describe": "Fire Property",
+  "parent": "/data/mind/properties/index.json",
   "data": [
     {
       "uid": 3221616863382,

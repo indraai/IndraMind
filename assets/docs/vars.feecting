@@ -1,0 +1,108 @@
+# Indra Mind Variables
+
+## DISCLAIMER
+> This is a Document Listing of The Indra Mind Variables.
+
+// VARIABLES
+$FEECTING = https://github.com/indraai/language-feecting/
+
+@quinn = Quinn Michaels
+
+-- BEGIN:OUTLINE
+
+  1. Who? #IndraMind
+  2. What? Variables
+  3. When? 2021 Forward
+  4. Where? Mind Architecture
+  5. Why? Variables should be documented.
+
+-- END:OUTLINE
+
+-- BEGIN:PROGRAM
+
+# Variables
+
+- `blocks ($cns)`: (adjustable) size of "central nervous system" memory in the AI
+- `time ($t)`:  lifetime Ghost AI experiential time "$t"
+- `timepen ($tpu)`: time-pen-ultimate before current I/O.
+- `timedirect ($tdo)`: time-of-direct-object for a parser module.
+
+- `timeknowledge ($tkb)`: time-in-knowledge-base of an idea. The EnParser() module stores time-of-verb $tvb in the k[13] $tkb slot of the subject of a sentence being stored at the time-of-subject $tsj time-point in the Psy conceptual array. The EnParser module stores $tkb as equal to $tdo (time of the direct object) in the Psy array row of the verb at time-of-verb $tvb. Thus for subjects $tkb means "verb" and for verbs $tkb means "direct object". No $tkb is stored for a direct object, because the associative tags go from subject to verb to object (SVO) but no further.
+
+- `thinking ($isolation)`: counter of thought-cycles spent in "thinking" with no human input.
+
+- `chrlen ($len)`: length, for avoiding input non-words. The variable increments with each additional character during AudInput, and is reset to zero at the end of InStantiate or OldConcept or NewConcept, so that the auditory engram recall vector rv may be set for the first character of a word when the word-length is a unitary one.
+- `mind ($brain)`:
+- `alert`: (all points bulletin) -- is a variable for displaying on-screen messages about what is happening internally in the AI Mind.
+- `outputplus`:
+- `preposition ($prep)`: a preposition used in the EnPrep mind-module for prepositions.
+- `cycles ($rjc)`: counter of rejuvenation cycles
+- `birth ($dob)`: Date of birth
+- `phoneme ($pho)`: a "phoneme" or character of auditory input.
+- `audconcept ($audpsi)`: concept number of word in @ear auditory memory array.
+- `concpet ($psi)`: variable for an element of the @psy conceptual array, with a numeric identifier serving as an mtx tag for the same concept in another language.
+
+
+
+Change variables
+cns = blocks
+t = time
+tpu = timepen
+isolation = thinking
+len = chrlen
+brain = mind
+apb = alert
+outputplus = outputPlus
+prep = preposition
+tdo = timeDirect
+tkb = timeKnowledge
+rjc = cycles
+dob = birth
+
+pho = phoneme
+audpsi = audconcept
+psi = concept
+
+// old mind
+changes "psi" variables to "indra" variables
+variable psi = variable indra
+variable psi20 = variable indra20
+variable psibase = variable indrabase
+variable actpsi = variable actindra
+variable qv2psi = variable qv2indra
+variable prepsi = variable preindra
+variable audpsi = variable audindra // change to audConcept
+
+variable monopsi = variable monoindra
+variable newpsi = variable newindra
+
+
+-- END:PROGRAM
+
+-- BEGIN:META
+
+  Title: Indra Mind Variables
+  Version: 1.0
+  Author: @quinn
+  Date: Feb 4, 2021
+  Copyright: Copyright (c)2021 @quinn. All Rights Reserved
+  License:
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this PROGRAM and associated documentation files (the "PROGRAM"),
+    to deal in the PROGRAM without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the PROGRAM, and to permit persons to whom the PROGRAM
+    is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the PROGRAM.
+
+    THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+    OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+    ARISING FROM, OUT OF OR IN CONNECTION WITH THE PROGRAM OR THE USE OR
+    OTHER DEALINGS IN THE PROGRAM.
+
+-- END:META

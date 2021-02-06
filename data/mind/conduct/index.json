@@ -2,9 +2,10 @@
   "key": "conduct",
   "name": "Conduct Model",
   "describe": "Conduct Data Model",
+  "parent": "/data/mind/index.json",
   "paths": {
-    "body": "/mind/conduct/body",
-    "search": "/mind/conduct/search",
-    "verbal": "/mind/conduct/verbal"
+    "body": "/data/mind/conduct/body.json",
+    "search": "/data/mind/conduct/search.json",
+    "verbal": "/data/mind/conduct/verbal.json"
   }
 }

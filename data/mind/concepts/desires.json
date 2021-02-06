@@ -2,6 +2,7 @@
   "key": "desires",
   "name": "Desires",
   "describe": "Desire Concepts",
+  "parent": "/data/mind/concepts/index.json",
   "data": [
     {
       "uid": 5341572951876,

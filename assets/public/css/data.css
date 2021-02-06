@@ -1,0 +1,72 @@
+#ClientData {
+  padding: 1rem;
+}
+#ClientData::before {
+  content: "🏡 CLIENT";
+  font-size: 3rem;
+  color: var(--color-light-green);
+}
+#MailData {
+  padding: 1rem;
+}
+#MailData::before {
+  content: "📨 MAIL";
+  font-size: 3rem;
+  color: var(--color-light-purple);
+}
+#ZinesData {
+  padding: 1rem;
+}
+#ZinesData::before {
+  content: "📰 ZINES";
+  font-size: 3rem;
+  color: var(--color-light-orange);
+}
+#DocsData {
+  padding: 1rem;
+}
+#DocsData::before {
+  content: "📑 DOCS";
+  font-size: 3rem;
+  color: var(--color-light-pink);
+}
+#CorpusData {
+  padding: 1rem;
+}
+#CorpusData::before {
+  content: "📜 CORPUS";
+  font-size: 3rem;
+  color: var(--color-light-yellow);
+}
+#MindData {
+  padding: 1rem;
+}
+#MindData::before {
+  content: "🧠 MIND";
+  font-size: 3rem;
+  color: var(--color-light-baby-blue);
+}
+#StateData {
+  padding: 1rem;
+}
+#StateData::before {
+  content: "🤖 STATE";
+  font-size: 3rem;
+  color: var(--color-light-baby-blue);
+}
+#HelpData {
+  padding: 1rem;
+}
+#HelpData::before {
+  content: "💁 HELP";
+  font-size: 3rem;
+  color: var(--color-light-baby-blue);
+}
+#LangData {
+  padding: 1rem;
+}
+#LangData::before {
+  content: "🙊 LANG";
+  font-size: 3rem;
+  color: var(--color-aqua);
+}

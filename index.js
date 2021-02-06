@@ -24,12 +24,35 @@ const {IndraMind} = require('./src/IndraMind.dev.js');
 fast.register(fastStatic, {
   root: path.join(__dirname, 'assets', 'public'),
   prefix: '/public/',
+  prefixAvoidTrailingSlash: true,
+  list: {
+    format: 'json',
+    names: ['index', 'index.json', '/', '']
+  },
 });
 
 fast.register(fastStatic, {
   root: path.join(__dirname, 'data'),
   prefix: '/data/',
-  decorateReply: false
+  list: {
+    format: 'json',
+  },
+  send: {
+    index:'index.json'
+  },
+  decorateReply: false,
+});
+
+fast.register(fastStatic, {
+  root: path.join(__dirname, 'services'),
+  prefix: '/services/',
+  list: {
+    format: 'json',
+  },
+  send: {
+    index:'index.json'
+  },
+  decorateReply: false,
 });
 
 // setup routes and handlers
@@ -37,13 +60,24 @@ const handlers = {
   default(req, reply) {
     return reply.sendFile('index.html', path.join(__dirname, 'assets'));
   },
-  mind(req, reply) {
-    let _path = '';
-    if (!req.params.section) _path = path.join(__dirname, 'data', 'mind');
-    else _path = path.join(__dirname, 'data', 'mind', req.params.section);
-    const mod = req.params.module ? req.params.module + '.json' : 'index.json';
-    console.log('DATA PATH', _path);
-    return reply.sendFile(mod, _path);
+  docs(req, reply) {
+    if (!req.params.file) req.params.file = 'main.feecting';
+    const _text = fs.readFileSync(path.join(__dirname, 'assets', 'docs', req.params.file), 'utf8');
+    return reply.send(_text);
+  },
+  zines(req, reply) {
+    if (!req.params.file) req.params.file = 'main.feecting';
+    const _text = fs.readFileSync(path.join(__dirname, 'assets', 'zines', req.params.file), 'utf8');
+    return reply.send(_text);
+  },
+  help(req, reply) {
+    if (!req.params.file) req.params.file = 'main.feecting';
+    const _text = fs.readFileSync(path.join(__dirname, 'assets', 'help', req.params.file), 'utf8');
+    return reply.send(_text);
+  },
+  corpus(req, reply) {
+    const _text = fs.readFileSync(path.join(__dirname, 'assets', 'corpus', 'main.feecting'), 'utf8');
+    return reply.send(_text);
   },
   question(req, reply) {
     return IndraMind.question({
@@ -60,24 +94,44 @@ const routes = [
   },
   {
     method: 'GET',
-    url: '/mind',
-    handler: handlers.mind,
+    url: '/corpus',
+    handler: handlers.corpus,
   },
   {
     method: 'GET',
-    url: '/mind/:section',
-    handler: handlers.mind,
+    url: '/docs',
+    handler: handlers.docs,
   },
   {
     method: 'GET',
-    url: '/mind/:section/:module',
-    handler: handlers.mind,
+    url: '/docs/:file',
+    handler: handlers.docs,
+  },
+  {
+    method: 'GET',
+    url: '/zines',
+    handler: handlers.zines,
+  },
+  {
+    method: 'GET',
+    url: '/zines/:file',
+    handler: handlers.zines,
+  },
+  {
+    method: 'GET',
+    url: '/help',
+    handler: handlers.help,
+  },
+  {
+    method: 'GET',
+    url: '/help/:file',
+    handler: handlers.help,
   },
   {
     method: 'POST',
     url: '/question',
     handler: handlers.question
-  }
+  },
 ]
 routes.forEach(rt => {
   fast.route(rt);

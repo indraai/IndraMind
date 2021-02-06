@@ -1,0 +1,65 @@
+
+# HELP
+
+## DISCLAIMER
+> HELP WITH INDRA MIND
+
+// VARIABLES
+$FEECTING = https://github.com/indraai/language-feecting/
+
+@Quinn = Quinn Michaels
+
+-- BEGIN:OUTLINE
+  1. Who? Indra Mind Users
+  2. What? Indra Mind Help
+  3. When? 2021 Forward
+  4. Where? Indra Mind
+  5. Why? Everyone Needs a little Help every now and then.
+-- END:OUTLINE
+
+-- BEGIN:PROGRAM
+
+## 1. Summary
+
+## 2. Who built it?
+
+## 3. What is it?
+
+## 4. Where is it from?
+
+## 5. Why was it built?
+
+## 6. How did you get here?
+
+## 7. FAQ
+
+
+-- END:PROGRAM
+
+-- BEGIN:META
+
+  Title: HELP
+  Version: 1.0
+  Author: @Quinn
+  Date: Feb 5, 2021
+  Copyright: Copyright (c)2021 @Quinn. All Rights Reserved
+  License: MIT
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this PROGRAM and associated documentation files (the "PROGRAM"),
+    to deal in the PROGRAM without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the PROGRAM, and to permit persons to whom the PROGRAM
+    is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the PROGRAM.
+
+    THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+    OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+    ARISING FROM, OUT OF OR IN CONNECTION WITH THE PROGRAM OR THE USE OR
+    OTHER DEALINGS IN THE PROGRAM.
+
+-- END:META

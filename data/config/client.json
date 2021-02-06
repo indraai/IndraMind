@@ -1,14 +1,15 @@
 {
   "title": "Client File",
   "describe": "The profile of the Client User",
+  "parent": "/data/config/index.json",
   "data": {
     "uid": 5326703772396,
-    "key": "quinn",
-    "name": "Quinn Michaels",
-    "describe": "Programmer, Artist, Imagineer.",
+    "key": "security",
+    "name": "Security PRIME",
+    "describe": "Biggest Baddest NITRO Security PRIME you ever gonna meet.",
     "prompt": {
-      "emoji": "🥭",
-      "text": "quinn",
+      "emoji": "💪",
+      "text": "security",
       "colors": {
         "label": {
           "R": 0,
@@ -23,15 +24,17 @@
       }
     },
     "profile": {
-      "name": "Quinn",
-      "describe": "Just doing my own thing.",
+      "name": "NITRO",
+      "describe": "NITRO King of PRIME Races.",
       "avatar": "",
       "background": "",
-      "gender": "Cool",
+      "gender": "Amazing",
       "port": 9393,
       "lang": "en"
     },
-    "services": {},
+    "services": {
+      "mail": 4212929385135
+    },
     "modules": []
   }
 }

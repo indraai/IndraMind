@@ -2,6 +2,7 @@
   "key": "wind",
   "name": "Wind",
   "describe": "Wind Property",
+  "parent": "/data/mind/properties/index.json",
   "data": [
     {
       "uid": 4932420410413,

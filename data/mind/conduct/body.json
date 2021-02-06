@@ -2,6 +2,7 @@
   "key": "body",
   "name": "Body",
   "describe": "Body Conduct",
+  "parent": "/data/mind/conduct/index.json",
   "data": [
     {
       "uid": 5169316154963,

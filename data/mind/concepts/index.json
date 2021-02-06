@@ -2,11 +2,12 @@
   "key": "concepts",
   "name": "Concepts Model",
   "describe": "Concepts Data Model",
+  "parent": "/data/mind/index.json",
   "paths": {
-    "categories": "/mind/concepts/categories",
-    "dearest": "/mind/concepts/dearest",
-    "desires": "/mind/concepts/desires",
-    "perceptions": "/mind/concepts/perceptions",
-    "thinking": "/mind/concepts/thinking"
+    "categories": "/data/mind/concepts/categories.json",
+    "dearest": "/data/mind/concepts/dearest.json",
+    "desires": "/data/mind/concepts/desires.json",
+    "perceptions": "/data/mind/concepts/perceptions.json",
+    "thinking": "/data/mind/concepts/thinking.json"
   }
 }

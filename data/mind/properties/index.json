@@ -2,11 +2,12 @@
   "key": "properties",
   "name": "Properties Model",
   "describe": "Properties Data Model",
+  "parent": "/data/mind/index.json",
   "paths": {
-    "earth": "/mind/properties/earth",
-    "fire": "/mind/properties/fire",
-    "space": "/mind/properties/space",
-    "water": "/mind/properties/water",
-    "wind": "/mind/properties/wind"
+    "earth": "/data/mind/properties/earth.json",
+    "fire": "/data/mind/properties/fire.json",
+    "space": "/data/mind/properties/space.json",
+    "water": "/data/mind/properties/water.json",
+    "wind": "/data/mind/properties/wind.json"
   }
 }

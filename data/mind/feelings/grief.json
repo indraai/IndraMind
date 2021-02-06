@@ -2,6 +2,7 @@
   "key": "grief",
   "name": "Grief",
   "describe": "Grief Concepts",
+  "parent": "/data/mind/feelings/index.json",
   "data": [
     {
       "uid": 3372528192952,

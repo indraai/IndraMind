@@ -3,10 +3,10 @@
   "name": "Senses Model",
   "describe": "Senses Data Model",
   "paths": {
-    "aromas": "/mind/senses/aromas",
-    "flavors": "/mind/senses/flavors",
-    "ideas": "/mind/senses/ideas",
-    "sounds": "/mind/senses/sounds",
-    "tactile": "/mind/senses/tactile"
+    "aromas": "/data/mind/senses/aromas.json",
+    "flavors": "/data/mind/senses/flavors.json",
+    "ideas": "/data/mind/senses/ideas.json",
+    "sounds": "/data/mind/senses/sounds.json",
+    "tactile": "/data/mind/senses/tactile.json"
   }
 }

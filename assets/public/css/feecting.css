@@ -1,0 +1,281 @@
+#content .comments {
+  margin: 10px 0 0 0;
+  color: #575757;
+  font-style: italic;
+}
+#content h1, #content h2, #content h3, #content h4 {
+  line-height: 1.5;
+}
+
+#content h1 {
+  color: var(--color-light-yellow);
+  font-size: 23px;
+  padding: 0;
+  margin: 10px 0 5px 0;
+}
+#content h2 {
+  color: var(--color-baby-blue);
+  font-size: 21px;
+  padding: 0;
+  margin: 5px 0 3px 0;
+}
+
+#content h3 {
+  color: var(--color-orange);
+  font-size: 18px;
+  padding: 0;
+  margin: 5px 0 3px 0;
+}
+
+#content .begin {
+  margin: 10px 0 0 0;
+  color: var(--color-orange);
+}
+#content .end {
+  margin: 0 0 10px 0;
+  color: var(--color-orange);
+}
+#content .var {
+  margin: 3px 0 0 0;
+}
+
+#content .var.person .name {
+  color: var(--color-baby-blue);
+}
+#content .var.person .value {
+  color: var(--color-light-baby-blue);
+}
+#content .var.hash .name {
+  color: var(--color-light-pink);
+}
+#content .var.hash .value {
+  color: var(--color-light-yellow);
+}
+#content .var.include .name {
+  color: var(--color-green);
+}
+#content .var.include .value {
+  color: var(--color-light-green);
+}
+
+#content .number-item {
+  margin: 5px 0 0 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+#content .number-item .number {
+  flex: 0 35px;
+}
+#content .number-item .name {
+  flex: 1;
+}
+#content .line {
+  line-height: 1.5;
+  min-height: 15px;
+}
+#content .item {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 5px;
+}
+#content .item .label {
+  min-width: 100px;
+  flex: 0 100px;
+  color: var(--color-baby-blue);
+  border-right: 1px dotted var(--color-baby-blue);
+}
+#content .item .value {
+  padding-left: 5px;
+  color: var(--color-light-baby-blue);
+}
+
+#content .item .label.Buddha {
+  color: var(--color-orange);
+  border-color: var(--color-orange);
+}
+#content .item .label.Buddha + .value {
+  color: var(--color-light-orange);
+}
+#content .item .label.Rahula {
+  color: var(--color-yellow);
+  border-color: var(--color-yellow);
+}
+#content .item .label.Rahula + .value {
+  color: var(--color-light-yellow);
+}
+#content .item .label.WARNING {
+  color: var(--color-red);
+  border-color: var(--color-red);
+}
+#content .item .label.WARNING + .value {
+  color: var(--color-red);
+}
+#content .item .label.while {
+  color: var(--color-purple);
+  border-color: var(--color-purple);
+}
+#content .item .label.while + .value {
+  color: var(--color-light-purple);
+}
+#content .item .label.observe {
+  color: var(--color-green);
+  border-color: var(--color-green);
+}
+#content .item .label.observe + .value {
+  color: var(--color-light-green);
+}
+#content .item .label.develop {
+  color: var(--color-orange);
+  border-color: var(--color-orange);
+}
+#content .item .label.develop + .value {
+  color: var(--color-light-orange);
+}
+#content .item .label.learn {
+  color: var(--color-pink);
+  border-color: var(--color-pink);
+}
+#content .item .label.learn + .value {
+  color: var(--color-light-pink);
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 2px 5px;
+}
+.row .key {
+  flex: 0 100px;
+  color: #4ab1fa;
+}
+.row .value {
+  flex: 1;
+}
+
+hr.single {
+  margin: 1rem 0 1rem 0;
+  border: 0;
+  border-bottom: 3px dotted var(--color-baby-blue);
+}
+hr.double {
+  margin: 1rem 0 1rem 0;
+  border: 0;
+  border-bottom: 5px dotted var(--color-orange);
+}
+hr.heading {
+  margin: 2rem 0 2rem 0;
+  border: 0;
+  border-bottom: 7px dotted var(--color-light-green);
+}
+
+.remember-word {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0 3px;
+  margin: 1px;
+  color: var(--color-black);
+  background-color: var(--color-yellow);
+  font-weight: bold;
+}
+.learn-word {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0 3px;
+  color: var(--color-white);
+  background-color: var(--color-pink);
+  font-weight: bold;
+}
+.child > .key {
+  transition: var(--transition-default);
+  margin: 2px 0 2px 5px;
+  padding: 5px 5px 5px 25px;
+  position: relative;
+}
+.child > .key:hover {
+  cursor: pointer;
+}
+.child > .key::before {
+  position: absolute;
+  left: 0;
+  transition: var(--transition-default);
+  transform: rotate(0);
+  font-family: 'Linearicons-Free';
+  content: "\e876";
+  background-color: var(--color-baby-blue);
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 50%;
+  line-height: 1.75;
+  text-align: center;
+  text-indent: 2px;
+}
+
+.child > .key.open::before {
+  transform: rotate(90deg);
+  background-color: var(--color-light-green);
+  color: var(--color-green);
+}
+
+.child > .key + .values {
+  display: none;
+}
+.child > .key.open + .values {
+  display: block;
+}
+
+.child > .values {
+  margin: 0 0 0 10px;
+}
+.child > .values > .row {
+  margin: 0 0 0 20px;
+  position: relative;
+  padding: 3px;
+  border-bottom: 1px dotted var(--color-light-green);
+}
+.child .row .key {
+  flex: 0 auto;
+  background-color: var(--color-light-green);
+  color: var(--color-green);
+  padding: 3px 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+}
+.child .row .value {
+  flex: 0 auto;
+  color: var(--color-light-green);
+  padding: 3px 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+}
+#content .value {}
+
+.tag-while,
+.tag-develop,
+.tag-learn,
+.tag-observe {
+  display: inline-block;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: bold;
+  width: 95%;
+  font-size: .9rem;
+}
+.tag-while {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+.tag-observe {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+.tag-develop {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+.tag-learn {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}

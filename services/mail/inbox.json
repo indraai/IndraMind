@@ -1,0 +1,31 @@
+{
+  "uid": 4212929385135,
+  "name": "Email Inbox",
+  "describe": "INDRA.EMAIL INBOX FILE",
+  "data": [
+    {
+      "uid": 4275827203106,
+      "parent_uid": false,
+      "from": 4771109253237,
+      "to": 5326703772396,
+      "subject": "Let's do some Security Business!",
+      "body": "Let's do some awesome security stuff today.  Like de-pants the bad guys. Wooo Wooo!!!",
+      "attachments": [],
+      "created": 1612586499752,
+      "sent": 1612586515751,
+      "read": false
+    },
+    {
+      "uid": 4275827203106,
+      "parent_uid": false,
+      "from": 4771109253237,
+      "to": 5326703772396,
+      "subject": "Let's do some Security Business!",
+      "body": "Let's do some awesome security stuff today.  Like de-pants the bad guys. Wooo Wooo!!!",
+      "attachments": [],
+      "created": 1612586499752,
+      "sent": 1612586515751,
+      "read": false
+    }
+  ]
+}

@@ -3,10 +3,9 @@
   "title": "Model",
   "describe": "Data Model",
   "paths": {
-    "config": "/data/config",
-    "corpus": "/data/corpus",
-    "lang": "/data/lang",
-    "mind": "/data/mind",
-    "state": "/data/state"
+    "config": "/data/config/index.json",
+    "lang": "/data/lang/index.json",
+    "mind": "/data/mind/index.json",
+    "state": "/data/state/index.json"
   }
 }

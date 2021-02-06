@@ -44,6 +44,7 @@ const IndraMind = new Svarga({
         client,
         state: this.vars,
       });
+
       this.modules.Mind = new Mind({
         client,
         lang: lang[client.profile.lang],
@@ -51,10 +52,11 @@ const IndraMind = new Svarga({
         state: this.vars,
         security: this.security,
       });
-      // load modules
+
       this.client.modules.forEach(mod => {
         this.modules[mod] = new Modules[mod](this.client);
       });
+
       // let i = this.vars.blocks;
       // while (i--) {
       //   this.modules.Psychology[i] = new modules.Node({});
@@ -104,7 +106,6 @@ const IndraMind = new Svarga({
     },
   },
   onStart() {
-    // put load state in here when start... grab latest state variables.
     return Promise.resolve(`🍯 START ${this.agent.name}`);
   },
   onStop() {

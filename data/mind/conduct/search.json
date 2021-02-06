@@ -2,6 +2,7 @@
   "key": "search",
   "name": "Search",
   "describe": "Search Conduct",
+  "parent": "/data/mind/conduct/index.json",
   "data": [
     {
       "uid": 2634981920430,

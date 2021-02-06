@@ -2,6 +2,7 @@
   "key": "water",
   "name": "Water",
   "describe": "Water Property",
+  "parent": "/data/mind/properties/index.json",
   "data": [
     {
       "uid": 3345522207756,

@@ -2,6 +2,7 @@
   "key": "joy",
   "name": "Joy",
   "describe": "Joy Feelings",
+  "parent": "/data/mind/feelings/index.json",
   "data": [
     {
       "uid": 5169316154963,

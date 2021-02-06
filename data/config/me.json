@@ -1,6 +1,7 @@
 {
   "name": "me",
   "describe": "Me Variables",
+  "parent": "/data/config/index.json",
   "data": {
     "key": 93,
     "name": "Indra",

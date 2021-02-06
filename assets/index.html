@@ -1,37 +1,62 @@
 <!DOCTYPE html>
+<!-- copyright 2021 Quinn Michaels -->
 <html>
 <head>
 <title>Indra Mind</title>
 <meta name="description" content="Indra AI demonstrates Natural Language Understanding (NLU)." />
 <meta name="keywords" content="AGI, AiMind, AI Mind Maintainer, artificial intelligence, javascript, MSIE, natural language understanding, NLU, prior art, spreading activation, strong AI" />
 
+  <link rel="stylesheet" href="/public/css/main.css" />
+
   <script type="text/javascript" src="/public/js/cash.min.js"></script>
   <script type="text/javascript" src="/public/js/axios.min.js"></script>
-  <link rel="stylesheet" href="/public/css/main.css" />
 </head>
 <body bgcolor="white">
 
+<div class="system">
+  <ul class="snack-shack">
+    <li><button name="Snack" onclick="Indra.Snack('food')" title="Food Snack Time">🍚</button></li>
+    <li><button name="Snack" onclick="Indra.Snack('fruit')" title="Fruit Snack Time">🥭</button></li>
+    <li><button name="Snack" onclick="Indra.Snack('veggie')" title="Fruit Snack Time">🌽</button></li>
+    <li><button name="Snack" onclick="Indra.Snack('drink')" title="Fruit Snack Time">🥛</button></li>
+  </ul>
+  <ul>
+    <li><button name="SecurityPRIME" class="SECURITY" onclick="Indra.Security()">🚔</button></li>
+    <li><button name="MedicPRIME" class="MEDICAL" onclick="Indra.Medical()">🏥</button></li>
+  </ul>
+</div>
 <a name="top"></a>
 
-<header>
-  <h1>#IndraMind</h1>
-</header>
+<header><h1></h1></header>
 <main>
+  <div id="mouth">Waiting...</div>
   <form id="question" name="question">
     <div class="qBox">
       <h2>Ask Indra</h2>
       <input type="text" name="question" value="" autocomplete="off">
     </div>
   </form>
-
-  <div id="mouth">Waiting...</div>
-  <div id="tabula">Unclick Diagnostic prior to clicking on Transcript.</div>
+  <menu>
+    <ul>
+      <li><button onclick="Indra.Client()" class="client" title="Indra Client">🏡</button></li>
+      <li><button onclick="Indra.Log()" class="log" title="Indra Log">🪵</button></li>
+      <li><button onclick="Indra.Lang()" class="lang" title="Indra Language">🙊</button></li>
+      <li><button onclick="Indra.Mind()" class="mind" title="Indra Mind">🧠</button></li>
+      <li><button onclick="Indra.Corpus()" class="corpus" title="Indra Corpus">📜</button></li>
+      <li><button onclick="Indra.Docs()" class="docs" title="Indra Documentation">📑</button></li>
+      <li><button onclick="Indra.Zines()" class="zines" title="Indra Zines">📰</button></li>
+      <li><button onclick="Indra.Mail()" class="mail" title="Indra Email">📨</button></li>
+      <li><button onclick="Indra.State()" class="state" title="Indra State">🤖</button></li>
+      <li><button onclick="Indra.Help()" class="help" title="Indra Help">💁</button></li>
+    </ul>
+  </menu>
+  <div id="content"></div>
   <div id="brain">Wierd stuff nobody understands.</div>
   <div id="souvenir"></div>
 <!--  -->
 </main>
 <footer>
-  <div>Offer to install the Indra AI, and to be an IndraAI Mind Cadet</div>
+  <div>Offer to install the Indra AI, and become an IndraAI Mind Cadet</div>
   <div>Copyright 2021 &copy; Indra.ai, Quinn Michaels</div>
 </footer>
 
@@ -41,17 +66,27 @@
 
 <div id="cosmos"></div>
 
+<div id="SNACK_TIME">
+  <h1>SNACKS!</h1>
+  <div class="SNACKS"></div>
+</div>
+
+<script type="text/javascript" src="/public/js/index.js"></script>
 <script>
+  const Indra = new IndraInterface();
+  Indra.Init();
+
   $('#question').on('submit', e => {
     e.preventDefault();
-    console.log('ASKING QUESTION')
-    axios.post('/question', {
-      text: $('#question input').val(),
-      created: Date.now(),
-    }).then(answer => {
-      console.log('ANSWER: ', answer.data)
-    }).catch(console.error);
+    Indra.Question($('#question input').val());
+  });
+
+  $('body').on('click', '.child > .key', e => {
+    $(e.target).toggleClass('open');
+  }).on('click', '#SNACK_TIME > h1', e=> {
+    $('body').removeClass('snack-time');
   });
 </script>
+
 </body>
 </html>

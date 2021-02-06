@@ -1,0 +1,14 @@
+{
+  "key": "lang",
+  "name": "Language Models",
+  "describe": "Language Data Models",
+  "parent": "/data/index.json",
+  "paths": {
+    "en": "/lang/en",
+    "es": "/lang/es",
+    "fr": "/lang/fr",
+    "ru": "/lang/ru",
+    "emoji": "/lang/emoji",
+    "custom": "/lang/custom"
+  }
+}

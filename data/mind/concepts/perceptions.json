@@ -2,6 +2,7 @@
   "key": "perceptions",
   "name": "Perceptions",
   "describe": "Perception Concepts",
+  "parent": "/data/mind/concepts/index.json",
   "data": [
     {
       "uid": 3687010932456,

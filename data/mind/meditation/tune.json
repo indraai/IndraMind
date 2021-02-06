@@ -2,6 +2,7 @@
   "key": "tune",
   "name": "Tune",
   "describe": "Tune Meditation",
+  "parent": "/data/mind/meditation/index.json",
   "data": [
     {
       "uid": 4376884743242,

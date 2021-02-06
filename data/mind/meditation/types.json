@@ -2,6 +2,7 @@
   "key": "tune",
   "name": "Types",
   "describe": "Types of Meditation",
+  "parent": "/data/mind/meditation/index.json",
   "data": [
     {
       "uid": 5392800956840,

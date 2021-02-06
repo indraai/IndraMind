@@ -1,0 +1,197 @@
+:root {
+  --main-width: 640px;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-baby-blue: #00b4ff;
+  --color-light-baby-blue: #92ddfd;
+  --color-green: #57a000;
+  --color-light-green: #acfb4e;
+  --color-yellow: #efff00;
+  --color-light-yellow: #f5fc89;
+  --color-dark-yellow: #7c8134;
+  --color-pink: #fe4e8d;
+  --color-light-pink: #fe9cbf;
+  --color-orange: #ff9c00;
+  --color-light-orange: #fdcc80;
+  --color-red: #ff4b4b;
+  --color-purple: #b14bff;
+  --color-light-purple: #d39aff;
+  --color-aqua: #00ffea;
+  --color-light-aqua: #78fff4;
+  --transition-default: all .5s linear;
+  --header-image: url(/public/img/indra.png);
+  --header-height: 219px;
+}
+
+body, div, header, main, footer, h1, h2, form, input, button, i, span {
+  box-sizing: border-box;
+}
+button {
+  transition: var(--transition-default);
+  background-color: var(--color-baby-blue);
+  border: 0;
+  outline: 0;
+  padding: 3px 5px;
+  margin: 0;
+  color: var(--color-white);
+}
+button:hover {
+  cursor: pointer;
+}
+body {
+  background-color: var(--color-white);
+  font-size: 14px;
+  font-family: arial;
+  padding: 0;
+  margin: 0;
+}
+header h1 {
+  background-image: var(--header-image);
+  background-repeat: none;
+  background-position: center center;
+  height: var(--header-height);
+  margin: 0;
+  padding: 0;
+}
+header {
+  text-align: center;
+  display: block;
+  width: var(--main-width);
+  margin: auto;
+}
+main {
+  width: 640px;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(0,0,0,.5);
+  background-color: var(--color-white);
+  border-radius: 10px;
+  overflow: hidden;
+}
+footer {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+}
+
+form {
+  background-color: var(--color-baby-blue);
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+menu {
+  display: flex;
+  width: 100%;
+  width: var(--main-width);
+  margin: auto;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-light-green);
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+menu ul {
+  flex: 0;
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+menu ul li {
+  padding: 0;
+  margin: 0;
+  flex: 0;
+  text-align: center;
+}
+menu ul li button {
+  margin: 0;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+menu ul li:first-child button {
+  border-radius: 10px 0 0 10px;
+}
+menu ul li:last-child button {
+  border-radius: 0 10px 10px 0;
+}
+menu ul li button.active,
+menu ul li button:hover {
+  background-color: var(--color-light-yellow);
+  color: var(--color-dark-yellow);
+  box-shadow: inset 0 -3px 9px rgba(0,0,0,.2);
+}
+menu ul li button:hover {
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
+}
+
+.center > img {
+  max-width: 100%;
+}
+
+.system {
+  position: absolute;
+  width: var(--main-width);
+  top: 165px;
+  left: calc(50% - (var(--main-width) / 2));
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: stretch;
+}
+.system ul {
+  flex: 1 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.system ul:nth-child(2) {
+  justify-content: flex-end;
+}
+.system ul li {
+  margin: 3px;
+}
+
+.system ul li button {
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 2rem;
+  box-shadow: 0 3px 5px rgba(0,0,0,.5);
+}
+#question {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#question .qBox {
+  padding: .5rem;
+  border-radius: .5rem;
+  background-color: var(--color-white);
+  box-shadow: inset 0 3px 9px rgba(0,0,0,.5)
+}
+
+#question h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #00b4ff;
+}
+
+#question input[type="text"] {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  width: 100%;
+  margin: 0;
+}

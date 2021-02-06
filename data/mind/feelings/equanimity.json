@@ -2,6 +2,7 @@
   "key": "equanimity",
   "name": "Equanimity",
   "describe": "Equanimity Concepts",
+  "parent": "/data/mind/feelings/index.json",
   "data": [
     {
       "uid": 5372602089984,

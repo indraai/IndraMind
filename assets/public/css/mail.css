@@ -1,0 +1,40 @@
+#MailData {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#MailData .header {
+  display: flex;
+}
+#MailData .header .from,
+#MailData .messages .from {
+  flex: 0 125px;
+}
+#MailData .header .sent,
+#MailData .messages .sent {
+  flex: 0 125px;
+}
+#MailData .header .subject,
+#MailData .messages .subject {
+  flex: 1;
+}
+
+#MailData .messages .item {
+  border-bottom: 1px dotted var(--color-baby-blue);
+  padding: 3px;
+}
+
+#MailData .messages {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 150px;
+  overflow: auto;
+}
+
+#MailData .message {
+  display: flex;
+  height: 300px;
+  background: var(--color-white);
+  margin: 1rem 0;
+  overflow: auto;
+}

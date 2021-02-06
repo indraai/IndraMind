@@ -2,9 +2,10 @@
   "key": "meditation",
   "name": "Meditation Model",
   "describe": "Meditation Data Model",
+  "parent": "/data/mind/index.json",
   "paths": {
-    "practice": "/mind/meditation/practice",
-    "tune": "/mind/meditation/tune",
-    "types": "/mind/meditation/types"
+    "practice": "/data/mind/meditation/practice.json",
+    "tune": "/data/mind/meditation/tune.json",
+    "types": "/data/mind/meditation/types.json"
   }
 }

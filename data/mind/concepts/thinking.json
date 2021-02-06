@@ -2,6 +2,7 @@
   "key": "thinking",
   "name": "thinking",
   "describe": "Thinking Concepts",
+  "parent": "/data/mind/concepts/index.json",
   "data": [
     {
       "uid": 5188159083191,

@@ -2,9 +2,10 @@
   "key": "config",
   "title": "Configuration",
   "describe": "Configuration Model",
+  "parent": "/data/index.json",
   "paths": {
-    "client": "/data/config/client",
-    "me": "/data/config/me",
-    "vars": "/data/config/vars"
+    "client": "/data/config/client.json",
+    "me": "/data/config/me.json",
+    "vars": "/data/config/vars.json"
   }
 }

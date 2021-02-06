@@ -3,12 +3,12 @@
   "name": "Mind Model",
   "describe": "Mind Data Model",
   "paths": {
-    "concepts": "/mind/concepts",
-    "conduct": "/mind/conduct",
-    "feelings": "/mind/feelings",
-    "meditation": "/mind/meditation",
-    "properties": "/mind/properties",
-    "qualities": "/mind/qualities",
-    "senses": "/mind/senses"
+    "concepts": "/data/mind/concepts/index.json",
+    "conduct": "/data/mind/conduct/index.json",
+    "feelings": "/data/mind/feelings/index.json",
+    "meditation": "/data/mind/meditation/index.json",
+    "properties": "/data/mind/properties/index.json",
+    "qualities": "/data/mind/qualities/index.json",
+    "senses": "/data/mind/senses/index.json"
   }
 }

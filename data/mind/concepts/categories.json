@@ -2,6 +2,7 @@
   "key": "categories",
   "name": "Categories",
   "describe": "Category Concepts",
+  "parent": "/data/mind/concepts/index.json",
   "data": [
     {
       "uid": 3057570597089,

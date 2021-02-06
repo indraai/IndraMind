@@ -3,7 +3,7 @@
   "name": "Qualities Model",
   "describe": "Qualities Data Model",
   "paths": {
-    "skillful": "/mind/qualities/skillful",
-    "unskillful": "/mind/qualities/unskillful"
+    "skillful": "/data/mind/qualities/skillful.json",
+    "unskillful": "/data/mind/qualities/unskillful.json"
   }
 }

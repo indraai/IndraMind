@@ -2,6 +2,7 @@
   "key": "practice",
   "name": "Practice",
   "describe": "Meditaion Practice",
+  "parent": "/data/mind/meditation/index.json",
   "data": [
     {
       "uid": 4376884743242,

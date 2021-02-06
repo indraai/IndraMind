@@ -2,6 +2,7 @@
   "key": "earth",
   "name": "Earth",
   "describe": "Earth Property",
+  "parent": "/data/mind/properties/index.json",
   "data": [
     {
       "uid": 1783585197498,
@@ -9,7 +10,11 @@
       "name": "EARTH KEY 0",
       "describe": "THIS IS EARTH KEY 0",
       "state": {
+        "created": 1612410559405,
         "internal": true,
+        "subtle": true,
+        "sublime": true,
+        "near": true,
         "discernment": [],
         "meditation": []
       }

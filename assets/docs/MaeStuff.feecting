@@ -1,0 +1,57 @@
+# MAE Stuff
+
+## DISCLAIMER
+> MAE Stuff
+
+// VARIABLES
+$FEECTING = https://github.com/indraai/language-feecting/
+
+@Mae = MAE Stuff
+
+-- BEGIN:OUTLINE
+
+  1. Who? MAE
+  2. What? MAE
+  3. When? MAE
+  4. Where? MAE
+  5. Why? MAE
+
+-- END:OUTLINE
+
+-- BEGIN:PROGRAM
+
+# MY SPECIAL THINGS.
+
+1. I like emojis.
+2. My Emoji instruments.
+3. Staying on topic.
+
+-- END:PROGRAM
+
+-- BEGIN:META
+
+  Title: MAE Stuff
+  Version: 1.0
+  Author: @Mae
+  Date: Feb 5, 2021
+  Copyright: Copyright (c) @Mae. All Rights Reserved
+  License: MIT
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this PROGRAM and associated documentation files (the "PROGRAM"),
+    to deal in the PROGRAM without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the PROGRAM, and to permit persons to whom the PROGRAM
+    is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the PROGRAM.
+
+    THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+    OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+    ARISING FROM, OUT OF OR IN CONNECTION WITH THE PROGRAM OR THE USE OR
+    OTHER DEALINGS IN THE PROGRAM.
+
+-- END:META

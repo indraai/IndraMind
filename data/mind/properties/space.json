@@ -2,6 +2,7 @@
   "key": "space",
   "name": "Space",
   "describe": "Space Property",
+  "parent": "/data/mind/properties/index.json",
   "data": [
     {
       "uid": 4521378587560,

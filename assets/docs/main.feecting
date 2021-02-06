@@ -1,0 +1,226 @@
+
+# DOCUMENTATION
+
+## DISCLAIMER
+> DOCUMENTATION FOR THE INDRA MIND.
+
+// VARIABLES
+$FEECTING = https://github.com/indraai/language-feecting/
+
+@quinn = Quinn Michaels
+
+-- BEGIN:OUTLINE
+  1. Who? Indra.ai
+  2. What? Indra Mind
+  3. When? 2021 Forward
+  4. Where? Indra
+  5. Why? Documentation of Indra Mind
+-- END:OUTLINE
+
+-- BEGIN:PROGRAM
+# IndraMind
+define: AI Mind understand natural language.
+define: Natural Language Understanding, AI, Artificial Intelligence, IndraMind
+define: IndraMind written in JavaScript, Perl, and Forth
+====
+## Versions
+javascript: /src/IndraMind.js
+perl: /src/IndraMind.pl
+forth: /src/IndraMind.forth
+
+====
+## PERSONAL
+
+This my personal documentaiton stuff. How I do things.
+
+MaeStuff: This the Mae Stuff things Mae likes.
+note: I'm just learning to do this stuff.
+feecting: /docs/MaeStuff.feecting
+----
+
+====
+## Modules
+
+MainLoop: This is the Main LOOPY for the PROGRAM.
+note: I am learning this module to figure it out.
+feecting: /docs/MainLoop.feecting
+----
+TabulaRasa: Memory Wipe
+feecting: /docs/TabulaRasa.feecting
+----
+MindBoot: MindBoot Vocabulary
+feecting: /docs/MindBoot.feecting
+----
+KbLoad: Load the Knowledge Base
+feecting: /docs/MindBoot.feecting
+----
+LangLearn: Habituate new syntax; Learn a new language.
+feecting: /docs/MindBoot.feecting
+----
+ReJuvenate: Recycle memory space.
+feecting: /docs/MindBoot.feecting
+----
+Sensorium: Sensory input with associateive tagging concepts.
+feecting: /docs/MindBoot.feecting
+----
+AudInput: Auditory Input
+feecting: /docs/MindBoot.feecting
+----
+AudListen: Listen for Input
+feecting: /docs/MindBoot.feecting
+----
+AudMem: Auditory Memory
+feecting: /docs/MindBoot.feecting
+----
+AudRecog: Auditory Recognition
+feecting: /docs/MindBoot.feecting
+----
+NewConcept: Create a new concept.
+feecting: /docs/MindBoot.feecting
+----
+OldConcept: Recognize a known old concept.
+feecting: /docs/MindBoot.feecting
+----
+EnParser: Preposition? (in)direct object?
+feecting: /docs/MindBoot.feecting
+----
+InStantiate: Create new instance of a concept.
+feecting: /docs/MindBoot.feecting
+----
+FileInput: Read files on a server
+feecting: /docs/MindBoot.feecting
+----
+GusRecog: Sense of taste
+feecting: /docs/MindBoot.feecting
+----
+OlfRecog: Sense of smell
+feecting: /docs/MindBoot.feecting
+----
+TacRecog: Sense of touch
+feecting: /docs/MindBoot.feecting
+----
+VisRecog: Sense of vision
+feecting: /docs/MindBoot.feecting
+----
+Volition: Free will resulting from feeling and thinking
+feecting: /docs/MindBoot.feecting
+----
+Emotion: Influence on thought and free will.
+feecting: /docs/MindBoot.feecting
+----
+EnThink: Thinking Module
+feecting: /docs/MindBoot.feecting
+----
+KbRetro: Retroactively adjust knowledge base
+feecting: /docs/MindBoot.feecting
+----
+Imperative: Mood for issuing commands
+feecting: /docs/MindBoot.feecting
+----
+Indicative: Mood for declaring statements
+feecting: /docs/MindBoot.feecting
+----
+Inference: Automated Reasoning
+feecting: /docs/MindBoot.feecting
+----
+AsUser: Validate an inference
+feecting: /docs/MindBoot.feecting
+----
+EnNounPhrase: Think with a noun
+feecting: /docs/MindBoot.feecting
+----
+EnPrep: Insert a preposition
+feecting: /docs/MindBoot.feecting
+----
+EnArticle: use "a" or "the"
+feecting: /docs/MindBoot.feecting
+----
+EnAdjective: Insert an Adjective.
+feecting: /docs/MindBoot.feecting
+----
+EnPronoun: Substitue a pronound for a noun
+feecting: /docs/MindBoot.feecting
+----
+ConJoin: Insert a conjunction.
+feecting: /docs/MindBoot.feecting
+----
+EnVerbPhrase: Think in a verb
+feecting: /docs/MindBoot.feecting
+----
+EnAuxVerb: Use an auxiliary Verb.
+feecting: /docs/MindBoot.feecting
+----
+EnAdverb: Modifies a verb.
+feecting: /docs/MindBoot.feecting
+----
+EnVerbGen: Generates a verb.
+feecting: /docs/MindBoot.feecting
+----
+AudBuffer: Stores english phonemes.
+feecting: /docs/MindBoot.feecting
+----
+OutBuffer: right justifies English verb-form
+feecting: /docs/MindBoot.feecting
+----
+SpreadAct: Spreads activation from concept to concept.
+feecting: /docs/MindBoot.feecting
+----
+Subjunctive: Mood for conditional phrases.
+feecting: /docs/MindBoot.feecting
+----
+AskUser: validate an inference
+feecting: /docs/MindBoot.feecting
+----
+Speech: Output to screen or loudspeaker.
+feecting: /docs/MindBoot.feecting
+----
+PsiDecay: Lowers concpetual activation.
+feecting: /docs/MindBoot.feecting
+----
+Motorium: Motor output for ai.
+feecting: /docs/MindBoot.feecting
+----
+MetEmPsychosis: AI soul travel from webserver to webserver.
+feecting: /docs/MindBoot.feecting
+----
+PortScan: find a receptive open port for relocation of Ghost AI
+feecting: /docs/MindBoot.feecting
+----
+Spawn: AI Go FOOM
+feecting: /docs/MindBoot.feecting
+----
+MindMeld: Merge two AI minds by sharing memories
+feecting: /docs/MindBoot.feecting
+----
+Consciousness: emergent property, not a module.
+feecting: /docs/MindBoot.feecting
+
+-- END:PROGRAM
+
+-- BEGIN:META
+
+  Title: Indra Mind Documentation
+  Version: 1.0
+  Author: @quinn
+  Date: Feb 4, 2021
+  Copyright: Copyright (c)2021 @quinn. All Rights Reserved
+  License: MIT
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this PROGRAM and associated documentation files (the "PROGRAM"),
+    to deal in the PROGRAM without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the PROGRAM, and to permit persons to whom the PROGRAM
+    is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the PROGRAM.
+
+    THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+    OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+    ARISING FROM, OUT OF OR IN CONNECTION WITH THE PROGRAM OR THE USE OR
+    OTHER DEALINGS IN THE PROGRAM.
+
+-- END:META
