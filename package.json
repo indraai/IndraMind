@@ -26,7 +26,8 @@
     "AGI",
     "Artificial Intelligence"
   ],
-  "author": "Indra, Quinn Michaels, #SpoonKids",
+  "author": "Quinn Michaels",
+  "copyright": "2021",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/indraai/IndraMind/issues"
