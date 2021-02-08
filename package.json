@@ -1,6 +1,6 @@
 {
   "name": "indra",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "port": 9393,
   "description": "The Indra Mind AI",
   "main": "index.js",
