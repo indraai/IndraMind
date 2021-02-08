@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-// Copyright (c)2021 Quinn Michaels
-// Distributed under the MIT software license, see the accompanying
-// file LICENSE.md or http://www.opensource.org/licenses/mit-license.php.
+// COPYRIGHT (C)2021 QUINN MICHAELS. ALL RIGHTS RESERVED.
 
 const {version} = require('./package.json');
 const path = require('path');

@@ -1,7 +1,7 @@
 #!/usr/bin/perl
+# COPYRIGHT (C)2021 QUINN MICHAELS. ALL RIGHTS RESERVED.
 # INDRA.AI AI MIND
 # BASED ON MIND.FORTH AND GHOST.PL (GHOSTMIND)
-# COPYRIGHT 2021 INDRA
 
 use strict;    # PERL by Example (2015) p. 77
 use warnings;  # PERL by Example (2015) p. 85

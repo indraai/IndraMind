@@ -1,3 +1,5 @@
+// COPYRIGHT (c)2021 QUINN MICHAELS. ALL RIGHTS RESERVED.
+
 // these variable index codes will reference desire index codes
 const {data} = require('../../data/mind/concepts/dearest.json');
 const lib = require('../../lib/');

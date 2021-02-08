@@ -1,3 +1,5 @@
+// COPYRIGHT (c)2021 QUINN MICHAELS. ALL RIGHTS RESERVED.
+
 module.exports = {
   Dearest: require('./Dearest.js'),
   Desires: require('./Desires.js'),

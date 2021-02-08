@@ -1,3 +1,5 @@
+// COPYRIGHT (c)2021 QUINN MICHAELS. ALL RIGHTS RESERVED.
+
 const Dearest = require('./concepts/Dearest.js');
 const Creativity = require('./concepts/Creativity.js');
 const Imagination = require('./concepts/Imagination.js');

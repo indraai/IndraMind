@@ -1,3 +1,5 @@
+// COPYRIGHT (c)2021 QUINN MICHAELS. ALL RIGHTS RESERVED.
+
 const {data} = require('../../data/mind/qualities/skillful.json');
 const lib = require('../../lib/');
 

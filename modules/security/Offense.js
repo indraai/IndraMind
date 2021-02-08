@@ -1,3 +1,4 @@
+// COPYRIGHT (c)2021 QUINN MICHAELS. ALL RIGHTS RESERVED.
 // 2021-01-24 Adding Offense Measures
 // Used for Defensive Returns
 class Offense {

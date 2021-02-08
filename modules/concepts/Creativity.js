@@ -1,3 +1,4 @@
+// COPYRIGHT (c)2021 QUINN MICHAELS. ALL RIGHTS RESERVED.
 
 // sub for creativity
 class Creativity {

@@ -18,6 +18,7 @@
   --color-light-purple: #d39aff;
   --color-aqua: #00ffea;
   --color-light-aqua: #78fff4;
+  --color-note: #fff993;
   --transition-default: all .5s linear;
   --header-image: url(/public/img/indra.png);
   --header-height: 219px;

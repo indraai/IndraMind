@@ -23,33 +23,27 @@ define: AI Mind understand natural language.
 define: Natural Language Understanding, AI, Artificial Intelligence, IndraMind
 define: IndraMind written in JavaScript, Perl, and Forth
 ====
-## Versions
+## Minds
 javascript: /src/IndraMind.js
 perl: /src/IndraMind.pl
 forth: /src/IndraMind.forth
 
 ====
-## PERSONAL
-
-This my personal documentaiton stuff. How I do things.
-
-MaeStuff: This the Mae Stuff things Mae likes.
-note: I'm just learning to do this stuff.
-feecting: /docs/MaeStuff.feecting
-----
-
-====
 ## Modules
 
+MindBoot: MindBoot Vocabulary
+note: Main boot function that loads the Knowledge base and does mind setup.
+
+feecting: /docs/MindBoot.feecting
+----
 MainLoop: This is the Main LOOPY for the PROGRAM.
 note: I am learning this module to figure it out.
+
 feecting: /docs/MainLoop.feecting
 ----
 TabulaRasa: Memory Wipe
+
 feecting: /docs/TabulaRasa.feecting
-----
-MindBoot: MindBoot Vocabulary
-feecting: /docs/MindBoot.feecting
 ----
 KbLoad: Load the Knowledge Base
 feecting: /docs/MindBoot.feecting

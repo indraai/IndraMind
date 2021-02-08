@@ -1,3 +1,4 @@
+\ Copyright (c)2021 Quinn Michaels. ALL RIGHTS RESERVED
 \ https://github.com/indraai/IndraMind
 \ Do you know any good Hans Party Songs?
 \ Party Boots and Party Pants one? Are you ready to Dance?

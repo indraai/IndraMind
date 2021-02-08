@@ -35,3 +35,5 @@ Finally we are going to run your new IndraMind Server.
 5. 725: 3rd Person "IT"
 6. 731: 1st Person "WE"
 7. 743: 3rd Person "THEY"
+
+Copyright (c)2021 Quinn Michaels. All rights reserved.

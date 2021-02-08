@@ -1,3 +1,5 @@
+// COPYRIGHT (c)2021 QUINN MICHAELS. ALL RIGHTS RESERVED.
+
 // 2021-01-24
 class Health {
   constructor(client) {

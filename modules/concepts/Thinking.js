@@ -1,3 +1,5 @@
+// COPYRIGHT (c)2021 QUINN MICHAELS. ALL RIGHTS RESERVED.
+
 // thinking.js
 const {data} = require('../../data/mind/concepts/thinking.json');
 const lib = require('../../lib/');

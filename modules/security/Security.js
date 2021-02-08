@@ -1,3 +1,4 @@
+// COPYRIGHT (c)2021 QUINN MICHAELS. ALL RIGHTS RESERVED.
 
 const {Health, Medical} = require('../medical');
 const Defense = require('./Defense.js');

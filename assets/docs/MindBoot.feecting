@@ -22,6 +22,248 @@ $FEECTING = https://github.com/indraai/language-feecting/
 
 -- BEGIN:PROGRAM
 
+## MIND BOOT
+func: MindBoot()
+  note: The MindBoot function builds an audMemory() node of items that get stored through KbLoad().  When the mind boots this is how it loads the inital language dictionary of words that it knows before learning begins.
+
+  dob: new Date()
+  var: Date of Birth.
+  ----
+  func: HCI() - This sets up the html for the display from the ghost mind version.
+  ----
+  t: 0
+  var: lifetime AI experiential time "$t"
+  ----
+  spt: t
+  var: blank space time before start of a word
+
+====
+
+### audNode
+func: audNode(pho, act, audpsi)
+  note: audNode is created when a Mind is Booted into audMemory[t]
+
+  param: pho - a "phoneme" or character of auditory input.
+  param: act - quasi-neuronal activation-level.
+  param: audpsi - concept number of word in EAR auditory memory array
+  audExam: audExam() Helper Function
+
+====
+
+### audExam
+func: audExam()
+  note: audExam is a helper function loaded into audNode that allows setting the (this) scope into the aud0, aud1, aud2 global variables.
+
+  set: aud0 = this.pho
+  set: aud1 = this.act
+  set: aud2 = this.audpsi
+
+
+  ### KbLoad
+  func: KbLoad()
+  note: Loads passed in variables into the Psy[t] Array as a new PsyNode.
+    PsyNode: Psy[t] = new PsyNode(tru,psi,hlc,act,mtx,jux,pos,dba,num,mfn,pre,seq,tgn,tdt,tkb,tia,tcj,tdj,tdv,tpr,rv);
+    ----
+    tru: 0
+    var: tru(th) variable serving as a flag-panel tag to hold dynamically the truth-value of an idea.
+    ----
+    psi: 0
+    var: variable for an element of the PSY conceptual array.
+    ----
+    hlc: 0
+    var: human-language code; 1=en; 2=de; 3=ru.
+    ----
+    act: 0
+    var: quasi-neuronal activation-level
+    ----
+    mtx: 0
+    var: machine-translation xfer (transfer) variable for SpreadAct module
+    ----
+    jux: 0
+    var: jux(taposed) concept in psy array
+    ----
+    pos: 0
+    var: (part of speech) with a numeric value
+    ----
+    dba: 0
+    var: doing-business-as noun-case or verb-person.
+    ----
+    num: 0
+    var: number-flag for grammatical number.
+    ----
+    mfn: 0
+    var: masculine-feminine-neutral gender flag.
+    ----
+    pre: 0
+    var: pre(vious) associated @psy concept.
+    ----
+    seq: 0
+    var: subSEQuent psy concept in a Subject-Verb-Object (SVO) idea.
+    ----
+    tgn: 0
+    var: time-of-genitive -- for instantiating a word in the genitive case.
+    ----
+    tdt: 0
+    var: time-of-dative -- conceptual flag-panel tag for instantiating a word in the dative case.
+    ----
+    tkb: 0
+    var: time-in-knowledge-base of an idea.
+    ----
+    tia: 0
+    var: time-of-instrument -- for instantiating a word in the instrumental (Russian) or ablative (Latin) case.
+    ----
+    tcj: 0
+    var: time-of-conjunction -- conceptual flag-panel tag for a conjunction.
+    ----
+    tdv: 0
+    var: time-of-adverb -- conceptual flag-panel tag for an adverb.
+    ----
+    tpr: 0
+    var: conceptual flag-panel tag for time-of-preposition.
+    ----
+    rv: 0
+    var: recall-vector for auditory memory.
+    ----
+    pho: ""
+    var: a "phoneme" or character of auditory input.
+    ----
+    audpsi: 0
+    var: concept number of word in ear auditory memory array
+
+  ====
+
+  ### psyNode
+  func: psyNode(tru, psi, hlc, act, mtx, jux, pos, dba, num, mfn, pre, seq, tgn, tdt, tkb, tia, tcj, tdj, tdv, tpr, rv)
+    note: psyNode creates a new node to store current variables. Then the below variables are set into the (this) namespace of the new psyNode.
+    set: this.tru = tru
+    set: this.psi = psi
+    set: this.hlc = hlc
+    set: this.act = act
+    set: this.mtx = mtx
+    set: this.jux = jux
+    set: this.pos = pos
+    set: this.dba = dba
+    set: this.num = num
+    set: this.mfn = mfn
+    set: this.pre = pre
+    set: this.seq = seq
+    set: this.tgn = tgn
+    set: this.tdt = tdt
+    set: this.tkb = tkb
+    set: this.tia = tia
+    set: this.tcj = tcj
+    set: this.tdj = tdj
+    set: this.tdv = tdv
+    set: this.tpr = tpr
+    set: this.rv = rv
+    func: this.psyExam = psyExam
+
+  ====
+
+  ### psyExam
+  func: psyExam()
+    note: psyExam sets it's (this) variables of the parent psyNode back into the global psi0-psi20 variables.
+    set: psi0 = this.tru
+    set: psi1 = this.psi
+    set: psi2 = this.hlc
+    set: psi3 = this.act
+    set: psi4 = this.mtx
+    set: psi5 = this.jux
+    set: psi6 = this.pos
+    set: psi7 = this.dba
+    set: psi8 = this.num
+    set: psi9 = this.mfn
+    set: psi10 = this.pre
+    set: psi11 = this.seq
+    set: psi12 = this.tgn
+    set: psi13 = this.tdt
+    set: psi14 = this.tkb
+    set: psi15 = this.tia
+    set: psi16 = this.tcj
+    set: psi17 = this.tdj
+    set: psi18 = this.tdv
+    set: psi19 = this.tpr
+    set: psi20 = this.rv
+
+
+
+## Sequence Examples
+`t=1;pho="E"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);`
+  t: 1
+  pho: E
+  audpsi: 0
+  audMemory: audMemory[t] = new audNode(pho, 0, audpsi)
+
+`t=2;pho="R"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);`
+  t: 2
+  pho: R
+  audpsi: 0
+  audMemory: audMemory[t] = new audNode(pho, 0, audpsi)
+
+`t=3;pho="R"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);`
+  t: 3
+  pho: R
+  audpsi: 0
+  audMemory: audMemory[t] = new audNode(pho, 0, audpsi)
+
+`t=4;pho="O"; audpsi=0; audMemory[t] = new audNode(pho,0,audpsi);`
+  t: 4
+  pho: O
+  audpsi: 0
+  audMemory: audMemory[t] = new audNode(pho, 0, audpsi)
+
+`t=5;pho="R"; audpsi=586; audMemory[t] = new audNode(pho,0,audpsi);`
+  t: 5
+  pho: R
+  audpsi: 586
+  audMemory: audMemory[t] = new audNode(pho, 0, audpsi)
+
+  This set forms the word ERROR.  Then at the last word the audpsi is set to NOT 0 to end the sequence.
+  When all the word sequences are complete then a set of variables are set for the next input.
+
+  When the end of a word/key is reached it then sets global variables from what it has learned and loads them into KbLoad().
+
+`psi=586;hlc="en";jux=0;pos=5;dba=0;num=1;mfn=3;pre=0;seq=0;tkb=0;rv=1; KbLoad();`
+  psi: 586
+  var: Variable for an element of the PSY conceptual array.
+  ----
+  hlc: en
+  var: human-language code; 1=en; 2=de; 3=ru.
+  ----
+  jux: 0
+  var: jux(taposed) concept in PSY array.
+  ----
+  pos: 5
+  var: part of speech with a numeric value (1=adj 2=adv 3=conj 4=interj 5=noun 6=prep 7=pron 8=verb)
+  ----
+  dba: 0
+  var: doing-business-as noun-case or verb-person.
+  ----
+  num: 1
+  var: number-flag for grammatical number.
+  ----
+  mfn: 3
+  var: masculine-feminine-neutral gender flag.
+  ----
+  pre: 0
+  var: previous associated psy concept.
+  ----
+  seq: 0
+  var: subSEQuent psy concept in a Subject-Verb-Object (SVO) idea.
+  ----
+  tkb: 0
+  var: time-in-knowledge-base of an idea.
+  ----
+  rv: 1
+  var: recall-vector for auditory memory.
+  ----
+  kbLoad: KbLoad();
+  ----
+  t: 6
+  var: sets the time variable to an empty space after word complete.
+
+
+====
 
 
 -- END:PROGRAM

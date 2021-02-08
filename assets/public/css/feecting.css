@@ -89,7 +89,6 @@
   padding-left: 5px;
   color: var(--color-light-baby-blue);
 }
-
 #content .item .label.Buddha {
   color: var(--color-orange);
   border-color: var(--color-orange);
@@ -138,6 +137,24 @@
 }
 #content .item .label.learn + .value {
   color: var(--color-light-pink);
+}
+#content .item .label.note {
+  color: var(--color-black);
+  background-color: var(--color-note);
+  border-right: none;
+  min-width: 50px;
+  flex: 0;
+  padding: 1rem 0 1rem 1rem;
+  border-radius: 10px 0 0 10px;
+  margin: 10px 0;
+}
+#content .item .label.note + .value {
+  padding: 1rem 1rem 1rem 0;
+  border-radius: 0 10px 10px 0;
+  flex: 1;
+  color: var(--color-black);
+  background-color: var(--color-note);
+  margin: 10px 0;
 }
 
 .row {
