@@ -2,10 +2,11 @@
   "key": "config",
   "title": "Configuration",
   "describe": "Configuration Model",
+  "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
   "parent": "/data/index.json",
   "paths": {
     "client": "/data/config/client.json",
-    "me": "/data/config/me.json",
+    "agent": "/data/config/agent.json",
     "vars": "/data/config/vars.json"
   }
 }

@@ -2,8 +2,8 @@
 
 // 2021-01-24
 class Health {
-  constructor(client) {
-    this.client = client;
+  constructor(agent) {
+    this.agent = agent;
     this.state = false;
     this.status = 'Clean'
   }

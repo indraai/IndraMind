@@ -2,6 +2,7 @@
   "key": "feelings",
   "name": "Feelings Model",
   "describe": "Feelings Data Model",
+  "copyright": "Copyright (c) 2021 Quinn Michaels. All rights reserved.",
   "parent": "/data/mind/index.json",
   "paths": {
     "equanimity": "/data/mind/feelings/equanimity.json",

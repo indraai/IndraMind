@@ -2,6 +2,7 @@
   "key": "body",
   "name": "Body",
   "describe": "Body Conduct",
+  "copyright": "Copyright (c) 2021 Quinn Michaels. All rights reserved.",
   "parent": "/data/mind/conduct/index.json",
   "data": [
     {

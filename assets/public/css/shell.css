@@ -1,0 +1,72 @@
+/* Copyright (c)2021 Quinn Michaels */
+.shell {
+  background-color: var(--color-dark-gray);
+}
+
+#Shell {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+#ShellOutput {
+  height: 300px;
+  overflow: auto;
+  color: var(--color-light-green);
+  padding: 1rem;
+}
+
+#ShellInput {
+  display: flex;
+  align-items: center;
+}
+#ShellInput .label {
+  flex: 0;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  padding: 0 0 0 10px;
+}
+#ShellInput .input {
+  flex: 1;
+}
+#ShellInput .output {
+  flex: 1 auto;
+}
+
+#q {
+  background-color: var(--color-black);
+  margin: 10px;
+  border: none;
+  outline: none;
+  width: calc(100% - 20px);
+  color: var(--color-light-green);
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+.log-item {
+  display: flex;
+  align-items: center;
+  border-top: 1px dotted var(--color-baby-blue);
+}
+.log-item > .prompt {
+  flex: 0;
+  display: flex;
+  align-items: center;
+}
+.log-item > .prompt::after {
+  content: ">";
+  margin: 0 5px 0 0;
+}
+.log-item > .prompt .emoji {
+  flex: 0;
+  margin: 3px;
+}
+.log-item > .prompt .label {
+  flex: 1;
+  margin: 3px;
+}
+
+.log-item > .text {
+  flex 1;
+}

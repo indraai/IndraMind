@@ -9,13 +9,13 @@ class Mind {
   constructor(opts) {
     console.log('🧠 LOAD: Mind');
     this.birth = opts.birth || Date.now();
-    this.client = opts.client;
+    this.agent = opts.agent;
     this.lang = opts.lang;
     this.state = opts.state;
     this.security = opts.security;
-    this.awareness = new Awareness(opts.client);
-    this.imagination = new Imagination(opts.client);
-    this.creativity = new Creativity(opts.client);
+    this.awareness = new Awareness(opts.agent);
+    this.imagination = new Imagination(opts.agent);
+    this.creativity = new Creativity(opts.agent);
   }
 
   Dearest(input) {

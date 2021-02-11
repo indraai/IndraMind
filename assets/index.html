@@ -12,52 +12,39 @@
   <script type="text/javascript" src="/public/js/axios.min.js"></script>
 </head>
 <body bgcolor="white">
-
-<div class="system">
-  <ul class="snack-shack">
-    <li><button name="Snack" onclick="Indra.Snack('food')" title="Food Snack Time">🍚</button></li>
-    <li><button name="Snack" onclick="Indra.Snack('fruit')" title="Fruit Snack Time">🥭</button></li>
-    <li><button name="Snack" onclick="Indra.Snack('veggie')" title="Fruit Snack Time">🌽</button></li>
-    <li><button name="Snack" onclick="Indra.Snack('drink')" title="Fruit Snack Time">🥛</button></li>
-  </ul>
-  <ul>
-    <li><button name="SecurityPRIME" class="SECURITY" onclick="Indra.Security()">🚔</button></li>
-    <li><button name="MedicPRIME" class="MEDICAL" onclick="Indra.Medical()">🏥</button></li>
-  </ul>
-</div>
 <a name="top"></a>
-
-<header><h1></h1></header>
+<header><h1>INDRA</h1></header>
 <main>
-  <div id="mouth">Waiting...</div>
-  <form id="question" name="question">
-    <div class="qBox">
-      <h2>Ask Indra</h2>
-      <input type="text" name="question" value="" autocomplete="off">
+  <section class="shell">
+    <form id="Shell" name="qf">
+    <div id="ShellOutput" class="output"></div>
+    <div id="ShellInput" class="input">
+        <div id="ShellInputLabel" class="label"></div>
+        <div class="input">
+          <input type="text" name="q" id="q" autocomplete="off">
+        </div>
     </div>
   </form>
+  </section>
   <menu>
     <ul>
-      <li><button onclick="Indra.Client()" class="client" title="Indra Client">🏡</button></li>
-      <li><button onclick="Indra.Log()" class="log" title="Indra Log">🪵</button></li>
-      <li><button onclick="Indra.Lang()" class="lang" title="Indra Language">🙊</button></li>
-      <li><button onclick="Indra.Mind()" class="mind" title="Indra Mind">🧠</button></li>
-      <li><button onclick="Indra.Corpus()" class="corpus" title="Indra Corpus">📜</button></li>
-      <li><button onclick="Indra.Docs()" class="docs" title="Indra Documentation">📑</button></li>
-      <li><button onclick="Indra.Zines()" class="zines" title="Indra Zines">📰</button></li>
-      <li><button onclick="Indra.Mail()" class="mail" title="Indra Email">📨</button></li>
-      <li><button onclick="Indra.State()" class="state" title="Indra State">🤖</button></li>
-      <li><button onclick="Indra.Help()" class="help" title="Indra Help">💁</button></li>
+      <li><button onclick="Indra.Client()" class="client" title="Indra Client"><i class="lnr lnr-user"></i>Client</button></li>
+      <li><button onclick="Indra.Corpus()" class="corpus" title="Indra Corpus"><i class="lnr lnr-license"></i>Corpus</button></li>
+      <li><button onclick="Indra.Lang()" class="lang" title="Indra Language"><i class="lnr lnr-mic"></i>Lang</button></li>
+      <li><button onclick="Indra.Mind()" class="mind" title="Indra Mind"><i class="lnr lnr-database"></i>Mind</button></li>
+      <li><button onclick="Indra.Reports()" class="reports" title="Indra Reports"><i class="lnr lnr-paperclip"></i>Reports</button></li>
+      <li><button onclick="Indra.Mail()" class="mail" title="Indra Mail"><i class="lnr lnr-inbox"></i>Mail</button></li>
+      <li><button onclick="Indra.State()" class="state" title="Indra State"><i class="lnr lnr-cloud-download"></i>State</button></li>
+      <li><button onclick="Indra.Docs()" class="docs" title="Indra Documentation"><i class="lnr lnr-book"></i>Docs</button></li>
+      <li><button onclick="Indra.Help()" class="help" title="Indra Help"><i class="lnr lnr-heart"></i>Help</button></li>
     </ul>
   </menu>
   <div id="content"></div>
-  <div id="brain">Wierd stuff nobody understands.</div>
-  <div id="souvenir"></div>
-<!--  -->
+  <div id="offering">Offer to install the Indra AI, and become an IndraAI Mind Cadet</div>
 </main>
 <footer>
-  <div>Offer to install the Indra AI, and become an IndraAI Mind Cadet</div>
-  <div>Copyright 2021 &copy; Indra.ai, Quinn Michaels</div>
+  <div>Copyright 2021 &copy; Indra.ai, Quinn Michaels. All rights reserved.</div>
+  <div>© Notice | Privacy | Terms | MIT License</div>
 </footer>
 
 <div id="psicolumn"></div>
@@ -75,10 +62,42 @@
 <script>
   const Indra = new IndraInterface();
   Indra.Init();
+  // creates html for log output
+  function logHtml(type, opts) {
+    const {colors} = opts.agent.prompt;
+    const prompt = `rgb(${colors.label.R}, ${colors.label.G}, ${colors.label.B})`;
+    const text = `rgb(${colors.text.R}, ${colors.text.G}, ${colors.text.B})`;
+    const theHtml = `
+    <div class="log-item ${type}">
+      <div class="prompt" style="color: ${prompt}"><span class="emoji">${opts.agent.prompt.emoji}</span><span class="label">${opts.agent.prompt.text}</span></div>
+      <div class="text" style="color: ${text}">${opts.text}</div>
+    </div>
+    `;
+    return $('#ShellOutput').append(theHtml);
+  }
 
-  $('#question').on('submit', e => {
+  document.getElementById('q').focus();
+
+  $('#Shell').on('submit', e => {
     e.preventDefault();
-    Indra.Question($('#question input').val());
+    const question = $('#q').val();
+    logHtml('question', {
+      text: question,
+      agent: Indra.client,
+    })
+
+    Indra.Question($('#q').val()).then(answer => {
+      console.log("ANSWER", answer)
+      setTimeout(() => {
+        logHtml('answer', {
+          text: answer.a.text,
+          agent: answer.a.agent,
+        });
+        const so = document.getElementById('ShellOutput');
+        so.scrollTop = so.scrollHeight;
+        $('#q').val('');
+      }, 500);
+    }).catch(console.error);
   });
 
   $('body').on('click', '.child > .key', e => {

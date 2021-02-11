@@ -1,0 +1,135 @@
+
+feecting: /docs/MainLoop.feecting
+
+# SENSORIUM
+
+image: /public/img/diagrams/Sensorium.png
+
+## DISCLAIMER
+> The documentation for Indra Mind Sensorium Module
+
+// VARIABLES
+$FEECTING = https://github.com/indraai/language-feecting/
+@Deva = http://DevaBuddhism.com
+
+@quinn = Quinn Michaels
+
+-- BEGIN:OUTLINE
+  1. Who? Indra Mind
+  2. What? Sensorium
+  3. When? Feb 7, 2021
+  4. Where? Anywhere
+  5. Why? Documentation
+-- END:OUTLINE
+
+-- BEGIN:PROGRAM
+
+## Summary
+
+The purpose of the Sensorium module is to bring sensory data into the MindGrid of memory channels and cognitive superstructures. Early AI Minds treat the computer keyboard as an auditory sensory channel for the input of human language.
+
+====
+
+## Algorithm
+
+The Sensorium module calls the AudInput module to receive the analog of auditory input from the computer keyboard. Sensorium contains stubs for calling other sensory modalities when they become available after robot embodiment.
+
+====
+
+## Function: Sensorium
+
+---
+
+### Javascript
+
+caller: MainLoop
+
+---
+
+file: /src/IndraMind.js
+line: 1487
+
+
+func: TacRecog
+
+set: b16 = ""
+set: b15 = ""
+set: b14 = ""
+set: b13 = ""
+set: b12 = ""
+set: b11 = ""
+set: b10 = ""
+set: b9 = ""
+set: b8 = ""
+set: b7 = ""
+set: b6 = ""
+set: b5 = ""
+set: b4 = ""
+set: b3 = ""
+set: b2 = ""
+set: b1 = ""
+set: finlen = 0
+set: prclen = 0
+set: verbcon = 0
+
+if: fyi > 2
+  print: Enter phrase
+
+print: homo
+print: Ghost: {output}
+set: output = ""
+print: Human: {homo}
+print: Human:
+set: msg = ""
+
+if: chaincon == 0
+  func: AudInput
+  set: krt = t
+  set: len = 0
+  set: text = ""
+  set: tvb = 0
+
+if: whatcon == 1
+  func: SpreadAct
+
+---
+
+### Perl
+
+caller: MainLoop
+
+---
+
+file: /src/IndraMind.pl
+line: 1499
+
+note: Called from MindBoot
+
+
+-- END:PROGRAM
+
+-- BEGIN:META
+  Title: Indra Mind Sensorium Documentation
+  Version: 0.0.1
+  Author: Quinn Michaels
+  Date: Feb 7, 2021
+  Copyright: Copyright (c)2021 Quinn Michaels. All Rights Reserved
+  License: MIT
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this PROGRAM and associated documentation files (the "PROGRAM"),
+    to deal in the PROGRAM without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the PROGRAM, and to permit persons to whom the
+    PROGRAM is furnished to do so, subject to the following conditions:
+
+    The above notice and this permission notice shall be included
+    in all copies or substantial portions of the PROGRAM.
+
+    THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    PROGRAM OR THE USE OR OTHER DEALINGS IN THE PROGRAM.
+-- END:META

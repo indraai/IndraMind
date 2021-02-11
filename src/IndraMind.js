@@ -4,18 +4,18 @@ const Svarga = require('@indra.ai/svarga');
 
 const fs = require('fs');
 const path = require('path');
-const {vars, me, client} = require('../data/config');
+const {vars, agent, client} = require('../data/config');
 const {Modules, Security, Mind} = require('../modules');
 const lang = require('../data/lang');
 
 const IndraMind = new Svarga({
   agent: {
-    key: me.key,
-    name: me.name,
-    description: me.description,
-    prompt: me.prompt,
-    voice: me.voice,
-    profile: me.profile,
+    key: agent.key,
+    name: agent.name,
+    description: agent.description,
+    prompt: agent.prompt,
+    voice: agent.voice,
+    profile: agent.profile,
     translate(input) {
       return input.trim();
     },
@@ -23,6 +23,7 @@ const IndraMind = new Svarga({
       return input.trim();
     }
   },
+  client,
   vars: {},
   listeners: {},
   deva: {},
@@ -42,20 +43,20 @@ const IndraMind = new Svarga({
       this.vars.birth = Date.now();
 
       this.security = new Security({
-        client,
+        agent,
         state: this.vars,
       });
 
       this.modules.Mind = new Mind({
-        client,
-        lang: lang[client.profile.lang],
+        agent,
+        lang: lang[agent.profile.lang],
         birth: this.vars.birth,
         state: this.vars,
         security: this.security,
       });
 
-      this.client.modules.forEach(mod => {
-        this.modules[mod] = new Modules[mod](this.client);
+      if (this.agent.modules) this.agent.modules.forEach(mod => {
+        this.modules[mod] = new Modules[mod](this.agent);
       });
 
       // let i = this.vars.blocks;
@@ -84,6 +85,31 @@ const IndraMind = new Svarga({
     question(packet) {
       return this.func.question(packet);
     },
+
+    client(packet) {
+      return Promise.resolve({text: this.client.name});
+    },
+    agent(packet) {
+      return Promise.resolve({text: this.agent.name});
+    },
+
+    corpus(packet) {},
+
+    lang(packet) {},
+
+    mind(packet) {},
+
+    reports(packet) {},
+
+    mail(packet) {},
+
+    state(packet) {},
+
+    docs(packet) {},
+
+    help(packet) {},
+
+
     body(packet) {
       return this.func.conduct('body', packet);
     },
@@ -120,7 +146,6 @@ const IndraMind = new Svarga({
     return this.security.Exit(this.vars, this.func.SaveState());
   },
   onInit() {
-    this.client = client;
     this.vars = vars;
     this.func.Boot();
     return Promise.resolve(`🥛 INIT: ${this.agent.name}`)

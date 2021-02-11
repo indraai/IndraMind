@@ -1,8 +1,15 @@
+/* Copyright (c)2021 Quinn Michaels */
 :root {
   --main-width: 640px;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-gray: #5b5b5b;
+  --color-light-gray: #9c9c9c;
+  --color-dark-gray: #333333;
+  --color-darker-gray: #1c1c1c;
+  --color-darkest-gray: #0f0f0f;
   --color-baby-blue: #00b4ff;
+  --color-blue: #0a309e;
   --color-light-baby-blue: #92ddfd;
   --color-green: #57a000;
   --color-light-green: #acfb4e;
@@ -14,123 +21,101 @@
   --color-orange: #ff9c00;
   --color-light-orange: #fdcc80;
   --color-red: #ff4b4b;
+  --color-light-red: #fc9797;
   --color-purple: #b14bff;
   --color-light-purple: #d39aff;
   --color-aqua: #00ffea;
-  --color-light-aqua: #78fff4;
+  --color-light-aqua: #abfff8;
   --color-note: #fff993;
   --transition-default: all .5s linear;
   --header-image: url(/public/img/indra.png);
-  --header-height: 219px;
+  --header-height: 50px;
+  --before-height: 30px;
+  --before-left: -40px;
+
 }
 
 body, div, header, main, footer, h1, h2, form, input, button, i, span {
   box-sizing: border-box;
 }
-button {
-  transition: var(--transition-default);
-  background-color: var(--color-baby-blue);
-  border: 0;
-  outline: 0;
-  padding: 3px 5px;
-  margin: 0;
-  color: var(--color-white);
-}
-button:hover {
-  cursor: pointer;
-}
+
 body {
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   font-size: 14px;
   font-family: arial;
   padding: 0;
   margin: 0;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
 }
-header h1 {
-  background-image: var(--header-image);
-  background-repeat: none;
-  background-position: center center;
-  height: var(--header-height);
+
+button {
+  transition: var(--transition-default);
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  padding: 3px 5px;
   margin: 0;
-  padding: 0;
 }
+
+button:hover {
+  cursor: pointer;
+}
+
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: calc(var(--header-height));
   text-align: center;
   display: block;
-  width: var(--main-width);
   margin: auto;
+  background-color: var(--color-darker-gray);
+  box-shadow: 0 0 15px rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+header h1 {
+  margin: 0;
+  padding: 0;
+  color: var(--color-blue);
+  text-shadow: 0 1px 1px var(--color-black);
+  font-size: 1.5rem;
+  height: var(--before-height);
+  position: relative;
+}
+header h1::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  margin-right: 10px;
+  top: 0;
+  left: var(--before-left);
+  background-image: url(/public/img/avatar.png);
+  background-repeat: no-repeat;
+  background-size: var(--before-height) var(--before-height);
+  width: var(--before-height);
+  height: var(--before-height);
+  border-radius: calc(var(--before-height) / 2);
 }
 main {
   width: 640px;
   margin: auto;
-  box-shadow: 0 0 15px rgba(0,0,0,.5);
-  background-color: var(--color-white);
-  border-radius: 10px;
+  margin-top: var(--header-height);
   overflow: hidden;
 }
 footer {
   display: block;
   text-align: center;
   padding: 1rem;
+  color: var(--color-dark-gray);
 }
 
-form {
-  background-color: var(--color-baby-blue);
-  margin: 0;
-  padding: 1rem;
-  text-align: center;
-}
-
-menu {
-  display: flex;
-  width: 100%;
-  width: var(--main-width);
-  margin: auto;
-  margin: 0;
-  padding: 0;
-  background-color: var(--color-light-green);
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-menu ul {
-  flex: 0;
-  list-style: none;
-  margin: 0;
-  padding: 5px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-menu ul li {
-  padding: 0;
-  margin: 0;
-  flex: 0;
-  text-align: center;
-}
-menu ul li button {
-  margin: 0;
-  font-size: 14px;
-  padding: 5px 10px;
-}
-menu ul li:first-child button {
-  border-radius: 10px 0 0 10px;
-}
-menu ul li:last-child button {
-  border-radius: 0 10px 10px 0;
-}
-menu ul li button.active,
-menu ul li button:hover {
-  background-color: var(--color-light-yellow);
-  color: var(--color-dark-yellow);
-  box-shadow: inset 0 -3px 9px rgba(0,0,0,.2);
-}
-menu ul li button:hover {
-  cursor: pointer;
-}
+form {}
 
 .center {
   text-align: center;

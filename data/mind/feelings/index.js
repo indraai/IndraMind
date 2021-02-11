@@ -1,3 +1,5 @@
+// Copyright (c)2021 Quinn Michaels
+
 module.exports = {
   key: 'feelings',
   name: 'Feelings',

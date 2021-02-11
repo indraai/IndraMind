@@ -2,6 +2,7 @@
   "key": "qualities",
   "name": "Qualities Model",
   "describe": "Qualities Data Model",
+  "copyright": "Copyright (c) 2021 Quinn Michaels. All rights reserved.",
   "paths": {
     "skillful": "/data/mind/qualities/skillful.json",
     "unskillful": "/data/mind/qualities/unskillful.json"

@@ -8,15 +8,15 @@ class Security {
   constructor(opts) {
     console.log('🚨 LOAD: Security');
 
-    this.client = opts.client;
+    this.agent = opts.agent;
     this.state = opts.state;
     this.stamp = false;
     this.enter = false;
     this.exit = false;
     this.status = false;
 
-    this.health = new Health(opts.client);
-    this.medical = new Medical(opts.client);
+    this.health = new Health(opts.agent);
+    this.medical = new Medical(opts.agent);
   }
 
   Card(opts) {
@@ -143,13 +143,12 @@ class Security {
     });
   }
 
-  Enter(state) {
+  Enter(key, state) {
     this.enter = Date.now();
-    if (!this.client) this.client = this.Card({
-      key: this.uid(),
+    if (!this.agent) this.agent = this.Card({
+      key,
       name: '',
-      type: 'Agent|Client',
-    })
+    });
     this.Log(state);
     this.Health();
     this.Check();

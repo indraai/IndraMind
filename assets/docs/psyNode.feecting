@@ -1,0 +1,79 @@
+#
+
+## DISCLAIMER
+>
+
+// VARIABLES
+$FEECTING = https://github.com/indraai/language-feecting/
+@Deva = http://DevaBuddhism.com
+
+@ =
+
+-- BEGIN:OUTLINE
+  1. Who?
+  2. What?
+  3. When?
+  4. Where?
+  5. Why?
+-- END:OUTLINE
+
+-- BEGIN:PROGRAM
+
+### psyNode
+
+bubble: /docs/psyNode.feecting
+
+note: psyNode creates a new node to store current variables. Then the below variables are set into the (this) namespace of the new psyNode.
+
+func: psyNode(tru, psi, hlc, act, mtx, jux, pos, dba, num, mfn, pre, seq, tgn, tdt, tkb, tia, tcj, tdj, tdv, tpr, rv)
+  set: this.tru = tru
+  set: this.psi = psi
+  set: this.hlc = hlc
+  set: this.act = act
+  set: this.mtx = mtx
+  set: this.jux = jux
+  set: this.pos = pos
+  set: this.dba = dba
+  set: this.num = num
+  set: this.mfn = mfn
+  set: this.pre = pre
+  set: this.seq = seq
+  set: this.tgn = tgn
+  set: this.tdt = tdt
+  set: this.tkb = tkb
+  set: this.tia = tia
+  set: this.tcj = tcj
+  set: this.tdj = tdj
+  set: this.tdv = tdv
+  set: this.tpr = tpr
+  set: this.rv = rv
+  func: this.psyExam = psyExam
+
+
+-- END:PROGRAM
+
+-- BEGIN:META
+  Title:
+  Version: 0.0.1
+  Author: @
+  Date:
+  Copyright: Copyright (c) @. All Rights Reserved
+  License: MIT
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this PROGRAM and associated documentation files (the "PROGRAM"),
+    to deal in the PROGRAM without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the PROGRAM, and to permit persons to whom the
+    PROGRAM is furnished to do so, subject to the following conditions:
+
+    The above notice and this permission notice shall be included
+    in all copies or substantial portions of the PROGRAM.
+
+    THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    PROGRAM OR THE USE OR OTHER DEALINGS IN THE PROGRAM.
+-- END:META

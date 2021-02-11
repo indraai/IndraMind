@@ -1,3 +1,5 @@
+// Copyright 2021(c) Quinn Michaels. All rights reserved.
+
 module.exports = {
   key: 'senses',
   name: 'Senses',

@@ -1,0 +1,134 @@
+
+feecting: /docs/Volition.feecting
+
+# Indra Mind EnThnk Module
+
+## DISCLAIMER
+> Documentation for Indra Mind EnThink
+
+// VARIABLES
+$FEECTING = https://github.com/indraai/language-feecting/
+@Deva = http://DevaBuddhism.com
+
+@quinn = Quinn Michaels
+
+-- BEGIN:OUTLINE
+  1. Who? Indra Mind
+  2. What? EnThnk Module
+  3. When? Feb 7, 2021
+  4. Where? Anywhere
+  5. Why? Document EnThink Module
+-- END:OUTLINE
+
+-- BEGIN:PROGRAM
+
+### EnThink
+
+note: EnThink called from Volition()
+
+func: EnThink
+  set: catsubj = 0
+  set: catverb = 0
+  set: prep = 0
+  set: tdo = 0
+  set: tkb = 0
+  set: tpr = 0
+  set: inert = inert + 1
+  set: lurk = lurk + 1
+
+  if: isolation > 60
+    func: Imperative()
+    set: impetus = 0
+    set: isolation = 0
+    return: end
+
+  if: qucon == 1 || whatcon == 1 || wherecon == 1)
+    func: SpreadAct()
+
+  set: apb = SET THINKING ALERT MESSAGE
+
+  func: Voice()
+
+  if: kbcon > 0
+    func: KbRetro()
+    set: kbcon = 0
+    set: kbzap = 0
+
+  set: inft = t
+
+  if: becon == 1
+    func: InFerence()
+
+  if: yncon == 1
+    set: td0 = 0
+    func: AskUser()
+    return: end;
+
+  set: abort = false
+  set: cosmos.HTML = ""
+
+  if: (nucon > 0)
+    func: SpreadAct()
+    set: nucon = 0
+    set: pov = 2
+    return: end
+
+  if: quiet == true || quiet == false
+    set: pov = 1
+    set: output = ""
+    set: outputplus = ""
+    set: t = t + 1
+    func: audMemory[t].audExam()
+    audNode: audMemory[t] = new audNode("{", aud1, aud2)
+    func: Indicative()
+
+  if: etc > 1
+    func: ConJoin()
+    func: Indicative()
+
+  if: rsvp > -1
+    set: rsvp - 100
+    if: rsvp < 0
+      set: rsvp = 0
+
+  for: i = 1; i < rsvp + 100; i++
+    if: i > 1
+      set: abp = REJOUVENATION TIME ISOLATION MESSAGES
+      func: Voice()
+
+  set: conj = 0
+  set: dunnocon = 0
+  set: etc = 0
+  set: quiet = true
+  set: subjnom = 0
+  set: whatcon = 0
+
+
+
+-- END:PROGRAM
+
+-- BEGIN:META
+  Title: Indra Mind EnThnk Module
+  Version: 0.0.1
+  Author: @quinn
+  Date:
+  Copyright: Copyright (c) @quinn. All Rights Reserved
+  License: MIT
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this PROGRAM and associated documentation files (the "PROGRAM"),
+    to deal in the PROGRAM without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the PROGRAM, and to permit persons to whom the
+    PROGRAM is furnished to do so, subject to the following conditions:
+
+    The above notice and this permission notice shall be included
+    in all copies or substantial portions of the PROGRAM.
+
+    THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    PROGRAM OR THE USE OR OTHER DEALINGS IN THE PROGRAM.
+-- END:META

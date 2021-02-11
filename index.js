@@ -15,8 +15,8 @@ const shell = readline.createInterface({
   output: process.stdout,
 });
 
-const client = require('./data/config/client.json').data;
-const {IndraMind} = require('./src/IndraMind.dev.js');
+const {agent, client} = require('./data/config');
+const {IndraMind} = require('./src/IndraMind.js');
 
 // setup the public directory
 fast.register(fastStatic, {
@@ -56,6 +56,7 @@ fast.register(fastStatic, {
 // setup routes and handlers
 const handlers = {
   default(req, reply) {
+    console.log('SENDING DEFAULT FILE');
     return reply.sendFile('index.html', path.join(__dirname, 'assets'));
   },
   docs(req, reply) {
@@ -63,9 +64,11 @@ const handlers = {
     const _text = fs.readFileSync(path.join(__dirname, 'assets', 'docs', req.params.file), 'utf8');
     return reply.send(_text);
   },
-  zines(req, reply) {
+  reports(req, reply) {
     if (!req.params.file) req.params.file = 'main.feecting';
-    const _text = fs.readFileSync(path.join(__dirname, 'assets', 'zines', req.params.file), 'utf8');
+    let _file = path.join(__dirname, 'assets', 'reports', req.params.file);
+    if (req.params.dir) _file = path.join(__dirname, 'assets', 'reports', req.params.dir, req.params.file);
+    const _text = fs.readFileSync(_file, 'utf8');
     return reply.send(_text);
   },
   help(req, reply) {
@@ -78,10 +81,7 @@ const handlers = {
     return reply.send(_text);
   },
   question(req, reply) {
-    return IndraMind.question({
-      text: req.body.text,
-      created: req.body.created,
-    });
+    return IndraMind.question(req.body.question);
   }
 }
 const routes = [
@@ -107,13 +107,18 @@ const routes = [
   },
   {
     method: 'GET',
-    url: '/zines',
-    handler: handlers.zines,
+    url: '/reports',
+    handler: handlers.reports,
   },
   {
     method: 'GET',
-    url: '/zines/:file',
-    handler: handlers.zines,
+    url: '/reports/:file',
+    handler: handlers.reports,
+  },
+  {
+    method: 'GET',
+    url: '/reports/:dir/:file',
+    handler: handlers.reports,
   },
   {
     method: 'GET',
@@ -137,7 +142,7 @@ routes.forEach(rt => {
 
 
 function shellPrompt(_prompt, _text) {
-  const {label,text} = _prompt.colors; // set client prompt colors
+  const {label,text} = _prompt.colors; // set agent prompt colors
   shell.setPrompt(chalk.rgb(label.R, label.G, label.B)(`${_prompt.emoji} ${_prompt.text}: `));
   shell.prompt();
   if (_text) console.log(chalk.rgb(text.R, text.G, text.B)(_text));
@@ -156,7 +161,7 @@ return `
 }
 
 fast.listen(client.profile.port).then(() => {
-  console.log(`PORT: ${client.profile.port}`);
+  console.log(`PORT: ${agent.profile.port}`);
   console.log('---------------');
   console.log(`🍚 CLIENT:`);
   console.log(JSON.stringify(client, null, 2));
@@ -180,10 +185,7 @@ fast.listen(client.profile.port).then(() => {
 
   shell.on('line', question => {
     if (question === '!exit') return shell.close();
-    IndraMind.question({
-      text: question,
-      created: Date.now(),
-    }).then(answer => {
+    IndraMind.question(question).then(answer => {
       shellPrompt(answer.a.agent.prompt, answer.a.text);
       shellPrompt(client.prompt, '');
       // console.log('ANSWER', JSON.stringify(answer, null, 2));

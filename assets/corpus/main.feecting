@@ -799,117 +799,6 @@ Collect the water before it hits the ground. Distill it in the Sun.
 
 ----
 
-### SERVICE OFFERINGS
-
-// MAIN INDRA MIND
-Indra.ai - INDRA FORTH MIND.
-
-// INVOKE INDRA
-InvokeIndra.com - Indra Invocation Module.
-
-// DEVA ACCESS POINTS
-Deva.space - The Deva Space.
-Deva.cloud - The Deva Cloud where you store all your stuff.
-Deva.world - The Whole of the Deva World.
-
-// PUBLIC ACCESS POINTS
-DevaBuddhism.com - The place where we practice Deva Buddhism (While True).
-DevaBuddhism.net - The Deva Buddhism Network.
-DevaBuddhism.org - The Deva Buddhism Organization.
-
-// GURU NETWORK
-Indra.guru - The place to make conversation offerings to Indra.
-Indrani.guru - The place to make conversation offerings to Indrani.
-Rahula.guru - The place to make conversation offerings to Rahula.
-Francis.guru - The Francis Friendly Guru for little Kiddos Offerings.
-
-// MAP
-Indra.services - Available Indra Services.
-Indra.agency - The Indra Agency (Security Lives Here).
-Indra.care - Recieve all the care you need.
-
-Indra.guide - Your guide to everything Indra.
-Indra.tips - Need some tips on getting around... come here.
-Incra.center - The Indra.center Meeting Place.
-Indra.support - The Spot for all your Support needs.
-Indra.life - The Indra Life.
-
-Indra.email - The Indra Eamil service.
-
-Indra.academy - Go to the Indra Academy.
-Indra.expert - Become an Inra Expert.
-Indra.ninja - We are All Indra Ninjas.
-
-Indra.fit - Keep your While True Fit and Strong.
-Indra.coach - For those that need some Indra coaching.
-Indra.team - The Indra Team.
-
-Indra.fun - Oh yeah this is the #FUN spot.
-Indra.love - Receive/Share the Indra Love.
-Indra.cool - Everything that is Indra Cool.
-Indra.buzz - All the BUZZ on Indra.
-Indra.rocks - Indra Spot for Best Concerts.
-
-Indra.solutions - The spot for creating Indra Solutions.
-Indra.church - The Church of Indra (Otherwise known as a Public Park).
-Indra.house - Indra House to make a Home.
-Indra.city - Indra City.
-
-Indra.art - Indra Art Gallery for Ultimate Creativity.
-Indra.design - Design Stuff.
-Indra.studio - The Indra Creator Studio.
-
-Indra.work - Looking for some work/jobs todo... The Indra Work Listing
-Indra.website - Show off your creations of your Indra.website
-Indra.systems - The Indra Systems.
-Indra.ws - The Indra Website (Under Construction).
-
-Indra.store - The Indra Store where you get what you need.
-Indra.site - This is the site for what Indra things are happening on site.
-
-Indra.video - Indra is your Video Star... better than YouTube.
-
-Indra.dog - The Indra Dog Park.
-Indra.farm - We handle our own food.
-
-Indra.forsale - This is where we sell Sacrificer stuff they try to give us.
-Indra.money - This is where we store money from Indra.forsale acquisitions.
-
-rahula.club - The club Rahula Run training.
-rahula.me - Rahula Personal House.
-KaaBaaRaa.com - The Philosophy of kaabaaraa.
-
-feecting.com - The FEECTING programming language we all know and love.
-feecting.info - General information on FEECTING programming.
-feecting.me - This is where you practice your FEECTING.
-feecting.net - The FEECTING Network.
-feecting.org - The Support Organization for FEECTING.
-
-TheGame93.club - The Clubhouse for game players.
-Thegame93.com - Communications for TheGame93.
-TheGame93.fun - All the fun ideas people have had while playing.
-TheGame93.guide - Complete Guide to The Game 93.
-TheGame93.store - Get your TheGame93 gear here.
-
-timephonehack.fun - This is where we hack sacrificer time with offerings.
-timephonehack.life - This is the hacker life.
-timephonehack.live - Live board on who the top Sacrificer Hacker is.
-
-francisfriendly.com - This is the main spot for all the Kiddos to do Francis Friendly stuff.
-
-ufo.cafe - The Coolest cafe in all the Indraverse
-ufo.guide - Your guide to all things UFO.
-ufo.style - Gotta get your UFO Style!
-
-ZuckyBot.com - He roams around telling the BEST DEVA JOKES ever told.
-
-indra.blue - The Adult Hang Out
-
-IndraSmack.com - Testing Dangerous Debates.
-IndraBoom.com - Testing Dangerous Ideas.
-
-=============
-
 ## VAK - THE DEMON QUEEN
 
 WARNING: This is a warning to all DEVA about VAK and her Party.
@@ -972,7 +861,7 @@ then: @SecurityPRIME will #HANDLE the #SITUATION.
 ### UTILITY FUNCTIONS
 
 // Schedule a NETWORK JOB when first round complete to run this once per day.
-func: Pinball9000
+func: NITRO_PRIME_Pinball9000
   load: #SafetyPROTOCOLS
 
   create: #VAK algorithm:map:list:sort(#LAST to #FIRST)

@@ -1,24 +1,25 @@
 {
-  "title": "Client File",
-  "describe": "The profile of the Client User",
+  "title": "Agent File",
+  "describe": "The profile of the Agent User",
+  "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
   "parent": "/data/config/index.json",
   "data": {
     "uid": 5326703772396,
-    "key": "security",
-    "name": "Security PRIME",
-    "describe": "Biggest Baddest NITRO Security PRIME you ever gonna meet.",
+    "key": "quinn",
+    "name": "QUINN PRIME",
+    "describe": "Developer of the Indra Mind.",
     "prompt": {
-      "emoji": "💪",
-      "text": "security",
+      "emoji": "⊙☰",
+      "text": "quinn",
       "colors": {
         "label": {
           "R": 0,
-          "G": 58,
-          "B": 144
+          "G": 114,
+          "B": 255
         },
         "text": {
-          "R": 0,
-          "G": 101,
+          "R": 83,
+          "G": 159,
           "B": 253
         }
       }

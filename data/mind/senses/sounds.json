@@ -2,6 +2,7 @@
   "key": "sounds",
   "name": "Sounds",
   "describe": "Sounds Sense",
+  "copyright": "Copyright (c) 2021 Quinn Michaels. All rights reserved.",
   "data": [
     {
       "uid": 3670624912863,

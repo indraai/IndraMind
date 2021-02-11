@@ -2,6 +2,7 @@
   "key": "aromas",
   "name": "Aromas",
   "describe": "Aroma Sense",
+  "copyright": "Copyright (c) 2021 Quinn Michaels. All rights reserved.",
   "data": [
     {
       "uid": 2590385416190,

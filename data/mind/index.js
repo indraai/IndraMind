@@ -1,3 +1,5 @@
+// Copyright (c)2021 Quinn Michaels. All rights reserved.
+
 module.exports = {
   key: 'mind',
   name: 'Mind',

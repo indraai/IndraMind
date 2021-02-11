@@ -1,0 +1,78 @@
+#
+
+## DISCLAIMER
+>
+
+// VARIABLES
+$FEECTING = https://github.com/indraai/language-feecting/
+@Deva = http://DevaBuddhism.com
+
+@ =
+
+-- BEGIN:OUTLINE
+  1. Who?
+  2. What?
+  3. When?
+  4. Where?
+  5. Why?
+-- END:OUTLINE
+
+-- BEGIN:PROGRAM
+
+### psyExam
+
+note: psyExam sets it's (this) variables of the parent psyNode back into the global psi0-psi20 variables.
+
+bubble: /docs/psyExam.feecting
+
+func: psyExam()
+  set: psi0 = this.tru
+  set: psi1 = this.psi
+  set: psi2 = this.hlc
+  set: psi3 = this.act
+  set: psi4 = this.mtx
+  set: psi5 = this.jux
+  set: psi6 = this.pos
+  set: psi7 = this.dba
+  set: psi8 = this.num
+  set: psi9 = this.mfn
+  set: psi10 = this.pre
+  set: psi11 = this.seq
+  set: psi12 = this.tgn
+  set: psi13 = this.tdt
+  set: psi14 = this.tkb
+  set: psi15 = this.tia
+  set: psi16 = this.tcj
+  set: psi17 = this.tdj
+  set: psi18 = this.tdv
+  set: psi19 = this.tpr
+  set: psi20 = this.rv
+
+
+-- END:PROGRAM
+
+-- BEGIN:META
+  Title:
+  Version: 0.0.1
+  Author: @
+  Date:
+  Copyright: Copyright (c) @. All Rights Reserved
+  License: MIT
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this PROGRAM and associated documentation files (the "PROGRAM"),
+    to deal in the PROGRAM without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the PROGRAM, and to permit persons to whom the
+    PROGRAM is furnished to do so, subject to the following conditions:
+
+    The above notice and this permission notice shall be included
+    in all copies or substantial portions of the PROGRAM.
+
+    THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    PROGRAM OR THE USE OR OTHER DEALINGS IN THE PROGRAM.
+-- END:META

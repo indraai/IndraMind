@@ -1,25 +1,26 @@
-
-# My Zines
+$feecting
+# Reports
 
 ## DISCLAIMER
-> The Quinn Zines.  Please read at your own risk. This is just where I write my thoughts.
+> The Quinn Reports.  Please read at your own risk. This is just where I write my thoughts.
 
-// VARIABLES
-$FEECTING = https://github.com/indraai/language-feecting/
 @Quinn = Quinn Michaels
 
 -- BEGIN:OUTLINE
   1. Who? Quinn Michaels
-  2. What? E-Zines
-  3. When? Feb, 2021
+  2. What? REPORTS
+  3. When? Feb 9, 2021
   4. Where? Indra.ai
-  5. Why? Keep everyone up to Date.
+  5. Why? REPORTING ON CURRENT FINDINGS.
 -- END:OUTLINE
 
 -- BEGIN:PROGRAM
+## CURRENT REPORT
 
-## The Directory
-
+### Church of Virus
+date: Feb 9, 2021
+report: /CoV/main
+report: /CoV/lexicon
 
 -- END:PROGRAM
 

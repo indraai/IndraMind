@@ -2,7 +2,7 @@
 
 class Defense {
   constructor(opts) {
-    this.client = opts.client;
+    this.agent = opts.agent;
     this.state = opts.state;
     this.created = Date.now();
     this.strategy = false;

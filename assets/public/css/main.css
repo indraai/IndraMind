@@ -1,10 +1,12 @@
+/* Copyright (c)2021 Quinn Michaels */
 @import "../icons/style.css";
 @import "global.css";
-@import "data.css";
+@import "menu.css";
 @import "data.css";
 @import "feecting.css";
 @import "mail.css";
 @import "snacks.css";
+@import "shell.css";
 
 #mouth {
   font-size: 2rem;
@@ -15,18 +17,21 @@
 }
 
 #brain {
-  background-color: var(--color-light-green);
+  background-color: var(--color-darker-gray);
   font-size: 1rem;
   padding: .5rem;
-  color: var(--color-green);
+  color: var(--color-gray);
 }
 
-#souvenir {
-  background-color: var(--color-baby-blue);
-  padding: .5rem;
+#offering {
+  background-color: var(--color-darkest-gray);
+  color: var(--color-gray);
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
 }
 #content {
-  background-color: #333;
+  background-color: var(--color-dark-gray);
   color: #eee;
   padding: 0;
   overflow: auto;

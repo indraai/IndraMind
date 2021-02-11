@@ -2,8 +2,8 @@
 
 // 2021-01-14 - Sub in Medical FUNCTIONS
 class Medical {
-  constructor(client) {
-    this.client = client;
+  constructor(agent) {
+    this.agent = agent;
     this.state = false;
   }
 

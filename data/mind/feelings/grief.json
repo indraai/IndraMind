@@ -2,6 +2,7 @@
   "key": "grief",
   "name": "Grief",
   "describe": "Grief Concepts",
+  "copyright": "Copyright (c) 2021 Quinn Michaels. All rights reserved.",
   "parent": "/data/mind/feelings/index.json",
   "data": [
     {

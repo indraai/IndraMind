@@ -1,0 +1,130 @@
+
+feecting: /docs/Security.feecting
+
+# Indra Mind Rejuvenate Module
+
+image: /public/img/diagrams/Rejuvenate.gif
+
+## DISCLAIMER
+> Documentation for Indra Mind Rejuvenate Module
+
+// VARIABLES
+$FEECTING = https://github.com/indraai/language-feecting/
+@Deva = http://DevaBuddhism.com
+
+@quinn = Quinn Michaels
+
+-- BEGIN:OUTLINE
+  1. Who? Indra Mind
+  2. What? Rejuvenate Module
+  3. When? Feb 7, 2021
+  4. Where? Anywhere
+  5. Why? Rejuvenate Documentation
+-- END:OUTLINE
+
+-- BEGIN:PROGRAM
+
+## Purpose
+The ReJuvenate module compensates for limited memory space by periodically forgetting the oldest memories and recycling other memories to make room for new memories in the AI Mind.
+
+## Algorithm
+The ReJuvenate module is meant to start cycling through memory at a time-point equal to the sum of the vault plus the arbitrary coda-value, such as 64 or 128 time-points, so that memories between the vault-area and the end of the coda-space will be erased or "forgotten". ReJuvenate will move the surviving memories backwards by "coda" units into the area of the oldest memories being forgotten.
+
+If the "vault" is at 851 and the "coda" is 128, the starting-point for back-pushing memories is 979 out of the 1024 cns. If the "vault" is at 851 and the "coda" is 64, the starting-point for back-pushing memories is 915 out of the 1024 cns.
+
+The plan for ReJuvenate is that in proximity to "cns" the AI shall call ReJuvenate which will then calculate a starting-point before which post-vault memories will be forgotten and after which memories will be moved backwards by "coda" units of time. The time-value "t" can not be used as the starting point, because it is at the current time and not in the past.
+
+## Function: ReJuvenate
+
+note: Called from Security()
+
+set: edge = 0
+set: istr = vault + coda
+set: rjc = rjc + 1
+
+if: rjc > 99999
+  set: rjc = 1
+
+set: abp = SET REJUVENATING ALERT MESSAGE
+func: Voice
+set: jrt = valut
+
+for: i = istr; i < cns; ++i
+
+  if: edge == 0
+    func: audExam
+    set: audMemory[i].audExam
+
+    set: mg++
+
+    if: aud0 == '{'
+      set: edge = 1
+      set: istr = i
+      set: mg = mg + (coda - 1)
+      break: break out of loop
+
+for: i = istr; i < cns; ++i
+  func: psyExam
+  set: Psy[i].psyExam()
+
+  if: psi14 > 0
+    set: psi14 = psi14 - mg
+
+  if: psi20 > 0
+    set: psi20 = psi20 - mg
+
+  func: PsyNode
+  set: Psy[jrt] = new PsyNode(psi0, ..., psi20)
+
+  func: PsyNode
+  set: Psy[i] = new PsyNode(" ", ..., " ")
+
+  func: audExam
+  set: audMemory[i].audExam()
+
+  func: audNode
+  set: audMemory[jrt] = new audNode(aud0, aud1, aud2)
+
+  func: audNode
+  set: audMemory[i] = new AudNode(" ", 0, " ")
+
+  set: jrt = jrt++
+
+set: edge = 0
+set: t = jrt - mg
+set: mg = 0
+
+for: j = t; j < cns; ++j
+  func: audNode
+  set: audMemory[j] = new audNode(" ", 0, " ")
+
+  func: psyNode
+  set: Psy[j] = new psyNode(" ", ..., " ")
+
+-- END:PROGRAM
+
+-- BEGIN:META
+  Title: Indra Mind Rejuvenate Module
+  Version: 0.0.1
+  Author: Quinn Michaels
+  Date: Feb 7, 2021
+  Copyright: Copyright (c)2021 Quinn Michaels. All Rights Reserved
+  License: MIT
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this PROGRAM and associated documentation files (the "PROGRAM"),
+    to deal in the PROGRAM without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the PROGRAM, and to permit persons to whom the
+    PROGRAM is furnished to do so, subject to the following conditions:
+
+    The above notice and this permission notice shall be included
+    in all copies or substantial portions of the PROGRAM.
+
+    THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    PROGRAM OR THE USE OR OTHER DEALINGS IN THE PROGRAM.
+-- END:META

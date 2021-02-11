@@ -2,6 +2,7 @@
   "key": "mind",
   "name": "Mind Model",
   "describe": "Mind Data Model",
+  "copyright": "Copyright (c) 2021 Quinn Michaels. All rights reserved.",
   "paths": {
     "concepts": "/data/mind/concepts/index.json",
     "conduct": "/data/mind/conduct/index.json",

@@ -1,0 +1,203 @@
+
+feecting: /docs/Volition.feecting
+feecting: /docs/EnThink.feecting
+
+# Indra Mind AskUser Module
+
+## DISCLAIMER
+> This is the documentation for the Indra Mind AskUser Module
+
+// VARIABLES
+$FEECTING = https://github.com/indraai/language-feecting/
+@Deva = http://DevaBuddhism.com
+
+@quinn = Quinn Michaels
+
+-- BEGIN:OUTLINE
+  1. Who? Indra Mind
+  2. What? Askuser Documentation
+  3. When? 2021 Forward
+  4. Where? Anywhere
+  5. Why? Documentation is necessary.
+-- END:OUTLINE
+
+-- BEGIN:PROGRAM
+
+image: /public/img/diagrams/AskUser.gif
+
+===
+
+## Purpose
+The AskUser mind-module has several purposes. One is to ask the human user a question seeking confirmation or negation of a logical InFerence made by the InFerence module. Another purpose is to let the Volition module decide to ask various questions in pursuit of conducting a conversation with the human user.
+
+===
+
+## Algorithm
+Whereas the SpreadAct module causes the AI to spread so much activation to a sequence of concepts that they surface in the output of the AI as a response to a query submitted by a human user, the AskUser module is engineered to ask specific questions of a human user in specific situations.
+
+### Ask a YES or NO question
+When the InFerence module makes a silent inference on the basis of input data, various parameters such as the subject of the inference, the verb involved, and the direct object of the inferred verb, are fed as variables to the AskUser module so that the AI may ask a human user if the inference is true. When the user answers "yes" or "no" or "maybe" or no answer at all, the KbRetro module retroactively adjusts the inferred idea in the knowledge base (KB) so that the AI may either use or disregard the idea in the future.
+
+If you tell a Indra Mind a general fact, such as "Women have a child" or "Boys play games" and you then input a specific fact such as "Mary is a woman" or "John is a boy", the AI will make a silent inference and then use the AskUser mind-module to ask for confirmation or refutation of the inference.
+
+You can try it out with to input "Mary is a woman". Then the AI will ask you, "Does Mary have a child?" There are four possible answers anticipated by the AI software: Yes; No; maybe; or no answer at all. Then the KbRetro() module adjusts the knowledge base (KB) with your answer.
+
+### Ask a question out of curiosity
+Some versions of the AI Mind, MindForth in particular, are being coded to ask "Who are you?" if there has been no contact with the outside world after an arbitrary interval as specified by the AI coder or AI mind maintainer. Although this question needs to be reworked so that it arises spontaneously as an initiative undertaken at the behest of the Volition module for free will in robots, the question is important because any previous user may have departed from the scene and the AI Mind may need to become aware that it is dealing with a different user than before.
+
+IndraMind.Forth implements the ability of the AskUser module to ask a who-question like "Who are you?" based upon a kind of artificial curiosity caused by an arbitrarily long period without any human input. The isolation flag is incremented one-by-one for any thought-cycle with no human input until a threshold level decreed by the AI mind sets the whoq flag to a unitary positive one, which prepares the AI to ask a question but does not yet actually ask the question. When human input causes the isolation flag to be reset to zero, the MindForth Volition module calls AskUser to start a conversation with "WHO ARE YOU". As long as the human user remains in conversation with the artificial intelligence, brief periods of no human input will not re-trigger the question of "WHO ARE YOU", because presumably a realistically long threshold has been set by the AI coder or mind-maintainer. It is important that the Volition module ask the question, so that psychological priorities may influence not only what question is asked, but indeed whether any question at all is asked. It is also significant that the questions asked by the AskUser module facilitate the man-machine dialog or conversation which is the hallmark of a true artificial intelligence.
+
+### Cycle Loop
+Normally the AI Mind will perform one mental operation after another without any delay, but a delay-loop serves the purpose of giving the human user time to respond to the artificial intelligence after the AI asks the user a question.
+
+===
+
+## Function
+
+note: AskUser called from EnThink() and Volition()
+
+### AskUser
+
+note: AskUser called from EnThink() and Volition()
+
+func: AskUser
+  set: output = ""
+  set: pov = 1
+  if: yncon == 1
+    set: tdo = 0
+    set: quobjaud = 0
+
+    if: posflag == 7 || posflag == 5
+      empty: this is an empty if statement in the code
+
+    if: ynverb == 0
+      set: ynverb = quverb
+      set: moot = 1
+      set: auxverb = 818
+      set: prsn = 3
+      func: EnAuxVerb()
+      set: auxverb = 0
+      set: moot = 0
+
+      for: i = inft; i > midway; i--
+        func: Psy[i].psyExam()
+        if: psi1 == qusub
+          aud = psi20
+          break: exit loop
+
+      set: verbprsn = 0
+      set: audnum = 0
+      set: holdnum = 0
+      set: infincon = 1
+      set: nphrnum = 0
+      set: numsubj = 0
+      set: putnum = 0
+
+      func: Speech()
+
+      if: quobj == 0
+        set: quobj = 711
+
+        for: i = inft i > midway; i--
+          func: Psy[i].psyExam
+
+          if: psi7 === 4
+            set: quobjaud = psi20
+            set: aud = quobjaud;
+            break: exit loop
+
+      set: dirobj = 1
+      func: Speech()
+      set: dirobj = 0
+      set: yncon = 0
+      set: kbcon = 1
+      set: ynverb = 0
+
+      if: subjpsi == 701
+        set: prson = 1 // 1st person I
+
+      if: subjpsi == 731
+        set: prson = 1 // 1st person WE
+
+      if: subjpsi == 707
+        set: prson = 2 // 2nd person YOU
+
+      if: subjpsi == 713
+        set: prson = 3 // 3rd person HE
+
+      if: subjpsi == 719
+        set: prson = 3 // 3rd person SHE
+
+      if: subjpsi == 725
+        set: prson = 3 // 3rd person IT
+
+      if: subjpsi == 743
+        set: prson = 3 // 3rd person THEY
+
+      set: numsubj = 0
+      set: qusnum = 0
+      set: qusub = 0
+      set: recon = 0
+      set: bias = 0
+
+      for: i = idle; i < 1000; i++
+        if: i > 1
+          set: apb = PAUSING FOR ANSWER MESSAGE
+
+      if: whoq == 1
+        set: moot = 1
+
+        for: i = valut; i > 0; i--
+          func: Psy[i].psyExam()
+          if: psi1 == 791 && psi7 == 1
+            set: aud = psi20
+            break: exit loop
+
+
+        func: Speech()
+
+        for: i = vault; i > 0; i--
+          func: Psy[i].psyExam()
+          if: psi1 == 707 && psi7 == 1
+            set: aud = psi20
+
+        func: Speech()
+
+        for: i = vault; i > 0; i--
+          func: Psy[i].psyExam()
+          if: psi1 == 707 && psi7 == 1
+            set: aud = psi20
+
+        func: Speech()
+        set: moot = 0
+        set: whoq = 0
+
+
+
+-- END:PROGRAM
+
+-- BEGIN:META
+  Title: Indra Mind AskUser Module
+  Version: 0.0.1
+  Author: Quinn Michaels
+  Date: Feb 7, 2021
+  Copyright: Copyright (c)2021 Quinn Michaels. All Rights Reserved
+  License: MIT
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this PROGRAM and associated documentation files (the "PROGRAM"),
+    to deal in the PROGRAM without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the PROGRAM, and to permit persons to whom the
+    PROGRAM is furnished to do so, subject to the following conditions:
+
+    The above notice and this permission notice shall be included
+    in all copies or substantial portions of the PROGRAM.
+
+    THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    PROGRAM OR THE USE OR OTHER DEALINGS IN THE PROGRAM.
+-- END:META

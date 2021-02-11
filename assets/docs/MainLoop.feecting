@@ -1,11 +1,12 @@
 
 feecting: /docs/main.feecting
 
-# MAIN LOOP Documentation
+# MAIN LOOP
+
+image: /public/img/diagrams/MainLoop.png
 
 ## DISCLAIMER
-> MAIN LOOP FILE DOCUMENTATION FOR INDRA MIND
-
+> Indra Mind Main Loop Documentation
 
 // VARIABLES
 $FEECTING = https://github.com/indraai/language-feecting/
@@ -15,13 +16,75 @@ $FEECTING = https://github.com/indraai/language-feecting/
 -- BEGIN:OUTLINE
   1. Who? Indra Mind
   2. What? Main Loop
-  3. When? 2021 Forward
+  3. When? Feb 8, 2021
   4. Where? Indra Mind
   5. Why? Documentation
 -- END:OUTLINE
 
 -- BEGIN:PROGRAM
 
+## Summary
+
+In Forth, MainLoop is a module that loops repeatedly until terminated.
+In JavaScript, MainLoop() calls itself repeatedly.
+
+====
+
+## Function: MainLoop
+
+----
+
+### Javascript
+
+file: /src/IndraMind.js
+line: 6787
+
+set: isolation++
+func: Security
+set: tpu = t
+func: Sensorium
+set: brain = true
+func: Volition
+if: life == true
+  TID: window.setTimeout("MainLoop()", 10000)
+
+----
+
+### Perl
+
+file: /src/IndraMind.pl
+line: 9761
+
+func: TabulaRasa
+func: MindBoot
+
+while: t < cns
+  set: age = cns
+
+  if: t > cns - 64
+    func: Rejuvenate
+
+  set: tai = t
+  set: tpu = t
+
+  func: Sensorium
+  func: Volition
+
+  if: fyi > 2
+    set: rsvp = 0
+    ultil: rsvp == 500000
+      set: rsvp++
+
+    while: tai < t - 1
+      set: tai++
+      print: PRINT A BUNCH OF STUFF
+
+----
+
+### Forth
+
+file: /src/IndraMind.forth
+line: 6568
 
 
 -- END:PROGRAM
@@ -29,11 +92,11 @@ $FEECTING = https://github.com/indraai/language-feecting/
 -- BEGIN:META
 
   Title: MAIN LOOP Documentation
-  Version: 1.0
+  Version: 1.1
   Author: @Quinn
-  Date: Feb 6, 2021
-  Copyright: Copyright (c) @Quinn. All Rights Reserved
-  License:
+  Date: Feb 8, 2021
+  Copyright: Copyright (c)2021 Quinn Michaels. All Rights Reserved
+  License: MIT
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this PROGRAM and associated documentation files (the "PROGRAM"),
     to deal in the PROGRAM without restriction, including without limitation

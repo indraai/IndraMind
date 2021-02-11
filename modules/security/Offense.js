@@ -3,7 +3,7 @@
 // Used for Defensive Returns
 class Offense {
   constructor(opts) {
-    this.client = opts.client;
+    this.agent = opts.agent;
     this.state = opts.state;
     this.created = Date.now();
     this.run = false;

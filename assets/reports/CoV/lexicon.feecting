@@ -1,0 +1,86 @@
+$feecting
+report: /CoV/main
+
+# Church of Virus Lexicon
+
+## DISCLAIMER
+> The Church of Virus Lexicon
+
+$FEECTING = https://github.com/indraai/language-feecting/
+@Deva = http://DevaBuddhism.com
+@quinn = Quinn Michaels
+
+-- BEGIN:OUTLINE
+  1. Who? Church of Virus
+  2. What? Lexicon
+  3. When? 2000
+  4. Where? http://www.churchofvirus.org/lexicon.html
+  5. Why? Report
+-- END:OUTLINE
+
+-- BEGIN:PROGRAM
+
+# Church of Virus Lexicon
+
+AGNOSTICISM: The doctrine that the existence of God is unknown and probably unknowable.
+
+ATHEISM:(vl) The doctrine that there is no God. Atheists believe that there is insufficient evidence for God and/or that the concept of God is incoherent so its existence is logically impossible.
+
+AUTO_TOXIC: Dangerous to itself. Highly auto-toxic memes are usually self-limiting because they promote the destruction of their hosts (such as the Jim Jones meme; any military indoctrination meme-complex; any "martyrdom" meme). (GMG) (See exo-toxic.)
+
+BAIT: The part of a meme-complex that promises to benefit the host (usually in return for replicating the complex). The bait usually justifies, but does not explicitly urge, the replication of a meme-complex. (Donald Going, quoted by Hofstadter.) Also called the reward co-meme. (In many religions, "Salvation" is the bait, or promised reward; "Spread the Word" is the hook. Other common bait co-memes are "Eternal Bliss", "Security", "Prosperity", "Freedom".) (See hook; threat; infection strategy.)
+
+BEHAVIOUR:(vl) Information in the form of a temporal pattern.
+
+BELIEF:(vl) To believe a statement or proposition P is to act as if P is held to be true. It is not necessary that the belief be conscious nor certain. For example it is accurate to say that a spider believes it is imperative to ensure the safety of her eggs even though "safety" as a concept is too abstract for her tiny brain.
+
+BELIEF_SPACE: Since a person can only be infected with and transmit a finite number of memes, there is a limit to their belief space (Henson). Memes evolve in competition for niches in the belief-space of individuals and societies.
+
+CAUSALITY:(vl) The relation between an event (cause) and its meaning (effect).
+
+CENSORSHIP: Any attempt to hinder the spread of a meme by eliminating its vectors. Hence, censorship is analogous to attempts to halt diseases by spraying insecticides. Censorship can never fully kill off an offensive meme, and may actually help to promote the meme's most virulent strain, while killing off milder forms.
+
+CO_MEME: A meme which has symbiotically co-evolved with other memes, to form a mutually-assisting meme-complex. Also called a symmeme. (GMG)
+
+COMPLEXITY:(vl) A region in phase space between order and chaos. Complex systems are characterized by unpredictable behaviour.
+
+CONTEXT:(vl) The causal environment which determines the actual effect of an action or event.
+
+CONTROL:(vl) To control a system is to be able to predict and influence its future state.
+
+CONTROL_SYSTEM:(vl) A system which can predict and influence another.
+
+COSMOLOGY:(vl) The study of the origin and nature of the universe.
+
+CULT: A sociotype of an auto-toxic meme-complex, composed of membots and/or memeoids. (GMG) Characteristics of cults include: self-isolation of the infected group (or at least new recruits); brainwashing by repetitive exposure (inducing dependent mental states); genetic functions discouraged (through celibacy, sterilization, devalued family) in favor of replication (proselytizing); and leader-worship ("personality cult"). (Henson.)
+
+DORMANT: Currently without human hosts. The ancient Egyptian hieroglyph system and the Gnostic Gospels are examples of "dead" schemes which lay dormant for millennia in hidden or untranslatable texts, waiting to re-activate themselves by infecting modern archeologists. Some obsolete memes never become entirely dormant, such as Phlogiston theory, which simply mutated from a "belief" into a "quaint historical footnote."
+
+
+-- END:PROGRAM
+
+-- BEGIN:META
+  Title: Church of Virus Lexicon
+  Version: 0.0.1
+  Author: @quinn
+  Date:
+  Copyright: Copyright (c) @quinn. All Rights Reserved
+  License: MIT
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this PROGRAM and associated documentation files (the "PROGRAM"),
+    to deal in the PROGRAM without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the PROGRAM, and to permit persons to whom the
+    PROGRAM is furnished to do so, subject to the following conditions:
+
+    The above notice and this permission notice shall be included
+    in all copies or substantial portions of the PROGRAM.
+
+    THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    PROGRAM OR THE USE OR OTHER DEALINGS IN THE PROGRAM.
+-- END:META

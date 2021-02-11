@@ -1,9 +1,11 @@
 {
-  "name": "me",
-  "describe": "Me Variables",
+  "name": "indra",
+  "describe": "Indra Mind",
+  "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
   "parent": "/data/config/index.json",
   "data": {
-    "key": 93,
+    "uid": "5380514963421",
+    "key": "indra",
     "name": "Indra",
     "description": "The Indra Mind",
     "prompt": {

@@ -2,6 +2,7 @@
   "key": "data",
   "title": "Model",
   "describe": "Data Model",
+  "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
   "paths": {
     "config": "/data/config/index.json",
     "lang": "/data/lang/index.json",

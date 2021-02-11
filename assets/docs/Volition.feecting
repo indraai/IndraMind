@@ -1,0 +1,73 @@
+
+feecting: /docs/MainLoop.feecting
+
+# Indra Mind Volition Module
+
+## DISCLAIMER
+> Documentation for Indra Mind Volition Module
+
+// VARIABLES
+$FEECTING = https://github.com/indraai/language-feecting/
+@Deva = http://DevaBuddhism.com
+
+@quinn = Quinn Michaels
+
+-- BEGIN:OUTLINE
+  1. Who? Indra Mind
+  2. What? Volition Module
+  3. When? Feb 7, 2021
+  4. Where? Anywhere
+  5. Why? Document Volition Module
+-- END:OUTLINE
+
+-- BEGIN:PROGRAM
+
+### Volition
+
+note: Called from MainLoop()
+
+set: apb = VOLITION CALLED MESSAGE
+
+func: Voice
+
+if: isolation > 3
+  set: whoq = 1
+
+if: whoq == 1
+  func: AskUser
+
+  set: whoq = 0
+  set: isolation = 0
+
+if: life == true
+
+  func: EnThink
+
+
+-- END:PROGRAM
+
+-- BEGIN:META
+  Title: Indra Mind Volition Module
+  Version: 0.0.1
+  Author: Quinn Michaels
+  Date: Feb 7, 2021
+  Copyright: Copyright (c)2021 Quinn Michaels. All Rights Reserved
+  License: MIT
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this PROGRAM and associated documentation files (the "PROGRAM"),
+    to deal in the PROGRAM without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the PROGRAM, and to permit persons to whom the
+    PROGRAM is furnished to do so, subject to the following conditions:
+
+    The above notice and this permission notice shall be included
+    in all copies or substantial portions of the PROGRAM.
+
+    THE PROGRAM IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    PROGRAM OR THE USE OR OTHER DEALINGS IN THE PROGRAM.
+-- END:META
